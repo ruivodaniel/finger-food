@@ -1,0 +1,23 @@
+{
+  "name": "@modules/finger-food",
+  "version": "0.1.0",
+  "description": "Finger Food: the catalog, the menu lines, the proposals with their moments, the events and the invoices",
+  "type": "module",
+  "exports": {
+    "./models": {
+      "types": "./api/models/index.ts",
+      "import": "./api/models/index.ts",
+      "default": "./api/models/index.ts"
+    }
+  },
+  "files": ["api", "erd"],
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modules/user-organization-mgmt": "workspace:*"
+  },
+  "peerDependencies": {
+    "drizzle-orm": ">=0.40.0"
+  }
+}

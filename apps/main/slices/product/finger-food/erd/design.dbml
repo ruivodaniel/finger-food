@@ -1,0 +1,234 @@
+// FINGER FOOD: the catalog of everything an event needs, how a prepared item is assembled, the stock, the menu lines, and the event with its proposals and its invoice.
+// Everything the kitchen makes is an assembly of other items. A food item is raw or prepared; anything else the event uses is a utility.
+
+enum menu_segment {
+  savory_miniature
+  sweet_miniature
+  starter
+  main_dish
+  dessert
+}
+
+enum unit_dimension {
+  count
+  mass
+  volume
+}
+
+enum service_type {
+  coffee_break
+  lunch
+  dinner
+}
+
+enum client_kind {
+  company
+  individual
+}
+
+enum event_stage {
+  lead
+  awarded
+}
+
+enum operation_role {
+  operation_manager
+  operational
+}
+
+enum proposal_state {
+  draft
+  sent
+  accepted
+  rejected
+}
+
+table unit {
+  id uuid [pk, not null]
+  name text [not null, unique, note: 'the unit a quantity is in: piece, box, tray, g, kg, ml, l']
+  dimension unit_dimension [not null, note: 'what it measures: count (pieces, boxes), mass (grams, kilos), volume (millilitres, litres). Only units of the same dimension convert into each other']
+  base_factor decimal [not null, note: 'how many of the base unit one of this unit is. The base is the piece for count, the gram for mass, the millilitre for volume: kg is 1000, l is 1000, a box of 12 is 12, piece is 1. Metric only']
+}
+
+table item_category {
+  id uuid [pk, not null]
+  name text [not null]
+  parent_id uuid [note: 'the category it is part of. Empty for the top of the tree: raw food, prepared food, utility']
+}
+
+table vendor {
+  id uuid [pk, not null]
+  name text [not null, unique]
+}
+
+table vendor_price {
+  id uuid [pk, not null]
+  vendor_id uuid [not null]
+  item_id uuid [not null]
+  quantity decimal [not null, note: 'the price is for this many of the unit below: 10 pieces, 5 kg, 2 l']
+  unit_id uuid [not null, note: 'the unit the vendor sells in. It can differ from the unit of the item: a box of 12 for an item counted by the piece. It must be of the same dimension as the item']
+  price decimal [not null, note: 'for that quantity. The price of one unit is price divided by quantity, not stored']
+}
+
+table item {
+  id uuid [pk, not null]
+  name text [not null, unique]
+  category_id uuid [not null, note: 'the most specific category of the tree the item belongs to']
+  unit_id uuid [not null, note: 'the unit this item is counted in']
+  price decimal [note: 'what the company charges for one unit of this item. Empty for what is not sold. A proposal copies it when the item is added and may change it for that proposal, so a change here never reaches a proposal already made']
+  vat_rate decimal [note: 'the VAT of this item as a percentage: 13 for food, 23 for beer. Empty for what is not sold']
+  reusable boolean [note: 'utility only (under the utility category). true: comes back to the warehouse after the event. false: thrown away. Empty for food']
+}
+
+table component {
+  id uuid [pk, not null]
+  assembly_id uuid [not null, note: 'the item that is assembled']
+  part_id uuid [not null, note: 'the item that goes into it: raw food, prepared food or a utility']
+  quantity decimal [not null, note: 'how many of the part, in the part\'s unit, for one of the assembly']
+}
+
+table stock {
+  item_id uuid [pk, not null, note: 'one row per item kept in the warehouse']
+  quantity decimal [not null, note: 'in the item\'s unit']
+  counted_at timestamp [not null]
+}
+
+table menu_line {
+  id uuid [pk, not null]
+  moment_id uuid [not null, note: 'the moment of a proposal it is in. A copy: it points to no menu line template']
+  segment menu_segment [not null, note: 'what the line is: savory miniatures, sweet miniatures, starters, main dishes, desserts']
+  position integer [not null]
+}
+
+table menu_line_item {
+  id uuid [pk, not null]
+  menu_line_id uuid [not null]
+  item_id uuid [not null, note: 'a prepared item']
+  quantity decimal [not null, note: 'how many of the item, in the item\'s unit']
+  price decimal [note: 'copied from the item when it is added to the proposal, and it can be changed for this proposal. Fixed once the proposal is sent']
+  vat_rate decimal [note: 'copied from the item together with the price']
+}
+
+table client {
+  id uuid [pk, not null]
+  name text [not null]
+  kind client_kind [not null, note: 'company | individual']
+}
+
+table event {
+  id uuid [pk, not null]
+  client_id uuid [not null, note: 'the client the event is for']
+  starts_at timestamp [not null]
+  budget decimal [note: 'what the client says they want to spend']
+  stage event_stage [not null, note: 'lead | awarded']
+}
+
+table proposal_template {
+  id uuid [pk, not null, note: 'a template belongs to the system: nothing of a proposal points to it. A proposal made from it gets a copy of its moments and their menu lines']
+  name text [not null]
+  upload_id uuid [note: 'the picture of the template, a file of the project\'s Files, for the visual menu shown to the client']
+}
+
+table menu_line_template {
+  id uuid [pk, not null, note: 'a menu line kept by the system: an assembled thing that is sold, such as a set of savory miniatures or a main dish. Adding it to a moment copies it as a menu line']
+  name text [not null, unique]
+  segment menu_segment [not null, note: 'how the line is categorized']
+}
+
+table menu_line_template_item {
+  id uuid [pk, not null]
+  menu_line_template_id uuid [not null]
+  item_id uuid [not null, note: 'a prepared item of the line']
+  quantity decimal [not null, note: 'how many of the item, in the item\'s unit']
+}
+
+table proposal_template_moment {
+  id uuid [pk, not null]
+  proposal_template_id uuid [not null]
+  service_type service_type [not null]
+  units_per_guest integer [note: 'coffee break: 4 miniatures per guest, divided among the items of the moment']
+  position integer [not null]
+}
+
+table proposal_template_moment_line {
+  id uuid [pk, not null]
+  proposal_template_moment_id uuid [not null]
+  menu_line_template_id uuid [not null]
+  position integer [not null]
+}
+
+table proposal {
+  id uuid [pk, not null]
+  event_id uuid [not null]
+  number integer [not null, note: 'proposal 1, 2, 3 of the event']
+  sent_at timestamp [note: 'when the proposal was sent to the client. Empty while it is a draft. From then on the proposal, its moments, menu lines and operation cannot change']
+  state proposal_state [not null, note: 'draft | sent | accepted | rejected']
+}
+
+table moment {
+  id uuid [pk, not null, note: 'one moment of a proposal: a coffee break, a lunch, a cocktail. Its menu lines are what is served at it']
+  proposal_id uuid [not null]
+  service_type service_type [not null]
+  units_per_guest integer [note: 'coffee break: 4 miniatures per guest, divided among the items of the moment']
+  guests integer [not null, note: 'the people to feed at this moment. It can be different from one moment to the next']
+  position integer [not null]
+}
+
+table team_member {
+  id uuid [pk, not null]
+  name text [not null]
+  user_id text [not null, unique, note: 'the user this person signs in as. The user is the seed\'s, and it is not changed: the team member points to it']
+}
+
+table event_member {
+  id uuid [pk, not null]
+  event_id uuid [not null]
+  team_member_id uuid [not null, note: 'the event manager: manages everything of the event']
+}
+
+table operation {
+  id uuid [pk, not null]
+  proposal_id uuid [not null, unique, note: 'every proposal has an operation: what it takes to do it. The accepted proposal\'s operation is the one carried out']
+}
+
+table operation_member {
+  id uuid [pk, not null]
+  operation_id uuid [not null]
+  team_member_id uuid [note: 'empty while the proposal is being costed. Filled once the event is awarded']
+  role operation_role [not null, note: 'operation_manager sees everyone and everything of the operation. operational sees what is ruled later']
+  hours decimal [not null]
+  hourly_rate decimal [not null, note: 'the price of this person\'s time, part of the proposal\'s cost']
+}
+
+table invoice {
+  id uuid [pk, not null]
+  event_id uuid [not null, note: 'the event it is for. An event can have several invoices, for example one on award and one on the day. It does not depend on a proposal or an operation']
+}
+
+ref: item_category.parent_id > item_category.id
+ref: item.category_id > item_category.id
+ref: vendor_price.vendor_id > vendor.id
+ref: vendor_price.item_id > item.id
+ref: vendor_price.unit_id > unit.id
+ref: item.unit_id > unit.id
+ref: component.assembly_id > item.id
+ref: component.part_id > item.id
+ref: stock.item_id - item.id
+ref: menu_line.moment_id > moment.id
+ref: menu_line_template_item.menu_line_template_id > menu_line_template.id
+ref: menu_line_template_item.item_id > item.id
+ref: proposal_template_moment_line.proposal_template_moment_id > proposal_template_moment.id
+ref: proposal_template_moment_line.menu_line_template_id > menu_line_template.id
+ref: menu_line_item.menu_line_id > menu_line.id
+ref: menu_line_item.item_id > item.id
+ref: event.client_id > client.id
+ref: proposal_template_moment.proposal_template_id > proposal_template.id
+ref: proposal.event_id > event.id
+ref: moment.proposal_id > proposal.id
+ref: event_member.event_id > event.id
+ref: team_member.user_id - user.id
+ref: event_member.team_member_id > team_member.id
+ref: operation.proposal_id - proposal.id
+ref: operation_member.operation_id > operation.id
+ref: operation_member.team_member_id > team_member.id
+ref: invoice.event_id > event.id
