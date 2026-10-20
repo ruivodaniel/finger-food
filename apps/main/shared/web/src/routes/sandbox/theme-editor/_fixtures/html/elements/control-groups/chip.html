@@ -1,0 +1,32 @@
+<!-- label: Chip -->
+<div class="flex flex-col gap-3">
+  <p element="type--body-extra-small" emphasis="quiet">emphasis — scale="md"</p>
+  <div class="flex gap-3 flex-wrap items-center">
+    <span element="control--chip" emphasis="primary" scale="md"><span>Primary</span></span>
+    <span element="control--chip" emphasis="secondary" scale="md"><span>Secondary</span></span>
+    <span element="control--chip" emphasis="tertiary" scale="md"><span>Tertiary</span></span>
+  </div>
+</div>
+
+<div class="flex flex-col gap-3">
+  <p element="type--body-extra-small" emphasis="quiet">state — emphasis="secondary"</p>
+  <div class="flex gap-3 flex-wrap items-center">
+    <span element="control--chip" emphasis="secondary" scale="md"><span>Default</span></span>
+    <span element="control--chip" emphasis="secondary" scale="md" state="selected"><span>Selected</span></span>
+    <span element="control--chip" emphasis="secondary" scale="md" state="disabled"><span>Disabled</span></span>
+  </div>
+</div>
+
+<div class="flex flex-col gap-3">
+  <p element="type--body-extra-small" emphasis="quiet">with icon</p>
+  <div class="flex gap-3 flex-wrap items-center">
+    <span element="control--chip" emphasis="secondary" scale="md">
+      <span data-part="start-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" element="shape--icon" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>
+      <span>Active</span>
+    </span>
+    <span element="control--chip" emphasis="secondary" scale="md" state="selected">
+      <span>Closable</span>
+      <button type="button" aria-label="Remove"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" element="shape--icon" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+    </span>
+  </div>
+</div>

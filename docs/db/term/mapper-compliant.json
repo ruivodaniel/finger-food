@@ -1,0 +1,17 @@
+{
+  "id": "term/mapper-compliant",
+  "kind": "term",
+  "title": "mapper compliant",
+  "status": "converted",
+  "subjects": [
+    "docs"
+  ],
+  "tags": [
+    "docs"
+  ],
+  "paths": [],
+  "term": {
+    "def": "A file or folder that follows the rules of the mapper. The registry labels each one.",
+    "aliases": []
+  }
+}

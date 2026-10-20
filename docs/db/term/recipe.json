@@ -1,0 +1,20 @@
+{
+  "id": "term/recipe",
+  "kind": "term",
+  "title": "recipe",
+  "status": "converted",
+  "subjects": [
+    "orchestrator"
+  ],
+  "tags": [
+    "orchestrator"
+  ],
+  "paths": [
+    "apps/orchestrator"
+  ],
+  "term": {
+    "def": "One way to reach a goal with a [[pipeline]]. There can be several recipes per goal, and a benchmark picks the canonical one.",
+    "aliases": [],
+    "proposed": true
+  }
+}

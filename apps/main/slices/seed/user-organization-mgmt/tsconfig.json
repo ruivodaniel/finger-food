@@ -1,0 +1,17 @@
+{
+  "extends": "../../../../../tsconfig.base.json",
+  "compilerOptions": {
+    "composite": true,
+    "outDir": "./dist",
+    "rootDir": ".",
+    "declaration": true,
+    "declarationMap": true,
+    "jsx": "react-jsx",
+    "paths": {
+      "@configs/user-organization-mgmt": ["../../../../../configs/user-organization-mgmt/index.ts"],
+      "@configs/user-organization-mgmt/*": ["../../../../../configs/user-organization-mgmt/*"]
+    }
+  },
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules", "dist"]
+}

@@ -1,0 +1,18 @@
+<!-- label: Select -->
+<div class="flex flex-col gap-3">
+  <p element="type--body-extra-small" emphasis="quiet">scale</p>
+  <div class="flex flex-col gap-2" style="max-width: 320px;">
+    <select element="field--select" scale="sm" class="flex"><option>Option A</option><option>Option B</option><option>Option C</option></select>
+    <select element="field--select" scale="md" class="flex"><option>Option A</option><option>Option B</option><option>Option C</option></select>
+    <select element="field--select" scale="lg" class="flex"><option>Option A</option><option>Option B</option><option>Option C</option></select>
+  </div>
+</div>
+
+<div class="flex flex-col gap-3">
+  <p element="type--body-extra-small" emphasis="quiet">status + state</p>
+  <div class="flex flex-col gap-2" style="max-width: 320px;">
+    <select element="field--select" scale="md" class="flex"><option>Default</option></select>
+    <select element="field--select" scale="md" status="error" class="flex"><option>Error state</option></select>
+    <select element="field--select" scale="md" state="disabled" class="flex" disabled><option>Disabled</option></select>
+  </div>
+</div>

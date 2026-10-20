@@ -1,0 +1,3 @@
+# Personal dev helpers — drop a `local-dev-<name>.ts` (or .sh, etc.) here if
+# you want your own seed/fixture/test scripts that don't get committed.
+local-dev-*

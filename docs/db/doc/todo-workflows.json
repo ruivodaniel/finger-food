@@ -1,0 +1,16 @@
+{
+  "id": "doc/todo-workflows",
+  "kind": "doc",
+  "title": "lib: workflows (not migrated)",
+  "status": "todo",
+  "subject": "workflows",
+  "tags": [
+    "workflows"
+  ],
+  "paths": [
+    "shared/libs/workflows"
+  ],
+  "summary": "Not migrated yet. Starting point: shared/libs/workflows/README.md",
+  "entry": "shared/libs/workflows/README.md",
+  "doc": null
+}

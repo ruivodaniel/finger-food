@@ -1,0 +1,25 @@
+<!-- label: Pagination -->
+<div class="flex flex-col gap-3">
+  <p element="type--body-extra-small" emphasis="quiet">Previous (disabled) | 1 | 2 (selected) | 3 | … | 12 | Next</p>
+  <nav element="control-group--pagination-bar" aria-label="Pagination">
+    <ol class="flex items-center gap-1">
+      <li>
+        <button element="control--button" emphasis="tertiary" scale="sm" state="disabled" disabled>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" element="shape--icon" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+          Previous
+        </button>
+      </li>
+      <li><button element="control--button" emphasis="tertiary" scale="sm"><span>1</span></button></li>
+      <li><button element="control--button" emphasis="tertiary" scale="sm" state="selected"><span>2</span></button></li>
+      <li><button element="control--button" emphasis="tertiary" scale="sm"><span>3</span></button></li>
+      <li><span element="type--body-small" class="px-1">…</span></li>
+      <li><button element="control--button" emphasis="tertiary" scale="sm"><span>12</span></button></li>
+      <li>
+        <button element="control--button" emphasis="tertiary" scale="sm">
+          Next
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" element="shape--icon" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+      </li>
+    </ol>
+  </nav>
+</div>

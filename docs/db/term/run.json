@@ -1,0 +1,19 @@
+{
+  "id": "term/run",
+  "kind": "term",
+  "title": "run",
+  "status": "converted",
+  "subjects": [
+    "orchestrator"
+  ],
+  "tags": [
+    "orchestrator"
+  ],
+  "paths": [
+    "apps/orchestrator"
+  ],
+  "term": {
+    "def": "One execution of a pipeline. The orchestrator starts a run from a user request or from a scheduled trigger.",
+    "aliases": []
+  }
+}

@@ -1,0 +1,345 @@
+{
+  "id": "doc/realtime-brief",
+  "kind": "doc",
+  "title": "@libs/realtime — Developer Implementation Brief",
+  "status": "converted",
+  "subject": "realtime",
+  "tags": [
+    "realtime"
+  ],
+  "paths": [
+    "shared/libs/realtime"
+  ],
+  "summary": "**Shared real-time transport engine for server→client push.**",
+  "docId": "realtime-brief",
+  "doc": {
+    "axioms": [],
+    "purpose": {
+      "intro": "**Shared real-time transport engine for server→client push.**"
+    },
+    "reference": [
+      {
+        "topic": "Why \"realtime\" and not \"sse\" or \"websocket\"",
+        "claims": [
+          {
+            "text": "Modules never know or care how events are delivered. They call `push()` on the server and `useRealtimeChannel()` on the client. The transport is an implementation detail hidden inside this library."
+          },
+          {
+            "text": "If we ever need bidirectional streaming (e.g., collaborative editing), we swap the transport inside `@libs/realtime` — the `push()` function, the `useRealtimeChannel()` hook, and every module that uses them remain unchanged."
+          }
+        ],
+        "statement": "This library is named `realtime` because it is **transport-agnostic by design**. The current implementation uses SSE (Server-Sent Events), but the API contract is designed so that switching to WebSockets, long-polling, or any future transport requires **zero changes** in consuming code — modules and apps."
+      },
+      {
+        "topic": "THE GOLDEN RULE",
+        "claims": [
+          {
+            "text": "No module opens its own connection. No module manages reconnection. No module knows about SSE."
+          }
+        ],
+        "statement": "**One connection per user. Modules subscribe to channels. The library handles the rest.**",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "// SERVER — Any module or app-level code pushes events\nimport { push } from \"@libs/realtime/api\";\n\nawait push(userId, {\n  channel: \"notifications\",\n  event: \"new\",\n  data: { id: \"n1\", title: \"You were invited\", ... },\n});\n\n// CLIENT — Each module subscribes to its own channel\nimport { useRealtimeChannel } from \"@libs/realtime/web\";\n\nconst { lastEvent } = useRealtimeChannel(\"notifications\");",
+                "caption": "typescript"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Architecture",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "shared/libs/realtime/\n├── package.json\n├── README.md                    (copy of this brief, expanded)\n├── tsconfig.json\n└── src/\n    ├── index.ts                 (shared types only — both sides import this)\n    ├── types.ts                 (core type definitions)\n    ├── api/\n    │   ├── index.ts             (server-side barrel export)\n    │   ├── connection-manager.ts\n    │   └── push.ts\n    └── web/\n        ├── index.ts             (client-side barrel export)\n        ├── RealtimeProvider.tsx\n        └── useRealtimeChannel.ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Architecture › Three entry points (same pattern as `@modules/user-organization-mgmt`)",
+        "claims": [
+          {
+            "text": "`.` — Shared types (both server and client)"
+          },
+          {
+            "text": "`./api` — Server-side only (connection manager, push function)"
+          },
+          {
+            "text": "`./web` — Client-side only (React provider, hooks)"
+          }
+        ],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "{\n  \"exports\": {\n    \".\":    \"./src/index.ts\",\n    \"./api\": \"./src/api/index.ts\",\n    \"./web\": \"./src/web/index.ts\"\n  }\n}",
+                "caption": "json"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Shared Types (`src/types.ts`)",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "/**\n * A realtime event pushed from server to client.\n * This is the transport-agnostic contract.\n */\nexport interface RealtimeEvent<T = unknown> {\n  /** Channel the event belongs to (e.g., \"notifications\", \"conversations\") */\n  channel: string;\n  /** Event name within the channel (e.g., \"new\", \"updated\", \"deleted\") */\n  event: string;\n  /** Event payload — module-specific data */\n  data: T;\n  /** Server-assigned timestamp (ISO string) */\n  timestamp: string;\n  /** Optional event ID for deduplication / resumption */\n  id?: string;\n}\n\n/**\n * Options for the push function.\n */\nexport interface PushOptions {\n  channel: string;\n  event: string;\n  data: unknown;\n}\n\n/**\n * Options for connecting to the realtime stream (client-side).\n */\nexport interface RealtimeConfig {\n  /** Base URL of the API (e.g., \"http://localhost:3000\") */\n  baseUrl: string;\n  /** Path to the SSE endpoint (default: \"/api/realtime/stream\") */\n  streamPath?: string;\n  /** Auth headers or cookie-based — depends on app auth strategy */\n  getHeaders?: () => Record<string, string> | Promise<Record<string, string>>;\n}",
+                "caption": "typescript"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Server Side (`src/api/`) › Connection Manager (`connection-manager.ts`)",
+        "claims": [],
+        "statement": "Manages active SSE connections per user. When a user connects to the stream endpoint, their writable stream is registered. When `push()` is called, the manager writes to all active streams for that user (supports multiple tabs/devices).",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "/**\n * In-memory connection registry.\n * Maps userId → Set of active writable streams.\n *\n * For single-process deployments (which is what the seed targets),\n * this is sufficient. For multi-process, this would be replaced with\n * Redis pub/sub or PostgreSQL LISTEN/NOTIFY — but the push() API\n * stays the same.\n */\n\nexport interface ConnectionManager {\n  /** Register a new connection for a user */\n  add(userId: string, stream: WritableStream): void;\n  /** Remove a connection when it closes */\n  remove(userId: string, stream: WritableStream): void;\n  /** Get all active streams for a user */\n  getStreams(userId: string): Set<WritableStream>;\n  /** Check if a user has any active connections */\n  isConnected(userId: string): boolean;\n}\n\nexport function createConnectionManager(): ConnectionManager;",
+                "caption": "typescript"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Server Side (`src/api/`) › Push Function (`push.ts`)",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "import type { ConnectionManager } from \"./connection-manager\";\nimport type { PushOptions, RealtimeEvent } from \"../types\";\n\n/**\n * Create a push function bound to a connection manager.\n *\n * Usage in app wiring:\n *   const manager = createConnectionManager();\n *   const push = createPush(manager);\n *\n *   // Later, in a service or hook:\n *   await push(userId, { channel: \"notifications\", event: \"new\", data: {...} });\n */\nexport function createPush(\n  manager: ConnectionManager\n): (userId: string, options: PushOptions) => Promise<void>;",
+                "caption": "typescript"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Server Side (`src/api/`) › SSE Route Factory",
+        "claims": [],
+        "statement": "The library should also export a factory to create the SSE endpoint (Hono route), so the app just mounts it:",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "import type { ConnectionManager } from \"./connection-manager\";\n\n/**\n * Creates a Hono route handler for the SSE stream endpoint.\n * The app mounts this at its chosen path (e.g., /api/realtime/stream).\n *\n * - Requires authenticated user (app applies auth middleware before this)\n * - Registers the connection in the manager\n * - Keeps the stream open until client disconnects\n * - Cleans up on disconnect\n *\n * Uses Hono's built-in streamSSE helper from \"hono/streaming\".\n */\nexport function createStreamRoute(manager: ConnectionManager): HonoHandler;",
+                "caption": "typescript"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Server Side (`src/api/`) › Server-Side Barrel Export (`api/index.ts`)",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "export { createConnectionManager } from \"./connection-manager\";\nexport type { ConnectionManager } from \"./connection-manager\";\nexport { createPush } from \"./push\";\nexport { createStreamRoute } from \"./stream-route\";",
+                "caption": "typescript"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Client Side (`src/web/`) › RealtimeProvider (`RealtimeProvider.tsx`)",
+        "claims": [],
+        "statement": "Single provider mounted once in the app root. Manages one EventSource connection per authenticated user. Distributes events to channel subscribers.",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "import type { RealtimeConfig, RealtimeEvent } from \"../types\";\n\ninterface RealtimeProviderProps {\n  config: RealtimeConfig;\n  /** Whether the user is authenticated — only connect when true */\n  enabled: boolean;\n  children: React.ReactNode;\n}\n\n/**\n * Mounts once in the app root (alongside UserOrgMgmtProvider).\n * Opens a single SSE connection when enabled=true.\n * Automatically reconnects on disconnect (SSE native behavior).\n * Distributes incoming events to channel subscribers via context.\n */\nexport function RealtimeProvider(props: RealtimeProviderProps): JSX.Element;\n\n/**\n * Internal context — not exported to consumers.\n * Consumers use useRealtimeChannel() instead.\n */",
+                "caption": "typescript"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Client Side (`src/web/`) › useRealtimeChannel Hook (`useRealtimeChannel.ts`)",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "import type { RealtimeEvent } from \"../types\";\n\ninterface UseRealtimeChannelResult<T = unknown> {\n  /** The most recent event on this channel (null if none received yet) */\n  lastEvent: RealtimeEvent<T> | null;\n  /** Whether the SSE connection is currently open */\n  connected: boolean;\n}\n\n/**\n * Subscribe to events on a specific channel.\n * Multiple components can subscribe to the same channel.\n * The hook only delivers events matching the given channel name.\n *\n * Usage:\n *   const { lastEvent, connected } = useRealtimeChannel<NotificationEvent>(\"notifications\");\n *\n *   useEffect(() => {\n *     if (lastEvent?.event === \"new\") {\n *       // Handle new notification\n *     }\n *   }, [lastEvent]);\n */\nexport function useRealtimeChannel<T = unknown>(\n  channel: string\n): UseRealtimeChannelResult<T>;",
+                "caption": "typescript"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Client Side (`src/web/`) › Client-Side Barrel Export (`web/index.ts`)",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "export { RealtimeProvider } from \"./RealtimeProvider\";\nexport { useRealtimeChannel } from \"./useRealtimeChannel\";",
+                "caption": "typescript"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Package Configuration (`package.json`)",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "{\n  \"name\": \"@libs/realtime\",\n  \"version\": \"0.1.0\",\n  \"type\": \"module\",\n  \"description\": \"Transport-agnostic real-time push engine. One connection per user, channel-based event distribution.\",\n  \"main\": \"./src/index.ts\",\n  \"types\": \"./src/index.ts\",\n  \"exports\": {\n    \".\": \"./src/index.ts\",\n    \"./api\": \"./src/api/index.ts\",\n    \"./web\": \"./src/web/index.ts\"\n  },\n  \"peerDependencies\": {\n    \"hono\": \">=4.0.0\",\n    \"react\": \">=18.0.0\"\n  },\n  \"peerDependenciesMeta\": {\n    \"hono\": { \"optional\": true },\n    \"react\": { \"optional\": true }\n  },\n  \"devDependencies\": {\n    \"typescript\": \"^5.0.0\"\n  },\n  \"keywords\": [\n    \"realtime\",\n    \"sse\",\n    \"server-sent-events\",\n    \"push\",\n    \"streaming\"\n  ],\n  \"license\": \"MIT\"\n}",
+                "caption": "json"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "How Apps Wire It › Backend (`apps/api/`)",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "// apps/api/src/lib/realtime.ts\nimport { createConnectionManager, createPush } from \"@libs/realtime/api\";\n\nexport const realtimeManager = createConnectionManager();\nexport const push = createPush(realtimeManager);\n\n// apps/api/src/routes/realtime.ts (or mounted in server.ts)\nimport { createStreamRoute } from \"@libs/realtime/api\";\nimport { realtimeManager } from \"../lib/realtime\";\n\n// Mount with auth middleware applied before\napp.get(\"/api/realtime/stream\", authMiddleware, createStreamRoute(realtimeManager));",
+                "caption": "typescript"
+              }
+            ]
+          },
+          {
+            "snippets": [
+              {
+                "code": "// apps/api/src/services/some-service.ts\nimport { push } from \"../lib/realtime\";\n\n// After creating a notification in the database:\nawait push(userId, {\n  channel: \"notifications\",\n  event: \"new\",\n  data: { id: notification.id, type: notification.type, title: notification.title },\n});",
+                "caption": "typescript"
+              }
+            ]
+          }
+        ],
+        "statement": "Then any service can push events:"
+      },
+      {
+        "topic": "How Apps Wire It › Frontend (`apps/web-main/`)",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "// apps/web-main/src/routes/__root.tsx\nimport { RealtimeProvider } from \"@libs/realtime/web\";\n\nfunction RootComponent() {\n  const { session } = useSession(); // from BetterAuth\n\n  return (\n    <UserOrgMgmtProvider ...>\n      <RealtimeProvider\n        config={{ baseUrl: import.meta.env.VITE_API_URL }}\n        enabled={!!session}\n      >\n        <Outlet />\n      </RealtimeProvider>\n    </UserOrgMgmtProvider>\n  );\n}",
+                "caption": "typescript"
+              }
+            ]
+          },
+          {
+            "snippets": [
+              {
+                "code": "// Inside notifications module's NotificationBell component\nimport { useRealtimeChannel } from \"@libs/realtime/web\";\n\nconst { lastEvent } = useRealtimeChannel(\"notifications\");\n\nuseEffect(() => {\n  if (lastEvent?.event === \"new\") {\n    setUnreadCount((c) => c + 1);\n    if (notificationType.invasiveness === \"toast\") {\n      toast(lastEvent.data.title);\n    }\n  }\n}, [lastEvent]);",
+                "caption": "typescript"
+              }
+            ]
+          }
+        ],
+        "statement": "Then any module's components subscribe:"
+      },
+      {
+        "topic": "Why SSE (Current Transport)",
+        "claims": [],
+        "imagesAndDiagrams": [
+          {
+            "type": "ascii",
+            "value": "| Concern | SSE | WebSocket |\n|---------|-----|-----------|\n| Direction needed | Server→client (notifications, updates) | Bidirectional |\n| Reconnection | Built into browser `EventSource` API | Manual implementation |\n| Hono support | Native `streamSSE` helper, universal | Needs `@hono/node-ws`, platform-specific |\n| Auth | Cookies/headers work normally | Auth is tricky (no custom headers on handshake) |\n| Proxies/LBs | Standard HTTP, no upgrade needed | Needs special proxy config |"
+          }
+        ],
+        "statement": "Client→server actions (mark as read, send message, etc.) are regular HTTP requests. The \"real-time\" part is always server→client push. SSE covers this perfectly."
+      },
+      {
+        "topic": "Future: Scaling Beyond Single Process",
+        "claims": [
+          {
+            "text": "For multi-process scaling, two options — both hidden inside the library:"
+          },
+          {
+            "text": "**PostgreSQL LISTEN/NOTIFY** — Use `pg_notify` when pushing. Each process listens and forwards to its local connections. No new infrastructure."
+          },
+          {
+            "text": "**Redis pub/sub** — Standard pattern for horizontally scaled real-time. Requires adding Redis."
+          },
+          {
+            "text": "In both cases, the `push()` and `useRealtimeChannel()` APIs remain identical. The scaling strategy is an internal implementation detail of `@libs/realtime`."
+          }
+        ],
+        "statement": "The current `ConnectionManager` is in-memory (Map of userId → streams). This works for single-process deployments, which is what the seed targets."
+      },
+      {
+        "topic": "Checklist for Implementation",
+        "claims": [
+          {
+            "text": "[ ] Create `shared/libs/realtime/` directory structure"
+          },
+          {
+            "text": "[ ] Add to `pnpm-workspace.yaml` (already covered by `shared/libs/*` glob)"
+          },
+          {
+            "text": "[ ] Implement `src/types.ts` — shared event types"
+          },
+          {
+            "text": "[ ] Implement `src/api/connection-manager.ts` — in-memory user→streams registry"
+          },
+          {
+            "text": "[ ] Implement `src/api/push.ts` — factory for push function"
+          },
+          {
+            "text": "[ ] Implement `src/api/stream-route.ts` — Hono SSE route factory using `streamSSE`"
+          },
+          {
+            "text": "[ ] Implement `src/web/RealtimeProvider.tsx` — single EventSource, event distribution"
+          },
+          {
+            "text": "[ ] Implement `src/web/useRealtimeChannel.ts` — channel subscription hook"
+          },
+          {
+            "text": "[ ] Wire in `apps/api/` — create manager, mount stream route"
+          },
+          {
+            "text": "[ ] Wire in `apps/web-main/` — add RealtimeProvider to root"
+          },
+          {
+            "text": "[ ] Test: push event on server → arrives on client via SSE → hook receives it"
+          }
+        ]
+      }
+    ],
+    "review": {
+      "axioms": {
+        "state": "unreviewed"
+      },
+      "purpose": {
+        "state": "unreviewed"
+      },
+      "reference": {
+        "state": "unreviewed"
+      }
+    },
+    "converted": true
+  }
+}

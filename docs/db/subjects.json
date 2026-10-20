@@ -1,0 +1,84 @@
+{
+ "subjects": [
+  {
+   "id": "docs",
+   "title": "docs system (root)"
+  },
+  {
+   "id": "main",
+   "title": "main"
+  },
+  {
+   "id": "orchestrator",
+   "title": "orchestrator"
+  },
+  {
+   "id": "open-api",
+   "title": "open API"
+  },
+  {
+   "id": "user-organization-mgmt",
+   "title": "user-organization-mgmt"
+  },
+  {
+   "id": "ui",
+   "title": "ui lib"
+  },
+  {
+   "id": "list-query",
+   "title": "list-query lib"
+  },
+  {
+   "id": "realtime",
+   "title": "realtime lib"
+  },
+  {
+   "id": "gated-scoped-ac",
+   "title": "gated-scoped-ac lib"
+  },
+  {
+   "id": "value-types",
+   "title": "value-types lib"
+  },
+  {
+   "id": "infra",
+   "title": "infra and scripts"
+  },
+  {
+   "id": "audit-trail",
+   "title": "audit-trail"
+  },
+  {
+   "id": "notifications",
+   "title": "notifications"
+  },
+  {
+   "id": "availability-check",
+   "title": "availability-check lib"
+  },
+  {
+   "id": "rich-text-editor",
+   "title": "rich-text-editor lib"
+  },
+  {
+   "id": "queue",
+   "title": "queue lib"
+  },
+  {
+   "id": "storage",
+   "title": "storage lib"
+  },
+  {
+   "id": "workflows",
+   "title": "workflows lib"
+  },
+  {
+   "id": "slice-design",
+   "title": "slice-design tool"
+  },
+  {
+   "id": "team-cockpit",
+   "title": "team-cockpit"
+  }
+ ]
+}

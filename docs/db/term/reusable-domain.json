@@ -1,0 +1,17 @@
+{
+  "id": "term/reusable-domain",
+  "kind": "term",
+  "title": "reusable domain",
+  "status": "converted",
+  "subjects": [
+    "docs"
+  ],
+  "tags": [
+    "docs"
+  ],
+  "paths": [],
+  "term": {
+    "def": "A library or a seed slice: its docs split into consumer and contributor.",
+    "aliases": []
+  }
+}

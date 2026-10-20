@@ -1,0 +1,18 @@
+{
+  "id": "term/mount",
+  "kind": "term",
+  "title": "mount",
+  "status": "approved",
+  "subjects": [
+    "main"
+  ],
+  "tags": [
+    "architecture"
+  ],
+  "paths": [],
+  "term": {
+    "def": "The single touch point where the app instantiates a [[slice]], wires its hooks and injects its needs (`apps/main/shared/api/src/mounts.ts`).",
+    "aliases": [],
+    "proposed": true
+  }
+}

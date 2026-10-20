@@ -1,0 +1,142 @@
+{
+  "id": "doc/user-org-mgmt-architecture",
+  "kind": "doc",
+  "title": "Architecture",
+  "status": "converted",
+  "subject": "user-organization-mgmt",
+  "tags": [
+    "user-organization-mgmt"
+  ],
+  "paths": [
+    "apps/main/slices/seed/user-organization-mgmt"
+  ],
+  "summary": "`api/identity/identity-provider.port.ts` is the module's ONLY seam to the identity system. The provider owns identities, credentials, verification codes (gen…",
+  "docId": "user-org-mgmt-architecture",
+  "doc": {
+    "axioms": [],
+    "purpose": {},
+    "reference": [
+      {
+        "topic": "Layers",
+        "claims": [
+          {
+            "text": "**Routes** are thin Hono factories: parse/validate input, resolve the caller from context vars, call one service method, shape the response."
+          },
+          {
+            "text": "**Services** own domain logic. `AuthService` is deliberately thin: a credential conversation is the PROVIDER's flow, and the service adds only what the provider cannot know — product policy (which identifier registers with which factor), the app's user row, consent + profile records, and uniform errors. It delegates every domain decision (consent → `LegalService`, profile writes → `UserRepository`, credentials/codes/sessions → the port)."
+          },
+          {
+            "text": "**Repositories** are the only layer importing the db. Each exports a narrow interface; the Drizzle class implements it and in-memory doubles in `api/testing/` implement the same interface for docker-free unit tests. Every repository has exactly ONE owning service — a service only ever calls its own repo. Another service needing that domain's data goes through the owner's narrow accessors, and each consumer's deps name precisely the accessors it may touch (`Pick<UserService, \"getProfile\">`), so the coupling surface is readable off the deps interface. `user_state` belongs to the user domain: `UserService` owns the row; `MembershipService.setActiveOrganization` is the public door that membership-checks before asking for the write. Membership and organization reference each other (org type for last-owner protection, owner seating on create) — the mount closes that cycle with a thunk."
+          },
+          {
+            "text": "**Pure helpers** (`api/lib/`) hold everything with actual logic but no dependencies: password policy, obligation projections. Dep-bound privates stay inside their service — extracting them would only thread dependencies through parameters."
+          }
+        ],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "routes → services → repositories → db (drizzle)\n              ↘ identity-provider port → Kratos adapter → Ory Kratos"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "The identity-provider port",
+        "claims": [
+          {
+            "text": "The Kratos adapter (`api/identity/kratos/`) drives API-native self-service flows (`/self-service/*/api`) entirely server-side. Provider session tokens never leave the backend. The admin API must only ever be reachable cluster-internally."
+          },
+          {
+            "text": "The module also ships the provider's runtime (`api/identity/kratos/infra/`): a compose fragment (services, pinned image), `kratos.yml`, the identity schema, courier templates, and the SMS webhook payload. The host app's compose file pulls the fragment in via `include:` and provides a `postgres` service plus env overrides — that include line is the app's entire Kratos footprint, so removing the module removes the provider with it. The image version and the adapter are one contract; bump them together."
+          },
+          {
+            "text": "`FakeIdentityPort` (`api/testing/`) implements the same port in memory — a test double only, never a runtime provider."
+          }
+        ],
+        "statement": "`api/identity/identity-provider.port.ts` is the module's ONLY seam to the identity system. The provider owns identities, credentials, verification codes (generation AND delivery), and sessions. Because it owns flow state, challenge operations are flow-handle pairs (`start*` → `{flowId}` → `submit*`), never stateless predicates — e.g. there is no `verifyPassword(id, pw): boolean`; `loginPassword` IS the check and yields a session."
+      },
+      {
+        "topic": "Session model",
+        "claims": [
+          {
+            "text": "The caller's **org-context** — the **active organization** (the org the caller acts IN, whose roles the scoped-AC bag carries) and their **membership roles** (the gate's input) — is resolved onto the session view on every request, stored nowhere. Roles come from the membership rows. The active org is the REQUEST's claim: the client names it in the `x-active-organization` header and `SessionService.resolve` honors it only when it names one of the caller's memberships — an array lookup against rows already in hand. No fallback: a request with no valid header has no org context, never a silently-picked org. The org an operation ACTS ON is separate — the `:orgId` in the URL — and access control resolves it against the context (see organizations.md (`./organizations.md#http-surface`)). Context and operation travel together, so one tab's switch can never retarget another tab's write; which org a device last used is the client's memory, not a row."
+          },
+          {
+            "text": "`whoami` results are cached ~30s in-process (facts cache; never a gate verdict — see flows-and-gate.md)."
+          },
+          {
+            "text": "**Every credential proof signs the caller in** — password, delivered code, or recovery code alike; there is no intermediate \"pending\" state to hold anywhere. 2FA is the GATE's demand, not login's: a config that wants TOTP-verified sessions says so with a membership rule, so an enrolled member's fresh AAL1 session is `428`-blocked until they step up on the live session (`/me/security/step-up`). Recovery's privileged session becomes the cookie like any other, and `recoveryFinish` ends its window by revoking every session."
+          },
+          {
+            "text": "**An account exists at credential proof — and registration's credential is always the delivered code.** Every account is born at code proof with its registering address verified; a password, when the config collects one, is set on the fresh birth session as a settings write. Nothing exists before the proof, so there is no pending state to hold and no fresh-but-unverified account to police. The gate's registration invariants still re-check on every request what can drift after birth — added identifiers, failed consent writes, seeded accounts (see flows-and-gate.md)."
+          }
+        ],
+        "statement": "**There is no session table.** The browser holds ONE cookie (`uom_session`, HttpOnly) whose value IS the provider session token. The provider is the single source of truth for whether a session is live, when it expires, and what it proved — nothing to keep in sync, nothing to garbage-collect, and \"sign out everywhere\" is the provider's own operation rather than two stores that must agree. A value the provider doesn't recognize is simply not a session, never an error. (In prod the provider's public API is cluster-internal, so the token is only usable through the module's surface anyway.)",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "cookie (= token) → port.whoami(token) → user + AAL + methods\n                                      → memberships + org header → org-context"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Lifecycle hooks — the outbound seam",
+        "claims": [
+          {
+            "text": "Three properties hold for every hook, and consumers depend on them:"
+          },
+          {
+            "text": "**It fires after its mutation commits.** The membership stands whether or not a consumer succeeds."
+          },
+          {
+            "text": "**The emitter awaits and the mount guards.** Every callback the app passes is wrapped at mount time (`api/shared/guard-hooks.ts`): a consumer that throws costs a log line under the hook's name, never the caller's response. Consumers are ordinary async functions with nothing to remember."
+          },
+          {
+            "text": "**No consumer wired means no work.** `onInvitationAccepted` skips its profile read entirely when the app passed no callback."
+          },
+          {
+            "text": "`EmitCtx` (`{ tx? }`) is declared and unused: emissions land after their transaction closes, so there is nothing to join today. It exists so a consumer that later needs to enqueue durable work inside the emitter's transaction is a wiring change rather than a signature change."
+          }
+        ],
+        "statement": "The module tells the app what happened; it never learns what the app does about it. `shared/types/hooks.ts` declares the callbacks, the mount takes them, and services call them through the typed-optional seam:",
+        "imagesAndDiagrams": [
+          {
+            "type": "ascii",
+            "value": "| Hook | Fires |\n| --- | --- |\n| `onUserRegistered` | an account was born at credential proof |\n| `onUserUpdated` | profile, identifiers, or contact rows changed |\n| `onInvitationAccepted` | an invitation was accepted — payload carries the inviter, the accepter, the org name, and the roles as one label |"
+          }
+        ]
+      },
+      {
+        "topic": "Security boundaries worth naming",
+        "claims": [
+          {
+            "text": "**Who-am-I comes from the middleware, never the payload.** Routes read the authenticated user from context vars and pass `user.id` into services. Services take explicit ids because they must be callable without an HTTP session (flows, seeds, future org services); the trust boundary is the route+middleware pair."
+          },
+          {
+            "text": "**No existence leaks.** Kratos's code-login start REFUSES an unknown identifier with a distinct error (message `4000035`), which would make accounts enumerable. The service never passes that through: `loginCodeStart` and `recoveryStart` always answer with a flow id — the real one, or an indistinguishable decoy that fails at submit exactly like a wrong code. Password failures map to one uniform \"invalid credentials\"."
+          },
+          {
+            "text": "**The raw auth config never reaches a client.** `GET /config` carries server-resolved projections only."
+          }
+        ]
+      }
+    ],
+    "review": {
+      "axioms": {
+        "state": "unreviewed"
+      },
+      "purpose": {
+        "state": "unreviewed"
+      },
+      "reference": {
+        "state": "unreviewed"
+      }
+    },
+    "converted": true
+  }
+}

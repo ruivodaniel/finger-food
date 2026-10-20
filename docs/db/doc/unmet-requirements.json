@@ -1,0 +1,81 @@
+{
+  "id": "doc/unmet-requirements",
+  "kind": "doc",
+  "title": "Unmet Requirements",
+  "status": "approved",
+  "subject": "main",
+  "tags": [
+    "main"
+  ],
+  "paths": [
+    "apps/main"
+  ],
+  "summary": "Some things a caller must have settled before authorization is even worth evaluating — a verified identifier, a required session factor, mandatory profile da…",
+  "docId": "unmet-requirements",
+  "doc": {
+    "axioms": [
+      {
+        "text": "The gate evaluates the caller's obligations and answers clear or unmet. It never resolves queries."
+      },
+      {
+        "text": "The gate runs before scoped access control: an unmet requirement short-circuits before any AC-governed query executes."
+      },
+      {
+        "text": "Unmet requirements resolve one at a time, in a fixed order."
+      }
+    ],
+    "purpose": {
+      "intro": "Some things a caller must have settled before authorization is even worth evaluating — a verified identifier, a required session factor, mandatory profile data, legal consent. The gate holds those obligations in one place: every protected request passes it first, a blocked caller always knows the single next thing to resolve, and no obligation check leaks into services or the frontend."
+    },
+    "reference": [
+      {
+        "topic": "The gate",
+        "claims": [
+          {
+            "id": "GATE1",
+            "text": "The gate evaluates the caller's obligations — verified identifier, session factor, required profile data, legal consent — and returns clear or unmet. It never resolves queries."
+          },
+          {
+            "id": "GATE2",
+            "text": "Requirements classify as persistent (facts an account carries — e.g. verified email) or session-based (e.g. re-verify OTP this session)."
+          },
+          {
+            "id": "GATE3",
+            "text": "Unmet requirements resolve one at a time, in fixed order. The wire carries the full set — HTTP **428** with `{ obligations }` in that order — and the resolution page renders only the first, advancing as each clears."
+          },
+          {
+            "id": "GATE4",
+            "text": "The gate runs **before** scoped AC: an unmet requirement short-circuits with 428 before any AC-governed query executes."
+          },
+          {
+            "id": "GATE5",
+            "text": "Account-level security requirements (e.g. 2FA) evaluate across **all** memberships, not just the active org — switching org can't bypass them."
+          },
+          {
+            "id": "GATE6",
+            "text": "Frontend contract: every signed-in page is gated; on a 428, redirect automatically to the resolution page (`/resolve`) — the single page exemption, where each obligation resolves in place. Never leave the user stuck on the failed action. Server-side, only the endpoints that clear obligations stay excluded from the gate."
+          }
+        ],
+        "imagesAndDiagrams": [
+          {
+            "title": "Where the gate sits in the middleware sequence",
+            "type": "ascii",
+            "value": "request ─→ session ─→ roles / memberships ─→ permissions bag ─→ GATE ─→ handler\n                                                              │\n                                                              └─ unmet → 428 { obligations } (fixed order)\n                                                                 frontend redirects to /resolve,\n                                                                 which resolves the first, one at a time"
+          }
+        ],
+        "examples": []
+      }
+    ],
+    "review": {
+      "axioms": {
+        "state": "unreviewed"
+      },
+      "purpose": {
+        "state": "unreviewed"
+      },
+      "reference": {
+        "state": "unreviewed"
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "term/role-forest",
+  "kind": "term",
+  "title": "role forest",
+  "status": "approved",
+  "subjects": [
+    "gated-scoped-ac"
+  ],
+  "tags": [
+    "access-control"
+  ],
+  "paths": [
+    "shared/libs/gated-scoped-ac"
+  ],
+  "term": {
+    "def": "The role hierarchy of one org type — an independent tree per type, plus the account baseline that applies with no org in context. A role resolves to every [[permission]] at or beneath it.",
+    "aliases": [],
+    "proposed": true
+  }
+}

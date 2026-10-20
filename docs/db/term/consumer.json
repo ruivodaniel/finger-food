@@ -1,0 +1,17 @@
+{
+  "id": "term/consumer",
+  "kind": "term",
+  "title": "consumer",
+  "status": "converted",
+  "subjects": [
+    "docs"
+  ],
+  "tags": [
+    "docs"
+  ],
+  "paths": [],
+  "term": {
+    "def": "The docs of a reusable domain about how to use it.",
+    "aliases": []
+  }
+}

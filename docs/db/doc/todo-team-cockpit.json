@@ -1,0 +1,16 @@
+{
+  "id": "doc/todo-team-cockpit",
+  "kind": "doc",
+  "title": "team-cockpit (not migrated)",
+  "status": "todo",
+  "subject": "team-cockpit",
+  "tags": [
+    "team-cockpit"
+  ],
+  "paths": [
+    "team-cockpit"
+  ],
+  "summary": "Not migrated yet. Starting point: team-cockpit/INDEX.md",
+  "entry": "team-cockpit/INDEX.md",
+  "doc": null
+}

@@ -1,0 +1,20 @@
+{
+  "id": "term/scope",
+  "kind": "term",
+  "title": "scope",
+  "status": "approved",
+  "subjects": [
+    "gated-scoped-ac"
+  ],
+  "tags": [
+    "access-control"
+  ],
+  "paths": [
+    "shared/libs/gated-scoped-ac"
+  ],
+  "term": {
+    "def": "What the access-control engine returns for a read, update or delete: the compiled row filter for one entity and one action, plus the column allowlist. Branded by entity and action, and mintable only by the engine — the [[gated db]] refuses to run without the matching one, so an ungated query cannot compile.",
+    "aliases": [],
+    "proposed": true
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "term/check-crons",
+  "kind": "term",
+  "title": "check crons",
+  "status": "converted",
+  "subjects": [
+    "orchestrator"
+  ],
+  "tags": [
+    "orchestrator"
+  ],
+  "paths": [
+    "apps/orchestrator"
+  ],
+  "term": {
+    "def": "A worker, started every N minutes, that asks the open API which crons are due in the next N minutes and starts those pipelines.",
+    "aliases": [],
+    "proposed": true
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "term/adr",
+  "kind": "term",
+  "title": "ADR",
+  "status": "converted",
+  "subjects": [
+    "docs"
+  ],
+  "tags": [
+    "docs"
+  ],
+  "paths": [],
+  "term": {
+    "def": "The append-only journal of a location's decisions.",
+    "aliases": []
+  }
+}

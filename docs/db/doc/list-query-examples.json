@@ -1,0 +1,162 @@
+{
+  "id": "doc/list-query-examples",
+  "kind": "doc",
+  "title": "Examples",
+  "status": "converted",
+  "subject": "list-query",
+  "tags": [
+    "list-query",
+    "consumer"
+  ],
+  "paths": [
+    "shared/libs/list-query"
+  ],
+  "summary": "Full walkthrough of wiring a list endpoint end-to-end. This mirrors the structure used by `user-organization-mgmt`.",
+  "docId": "list-query-examples",
+  "doc": {
+    "axioms": [],
+    "purpose": {
+      "intro": "Full walkthrough of wiring a list endpoint end-to-end. This mirrors the structure used by `user-organization-mgmt`."
+    },
+    "reference": [
+      {
+        "topic": "Goal",
+        "claims": [],
+        "statement": "Ship `GET /organizations` returning paginated, sorted organizations with optional search, status, and type filters."
+      },
+      {
+        "topic": "1. Validator — `configs/user-organization-mgmt/api/organization.api.ts`",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "import { z } from \"zod\";\nimport { createListQuerySchema } from \"@prowd/list-query/server\";\nimport { LIST_QUERY_DEFAULTS } from \"@configs/list-query\";\n\nexport const GetOrganizationsQuerySchema = createListQuerySchema({\n  defaults: LIST_QUERY_DEFAULTS,\n  sortable: [\"name\", \"createdAt\"] as const,\n  defaultSort: \"name\",\n  searchable: true,\n}).extend({\n  status: z.enum([\"active\", \"inactive\"]).optional(),\n  type:   z.enum([\"system_admin\", \"platform_admin\", \"organization\"]).optional(),\n});\n\nexport type GetOrganizationsQuery = z.infer<typeof GetOrganizationsQuerySchema>;",
+                "caption": "ts"
+              }
+            ]
+          },
+          {
+            "snippets": [
+              {
+                "code": "{\n  page: number;           // default 1\n  pageSize: number;       // default 25\n  sort: SortSpec[];       // default [{ field: \"name\", direction: \"asc\" }]\n  search?: string;\n  status?: \"active\" | \"inactive\";\n  type?:   \"system_admin\" | \"platform_admin\" | \"organization\";\n}",
+                "caption": "ts"
+              }
+            ]
+          }
+        ],
+        "statement": "Output type of `GetOrganizationsQuery`:"
+      },
+      {
+        "topic": "2. Router — `shared/modules/user-organization-mgmt/api/routes/create-organization-router.ts`",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": ".get(\n  \"/\",\n  zValidator(\"query\", validationSchemas.GetOrganizationsQuery),\n  async (c) => {\n    const query = c.req.valid(\"query\");\n    const accessContext = getAccessContext(c);\n    const result = await orgService.getAll(accessContext, query);\n    return c.json(result); // already { rows, total }\n  },\n)",
+                "caption": "ts"
+              }
+            ]
+          }
+        ],
+        "statement": "No param parsing, no envelope building, no fallback values. The validator applied everything."
+      },
+      {
+        "topic": "3. Service — `shared/modules/user-organization-mgmt/api/services/organization.service.ts`",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "async getAll(accessContext: AccessContext, query: GetOrganizationsQuery) {\n  return this.repo.findAll(accessContext, query);\n}",
+                "caption": "ts"
+              }
+            ]
+          }
+        ],
+        "statement": "Pure passthrough. The service exists so future business logic has a home, but for a read-only paginated list there's nothing to do."
+      },
+      {
+        "topic": "4. Repository — `shared/modules/user-organization-mgmt/api/repositories/organization.repository.ts`",
+        "claims": [
+          {
+            "text": "`whereExpr` is **one** variable used in **two** queries. That's the enforcement mechanism for \"scoped count uses the exact same where.\""
+          },
+          {
+            "text": "The `leftJoin` is present on both the list and the count, matching the filter semantics."
+          },
+          {
+            "text": "`scopeFilterBuilder.compile(...).where` is inside `whereExpr`, so the count respects access control identically."
+          }
+        ],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "import { applyPagination, buildOrderBy } from \"@prowd/list-query/server\";\nimport type { ListResponse } from \"@prowd/list-query\";\nimport { and, count, eq, ilike, sql } from \"drizzle-orm\";\nimport * as schema from \"../models\";\n\nasync findAll(\n  accessContext: AccessContext,\n  query: GetOrganizationsQuery,\n): Promise<ListResponse<OrganizationListRow>> {\n  const orgVerdict = this.engine.resolveForReadUpdate(\n    accessContext.effectiveRoles, \"organization\", \"read\", accessContext.subjects,\n  );\n  const org = this.scopeFilterBuilder.compile(\"organization\", orgVerdict);\n  // Enrichment view: caller-owned join, no engine call.\n  const summary = { where: undefined, select: { /* extra columns from orgSummaryView */ } };\n\n  const whereExpr = and(\n    org.where,\n    summary.where,\n    query.search\n      ? ilike(schema.organization.name, `%${query.search}%`)\n      : undefined,\n    query.status\n      ? sql`(${schema.organization.metadata})::jsonb->>'status' = ${query.status}`\n      : undefined,\n    query.type\n      ? eq(schema.organization.type, query.type)\n      : undefined,\n  );\n\n  const orderBy = buildOrderBy(\n    query.sort,\n    {\n      name:      schema.organization.name,\n      createdAt: schema.organization.createdAt,\n    },\n    schema.organization.id,\n  );\n\n  const base = this.db\n    .select({ ...org.select, ...summary.select })\n    .from(schema.organization)\n    .leftJoin(\n      schema.orgSummaryView,\n      eq(schema.organization.id, schema.orgSummaryView.organizationId),\n    )\n    .where(whereExpr);\n\n  const listQ = applyPagination(\n    base.orderBy(...orderBy),\n    query.page,\n    query.pageSize,\n  );\n\n  const countQ = this.db\n    .select({ c: count() })\n    .from(schema.organization)\n    .leftJoin(\n      schema.orgSummaryView,\n      eq(schema.organization.id, schema.orgSummaryView.organizationId),\n    )\n    .where(whereExpr); // same whereExpr — never diverge\n\n  const [rows, [{ c }]] = await Promise.all([listQ, countQ]);\n  return { rows, total: Number(c) };\n}",
+                "caption": "ts"
+              }
+            ]
+          }
+        ],
+        "statement": "Notice:"
+      },
+      {
+        "topic": "5. Frontend type — `shared/modules/user-organization-mgmt/web/types.ts`",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "import type { ListResponse } from \"@prowd/list-query\";\n\norganizationList: {\n  $get: (opts?: {\n    query?: {\n      page?: string | number;\n      pageSize?: string | number;\n      sort?: string;\n      search?: string;\n      status?: string;\n      type?: string;\n    };\n  }) => Promise<{\n    ok: boolean;\n    json: () => Promise<ListResponse<OrganizationListRow>>;\n  }>;\n};",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "6. Frontend adapter — `apps/web-main/src/lib/api/user-org-mgmt-api-client.ts`",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "import { serializeListQuery } from \"@prowd/list-query/client\";\n\norganizationList: {\n  $get: async (opts) => {\n    const params = serializeListQuery(opts?.query ?? {});\n    const response = await request(`/organizations?${params}`);\n    return { ok: response.ok, json: () => response.json() };\n  },\n},",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "7. Frontend call site",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "const res = await apiClient.organizationList.$get({\n  query: { page: 1, pageSize: 25, sort: \"name\", search: searchTerm },\n});\nconst { rows, total } = await res.json();\n\nsetOrganizations(rows.map(/* ... */));\nsetTotal(total);",
+                "caption": "ts"
+              }
+            ]
+          }
+        ],
+        "statement": "That's the full loop."
+      }
+    ],
+    "review": {
+      "axioms": {
+        "state": "unreviewed"
+      },
+      "purpose": {
+        "state": "unreviewed"
+      },
+      "reference": {
+        "state": "unreviewed"
+      }
+    },
+    "converted": true
+  }
+}

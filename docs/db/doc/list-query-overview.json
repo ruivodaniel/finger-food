@@ -1,0 +1,45 @@
+{
+  "id": "doc/list-query-overview",
+  "kind": "doc",
+  "title": "list-query",
+  "status": "converted",
+  "subject": "list-query",
+  "tags": [
+    "list-query"
+  ],
+  "paths": [
+    "shared/libs/list-query"
+  ],
+  "summary": "**What.** Standardised list endpoint contract — pagination, sort, multi-field ordering, search flag, scoped count, plus the React hook that drives URL-backed…",
+  "docId": "list-query-overview",
+  "doc": {
+    "axioms": [],
+    "purpose": {
+      "intro": "**What.** Standardised list endpoint contract — pagination, sort, multi-field ordering, search flag, scoped count, plus the React hook that drives URL-backed list state. **How.** One Zod factory composes the standard query params; one envelope helper shapes the `{ rows, total }` response; one hook (`useListQueryState`) syncs filters/page/sort to URL search params. **Why.** Every list endpoint has the same plumbing. Centralising it eliminates drift, keeps the count query in sync with the list query (preventing leaks), and gives the frontend a single source of truth for list state."
+    },
+    "reference": [
+      {
+        "topic": "For consumers",
+        "claims": [],
+        "statement": "Building a list endpoint or a list page? Start in `consumer/` (`./consumer/`)."
+      },
+      {
+        "topic": "For contributors",
+        "claims": [],
+        "statement": "Changing the lib itself? Start in `contributor/` (`./contributor/`)."
+      }
+    ],
+    "review": {
+      "axioms": {
+        "state": "unreviewed"
+      },
+      "purpose": {
+        "state": "unreviewed"
+      },
+      "reference": {
+        "state": "unreviewed"
+      }
+    },
+    "converted": true
+  }
+}

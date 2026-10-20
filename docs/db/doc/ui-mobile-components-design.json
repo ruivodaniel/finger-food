@@ -1,0 +1,109 @@
+{
+  "id": "doc/ui-mobile-components-design",
+  "kind": "doc",
+  "title": "Mobile design: why the library is shaped this way",
+  "status": "converted",
+  "subject": "ui",
+  "tags": [
+    "ui"
+  ],
+  "paths": [
+    "shared/libs/ui"
+  ],
+  "summary": "The first version of this library, taken from the LLC project, chose React Native's usual vocabulary (`variant`, `tone`, `size`), a hand-written theme of its…",
+  "docId": "ui-mobile-components-design",
+  "doc": {
+    "axioms": [],
+    "purpose": {},
+    "reference": [
+      {
+        "topic": "What changed, and why",
+        "claims": [
+          {
+            "text": "This repo is a seed for many products, each with its own themes. That condition holds, so the choice is reversed:"
+          },
+          {
+            "text": "**One vocabulary.** `emphasis`, `status`, `scale`, `state`, read from `ui/types/axes.ts`. The translation files are gone: there is nothing to translate."
+          },
+          {
+            "text": "**One law.** `ui/types/elements.ts` says which elements exist, on which platform, with which axis values. A mobile component's props are typed from its row."
+          },
+          {
+            "text": "**One theme type.** A mobile theme is a `MobileTheme` (`ui/types/theme.ts`): the same primitives, families, elements and cascade as a web theme, without what only the web has, with what only a phone has."
+          },
+          {
+            "text": "**The theme owns the look.** A component holds structure and behaviour; every visual value comes from the theme through `useElement`."
+          }
+        ],
+        "statement": "The first version of this library, taken from the LLC project, chose React Native's usual vocabulary (`variant`, `tone`, `size`), a hand-written theme of its own, and kept a file per component translating its props to the web's. Its own design note said when to revisit: when a second theme or several brands are on the roadmap."
+      },
+      {
+        "topic": "How a theme reaches a component",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "themes/<id>/v<n>/theme.ts          a MobileTheme, authored\n        │   mobile/theme-engine     (pnpm theme:build:mobile)\n        ▼\nthemes/<id>/v<n>/generated/<id>.native.json\n        │   ThemeProvider\n        ▼\nuseElement(\"button\", { emphasis, status, scale, states })  →  { view, text, color, icon }"
+              }
+            ]
+          }
+        ],
+        "statement": "The web engine turns a theme into CSS and the browser resolves the cascade. React Native has no cascade, so the mobile engine emits each rule as a *fragment*, in the order the cascade applies them, and `resolve` (in `src/theme/resolve.ts`) keeps the fragments whose axes match and merges them. The colour composition (tint, background alpha, `smart-bw`) is the web stylesheet's formula, computed in JavaScript."
+      },
+      {
+        "topic": "What a component still owns",
+        "claims": [
+          {
+            "text": "**Accessibility.** Role, state, label. A component without it is not done."
+          },
+          {
+            "text": "**Native props.** A component wraps a React Native component and passes its props through."
+          },
+          {
+            "text": "**Press feedback per platform.** iOS dims (`theme.press.opacityDim`), Android ripples (`theme.press.ripple`); both come from the theme. The `active` state restyles the element on both."
+          },
+          {
+            "text": "**Structure.** Row or column, what goes where. Never a colour, a size or a spacing."
+          }
+        ]
+      },
+      {
+        "topic": "What React Native cannot do, and what stands in",
+        "claims": [],
+        "imagesAndDiagrams": [
+          {
+            "type": "ascii",
+            "value": "| The web has | Mobile does |\n|---|---|\n| The cascade | Fragments, resolved by `useElement` |\n| `:hover` | Nothing. `long-pressed` is the state for what a held press reveals |\n| Inherited text colour | A component passes its text style to its own text |\n| A stylesheet swapped at run time | A new `theme` or `mode` on the provider re-renders its consumers |"
+          }
+        ]
+      },
+      {
+        "topic": "Not there yet",
+        "claims": [
+          {
+            "text": "Concepts, contextual overrides and rules (theme levels 4 to 6) are not emitted: they need a component's ancestry at run time."
+          },
+          {
+            "text": "Gradients, text effects and blur are not emitted. The engine lists what it skipped in the output's `unsupported`, and prints it."
+          },
+          {
+            "text": "The unit tests of the first version tested the old props and were removed with them. This repo has no test runner for React Native yet; the tests are owed."
+          }
+        ]
+      }
+    ],
+    "review": {
+      "axioms": {
+        "state": "unreviewed"
+      },
+      "purpose": {
+        "state": "unreviewed"
+      },
+      "reference": {
+        "state": "unreviewed"
+      }
+    },
+    "converted": true
+  }
+}

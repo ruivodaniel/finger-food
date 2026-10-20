@@ -1,0 +1,18 @@
+<style>
+  .fl { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+  .fl th { font-family: ui-monospace, Menlo, monospace; font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase; color: #8c8478; text-align: left; padding: 6px 14px 6px 0; border-bottom: 1.5px solid #d8d1c4; font-weight: 500; }
+  .fl td { padding: 9px 14px 9px 0; border-bottom: 1px dotted #d8d1c4; vertical-align: top; }
+  .fl tr:last-child td { border-bottom: none; }
+  .fl .l { font-weight: 600; white-space: nowrap; }
+  .fl .no { color: #9c3a2f; }
+</style>
+<table class="fl">
+  <thead><tr><th>Layer</th><th>Owns</th><th>Must not</th></tr></thead>
+  <tbody>
+    <tr><td class="l">Middleware</td><td>Request hydration — context, identity, flags</td><td class="no">Contain business logic</td></tr>
+    <tr><td class="l">Router</td><td>HTTP transport — parse input, call service, return response</td><td class="no">Call repositories or touch DB</td></tr>
+    <tr><td class="l">Service</td><td>Business logic — orchestrate, validate, decide</td><td class="no">Touch the database directly</td></tr>
+    <tr><td class="l">Repository</td><td>Data access — query, filter, persist</td><td class="no">Handle HTTP or business rules</td></tr>
+    <tr><td class="l">Model</td><td>Persistence shape — Drizzle table definitions + co-located Zod schemas</td><td class="no">Contain any logic</td></tr>
+  </tbody>
+</table>

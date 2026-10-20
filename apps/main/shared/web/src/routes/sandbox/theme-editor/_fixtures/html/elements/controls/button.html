@@ -1,0 +1,76 @@
+<!-- label: Button -->
+<div class="flex flex-col gap-3">
+  <p element="type--body-extra-small" emphasis="quiet">emphasis — scale="md"</p>
+  <div class="flex gap-3 flex-wrap items-center">
+    <button element="control--button" emphasis="primary" scale="md"><span>Primary</span></button>
+    <button element="control--button" emphasis="secondary" scale="md"><span>Secondary</span></button>
+    <button element="control--button" emphasis="tertiary" scale="md"><span>Tertiary</span></button>
+    <button element="control--button" emphasis="quiet" scale="md"><span>Quiet</span></button>
+  </div>
+</div>
+
+<div class="flex flex-col gap-3">
+  <p element="type--body-extra-small" emphasis="quiet">scale — emphasis="primary"</p>
+  <div class="flex gap-3 flex-wrap items-center">
+    <button element="control--button" emphasis="primary" scale="xs"><span>XS</span></button>
+    <button element="control--button" emphasis="primary" scale="sm"><span>SM</span></button>
+    <button element="control--button" emphasis="primary" scale="md"><span>MD</span></button>
+    <button element="control--button" emphasis="primary" scale="lg"><span>LG</span></button>
+    <button element="control--button" emphasis="primary" scale="xl"><span>XL</span></button>
+  </div>
+</div>
+
+<div class="flex flex-col gap-3">
+  <p element="type--body-extra-small" emphasis="quiet">status</p>
+  <div class="flex gap-3 flex-wrap items-center">
+    <button element="control--button" emphasis="primary" status="error" scale="md"><span>Error</span></button>
+    <button element="control--button" emphasis="primary" status="warning" scale="md"><span>Warning</span></button>
+    <button element="control--button" emphasis="primary" status="success" scale="md"><span>Success</span></button>
+    <button element="control--button" emphasis="secondary" status="destructive" scale="md"><span>Destructive</span></button>
+  </div>
+</div>
+
+<div class="flex flex-col gap-3">
+  <p element="type--body-extra-small" emphasis="quiet">state</p>
+  <div class="flex gap-3 flex-wrap items-center">
+    <button element="control--button" emphasis="primary" scale="md"><span>Default</span></button>
+    <button element="control--button" emphasis="primary" scale="md" state="selected"><span>Selected</span></button>
+    <button element="control--button" emphasis="primary" scale="md" state="disabled" disabled><span>Disabled</span></button>
+  </div>
+</div>
+
+<div class="flex flex-col gap-3">
+  <p element="type--body-extra-small" emphasis="quiet">icon + text</p>
+  <div class="flex gap-3 flex-wrap items-center">
+    <button element="control--button" emphasis="primary" scale="md">
+      <span data-part="start-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" element="shape--icon" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></span>
+      <span>Add</span>
+    </button>
+    <button element="control--button" emphasis="secondary" scale="md">
+      <span>Continue</span>
+      <span data-part="end-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" element="shape--icon" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+    </button>
+    <button element="control--button" emphasis="primary" status="destructive" scale="md">
+      <span data-part="start-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" element="shape--icon" aria-hidden="true"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></svg></span>
+      <span>Delete</span>
+    </button>
+  </div>
+</div>
+
+<div class="flex flex-col gap-3">
+  <p element="type--body-extra-small" emphasis="quiet">icon only</p>
+  <div class="flex gap-3 flex-wrap items-center">
+    <button element="control--button" emphasis="primary" scale="md">
+      <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" element="shape--icon" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></span>
+    </button>
+    <button element="control--button" emphasis="secondary" scale="md">
+      <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" element="shape--icon" aria-hidden="true"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/><path d="m15 5 4 4"/></svg></span>
+    </button>
+    <button element="control--button" emphasis="tertiary" scale="md">
+      <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" element="shape--icon" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></span>
+    </button>
+    <button element="control--button" emphasis="quiet" scale="md">
+      <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" element="shape--icon" aria-hidden="true"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg></span>
+    </button>
+  </div>
+</div>

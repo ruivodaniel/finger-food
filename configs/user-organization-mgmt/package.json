@@ -1,0 +1,9 @@
+{
+  "name": "@configs/user-organization-mgmt",
+  "type": "module",
+  "private": true,
+  "main": "./index.ts",
+  "peerDependencies": {
+    "@modules/user-organization-mgmt": "workspace:*"
+  }
+}

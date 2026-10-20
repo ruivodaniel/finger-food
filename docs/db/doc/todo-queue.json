@@ -1,0 +1,16 @@
+{
+  "id": "doc/todo-queue",
+  "kind": "doc",
+  "title": "lib: queue (not migrated)",
+  "status": "todo",
+  "subject": "queue",
+  "tags": [
+    "queue"
+  ],
+  "paths": [
+    "shared/libs/queue"
+  ],
+  "summary": "Not migrated yet. Starting point: shared/libs/queue",
+  "entry": "shared/libs/queue",
+  "doc": null
+}

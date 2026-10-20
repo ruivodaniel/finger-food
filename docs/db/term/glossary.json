@@ -1,0 +1,17 @@
+{
+  "id": "term/glossary",
+  "kind": "term",
+  "title": "glossary",
+  "status": "converted",
+  "subjects": [
+    "docs"
+  ],
+  "tags": [
+    "docs"
+  ],
+  "paths": [],
+  "term": {
+    "def": "The terms of a location, cross-referenced with `[[term]]`.",
+    "aliases": []
+  }
+}

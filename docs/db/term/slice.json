@@ -1,0 +1,17 @@
+{
+  "id": "term/slice",
+  "kind": "term",
+  "title": "slice",
+  "status": "approved",
+  "subjects": [
+    "main"
+  ],
+  "tags": [
+    "architecture"
+  ],
+  "paths": [],
+  "term": {
+    "def": "A [[seed slice|seed]] or [[product slice|product]] slice. The unit that owns entities, models and business logic.",
+    "aliases": []
+  }
+}

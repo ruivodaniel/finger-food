@@ -1,0 +1,30 @@
+<!-- label: Card -->
+<div class="flex flex-col gap-3">
+  <p element="type--body-extra-small" emphasis="quiet">default — header / content / footer</p>
+  <div element="surface--card" class="flex flex-col" style="max-width: 400px;">
+    <div element="surface--header">
+      <h4 element="type--heading4">Card Title</h4>
+      <p element="type--body-small" emphasis="quiet">A short description of this card.</p>
+    </div>
+    <div element="surface--content">
+      <p element="type--body-small">Card body content goes here.</p>
+    </div>
+    <div element="surface--footer" class="flex gap-2 justify-end">
+      <button element="control--button" emphasis="secondary" scale="sm"><span>Cancel</span></button>
+      <button element="control--button" emphasis="primary" scale="sm"><span>Save</span></button>
+    </div>
+  </div>
+</div>
+
+<div class="flex flex-col gap-3">
+  <p element="type--body-extra-small" emphasis="quiet">with badge in header</p>
+  <div element="surface--card" class="flex flex-col" style="max-width: 400px;">
+    <div element="surface--header" class="flex justify-between items-start">
+      <h4 element="type--heading4">Organization Status</h4>
+      <span element="surface--badge" status="success" scale="xs">Active</span>
+    </div>
+    <div element="surface--content">
+      <p element="type--body-small">Platform Admin · 24 members</p>
+    </div>
+  </div>
+</div>

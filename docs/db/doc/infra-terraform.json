@@ -1,0 +1,216 @@
+{
+  "id": "doc/infra-terraform",
+  "kind": "doc",
+  "title": "🏗️ Terraform Infrastructure",
+  "status": "converted",
+  "subject": "infra",
+  "tags": [
+    "infra"
+  ],
+  "paths": [
+    "terraform"
+  ],
+  "summary": "Infrastructure as Code (IaC) configurations for provisioning and managing cloud resources using Terraform modules and deployments.",
+  "docId": "infra-terraform",
+  "doc": {
+    "axioms": [],
+    "purpose": {
+      "intro": "Infrastructure as Code (IaC) configurations for provisioning and managing cloud resources using Terraform modules and deployments."
+    },
+    "reference": [
+      {
+        "topic": "Security: OIDC Authentication",
+        "claims": [
+          {
+            "text": "**GitHub Actions → AWS**: Workflows authenticate via OIDC, assuming an IAM role"
+          },
+          {
+            "text": "**No secrets stored**: Temporary credentials are issued on-demand"
+          }
+        ],
+        "statement": "This project uses **OIDC (OpenID Connect)** for secure authentication — no static AWS credentials needed."
+      },
+      {
+        "topic": "Quick Start › Lean Mode (client's own AWS account)",
+        "claims": [],
+        "statement": "Use the bootstrap stack to create the S3 state bucket, OIDC role, and ECR repos:",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "# 1. Configure AWS credentials for the client account\naws configure --profile <project>\nexport AWS_PROFILE=<project>\n\n# 2. Fill in bootstrap variables\ncp terraform/bootstrap/terraform.tfvars.example terraform/bootstrap/terraform.tfvars\n# Edit terraform.tfvars with project_name, region, github_org, github_repo\n\n# 3. Run bootstrap (creates S3 bucket + OIDC + ECR)\n./terraform/scripts/bootstrap.sh\n\n# 4. Fill in deployment variables\ncp terraform/deployment/backend.hcl.example terraform/deployment/backend.hcl\n# Edit backend.hcl with the bucket name from bootstrap output\n# Edit terraform/deployment/terraform.tfvars with project values\n\n# 5. Deploy infrastructure\ncd terraform/deployment\nterraform plan\nterraform apply",
+                "caption": "bash"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Quick Start › Shared Mode (Altar's AWS account)",
+        "claims": [],
+        "statement": "State bucket and OIDC already exist. Skip the bootstrap:",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "# 1. Configure backend\ncp terraform/deployment/backend.hcl.example terraform/deployment/backend.hcl\n# Edit backend.hcl to use the shared Altar state bucket\n\n# 2. Configure deployment\n# Edit terraform/deployment/terraform.tfvars with deployment_mode = \"shared\"\n\n# 3. Deploy\ncd terraform/deployment\nterraform init -backend-config=backend.hcl\nterraform plan\nterraform apply",
+                "caption": "bash"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Structure › Deployment (`deployment/` (`deployment/`))",
+        "claims": [
+          {
+            "text": "**`main.tf` (`deployment/main.tf`)**: Primary infrastructure configuration and module composition"
+          },
+          {
+            "text": "**`providers.tf` (`deployment/providers.tf`)**: Cloud provider configurations and versions"
+          },
+          {
+            "text": "**`variables.tf` (`deployment/variables.tf`)**: Input variable definitions"
+          },
+          {
+            "text": "**`outputs.tf` (`deployment/outputs.tf`)**: Output values for resource references"
+          },
+          {
+            "text": "**`terraform.tfvars` (`deployment/terraform.tfvars`)**: Environment-specific variable values"
+          }
+        ],
+        "statement": "Main Terraform deployment configuration that orchestrates all infrastructure components:"
+      },
+      {
+        "topic": "Structure › Bootstrap (`bootstrap/` (`bootstrap/`))",
+        "claims": [
+          {
+            "text": "**`main.tf` (`bootstrap/main.tf`)**: S3 state bucket, GitHub OIDC provider, ECR repositories"
+          },
+          {
+            "text": "**`variables.tf` (`bootstrap/variables.tf`)**: Input variables (project_name, region, github_org, github_repo)"
+          },
+          {
+            "text": "**`outputs.tf` (`bootstrap/outputs.tf`)**: State bucket name, deploy role ARN, ECR URLs"
+          }
+        ],
+        "statement": "One-time setup for lean mode deployments (client's own AWS account):"
+      },
+      {
+        "topic": "Structure › AWS Modules (`modules/aws/` (`modules/aws/`))",
+        "claims": [
+          {
+            "text": "**GitHub OIDC** (`modules/aws/github-oidc/` (`modules/aws/github-oidc/`)): OIDC provider and IAM role for GitHub Actions"
+          },
+          {
+            "text": "**EKS Cluster** (`modules/aws/eks-cluster/` (`modules/aws/eks-cluster/`)): Kubernetes cluster provisioning and configuration"
+          },
+          {
+            "text": "**RDS** (`modules/aws/rds/` (`modules/aws/rds/`)): PostgreSQL database instance management"
+          },
+          {
+            "text": "— SSL is disabled by default for easier development; enable it in production"
+          },
+          {
+            "text": "**S3 Bucket** (`modules/aws/s3-bucket/` (`modules/aws/s3-bucket/`)): Object storage for application assets"
+          },
+          {
+            "text": "— Bucket objects are public by default. Edit the policy for private access."
+          },
+          {
+            "text": "**Secret Manager** (`modules/aws/secret-manager/` (`modules/aws/secret-manager/`)): Secure storage for application secrets"
+          },
+          {
+            "text": "— Two secrets are created by default:"
+          },
+          {
+            "text": "— — `<project-name>/terraform` — managed by Terraform, do not edit manually"
+          },
+          {
+            "text": "— — `<project-name>/secrets` — edit manually in the AWS console as needed"
+          },
+          {
+            "text": "**VPC** (`modules/aws/vpc/` (`modules/aws/vpc/`)): Virtual Private Cloud networking"
+          }
+        ]
+      },
+      {
+        "topic": "Structure › Core Module (`modules/core/` (`modules/core/`))",
+        "claims": [
+          {
+            "text": "**TFC OIDC** (`modules/core/tfc-oidc/` (`modules/core/tfc-oidc/`)): Terraform Cloud OIDC configuration for dynamic AWS credentials"
+          }
+        ]
+      },
+      {
+        "topic": "Structure › Scripts (`scripts/` (`scripts/`))",
+        "claims": [
+          {
+            "text": "**`bootstrap.sh`**: One-time lean mode bootstrap (S3 bucket + OIDC + ECR)"
+          },
+          {
+            "text": "**`terraform-cloud-create-project.sh`**: Creates TFC project"
+          },
+          {
+            "text": "**`terraform-cloud-create-workspace.sh`**: Creates TFC workspace"
+          },
+          {
+            "text": "**`terraform-cloud-configure-oidc.sh`**: Configures OIDC authentication"
+          },
+          {
+            "text": "**`terraform-local-setup.sh`**: Sets up local development environment"
+          }
+        ]
+      },
+      {
+        "topic": "Local Development",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "cd deployment\nterraform init -backend-config=backend.hcl\nterraform plan\nterraform apply\nterraform fmt -recursive",
+                "caption": "bash"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Local Development › Prerequisites",
+        "claims": [
+          {
+            "text": "**Terraform CLI**: `brew install terraform`"
+          },
+          {
+            "text": "**AWS CLI**: `brew install awscli`"
+          },
+          {
+            "text": "**AWS credentials**: Configure via `aws configure --profile <project>` or SSO"
+          }
+        ]
+      },
+      {
+        "topic": "CI/CD Deployment",
+        "claims": [
+          {
+            "text": "For details, see .github/README_CICD.md (`../.github/README_CICD.md`)."
+          }
+        ],
+        "statement": "Terraform workflows are triggered via GitHub Actions. Set the `AWS_REGION` repository variable to match the project's region."
+      }
+    ],
+    "review": {
+      "axioms": {
+        "state": "unreviewed"
+      },
+      "purpose": {
+        "state": "unreviewed"
+      },
+      "reference": {
+        "state": "unreviewed"
+      }
+    },
+    "converted": true
+  }
+}

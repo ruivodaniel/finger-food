@@ -1,0 +1,26 @@
+{
+  "id": "adr/root--mapr-adapted-to-json-and-registry",
+  "kind": "adr",
+  "title": "MAPR kept, adapted to json and to the registry",
+  "status": "converted",
+  "subject": "docs",
+  "tags": [
+    "docs"
+  ],
+  "paths": [],
+  "summary": "The principles are kept as written. The map is a `map.json`, the ADR an `adr.json`, the central map the registry, and every location gets a glossary. Consumer a",
+  "adr": {
+    "date": "2026-10-19",
+    "context": "MAPR (the original mapper doc, in the archive) was written for markdown, with INDEX.md maps and dated markdown ADRs, and a docs folder split into consumer, contributor and adr everywhere.",
+    "decision": "The principles are kept as written. The map is a `map.json`, the ADR an `adr.json`, the central map the registry, and every location gets a glossary. Consumer and contributor apply to reusable domains only: libraries and seed slices. Each file and folder is labelled mapper compliant or not in the registry.",
+    "consequences": [
+      "The original `mapr.md` is kept in `.old-markdown-to-sunset`.",
+      "The root, main, the apps and infra keep their docs flat.",
+      "A converted doc is not compliant until its axioms and purpose are written."
+    ],
+    "affects": [
+      "mapper"
+    ],
+    "adrStatus": "accepted"
+  }
+}

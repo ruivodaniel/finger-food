@@ -1,0 +1,113 @@
+{
+  "id": "doc/infra-configs",
+  "kind": "doc",
+  "title": "What's configurable in this product",
+  "status": "converted",
+  "subject": "infra",
+  "tags": [
+    "infra"
+  ],
+  "paths": [
+    "configs"
+  ],
+  "summary": "Every `*.config.ts` and `*.ac.ts` file under `configs/` is an authoritative source of truth for a specific configurable concern. Runtime code, type definitio…",
+  "docId": "infra-configs",
+  "doc": {
+    "axioms": [],
+    "purpose": {
+      "intro": "Every `*.config.ts` and `*.ac.ts` file under `configs/` is an authoritative source of truth for a specific configurable concern. Runtime code, type definitions, and utilities belong in modules, not here."
+    },
+    "reference": [
+      {
+        "topic": "Access control",
+        "claims": [],
+        "imagesAndDiagrams": [
+          {
+            "type": "ascii",
+            "value": "| Concern | File |\n|---|---|\n| Role hierarchy + owner flags | [access-control/role-hierarchy.config.ts](access-control/role-hierarchy.config.ts) |\n| UI groups + role titles/descriptions | [access-control/role-ui.config.ts](access-control/role-ui.config.ts) |\n| DSL subjects | [access-control/subjects.config.ts](access-control/subjects.config.ts) |\n| Account-baseline rules (every user) | [access-control/rules/user-organization-mgmt/account-baseline.ac.ts](access-control/rules/user-organization-mgmt/account-baseline.ac.ts) |\n| System-admin org-type rules | [access-control/rules/user-organization-mgmt/system-admin.ac.ts](access-control/rules/user-organization-mgmt/system-admin.ac.ts) |\n| Platform-admin org-type rules | [access-control/rules/user-organization-mgmt/platform-admin.ac.ts](access-control/rules/user-organization-mgmt/platform-admin.ac.ts) |\n| Ops-center org-type rules | [access-control/rules/user-organization-mgmt/ops-center.ac.ts](access-control/rules/user-organization-mgmt/ops-center.ac.ts) |\n| Company org-type rules | [access-control/rules/user-organization-mgmt/company.ac.ts](access-control/rules/user-organization-mgmt/company.ac.ts) |"
+          }
+        ]
+      },
+      {
+        "topic": "Brand and identity",
+        "claims": [],
+        "imagesAndDiagrams": [
+          {
+            "type": "ascii",
+            "value": "| Concern | File |\n|---|---|\n| App name, logo, colors, contact info | [brand/index.ts](brand/index.ts) |"
+          }
+        ]
+      },
+      {
+        "topic": "Internationalisation",
+        "claims": [],
+        "imagesAndDiagrams": [
+          {
+            "type": "ascii",
+            "value": "| Concern | File |\n|---|---|\n| English translation strings | [i18n/en.json](i18n/en.json) |"
+          }
+        ]
+      },
+      {
+        "topic": "Libraries",
+        "claims": [],
+        "imagesAndDiagrams": [
+          {
+            "type": "ascii",
+            "value": "| Concern | File |\n|---|---|\n| List-query pagination defaults | [libs/list-query/defaults.config.ts](libs/list-query/defaults.config.ts) |"
+          }
+        ]
+      },
+      {
+        "topic": "Product",
+        "claims": [],
+        "imagesAndDiagrams": [
+          {
+            "type": "ascii",
+            "value": "| Concern | File |\n|---|---|\n| User preference fields (locale, timezone, currency, country) | [product/preferences.config.ts](product/preferences.config.ts) |"
+          }
+        ]
+      },
+      {
+        "topic": "Theme",
+        "claims": [],
+        "imagesAndDiagrams": [
+          {
+            "type": "ascii",
+            "value": "| Concern | File |\n|---|---|\n| Active UI theme selection | [theme/index.ts](theme/index.ts) |"
+          }
+        ]
+      },
+      {
+        "topic": "User-organization management",
+        "claims": [],
+        "imagesAndDiagrams": [
+          {
+            "type": "ascii",
+            "value": "| Concern | File |\n|---|---|\n| Platform auth config (org types, BA plugin wiring) | [user-organization-mgmt/auth/auth.config.ts](user-organization-mgmt/auth/auth.config.ts) |\n| Default routes per org type | [user-organization-mgmt/auth/routing.config.ts](user-organization-mgmt/auth/routing.config.ts) |"
+          }
+        ]
+      },
+      {
+        "topic": "User-organization management › Not cataloged here",
+        "claims": [
+          {
+            "text": "`configs/product/preferences.validators.ts` — Zod validators derived from `preferences.config.ts`; runtime code slated for relocation to module"
+          }
+        ]
+      }
+    ],
+    "review": {
+      "axioms": {
+        "state": "unreviewed"
+      },
+      "purpose": {
+        "state": "unreviewed"
+      },
+      "reference": {
+        "state": "unreviewed"
+      }
+    },
+    "converted": true
+  }
+}

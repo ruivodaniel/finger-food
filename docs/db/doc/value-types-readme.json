@@ -1,0 +1,100 @@
+{
+  "id": "doc/value-types-readme",
+  "kind": "doc",
+  "title": "@libs/value-types",
+  "status": "converted",
+  "subject": "value-types",
+  "tags": [
+    "value-types"
+  ],
+  "paths": [
+    "shared/libs/value-types"
+  ],
+  "summary": "Universe of valid values for shared vocabulary backed by ISO/IANA/BCP 47/E.164 standards. Pure data + thin validators. **Zero product knowledge.**",
+  "docId": "value-types-readme",
+  "doc": {
+    "axioms": [],
+    "purpose": {
+      "intro": "Universe of valid values for shared vocabulary backed by ISO/IANA/BCP 47/E.164 standards. Pure data + thin validators. **Zero product knowledge.**"
+    },
+    "reference": [
+      {
+        "topic": "What it solves",
+        "claims": [],
+        "statement": "Across most products you end up with the same five value types — locale, timezone, phone, country, currency — duplicated across i18n JSON, Zod schemas, and `<SelectItem>` lists. This lib is the upstream universe each product narrows in its own preferences config."
+      },
+      {
+        "topic": "Layering",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "shared/libs/value-types/        ← this lib: universe of valid values\n        ↓\nconfigs/<product>/              ← product narrows + sets defaults\n        ↓\nshared/modules/<module>/        ← per-user overrides + resolver"
+              }
+            ]
+          }
+        ],
+        "statement": "The lib never imports from `configs/`, `modules/`, or `apps/`."
+      },
+      {
+        "topic": "Subpaths",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "import { phoneSchema } from \"@libs/value-types/phone\";\nimport { localeSchema, LOCALES } from \"@libs/value-types/locale\";\nimport { isTimezone, TIMEZONES, groupTimezonesByRegion } from \"@libs/value-types/timezone\";\nimport { countrySchema, getCountryMeta } from \"@libs/value-types/country\";\nimport { currencySchema, getCurrencyMeta } from \"@libs/value-types/currency\";",
+                "caption": "ts"
+              }
+            ]
+          },
+          {
+            "snippets": [
+              {
+                "code": "import { phoneSchema, localeSchema, currencySchema } from \"@libs/value-types\";",
+                "caption": "ts"
+              }
+            ]
+          }
+        ],
+        "statement": "Or all at once:"
+      },
+      {
+        "topic": "What each subfolder exports",
+        "claims": [],
+        "imagesAndDiagrams": [
+          {
+            "type": "ascii",
+            "value": "| Subfolder | Tuple | Type | Schema | Metadata helper |\n|-----------|-------|------|--------|-----------------|\n| `locale`   | `LOCALES`     | `Locale`     | `localeSchema`     | `getLocaleMeta(code)` (CLDR via `Intl.DisplayNames`) |\n| `timezone` | `TIMEZONES`*  | `Timezone`   | `timezoneSchema`** | `groupTimezonesByRegion()` |\n| `phone`    | —             | `Phone`      | `phoneSchema`      | `isE164(value)`, `E164_REGEX` |\n| `country`  | `COUNTRIES`   | `Country`    | `countrySchema`    | `getCountryMeta(code)` (name, dialing code, flag) |\n| `currency` | `CURRENCIES`  | `Currency`   | `currencySchema`   | `getCurrencyMeta(code)` (name, symbol, decimals) |"
+          }
+        ],
+        "statement": "\\* `TIMEZONES` is read from `Intl.supportedValuesOf(\"timeZone\")` at module load. \\** `timezoneSchema` is a runtime `refine` backed by `Intl.DateTimeFormat`, not `z.enum`."
+      },
+      {
+        "topic": "Adding a new value to the curated set",
+        "claims": [
+          {
+            "text": "For `timezone`: nothing — the runtime list reflects what the JS engine knows."
+          },
+          {
+            "text": "For `phone`: there's no curated list; E.164 covers the universe by construction."
+          }
+        ],
+        "statement": "For `country` / `currency` / `locale`: append to the data file. No other change needed — types and the Zod schema widen automatically."
+      }
+    ],
+    "review": {
+      "axioms": {
+        "state": "unreviewed"
+      },
+      "purpose": {
+        "state": "unreviewed"
+      },
+      "reference": {
+        "state": "unreviewed"
+      }
+    },
+    "converted": true
+  }
+}

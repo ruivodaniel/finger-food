@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="imBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ECFDF5"/>
+      <stop offset="1" stop-color="#D1FAE5"/>
+    </linearGradient>
+  </defs>
+  <rect width="240" height="240" fill="url(#imBg)"/>
+
+  <!-- Existing member (left, larger) -->
+  <circle cx="92" cy="96" r="22" fill="#10B981"/>
+  <path
+    d="M58 168 C58 142 73 130 92 130 C111 130 126 142 126 168 L126 186 L58 186 Z"
+    fill="#10B981"/>
+
+  <!-- New member (right, smaller, lighter) -->
+  <circle cx="156" cy="112" r="18" fill="#34D399"/>
+  <path
+    d="M128 174 C128 154 140 144 156 144 C172 144 184 154 184 174 L184 186 L128 186 Z"
+    fill="#34D399"/>
+
+  <!-- Plus badge -->
+  <circle cx="180" cy="86" r="18" fill="white" stroke="#059669" stroke-width="3"/>
+  <line x1="170" y1="86" x2="190" y2="86" stroke="#059669" stroke-width="4" stroke-linecap="round"/>
+  <line x1="180" y1="76" x2="180" y2="96" stroke="#059669" stroke-width="4" stroke-linecap="round"/>
+</svg>

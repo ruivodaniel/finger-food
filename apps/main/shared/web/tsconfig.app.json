@@ -1,0 +1,39 @@
+{
+  "extends": "../../../../tsconfig.base.json",
+  "compilerOptions": {
+    "composite": false,
+    "declaration": false,
+    "declarationMap": false,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "ES2022.Intl", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "erasableSyntaxOnly": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true,
+
+    /* Alias */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["src", "../../slices/**/*", "../../../../configs/**/*.ts", "../../../../shared/libs/*/src/**/*.ts", "../../../../shared/libs/*/src/**/*.tsx", "../../../../shared/libs/ui/types/**/*.ts", "../../../../shared/libs/ui/themes/**/*.ts", "../../../../shared/libs/ui/web/theme-engine/**/*.ts"],
+  "exclude": ["../../slices/**/lint-controls.ts", "../../../../shared/libs/**/lint-controls.ts"],
+  "files": ["src/i18n/i18next.d.ts"]
+}

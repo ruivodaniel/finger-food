@@ -1,0 +1,11 @@
+linkWorkspacePackages: true
+packages:
+  - "apps/*"
+  - "apps/main/shared/api"
+  - "apps/main/shared/web"
+  - "apps/main/slices/seed/*"
+  - "apps/main/slices/product/*"
+  - "configs/*"
+  - "configs/libs/*"
+  - "shared/libs/*"
+  - "shared/libs/ui/web/*"

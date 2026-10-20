@@ -1,0 +1,32 @@
+{
+  "id": "adr/main--frontend-composition-standings",
+  "kind": "adr",
+  "title": "Frontend Composition's claims are sorted into current, target, and undecided",
+  "status": "approved",
+  "subject": "main",
+  "tags": [
+    "main",
+    "architecture"
+  ],
+  "paths": [],
+  "summary": "The doc keeps stating rules in one normative voice — no per-claim status fields; the viewer renders claims bare by design. Where the code embodies a deliberate ",
+  "adr": {
+    "date": "2026-08-19",
+    "context": "A deep review of [[frontend-composition|Frontend Composition]] against the code found the doc stating targets and descriptions in the same present-tense voice, so a reader could not tell how a page works from how it should work. Two axioms also contradicted GATE6 and the gate refactor: the route layer runs network-fetching guards, and unmet obligations redirect to `/resolve` — deliberately, per [[unmet-requirements|Unmet Requirements]] — while the doc permitted only the login redirect. The doc's illustrative login example was wrong on its own terms (the login page fetches auth config), and it named six injected adapters where three exist.",
+    "decision": "The doc keeps stating rules in one normative voice — no per-claim status fields; the viewer renders claims bare by design. Where the code embodies a deliberate decision the doc absorbed it: the route layer's axiom now names the guards, the obligations redirect is the second permitted redirect, the adapter list is router · toast · query client with the API client seed slice-owned from injected config, and the page reads the session (a frontend concept), not the [[access context]] (a backend one). Where the doc is ahead of the code, the claim stands and this entry records the adoption gap. Three claims are neither — they await a decision before the doc may keep them.",
+    "consequences": [
+      "Target, infrastructure built but unadopted — the claims stand, the code owes them: URL list state (`useListQueryState` in `@libs/list-query` is complete with zero consumers; every list page holds filters and page in `useState`, no route declares `validateSearch`); capability flags from the response (`@libs/availability-check` is a declared dependency imported by no app file; twelve `AC(availability-check)` markers say where it goes); loading/error primitives (`Skeleton`/`Spinner` exist unused — ten pages load as `return null` — and no error-boundary primitive exists anywhere to use); session hydrated on the provider tree (`UserOrgMgmtProvider` injects adapters but hydrates nothing; twelve pages each call `useSession()` and duplicate the same redirect-and-null guard).",
+      "**Contradicted by the code today:** pages write structural CSS — roughly sixty inline `style={{…}}` blocks across the UOM pages alone, against the doc's \"never writes structural CSS\". To fix, or the claim narrows.",
+      "**Contradicted by the code today:** nav metadata contribution — already flagged under public-surface-is-capabilities; `navigation.config.ts` hardcodes every entry and `RouteDefinition.meta.title` is contributed but never consumed. To fix.",
+      "**Contradicted by the code today:** \"every page is an instance\" of the page-entry pattern — uniform in UOM, but DashboardPage, PreferencesPage and LegalDocumentsAdminPage are each a different shape. To converge.",
+      "Unresolved: the overlay controller. Nothing exists — stacking already happens ad-hoc (a dialog inside a sheet) on a flat `z-50`. Either commit to building it or the claim leaves the doc.",
+      "Unresolved: the \"small global store\". No store exists — `zustand` is a phantom dependency imported nowhere, sidebar state is two independent contexts with two cookies, runtime theme state does not exist in the product app. Either a store is adopted or the claim restates where global UI state actually lives.",
+      "`RouteDefinition.access` (`public | authenticated`) is declared on every route and read by nothing — guard placement in the tree is what enforces. A dead contract: wire it or drop it.",
+      "The viewer learned to resolve `[[doc-id]]` links against the doc registry, so cross-doc pointers (`[[scaffolding-and-import-boundaries]]`, `[[unmet-requirements]]`) render as links instead of inert text. `validate-docs.mjs` still checks no `[[…]]` targets."
+    ],
+    "affects": [
+      "frontend-composition"
+    ],
+    "adrStatus": "accepted"
+  }
+}

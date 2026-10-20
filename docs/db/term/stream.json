@@ -1,0 +1,19 @@
+{
+  "id": "term/stream",
+  "kind": "term",
+  "title": "stream",
+  "status": "converted",
+  "subjects": [
+    "main",
+    "orchestrator"
+  ],
+  "tags": [
+    "realtime"
+  ],
+  "paths": [],
+  "term": {
+    "def": "Real-time output of a run to the requester, over SSE, one stream per chat.",
+    "aliases": [],
+    "proposed": true
+  }
+}

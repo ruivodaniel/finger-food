@@ -1,0 +1,16 @@
+{
+  "id": "doc/todo-slice-design",
+  "kind": "doc",
+  "title": "slice-design tool (not migrated)",
+  "status": "todo",
+  "subject": "slice-design",
+  "tags": [
+    "slice-design"
+  ],
+  "paths": [
+    "slice-design"
+  ],
+  "summary": "Not migrated yet. Starting point: slice-design/README.md",
+  "entry": "slice-design/README.md",
+  "doc": null
+}

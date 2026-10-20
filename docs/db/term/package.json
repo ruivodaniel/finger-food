@@ -1,0 +1,18 @@
+{
+  "id": "term/package",
+  "kind": "term",
+  "title": "package",
+  "status": "approved",
+  "subjects": [
+    "main"
+  ],
+  "tags": [
+    "architecture"
+  ],
+  "paths": [],
+  "term": {
+    "def": "A folder with its own `package.json`, imported by name rather than by path. Every [[library]], [[seed slice]], [[product slice]], config set and app is one.",
+    "aliases": [],
+    "proposed": true
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "id": "doc/user-org-mgmt-overview",
+  "kind": "doc",
+  "title": "user-organization-mgmt — docs",
+  "status": "converted",
+  "subject": "user-organization-mgmt",
+  "tags": [
+    "user-organization-mgmt"
+  ],
+  "paths": [
+    "apps/main/slices/seed/user-organization-mgmt"
+  ],
+  "summary": "Config-driven identity module: registration, authentication, and account recovery described by a declarative auth DSL, executed over Ory Kratos. The module h…",
+  "docId": "user-org-mgmt-overview",
+  "doc": {
+    "axioms": [],
+    "purpose": {
+      "intro": "Config-driven identity module: registration, authentication, and account recovery described by a declarative auth DSL, executed over Ory Kratos. The module holds no flow table and no session table. Credential conversations are the provider's own flows, relayed; the session is the provider's token, carried in an HttpOnly cookie. What the module owns is the part the provider has no concept of: the product's rules (the DSL), the app's user row, consent and profile records, organizations and memberships — and the GATE, which re-checks on every request that a caller still carries what the config demands."
+    },
+    "reference": [
+      {
+        "topic": "Overview",
+        "claims": [],
+        "imagesAndDiagrams": [
+          {
+            "type": "ascii",
+            "value": "| Doc | What it covers |\n| --- | --- |\n| [architecture.md](./architecture.md) | Layers, the identity-provider port, session model, module boundaries |\n| [auth-config-dsl.md](./auth-config-dsl.md) | The DSL: axes, condition semantics, resolvers, the authoring convention |\n| [identifiers.md](./identifiers.md) | Login identifiers vs contacts, the slot model, caps, verification |\n| [flows-and-gate.md](./flows-and-gate.md) | The relay (registration/login/recovery), and how the gate evaluates |\n| [organizations.md](./organizations.md) | Orgs, memberships, invitations, the active org |\n| [legal.md](./legal.md) | Legal documents: authoring (draft → publish), consent flags, re-consent |\n| [web-surface.md](./web-surface.md) | Pages, the api client, what the config drives |"
+          }
+        ]
+      },
+      {
+        "topic": "Stage map",
+        "claims": [
+          {
+            "text": "**Stage 1** — auth core: the DSL engine, Kratos infra + adapter, models/repositories/services, HTTP surface + mount, web-main cutover."
+          },
+          {
+            "text": "**Stage 2 (this stage)** — organizations, memberships, invitations, and the gate going live on the module's own membership facts (active organization, signed-in invitation accept). See organizations.md (`./organizations.md`)."
+          },
+          {
+            "text": "**Stage 3 (landed)** — access control (`@prowd/gated-scoped-ac`: who may perform each org action — verdicts on writes, engine-resolved row scopes on reads; role-value escalation stays a service business rule until the DSL can compare roles)."
+          },
+          {
+            "text": "**Later** — social login, contacts management UI."
+          }
+        ]
+      },
+      {
+        "topic": "Runtime support matrix",
+        "claims": [],
+        "statement": "Two layers: the DSL can *express* a policy; the runtime must *do* it. This is what's actually wired.",
+        "imagesAndDiagrams": [
+          {
+            "type": "ascii",
+            "value": "| Capability | Status |\n| --- | --- |\n| Email registration (code birth + password set at birth) | ✅ |\n| Phone registration (code — identity born at verify) | ✅ |\n| Password login | ✅ |\n| Phone / email OTP login | ✅ (email offers password OR a mailed sign-in code) |\n| Email + phone recovery (code → new password → revoke all) | ✅ |\n| Identifier verification | ✅ |\n| Multi-identifier management (3 email / 2 phone) | ✅ |\n| Consent + profile obligations at registration | ✅ |\n| Legal-document authoring (draft → publish, platform + org-type scopes) | ✅ (`/manage-legal-documents`; authoring gated by `manage_legal_document_platform`) |\n| Re-consent at `/resolve` (pending-consent projection) | ✅ |\n| Consent on invitation accept (`join.legalConsent`) | ✅ |\n| Public legal-document viewer | ✅ (`/legal-documents?type=`, `?docId=` pins a version) |\n| Live gate evaluation (facts, not verdicts) | ✅ |\n| Organizations (create/read/update, config-gated) | ✅ |\n| Organizations directory (all orgs, search/filter/paged) | ✅ (engine row-scoped — `read_all_organizations_system`) |\n| Memberships + member management (roles, last-owner protection) | ✅ (paged member table w/ default contact; leave-self at `/my/memberships`) |\n| Contact addresses (`user_contacts`) | ✅ default seeded at birth from the first identifier; management UI later |\n| Avatar & org-logo upload (presigned, server-derived keys) | ✅ via the mount's `storage` port (`@prowd/storage` in the seed) |\n| Preferences (language, timezone — follow-system or explicit; currency, country — a pick, when the product lets users override them) | ✅ `GET/PATCH /me/preferences` + `/my/settings/preferences`; the product's policy is injected (mount `preferences`, web config `preferences`), own-row gated by `manage_own_preferences` |\n| Invitations (invite/accept/reject/revoke, email+SMS, match strictness) | ✅ |\n| Register-and-join (an invitation carries a newcomer through registration) | ✅ |\n| Active organization per request (`x-active-organization` header, org switcher) | ✅ |\n| Standing gate obligations by membership | ✅ (live — membership facts from the module's own `member` rows) |\n| **Opt-in TOTP 2FA + backup codes** | ✅ (enroll on `/my/settings/security` or in the `/resolve` wizard; enforced at login when enrolled) |\n| Logout | ✅ |\n| Sign out of all other devices | ✅ (`/my/settings/security`; provider sessions + module contexts, caller's survives) |\n| Social login (google/apple OIDC) | ⏳ dormant — port/session shape ready, no UI/creds |\n| True clickable magic link | ⏳ codes only — click-to-verify designed, not built |\n| Access control — who may perform each org action | ✅ `@prowd/gated-scoped-ac` (verdicts + resolved scopes at every marked site; config in `configs/access-control`) |\n| `deviceOtp` | ✋ rejected by `validateAuthConfig` (no runtime) |"
+          }
+        ]
+      },
+      {
+        "topic": "How the app runs this module",
+        "claims": [],
+        "statement": "The host app mounts per `api/mount-types.ts` (see `apps/api/src/mounts.ts`): authMount at its basePath (`/api/auth`), session + gate middlewares on the client surface (`/api/client`). The provider's courier SMS callback rides the module's own auth surface (`/api/auth/courier/sms`, secret-guarded, registered before the session middleware) — the app never mounts or names it, and the module-shipped `kratos.yml` is the only place that knows the URL. The module's tables enter the app's migration chain by re-export — `apps/api/src/models/index.ts` re-exports `./models`, and the app's drizzle config generates migrations from there. Table names are plain domain names, no prefix (`user`, `organization`, `member`, …; `user` is a Postgres reserved word, quoted by drizzle everywhere). Rate limiters attach on `authMount.rateLimitPaths` when the app grows them."
+      },
+      {
+        "topic": "Running the module's tests",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "pnpm --filter @prowd/user-organization-mgmt test:unit      # docker-free\npnpm --filter @prowd/user-organization-mgmt test:contract  # needs: docker compose up -d postgres kratos maildev (in apps/api)",
+                "caption": "bash"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "review": {
+      "axioms": {
+        "state": "unreviewed"
+      },
+      "purpose": {
+        "state": "unreviewed"
+      },
+      "reference": {
+        "state": "unreviewed"
+      }
+    },
+    "converted": true
+  }
+}

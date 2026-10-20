@@ -1,0 +1,124 @@
+{
+  "id": "doc/main-web",
+  "kind": "doc",
+  "title": "🌐 Client Application",
+  "status": "converted",
+  "subject": "main",
+  "tags": [
+    "main"
+  ],
+  "paths": [
+    "apps/main"
+  ],
+  "summary": "`React` (`https://react.dev/`) frontend application with `TanStack Router` (`https://tanstack.com/router`) for file-based routing and modern UI components.",
+  "docId": "main-web",
+  "doc": {
+    "axioms": [],
+    "purpose": {
+      "intro": "`React` (`https://react.dev/`) frontend application with `TanStack Router` (`https://tanstack.com/router`) for file-based routing and modern UI components."
+    },
+    "reference": [
+      {
+        "topic": "📁 Structure › 🎨 Public Assets (`public/` (`public/`))",
+        "claims": [],
+        "statement": "Public static resources"
+      },
+      {
+        "topic": "📁 Structure › 📦 Source Code (`src/` (`src/`))",
+        "claims": [
+          {
+            "text": "**🎨 Assets** (`src/assets/` (`src/assets/`)): Bundled static resources"
+          },
+          {
+            "text": "**🧩 Components** (`src/components/` (`src/components/`)): Reusable UI components"
+          },
+          {
+            "text": "— **`app-sidebar/` (`src/components/app-sidebar/`)**: Application sidebar navigation"
+          },
+          {
+            "text": "— **`layouts/` (`src/components/layouts/`)**: Page layout components"
+          },
+          {
+            "text": "— **`ui/` (`src/components/ui/`)**: `Shadcn UI` (`https://ui.shadcn.com/`) component library"
+          },
+          {
+            "text": "**⚙️ Configuration** (`src/config/` (`src/config/`)): Application configuration"
+          },
+          {
+            "text": "**🎣 Hooks** (`src/hooks/` (`src/hooks/`)): Custom React hooks"
+          },
+          {
+            "text": "**🌍 Internationalization** (`src/i18n/` (`src/i18n/`)): Translation and localization"
+          },
+          {
+            "text": "**📚 Libraries** (`src/lib/` (`src/lib/`)): Core utilities and API integration"
+          },
+          {
+            "text": "— **`api/` (`src/lib/api/`)**: API client and queries"
+          },
+          {
+            "text": "**🛣️ Routes** (`src/routes/` (`src/routes/`)): File-based routing structure"
+          },
+          {
+            "text": "— **`_auth/` (`src/routes/_auth/`)**: Authentication routes"
+          },
+          {
+            "text": "— **`_protected/` (`src/routes/_protected/`)**: Protected routes"
+          },
+          {
+            "text": "— **`legal/` (`src/routes/legal/`)**: Legal routes"
+          },
+          {
+            "text": "**🗄️ Stores** (`src/stores/` (`src/stores/`)): `Zustand's` (`https://zustand-demo.pmnd.rs/`) global state management"
+          },
+          {
+            "text": "**🔧 Utils** (`src/utils/` (`src/utils/`)): Utility functions"
+          }
+        ]
+      },
+      {
+        "topic": "📁 Structure › 🐳 Docker",
+        "claims": [
+          {
+            "text": "**`Dockerfile` (`Dockerfile`)**: Container configuration for deployment"
+          },
+          {
+            "text": "**`nginx.conf` (`nginx.conf`)**: Nginx server configuration"
+          }
+        ]
+      },
+      {
+        "topic": "🏃‍♂️ Running the Project › Development Server",
+        "claims": [],
+        "statement": "_**Note:** Ensure you follow the setup steps from the root README.md (`../../../README.md`) before running the development server._",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "# Start the client in development mode\npnpm run dev",
+                "caption": "bash"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "🚀 Deployment",
+        "claims": [],
+        "statement": "The client application is built and deployed through GitHub Actions CI/CD pipelines. For detailed deployment workflows and configuration, refer to .github/README_CICD.md (`../../../.github/README_CICD.md`)."
+      }
+    ],
+    "review": {
+      "axioms": {
+        "state": "unreviewed"
+      },
+      "purpose": {
+        "state": "unreviewed"
+      },
+      "reference": {
+        "state": "unreviewed"
+      }
+    },
+    "converted": true
+  }
+}

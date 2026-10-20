@@ -1,0 +1,580 @@
+id,quote_id,line_no,label,unit_price,quantity,total,raw
+q:f88724cd-94c7-4026-b924-f85c752fdddb:p1,q:f88724cd-94c7-4026-b924-f85c752fdddb,1,Comidas,18.0,60.0,1080.0,Comidas 18€ x 60 = 1080€
+q:f88724cd-94c7-4026-b924-f85c752fdddb:p2,q:f88724cd-94c7-4026-b924-f85c752fdddb,2,Bebidas não alcoólicas,2.5,60.0,150.0,Bebidas não alcoólicas 2.50€ x 60 = 150€
+q:f88724cd-94c7-4026-b924-f85c752fdddb:p3,q:f88724cd-94c7-4026-b924-f85c752fdddb,3,Cerveja,0.6,180.0,108.0,Cerveja 0.60 x 180 = 108€
+q:7d1b4e76-1fdc-416b-be03-2b6a204f6ca1:p1,q:7d1b4e76-1fdc-416b-be03-2b6a204f6ca1,1,Comidas,20.0,12.0,240.0,Comidas – 20€ x 12 = 240€
+q:8d451b61-daf0-432c-8c77-16f2a47e072f:p1,q:8d451b61-daf0-432c-8c77-16f2a47e072f,1,Almoço,17.0,140.0,2380.0,Almoço 17€ x 140 = 2380€
+q:e001b84f-d831-4775-ab46-a15deddb39a9:p1,q:e001b84f-d831-4775-ab46-a15deddb39a9,1,Coffee break pm,10.0,60.0,600.0,Coffee break pm – 10€ x 60 = 600€
+q:2b20575c-4859-4529-a718-e69b8f3dfea0:p1,q:2b20575c-4859-4529-a718-e69b8f3dfea0,1,Comidas,14.0,100.0,1400.0,Comidas – 14€ x 100 = 1400€
+q:2b20575c-4859-4529-a718-e69b8f3dfea0:p2,q:2b20575c-4859-4529-a718-e69b8f3dfea0,2,Bebidas,2.0,100.0,200.0,Bebidas – 2€ x 100 = 200€
+q:90e00089-76a5-499b-8c6e-4400c259263b:p1,q:90e00089-76a5-499b-8c6e-4400c259263b,1,Coffee break pm,6.5,30.0,195.0,Coffee break pm – 6.50€ x 30 = 195€
+q:2e4df04f-1042-40b6-a430-dc4378684429:p1,q:2e4df04f-1042-40b6-a430-dc4378684429,1,Coffee breaks,7.0,50.0,350.0,Coffee breaks 7€ x 50 = 350€   Almoço 18€ x 50 = 900€
+q:c3302f66-ef2b-4af5-a22f-ae98cd6f787d:p1,q:c3302f66-ef2b-4af5-a22f-ae98cd6f787d,1,Comidas,20.5,65.0,1332.5,Comidas 20.50€ x 65 = 1332.50€
+q:c3302f66-ef2b-4af5-a22f-ae98cd6f787d:p2,q:c3302f66-ef2b-4af5-a22f-ae98cd6f787d,2,Bebidas não alcoólicas,2.5,65.0,162.5,Bebidas não alcoólicas 2.50€ x 65 = 162.50€
+q:c3302f66-ef2b-4af5-a22f-ae98cd6f787d:p3,q:c3302f66-ef2b-4af5-a22f-ae98cd6f787d,3,Cerveja,0.6,180.0,108.0,Cerveja 0.60 x 180 = 108€
+q:3b3f4315-6bb9-4420-b588-cc889217a62a:p1,q:3b3f4315-6bb9-4420-b588-cc889217a62a,1,Comidas,18.0,60.0,1080.0,Comidas 18€ x 60 = 1080€
+q:3b3f4315-6bb9-4420-b588-cc889217a62a:p2,q:3b3f4315-6bb9-4420-b588-cc889217a62a,2,Bebidas não alcoólicas,2.5,60.0,150.0,Bebidas não alcoólicas 2.50€ x 60 = 150€
+q:3b3f4315-6bb9-4420-b588-cc889217a62a:p3,q:3b3f4315-6bb9-4420-b588-cc889217a62a,3,Cerveja,0.6,180.0,108.0,Cerveja 0.60 x 180 = 108€
+q:4f31835c-98c5-4c5b-8612-6ba78e77d1c5:p1,q:4f31835c-98c5-4c5b-8612-6ba78e77d1c5,1,,8.5,20.0,,8.50€ x 20 pessoas = 170€
+q:ea092034-2f0b-43fe-a2cd-f1395f09827c:p1,q:ea092034-2f0b-43fe-a2cd-f1395f09827c,1,Almoço,20.0,80.0,1600.0,Almoço 20€ x 80 = 1600€
+q:9d2aca46-9e43-46c1-b37c-31ed87b12a0d:p1,q:9d2aca46-9e43-46c1-b37c-31ed87b12a0d,1,Coffee breaks am,8.0,20.0,160.0,Coffee breaks am 8€ x 20 = 160€
+q:9d2aca46-9e43-46c1-b37c-31ed87b12a0d:p2,q:9d2aca46-9e43-46c1-b37c-31ed87b12a0d,2,Almoço,27.0,20.0,540.0,Almoço 27€ x 20 = 540 €
+q:9d2aca46-9e43-46c1-b37c-31ed87b12a0d:p3,q:9d2aca46-9e43-46c1-b37c-31ed87b12a0d,3,Coffee breaks pm,8.0,20.0,160.0,Coffee breaks pm 8€ x 20 = 160€
+q:9d2aca46-9e43-46c1-b37c-31ed87b12a0d:p4,q:9d2aca46-9e43-46c1-b37c-31ed87b12a0d,4,Coffee breaks am,8.0,20.0,160.0,Coffee breaks am 8€ x 20 = 160€
+q:b79090dc-5b46-4afa-b7e9-1b7f3e0942ee:p1,q:b79090dc-5b46-4afa-b7e9-1b7f3e0942ee,1,Coffee break pm,8.6,50.0,430.0,Coffee break pm - 8.60€ x 50 = 430€
+q:f0d23119-8e86-42b2-ad98-a338851f7e22:p1,q:f0d23119-8e86-42b2-ad98-a338851f7e22,1,,13.5,40.0,540.0,13.50€ x 40 = 540€
+q:cf5d91b1-6463-48ce-84b1-69016b4dc074:p1,q:cf5d91b1-6463-48ce-84b1-69016b4dc074,1,Comidas,16.5,100.0,1650.0,Comidas – 16.50€ x 100 = 1650€
+q:cf5d91b1-6463-48ce-84b1-69016b4dc074:p2,q:cf5d91b1-6463-48ce-84b1-69016b4dc074,2,Bebidas,2.5,100.0,250.0,Bebidas – 2.50 x 100 = 250€
+q:615891b5-f77d-4d7c-a018-550da3ecfbd0:p1,q:615891b5-f77d-4d7c-a018-550da3ecfbd0,1,Comidas e Bebidas não alcoólicas,22.0,60.0,1320.0,Comidas e Bebidas não alcoólicas 22€ x 60 = 1320€
+q:b5907a6d-0093-4aae-8d77-c6967ff1fd1a:p1,q:b5907a6d-0093-4aae-8d77-c6967ff1fd1a,1,Coffee breaks,7.0,26.0,,Coffee breaks 7€ x 26 + 26 = 364€ Almoço 12€ x 16 = 192€
+q:b5907a6d-0093-4aae-8d77-c6967ff1fd1a:p2,q:b5907a6d-0093-4aae-8d77-c6967ff1fd1a,2,Coffee breaks,7.0,26.0,,Coffee breaks 7€ x 26 + 26 = 364€ Almoço 12€ x 16 = 192€
+q:d20d1e4b-576c-4aeb-94ec-e426d23fb128:p1,q:d20d1e4b-576c-4aeb-94ec-e426d23fb128,1,Cb am,7.0,40.0,280.0,Cb am 7€ x 40 = 280€
+q:d20d1e4b-576c-4aeb-94ec-e426d23fb128:p2,q:d20d1e4b-576c-4aeb-94ec-e426d23fb128,2,Almoço,26.5,40.0,1060.0,Almoço 26.50€ x 40 = 1060€
+q:d20d1e4b-576c-4aeb-94ec-e426d23fb128:p3,q:d20d1e4b-576c-4aeb-94ec-e426d23fb128,3,Cb am,7.0,40.0,280.0,Cb am 7€ x 40 = 280€
+q:d20d1e4b-576c-4aeb-94ec-e426d23fb128:p4,q:d20d1e4b-576c-4aeb-94ec-e426d23fb128,4,Almoço,27.5,30.0,825.0,Almoço 27.50€ x 30 = 825€
+q:d20d1e4b-576c-4aeb-94ec-e426d23fb128:p5,q:d20d1e4b-576c-4aeb-94ec-e426d23fb128,5,Cb pm,7.5,20.0,150.0,Cb pm 7.50€ x 20 = 150€
+q:f05fcb3b-1ffc-40ea-b650-2aad9e4b076d:p1,q:f05fcb3b-1ffc-40ea-b650-2aad9e4b076d,1,Comidas e Bebidas não alcoólicas,18.0,60.0,1080.0,Comidas e Bebidas não alcoólicas 18€ x 60 = 1080€
+q:f05fcb3b-1ffc-40ea-b650-2aad9e4b076d:p2,q:f05fcb3b-1ffc-40ea-b650-2aad9e4b076d,2,Espumante,2.0,60.0,120.0,Espumante 2€ x 60 = 120€
+q:b97ae067-2963-4aa8-8be1-6aed45c794a1:p1,q:b97ae067-2963-4aa8-8be1-6aed45c794a1,1,,7.5,25.0,,7.50€ x 25 pessoas x 2 serviços = 375€
+q:b97ae067-2963-4aa8-8be1-6aed45c794a1:p2,q:b97ae067-2963-4aa8-8be1-6aed45c794a1,2,,3.0,25.0,,3€ x 25 pessoas x 4 serviços = 300€
+q:1c753744-e050-4e82-a7ec-c1725fa993e8:p1,q:1c753744-e050-4e82-a7ec-c1725fa993e8,1,Almoço,18.0,100.0,1800.0,Almoço 18€ x 100 = 1800€
+q:d7ea5a76-fd3f-4a60-a02f-8fd15ca8ec85:p1,q:d7ea5a76-fd3f-4a60-a02f-8fd15ca8ec85,1,Coffee Break,6.0,20.0,120.0,Coffee Break 6€ x 20 = 120€
+q:d7ea5a76-fd3f-4a60-a02f-8fd15ca8ec85:p2,q:d7ea5a76-fd3f-4a60-a02f-8fd15ca8ec85,2,Almoço,18.0,20.0,,Almoço 18€ x 20 Pessoas = 360€
+q:c3b569f9-38b0-4265-88cf-1e3a2065568e:p1,q:c3b569f9-38b0-4265-88cf-1e3a2065568e,1,Comidas e Bebidas não alcoólicas,16.0,50.0,800.0,Comidas e Bebidas não alcoólicas 16€ x 50 = 800€
+q:d87f8c96-2b05-442a-bb8d-77bb4cae204b:p1,q:d87f8c96-2b05-442a-bb8d-77bb4cae204b,1,,25.0,150.0,,25€ x 150 pessoas = 3750€
+q:d87f8c96-2b05-442a-bb8d-77bb4cae204b:p2,q:d87f8c96-2b05-442a-bb8d-77bb4cae204b,2,,2.5,150.0,,2.50€ x 150 pessoas = 375€
+q:b463b863-b36c-4d05-a173-14e5d43434ad:p1,q:b463b863-b36c-4d05-a173-14e5d43434ad,1,Almoço,18.0,150.0,2700.0,Almoço 18€ x 150 = 2700€
+q:b463b863-b36c-4d05-a173-14e5d43434ad:p2,q:b463b863-b36c-4d05-a173-14e5d43434ad,2,Cerveja,0.5,300.0,,"Cerveja – 0,50€ x 300 uni = 150€"
+q:b463b863-b36c-4d05-a173-14e5d43434ad:p3,q:b463b863-b36c-4d05-a173-14e5d43434ad,3,Sangria 15lts,0.8,150.0,120.0,"Sangria 15lts – 0,80€ x 150 = 120€"
+q:63c4c593-ea2b-462f-848b-183ec1276815:p1,q:63c4c593-ea2b-462f-848b-183ec1276815,1,Comidas,19.5,70.0,1365.0,Comidas – 19.50€ x 70 = 1365€
+q:63c4c593-ea2b-462f-848b-183ec1276815:p2,q:63c4c593-ea2b-462f-848b-183ec1276815,2,Bebidas,2.5,70.0,175.0,Bebidas – 2.50 x 70 = 175€
+q:af06f9bd-f481-437e-ae03-c7694747d626:p1,q:af06f9bd-f481-437e-ae03-c7694747d626,1,Coffee break pm,7.5,250.0,1875.0,Coffee break pm – 7.50€ x 250 = 1875€
+q:76087b95-41cf-4dfe-8ea2-aada1cfb8c55:p1,q:76087b95-41cf-4dfe-8ea2-aada1cfb8c55,1,Coffee breaks,6.6,75.0,495.0,Coffee breaks 6.60€ x 75 = 495€   Almoço 17€ x 75 = 1275€
+q:5502d510-bcfb-438a-bf80-f5088001af78:p1,q:5502d510-bcfb-438a-bf80-f5088001af78,1,,25.0,150.0,,25€ x 150 pessoas = 3750€
+q:5502d510-bcfb-438a-bf80-f5088001af78:p2,q:5502d510-bcfb-438a-bf80-f5088001af78,2,,2.5,150.0,,2.50€ x 150 pessoas = 375€
+q:9bb07e5d-92b6-4ef4-ad63-cad551d6c89c:p1,q:9bb07e5d-92b6-4ef4-ad63-cad551d6c89c,1,Comidas,15.0,40.0,600.0,Comidas - 15€ x 40 = 600€
+q:9bb07e5d-92b6-4ef4-ad63-cad551d6c89c:p2,q:9bb07e5d-92b6-4ef4-ad63-cad551d6c89c,2,Bebidas,3.0,40.0,120.0,Bebidas - 3 x 40 = 120€
+q:38d6981b-d2d8-4045-9f62-43926507376a:p1,q:38d6981b-d2d8-4045-9f62-43926507376a,1,,20.0,20.0,,20€ x 20 pax = 400€
+q:3c30cdcf-e6bf-432d-868d-74d305da2bb7:p1,q:3c30cdcf-e6bf-432d-868d-74d305da2bb7,1,Coffee breaks am,6.5,140.0,910.0,Coffee breaks am 6.50€ x 140 = 910€
+q:3c30cdcf-e6bf-432d-868d-74d305da2bb7:p2,q:3c30cdcf-e6bf-432d-868d-74d305da2bb7,2,Coffee breaks pm,6.5,140.0,910.0,Coffee breaks pm 6.50€ x 140 = 910€
+q:55ff616b-ea56-49ba-ad27-f14002b913a3:p1,q:55ff616b-ea56-49ba-ad27-f14002b913a3,1,Coffee break pm,8.0,220.0,1760.0,Coffee break pm – 8€ x 220 = 1760€
+q:94340aab-9813-4449-a412-fef276d0676a:p1,q:94340aab-9813-4449-a412-fef276d0676a,1,Bebidas não alcoólicas,4.0,50.0,200.0,Bebidas não alcoólicas 4€ x 50 = 200€
+q:94340aab-9813-4449-a412-fef276d0676a:p2,q:94340aab-9813-4449-a412-fef276d0676a,2,Espumante,2.5,50.0,125.0,Espumante 2.50€ x 50 = 125€
+q:8b3b0db5-ae2d-447d-82de-ebb743a159ef:p1,q:8b3b0db5-ae2d-447d-82de-ebb743a159ef,1,Serviço de Coffee break,7.5,250.0,1875.0,Serviço de Coffee break 7.50€ x 250 = 1875€
+q:8b3b0db5-ae2d-447d-82de-ebb743a159ef:p2,q:8b3b0db5-ae2d-447d-82de-ebb743a159ef,2,Serviço de Vinho do Porto (Barros),0.8,250.0,200.0,Serviço de Vinho do Porto (Barros) 0.80€ x 250 = 200€
+q:d502f4cd-bf3a-43dc-8a03-930937858d8d:p1,q:d502f4cd-bf3a-43dc-8a03-930937858d8d,1,Comidas e bebidas não alcoólicas,15.5,100.0,1550.0,Comidas e bebidas não alcoólicas – 15.50€ x 100 = 1550€
+q:db3fbae8-25bd-4b41-8188-5422d5db89d7:p1,q:db3fbae8-25bd-4b41-8188-5422d5db89d7,1,Coffee breaks pm,8.0,25.0,200.0,Coffee breaks pm 8€ x 25 = 200€ x 7= 1400€
+q:be842f96-a37b-4928-9e40-657ca0c52655:p1,q:be842f96-a37b-4928-9e40-657ca0c52655,1,Comidas e Bebidas não alcoólicas,20.0,30.0,600.0,Comidas e Bebidas não alcoólicas 20€ x 30 = 600€
+q:47a412b4-9a95-4326-9bcc-3b5d2b2e8a46:p1,q:47a412b4-9a95-4326-9bcc-3b5d2b2e8a46,1,,8.0,70.0,,8€ x 70 pax = 560€
+q:47a412b4-9a95-4326-9bcc-3b5d2b2e8a46:p2,q:47a412b4-9a95-4326-9bcc-3b5d2b2e8a46,2,,8.0,70.0,,8€ x 70 pax = 560€
+q:b6144dd2-a6ba-4f3b-ba57-2d63bfa1f7a6:p1,q:b6144dd2-a6ba-4f3b-ba57-2d63bfa1f7a6,1,Cb am,8.0,20.0,160.0,Cb am 8€ x 20 = 160€
+q:b6144dd2-a6ba-4f3b-ba57-2d63bfa1f7a6:p2,q:b6144dd2-a6ba-4f3b-ba57-2d63bfa1f7a6,2,Cb pm,8.0,20.0,160.0,Cb pm 8€ x 20 = 160€
+q:ad60b92f-6196-4074-8b03-43c93e11cf1d:p1,q:ad60b92f-6196-4074-8b03-43c93e11cf1d,1,Almoço (comidas e bebidas não alcoólicas),15.0,200.0,3000.0,Almoço (comidas e bebidas não alcoólicas) - 15€ x 200 = 3000€
+q:ad60b92f-6196-4074-8b03-43c93e11cf1d:p2,q:ad60b92f-6196-4074-8b03-43c93e11cf1d,2,Cerveja,2.0,200.0,400.0,Cerveja 2€ x 200 = 400€
+q:87ca96b0-8a0d-40dc-847b-3ea562c39be6:p1,q:87ca96b0-8a0d-40dc-847b-3ea562c39be6,1,Almoço,16.0,22.0,352.0,Almoço 16€ x 22 = 352€
+q:467bca5d-fea7-4a7a-acff-2044e7da2507:p1,q:467bca5d-fea7-4a7a-acff-2044e7da2507,1,Coffee break pm,10.0,60.0,600.0,Coffee break pm – 10€ x 60 = 600€
+q:1d285e4f-2259-48f3-a47c-396cfa805bbd:p1,q:1d285e4f-2259-48f3-a47c-396cfa805bbd,1,Comidas e Bebidas não alcoólicas,28.0,40.0,1120.0,Comidas e Bebidas não alcoólicas 28€ x 40 = 1120€
+q:958487be-2da7-49bf-b1e6-f98788acbb5b:p1,q:958487be-2da7-49bf-b1e6-f98788acbb5b,1,Cb am,8.0,20.0,160.0,Cb am 8€ x 20 = 160€
+q:958487be-2da7-49bf-b1e6-f98788acbb5b:p2,q:958487be-2da7-49bf-b1e6-f98788acbb5b,2,Cb pm,8.0,20.0,160.0,Cb pm 8€ x 20 = 160€
+q:0317f634-89c0-4e6e-a041-0eb3b6187615:p1,q:0317f634-89c0-4e6e-a041-0eb3b6187615,1,,8.0,20.0,160.0,8€ x 20 = 160€
+q:70ce900a-4541-467c-a57e-8d91208454d9:p1,q:70ce900a-4541-467c-a57e-8d91208454d9,1,Coffee breaks pm,8.0,25.0,200.0,Coffee breaks pm 8€ x 25 = 200€ x 7= 1400€
+q:9aea5490-5a6f-4b47-b23c-b3abaff3d89e:p1,q:9aea5490-5a6f-4b47-b23c-b3abaff3d89e,1,,35.0,40.0,,35€ x 40 pax = 1400€
+q:70824660-04fc-4893-9cb4-6322a0a54402:p1,q:70824660-04fc-4893-9cb4-6322a0a54402,1,Coffee break pm,8.5,60.0,510.0,Coffee break pm – 8.50€ x 60 = 510€
+q:4a26f45a-16e2-43c9-870f-99d7b6d72dd4:p1,q:4a26f45a-16e2-43c9-870f-99d7b6d72dd4,1,Comidas,26.0,13.0,338.0,Comidas – 26€ x 13 = 338€
+q:bff73c83-ac19-4da2-ba5d-7cfac998d658:p1,q:bff73c83-ac19-4da2-ba5d-7cfac998d658,1,Espumante Baga Primavera,10.0,50.0,,Espumante Baga Primavera 10€ x 50uni = 500€
+q:bff73c83-ac19-4da2-ba5d-7cfac998d658:p2,q:bff73c83-ac19-4da2-ba5d-7cfac998d658,2,Flutes de acrílico,0.45,500.0,225.0,Flutes de acrílico 0.45€ x 500 = 225€
+q:bff73c83-ac19-4da2-ba5d-7cfac998d658:p3,q:bff73c83-ac19-4da2-ba5d-7cfac998d658,3,Ovos moles,0.55,500.0,275.0,Ovos moles 0.55€ x 500 = 275€
+q:bff73c83-ac19-4da2-ba5d-7cfac998d658:p4,q:bff73c83-ac19-4da2-ba5d-7cfac998d658,4,Espumante Baga Primavera,10.0,100.0,,Espumante Baga Primavera 10€ x 100uni = 1000€
+q:bff73c83-ac19-4da2-ba5d-7cfac998d658:p5,q:bff73c83-ac19-4da2-ba5d-7cfac998d658,5,Flutes de acrílico,0.45,1000.0,450.0,Flutes de acrílico 0.45€ x 1000 = 450€
+q:bff73c83-ac19-4da2-ba5d-7cfac998d658:p6,q:bff73c83-ac19-4da2-ba5d-7cfac998d658,6,Ovos moles,0.55,1000.0,550.0,Ovos moles 0.55€ x 1000 = 550€
+q:bff73c83-ac19-4da2-ba5d-7cfac998d658:p7,q:bff73c83-ac19-4da2-ba5d-7cfac998d658,7,Mão de obra,90.0,2.0,180.0,Mão de obra 90€ x 2 = 180€
+q:7d9fcc8a-e661-49b1-941d-bfc2245166af:p1,q:7d9fcc8a-e661-49b1-941d-bfc2245166af,1,,8.0,90.0,,8€ x 90 pax = 720€
+q:7d9fcc8a-e661-49b1-941d-bfc2245166af:p2,q:7d9fcc8a-e661-49b1-941d-bfc2245166af,2,,8.0,90.0,,8€ x 90 pax = 720€
+q:41ec9714-fe05-4354-8b83-ec4500afd01c:p1,q:41ec9714-fe05-4354-8b83-ec4500afd01c,1,,20.0,20.0,,20€ x 20 pax = 400€
+q:579b5961-6083-4edb-a8ef-5542aaaa4497:p1,q:579b5961-6083-4edb-a8ef-5542aaaa4497,1,Coffee break pm,6.5,30.0,195.0,Coffee break pm – 6.50€ x 30 = 195€
+q:d6998f8e-4c01-46af-8161-aa7d9906e81f:p1,q:d6998f8e-4c01-46af-8161-aa7d9906e81f,1,Almoço,20.0,100.0,2000.0,Almoço 20€ x 100 = 2000€
+q:efb775e1-b3cb-4c29-82be-c93e80bbdfe0:p1,q:efb775e1-b3cb-4c29-82be-c93e80bbdfe0,1,Comidas,18.6,15.0,279.0,Comidas – 18.60€ x 15 = 279€
+q:19288e19-67b7-49ef-b6db-2b59a61ae80d:p1,q:19288e19-67b7-49ef-b6db-2b59a61ae80d,1,Almoço,38.0,55.0,2090.0,Almoço 38€ x 55 = 2090€
+q:dd5442ad-12b4-4629-b0aa-41988acf335f:p1,q:dd5442ad-12b4-4629-b0aa-41988acf335f,1,Coffee break am,10.0,90.0,900.0,Coffee break am – 10€ x 90 = 900€
+q:4e2b7dba-5a0f-4242-aca4-32dca88899fd:p1,q:4e2b7dba-5a0f-4242-aca4-32dca88899fd,1,,29.0,60.0,,29€ x 60 pessoas = 1740€
+q:4e2b7dba-5a0f-4242-aca4-32dca88899fd:p2,q:4e2b7dba-5a0f-4242-aca4-32dca88899fd,2,,1.0,60.0,,1€ x 60 pessoas = 60€
+q:1e3c8e98-5a31-4d40-93d1-98e8b71c8bed:p1,q:1e3c8e98-5a31-4d40-93d1-98e8b71c8bed,1,Comidas e Bebidas não alcoólicas,16.0,50.0,800.0,Comidas e Bebidas não alcoólicas 16€ x 50 = 800€
+q:355ede81-70e7-46fb-8fb6-472db5b8a5e1:p1,q:355ede81-70e7-46fb-8fb6-472db5b8a5e1,1,Comidas e Bebidas não alcoólicas,18.0,60.0,1080.0,Comidas e Bebidas não alcoólicas 18€ x 60 = 1080€
+q:355ede81-70e7-46fb-8fb6-472db5b8a5e1:p2,q:355ede81-70e7-46fb-8fb6-472db5b8a5e1,2,Espumante,2.0,60.0,120.0,Espumante 2€ x 60 = 120€
+q:fc4d8b38-4ba3-4f34-8462-0ade3c731aa1:p1,q:fc4d8b38-4ba3-4f34-8462-0ade3c731aa1,1,Comidas,12.5,50.0,625.0,Comidas – 12.50€ x 50 = 625€
+q:fc4d8b38-4ba3-4f34-8462-0ade3c731aa1:p2,q:fc4d8b38-4ba3-4f34-8462-0ade3c731aa1,2,Bebidas,2.5,50.0,125.0,Bebidas – 2.50 x 50 = 125€
+q:6b07688b-1e78-46b0-b413-b0a22cbc2cd9:p1,q:6b07688b-1e78-46b0-b413-b0a22cbc2cd9,1,Coffee breaks,6.6,75.0,495.0,Coffee breaks 6.60€ x 75 = 495€ Almoço 17€ x 75 = 1275€
+q:327d38fd-7f24-4698-a128-132ef7c1d6c0:p1,q:327d38fd-7f24-4698-a128-132ef7c1d6c0,1,Coffee breaks,6.0,23.0,,Coffee breaks 6€ x 23 + 23 = 276€   Almoço 27€ x 23 = 621 €
+q:327d38fd-7f24-4698-a128-132ef7c1d6c0:p2,q:327d38fd-7f24-4698-a128-132ef7c1d6c0,2,Coffee breaks,6.0,23.0,138.0,Coffee breaks 6€ x 23 = 138€   Almoço 27€ x 23 = 621 €
+q:aaae2900-492b-46d1-aba7-7f534c90248a:p1,q:aaae2900-492b-46d1-aba7-7f534c90248a,1,Serviço de Coffee break,7.5,250.0,1875.0,Serviço de Coffee break 7.50€ x 250 = 1875€
+q:aaae2900-492b-46d1-aba7-7f534c90248a:p2,q:aaae2900-492b-46d1-aba7-7f534c90248a,2,Serviço de Vinho do Porto (Barros),0.8,250.0,200.0,Serviço de Vinho do Porto (Barros) 0.80€ x 250 = 200€
+q:03c2aed0-8a9a-468d-a8b6-88cc3c7e420d:p1,q:03c2aed0-8a9a-468d-a8b6-88cc3c7e420d,1,Coffee break pm,8.6,50.0,430.0,Coffee break pm - 8.60€ x 50 = 430€
+q:95de9fd6-8a79-472f-9218-1ff17e7702f5:p1,q:95de9fd6-8a79-472f-9218-1ff17e7702f5,1,Almoço,15.5,140.0,2170.0,Almoço 15.50€ x 140 = 2170€
+q:9182d5b7-bc0d-4fb5-9c50-f95e1f5d452d:p1,q:9182d5b7-bc0d-4fb5-9c50-f95e1f5d452d,1,,17.0,40.0,680.0,17€ x 40 = 680€
+q:b0eac091-a169-4f3d-b636-72828e573350:p1,q:b0eac091-a169-4f3d-b636-72828e573350,1,,7.5,25.0,,7.50€ x 25 pessoas x 2 serviços = 375€
+q:b0eac091-a169-4f3d-b636-72828e573350:p2,q:b0eac091-a169-4f3d-b636-72828e573350,2,,3.0,25.0,,3€ x 25 pessoas x 4 serviços = 300€
+q:e266a540-4106-4557-b095-05ae50c5e67e:p1,q:e266a540-4106-4557-b095-05ae50c5e67e,1,Coffee breaks,7.0,50.0,350.0,Coffee breaks 7€ x 50 = 350€ Almoço 18€ x 50 = 900€
+q:b5ba2947-e56b-44b7-86a7-5b4ab4a42231:p1,q:b5ba2947-e56b-44b7-86a7-5b4ab4a42231,1,Coffee breaks,6.0,24.0,,Coffee breaks 6€ x 24 + 24 = 288€   Almoço 27€ x 24 = 648 €
+q:b5ba2947-e56b-44b7-86a7-5b4ab4a42231:p2,q:b5ba2947-e56b-44b7-86a7-5b4ab4a42231,2,Coffee breaks,6.0,24.0,144.0,Coffee breaks 6€ x 24 = 144€   Almoço 27€ x 24 = 648 €
+q:3071bad6-6869-457e-8dc2-50c19b6c4c63:p1,q:3071bad6-6869-457e-8dc2-50c19b6c4c63,1,,6.5,150.0,,6.50€ x 150 pax = 975€
+q:d1b4e47f-fca4-4541-8b86-2ad073b30693:p1,q:d1b4e47f-fca4-4541-8b86-2ad073b30693,1,Almoço,16.0,22.0,352.0,Almoço 16€ x 22 = 352€
+q:b99fa1db-dadd-4079-afcb-eb04996b2d7d:p1,q:b99fa1db-dadd-4079-afcb-eb04996b2d7d,1,Coffee breaks pm,7.0,35.0,245.0,Coffee breaks pm 7€ x 35 = 245€ x 5= 1225
+q:b99fa1db-dadd-4079-afcb-eb04996b2d7d:p2,q:b99fa1db-dadd-4079-afcb-eb04996b2d7d,2,Almoços,25.0,35.0,,Almoços 25€ x 35€ = 875€ x 4 = 3500€
+q:098eac83-80a1-4449-98cf-ca82f65c6924:p1,q:098eac83-80a1-4449-98cf-ca82f65c6924,1,Coffee Break,6.0,20.0,120.0,Coffee Break 6€ x 20 = 120€
+q:098eac83-80a1-4449-98cf-ca82f65c6924:p2,q:098eac83-80a1-4449-98cf-ca82f65c6924,2,Almoço,18.0,20.0,,Almoço 18€ x 20 Pessoas = 360€
+q:b116fde1-e97d-4553-a188-fa8414f4c2a5:p1,q:b116fde1-e97d-4553-a188-fa8414f4c2a5,1,Comidas,17.0,20.0,340.0,Comidas - 17€ x 20 = 340€
+q:b116fde1-e97d-4553-a188-fa8414f4c2a5:p2,q:b116fde1-e97d-4553-a188-fa8414f4c2a5,2,Bebidas,3.0,20.0,60.0,Bebidas - 3 x 20 = 60€
+q:7cd7fa79-1fe8-42ec-a440-3a82a21996c2:p1,q:7cd7fa79-1fe8-42ec-a440-3a82a21996c2,1,Almoço,20.0,80.0,1600.0,Almoço 20€ x 80 = 1600€
+q:11492e21-b958-444e-8011-d9ebfa679e2b:p1,q:11492e21-b958-444e-8011-d9ebfa679e2b,1,Coffee breaks am,6.5,140.0,910.0,Coffee breaks am 6.50€ x 140 = 910€
+q:11492e21-b958-444e-8011-d9ebfa679e2b:p2,q:11492e21-b958-444e-8011-d9ebfa679e2b,2,Coffee breaks pm,6.5,140.0,910.0,Coffee breaks pm 6.50€ x 140 = 910€
+q:e9b3a890-2de8-43bd-87a1-833d45d4c6b8:p1,q:e9b3a890-2de8-43bd-87a1-833d45d4c6b8,1,Lunch box,8.0,15.0,120.0,Lunch box 8€ x 15 = 120€ x 10 dias = 1200€
+q:227119ab-473a-4c35-90f6-47ceea6f6355:p1,q:227119ab-473a-4c35-90f6-47ceea6f6355,1,Comidas,10.0,100.0,1000.0,Comidas – 10€ x 100 = 1000€
+q:227119ab-473a-4c35-90f6-47ceea6f6355:p2,q:227119ab-473a-4c35-90f6-47ceea6f6355,2,Bebidas,2.5,100.0,250.0,Bebidas – 2.50 x 100 = 250€
+q:865a5407-c718-47bd-922c-5a16e6133474:p1,q:865a5407-c718-47bd-922c-5a16e6133474,1,Comidas e Bebidas não alcoólicas,12.0,50.0,600.0,Comidas e Bebidas não alcoólicas 12€ x 50 = 600€
+q:4719f879-df29-4711-a48a-af32342bca5f:p1,q:4719f879-df29-4711-a48a-af32342bca5f,1,Coffee breaks am,8.0,20.0,160.0,Coffee breaks am 8€ x 20 = 160€
+q:4719f879-df29-4711-a48a-af32342bca5f:p2,q:4719f879-df29-4711-a48a-af32342bca5f,2,Almoço,27.0,20.0,540.0,Almoço 27€ x 20 = 540 €
+q:4719f879-df29-4711-a48a-af32342bca5f:p3,q:4719f879-df29-4711-a48a-af32342bca5f,3,Coffee breaks pm,8.0,20.0,160.0,Coffee breaks pm 8€ x 20 = 160€
+q:4719f879-df29-4711-a48a-af32342bca5f:p4,q:4719f879-df29-4711-a48a-af32342bca5f,4,Coffee breaks am,8.0,20.0,160.0,Coffee breaks am 8€ x 20 = 160€
+q:4e71b230-3e00-4b3a-9ed4-86d52c5f8011:p1,q:4e71b230-3e00-4b3a-9ed4-86d52c5f8011,1,Almoço,18.0,150.0,2700.0,Almoço 18€ x 150 = 2700€
+q:4e71b230-3e00-4b3a-9ed4-86d52c5f8011:p2,q:4e71b230-3e00-4b3a-9ed4-86d52c5f8011,2,Cerveja,0.5,300.0,,"Cerveja – 0,50€ x 300 uni = 150€"
+q:4e71b230-3e00-4b3a-9ed4-86d52c5f8011:p3,q:4e71b230-3e00-4b3a-9ed4-86d52c5f8011,3,Sangria 15lts,0.8,150.0,120.0,"Sangria 15lts – 0,80€ x 150 = 120€"
+q:794663f1-e77e-4b54-976b-096aa9d5feb1:p1,q:794663f1-e77e-4b54-976b-096aa9d5feb1,1,Bebidas não alcoólicas,4.0,65.0,260.0,Bebidas não alcoólicas 4€ x 65 = 260€
+q:794663f1-e77e-4b54-976b-096aa9d5feb1:p2,q:794663f1-e77e-4b54-976b-096aa9d5feb1,2,Espumante,2.5,65.0,162.5,Espumante 2.50€ x 65 =162.50€
+q:e0909981-359f-4d5c-844f-82b917b4b4fe:p1,q:e0909981-359f-4d5c-844f-82b917b4b4fe,1,Coffee break pm,8.0,70.0,560.0,Coffee break pm – 8€ x 70 = 560€
+q:b135ec24-5747-4016-bb9b-1df37397f6d8:p1,q:b135ec24-5747-4016-bb9b-1df37397f6d8,1,,20.0,25.0,,20€ x 25 pax = 500€
+q:9cd24b6d-b4ba-415e-a7e2-34c03a976858:p1,q:9cd24b6d-b4ba-415e-a7e2-34c03a976858,1,Comidas e bebidas não alcoólicas,15.5,100.0,1550.0,Comidas e bebidas não alcoólicas – 15.50€ x 100 = 1550€
+q:cfd04752-9b3a-45e1-82e3-a86a57848b83:p1,q:cfd04752-9b3a-45e1-82e3-a86a57848b83,1,,34.0,60.0,2040.0,34€ x 60 = 2040€
+q:bed0eac7-064b-4864-9499-c0b167b04976:p1,q:bed0eac7-064b-4864-9499-c0b167b04976,1,Coffee Break,6.0,20.0,120.0,Coffee Break 6€ x 20 = 120€
+q:bed0eac7-064b-4864-9499-c0b167b04976:p2,q:bed0eac7-064b-4864-9499-c0b167b04976,2,Almoço,18.0,20.0,,Almoço 18€ x 20 Pessoas = 360€
+q:52a82d30-6c2f-4eca-bb4a-9e3dbbd645cf:p1,q:52a82d30-6c2f-4eca-bb4a-9e3dbbd645cf,1,Coffee break pm,13.5,60.0,810.0,Coffee break pm – 13.50€ x 60 = 810€
+q:38b68707-2430-41cb-88a7-9541b151d196:p1,q:38b68707-2430-41cb-88a7-9541b151d196,1,Comidas e Bebidas não alcoólicas,12.0,50.0,600.0,Comidas e Bebidas não alcoólicas 12€ x 50 = 600€
+q:74df1ef0-f2e7-4189-be4b-cdaf281ef88e:p1,q:74df1ef0-f2e7-4189-be4b-cdaf281ef88e,1,Comidas e Bebidas não alcoólicas,18.0,30.0,540.0,Comidas e Bebidas não alcoólicas 18€ x 30 = 540€
+q:1d1ecb88-7360-47c8-8288-e63305634439:p1,q:1d1ecb88-7360-47c8-8288-e63305634439,1,Espumante Baga Primavera,10.0,50.0,,Espumante Baga Primavera 10€ x 50uni = 500€
+q:1d1ecb88-7360-47c8-8288-e63305634439:p2,q:1d1ecb88-7360-47c8-8288-e63305634439,2,Flutes de acrílico,0.45,500.0,225.0,Flutes de acrílico 0.45€ x 500 = 225€
+q:1d1ecb88-7360-47c8-8288-e63305634439:p3,q:1d1ecb88-7360-47c8-8288-e63305634439,3,Ovos moles,0.55,500.0,275.0,Ovos moles 0.55€ x 500 = 275€
+q:1d1ecb88-7360-47c8-8288-e63305634439:p4,q:1d1ecb88-7360-47c8-8288-e63305634439,4,Espumante Baga Primavera,10.0,100.0,,Espumante Baga Primavera 10€ x 100uni = 1000€
+q:1d1ecb88-7360-47c8-8288-e63305634439:p5,q:1d1ecb88-7360-47c8-8288-e63305634439,5,Flutes de acrílico,0.45,1000.0,450.0,Flutes de acrílico 0.45€ x 1000 = 450€
+q:1d1ecb88-7360-47c8-8288-e63305634439:p6,q:1d1ecb88-7360-47c8-8288-e63305634439,6,Ovos moles,0.55,1000.0,550.0,Ovos moles 0.55€ x 1000 = 550€
+q:1d1ecb88-7360-47c8-8288-e63305634439:p7,q:1d1ecb88-7360-47c8-8288-e63305634439,7,Mão de obra,90.0,2.0,180.0,Mão de obra 90€ x 2 = 180€
+q:a605eb3e-b0b9-4407-af86-361408c2a1d9:p1,q:a605eb3e-b0b9-4407-af86-361408c2a1d9,1,Coffee Break,6.0,20.0,120.0,Coffee Break 6€ x 20 = 120€
+q:a605eb3e-b0b9-4407-af86-361408c2a1d9:p2,q:a605eb3e-b0b9-4407-af86-361408c2a1d9,2,Almoço,18.0,20.0,,Almoço 18€ x 20 Pessoas = 360€
+q:b6ed3817-2513-4442-8dc9-bccf49ed1b59:p1,q:b6ed3817-2513-4442-8dc9-bccf49ed1b59,1,Coffee breaks,8.5,15.0,127.5,Coffee breaks 8.50€ x 15= 127.50€
+q:90db6a60-e27d-4744-93f7-a95e0393fc45:p1,q:90db6a60-e27d-4744-93f7-a95e0393fc45,1,Comidas,16.5,100.0,1650.0,Comidas – 16.50€ x 100 = 1650€
+q:90db6a60-e27d-4744-93f7-a95e0393fc45:p2,q:90db6a60-e27d-4744-93f7-a95e0393fc45,2,Bebidas,2.5,100.0,250.0,Bebidas – 2.50 x 100 = 250€
+q:ff384872-b5fe-459d-b153-3a53547f2a79:p1,q:ff384872-b5fe-459d-b153-3a53547f2a79,1,Coffee breaks pm,7.0,35.0,245.0,Coffee breaks pm 7€ x 35 = 245€ x 5= 1225
+q:ff384872-b5fe-459d-b153-3a53547f2a79:p2,q:ff384872-b5fe-459d-b153-3a53547f2a79,2,Almoços,25.0,35.0,,Almoços 25€ x 35€ = 875€ x 4 = 3500€
+q:5dbca434-9b82-4bb7-86b5-83f3c4e51d7e:p1,q:5dbca434-9b82-4bb7-86b5-83f3c4e51d7e,1,Coffee breaks pm,7.0,35.0,245.0,Coffee breaks pm 7€ x 35 = 245€ x 5= 1225
+q:5dbca434-9b82-4bb7-86b5-83f3c4e51d7e:p2,q:5dbca434-9b82-4bb7-86b5-83f3c4e51d7e,2,Almoços,25.0,35.0,,Almoços 25€ x 35€ = 875€ x 4 = 3500€
+q:7f3064fb-51e3-4f8c-931e-ab17fe81bebd:p1,q:7f3064fb-51e3-4f8c-931e-ab17fe81bebd,1,Almoço,13.0,30.0,390.0,Almoço 13€ x 30 = 390€
+q:7f0ba4c5-8548-4df7-858f-ef1700ef074c:p1,q:7f0ba4c5-8548-4df7-858f-ef1700ef074c,1,,25.0,40.0,,25€ x 40 pessoas = 1000€ (+ iva 13%) =1130€
+q:fbe7dabe-e052-4093-928a-1f69eecc37cd:p1,q:fbe7dabe-e052-4093-928a-1f69eecc37cd,1,Coffee break am,7.5,30.0,225.0,Coffee break am 7.50€ x 30 = 225€
+q:fbe7dabe-e052-4093-928a-1f69eecc37cd:p2,q:fbe7dabe-e052-4093-928a-1f69eecc37cd,2,Cofee break pm,7.5,30.0,225.0,Cofee break pm 7.50€ x 30 = 225€
+q:24588d5a-e844-441e-a018-bfc621043296:p1,q:24588d5a-e844-441e-a018-bfc621043296,1,Comidas,14.0,100.0,1400.0,Comidas – 14€ x 100 = 1400€
+q:24588d5a-e844-441e-a018-bfc621043296:p2,q:24588d5a-e844-441e-a018-bfc621043296,2,Bebidas,2.5,100.0,250.0,Bebidas – 2.50 x 100 = 250€
+q:7672bd20-6fca-4c4a-9d56-541853cfe4ea:p1,q:7672bd20-6fca-4c4a-9d56-541853cfe4ea,1,Comidas e Bebidas não alcoólicas,20.0,50.0,1000.0,Comidas e Bebidas não alcoólicas 20€ x 50 = 1000€
+q:098e5e71-30ef-4251-a77a-df83f13eda58:p1,q:098e5e71-30ef-4251-a77a-df83f13eda58,1,Lunch box,8.0,15.0,120.0,Lunch box 8€ x 15 = 120€ x 10 dias = 1200€
+q:84816ec1-c0cb-4579-84c8-7ed620d57533:p1,q:84816ec1-c0cb-4579-84c8-7ed620d57533,1,Comidas,18.6,15.0,279.0,Comidas – 18.60€ x 15 = 279€
+q:51fe1cf5-796c-4f8a-9990-f21e2013dad3:p1,q:51fe1cf5-796c-4f8a-9990-f21e2013dad3,1,,29.0,60.0,,29€ x 60 pessoas = 1740€
+q:51fe1cf5-796c-4f8a-9990-f21e2013dad3:p2,q:51fe1cf5-796c-4f8a-9990-f21e2013dad3,2,,1.0,60.0,,1€ x 60 pessoas = 60€
+q:f619dfa4-b475-4efc-8702-e5ef0ce6250b:p1,q:f619dfa4-b475-4efc-8702-e5ef0ce6250b,1,Coffee break pm,6.5,220.0,1430.0,Coffee break pm – 6.50€ x 220 = 1430€
+q:bfc5c0d8-5b5d-4498-9433-70c38fd11374:p1,q:bfc5c0d8-5b5d-4498-9433-70c38fd11374,1,Cb am,7.0,40.0,280.0,Cb am 7€ x 40 = 280€
+q:bfc5c0d8-5b5d-4498-9433-70c38fd11374:p2,q:bfc5c0d8-5b5d-4498-9433-70c38fd11374,2,Almoço,26.5,40.0,1060.0,Almoço 26.50€ x 40 = 1060€
+q:bfc5c0d8-5b5d-4498-9433-70c38fd11374:p3,q:bfc5c0d8-5b5d-4498-9433-70c38fd11374,3,Cb am,7.0,40.0,280.0,Cb am 7€ x 40 = 280€
+q:bfc5c0d8-5b5d-4498-9433-70c38fd11374:p4,q:bfc5c0d8-5b5d-4498-9433-70c38fd11374,4,Almoço,27.5,30.0,825.0,Almoço 27.50€ x 30 = 825€
+q:bfc5c0d8-5b5d-4498-9433-70c38fd11374:p5,q:bfc5c0d8-5b5d-4498-9433-70c38fd11374,5,Cb pm,7.5,20.0,150.0,Cb pm 7.50€ x 20 = 150€
+q:7de5363a-c3dc-45cd-b65c-41782f9c2431:p1,q:7de5363a-c3dc-45cd-b65c-41782f9c2431,1,,5.6,130.0,,5.60€ x 130 pax = 728€
+q:fce27fa1-f66d-483b-b464-8cf369717b66:p1,q:fce27fa1-f66d-483b-b464-8cf369717b66,1,Comidas,21.5,70.0,1505.0,Comidas 21.50€ x 70 = 1505€
+q:fce27fa1-f66d-483b-b464-8cf369717b66:p2,q:fce27fa1-f66d-483b-b464-8cf369717b66,2,Bebidas não alcoólicas,2.5,70.0,175.0,Bebidas não alcoólicas 2.50€ x 70 = 175€
+q:fce27fa1-f66d-483b-b464-8cf369717b66:p3,q:fce27fa1-f66d-483b-b464-8cf369717b66,3,Cerveja,0.6,210.0,126.0,Cerveja 0.60 x 210 = 126€
+q:1d79462c-78e2-4e76-a4e3-4e05f8a875a6:p1,q:1d79462c-78e2-4e76-a4e3-4e05f8a875a6,1,Almoço,18.0,150.0,2700.0,Almoço 18€ x 150 = 2700€
+q:1d79462c-78e2-4e76-a4e3-4e05f8a875a6:p2,q:1d79462c-78e2-4e76-a4e3-4e05f8a875a6,2,Cerveja,0.5,300.0,,"Cerveja – 0,50€ x 300 uni = 150€"
+q:1d79462c-78e2-4e76-a4e3-4e05f8a875a6:p3,q:1d79462c-78e2-4e76-a4e3-4e05f8a875a6,3,Sangria 15lts,0.8,150.0,120.0,"Sangria 15lts – 0,80€ x 150 = 120€"
+q:9deb83a4-7785-4a7c-b449-85eaa7afcf7f:p1,q:9deb83a4-7785-4a7c-b449-85eaa7afcf7f,1,Comidas,10.0,100.0,1000.0,Comidas – 10€ x 100 = 1000€
+q:9deb83a4-7785-4a7c-b449-85eaa7afcf7f:p2,q:9deb83a4-7785-4a7c-b449-85eaa7afcf7f,2,Bebidas,2.5,100.0,250.0,Bebidas – 2.50 x 100 = 250€
+q:0494052f-5b18-4c27-9b30-25e1fd2f6fa9:p1,q:0494052f-5b18-4c27-9b30-25e1fd2f6fa9,1,Valor final Lunch box =,15.0,50.0,,Valor final Lunch box = 15€ x 50€ = 750€
+q:cb81bb74-cb41-42fd-aa9a-81ba676a060d:p1,q:cb81bb74-cb41-42fd-aa9a-81ba676a060d,1,Valor final Lunch box =,8.3,60.0,,Valor final Lunch box = 8.30€ x 60€ = 498€
+q:bef08f09-7c0c-46d8-89c7-09e1d7142046:p1,q:bef08f09-7c0c-46d8-89c7-09e1d7142046,1,Comidas,20.0,40.0,800.0,Comidas - 20€ x 40 = 800€
+q:bef08f09-7c0c-46d8-89c7-09e1d7142046:p2,q:bef08f09-7c0c-46d8-89c7-09e1d7142046,2,Bebidas,5.0,40.0,200.0,Bebidas - 5 x 40 = 200€
+q:2636d93a-6170-47ec-9afb-e3c3e28a0e3f:p1,q:2636d93a-6170-47ec-9afb-e3c3e28a0e3f,1,Jantar,27.0,45.0,1215.0,Jantar 27€ x 45 = 1215€
+q:1a883d6c-f250-4e33-a30b-a22bd21ffd26:p1,q:1a883d6c-f250-4e33-a30b-a22bd21ffd26,1,Cb am,7.0,40.0,280.0,Cb am 7€ x 40 = 280€
+q:1a883d6c-f250-4e33-a30b-a22bd21ffd26:p2,q:1a883d6c-f250-4e33-a30b-a22bd21ffd26,2,Almoço,26.5,40.0,1060.0,Almoço 26.50€ x 40 = 1060€
+q:1a883d6c-f250-4e33-a30b-a22bd21ffd26:p3,q:1a883d6c-f250-4e33-a30b-a22bd21ffd26,3,Cb am,7.0,40.0,280.0,Cb am 7€ x 40 = 280€
+q:1a883d6c-f250-4e33-a30b-a22bd21ffd26:p4,q:1a883d6c-f250-4e33-a30b-a22bd21ffd26,4,Almoço,27.5,30.0,825.0,Almoço 27.50€ x 30 = 825€
+q:1a883d6c-f250-4e33-a30b-a22bd21ffd26:p5,q:1a883d6c-f250-4e33-a30b-a22bd21ffd26,5,Cb pm,7.5,20.0,150.0,Cb pm 7.50€ x 20 = 150€
+q:e6f77078-0089-42b9-a10e-c6f17ffdd948:p1,q:e6f77078-0089-42b9-a10e-c6f17ffdd948,1,Sub Total,31.5,50.0,1575.0,Sub Total 31.50€ x 50 = 1575€
+q:e6f77078-0089-42b9-a10e-c6f17ffdd948:p2,q:e6f77078-0089-42b9-a10e-c6f17ffdd948,2,Sub Total,27.1,30.0,813.0,Sub Total 27.10€ x 30 = 813€
+q:ddf995fb-c2ca-4531-8d24-9952ef69638b:p1,q:ddf995fb-c2ca-4531-8d24-9952ef69638b,1,,8.0,20.0,160.0,8€ x 20 = 160€
+q:396154e3-0154-4b62-8c5a-a0c0ee94bd98:p1,q:396154e3-0154-4b62-8c5a-a0c0ee94bd98,1,,8.0,100.0,,8€ x 100 pax = 800€
+q:1c16d63a-f010-431c-a715-cea5d18fdee1:p1,q:1c16d63a-f010-431c-a715-cea5d18fdee1,1,,27.5,20.0,,27.50€ x 20 pax = 550€
+q:a9d1cf1b-2a08-43b7-927d-9b5398f0e24b:p1,q:a9d1cf1b-2a08-43b7-927d-9b5398f0e24b,1,,20.0,25.0,,20€ x 25 pax = 500€
+q:749dc015-29a1-4ee1-9ed1-dff10ca1aa0d:p1,q:749dc015-29a1-4ee1-9ed1-dff10ca1aa0d,1,Catering 1 e 2 =,12.5,50.0,625.0,Catering 1 e 2 = 12.50€ x 50 = 625€
+q:6ad289db-f537-4d64-a8da-699fa93241a2:p1,q:6ad289db-f537-4d64-a8da-699fa93241a2,1,Coffee break pm,8.0,70.0,560.0,Coffee break pm – 8€ x 70 = 560€
+q:cfdcec28-067f-4ea0-90e7-2609ac2972b2:p1,q:cfdcec28-067f-4ea0-90e7-2609ac2972b2,1,Coffee breaks,7.0,22.0,154.0,Coffee breaks 7€ x 22 = 154€
+q:f360898d-a076-45f1-ba25-8aef2b24e303:p1,q:f360898d-a076-45f1-ba25-8aef2b24e303,1,Comidas e bebidas não alcoólicas,15.5,100.0,1550.0,Comidas e bebidas não alcoólicas – 15.50€ x 100 = 1550€
+q:664c3d1e-3979-491a-95b5-e00f8e11ce8b:p1,q:664c3d1e-3979-491a-95b5-e00f8e11ce8b,1,Comidas e Bebidas não alcoólicas,28.0,40.0,1120.0,Comidas e Bebidas não alcoólicas 28€ x 40 = 1120€
+q:27bec1a4-58a6-4550-96c5-c3993cb513ae:p1,q:27bec1a4-58a6-4550-96c5-c3993cb513ae,1,Coffee break 16h,6.5,30.0,195.0,Coffee break 16h – 6.50€ x 30 = 195€
+q:27bec1a4-58a6-4550-96c5-c3993cb513ae:p2,q:27bec1a4-58a6-4550-96c5-c3993cb513ae,2,Coffee break 19h,9.5,30.0,285.0,Coffee break 19h – 9.50€ x 30 = 285€
+q:58b6dfad-bb97-428e-b20d-df628838fd7d:p1,q:58b6dfad-bb97-428e-b20d-df628838fd7d,1,Comidas,18.6,15.0,279.0,Comidas – 18.60€ x 15 = 279€
+q:972c5a09-1d89-435a-9736-4b4d431283d7:p1,q:972c5a09-1d89-435a-9736-4b4d431283d7,1,Coffee breaks pm,7.0,35.0,245.0,Coffee breaks pm 7€ x 35 = 245€ x 5= 1225
+q:972c5a09-1d89-435a-9736-4b4d431283d7:p2,q:972c5a09-1d89-435a-9736-4b4d431283d7,2,Almoços,25.0,35.0,,Almoços 25€ x 35€ = 875€ x 4 = 3500€
+q:d606e185-437e-4092-ada2-ab4cdc4f6cbc:p1,q:d606e185-437e-4092-ada2-ab4cdc4f6cbc,1,Coffee breaks,8.5,15.0,127.5,Coffee breaks 8.50€ x 15= 127.50€
+q:d606e185-437e-4092-ada2-ab4cdc4f6cbc:p2,q:d606e185-437e-4092-ada2-ab4cdc4f6cbc,2,Coffee breaks,8.5,15.0,127.5,Coffee breaks 8.50€ x 15 = 127.50€
+q:af6e2cf4-2e57-4884-9431-132a9eb41b0f:p1,q:af6e2cf4-2e57-4884-9431-132a9eb41b0f,1,Comidas,14.0,100.0,1400.0,Comidas – 14€ x 100 = 1400€
+q:af6e2cf4-2e57-4884-9431-132a9eb41b0f:p2,q:af6e2cf4-2e57-4884-9431-132a9eb41b0f,2,Bebidas,2.0,100.0,200.0,Bebidas – 2€ x 100 = 200€
+q:f9aed788-0f44-4c54-9dc1-056c7aaed879:p1,q:f9aed788-0f44-4c54-9dc1-056c7aaed879,1,Coffee break pm,8.5,50.0,425.0,Coffee break pm – 8.50€ x 50 = 425€
+q:f9aed788-0f44-4c54-9dc1-056c7aaed879:p2,q:f9aed788-0f44-4c54-9dc1-056c7aaed879,2,Espumante,1.5,50.0,75.0,Espumante – 1.50 x 50 = 75€
+q:36a76a04-5522-40b9-8853-ddfe3e58938b:p1,q:36a76a04-5522-40b9-8853-ddfe3e58938b,1,Coffee break pm,9.0,20.0,180.0,Coffee break pm – 9€ x 20 = 180€
+q:244ab69e-e196-47b1-be53-b281075f37d9:p1,q:244ab69e-e196-47b1-be53-b281075f37d9,1,,8.3,90.0,747.0,8.30€ x 90 = 747€
+q:b178a689-6bbf-4c9a-8665-8b23440d3493:p1,q:b178a689-6bbf-4c9a-8665-8b23440d3493,1,Coffee-Break 10h30,9.0,60.0,540.0,Coffee-Break 10h30 – 9€ x 60 = 540€
+q:b178a689-6bbf-4c9a-8665-8b23440d3493:p2,q:b178a689-6bbf-4c9a-8665-8b23440d3493,2,Almoço (volante) 13h,25.0,60.0,1500.0,Almoço (volante) 13h – 25€ x 60 = 1500€
+q:1513748e-2b15-4a78-9e37-98ea0a000232:p1,q:1513748e-2b15-4a78-9e37-98ea0a000232,1,Comidas,17.0,20.0,340.0,Comidas - 17€ x 20 = 340€
+q:1513748e-2b15-4a78-9e37-98ea0a000232:p2,q:1513748e-2b15-4a78-9e37-98ea0a000232,2,Bebidas,3.0,20.0,60.0,Bebidas - 3 x 20 = 60€
+q:36c7a991-2b34-41e2-9a11-835a14ac2e47:p1,q:36c7a991-2b34-41e2-9a11-835a14ac2e47,1,Coffee breaks,6.0,100.0,600.0,Coffee breaks 6€ x 100 = 600€
+q:36c7a991-2b34-41e2-9a11-835a14ac2e47:p2,q:36c7a991-2b34-41e2-9a11-835a14ac2e47,2,Almoço,14.0,50.0,700.0,Almoço 14€ x 50 = 700€
+q:d52939e3-7430-4a05-92d3-83a10db7bba1:p1,q:d52939e3-7430-4a05-92d3-83a10db7bba1,1,Valor final Lunch box =,15.0,50.0,,Valor final Lunch box = 15€ x 50€ = 750€
+q:917e082c-52db-4a99-9330-15af904157ea:p1,q:917e082c-52db-4a99-9330-15af904157ea,1,Serviço de Coffee break,7.5,250.0,1875.0,Serviço de Coffee break 7.50€ x 250 = 1875€
+q:917e082c-52db-4a99-9330-15af904157ea:p2,q:917e082c-52db-4a99-9330-15af904157ea,2,Serviço de Vinho do Porto (Barros),0.8,250.0,200.0,Serviço de Vinho do Porto (Barros) 0.80€ x 250 = 200€
+q:98a22920-2c81-47c1-9caf-7d9255bee250:p1,q:98a22920-2c81-47c1-9caf-7d9255bee250,1,Comidas,20.0,40.0,800.0,Comidas - 20€ x 40 = 800€
+q:98a22920-2c81-47c1-9caf-7d9255bee250:p2,q:98a22920-2c81-47c1-9caf-7d9255bee250,2,Bebidas,5.0,40.0,200.0,Bebidas - 5 x 40 = 200€
+q:54b67e02-456f-4c91-a1c5-5cfa76274876:p1,q:54b67e02-456f-4c91-a1c5-5cfa76274876,1,Bebidas não alcoólicas,4.0,65.0,260.0,Bebidas não alcoólicas 4€ x 65 = 260€
+q:54b67e02-456f-4c91-a1c5-5cfa76274876:p2,q:54b67e02-456f-4c91-a1c5-5cfa76274876,2,Espumante,2.5,65.0,162.5,Espumante 2.50€ x 65 =162.50€
+q:e1e46e4c-0cc6-4b9c-bc5f-def5ce4f3f7a:p1,q:e1e46e4c-0cc6-4b9c-bc5f-def5ce4f3f7a,1,Comidas e Bebidas não alcoólicas,11.0,330.0,,Comidas e Bebidas não alcoólicas 11€ x 330 pax = 3630€
+q:e1e46e4c-0cc6-4b9c-bc5f-def5ce4f3f7a:p2,q:e1e46e4c-0cc6-4b9c-bc5f-def5ce4f3f7a,2,Espumante,1.0,330.0,,Espumante 1€ x 330 pax = 330€
+q:36a19615-2da9-45b7-8d29-3466e27023cc:p1,q:36a19615-2da9-45b7-8d29-3466e27023cc,1,Almoço,16.5,100.0,1650.0,Almoço 16.50€ x 100 = 1650€
+q:c153d1e9-9ecf-4c0d-9aa8-43bb2a152fac:p1,q:c153d1e9-9ecf-4c0d-9aa8-43bb2a152fac,1,Comidas,14.0,100.0,1400.0,Comidas – 14€ x 100 = 1400€
+q:c153d1e9-9ecf-4c0d-9aa8-43bb2a152fac:p2,q:c153d1e9-9ecf-4c0d-9aa8-43bb2a152fac,2,Bebidas,2.5,100.0,250.0,Bebidas – 2.50 x 100 = 250€
+q:3cac61e3-f653-430e-968c-a73c32f41f31:p1,q:3cac61e3-f653-430e-968c-a73c32f41f31,1,Espumante Baga Primavera,10.0,50.0,,Espumante Baga Primavera 10€ x 50uni = 500€
+q:3cac61e3-f653-430e-968c-a73c32f41f31:p2,q:3cac61e3-f653-430e-968c-a73c32f41f31,2,Flutes de acrílico,0.45,512.0,225.0,Flutes de acrílico 0.45€ x 512 = 225€
+q:3cac61e3-f653-430e-968c-a73c32f41f31:p3,q:3cac61e3-f653-430e-968c-a73c32f41f31,3,Ovos moles,0.55,500.0,275.0,Ovos moles 0.55€ x 500 = 275€
+q:c73fbe81-b9c1-462f-95fc-f95f04938f86:p1,q:c73fbe81-b9c1-462f-95fc-f95f04938f86,1,Coffee break pm,8.0,30.0,240.0,Coffee break pm – 8€ x 30 = 240€
+q:f158130e-6f56-4763-9083-ffec4af23f68:p1,q:f158130e-6f56-4763-9083-ffec4af23f68,1,Almoço,18.0,150.0,2700.0,Almoço 18€ x 150 = 2700€
+q:f158130e-6f56-4763-9083-ffec4af23f68:p2,q:f158130e-6f56-4763-9083-ffec4af23f68,2,Cerveja,0.5,300.0,,"Cerveja – 0,50€ x 300 uni = 150€"
+q:f158130e-6f56-4763-9083-ffec4af23f68:p3,q:f158130e-6f56-4763-9083-ffec4af23f68,3,Sangria 15lts,0.8,150.0,120.0,"Sangria 15lts – 0,80€ x 150 = 120€"
+q:f01ac36e-3ec6-4096-b0ba-5b22ed662bb7:p1,q:f01ac36e-3ec6-4096-b0ba-5b22ed662bb7,1,Welcome Coffee,7.5,50.0,375.0,Welcome Coffee 7.50€ x 50 = 375€
+q:f01ac36e-3ec6-4096-b0ba-5b22ed662bb7:p2,q:f01ac36e-3ec6-4096-b0ba-5b22ed662bb7,2,Jantar,26.0,50.0,1300.0,Jantar 26€ x 50 = 1300€
+q:f01ac36e-3ec6-4096-b0ba-5b22ed662bb7:p3,q:f01ac36e-3ec6-4096-b0ba-5b22ed662bb7,3,Deslocação 3 funcionários 2h =,8.5,3.0,25.5,Deslocação 3 funcionários 2h = 8.50€ x 3 = 25.50€
+q:4fdf2718-223b-4a0b-bed3-7cb8b1e16d25:p1,q:4fdf2718-223b-4a0b-bed3-7cb8b1e16d25,1,Coffee break pm,11.0,300.0,3300.0,Coffee break pm – 11€ x 300 = 3300€
+q:4fdf2718-223b-4a0b-bed3-7cb8b1e16d25:p2,q:4fdf2718-223b-4a0b-bed3-7cb8b1e16d25,2,Espumante,1.0,300.0,300.0,Espumante – 1 x 300 = 300€
+q:b1ea75ff-cf15-4749-b07e-d060e0f23482:p1,q:b1ea75ff-cf15-4749-b07e-d060e0f23482,1,Coffee break pm,7.5,175.0,1312.5,Coffee break pm – 7.50€ x 175 = 1312.50€
+q:83be43c9-5d92-4ea2-94b7-7bc6eca96fe1:p1,q:83be43c9-5d92-4ea2-94b7-7bc6eca96fe1,1,,5.6,130.0,,5.60€ x 130 pax = 728€
+q:0006d1ac-6e33-4357-a780-50bc8ee6510e:p1,q:0006d1ac-6e33-4357-a780-50bc8ee6510e,1,Coffee breaks,6.0,23.0,,Coffee breaks 6€ x 23 + 23 = 276€ Almoço 27€ x 23 = 621 €
+q:0006d1ac-6e33-4357-a780-50bc8ee6510e:p2,q:0006d1ac-6e33-4357-a780-50bc8ee6510e,2,Coffee breaks,6.0,23.0,138.0,Coffee breaks 6€ x 23 = 138€ Almoço 27€ x 23 = 621 €
+q:ff6dd04c-07f8-4956-905f-d997a50bf3c7:p1,q:ff6dd04c-07f8-4956-905f-d997a50bf3c7,1,Comidas e Bebidas não alcoólicas,28.0,40.0,1120.0,Comidas e Bebidas não alcoólicas 28€ x 40 = 1120€
+q:8a71c3e9-bcc4-49b5-8d89-bdeeff926fd4:p1,q:8a71c3e9-bcc4-49b5-8d89-bdeeff926fd4,1,Comidas,14.0,100.0,1400.0,Comidas – 14€ x 100 = 1400€
+q:8a71c3e9-bcc4-49b5-8d89-bdeeff926fd4:p2,q:8a71c3e9-bcc4-49b5-8d89-bdeeff926fd4,2,Bebidas,2.0,100.0,200.0,Bebidas – 2€ x 100 = 200€
+q:115ca986-b14c-4dc7-8474-eabc6b837300:p1,q:115ca986-b14c-4dc7-8474-eabc6b837300,1,Comidas e Bebidas não alcoólicas,20.0,30.0,600.0,Comidas e Bebidas não alcoólicas 20€ x 30 = 600€
+q:3fbe780c-33e0-4da0-acb3-334d446e12d3:p1,q:3fbe780c-33e0-4da0-acb3-334d446e12d3,1,Comidas e bebidas não alcoólicas,15.5,100.0,1550.0,Comidas e bebidas não alcoólicas – 15.50€ x 100 = 1550€
+q:8abfcf88-a12f-45c4-ade8-e0789c8d831a:p1,q:8abfcf88-a12f-45c4-ade8-e0789c8d831a,1,Coffee-Break 10h30,9.0,60.0,540.0,Coffee-Break 10h30 – 9€ x 60 = 540€
+q:8abfcf88-a12f-45c4-ade8-e0789c8d831a:p2,q:8abfcf88-a12f-45c4-ade8-e0789c8d831a,2,Almoço (volante) 13h,25.0,60.0,1500.0,Almoço (volante) 13h – 25€ x 60 = 1500€
+q:e2b94c79-a6bb-4a3b-8a44-ebb19102999c:p1,q:e2b94c79-a6bb-4a3b-8a44-ebb19102999c,1,,25.0,40.0,,25€ x 40 pessoas = 1000€ (+ iva 13%) =1130€
+q:69e036ac-48c0-4d4f-9f8e-c082819b18f1:p1,q:69e036ac-48c0-4d4f-9f8e-c082819b18f1,1,Coffee break pm,8.0,220.0,1760.0,Coffee break pm – 8€ x 220 = 1760€
+q:8e99fddf-7c1f-4f1e-8d26-55b1df5212e9:p1,q:8e99fddf-7c1f-4f1e-8d26-55b1df5212e9,1,Serviço de Coffee break,7.0,30.0,210.0,Serviço de Coffee break 7€ x 30 = 210€
+q:6c8ad713-71a2-4970-bd32-ee01ffaebe49:p1,q:6c8ad713-71a2-4970-bd32-ee01ffaebe49,1,,26.0,20.0,520.0,26€ x 20 = 520€
+q:1a857f6b-f066-4948-a2f3-45c07499cce2:p1,q:1a857f6b-f066-4948-a2f3-45c07499cce2,1,Comidas e Bebidas não alcoólicas,12.0,50.0,600.0,Comidas e Bebidas não alcoólicas 12€ x 50 = 600€
+q:d6680a20-9531-478b-912d-a8e021ff249a:p1,q:d6680a20-9531-478b-912d-a8e021ff249a,1,,6.5,150.0,,6.50€ x 150 pax = 975€
+q:f1c3e344-99cc-47f8-914a-9d332d4f14e4:p1,q:f1c3e344-99cc-47f8-914a-9d332d4f14e4,1,Almoço,15.0,100.0,1500.0,Almoço 15€ x 100 = 1500€
+q:7a5ae10c-c08d-48e8-9174-2a91bb32cc1e:p1,q:7a5ae10c-c08d-48e8-9174-2a91bb32cc1e,1,Coffee break pm,7.5,175.0,1312.5,Coffee break pm – 7.50€ x 175 = 1312.50€
+q:fb41b28d-487c-4bbf-87f6-0454de18c0c4:p1,q:fb41b28d-487c-4bbf-87f6-0454de18c0c4,1,Almoço,13.0,30.0,390.0,Almoço 13€ x 30 = 390€
+q:e108b64a-8469-4d71-b8da-a389267aef1e:p1,q:e108b64a-8469-4d71-b8da-a389267aef1e,1,Coffee break pm,8.5,50.0,425.0,Coffee break pm – 8.50€ x 50 = 425€
+q:e108b64a-8469-4d71-b8da-a389267aef1e:p2,q:e108b64a-8469-4d71-b8da-a389267aef1e,2,Espumante,1.5,50.0,75.0,Espumante – 1.50 x 50 = 75€
+q:c8d4b292-ea35-425e-961b-406df6a168aa:p1,q:c8d4b292-ea35-425e-961b-406df6a168aa,1,Coffee break e Almoço,15.0,90.0,1350.0,Coffee break e Almoço 15€ x 90 = 1350€
+q:1a313e63-561d-4b9b-a5a1-a0ef7a753d2a:p1,q:1a313e63-561d-4b9b-a5a1-a0ef7a753d2a,1,Almoço,22.0,140.0,3080.0,Almoço 22€ x 140 = 3080€
+q:7cb228b3-c91b-44e0-b59f-cbd07b954072:p1,q:7cb228b3-c91b-44e0-b59f-cbd07b954072,1,Comidas e Bebidas não alcoólicas,11.0,330.0,,Comidas e Bebidas não alcoólicas 11€ x 330 pax = 3630€
+q:7cb228b3-c91b-44e0-b59f-cbd07b954072:p2,q:7cb228b3-c91b-44e0-b59f-cbd07b954072,2,Espumante,1.0,330.0,,Espumante 1€ x 330 pax = 330€
+q:f9577a8a-4492-4f18-8715-46aa1c6ead77:p1,q:f9577a8a-4492-4f18-8715-46aa1c6ead77,1,,20.0,20.0,,20€ x 20 pax = 400€
+q:7167cd6a-0821-4233-8677-cd7d632d9c4b:p1,q:7167cd6a-0821-4233-8677-cd7d632d9c4b,1,Catering 1 e 2 =,12.5,50.0,625.0,Catering 1 e 2 = 12.50€ x 50 = 625€
+q:7fac93ff-ac82-4870-9aa0-f5463762ecaf:p1,q:7fac93ff-ac82-4870-9aa0-f5463762ecaf,1,Almoço,16.0,22.0,352.0,Almoço 16€ x 22 = 352€
+q:34c1f89f-5b90-4053-840f-fcfa23007e7b:p1,q:34c1f89f-5b90-4053-840f-fcfa23007e7b,1,Comidas,14.0,100.0,1400.0,Comidas – 14€ x 100 = 1400€
+q:34c1f89f-5b90-4053-840f-fcfa23007e7b:p2,q:34c1f89f-5b90-4053-840f-fcfa23007e7b,2,Bebidas,2.0,100.0,200.0,Bebidas – 2€ x 100 = 200€
+q:d6749296-e46b-4c22-8d26-a83add28b401:p1,q:d6749296-e46b-4c22-8d26-a83add28b401,1,Jantar,37.0,45.0,1665.0,Jantar 37€ x 45 = 1665€
+q:fec15789-4116-4c56-9b7b-fe0aa8001e69:p1,q:fec15789-4116-4c56-9b7b-fe0aa8001e69,1,Comidas,21.0,35.0,735.0,Comidas – 21€ x 35 = 735€
+q:fec15789-4116-4c56-9b7b-fe0aa8001e69:p2,q:fec15789-4116-4c56-9b7b-fe0aa8001e69,2,Bebidas,5.0,35.0,175.0,Bebidas – 5€ x 35 = 175€
+q:b083d648-8afc-4198-99f2-83f1c5b180f2:p1,q:b083d648-8afc-4198-99f2-83f1c5b180f2,1,Comidas e Bebidas não alcoólicas,24.0,60.0,1440.0,Comidas e Bebidas não alcoólicas 24€ x 60 = 1440€
+q:8b798e82-4289-40df-b4fc-7f0834ea2022:p1,q:8b798e82-4289-40df-b4fc-7f0834ea2022,1,,81.0,35.0,,81€ x 35 pessoas = 2835€
+q:b8d980eb-86d0-46e9-b631-f638e6705bfc:p1,q:b8d980eb-86d0-46e9-b631-f638e6705bfc,1,Comidas,16.5,100.0,1650.0,Comidas – 16.50€ x 100 = 1650€
+q:b8d980eb-86d0-46e9-b631-f638e6705bfc:p2,q:b8d980eb-86d0-46e9-b631-f638e6705bfc,2,Bebidas,2.5,100.0,250.0,Bebidas – 2.50 x 100 = 250€
+q:560d8d06-0b72-4a5b-ad97-4fdb29a97e2d:p1,q:560d8d06-0b72-4a5b-ad97-4fdb29a97e2d,1,Comidas e Bebidas não alcoólicas,28.0,40.0,1120.0,Comidas e Bebidas não alcoólicas 28€ x 40 = 1120€
+q:9e65fd4d-5389-41ff-9e6d-2472bddd9deb:p1,q:9e65fd4d-5389-41ff-9e6d-2472bddd9deb,1,Lunch box,8.0,15.0,120.0,Lunch box 8€ x 15 = 120€ x 10 dias = 1200€
+q:4afd9bc5-e63d-4b34-856e-2cbbc8fec16d:p1,q:4afd9bc5-e63d-4b34-856e-2cbbc8fec16d,1,Coffee break pm,8.6,35.0,301.0,Coffee break pm - 8.60€ x 35 = 301€
+q:78ae4d75-bf78-4872-9c22-af091dbbd867:p1,q:78ae4d75-bf78-4872-9c22-af091dbbd867,1,,8.0,100.0,,8€ x 100 pax = 800€
+q:b0d4735d-d86f-4f32-86ef-4bebe8297791:p1,q:b0d4735d-d86f-4f32-86ef-4bebe8297791,1,Wellcome Coffee,2.0,50.0,100.0,Wellcome Coffee 2€ x 50 = 100€
+q:b0d4735d-d86f-4f32-86ef-4bebe8297791:p2,q:b0d4735d-d86f-4f32-86ef-4bebe8297791,2,Coffee break am,7.0,50.0,350.0,Coffee break am 7€ x 50 = 350€
+q:b0d4735d-d86f-4f32-86ef-4bebe8297791:p3,q:b0d4735d-d86f-4f32-86ef-4bebe8297791,3,Almoço,18.0,50.0,900.0,Almoço 18€ x 50 = 900€
+q:b0d4735d-d86f-4f32-86ef-4bebe8297791:p4,q:b0d4735d-d86f-4f32-86ef-4bebe8297791,4,Cofee break pm,7.0,50.0,350.0,Cofee break pm 7€ x50 = 350€
+q:8024ed1c-1bfc-42be-b217-4eef8dd1afda:p1,q:8024ed1c-1bfc-42be-b217-4eef8dd1afda,1,Coffee breaks,8.0,75.0,450.0,Coffee breaks 8€ x 75 = 450€   Almoço 21€ x 75 = 1575€
+q:8024ed1c-1bfc-42be-b217-4eef8dd1afda:p2,q:8024ed1c-1bfc-42be-b217-4eef8dd1afda,2,,26.0,75.0,1950.0,26€ x 75 = 1950€
+q:aaa2373e-4822-4201-89ff-2f936979349d:p1,q:aaa2373e-4822-4201-89ff-2f936979349d,1,Valor final Lunch box =,8.5,60.0,510.0,Valor final Lunch box = 8.50€ x 60 = 510€
+q:79171e6c-bd63-4264-843d-6eabf15857f0:p1,q:79171e6c-bd63-4264-843d-6eabf15857f0,1,Bebidas não alcoólicas,4.0,50.0,200.0,Bebidas não alcoólicas 4€ x 50 = 200€
+q:79171e6c-bd63-4264-843d-6eabf15857f0:p2,q:79171e6c-bd63-4264-843d-6eabf15857f0,2,Espumante,2.5,50.0,125.0,Espumante 2.50€ x 50 = 125€
+q:5b57722f-94ec-4b03-8d59-9450e68d3006:p1,q:5b57722f-94ec-4b03-8d59-9450e68d3006,1,,27.5,20.0,,27.50€ x 20 pax = 550€
+q:c7634f96-2406-49e6-9df8-46f885442717:p1,q:c7634f96-2406-49e6-9df8-46f885442717,1,Comidas e Bebidas não alcoólicas,22.0,60.0,1320.0,Comidas e Bebidas não alcoólicas 22€ x 60 = 1320€
+q:65e0e37d-a0be-4bad-bfb8-4caa3e9797dc:p1,q:65e0e37d-a0be-4bad-bfb8-4caa3e9797dc,1,Almoço (comidas e bebidas não alcoólicas),15.0,200.0,3000.0,Almoço (comidas e bebidas não alcoólicas) - 15€ x 200 = 3000€
+q:65e0e37d-a0be-4bad-bfb8-4caa3e9797dc:p2,q:65e0e37d-a0be-4bad-bfb8-4caa3e9797dc,2,Cerveja,2.0,200.0,400.0,Cerveja 2€ x 200 = 400€
+q:255f444d-140e-4d08-8e8c-35a2409e16ff:p1,q:255f444d-140e-4d08-8e8c-35a2409e16ff,1,Coffee breaks,8.5,15.0,127.5,Coffee breaks 8.50€ x 15= 127.50€
+q:255f444d-140e-4d08-8e8c-35a2409e16ff:p2,q:255f444d-140e-4d08-8e8c-35a2409e16ff,2,Coffee breaks,8.5,15.0,127.5,Coffee breaks 8.50€ x 15 = 127.50€
+q:d4869685-a46f-4c49-813b-90a107704194:p1,q:d4869685-a46f-4c49-813b-90a107704194,1,,8.5,20.0,,8.50€ x 20 pessoas = 170€
+q:e3234f8b-36fd-41bf-9a64-77952bb71bba:p1,q:e3234f8b-36fd-41bf-9a64-77952bb71bba,1,Comidas e Bebidas não alcoólicas,25.0,50.0,1250.0,Comidas e Bebidas não alcoólicas 25€ x 50 = 1250€
+q:dcb4522e-e324-4ed7-aa8e-6379316669e4:p1,q:dcb4522e-e324-4ed7-aa8e-6379316669e4,1,Coffee break,5.5,30.0,,Coffee break 5.50€ x 30 Pessoas = 165€
+q:cbd21ddd-e94c-4e18-965d-23b80002329e:p1,q:cbd21ddd-e94c-4e18-965d-23b80002329e,1,Comidas,21.5,70.0,1505.0,Comidas 21.50€ x 70 = 1505€
+q:cbd21ddd-e94c-4e18-965d-23b80002329e:p2,q:cbd21ddd-e94c-4e18-965d-23b80002329e,2,Bebidas não alcoólicas,2.5,70.0,175.0,Bebidas não alcoólicas 2.50€ x 70 = 175€
+q:cbd21ddd-e94c-4e18-965d-23b80002329e:p3,q:cbd21ddd-e94c-4e18-965d-23b80002329e,3,Cerveja,0.6,210.0,126.0,Cerveja 0.60 x 210 = 126€
+q:c56d5a6f-6983-4359-8644-4d9bf25b5c4e:p1,q:c56d5a6f-6983-4359-8644-4d9bf25b5c4e,1,Welcome Coffee,7.5,50.0,375.0,Welcome Coffee 7.50€ x 50 = 375€
+q:c56d5a6f-6983-4359-8644-4d9bf25b5c4e:p2,q:c56d5a6f-6983-4359-8644-4d9bf25b5c4e,2,Jantar,26.0,50.0,1300.0,Jantar 26€ x 50 = 1300€
+q:c56d5a6f-6983-4359-8644-4d9bf25b5c4e:p3,q:c56d5a6f-6983-4359-8644-4d9bf25b5c4e,3,Deslocação 3 funcionários 2h =,8.5,3.0,25.5,Deslocação 3 funcionários 2h = 8.50€ x 3 = 25.50€
+q:4158b2a6-ed23-4170-b37c-e81c3494f8a3:p1,q:4158b2a6-ed23-4170-b37c-e81c3494f8a3,1,Almoço,18.0,90.0,1620.0,Almoço 18€ x 90 = 1620€
+q:13854a48-97b5-45af-a0c0-4f556f48ddba:p1,q:13854a48-97b5-45af-a0c0-4f556f48ddba,1,Entrega de Comidas,22.5,20.0,450.0,Entrega de Comidas 22.50€ x 20 = 450€
+q:9ebc285b-c20e-4bdd-8ce7-4020ab1a668f:p1,q:9ebc285b-c20e-4bdd-8ce7-4020ab1a668f,1,,26.0,40.0,,26€ x 40 pessoas = 1040€ (+ iva 13%) =1175.20€
+q:d9ba33dd-671c-43db-9d9d-ab4baa707675:p1,q:d9ba33dd-671c-43db-9d9d-ab4baa707675,1,Coffee breaks am,6.5,80.0,520.0,Coffee breaks am 6.50€ x 80 = 520€
+q:d9ba33dd-671c-43db-9d9d-ab4baa707675:p2,q:d9ba33dd-671c-43db-9d9d-ab4baa707675,2,Coffee breaks pm,6.5,80.0,520.0,Coffee breaks pm 6.50€ x 80 = 520€
+q:cf0908ff-4f96-4cbe-ae00-10a54657cd71:p1,q:cf0908ff-4f96-4cbe-ae00-10a54657cd71,1,Coffee breaks am,6.5,90.0,585.0,Coffee breaks am 6.50€ x 90 = 585€
+q:cf0908ff-4f96-4cbe-ae00-10a54657cd71:p2,q:cf0908ff-4f96-4cbe-ae00-10a54657cd71,2,Coffee breaks pm,6.5,90.0,585.0,Coffee breaks pm 6.50€ x 90 = 585€
+q:0f08f28b-0523-42e5-a7fc-5a913edc2129:p1,q:0f08f28b-0523-42e5-a7fc-5a913edc2129,1,Almoço,20.0,90.0,1800.0,Almoço 20€ x 90 = 1800€
+q:4f72167e-1e46-4d58-9863-f55722b0adf2:p1,q:4f72167e-1e46-4d58-9863-f55722b0adf2,1,Coffee breaks pm,8.0,25.0,200.0,Coffee breaks pm 8€ x 25 = 200€ x 7= 1400€
+q:63741fe1-8010-4dba-878d-1ec7045d25f6:p1,q:63741fe1-8010-4dba-878d-1ec7045d25f6,1,Comidas,14.0,100.0,1400.0,Comidas – 14€ x 100 = 1400€
+q:63741fe1-8010-4dba-878d-1ec7045d25f6:p2,q:63741fe1-8010-4dba-878d-1ec7045d25f6,2,Bebidas,2.5,100.0,250.0,Bebidas – 2.50 x 100 = 250€
+q:108c8b95-3e90-48a7-95a5-4999cf00a1bc:p1,q:108c8b95-3e90-48a7-95a5-4999cf00a1bc,1,,50.0,35.0,,50€ x 35 pessoas = 1750€
+q:7961ba17-7e83-4e1b-90e8-3204bae9f334:p1,q:7961ba17-7e83-4e1b-90e8-3204bae9f334,1,Jantar,27.0,45.0,1215.0,Jantar 27€ x 45 = 1215€
+q:efb9b17b-d668-42bc-9e52-42a7966d6dc2:p1,q:efb9b17b-d668-42bc-9e52-42a7966d6dc2,1,Coffee Break,6.0,20.0,120.0,Coffee Break 6€ x 20 = 120€
+q:efb9b17b-d668-42bc-9e52-42a7966d6dc2:p2,q:efb9b17b-d668-42bc-9e52-42a7966d6dc2,2,Almoço,20.0,20.0,,Almoço 20€ x 20 Pessoas = 400€
+q:ad4c9260-e0be-4acd-b13a-fd76ad1d5e5c:p1,q:ad4c9260-e0be-4acd-b13a-fd76ad1d5e5c,1,Coffee break am,7.5,30.0,225.0,Coffee break am 7.50€ x 30 = 225€
+q:ad4c9260-e0be-4acd-b13a-fd76ad1d5e5c:p2,q:ad4c9260-e0be-4acd-b13a-fd76ad1d5e5c,2,Cofee break pm,7.5,30.0,225.0,Cofee break pm 7.50€ x 30 = 225€
+q:956be97b-77a5-4f24-898c-0807e4465ef1:p1,q:956be97b-77a5-4f24-898c-0807e4465ef1,1,Coffee break pm,8.0,50.0,400.0,Coffee break pm – 8€ x 50 = 400€
+q:6d0f6ca2-2d75-42f7-8075-7bc5e66c691e:p1,q:6d0f6ca2-2d75-42f7-8075-7bc5e66c691e,1,Comidas,15.0,100.0,1500.0,Comidas – 15€ x 100 = 1500€
+q:6d0f6ca2-2d75-42f7-8075-7bc5e66c691e:p2,q:6d0f6ca2-2d75-42f7-8075-7bc5e66c691e,2,Bebidas,2.5,100.0,250.0,Bebidas – 2.50 x 100 = 250€
+q:4b889b18-0087-4c26-911f-65b031719380:p1,q:4b889b18-0087-4c26-911f-65b031719380,1,Comidas,25.0,50.0,1250.0,Comidas – 25€ x 50= 1250€
+q:4b889b18-0087-4c26-911f-65b031719380:p2,q:4b889b18-0087-4c26-911f-65b031719380,2,Staff,4.5,50.0,225.0,Staff 4.50€ x 50 = 225€
+q:4b889b18-0087-4c26-911f-65b031719380:p3,q:4b889b18-0087-4c26-911f-65b031719380,3,Decoração,4.0,50.0,200.0,Decoração -4€ x 50 = 200€
+q:4b889b18-0087-4c26-911f-65b031719380:p4,q:4b889b18-0087-4c26-911f-65b031719380,4,Comidas,24.0,70.0,1680.0,Comidas – 24€ x 70= 1680€
+q:4b889b18-0087-4c26-911f-65b031719380:p5,q:4b889b18-0087-4c26-911f-65b031719380,5,Staff,3.2,70.0,225.0,Staff 3.20€ x 70 = 225€
+q:4b889b18-0087-4c26-911f-65b031719380:p6,q:4b889b18-0087-4c26-911f-65b031719380,6,Decoração,3.0,70.0,200.0,Decoração -3€ x 70 = 200€
+q:273cfa83-2741-4e4e-9782-ac5189d95ff2:p1,q:273cfa83-2741-4e4e-9782-ac5189d95ff2,1,,25.0,40.0,,25€ x 40 pessoas = 1085€ (+ iva 13%) = 1226.05€
+q:73582ac8-778c-4c3b-914c-2075ef87ab12:p1,q:73582ac8-778c-4c3b-914c-2075ef87ab12,1,,8.3,90.0,747.0,8.30€ x 90 = 747€
+q:f20f85e7-c04c-4f1d-a062-b284f8f2dc6d:p1,q:f20f85e7-c04c-4f1d-a062-b284f8f2dc6d,1,Coffee break pm,7.0,70.0,490.0,Coffee break pm – 7€ x 70 = 490€
+q:6c0191f6-abb7-4218-ac11-771efaa2bb8a:p1,q:6c0191f6-abb7-4218-ac11-771efaa2bb8a,1,,34.0,60.0,2040.0,34€ x 60 = 2040€
+q:544dc19b-1be6-4e32-b9b9-5ae21e0b63b7:p1,q:544dc19b-1be6-4e32-b9b9-5ae21e0b63b7,1,,35.0,40.0,,35€ x 40 pax = 1400€
+q:301abf96-f915-4de8-a0b7-21dacfb7e5a1:p1,q:301abf96-f915-4de8-a0b7-21dacfb7e5a1,1,Almoço,18.0,90.0,1620.0,Almoço 18€ x 90 = 1620€
+q:19c539c9-43f6-4f66-a571-87a12345eed8:p1,q:19c539c9-43f6-4f66-a571-87a12345eed8,1,Comidas,23.0,15.0,345.0,Comidas – 23€ x 15 = 345€
+q:25a6a826-079d-422c-90ff-fabd97c17e9f:p1,q:25a6a826-079d-422c-90ff-fabd97c17e9f,1,,25.0,50.0,,25€ x 50 pessoas = 1250€
+q:25a6a826-079d-422c-90ff-fabd97c17e9f:p2,q:25a6a826-079d-422c-90ff-fabd97c17e9f,2,,1.0,50.0,,1€ x 50 pessoas = 50€
+q:72bb50fc-4eb9-4cf7-8728-73676c9f8feb:p1,q:72bb50fc-4eb9-4cf7-8728-73676c9f8feb,1,Almoço,15.0,90.0,1350.0,Almoço 15€ x 90 = 1350€
+q:d5a6e64d-23cf-4e78-87fa-dc849763be4a:p1,q:d5a6e64d-23cf-4e78-87fa-dc849763be4a,1,,8.3,90.0,747.0,8.30€ x 90 = 747€
+q:bcc01a8e-d148-48e6-b0cb-a79472951cad:p1,q:bcc01a8e-d148-48e6-b0cb-a79472951cad,1,,8.0,70.0,,8€ x 70 pax = 560€
+q:bcc01a8e-d148-48e6-b0cb-a79472951cad:p2,q:bcc01a8e-d148-48e6-b0cb-a79472951cad,2,,8.0,70.0,,8€ x 70 pax = 560€
+q:14368a9a-1aa0-43c4-95b6-a1332f77d2a3:p1,q:14368a9a-1aa0-43c4-95b6-a1332f77d2a3,1,Comidas,14.0,100.0,1400.0,Comidas – 14€ x 100 = 1400€
+q:14368a9a-1aa0-43c4-95b6-a1332f77d2a3:p2,q:14368a9a-1aa0-43c4-95b6-a1332f77d2a3,2,Bebidas,2.5,100.0,250.0,Bebidas – 2.50 x 100 = 250€
+q:1fe47703-4bc4-4096-9bd4-cf4fe3ea0778:p1,q:1fe47703-4bc4-4096-9bd4-cf4fe3ea0778,1,,13.5,150.0,2025.0,13.50€ x 150 = 2025€
+q:1fe47703-4bc4-4096-9bd4-cf4fe3ea0778:p2,q:1fe47703-4bc4-4096-9bd4-cf4fe3ea0778,2,,1.5,150.0,,1.50 x 150€ = 225€
+q:6fe544c5-3c3a-4952-84f5-1c8b5d59a3ae:p1,q:6fe544c5-3c3a-4952-84f5-1c8b5d59a3ae,1,Coffee Break,6.0,20.0,120.0,Coffee Break 6€ x 20 = 120€
+q:6fe544c5-3c3a-4952-84f5-1c8b5d59a3ae:p2,q:6fe544c5-3c3a-4952-84f5-1c8b5d59a3ae,2,Almoço,18.0,20.0,,Almoço 18€ x 20 Pessoas = 360€
+q:c07228dc-d983-4fec-b03c-9dd76003b93b:p1,q:c07228dc-d983-4fec-b03c-9dd76003b93b,1,Coffee breaks am,6.0,23.0,138.0,Coffee breaks am 6€ x 23 = 138€
+q:c07228dc-d983-4fec-b03c-9dd76003b93b:p2,q:c07228dc-d983-4fec-b03c-9dd76003b93b,2,Almoço,19.0,23.0,437.0,Almoço 19€ x 23 = 437€
+q:ddc05dde-b079-4658-b0dd-79bcd22f6ab5:p1,q:ddc05dde-b079-4658-b0dd-79bcd22f6ab5,1,Coffee break pm,8.0,50.0,400.0,Coffee break pm – 8€ x 50 = 400€
+q:3266b207-7671-4b20-93ce-dbc180ade76b:p1,q:3266b207-7671-4b20-93ce-dbc180ade76b,1,Comidas,20.0,12.0,240.0,Comidas – 20€ x 12 = 240€
+q:827d55bd-8e98-45c1-8cb8-d2f111b74df1:p1,q:827d55bd-8e98-45c1-8cb8-d2f111b74df1,1,,25.0,50.0,,25€ x 50 pessoas = 1250€
+q:827d55bd-8e98-45c1-8cb8-d2f111b74df1:p2,q:827d55bd-8e98-45c1-8cb8-d2f111b74df1,2,,1.0,50.0,,1€ x 50 pessoas = 50€
+q:3a2e1cdc-2ef0-4051-a0d9-fe88ee32ad61:p1,q:3a2e1cdc-2ef0-4051-a0d9-fe88ee32ad61,1,Coffee breaks,6.0,100.0,600.0,Coffee breaks 6€ x 100 = 600€
+q:3a2e1cdc-2ef0-4051-a0d9-fe88ee32ad61:p2,q:3a2e1cdc-2ef0-4051-a0d9-fe88ee32ad61,2,Almoço,14.0,50.0,700.0,Almoço 14€ x 50 = 700€
+q:28863804-7348-4e8f-b2bb-74eb57bf241f:p1,q:28863804-7348-4e8f-b2bb-74eb57bf241f,1,Coffee break,5.5,50.0,,Coffee break 5.50€ x 50 Pessoas = 275€
+q:50ac2cc7-4c09-4433-ba75-bdf083f71021:p1,q:50ac2cc7-4c09-4433-ba75-bdf083f71021,1,Coffee breaks,6.0,24.0,,Coffee breaks 6€ x 24 + 24 = 288€ Almoço 27€ x 24 = 648 €
+q:50ac2cc7-4c09-4433-ba75-bdf083f71021:p2,q:50ac2cc7-4c09-4433-ba75-bdf083f71021,2,Coffee breaks,6.0,24.0,144.0,Coffee breaks 6€ x 24 = 144€ Almoço 27€ x 24 = 648 €
+q:d3d9b943-0776-49d2-8da2-a8b9c3877340:p1,q:d3d9b943-0776-49d2-8da2-a8b9c3877340,1,Coffee breaks am,6.5,80.0,520.0,Coffee breaks am 6.50€ x 80 = 520€
+q:d3d9b943-0776-49d2-8da2-a8b9c3877340:p2,q:d3d9b943-0776-49d2-8da2-a8b9c3877340,2,Coffee breaks pm,6.5,80.0,520.0,Coffee breaks pm 6.50€ x 80 = 520€
+q:916659a6-6df0-4893-b57a-891491e16b0b:p1,q:916659a6-6df0-4893-b57a-891491e16b0b,1,Coffee break pm,9.0,20.0,180.0,Coffee break pm – 9€ x 20 = 180€
+q:6173989b-7a08-4d47-8ea3-5837324e41d1:p1,q:6173989b-7a08-4d47-8ea3-5837324e41d1,1,Comidas,20.5,65.0,1332.5,Comidas 20.50€ x 65 = 1332.50€
+q:6173989b-7a08-4d47-8ea3-5837324e41d1:p2,q:6173989b-7a08-4d47-8ea3-5837324e41d1,2,Bebidas não alcoólicas,2.5,65.0,162.5,Bebidas não alcoólicas 2.50€ x 65 = 162.50€
+q:6173989b-7a08-4d47-8ea3-5837324e41d1:p3,q:6173989b-7a08-4d47-8ea3-5837324e41d1,3,Cerveja,0.6,180.0,108.0,Cerveja 0.60 x 180 = 108€
+q:9d574d5c-8b4b-47da-96a6-60c677303e88:p1,q:9d574d5c-8b4b-47da-96a6-60c677303e88,1,Almoço,18.0,100.0,1800.0,Almoço 18€ x 100 = 1800€
+q:5475dce4-16a3-4a94-9d53-3ac4a47d19c0:p1,q:5475dce4-16a3-4a94-9d53-3ac4a47d19c0,1,Coffee breaks,8.5,15.0,127.5,Coffee breaks 8.50€ x 15= 127.50€
+q:5475dce4-16a3-4a94-9d53-3ac4a47d19c0:p2,q:5475dce4-16a3-4a94-9d53-3ac4a47d19c0,2,Coffee breaks,8.5,15.0,127.5,Coffee breaks 8.50€ x 15 = 127.50€
+q:507b3dc9-4649-4655-aa72-5c09e987e595:p1,q:507b3dc9-4649-4655-aa72-5c09e987e595,1,Almoço,15.0,100.0,1500.0,Almoço 15€ x 100 = 1500€
+q:6bcaa494-fa6c-4ef7-97e6-fa3ddd226b94:p1,q:6bcaa494-fa6c-4ef7-97e6-fa3ddd226b94,1,Comidas,23.0,15.0,345.0,Comidas – 23€ x 15 = 345€
+q:cab32b40-d03a-41ad-80d0-0892a89c27ba:p1,q:cab32b40-d03a-41ad-80d0-0892a89c27ba,1,,23.0,20.0,,23€ x 20 pax = 460€
+q:a26c8014-5335-4bf4-b7ff-c178d56a646d:p1,q:a26c8014-5335-4bf4-b7ff-c178d56a646d,1,Coffee break pm,8.0,30.0,240.0,Coffee break pm – 8€ x 30 = 240€
+q:5f9d3acb-537a-4518-86f8-45faba13787e:p1,q:5f9d3acb-537a-4518-86f8-45faba13787e,1,Serviço de Coffee break,6.7,250.0,1675.0,Serviço de Coffee break 6.70€ x 250 = 1675€
+q:5f9d3acb-537a-4518-86f8-45faba13787e:p2,q:5f9d3acb-537a-4518-86f8-45faba13787e,2,Serviço de Vinho do Porto (Barros),0.8,250.0,200.0,Serviço de Vinho do Porto (Barros) 0.80€ x 250 = 200€
+q:101de16c-7e5c-4b4d-867a-70a92fd86e0e:p1,q:101de16c-7e5c-4b4d-867a-70a92fd86e0e,1,Comidas,30.0,34.0,1020.0,Comidas 30€ x 34 = 1020€
+q:7b1d03e4-9238-42ef-ab89-9b1aaa888936:p1,q:7b1d03e4-9238-42ef-ab89-9b1aaa888936,1,,13.5,40.0,540.0,13.50€ x 40 = 540€
+q:f1296699-4242-4575-bc4e-0d4f6ba04ae5:p1,q:f1296699-4242-4575-bc4e-0d4f6ba04ae5,1,Coffee break pm,8.0,40.0,320.0,Coffee break pm - 8€ x 40 = 320€
+q:982bd242-723c-429f-bf1b-90dc7220ea5f:p1,q:982bd242-723c-429f-bf1b-90dc7220ea5f,1,Coffee breaks am,6.0,150.0,900.0,Coffee breaks am 6€ x 150 = 900€
+q:982bd242-723c-429f-bf1b-90dc7220ea5f:p2,q:982bd242-723c-429f-bf1b-90dc7220ea5f,2,Almoço,15.0,100.0,1500.0,Almoço 15€ x 100 = 1500€
+q:982bd242-723c-429f-bf1b-90dc7220ea5f:p3,q:982bd242-723c-429f-bf1b-90dc7220ea5f,3,Coffee breaks pm,6.0,150.0,900.0,Coffee breaks pm 6€ x 150 = 900€
+q:ca20d814-0272-4fe6-a142-ffdcd2705ec4:p1,q:ca20d814-0272-4fe6-a142-ffdcd2705ec4,1,Dia 19 Coffee-Break 10h,7.5,20.0,,Dia 19 Coffee-Break 10h – 7.50€ x 20 pax = 150€
+q:ca20d814-0272-4fe6-a142-ffdcd2705ec4:p2,q:ca20d814-0272-4fe6-a142-ffdcd2705ec4,2,Dia 19 Coffee-Break 16h,7.5,20.0,,Dia 19 Coffee-Break 16h -7.50€ x  20 pax = 150€
+q:ca20d814-0272-4fe6-a142-ffdcd2705ec4:p3,q:ca20d814-0272-4fe6-a142-ffdcd2705ec4,3,Dia 20 Coffee-Break 9h,7.5,20.0,,Dia 20 Coffee-Break 9h – 7.50€ x 20 pax = 150€
+q:ca20d814-0272-4fe6-a142-ffdcd2705ec4:p4,q:ca20d814-0272-4fe6-a142-ffdcd2705ec4,4,Dia 20 Coffee-Break 16h,7.5,20.0,,Dia 20 Coffee-Break 16h – 7.50€ x 20 pax = 150€
+q:c72e7372-afa8-4292-8024-808c04e6f9c0:p1,q:c72e7372-afa8-4292-8024-808c04e6f9c0,1,Coffee break pm,6.5,220.0,1430.0,Coffee break pm – 6.50€ x 220 = 1430€
+q:0a350d7f-1693-4aa4-80dd-6951f953d82b:p1,q:0a350d7f-1693-4aa4-80dd-6951f953d82b,1,Comidas,15.0,40.0,600.0,Comidas - 15€ x 40 = 600€
+q:0a350d7f-1693-4aa4-80dd-6951f953d82b:p2,q:0a350d7f-1693-4aa4-80dd-6951f953d82b,2,Bebidas,3.0,40.0,120.0,Bebidas - 3 x 40 = 120€
+q:a907b513-44c1-4188-bfe6-24866171ebb7:p1,q:a907b513-44c1-4188-bfe6-24866171ebb7,1,Cb am,7.0,40.0,280.0,Cb am 7€ x 40 = 280€
+q:a907b513-44c1-4188-bfe6-24866171ebb7:p2,q:a907b513-44c1-4188-bfe6-24866171ebb7,2,Almoço,26.5,40.0,1060.0,Almoço 26.50€ x 40 = 1060€
+q:a907b513-44c1-4188-bfe6-24866171ebb7:p3,q:a907b513-44c1-4188-bfe6-24866171ebb7,3,Cb am,7.0,40.0,280.0,Cb am 7€ x 40 = 280€
+q:a907b513-44c1-4188-bfe6-24866171ebb7:p4,q:a907b513-44c1-4188-bfe6-24866171ebb7,4,Almoço,27.5,30.0,825.0,Almoço 27.50€ x 30 = 825€
+q:a907b513-44c1-4188-bfe6-24866171ebb7:p5,q:a907b513-44c1-4188-bfe6-24866171ebb7,5,Cb pm,7.5,20.0,150.0,Cb pm 7.50€ x 20 = 150€
+q:60501dd2-bd3c-4ad4-84a4-1cfd02706cef:p1,q:60501dd2-bd3c-4ad4-84a4-1cfd02706cef,1,Coffee break,5.0,50.0,,Coffee break 5€ x 50 Pessoas = 250€
+q:c04bee78-8ebe-4700-9cd4-5d7a3f29b4ad:p1,q:c04bee78-8ebe-4700-9cd4-5d7a3f29b4ad,1,Comidas,21.0,35.0,735.0,Comidas – 21€ x 35 = 735€
+q:c04bee78-8ebe-4700-9cd4-5d7a3f29b4ad:p2,q:c04bee78-8ebe-4700-9cd4-5d7a3f29b4ad,2,Bebidas,5.0,35.0,175.0,Bebidas – 5€ x 35 = 175€
+q:ef817fdb-d8b0-492a-8a6e-fc143354f8a7:p1,q:ef817fdb-d8b0-492a-8a6e-fc143354f8a7,1,Almoço,15.5,140.0,2170.0,Almoço 15.50€ x 140 = 2170€
+q:41cea06b-9796-4806-bbff-b2ae1187bdae:p1,q:41cea06b-9796-4806-bbff-b2ae1187bdae,1,Comidas,18.6,15.0,279.0,Comidas – 18.60€ x 15 = 279€
+q:39065f03-64d7-4b55-b570-6441735734c4:p1,q:39065f03-64d7-4b55-b570-6441735734c4,1,Coffee breaks,6.0,23.0,,Coffee breaks 6€ x 23 + 23 = 276€ Almoço 27€ x 23 = 621 €
+q:39065f03-64d7-4b55-b570-6441735734c4:p2,q:39065f03-64d7-4b55-b570-6441735734c4,2,Coffee breaks,6.0,23.0,138.0,Coffee breaks 6€ x 23 = 138€ Almoço 27€ x 23 = 621 €
+q:33e5d8f3-e4f4-44a3-bd8c-ed5233812530:p1,q:33e5d8f3-e4f4-44a3-bd8c-ed5233812530,1,Almoço,15.5,140.0,2170.0,Almoço 15.50€ x 140 = 2170€
+q:46f4fd9d-d27e-496e-82b0-afcba46b622a:p1,q:46f4fd9d-d27e-496e-82b0-afcba46b622a,1,Catering 1 e 2 =,12.5,50.0,625.0,Catering 1 e 2 = 12.50€ x 50 = 625€
+q:aeb57f46-13e4-4113-9bb8-7cdec485423a:p1,q:aeb57f46-13e4-4113-9bb8-7cdec485423a,1,Almoço,18.0,119.0,2142.0,Almoço 18€ x 119 = 2142€
+q:aeb57f46-13e4-4113-9bb8-7cdec485423a:p2,q:aeb57f46-13e4-4113-9bb8-7cdec485423a,2,Cerveja,0.5,300.0,,"Cerveja – 0,50€ x 300 uni = 150€"
+q:a0f3b636-b518-4cb4-a982-e150a83b398e:p1,q:a0f3b636-b518-4cb4-a982-e150a83b398e,1,Coffee Break,6.0,20.0,120.0,Coffee Break 6€ x 20 = 120€
+q:a0f3b636-b518-4cb4-a982-e150a83b398e:p2,q:a0f3b636-b518-4cb4-a982-e150a83b398e,2,Almoço,18.0,20.0,,Almoço 18€ x 20 Pessoas = 360€
+q:03f99235-29d2-4693-a3a1-b02f57f251cf:p1,q:03f99235-29d2-4693-a3a1-b02f57f251cf,1,Comidas,18.6,15.0,279.0,Comidas – 18.60€ x 15 = 279€
+q:81797774-e97a-4329-93f3-5af9b13cb021:p1,q:81797774-e97a-4329-93f3-5af9b13cb021,1,Lunch box,8.0,15.0,120.0,Lunch box 8€ x 15 = 120€ x 10 dias = 1200€
+q:7868585f-ec38-4e5d-8b38-293bacb607ec:p1,q:7868585f-ec38-4e5d-8b38-293bacb607ec,1,Coffee break pm,7.0,70.0,490.0,Coffee break pm – 7€ x 70 = 490€
+q:6f25b30c-47fe-408b-844c-fee6472d50cc:p1,q:6f25b30c-47fe-408b-844c-fee6472d50cc,1,Coffee breaks am,6.5,80.0,520.0,Coffee breaks am 6.50€ x 80 = 520€
+q:6f25b30c-47fe-408b-844c-fee6472d50cc:p2,q:6f25b30c-47fe-408b-844c-fee6472d50cc,2,Coffee breaks pm,6.5,80.0,520.0,Coffee breaks pm 6.50€ x 80 = 520€
+q:baa8a959-4f8e-46aa-9cfd-aba7a65310ea:p1,q:baa8a959-4f8e-46aa-9cfd-aba7a65310ea,1,,26.0,20.0,520.0,26€ x 20 = 520€
+q:7214bfc9-565c-4aac-810a-cbeb98622b1a:p1,q:7214bfc9-565c-4aac-810a-cbeb98622b1a,1,Comidas,12.5,50.0,625.0,Comidas – 12.50€ x 50 = 625€
+q:7214bfc9-565c-4aac-810a-cbeb98622b1a:p2,q:7214bfc9-565c-4aac-810a-cbeb98622b1a,2,Bebidas,2.5,50.0,125.0,Bebidas – 2.50 x 50 = 125€
+q:7c32d1c7-62ef-4159-8665-74ba69be3762:p1,q:7c32d1c7-62ef-4159-8665-74ba69be3762,1,Coffee break pm,7.5,250.0,1875.0,Coffee break pm – 7.50€ x 250 = 1875€
+q:c2dbb088-5584-42ae-8643-96945f5c622d:p1,q:c2dbb088-5584-42ae-8643-96945f5c622d,1,Coffee breaks am,6.0,150.0,900.0,Coffee breaks am 6€ x 150 = 900€
+q:c2dbb088-5584-42ae-8643-96945f5c622d:p2,q:c2dbb088-5584-42ae-8643-96945f5c622d,2,Almoço,15.0,100.0,1500.0,Almoço 15€ x 100 = 1500€
+q:c2dbb088-5584-42ae-8643-96945f5c622d:p3,q:c2dbb088-5584-42ae-8643-96945f5c622d,3,Coffee breaks pm,6.0,150.0,900.0,Coffee breaks pm 6€ x 150 = 900€
+q:d51b62f4-52a6-428b-834f-91afc25e83ed:p1,q:d51b62f4-52a6-428b-834f-91afc25e83ed,1,Almoço,22.0,140.0,3080.0,Almoço 22€ x 140 = 3080€
+q:70cb889c-e6e2-47db-b633-12a31880e901:p1,q:70cb889c-e6e2-47db-b633-12a31880e901,1,Almoço,13.0,30.0,390.0,Almoço 13€ x 30 = 390€
+q:f24fea6b-4277-4b7f-aae9-355df473cd22:p1,q:f24fea6b-4277-4b7f-aae9-355df473cd22,1,Coffee breaks,8.0,75.0,450.0,Coffee breaks 8€ x 75 = 450€ Almoço 21€ x 75 = 1575€
+q:f24fea6b-4277-4b7f-aae9-355df473cd22:p2,q:f24fea6b-4277-4b7f-aae9-355df473cd22,2,,26.0,75.0,1950.0,26€ x 75 = 1950€
+q:d3ffb99d-7889-450f-af73-b43e1bddfdd6:p1,q:d3ffb99d-7889-450f-af73-b43e1bddfdd6,1,Wellcome Coffee,2.0,50.0,100.0,Wellcome Coffee 2€ x 50 = 100€
+q:d3ffb99d-7889-450f-af73-b43e1bddfdd6:p2,q:d3ffb99d-7889-450f-af73-b43e1bddfdd6,2,Coffee break am,7.0,50.0,350.0,Coffee break am 7€ x 50 = 350€
+q:d3ffb99d-7889-450f-af73-b43e1bddfdd6:p3,q:d3ffb99d-7889-450f-af73-b43e1bddfdd6,3,Almoço,18.0,50.0,900.0,Almoço 18€ x 50 = 900€
+q:d3ffb99d-7889-450f-af73-b43e1bddfdd6:p4,q:d3ffb99d-7889-450f-af73-b43e1bddfdd6,4,Cofee break pm,7.0,50.0,350.0,Cofee break pm 7€ x50 = 350€
+q:b9c5f953-d94f-4fd0-846e-af2451ffc4cc:p1,q:b9c5f953-d94f-4fd0-846e-af2451ffc4cc,1,Coffee breaks,7.0,26.0,,Coffee breaks 7€ x 26 + 26 = 364€ Almoço 12€ x 16 = 192€
+q:b9c5f953-d94f-4fd0-846e-af2451ffc4cc:p2,q:b9c5f953-d94f-4fd0-846e-af2451ffc4cc,2,Coffee breaks,7.0,26.0,,Coffee breaks 7€ x 26 + 26 = 364€ Almoço 12€ x 16 = 192€
+q:be635ff7-6c3e-4396-ab2b-3c3d204e5599:p1,q:be635ff7-6c3e-4396-ab2b-3c3d204e5599,1,Comidas e Bebidas não alcoólicas,16.0,50.0,800.0,Comidas e Bebidas não alcoólicas 16€ x 50 = 800€
+q:f427c495-5455-4005-9c6d-ac13255ae1a8:p1,q:f427c495-5455-4005-9c6d-ac13255ae1a8,1,Entrega de Comidas,22.5,20.0,450.0,Entrega de Comidas 22.50€ x 20 = 450€
+q:0984f224-638d-48f1-97bd-b3ed873b7805:p1,q:0984f224-638d-48f1-97bd-b3ed873b7805,1,Comidas,26.0,13.0,338.0,Comidas – 26€ x 13 = 338€
+q:b5d45da1-8eae-446a-9054-e14fb1c2cd7a:p1,q:b5d45da1-8eae-446a-9054-e14fb1c2cd7a,1,,26.0,40.0,,26€ x 40 pessoas = 1040€ (+ iva 13%) =1175.20€
+q:6718e20a-6570-4c94-a2a6-61421e44191e:p1,q:6718e20a-6570-4c94-a2a6-61421e44191e,1,Valor final Lunch box =,8.3,60.0,,Valor final Lunch box = 8.30€ x 60€ = 498€
+q:11ce5695-4660-49fa-a6de-6af827a5eb34:p1,q:11ce5695-4660-49fa-a6de-6af827a5eb34,1,Almoço,15.0,90.0,1350.0,Almoço 15€ x 90 = 1350€
+q:14417be0-32f5-40f6-a921-cb2f6dcbc39d:p1,q:14417be0-32f5-40f6-a921-cb2f6dcbc39d,1,Comidas e Bebidas não alcoólicas,20.0,50.0,1000.0,Comidas e Bebidas não alcoólicas 20€ x 50 = 1000€
+q:61e621da-b5e3-4df9-83c1-d931b7bac9b8:p1,q:61e621da-b5e3-4df9-83c1-d931b7bac9b8,1,Comidas,18.6,15.0,279.0,Comidas – 18.60€ x 15 = 279€
+q:6f8e3159-f24e-40cc-bc16-eaa7a7e07f89:p1,q:6f8e3159-f24e-40cc-bc16-eaa7a7e07f89,1,Coffee break 16h,6.5,30.0,195.0,Coffee break 16h – 6.50€ x 30 = 195€
+q:6f8e3159-f24e-40cc-bc16-eaa7a7e07f89:p2,q:6f8e3159-f24e-40cc-bc16-eaa7a7e07f89,2,Coffee break 19h,9.5,30.0,285.0,Coffee break 19h – 9.50€ x 30 = 285€
+q:23c563ca-0846-4b1f-8a00-4ce2b89d3164:p1,q:23c563ca-0846-4b1f-8a00-4ce2b89d3164,1,Comidas,13.5,100.0,1350.0,Comidas – 13.50€ x 100 = 1350€
+q:23c563ca-0846-4b1f-8a00-4ce2b89d3164:p2,q:23c563ca-0846-4b1f-8a00-4ce2b89d3164,2,Bebidas,2.0,100.0,200.0,Bebidas – 2 x 100 = 200€
+q:ef3332db-b9cd-4458-a523-78dc229a4758:p1,q:ef3332db-b9cd-4458-a523-78dc229a4758,1,Coffee-Break 10h30,9.0,60.0,540.0,Coffee-Break 10h30 – 9€ x 60 = 540€
+q:ef3332db-b9cd-4458-a523-78dc229a4758:p2,q:ef3332db-b9cd-4458-a523-78dc229a4758,2,Almoço (volante) 13h,25.0,60.0,1500.0,Almoço (volante) 13h – 25€ x 60 = 1500€
+q:b8f951b3-260c-4488-b018-3c8a2afb87f1:p1,q:b8f951b3-260c-4488-b018-3c8a2afb87f1,1,Comidas e Bebidas não alcoólicas,25.0,50.0,1250.0,Comidas e Bebidas não alcoólicas 25€ x 50 = 1250€
+q:7e50364e-3a53-4909-8a8e-c53f44d89e29:p1,q:7e50364e-3a53-4909-8a8e-c53f44d89e29,1,Almoço,16.5,30.0,495.0,Almoço 16.50€ x 30 = 495€
+q:b83a0e10-0b71-4dc1-a78e-62dbc77ca8b0:p1,q:b83a0e10-0b71-4dc1-a78e-62dbc77ca8b0,1,Coffee breaks am,6.5,80.0,520.0,Coffee breaks am 6.50€ x 80 = 520€
+q:b83a0e10-0b71-4dc1-a78e-62dbc77ca8b0:p2,q:b83a0e10-0b71-4dc1-a78e-62dbc77ca8b0,2,Coffee breaks pm,6.5,80.0,520.0,Coffee breaks pm 6.50€ x 80 = 520€
+q:3492bbdf-6a19-4503-b38a-f3ef5cf3b029:p1,q:3492bbdf-6a19-4503-b38a-f3ef5cf3b029,1,Comidas,18.6,15.0,279.0,Comidas – 18.60€ x 15 = 279€
+q:f81723d2-5710-4d7e-a21f-f0b83a91e58c:p1,q:f81723d2-5710-4d7e-a21f-f0b83a91e58c,1,Coffee break pm,8.6,50.0,430.0,Coffee break pm - 8.60€ x 50 = 430€
+q:1eb54016-5d63-43ab-a9a4-7a5491776534:p1,q:1eb54016-5d63-43ab-a9a4-7a5491776534,1,Coffee breaks,7.0,26.0,,Coffee breaks 7€ x 26 + 26 = 364€   Almoço 12€ x 16 = 192€
+q:1eb54016-5d63-43ab-a9a4-7a5491776534:p2,q:1eb54016-5d63-43ab-a9a4-7a5491776534,2,Coffee breaks,7.0,26.0,,Coffee breaks 7€ x 26 + 26 = 364€   Almoço 12€ x 16 = 192€
+q:6e85e589-09db-49a0-9cde-3abca4766ffe:p1,q:6e85e589-09db-49a0-9cde-3abca4766ffe,1,Catering 1 e 2 =,12.5,50.0,625.0,Catering 1 e 2 = 12.50€ x 50 = 625€
+q:53df2f5a-5360-4f68-84fa-d5257fa0b569:p1,q:53df2f5a-5360-4f68-84fa-d5257fa0b569,1,Serviço de Coffee break,6.5,250.0,1625.0,Serviço de Coffee break 6.50€ x 250 = 1625€
+q:53df2f5a-5360-4f68-84fa-d5257fa0b569:p2,q:53df2f5a-5360-4f68-84fa-d5257fa0b569,2,Serviço de Vinho do Porto (Barros),0.8,250.0,200.0,Serviço de Vinho do Porto (Barros) 0.80€ x 250 = 200€
+q:6d648f56-87aa-49b5-a361-c98c6cf37289:p1,q:6d648f56-87aa-49b5-a361-c98c6cf37289,1,Coffee breaks am,6.5,80.0,520.0,Coffee breaks am 6.50€ x 80 = 520€
+q:6d648f56-87aa-49b5-a361-c98c6cf37289:p2,q:6d648f56-87aa-49b5-a361-c98c6cf37289,2,Coffee breaks pm,6.5,80.0,520.0,Coffee breaks pm 6.50€ x 80 = 520€
+q:aa8c3153-4b4a-4c5d-9eba-0a5d49217c24:p1,q:aa8c3153-4b4a-4c5d-9eba-0a5d49217c24,1,Almoço,16.5,100.0,1650.0,Almoço 16.50€ x 100 = 1650€
+q:d218ec96-bc83-42b8-8f92-2739848565c5:p1,q:d218ec96-bc83-42b8-8f92-2739848565c5,1,,25.0,40.0,,25€ x 40 pessoas = 1000€ (+ iva 13%) =1130€
+q:f2a54c05-8928-4641-bf0e-d9e4cfab3af0:p1,q:f2a54c05-8928-4641-bf0e-d9e4cfab3af0,1,Jantar,27.0,45.0,1215.0,Jantar 27€ x 45 = 1215€
+q:b4aabace-c480-4e69-9c41-0f595fdee22c:p1,q:b4aabace-c480-4e69-9c41-0f595fdee22c,1,Espumante Baga Primavera,10.0,50.0,,Espumante Baga Primavera 10€ x 50uni = 500€
+q:b4aabace-c480-4e69-9c41-0f595fdee22c:p2,q:b4aabace-c480-4e69-9c41-0f595fdee22c,2,Flutes de acrílico,0.45,512.0,225.0,Flutes de acrílico 0.45€ x 512 = 225€
+q:b4aabace-c480-4e69-9c41-0f595fdee22c:p3,q:b4aabace-c480-4e69-9c41-0f595fdee22c,3,Ovos moles,0.55,500.0,275.0,Ovos moles 0.55€ x 500 = 275€
+q:b210a64e-811f-404c-9e0c-1ba12ef4acfe:p1,q:b210a64e-811f-404c-9e0c-1ba12ef4acfe,1,Coffee Break,6.0,20.0,120.0,Coffee Break 6€ x 20 = 120€
+q:b210a64e-811f-404c-9e0c-1ba12ef4acfe:p2,q:b210a64e-811f-404c-9e0c-1ba12ef4acfe,2,Almoço,20.0,20.0,,Almoço 20€ x 20 Pessoas = 400€
+q:0a502e16-f6ea-464a-92a6-43e7366dde1e:p1,q:0a502e16-f6ea-464a-92a6-43e7366dde1e,1,Comidas e Bebidas não alcoólicas,16.0,50.0,800.0,Comidas e Bebidas não alcoólicas 16€ x 50 = 800€
+q:f096b943-939c-4ef3-b5b5-a6892332f3ed:p1,q:f096b943-939c-4ef3-b5b5-a6892332f3ed,1,,25.0,40.0,,25€ x 40 pessoas = 1085€ (+ iva 13%) = 1226.05€
+q:fa6f413b-6ea1-4573-b3e8-d9f173315b02:p1,q:fa6f413b-6ea1-4573-b3e8-d9f173315b02,1,Comidas,15.5,100.0,1550.0,Comidas – 15.50€ x 100 = 1550€
+q:020b0358-7960-4973-af55-7fdace3f140d:p1,q:020b0358-7960-4973-af55-7fdace3f140d,1,Comidas,25.0,50.0,1250.0,Comidas – 25€ x 50= 1250€
+q:020b0358-7960-4973-af55-7fdace3f140d:p2,q:020b0358-7960-4973-af55-7fdace3f140d,2,Staff,4.5,50.0,225.0,Staff 4.50€ x 50 = 225€
+q:020b0358-7960-4973-af55-7fdace3f140d:p3,q:020b0358-7960-4973-af55-7fdace3f140d,3,Decoração,4.0,50.0,200.0,Decoração -4€ x 50 = 200€
+q:020b0358-7960-4973-af55-7fdace3f140d:p4,q:020b0358-7960-4973-af55-7fdace3f140d,4,Comidas,24.0,70.0,1680.0,Comidas – 24€ x 70= 1680€
+q:020b0358-7960-4973-af55-7fdace3f140d:p5,q:020b0358-7960-4973-af55-7fdace3f140d,5,Staff,3.2,70.0,225.0,Staff 3.20€ x 70 = 225€
+q:020b0358-7960-4973-af55-7fdace3f140d:p6,q:020b0358-7960-4973-af55-7fdace3f140d,6,Decoração,3.0,70.0,200.0,Decoração -3€ x 70 = 200€
+q:c3dbb73d-5e53-40c9-9d34-d27130698e4c:p1,q:c3dbb73d-5e53-40c9-9d34-d27130698e4c,1,Dia 19 Coffee-Break 10h,7.5,20.0,,Dia 19 Coffee-Break 10h – 7.50€ x 20 pax = 150€
+q:c3dbb73d-5e53-40c9-9d34-d27130698e4c:p2,q:c3dbb73d-5e53-40c9-9d34-d27130698e4c,2,Dia 19 Coffee-Break 16h,7.5,20.0,,Dia 19 Coffee-Break 16h -7.50€ x 20 pax = 150€
+q:c3dbb73d-5e53-40c9-9d34-d27130698e4c:p3,q:c3dbb73d-5e53-40c9-9d34-d27130698e4c,3,Dia 20 Coffee-Break 9h,7.5,20.0,,Dia 20 Coffee-Break 9h – 7.50€ x 20 pax = 150€
+q:c3dbb73d-5e53-40c9-9d34-d27130698e4c:p4,q:c3dbb73d-5e53-40c9-9d34-d27130698e4c,4,Dia 20 Coffee-Break 16h,7.5,20.0,,Dia 20 Coffee-Break 16h – 7.50€ x 20 pax = 150€
+q:e4f8dddf-5891-457a-a656-ada08e2ed264:p1,q:e4f8dddf-5891-457a-a656-ada08e2ed264,1,Comidas,15.5,100.0,1550.0,Comidas – 15.50€ x 100 = 1550€
+q:a08fac57-c016-4952-bcf9-8b75c850c607:p1,q:a08fac57-c016-4952-bcf9-8b75c850c607,1,Comidas,13.5,100.0,1350.0,Comidas – 13.50€ x 100 = 1350€
+q:a08fac57-c016-4952-bcf9-8b75c850c607:p2,q:a08fac57-c016-4952-bcf9-8b75c850c607,2,Bebidas,2.0,100.0,200.0,Bebidas – 2 x 100 = 200€
+q:a591bd05-8703-4673-82da-4cad743ad1a7:p1,q:a591bd05-8703-4673-82da-4cad743ad1a7,1,Comidas,18.5,50.0,925.0,Comidas – 18.50€ x 50= 925€
+q:a591bd05-8703-4673-82da-4cad743ad1a7:p2,q:a591bd05-8703-4673-82da-4cad743ad1a7,2,Staff,4.5,50.0,225.0,Staff 4.50€ x 50 = 225€
+q:a591bd05-8703-4673-82da-4cad743ad1a7:p3,q:a591bd05-8703-4673-82da-4cad743ad1a7,3,Comidas,18.0,70.0,1260.0,Comidas – 18€ x 70= 1260€
+q:a591bd05-8703-4673-82da-4cad743ad1a7:p4,q:a591bd05-8703-4673-82da-4cad743ad1a7,4,Staff,3.2,70.0,225.0,Staff 3.20€ x 70 = 225€
+q:a53e2610-e886-4762-a9c2-65c503116805:p1,q:a53e2610-e886-4762-a9c2-65c503116805,1,,13.5,150.0,2025.0,13.50€ x 150 = 2025€
+q:a53e2610-e886-4762-a9c2-65c503116805:p2,q:a53e2610-e886-4762-a9c2-65c503116805,2,,1.5,150.0,,1.50 x 150€ = 225€
+q:0732a60e-71be-44ee-bf9b-f1ac400a0f52:p1,q:0732a60e-71be-44ee-bf9b-f1ac400a0f52,1,Comidas,18.5,50.0,925.0,Comidas – 18.50€ x 50= 925€
+q:0732a60e-71be-44ee-bf9b-f1ac400a0f52:p2,q:0732a60e-71be-44ee-bf9b-f1ac400a0f52,2,Staff,4.5,50.0,225.0,Staff 4.50€ x 50 = 225€
+q:0732a60e-71be-44ee-bf9b-f1ac400a0f52:p3,q:0732a60e-71be-44ee-bf9b-f1ac400a0f52,3,Comidas,18.0,70.0,1260.0,Comidas – 18€ x 70= 1260€
+q:0732a60e-71be-44ee-bf9b-f1ac400a0f52:p4,q:0732a60e-71be-44ee-bf9b-f1ac400a0f52,4,Staff,3.2,70.0,225.0,Staff 3.20€ x 70 = 225€
+q:0274f97f-e185-4c5c-af5f-97f97a98d456:p1,q:0274f97f-e185-4c5c-af5f-97f97a98d456,1,Espumante,1.5,50.0,75.0,Espumante – 1.50 x 50 = 75€
+q:f3ce88bb-3505-4f44-b3b5-174540ebca97:p1,q:f3ce88bb-3505-4f44-b3b5-174540ebca97,1,Serviço de Coffee break,7.0,30.0,210.0,Serviço de Coffee break 7€ x 30 = 210€
+q:73302bb3-74b6-4f48-96bd-8f45d2afc658:p1,q:73302bb3-74b6-4f48-96bd-8f45d2afc658,1,,8.0,100.0,,8€ x 100 pax = 800€
+q:19ba728a-e525-4347-b875-e5b61cdcf47b:p1,q:19ba728a-e525-4347-b875-e5b61cdcf47b,1,Comidas e Bebidas não alcoólicas,16.0,50.0,800.0,Comidas e Bebidas não alcoólicas 16€ x 50 = 800€
+q:b93cedd2-13b8-427e-827e-0ee42f60edbb:p1,q:b93cedd2-13b8-427e-827e-0ee42f60edbb,1,Coffee break,5.0,50.0,,Coffee break 5€ x 50 Pessoas = 250€
+q:6c20c58f-682e-4d33-9d0b-fe1a3d0136d8:p1,q:6c20c58f-682e-4d33-9d0b-fe1a3d0136d8,1,Almoço,20.0,90.0,1800.0,Almoço 20€ x 90 = 1800€
+q:c2265f31-cccd-468a-b8c6-12e53e51e6b5:p1,q:c2265f31-cccd-468a-b8c6-12e53e51e6b5,1,Coffee break pm,8.0,40.0,320.0,Coffee break pm - 8€ x 40 = 320€
+q:34faee2d-87d4-47c6-a05c-5082e992c7a0:p1,q:34faee2d-87d4-47c6-a05c-5082e992c7a0,1,,8.0,90.0,,8€ x 90 pax = 720€
+q:34faee2d-87d4-47c6-a05c-5082e992c7a0:p2,q:34faee2d-87d4-47c6-a05c-5082e992c7a0,2,,8.0,90.0,,8€ x 90 pax = 720€
+q:e151e93b-0471-432f-877c-35cf964435f2:p1,q:e151e93b-0471-432f-877c-35cf964435f2,1,,81.0,35.0,,81€ x 35 pessoas = 2835€
+q:8344b87f-345b-4021-93b1-9bce4a67bee2:p1,q:8344b87f-345b-4021-93b1-9bce4a67bee2,1,Coffee breaks,8.5,15.0,127.5,Coffee breaks 8.50€ x 15= 127.50€
+q:377fbb13-3cc2-4f12-bfd2-5ab8699b23bb:p1,q:377fbb13-3cc2-4f12-bfd2-5ab8699b23bb,1,Jantar,27.0,45.0,1215.0,Jantar 27€ x 45 = 1215€
+q:da479391-fb92-40f6-81f8-78e94063de4e:p1,q:da479391-fb92-40f6-81f8-78e94063de4e,1,Coffee break,5.5,50.0,,Coffee break 5.50€ x 50 Pessoas = 275€
+q:316e318b-61f0-4466-80c8-5f0b8ddc48a0:p1,q:316e318b-61f0-4466-80c8-5f0b8ddc48a0,1,Jantar,37.0,45.0,1665.0,Jantar 37€ x 45 = 1665€
+q:5a5e0127-8013-4de4-906e-d785d8a713b0:p1,q:5a5e0127-8013-4de4-906e-d785d8a713b0,1,Almoço,18.0,119.0,2142.0,Almoço 18€ x 119 = 2142€
+q:5a5e0127-8013-4de4-906e-d785d8a713b0:p2,q:5a5e0127-8013-4de4-906e-d785d8a713b0,2,Cerveja,0.5,300.0,,"Cerveja – 0,50€ x 300 uni = 150€"
+q:63323ff5-1f4d-485e-899d-65e87d4d109b:p1,q:63323ff5-1f4d-485e-899d-65e87d4d109b,1,,8.5,20.0,,8.50€ x 20 pessoas = 170€
+q:96927372-d9d7-4fb4-83c0-540fb66b79b8:p1,q:96927372-d9d7-4fb4-83c0-540fb66b79b8,1,Coffee break,5.5,30.0,,Coffee break 5.50€ x 30 Pessoas = 165€
+q:e57ee6a1-67e4-4942-8892-ece571c2b7f8:p1,q:e57ee6a1-67e4-4942-8892-ece571c2b7f8,1,Dia 25 pm,4.5,55.0,,Dia 25 pm – 4.50€ x 55 pax = 247.50€
+q:e57ee6a1-67e4-4942-8892-ece571c2b7f8:p2,q:e57ee6a1-67e4-4942-8892-ece571c2b7f8,2,Dia 26 am,6.2,370.0,,Dia 26 am – 6.20€ x 370 pax = 2294€
+q:e57ee6a1-67e4-4942-8892-ece571c2b7f8:p3,q:e57ee6a1-67e4-4942-8892-ece571c2b7f8,3,Dia 26 pm,4.0,350.0,,Dia 26 pm – 4€ x 350 pax = 1400€
+q:e57ee6a1-67e4-4942-8892-ece571c2b7f8:p4,q:e57ee6a1-67e4-4942-8892-ece571c2b7f8,4,Dia 27 am,5.0,350.0,,Dia 27 am – 5€ x 350 pax = 1750€
+q:fafb19bc-317d-4df2-8136-0a3af392af11:p1,q:fafb19bc-317d-4df2-8136-0a3af392af11,1,Coffee breaks am,6.5,90.0,585.0,Coffee breaks am 6.50€ x 90 = 585€
+q:fafb19bc-317d-4df2-8136-0a3af392af11:p2,q:fafb19bc-317d-4df2-8136-0a3af392af11,2,Coffee breaks pm,6.5,90.0,585.0,Coffee breaks pm 6.50€ x 90 = 585€
+q:1f95743b-a45f-481a-a208-f69445de2a9f:p1,q:1f95743b-a45f-481a-a208-f69445de2a9f,1,,26.0,40.0,,26€ x 40 pessoas = 1040€ (+ iva 13%) =1175.20€
+q:2f3a6e3d-dc26-45aa-acef-d71a4e656a77:p1,q:2f3a6e3d-dc26-45aa-acef-d71a4e656a77,1,Comidas,16.5,100.0,1650.0,Comidas – 16.50€ x 100 = 1650€
+q:2f3a6e3d-dc26-45aa-acef-d71a4e656a77:p2,q:2f3a6e3d-dc26-45aa-acef-d71a4e656a77,2,Bebidas,2.5,100.0,250.0,Bebidas – 2.50 x 100 = 250€
+q:c37469cb-7dcc-4c22-bfed-6ded434c3734:p1,q:c37469cb-7dcc-4c22-bfed-6ded434c3734,1,Coffee break e Almoço,15.0,90.0,1350.0,Coffee break e Almoço 15€ x 90 = 1350€
+q:c899e763-a2f4-4250-8ec1-15c6528c3978:p1,q:c899e763-a2f4-4250-8ec1-15c6528c3978,1,Serviço de Coffee break,6.5,250.0,1625.0,Serviço de Coffee break 6.50€ x 250 = 1625€
+q:c899e763-a2f4-4250-8ec1-15c6528c3978:p2,q:c899e763-a2f4-4250-8ec1-15c6528c3978,2,Serviço de Vinho do Porto (Barros),0.8,250.0,200.0,Serviço de Vinho do Porto (Barros) 0.80€ x 250 = 200€
+q:e3643c96-e323-4b92-8f40-1a27a7f37897:p1,q:e3643c96-e323-4b92-8f40-1a27a7f37897,1,Coffee breaks pm,8.0,25.0,200.0,Coffee breaks pm 8€ x 25 = 200€ x 7= 1400€
+q:69154dae-e9cf-44b0-87b2-d27ea5af6791:p1,q:69154dae-e9cf-44b0-87b2-d27ea5af6791,1,Sub Total,31.5,50.0,1575.0,Sub Total 31.50€ x 50 = 1575€
+q:69154dae-e9cf-44b0-87b2-d27ea5af6791:p2,q:69154dae-e9cf-44b0-87b2-d27ea5af6791,2,Sub Total,27.1,30.0,813.0,Sub Total 27.10€ x 30 = 813€
+q:6c7cbef6-086b-4792-a2ef-07ea6ae0a3e2:p1,q:6c7cbef6-086b-4792-a2ef-07ea6ae0a3e2,1,,17.0,40.0,680.0,17€ x 40 = 680€
+q:4a1e227c-563d-4a87-ae48-93d2017a890e:p1,q:4a1e227c-563d-4a87-ae48-93d2017a890e,1,Coffee break pm,8.5,70.0,595.0,Coffee break pm – 8.50€ x 70 = 595€
+q:535c315a-3dc7-476c-8424-af244583a864:p1,q:535c315a-3dc7-476c-8424-af244583a864,1,Coffee break 16h,6.5,30.0,195.0,Coffee break 16h – 6.50€ x 30 = 195€
+q:535c315a-3dc7-476c-8424-af244583a864:p2,q:535c315a-3dc7-476c-8424-af244583a864,2,Coffee break 19h,9.5,30.0,285.0,Coffee break 19h – 9.50€ x 30 = 285€
+q:5aa1d5e7-ed02-47a6-b04d-f331da36341b:p1,q:5aa1d5e7-ed02-47a6-b04d-f331da36341b,1,Coffee break am,10.0,90.0,900.0,Coffee break am – 10€ x 90 = 900€
+q:29d2f77a-6b41-42e3-898b-5d9b7274c33b:p1,q:29d2f77a-6b41-42e3-898b-5d9b7274c33b,1,Comidas e Bebidas não alcoólicas,22.0,60.0,1320.0,Comidas e Bebidas não alcoólicas 22€ x 60 = 1320€
+q:50a69476-2816-459c-868e-be3fefdde94b:p1,q:50a69476-2816-459c-868e-be3fefdde94b,1,Coffee break pm,8.6,35.0,301.0,Coffee break pm - 8.60€ x 35 = 301€
+q:f3a9ca89-e202-44a9-b8b7-c1b4641c6710:p1,q:f3a9ca89-e202-44a9-b8b7-c1b4641c6710,1,Coffee breaks,6.0,23.0,,Coffee breaks 6€ x 23 + 23 = 276€ Almoço 27€ x 23 = 621 €
+q:f3a9ca89-e202-44a9-b8b7-c1b4641c6710:p2,q:f3a9ca89-e202-44a9-b8b7-c1b4641c6710,2,Coffee breaks,6.0,23.0,138.0,Coffee breaks 6€ x 23 = 138€ Almoço 27€ x 23 = 621 €
+q:f8577f73-bcdf-434e-a7bd-08330b2cf52f:p1,q:f8577f73-bcdf-434e-a7bd-08330b2cf52f,1,Comidas e Bebidas não alcoólicas,24.0,60.0,1440.0,Comidas e Bebidas não alcoólicas 24€ x 60 = 1440€
+q:ad3e76f5-0c17-40fb-901c-3d1dcb92e54a:p1,q:ad3e76f5-0c17-40fb-901c-3d1dcb92e54a,1,Coffee breaks,7.0,22.0,154.0,Coffee breaks 7€ x 22 = 154€
+q:9d585128-b1f1-4d19-9a93-84e31a5bf856:p1,q:9d585128-b1f1-4d19-9a93-84e31a5bf856,1,Wellcome Coffee am,2.0,20.0,40.0,Wellcome Coffee am 2€ x 20 = 40€
+q:9d585128-b1f1-4d19-9a93-84e31a5bf856:p2,q:9d585128-b1f1-4d19-9a93-84e31a5bf856,2,Almoço,23.0,20.0,460.0,Almoço 23€ x 20= 460€
+q:c87c5d42-5438-4d0a-a999-bb6ba2e26cd8:p1,q:c87c5d42-5438-4d0a-a999-bb6ba2e26cd8,1,Coffee break pm,13.5,60.0,810.0,Coffee break pm – 13.50€ x 60 = 810€
+q:94a475ad-c869-4f8d-b3bf-ceb004ba08d8:p1,q:94a475ad-c869-4f8d-b3bf-ceb004ba08d8,1,,25.0,50.0,,25€ x 50 pessoas = 1250€
+q:94a475ad-c869-4f8d-b3bf-ceb004ba08d8:p2,q:94a475ad-c869-4f8d-b3bf-ceb004ba08d8,2,,1.0,50.0,,1€ x 50 pessoas = 50€
+q:36edb724-0621-4fe1-abe3-d82239be8536:p1,q:36edb724-0621-4fe1-abe3-d82239be8536,1,Wellcome Coffee am,2.0,20.0,40.0,Wellcome Coffee am 2€ x 20 = 40€
+q:36edb724-0621-4fe1-abe3-d82239be8536:p2,q:36edb724-0621-4fe1-abe3-d82239be8536,2,Almoço,23.0,20.0,460.0,Almoço 23€ x 20= 460€
+q:0f0d2daf-7551-4796-a679-f4059e4189d2:p1,q:0f0d2daf-7551-4796-a679-f4059e4189d2,1,Cb am,7.0,40.0,280.0,Cb am 7€ x 40 = 280€
+q:0f0d2daf-7551-4796-a679-f4059e4189d2:p2,q:0f0d2daf-7551-4796-a679-f4059e4189d2,2,Almoço,26.5,40.0,1060.0,Almoço 26.50€ x 40 = 1060€
+q:0f0d2daf-7551-4796-a679-f4059e4189d2:p3,q:0f0d2daf-7551-4796-a679-f4059e4189d2,3,Cb am,7.0,40.0,280.0,Cb am 7€ x 40 = 280€
+q:0f0d2daf-7551-4796-a679-f4059e4189d2:p4,q:0f0d2daf-7551-4796-a679-f4059e4189d2,4,Almoço,27.5,30.0,825.0,Almoço 27.50€ x 30 = 825€
+q:0f0d2daf-7551-4796-a679-f4059e4189d2:p5,q:0f0d2daf-7551-4796-a679-f4059e4189d2,5,Cb pm,7.5,20.0,150.0,Cb pm 7.50€ x 20 = 150€
+q:01d7afbe-b380-42a7-9a35-cc861887aed2:p1,q:01d7afbe-b380-42a7-9a35-cc861887aed2,1,Serviço de Coffee break,6.7,250.0,1675.0,Serviço de Coffee break 6.70€ x 250 = 1675€
+q:01d7afbe-b380-42a7-9a35-cc861887aed2:p2,q:01d7afbe-b380-42a7-9a35-cc861887aed2,2,Serviço de Vinho do Porto (Barros),0.8,250.0,200.0,Serviço de Vinho do Porto (Barros) 0.80€ x 250 = 200€
+q:8c8c40b2-8629-4648-8446-e91937fe5db9:p1,q:8c8c40b2-8629-4648-8446-e91937fe5db9,1,Almoço,36.0,60.0,2160.0,Almoço 36€ x 60 = 2160€
+q:5dd3b068-ee6f-4d24-8326-fa1a1f5e2237:p1,q:5dd3b068-ee6f-4d24-8326-fa1a1f5e2237,1,Coffee break pm,7.0,70.0,490.0,Coffee break pm – 7€ x 70 = 490€
+q:d0af9dd7-0c04-4415-84d0-0046191d812c:p1,q:d0af9dd7-0c04-4415-84d0-0046191d812c,1,Comidas,19.5,70.0,1365.0,Comidas – 19.50€ x 70 = 1365€
+q:d0af9dd7-0c04-4415-84d0-0046191d812c:p2,q:d0af9dd7-0c04-4415-84d0-0046191d812c,2,Bebidas,2.5,70.0,175.0,Bebidas – 2.50 x 70 = 175€
+q:082b73a2-4359-4a06-a9fb-17ba55a73484:p1,q:082b73a2-4359-4a06-a9fb-17ba55a73484,1,,50.0,35.0,,50€ x 35 pessoas = 1750€
+q:ccd80624-a4e6-4150-b728-a9fb6a1f9c5d:p1,q:ccd80624-a4e6-4150-b728-a9fb6a1f9c5d,1,Dia 25 pm,4.5,55.0,,Dia 25 pm – 4.50€ x 55 pax = 247.50€
+q:ccd80624-a4e6-4150-b728-a9fb6a1f9c5d:p2,q:ccd80624-a4e6-4150-b728-a9fb6a1f9c5d,2,Dia 26 am,6.2,370.0,,Dia 26 am – 6.20€ x 370 pax = 2294€
+q:ccd80624-a4e6-4150-b728-a9fb6a1f9c5d:p3,q:ccd80624-a4e6-4150-b728-a9fb6a1f9c5d,3,Dia 26 pm,4.0,350.0,,Dia 26 pm – 4€ x 350 pax = 1400€
+q:ccd80624-a4e6-4150-b728-a9fb6a1f9c5d:p4,q:ccd80624-a4e6-4150-b728-a9fb6a1f9c5d,4,Dia 27 am,5.0,350.0,,Dia 27 am – 5€ x 350 pax = 1750€
+q:53f0d9ae-5d04-45b6-9ffe-e51e6bd748ae:p1,q:53f0d9ae-5d04-45b6-9ffe-e51e6bd748ae,1,Comidas e Bebidas não alcoólicas,18.0,60.0,1080.0,Comidas e Bebidas não alcoólicas 18€ x 60 = 1080€
+q:53f0d9ae-5d04-45b6-9ffe-e51e6bd748ae:p2,q:53f0d9ae-5d04-45b6-9ffe-e51e6bd748ae,2,Espumante,2.0,60.0,120.0,Espumante 2€ x 60 = 120€
+q:ece99e49-3658-4ecb-ae80-a5cba5e13c2f:p1,q:ece99e49-3658-4ecb-ae80-a5cba5e13c2f,1,Valor final Lunch box =,8.5,60.0,510.0,Valor final Lunch box = 8.50€ x 60 = 510€
+q:4e174c5c-5124-49e5-8516-eb92e602590d:p1,q:4e174c5c-5124-49e5-8516-eb92e602590d,1,Coffee break pm,8.5,60.0,510.0,Coffee break pm – 8.50€ x 60 = 510€
+q:110c1483-fc9b-4e29-b172-dfb8fa879de9:p1,q:110c1483-fc9b-4e29-b172-dfb8fa879de9,1,Comidas e Bebidas não alcoólicas,12.0,50.0,600.0,Comidas e Bebidas não alcoólicas 12€ x 50 = 600€

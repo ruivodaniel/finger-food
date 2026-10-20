@@ -1,0 +1,16 @@
+{
+  "id": "doc/todo-notifications",
+  "kind": "doc",
+  "title": "slice: notifications (not migrated)",
+  "status": "todo",
+  "subject": "notifications",
+  "tags": [
+    "notifications"
+  ],
+  "paths": [
+    "apps/main/slices/seed/notifications"
+  ],
+  "summary": "Not migrated yet. Starting point: apps/main/slices/seed/notifications/docs/README.md",
+  "entry": "apps/main/slices/seed/notifications/docs/README.md",
+  "doc": null
+}

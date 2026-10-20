@@ -1,0 +1,101 @@
+# Web surface
+
+The module's frontend lives in `web/` and follows the contribution pattern:
+the app mounts what the module exports; pages travel inside route
+definitions and are never imported directly.
+
+## Surface
+
+- `UserOrgMgmtProvider` — flat-bag context. Builds the module-owned API
+  client from `UserOrgMgmtWebConfig { apiBaseUrl, authPath?, clientPath? }`;
+  base paths are injected so the SAME code serves a side-by-side test mount
+  (`/api/auth-v2`) and the final mount (`/api/auth`).
+- `getUserOrgMgmtRoutes()` — `/login`, `/register`, `/forgot-password` +
+  `/reset-password` (recovery split at the sign-in moment),
+  `/my/settings/{account,profile,security,legal}`, `/resolve` (the wizard),
+  `/organizations` (the platform DIRECTORY + `/current` for the active org),
+  `/my/memberships` + `/my/invitations` (linked from the shell's user menu),
+  `/accept-invitation` (?id= capability URL, public — signing in or
+  registering continues on `/my/invitations/accept?id=`, signed in but
+  ungated: accept first, then resolve), the public legal viewer
+  (`/legal-documents?type=`, ?orgTypeId narrows, ?docId pins a version) and the authoring pages
+  (`/manage-legal-documents` + `/:documentType/:orgTypeKey` — under the
+  app's default-gated shell, mirroring the server's `/legal-admin`) as
+  framework-agnostic
+  `RouteDefinition`s (path, page, access, `makeProps`). The app hangs them
+  under its own layouts.
+- `useSession` / `useInvalidateSession` — react-query session state; query
+  keys live in one catalog (`userOrgMgmtQueryKeys`, `"uom"`-prefixed — a
+  client-side cache namespace, no `-v2` to outlive).
+- `useActiveMembership` — the caller's membership in the session's active org
+  (`{ organizationId, orgType, roles }` or null), off the session view, no
+  second fetch. The app's nav filters on it: entries naming `requiredRoles`
+  show to a membership holding one of them, inheritance included (the app's
+  `useMemberRoles` expands roles through the access-control forests,
+  `rolesImpliedBy`). Visibility only — the server enforces. In-page controls
+  still render for everyone; sites owed that narrowing carry a greppable
+  `AC(availability-check): <entity>.<action>` marker.
+- `usePendingInvitationCount` — the caller's pending-invitation count; the
+  shell badges its "My organizations" user-menu entry with it.
+- `createApiClient` — typed fetch wrappers for every module endpoint;
+  in-module so removing the module breaks consumers at compile time. Every
+  request carries the active org from the module's client-side store
+  (`web/lib/active-org.ts`, localStorage-backed) as the
+  `x-active-organization` header; switching orgs is a store write plus a
+  session-query invalidation, and the OrgSwitcher self-heals an empty or
+  stale store to the first membership.
+
+## Page principles
+
+- **The config drives; pages render.** RegisterPage is ONE screen, and every
+  field on it comes from `GET /auth/config` — which identifiers are offered,
+  whether the credential is a password or a delivered code, which profile fields
+  to ask for, which consent items to show. The client invents nothing.
+  LoginPage likewise offers exactly the identifiers and factors the config
+  resolves.
+
+  Submitting the form delivers a code and creates NOTHING: every answer — the
+  password included, when the config collects one — stays in component state
+  and rides the verify request, the one that births the account with its
+  address verified and its password set. The code step offers resend (a fresh
+  flow from the held form) and edit-my-details (back to the form); a refresh
+  mid-code just means redoing the form, since nothing exists server-side.
+- **One component per file.** Pages compose from `web/components/<feature>/`
+  (e.g. `components/register/ConsentCheckboxes`).
+- **No router hooks in pages.** URL data arrives as props via `makeProps`;
+  navigation goes through the injected `RouterAdapter`.
+- **Uploads go through the module's own endpoints.** Avatar/logo upload asks
+  the module API for a presigned PUT (`POST /me/profile/avatar-upload`,
+  `POST /organizations/:orgId/logo-upload`); the SERVER derives the storage key from
+  the session/active org — the client never chooses paths, so authorization
+  is intrinsic. The browser PUTs the bytes straight to storage
+  (`web/lib/upload.ts` validates image type + 2MB cap) and the module
+  persists the returned public URL. The avatar saves on pick; the org logo
+  rides the Organization info card on the active-org page — logo + name,
+  one Save. Storage itself is an api-side mount injection (`storage` port),
+  not a web adapter.
+- **A 428 routes to `/resolve` from anywhere.** The provider builds the
+  client with a gate-blocked hook: any request that lands 428 redirects to
+  `/resolve` carrying the current page as `?intention=` (read via
+  `RouterAdapter.currentPath` — pathname+search). The handler seeds the
+  shared gate query so the screen paints instantly, collapses parallel 428
+  bursts into one navigation, skips `/resolve` itself so mid-resolution
+  state survives, and admits only in-app intention paths. Omitting the
+  router adapter omits the behavior (headless consumers keep plain thrown
+  errors); `gateCheck()` never fires the hook — it probes.
+- **Pages are chrome-less.** The hosting app supplies the page frame — the
+  auth card around login/register/recovery, the signed-in shell (sidebar,
+  sign out) around the account pages. Pages only render their own content
+  column.
+- **Copy speaks to people, not developers.** Page text says "Profile",
+  "Verified", "Signed-in devices" — identifier/credential/session vocabulary
+  stays in code and docs.
+- Every interactive element carries a `data-testid`.
+
+## Consent rendering
+
+`ConsentDecisionList` is the ONE renderer for consent items (see
+[legal.md](./legal.md) for the flag semantics table). Its wrappers supply the
+data: `ConsentCheckboxes` (registration, platform scope), the invitation
+accept page (`joinConsent` off the public view), and `ReconsentCard` on
+`/resolve` (the gate's pending-consent projection).

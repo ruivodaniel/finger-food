@@ -1,0 +1,17 @@
+{
+  "id": "term/reference",
+  "kind": "term",
+  "title": "reference",
+  "status": "converted",
+  "subjects": [
+    "docs"
+  ],
+  "tags": [
+    "docs"
+  ],
+  "paths": [],
+  "term": {
+    "def": "The concrete rules and mechanics, with diagrams over prose.",
+    "aliases": []
+  }
+}

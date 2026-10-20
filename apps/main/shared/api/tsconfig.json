@@ -1,0 +1,30 @@
+{
+  "extends": "../../../../tsconfig.base.json",
+  "compilerOptions": {
+    "strict": true,
+    "verbatimModuleSyntax": true,
+    "skipLibCheck": true,
+    "composite": false,
+    "declaration": false,
+    "declarationMap": false,
+    "types": ["node", "vitest/globals"],
+    "jsx": "react-jsx",
+    "jsxImportSource": "hono/jsx",
+    "lib": ["ES2023", "dom"],
+    "outDir": "./dist",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@configs/access-control": ["../../../../configs/access-control/index.ts"],
+      "@configs/access-control/*": ["../../../../configs/access-control/*"],
+      "@configs/notifications": ["../../../../configs/notifications/index.ts"],
+      "@configs/notifications/*": ["../../../../configs/notifications/*"],
+      "@configs/product": ["../../../../configs/product/index.ts"],
+      "@configs/product/*": ["../../../../configs/product/*"],
+      "@configs/user-organization-mgmt": ["../../../../configs/user-organization-mgmt/index.ts"],
+      "@configs/user-organization-mgmt/*": ["../../../../configs/user-organization-mgmt/*"]
+    }
+  },
+  "include": ["src/**/*", "__test__/**/*", "../../../../configs/**/*.ts", "../shared/**/*.ts"],
+  "exclude": ["node_modules"]
+}

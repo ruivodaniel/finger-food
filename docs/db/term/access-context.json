@@ -1,0 +1,21 @@
+{
+  "id": "term/access-context",
+  "kind": "term",
+  "title": "access context",
+  "status": "approved",
+  "subjects": [
+    "main",
+    "gated-scoped-ac"
+  ],
+  "tags": [
+    "access-control"
+  ],
+  "paths": [],
+  "term": {
+    "def": "The per-request bag hydrated once in middleware — who is asking, their active organization, their effective permissions, and the gated database handle. Every gated method takes it as its first parameter and passes it down; it is never recomputed per layer. Written `ac` in code.",
+    "aliases": [
+      "bag"
+    ],
+    "proposed": true
+  }
+}

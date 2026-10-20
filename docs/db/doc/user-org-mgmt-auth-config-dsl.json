@@ -1,0 +1,114 @@
+{
+  "id": "doc/user-org-mgmt-auth-config-dsl",
+  "kind": "doc",
+  "title": "The auth-config DSL",
+  "status": "converted",
+  "subject": "user-organization-mgmt",
+  "tags": [
+    "user-organization-mgmt"
+  ],
+  "paths": [
+    "apps/main/slices/seed/user-organization-mgmt"
+  ],
+  "summary": "The module ships the engine (`shared/auth-config/`: types, resolver, validation); the product ships the config instance (`configs/user-organization-mgmt/auth…",
+  "docId": "user-org-mgmt-auth-config-dsl",
+  "doc": {
+    "axioms": [],
+    "purpose": {
+      "intro": "The module ships the engine (`shared/auth-config/`: types, resolver, validation); the product ships the config instance (`configs/user-organization-mgmt/auth/`). Add a rule to the config and every consumer — registration flow, login form, the gate — picks it up with no code change."
+    },
+    "reference": [
+      {
+        "topic": "Two orthogonal axes",
+        "claims": [
+          {
+            "text": "**intent** — the credential flow: `registration | authentication | recovery`"
+          },
+          {
+            "text": "**orgAction** — how a membership is being established: `create | join` (absent for login, recovery, and the gate)"
+          },
+          {
+            "text": "They are separate axes because a flat intent list made contradictory combinations expressible (registration+authentication) and couldn't say \"register AND create a company\"."
+          }
+        ],
+        "statement": "Any auth moment is described by two single-valued axes:"
+      },
+      {
+        "topic": "Condition semantics (memorize this)",
+        "claims": [
+          {
+            "text": "**A clause naming a field the context lacks does NOT match.** The gate evaluates membership contexts with no `intent` — so a clause that includes `intent` can never fire at the gate."
+          },
+          {
+            "text": "**Extra context fields don't prevent matching** (subset check). A clause `{ membershipOrgType: \"company\" }` fires both during a company-targeted registration (whose context also carries `intent`) and at the standing gate."
+          }
+        ],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "when: [clauseA, clauseB]   // clauseA OR clauseB   (any-of)\n{ intent: \"registration\", membershipOrgType: \"company\" }  // AND within a clause\n{ intent: [\"registration\", \"authentication\"] }            // any-of within a key\nnotWhen: [clauseC]         // ...AND NOT clauseC (veto, same clause semantics)",
+                "caption": "ts"
+              }
+            ]
+          }
+        ],
+        "statement": "A clause matches when EVERY key it names is present in the context with an allowed value. Two consequences that bite:"
+      },
+      {
+        "topic": "The authoring convention (the \"two species\" rule)",
+        "claims": [
+          {
+            "text": "**Intent-keyed clauses** enforce during their flow only."
+          },
+          {
+            "text": "**Membership-keyed clauses** stand forever: they fire during org-targeted flows AND at the gate for existing members."
+          },
+          {
+            "text": "An obligation that must hold for members must be authored membership-keyed. Example of the classic bug (this exact shape shipped in a draft):"
+          },
+          {
+            "text": "Why it matters: rules added to the config after users exist must catch those users at the gate. Intent-keyed rules silently don't."
+          }
+        ],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "// WRONG: fires at EVERY registration (any-of!), and never re-checks members\nwhen: [{ intent: \"registration\" }, { membershipOrgType: [\"company\"] }]\n\n// RIGHT: company-only, covers registration-into-company AND the gate\nwhen: [{ membershipOrgType: [\"company\"] }]",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "The identifiers MAP (leak-proof by construction)",
+        "claims": [],
+        "statement": "Identifiers are a map `identifier → policy`, not a list of grant rules. In a union-of-grants list, a `notWhen` on one rule can't claw back what another rule granted — restrictions don't compose. As a unique key, each identifier's visibility is decided in exactly one place."
+      },
+      {
+        "topic": "Resolvers",
+        "claims": [],
+        "statement": "`resolveIdentifiers(config, ctx)` → visible identifier names. `resolveFactors(config, ctx)` → factor specs (serialize with `factorKey`: `password`, `otp:phone`, `link:email`, `totp`). `resolveRequirements(config, ctx)` → bare requirement names. `resolveObligations(config, ctx)` → typed obligations with the specifics a screen needs (`identityTypes[]` — any listed type satisfies — / `factorMethod` / `dataField` / `consent[]`)."
+      },
+      {
+        "topic": "Validation",
+        "claims": [],
+        "statement": "`validateAuthConfig` runs on config import (fails boot): factors offered at authentication must be auth-capable, membership-required factors must be gate-capable, OTP needs an OTP-capable `deliveredVia`, `deviceOtp` is rejected (catalogued vocabulary without runtime support), every registrable identifier must be code-deliverable or delegated (oidc) — an identity is born by code proof or OIDC callback; anything else has no way to be born — and a password factor must carry `config.minLength >= 8`, the provider's hard floor (the DSL is the one authority on password acceptability; the provider's own checks are pinned off in kratos.yml). `validateOrgLifecycle` checks the org lifecycle entries (owner role present for user-creatable types, no duplicates) — config that stays ready for the org stage."
+      }
+    ],
+    "review": {
+      "axioms": {
+        "state": "unreviewed"
+      },
+      "purpose": {
+        "state": "unreviewed"
+      },
+      "reference": {
+        "state": "unreviewed"
+      }
+    },
+    "converted": true
+  }
+}

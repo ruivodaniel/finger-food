@@ -1,0 +1,29 @@
+{
+  "id": "adr/main--orchestration-runs-as-one-app-on-trigger-dev",
+  "kind": "adr",
+  "title": "Background work runs as one app, apps/orchestrator, on Trigger.dev; main runs its own workflow intents",
+  "status": "approved",
+  "subject": "main",
+  "tags": [
+    "main",
+    "architecture"
+  ],
+  "paths": [],
+  "summary": "One app, apps/orchestrator: versioned workers in its shared folder, pipelines in its slices, a hand-written registry per project, a generated catalog and a gene",
+  "adr": {
+    "date": "2026-09-23",
+    "context": "apps/workers mounted the notifications seed slice and wrote main's tables, and imported main's workflow-intent model through a package subpath; apps/trigger-dev held one cron that enqueued on a Redis the cloud could not reach. The target scaffolding named this debt and named apps/orchestrator as the wire-only app that replaces it. The orchestrator's design (slice-design, seed-orchestrator project, exploration v5) settled the vocabulary: worker, pipeline, catalog, registry, mount, exposed pipeline, envelope, slot.",
+    "decision": "One app, apps/orchestrator: versioned workers in its shared folder, pipelines in its slices, a hand-written registry per project, a generated catalog and a generated exposed set, one Trigger.dev task per mounted pipeline with workers running in-process behind a dispatcher seam, every artifact in object storage under the orchestrator's own prefix, its own Postgres for runs. One API: an IP allowlist and an HS256 service JWT on every request but the liveness probe, exposure and access control from the exposed set, the input validated by the pipeline's own slots. Main keeps the durable workflow_intent outbox and runs intents in-process (QUEUE_MODE=outbox); the reconcile pass is a main m2m route the orchestrator calls on a registry schedule with a service JWT. apps/workers, apps/trigger-dev and the BullMQ lib are removed.",
+    "consequences": [
+      "One writer per database and per bucket prefix holds: the orchestrator never touches main's tables; results re-enter main through its own routes.",
+      "A pipeline's schemas and maximum burn live with the pipeline; the registry adds exposure, roles and schedules; OpenAPI is emitted from the exposed set and never hand-written.",
+      "Deferred, recorded in exploration v6: workers as their own Trigger.dev tasks (the dispatcher seam), the credits gate (the pipeline still declares maxCredits), RS256 with JWKS in place of the shared HS256 secret, presigned uploads in place of uploads through the API.",
+      "Open for Daniel: the two capability ids added to ontology v0.6, who mints the agent's JWT in production, schema references in OpenAPI, and the internet-reachable m2m route protected by the JWT alone."
+    ],
+    "affects": [
+      "backend-composition",
+      "scaffolding-and-import-boundaries"
+    ],
+    "adrStatus": "accepted"
+  }
+}

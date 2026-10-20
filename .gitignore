@@ -1,0 +1,65 @@
+node_modules
+.DS_Store
+dist/
+_reference/
+.ref/
+# Reference repos cloned into a _meta folder — local only, never committed
+**/_meta/.ref-repos/
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.tsbuildinfo
+scripts/lint/.lint-report.json
+scripts/lint/runs/
+.lint-on-commit
+e2e/reminder-demo-state.json
+
+# Personal dev notes — drop a `local-dev-<name>.md` (or .ts, .sh, etc.) at
+# repo root for things you want kept local: checklists, scratch scripts,
+# experiment notes.
+local-dev-*
+local-dev-postgres*
+
+# AI
+.serena/
+.superpowers/
+.claude/
+# slice-design ships its own directory-scoped agent config (skills wrappers)
+!slice-design/.claude/
+
+# Trigger.dev local dev state (active-runs.json, dev.lock, watchdog.pid, tmp/)
+.trigger/
+.ai-toolkit/
+pgadmin-servers.json
+
+# Terraform
+**/.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.tfvars
+!*.tfvars.example
+!terraform/*/terraform.tfvars
+.terraform.lock.hcl
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Sandbox snapshot output + Playwright session state.
+# Note: cast.local.ts IS committed — these are local fixture demo users,
+# not real credentials.
+apps/main/shared/web/src/routes/sandbox/_snapshots/snapshots/*.html
+apps/main/shared/web/src/routes/sandbox/_snapshots/.auth/
+
+# Team-cockpit E2E run artifacts (per-run, local machine state).
+#   - runs/<runId>/{run.json, screenshots/} are generated each test run
+#   - history/{index.json, sequences-stats.json} are rewritten each run
+#   - .tmp/ holds the merged chain test, action log, vitest results
+team-cockpit/cockpit/history/runs/
+team-cockpit/cockpit/history/index.json
+team-cockpit/cockpit/history/sequences-stats.json
+team-cockpit/.tmp/

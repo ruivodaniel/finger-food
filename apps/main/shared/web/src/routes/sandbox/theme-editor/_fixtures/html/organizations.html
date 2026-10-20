@@ -1,0 +1,1167 @@
+<body cz-shortcut-listen="true" style="">
+    <div id="root">
+        <div layout="shell" class="flex h-screen w-full overflow-clip">
+            <div layout="shell-side-nav" class="flex h-full flex-shrink-0 flex-col overflow-clip">
+                <div class="group/sidebar-wrapper flex min-h-0 h-full">
+                    <div element="control-group--sidebar-nav"
+                        class="peer hidden md:flex shrink-0 flex-col overflow-hidden w-14" concept="collapsed"
+                        collapsed="" data-testid="app-sidebar" style="transition: width 400ms ease-in-out;">
+                        <div element="surface--header" class="flex w-full flex-col">
+                            <ul class="flex w-full min-w-0 flex-col">
+                                <li class="group/menu-item relative w-full"><button element="control--nav-item"
+                                        emphasis="tertiary" scale="lg"
+                                        class="peer/menu-button flex w-full items-center overflow-hidden disabled:pointer-events-none disabled:cursor-not-allowed aria-disabled:pointer-events-none aria-disabled:cursor-not-allowed [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:shrink-0"
+                                        concept="org-switcher-nav" data-testid="org-switcher-trigger" type="button"
+                                        id="radix-_r_0_" aria-haspopup="menu" aria-expanded="false"
+                                        data-state="closed"><span element="surface--avatar" scale="md"
+                                            class="relative flex shrink-0 overflow-hidden size-8"><span
+                                                class="flex items-center justify-center">PS</span></span>
+                                        <div class="grid flex-1"><span element="surface--org-name"
+                                                class="truncate">PROWD System Admin</span></div><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-ellipsis-vertical ms-auto" element="shape--icon"
+                                            aria-hidden="true">
+                                            <circle cx="12" cy="12" r="1"></circle>
+                                            <circle cx="12" cy="5" r="1"></circle>
+                                            <circle cx="12" cy="19" r="1"></circle>
+                                        </svg>
+                                    </button></li>
+                            </ul>
+                        </div>
+                        <div element="surface--content" class="flex w-full min-h-0 flex-1 flex-col overflow-auto">
+                            <div class="relative flex w-full min-w-0 flex-col">
+                                <ul class="flex w-full min-w-0 flex-col">
+                                    <li class="group/menu-item relative w-full"><button element="control--nav-item"
+                                            emphasis="primary" scale="md"
+                                            class="peer/menu-button flex w-full items-center overflow-hidden disabled:pointer-events-none disabled:cursor-not-allowed aria-disabled:pointer-events-none aria-disabled:cursor-not-allowed [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:shrink-0"
+                                            concept="sidebar-toggle" data-state="closed"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-panel-left" element="shape--icon"
+                                                aria-hidden="true">
+                                                <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+                                                <path d="M9 3v18"></path>
+                                            </svg><span element="surface--nav-item-title"
+                                                class="flex-1 truncate">Expand</span></button></li>
+                                </ul>
+                            </div>
+                            <div class="relative flex w-full min-w-0 flex-col">
+                                <ul class="flex w-full min-w-0 flex-col">
+                                    <li class="group/menu-item relative w-full"><a data-testid="nav-organizations"
+                                            element="control--nav-item" emphasis="primary" scale="md"
+                                            concept="main-nav-item" data-state="closed" state="selected"
+                                            href="/organizations"
+                                            class="peer/menu-button flex w-full items-center overflow-hidden disabled:pointer-events-none disabled:cursor-not-allowed aria-disabled:pointer-events-none aria-disabled:cursor-not-allowed [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:shrink-0"
+                                            data-status="active" aria-current="page"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-network" aria-hidden="true"
+                                                element="surface--nav-item-icon">
+                                                <rect x="16" y="16" width="6" height="6" rx="1"></rect>
+                                                <rect x="2" y="16" width="6" height="6" rx="1"></rect>
+                                                <rect x="9" y="2" width="6" height="6" rx="1"></rect>
+                                                <path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"></path>
+                                                <path d="M12 12V8"></path>
+                                            </svg><span element="surface--nav-item-title"
+                                                class="flex-1 truncate">Organizations</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div element="surface--footer" class="flex w-full flex-col">
+                            <ul class="flex w-full min-w-0 flex-col">
+                                <li class="group/menu-item relative w-full"><button element="control--nav-item"
+                                        emphasis="tertiary" scale="lg"
+                                        class="peer/menu-button flex w-full items-center overflow-hidden disabled:pointer-events-none disabled:cursor-not-allowed aria-disabled:pointer-events-none aria-disabled:cursor-not-allowed [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:shrink-0"
+                                        concept="notifications-nav" data-testid="notifications-trigger" type="button"
+                                        id="radix-_r_3_" aria-haspopup="menu" aria-expanded="false" data-state="closed">
+                                        <div class="relative"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-bell" element="shape--icon" scale="md"
+                                                aria-hidden="true">
+                                                <path d="M10.268 21a2 2 0 0 0 3.464 0"></path>
+                                                <path
+                                                    d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326">
+                                                </path>
+                                            </svg></div><span>Notifications</span>
+                                    </button></li>
+                            </ul>
+                            <ul class="flex w-full min-w-0 flex-col">
+                                <li class="group/menu-item relative w-full"><button element="control--nav-item"
+                                        emphasis="tertiary" scale="lg"
+                                        class="peer/menu-button flex w-full items-center overflow-hidden disabled:pointer-events-none disabled:cursor-not-allowed aria-disabled:pointer-events-none aria-disabled:cursor-not-allowed [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:shrink-0"
+                                        concept="user-account-nav" data-testid="user-menu-trigger" type="button"
+                                        id="radix-_r_5_" aria-haspopup="menu" aria-expanded="false"
+                                        data-state="closed"><span element="surface--avatar" scale="md"
+                                            class="relative flex shrink-0 overflow-hidden size-8"><span
+                                                class="flex items-center justify-center">DD</span></span>
+                                        <div class="grid flex-1"><span class="truncate font-semibold">Daniel de Castro
+                                                Ruivo</span><span class="truncate">danielcastroruivo@gmail.com</span>
+                                        </div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-ellipsis-vertical ms-auto" element="shape--icon"
+                                            aria-hidden="true">
+                                            <circle cx="12" cy="12" r="1"></circle>
+                                            <circle cx="12" cy="5" r="1"></circle>
+                                            <circle cx="12" cy="19" r="1"></circle>
+                                        </svg>
+                                    </button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="flex: 1 1 0%; height: 100%; overflow-y: auto;">
+                <div layout="page" class="flex flex-1 flex-col min-h-0">
+                    <div layout="page-body" class="" data-testid="organizations-list-page">
+                        <div layout="main" class="">
+                            <div layout="main-body" class="">
+                                <div layout="container" scale="lg">
+                                    <div layout="col-section">
+                                        <div layout="row-section" concept="top-header">
+                                            <div class="flex flex-1">
+                                                <h2 element="type--heading2">All Organizations</h2>
+                                            </div><button element="control--button" emphasis="primary" scale="md"
+                                                class="" data-testid="org-create-btn"><span data-part="start-icon"><svg
+                                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                        viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                        class="lucide lucide-plus shrink-0" element="shape--icon"
+                                                        aria-hidden="true">
+                                                        <path d="M5 12h14"></path>
+                                                        <path d="M12 5v14"></path>
+                                                    </svg></span><span>Create Organization</span></button>
+                                        </div>
+                                        <div element="surface--card" class="flex flex-col">
+                                            <div element="surface--header"
+                                                class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start has-data-[slot=card-action]:grid-cols-[1fr_auto]"
+                                                layout="row-section" concept="card-header">
+                                                <div layout="row-section" class="flex flex-wrap items-center w-full">
+                                                    <div element="field--input" scale="sm"
+                                                        class="flex items-center min-w-0 flex-1"><span
+                                                            data-part="start-icon"><svg
+                                                                xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                height="24" viewBox="0 0 24 24" fill="none"
+                                                                stroke="currentColor" stroke-width="2"
+                                                                stroke-linecap="round" stroke-linejoin="round"
+                                                                class="lucide lucide-search" element="shape--icon"
+                                                                aria-hidden="true">
+                                                                <path d="m21 21-4.34-4.34"></path>
+                                                                <circle cx="11" cy="11" r="8"></circle>
+                                                            </svg></span><input class="min-w-0 flex-1"
+                                                            placeholder="Search organizations..."
+                                                            data-testid="org-filter-search" type="text" value=""></div>
+                                                    <button type="button" role="combobox" aria-controls="radix-_r_7_"
+                                                        aria-expanded="false" aria-autocomplete="none" dir="ltr"
+                                                        data-state="closed" element="field--select" scale="md"
+                                                        class="flex items-center justify-between disabled:pointer-events-none disabled:cursor-not-allowed [&amp;&gt;span]:line-clamp-1 w-44"><span
+                                                            style="pointer-events: none;">All Status</span><svg
+                                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="lucide lucide-chevron-down size-4 shrink-0"
+                                                            aria-hidden="true">
+                                                            <path d="m6 9 6 6 6-6"></path>
+                                                        </svg></button><button type="button" role="combobox"
+                                                        aria-controls="radix-_r_8_" aria-expanded="false"
+                                                        aria-autocomplete="none" dir="ltr" data-state="closed"
+                                                        element="field--select" scale="md"
+                                                        class="flex items-center justify-between disabled:pointer-events-none disabled:cursor-not-allowed [&amp;&gt;span]:line-clamp-1 w-44"><span
+                                                            style="pointer-events: none;">All Types</span><svg
+                                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="lucide lucide-chevron-down size-4 shrink-0"
+                                                            aria-hidden="true">
+                                                            <path d="m6 9 6 6 6-6"></path>
+                                                        </svg></button>
+                                                </div>
+                                            </div>
+                                            <div element="surface--content" class="">
+                                                <div layout="col-section" class="relative">
+                                                    <div
+                                                        class="absolute inset-0 z-10 items-center justify-center hidden">
+                                                        <div element="surface--spinner" scale="md"
+                                                            class="flex items-center justify-center">
+                                                            <div class="animate-spin"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="relative overflow-x-auto">
+                                                        <table element="table--root" class="w-full"
+                                                            data-testid="org-list">
+                                                            <thead element="table--header" class="">
+                                                                <tr element="table--header-row" class="">
+                                                                    <th element="table--header-cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        Name</th>
+                                                                    <th element="table--header-cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        Type</th>
+                                                                    <th element="table--header-cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        Contact Person</th>
+                                                                    <th element="table--header-cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        Status</th>
+                                                                    <th element="table--header-cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        Members</th>
+                                                                    <th element="table--header-cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody element="table--body" class="">
+                                                                <tr element="table--row" class="" layout="item"
+                                                                    data-testid="org-card">
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><span
+                                                                                element="surface--avatar" scale="md"
+                                                                                class="relative flex shrink-0 overflow-hidden size-10"><span
+                                                                                    class="flex items-center justify-center">AI</span></span><span
+                                                                                element="type--heading4">ACME inc</span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><svg
+                                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                                width="24" height="24"
+                                                                                viewBox="0 0 24 24" fill="none"
+                                                                                stroke="currentColor" stroke-width="2"
+                                                                                stroke-linecap="round"
+                                                                                stroke-linejoin="round"
+                                                                                class="lucide lucide-building2 lucide-building-2"
+                                                                                element="shape--icon" scale="sm"
+                                                                                aria-label="Company"
+                                                                                aria-hidden="false">
+                                                                                <path
+                                                                                    d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z">
+                                                                                </path>
+                                                                                <path
+                                                                                    d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2">
+                                                                                </path>
+                                                                                <path
+                                                                                    d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2">
+                                                                                </path>
+                                                                                <path d="M10 6h4"></path>
+                                                                                <path d="M10 10h4"></path>
+                                                                                <path d="M10 14h4"></path>
+                                                                                <path d="M10 18h4"></path>
+                                                                            </svg><span element="type--body-small"
+                                                                                emphasis="quiet">Company</span></div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center">-</div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><span
+                                                                                element="surface--badge"
+                                                                                emphasis="primary" status="success"
+                                                                                scale="xs"
+                                                                                class="inline-flex items-center justify-center whitespace-nowrap shrink-0 [&amp;&gt;svg]:pointer-events-none overflow-hidden">Active</span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><span
+                                                                                element="surface--badge"
+                                                                                emphasis="primary" scale="xs"
+                                                                                class="inline-flex items-center justify-center whitespace-nowrap shrink-0 [&amp;&gt;svg]:pointer-events-none overflow-hidden"
+                                                                                concept="member-count">1</span></div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]"
+                                                                        concept="row-actions">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><button
+                                                                                element="control--button"
+                                                                                emphasis="secondary" scale="sm"
+                                                                                class=""><span><svg
+                                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                                        width="24" height="24"
+                                                                                        viewBox="0 0 24 24" fill="none"
+                                                                                        stroke="currentColor"
+                                                                                        stroke-width="2"
+                                                                                        stroke-linecap="round"
+                                                                                        stroke-linejoin="round"
+                                                                                        class="lucide lucide-arrow-right shrink-0"
+                                                                                        element="shape--icon"
+                                                                                        aria-hidden="true">
+                                                                                        <path d="M5 12h14"></path>
+                                                                                        <path d="m12 5 7 7-7 7"></path>
+                                                                                    </svg></span></button></div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr element="table--row" class="" layout="item"
+                                                                    data-testid="org-card">
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><span
+                                                                                element="surface--avatar" scale="md"
+                                                                                class="relative flex shrink-0 overflow-hidden size-10"><span
+                                                                                    class="flex items-center justify-center">A</span></span><span
+                                                                                element="type--heading4">Altar</span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><svg
+                                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                                width="24" height="24"
+                                                                                viewBox="0 0 24 24" fill="none"
+                                                                                stroke="currentColor" stroke-width="2"
+                                                                                stroke-linecap="round"
+                                                                                stroke-linejoin="round"
+                                                                                class="lucide lucide-building2 lucide-building-2"
+                                                                                element="shape--icon" scale="sm"
+                                                                                aria-label="Company"
+                                                                                aria-hidden="false">
+                                                                                <path
+                                                                                    d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z">
+                                                                                </path>
+                                                                                <path
+                                                                                    d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2">
+                                                                                </path>
+                                                                                <path
+                                                                                    d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2">
+                                                                                </path>
+                                                                                <path d="M10 6h4"></path>
+                                                                                <path d="M10 10h4"></path>
+                                                                                <path d="M10 14h4"></path>
+                                                                                <path d="M10 18h4"></path>
+                                                                            </svg><span element="type--body-small"
+                                                                                emphasis="quiet">Company</span></div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center">-</div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><span
+                                                                                element="surface--badge"
+                                                                                emphasis="primary" status="success"
+                                                                                scale="xs"
+                                                                                class="inline-flex items-center justify-center whitespace-nowrap shrink-0 [&amp;&gt;svg]:pointer-events-none overflow-hidden">Active</span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><span
+                                                                                element="surface--badge"
+                                                                                emphasis="primary" scale="xs"
+                                                                                class="inline-flex items-center justify-center whitespace-nowrap shrink-0 [&amp;&gt;svg]:pointer-events-none overflow-hidden"
+                                                                                concept="member-count">2</span></div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]"
+                                                                        concept="row-actions">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><button
+                                                                                element="control--button"
+                                                                                emphasis="secondary" scale="sm"
+                                                                                class=""><span><svg
+                                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                                        width="24" height="24"
+                                                                                        viewBox="0 0 24 24" fill="none"
+                                                                                        stroke="currentColor"
+                                                                                        stroke-width="2"
+                                                                                        stroke-linecap="round"
+                                                                                        stroke-linejoin="round"
+                                                                                        class="lucide lucide-arrow-right shrink-0"
+                                                                                        element="shape--icon"
+                                                                                        aria-hidden="true">
+                                                                                        <path d="M5 12h14"></path>
+                                                                                        <path d="m12 5 7 7-7 7"></path>
+                                                                                    </svg></span></button></div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr element="table--row" class="" layout="item"
+                                                                    data-testid="org-card">
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><span
+                                                                                element="surface--avatar" scale="md"
+                                                                                class="relative flex shrink-0 overflow-hidden size-10"><span
+                                                                                    class="flex items-center justify-center">AE</span></span><span
+                                                                                element="type--heading4">Avo
+                                                                                Emilia</span></div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><svg
+                                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                                width="24" height="24"
+                                                                                viewBox="0 0 24 24" fill="none"
+                                                                                stroke="currentColor" stroke-width="2"
+                                                                                stroke-linecap="round"
+                                                                                stroke-linejoin="round"
+                                                                                class="lucide lucide-heart"
+                                                                                element="shape--icon" scale="sm"
+                                                                                aria-label="Organization"
+                                                                                aria-hidden="false">
+                                                                                <path
+                                                                                    d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
+                                                                                </path>
+                                                                            </svg><span element="type--body-small"
+                                                                                emphasis="quiet">Organization</span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center">-</div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><span
+                                                                                element="surface--badge"
+                                                                                emphasis="primary" status="success"
+                                                                                scale="xs"
+                                                                                class="inline-flex items-center justify-center whitespace-nowrap shrink-0 [&amp;&gt;svg]:pointer-events-none overflow-hidden">Active</span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><span
+                                                                                element="surface--badge"
+                                                                                emphasis="primary" scale="xs"
+                                                                                class="inline-flex items-center justify-center whitespace-nowrap shrink-0 [&amp;&gt;svg]:pointer-events-none overflow-hidden"
+                                                                                concept="member-count">2</span></div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]"
+                                                                        concept="row-actions">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><button
+                                                                                element="control--button"
+                                                                                emphasis="secondary" scale="sm"
+                                                                                class=""><span><svg
+                                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                                        width="24" height="24"
+                                                                                        viewBox="0 0 24 24" fill="none"
+                                                                                        stroke="currentColor"
+                                                                                        stroke-width="2"
+                                                                                        stroke-linecap="round"
+                                                                                        stroke-linejoin="round"
+                                                                                        class="lucide lucide-arrow-right shrink-0"
+                                                                                        element="shape--icon"
+                                                                                        aria-hidden="true">
+                                                                                        <path d="M5 12h14"></path>
+                                                                                        <path d="m12 5 7 7-7 7"></path>
+                                                                                    </svg></span></button></div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr element="table--row" class="" layout="item"
+                                                                    data-testid="org-card">
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><span
+                                                                                element="surface--avatar" scale="md"
+                                                                                class="relative flex shrink-0 overflow-hidden size-10"><span
+                                                                                    class="flex items-center justify-center">AM</span></span><span
+                                                                                element="type--heading4">avo
+                                                                                maria</span></div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><svg
+                                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                                width="24" height="24"
+                                                                                viewBox="0 0 24 24" fill="none"
+                                                                                stroke="currentColor" stroke-width="2"
+                                                                                stroke-linecap="round"
+                                                                                stroke-linejoin="round"
+                                                                                class="lucide lucide-heart"
+                                                                                element="shape--icon" scale="sm"
+                                                                                aria-label="Organization"
+                                                                                aria-hidden="false">
+                                                                                <path
+                                                                                    d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
+                                                                                </path>
+                                                                            </svg><span element="type--body-small"
+                                                                                emphasis="quiet">Organization</span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center">-</div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><span
+                                                                                element="surface--badge"
+                                                                                emphasis="primary" status="success"
+                                                                                scale="xs"
+                                                                                class="inline-flex items-center justify-center whitespace-nowrap shrink-0 [&amp;&gt;svg]:pointer-events-none overflow-hidden">Active</span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><span
+                                                                                element="surface--badge"
+                                                                                emphasis="primary" scale="xs"
+                                                                                class="inline-flex items-center justify-center whitespace-nowrap shrink-0 [&amp;&gt;svg]:pointer-events-none overflow-hidden"
+                                                                                concept="member-count">1</span></div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]"
+                                                                        concept="row-actions">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><button
+                                                                                element="control--button"
+                                                                                emphasis="secondary" scale="sm"
+                                                                                class=""><span><svg
+                                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                                        width="24" height="24"
+                                                                                        viewBox="0 0 24 24" fill="none"
+                                                                                        stroke="currentColor"
+                                                                                        stroke-width="2"
+                                                                                        stroke-linecap="round"
+                                                                                        stroke-linejoin="round"
+                                                                                        class="lucide lucide-arrow-right shrink-0"
+                                                                                        element="shape--icon"
+                                                                                        aria-hidden="true">
+                                                                                        <path d="M5 12h14"></path>
+                                                                                        <path d="m12 5 7 7-7 7"></path>
+                                                                                    </svg></span></button></div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr element="table--row" class="" layout="item"
+                                                                    data-testid="org-card">
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><span
+                                                                                element="surface--avatar" scale="md"
+                                                                                class="relative flex shrink-0 overflow-hidden size-10"><span
+                                                                                    class="flex items-center justify-center">AR</span></span><span
+                                                                                element="type--heading4">Avo
+                                                                                Rogerio</span></div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><svg
+                                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                                width="24" height="24"
+                                                                                viewBox="0 0 24 24" fill="none"
+                                                                                stroke="currentColor" stroke-width="2"
+                                                                                stroke-linecap="round"
+                                                                                stroke-linejoin="round"
+                                                                                class="lucide lucide-heart"
+                                                                                element="shape--icon" scale="sm"
+                                                                                aria-label="Organization"
+                                                                                aria-hidden="false">
+                                                                                <path
+                                                                                    d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
+                                                                                </path>
+                                                                            </svg><span element="type--body-small"
+                                                                                emphasis="quiet">Organization</span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center">-</div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><span
+                                                                                element="surface--badge"
+                                                                                emphasis="primary" status="success"
+                                                                                scale="xs"
+                                                                                class="inline-flex items-center justify-center whitespace-nowrap shrink-0 [&amp;&gt;svg]:pointer-events-none overflow-hidden">Active</span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><span
+                                                                                element="surface--badge"
+                                                                                emphasis="primary" scale="xs"
+                                                                                class="inline-flex items-center justify-center whitespace-nowrap shrink-0 [&amp;&gt;svg]:pointer-events-none overflow-hidden"
+                                                                                concept="member-count">1</span></div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]"
+                                                                        concept="row-actions">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><button
+                                                                                element="control--button"
+                                                                                emphasis="secondary" scale="sm"
+                                                                                class=""><span><svg
+                                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                                        width="24" height="24"
+                                                                                        viewBox="0 0 24 24" fill="none"
+                                                                                        stroke="currentColor"
+                                                                                        stroke-width="2"
+                                                                                        stroke-linecap="round"
+                                                                                        stroke-linejoin="round"
+                                                                                        class="lucide lucide-arrow-right shrink-0"
+                                                                                        element="shape--icon"
+                                                                                        aria-hidden="true">
+                                                                                        <path d="M5 12h14"></path>
+                                                                                        <path d="m12 5 7 7-7 7"></path>
+                                                                                    </svg></span></button></div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr element="table--row" class="" layout="item"
+                                                                    data-testid="org-card">
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><span
+                                                                                element="surface--avatar" scale="md"
+                                                                                class="relative flex shrink-0 overflow-hidden size-10"><span
+                                                                                    class="flex items-center justify-center">DC</span></span><span
+                                                                                element="type--heading4">Dorothy Team
+                                                                                Network</span></div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><svg
+                                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                                width="24" height="24"
+                                                                                viewBox="0 0 24 24" fill="none"
+                                                                                stroke="currentColor" stroke-width="2"
+                                                                                stroke-linecap="round"
+                                                                                stroke-linejoin="round"
+                                                                                class="lucide lucide-heart"
+                                                                                element="shape--icon" scale="sm"
+                                                                                aria-label="Organization"
+                                                                                aria-hidden="false">
+                                                                                <path
+                                                                                    d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
+                                                                                </path>
+                                                                            </svg><span element="type--body-small"
+                                                                                emphasis="quiet">Organization</span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center">-</div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><span
+                                                                                element="surface--badge"
+                                                                                emphasis="primary" status="success"
+                                                                                scale="xs"
+                                                                                class="inline-flex items-center justify-center whitespace-nowrap shrink-0 [&amp;&gt;svg]:pointer-events-none overflow-hidden">Active</span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><span
+                                                                                element="surface--badge"
+                                                                                emphasis="primary" scale="xs"
+                                                                                class="inline-flex items-center justify-center whitespace-nowrap shrink-0 [&amp;&gt;svg]:pointer-events-none overflow-hidden"
+                                                                                concept="member-count">4</span></div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]"
+                                                                        concept="row-actions">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><button
+                                                                                element="control--button"
+                                                                                emphasis="secondary" scale="sm"
+                                                                                class=""><span><svg
+                                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                                        width="24" height="24"
+                                                                                        viewBox="0 0 24 24" fill="none"
+                                                                                        stroke="currentColor"
+                                                                                        stroke-width="2"
+                                                                                        stroke-linecap="round"
+                                                                                        stroke-linejoin="round"
+                                                                                        class="lucide lucide-arrow-right shrink-0"
+                                                                                        element="shape--icon"
+                                                                                        aria-hidden="true">
+                                                                                        <path d="M5 12h14"></path>
+                                                                                        <path d="m12 5 7 7-7 7"></path>
+                                                                                    </svg></span></button></div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr element="table--row" class="" layout="item"
+                                                                    data-testid="org-card">
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><span
+                                                                                element="surface--avatar" scale="md"
+                                                                                class="relative flex shrink-0 overflow-hidden size-10"><span
+                                                                                    class="flex items-center justify-center">LC</span></span><span
+                                                                                element="type--heading4">Linda Team
+                                                                                Network</span></div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><svg
+                                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                                width="24" height="24"
+                                                                                viewBox="0 0 24 24" fill="none"
+                                                                                stroke="currentColor" stroke-width="2"
+                                                                                stroke-linecap="round"
+                                                                                stroke-linejoin="round"
+                                                                                class="lucide lucide-heart"
+                                                                                element="shape--icon" scale="sm"
+                                                                                aria-label="Organization"
+                                                                                aria-hidden="false">
+                                                                                <path
+                                                                                    d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
+                                                                                </path>
+                                                                            </svg><span element="type--body-small"
+                                                                                emphasis="quiet">Organization</span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center">-</div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><span
+                                                                                element="surface--badge"
+                                                                                emphasis="primary" status="success"
+                                                                                scale="xs"
+                                                                                class="inline-flex items-center justify-center whitespace-nowrap shrink-0 [&amp;&gt;svg]:pointer-events-none overflow-hidden">Active</span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><span
+                                                                                element="surface--badge"
+                                                                                emphasis="primary" scale="xs"
+                                                                                class="inline-flex items-center justify-center whitespace-nowrap shrink-0 [&amp;&gt;svg]:pointer-events-none overflow-hidden"
+                                                                                concept="member-count">0</span></div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]"
+                                                                        concept="row-actions">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><button
+                                                                                element="control--button"
+                                                                                emphasis="secondary" scale="sm"
+                                                                                class=""><span><svg
+                                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                                        width="24" height="24"
+                                                                                        viewBox="0 0 24 24" fill="none"
+                                                                                        stroke="currentColor"
+                                                                                        stroke-width="2"
+                                                                                        stroke-linecap="round"
+                                                                                        stroke-linejoin="round"
+                                                                                        class="lucide lucide-arrow-right shrink-0"
+                                                                                        element="shape--icon"
+                                                                                        aria-hidden="true">
+                                                                                        <path d="M5 12h14"></path>
+                                                                                        <path d="m12 5 7 7-7 7"></path>
+                                                                                    </svg></span></button></div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr element="table--row" class="" layout="item"
+                                                                    data-testid="org-card">
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><span
+                                                                                element="surface--avatar" scale="md"
+                                                                                class="relative flex shrink-0 overflow-hidden size-10"><span
+                                                                                    class="flex items-center justify-center">ON</span></span><span
+                                                                                element="type--heading4">Ops NYC</span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><svg
+                                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                                width="24" height="24"
+                                                                                viewBox="0 0 24 24" fill="none"
+                                                                                stroke="currentColor" stroke-width="2"
+                                                                                stroke-linecap="round"
+                                                                                stroke-linejoin="round"
+                                                                                class="lucide lucide-headphones"
+                                                                                element="shape--icon" scale="sm"
+                                                                                aria-label="Operations Center"
+                                                                                aria-hidden="false">
+                                                                                <path
+                                                                                    d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3">
+                                                                                </path>
+                                                                            </svg><span element="type--body-small"
+                                                                                emphasis="quiet">Operations
+                                                                                Center</span></div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center">-</div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><span
+                                                                                element="surface--badge"
+                                                                                emphasis="primary" status="success"
+                                                                                scale="xs"
+                                                                                class="inline-flex items-center justify-center whitespace-nowrap shrink-0 [&amp;&gt;svg]:pointer-events-none overflow-hidden">Active</span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><span
+                                                                                element="surface--badge"
+                                                                                emphasis="primary" scale="xs"
+                                                                                class="inline-flex items-center justify-center whitespace-nowrap shrink-0 [&amp;&gt;svg]:pointer-events-none overflow-hidden"
+                                                                                concept="member-count">2</span></div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]"
+                                                                        concept="row-actions">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><button
+                                                                                element="control--button"
+                                                                                emphasis="secondary" scale="sm"
+                                                                                class=""><span><svg
+                                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                                        width="24" height="24"
+                                                                                        viewBox="0 0 24 24" fill="none"
+                                                                                        stroke="currentColor"
+                                                                                        stroke-width="2"
+                                                                                        stroke-linecap="round"
+                                                                                        stroke-linejoin="round"
+                                                                                        class="lucide lucide-arrow-right shrink-0"
+                                                                                        element="shape--icon"
+                                                                                        aria-hidden="true">
+                                                                                        <path d="M5 12h14"></path>
+                                                                                        <path d="m12 5 7 7-7 7"></path>
+                                                                                    </svg></span></button></div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr element="table--row" class="" layout="item"
+                                                                    data-testid="org-card">
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><span
+                                                                                element="surface--avatar" scale="md"
+                                                                                class="relative flex shrink-0 overflow-hidden size-10"><span
+                                                                                    class="flex items-center justify-center">PA</span></span><span
+                                                                                element="type--heading4">Platform
+                                                                                Admin</span></div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><svg
+                                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                                width="24" height="24"
+                                                                                viewBox="0 0 24 24" fill="none"
+                                                                                stroke="currentColor" stroke-width="2"
+                                                                                stroke-linecap="round"
+                                                                                stroke-linejoin="round"
+                                                                                class="lucide lucide-cog"
+                                                                                element="shape--icon" scale="sm"
+                                                                                aria-label="Platform Admin"
+                                                                                aria-hidden="false">
+                                                                                <path
+                                                                                    d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z">
+                                                                                </path>
+                                                                                <path
+                                                                                    d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z">
+                                                                                </path>
+                                                                                <path d="M12 2v2"></path>
+                                                                                <path d="M12 22v-2"></path>
+                                                                                <path d="m17 20.66-1-1.73"></path>
+                                                                                <path d="M11 10.27 7 3.34"></path>
+                                                                                <path d="m20.66 17-1.73-1"></path>
+                                                                                <path d="m3.34 7 1.73 1"></path>
+                                                                                <path d="M14 12h8"></path>
+                                                                                <path d="M2 12h2"></path>
+                                                                                <path d="m20.66 7-1.73 1"></path>
+                                                                                <path d="m3.34 17 1.73-1"></path>
+                                                                                <path d="m17 3.34-1 1.73"></path>
+                                                                                <path d="m11 13.73-4 6.93"></path>
+                                                                            </svg><span element="type--body-small"
+                                                                                emphasis="quiet">Platform Admin</span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center">-</div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><span
+                                                                                element="surface--badge"
+                                                                                emphasis="primary" status="success"
+                                                                                scale="xs"
+                                                                                class="inline-flex items-center justify-center whitespace-nowrap shrink-0 [&amp;&gt;svg]:pointer-events-none overflow-hidden">Active</span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><span
+                                                                                element="surface--badge"
+                                                                                emphasis="primary" scale="xs"
+                                                                                class="inline-flex items-center justify-center whitespace-nowrap shrink-0 [&amp;&gt;svg]:pointer-events-none overflow-hidden"
+                                                                                concept="member-count">1</span></div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]"
+                                                                        concept="row-actions">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><button
+                                                                                element="control--button"
+                                                                                emphasis="secondary" scale="sm"
+                                                                                class=""><span><svg
+                                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                                        width="24" height="24"
+                                                                                        viewBox="0 0 24 24" fill="none"
+                                                                                        stroke="currentColor"
+                                                                                        stroke-width="2"
+                                                                                        stroke-linecap="round"
+                                                                                        stroke-linejoin="round"
+                                                                                        class="lucide lucide-arrow-right shrink-0"
+                                                                                        element="shape--icon"
+                                                                                        aria-hidden="true">
+                                                                                        <path d="M5 12h14"></path>
+                                                                                        <path d="m12 5 7 7-7 7"></path>
+                                                                                    </svg></span></button></div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr element="table--row" class="" layout="item"
+                                                                    data-testid="org-card">
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><span
+                                                                                element="surface--avatar" scale="md"
+                                                                                class="relative flex shrink-0 overflow-hidden size-10"><span
+                                                                                    class="flex items-center justify-center">PS</span></span><span
+                                                                                element="type--heading4">PROWD System
+                                                                                Admin</span></div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><svg
+                                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                                width="24" height="24"
+                                                                                viewBox="0 0 24 24" fill="none"
+                                                                                stroke="currentColor" stroke-width="2"
+                                                                                stroke-linecap="round"
+                                                                                stroke-linejoin="round"
+                                                                                class="lucide lucide-shield-x"
+                                                                                element="shape--icon" scale="sm"
+                                                                                aria-label="System Admin"
+                                                                                aria-hidden="false">
+                                                                                <path
+                                                                                    d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
+                                                                                </path>
+                                                                                <path d="m14.5 9.5-5 5"></path>
+                                                                                <path d="m9.5 9.5 5 5"></path>
+                                                                            </svg><span element="type--body-small"
+                                                                                emphasis="quiet">System Admin</span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center">-</div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><span
+                                                                                element="surface--badge"
+                                                                                emphasis="primary" status="success"
+                                                                                scale="xs"
+                                                                                class="inline-flex items-center justify-center whitespace-nowrap shrink-0 [&amp;&gt;svg]:pointer-events-none overflow-hidden">Active</span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><span
+                                                                                element="surface--badge"
+                                                                                emphasis="primary" scale="xs"
+                                                                                class="inline-flex items-center justify-center whitespace-nowrap shrink-0 [&amp;&gt;svg]:pointer-events-none overflow-hidden"
+                                                                                concept="member-count">1</span></div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]"
+                                                                        concept="row-actions">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><button
+                                                                                element="control--button"
+                                                                                emphasis="secondary" scale="sm"
+                                                                                class=""><span><svg
+                                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                                        width="24" height="24"
+                                                                                        viewBox="0 0 24 24" fill="none"
+                                                                                        stroke="currentColor"
+                                                                                        stroke-width="2"
+                                                                                        stroke-linecap="round"
+                                                                                        stroke-linejoin="round"
+                                                                                        class="lucide lucide-arrow-right shrink-0"
+                                                                                        element="shape--icon"
+                                                                                        aria-hidden="true">
+                                                                                        <path d="M5 12h14"></path>
+                                                                                        <path d="m12 5 7 7-7 7"></path>
+                                                                                    </svg></span></button></div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr element="table--row" class="" layout="item"
+                                                                    data-testid="org-card">
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><span
+                                                                                element="surface--avatar" scale="md"
+                                                                                class="relative flex shrink-0 overflow-hidden size-10"><span
+                                                                                    class="flex items-center justify-center">RC</span></span><span
+                                                                                element="type--heading4">Robert Team
+                                                                                Network</span></div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><svg
+                                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                                width="24" height="24"
+                                                                                viewBox="0 0 24 24" fill="none"
+                                                                                stroke="currentColor" stroke-width="2"
+                                                                                stroke-linecap="round"
+                                                                                stroke-linejoin="round"
+                                                                                class="lucide lucide-heart"
+                                                                                element="shape--icon" scale="sm"
+                                                                                aria-label="Organization"
+                                                                                aria-hidden="false">
+                                                                                <path
+                                                                                    d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
+                                                                                </path>
+                                                                            </svg><span element="type--body-small"
+                                                                                emphasis="quiet">Organization</span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center">-</div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><span
+                                                                                element="surface--badge"
+                                                                                emphasis="primary" status="success"
+                                                                                scale="xs"
+                                                                                class="inline-flex items-center justify-center whitespace-nowrap shrink-0 [&amp;&gt;svg]:pointer-events-none overflow-hidden">Active</span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><span
+                                                                                element="surface--badge"
+                                                                                emphasis="primary" scale="xs"
+                                                                                class="inline-flex items-center justify-center whitespace-nowrap shrink-0 [&amp;&gt;svg]:pointer-events-none overflow-hidden"
+                                                                                concept="member-count">2</span></div>
+                                                                    </td>
+                                                                    <td element="table--cell"
+                                                                        class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]"
+                                                                        concept="row-actions">
+                                                                        <div element="table--cell-content"
+                                                                            class="flex items-center"><button
+                                                                                element="control--button"
+                                                                                emphasis="secondary" scale="sm"
+                                                                                class=""><span><svg
+                                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                                        width="24" height="24"
+                                                                                        viewBox="0 0 24 24" fill="none"
+                                                                                        stroke="currentColor"
+                                                                                        stroke-width="2"
+                                                                                        stroke-linecap="round"
+                                                                                        stroke-linejoin="round"
+                                                                                        class="lucide lucide-arrow-right shrink-0"
+                                                                                        element="shape--icon"
+                                                                                        aria-hidden="true">
+                                                                                        <path d="M5 12h14"></path>
+                                                                                        <path d="m12 5 7 7-7 7"></path>
+                                                                                    </svg></span></button></div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div element="surface--footer" class="flex items-center"
+                                                layout="row-section" concept="pagination-card-footer">
+                                                <div class="flex items-center justify-between gap-4 py-2"
+                                                    data-testid="list-pagination">
+                                                    <div class="text-sm text-muted-foreground">Showing
+                                                        <strong>1</strong>–<strong>11</strong> of <strong>11</strong>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div></div>
+        <section aria-label="Notifications alt+T" tabindex="-1" aria-live="polite" aria-relevant="additions text"
+            aria-atomic="false"></section>
+    </div>
+    <script type="module" src="/src/main.tsx?t=1778368069697"></script>
+
+
+</body>

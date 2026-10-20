@@ -1,0 +1,18 @@
+{
+  "id": "term/public-surface",
+  "kind": "term",
+  "title": "public surface",
+  "status": "approved",
+  "subjects": [
+    "main"
+  ],
+  "tags": [
+    "architecture"
+  ],
+  "paths": [],
+  "term": {
+    "def": "What a [[slice]] exports through its barrels (`api/index.ts`, `models/index.ts`, `web/index.ts`). Anything not in a barrel is internal and unreachable.",
+    "aliases": [],
+    "proposed": true
+  }
+}

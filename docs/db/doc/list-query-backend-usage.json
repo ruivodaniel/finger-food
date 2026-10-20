@@ -1,0 +1,171 @@
+{
+  "id": "doc/list-query-backend-usage",
+  "kind": "doc",
+  "title": "Backend Usage",
+  "status": "converted",
+  "subject": "list-query",
+  "tags": [
+    "list-query",
+    "consumer"
+  ],
+  "paths": [
+    "shared/libs/list-query"
+  ],
+  "summary": "Everything in this doc lives under `@prowd/list-query/server`. The root entry (`@prowd/list-query`) exposes only isomorphic types and the sort parser.",
+  "docId": "list-query-backend-usage",
+  "doc": {
+    "axioms": [],
+    "purpose": {
+      "intro": "Everything in this doc lives under `@prowd/list-query/server`. The root entry (`@prowd/list-query`) exposes only isomorphic types and the sort parser."
+    },
+    "reference": [
+      {
+        "topic": "`createListQuerySchema`",
+        "claims": [
+          {
+            "text": "**Use `.extend()`, not `.merge()`.** Zod's `.merge()` takes unknown-keys mode from the right-hand side (default: strip), silently losing the strict mode the factory applied. `.extend()` preserves it. This is the single most important gotcha of the factory."
+          }
+        ],
+        "statement": "Produces the validator every list endpoint composes with its own filters.",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "import { z } from \"zod\";\nimport { createListQuerySchema } from \"@prowd/list-query/server\";\nimport { LIST_QUERY_DEFAULTS } from \"@configs/list-query\";\n\nexport const GetOrganizationsQuerySchema = createListQuerySchema({\n  defaults: LIST_QUERY_DEFAULTS,\n  sortable: [\"name\", \"createdAt\"] as const,\n  defaultSort: \"name\",\n  searchable: true,\n}).extend({\n  status: z.enum([\"active\", \"inactive\"]).optional(),\n  type:   z.enum([\"system_admin\", \"platform_admin\", \"organization\"]).optional(),\n});",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "`createListQuerySchema` › What you pass",
+        "claims": [
+          {
+            "text": "**`sortable`** — tuple of allowed sort field names. Any token in the client's `sort` param that isn't in this list is a 400."
+          },
+          {
+            "text": "**`defaultSort`** — mandatory default. Used when the client sends no `sort`. Same grammar as the `sort` param (`\"name\"`, `\"-createdAt\"`, `\"type,-name\"`). The default itself must parse against `sortable`."
+          },
+          {
+            "text": "**`searchable`** — if `true`, the schema accepts an optional `search` string. If `false` (or omitted), sending `search` is a 400. No silent ignoring."
+          },
+          {
+            "text": "**`defaults`** — the three numeric defaults (`page`, `pageSize`, `maxPageSize`). Typically `LIST_QUERY_DEFAULTS` from `@configs/list-query`. Omit for the lib baseline (1 / 25 / 100)."
+          }
+        ]
+      },
+      {
+        "topic": "`createListQuerySchema` › What you get",
+        "claims": [
+          {
+            "text": "Strict means any unknown key is a 400. After `.extend({...})` the extended schema stays strict."
+          }
+        ],
+        "statement": "A strict ZodObject whose output type is:",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "{\n  page: number;\n  pageSize: number;\n  sort: SortSpec[];      // always non-empty — default injected if absent\n  search?: string;        // only present if searchable: true\n}",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "`createListQuerySchema` › Validator rejections (all → 400)",
+        "claims": [],
+        "imagesAndDiagrams": [
+          {
+            "type": "ascii",
+            "value": "| Input | Reason |\n|---|---|\n| `page=0`, `page=-1`, `page=1.5`, `page=abc` | `page` must be positive int |\n| `pageSize=101` (with default max) | exceeds `maxPageSize` |\n| `sort=bogus` | unknown field (not in `sortable`) |\n| `sort=name,-name` | duplicate field |\n| `sort=name,` | empty token (trailing comma) |\n| `search=...` on non-searchable endpoint | unknown key via strict |\n| any other extra key | unknown key via strict |"
+          }
+        ]
+      },
+      {
+        "topic": "`buildOrderBy`",
+        "claims": [
+          {
+            "text": "The column map must cover every entry in the zod `sortable` whitelist for the same endpoint — the two stay in sync by convention. A runtime mismatch throws (it's a programmer bug, not a user bug)."
+          },
+          {
+            "text": "The tiebreaker is appended as `asc(...)` unless the caller already sorted by the same column identity, in which case the declared direction wins and no duplicate is added."
+          },
+          {
+            "text": "Null ordering follows PostgreSQL defaults — we don't emit `NULLS FIRST/LAST`."
+          }
+        ],
+        "statement": "Translates `SortSpec[]` into a Drizzle `SQL[]` with the tiebreaker auto-appended.",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "import { buildOrderBy } from \"@prowd/list-query/server\";\nimport * as schema from \"../models\";\n\nconst orderBy = buildOrderBy(\n  query.sort,\n  {\n    name:      schema.organization.name,\n    createdAt: schema.organization.createdAt,\n  },\n  schema.organization.id, // tiebreaker\n);",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "`applyPagination`",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "import { applyPagination } from \"@prowd/list-query/server\";\n\nconst listQ = applyPagination(\n  base.orderBy(...orderBy),\n  query.page,\n  query.pageSize,\n);",
+                "caption": "ts"
+              }
+            ]
+          }
+        ],
+        "statement": "Equivalent to `.limit(pageSize).offset((page - 1) * pageSize)`. The helper exists so every list endpoint computes the offset identically and the intent stays visible at the call site."
+      },
+      {
+        "topic": "The \"same where\" rule",
+        "claims": [
+          {
+            "text": "The count query MUST use the exact same `where` expression as the list query. Never diverge."
+          },
+          {
+            "text": "The lib doesn't enforce this — it can't, the two queries are built separately. Your code enforces it by building one `whereExpr` variable and passing it to both:"
+          },
+          {
+            "text": "One named variable, used twice. A diff that touches one `where` without the other is obvious during code review. That's the enforcement mechanism."
+          }
+        ],
+        "statement": "This is the single most important backend invariant:",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "const whereExpr = and(\n  org.where,\n  query.search ? ilike(schema.organization.name, `%${query.search}%`) : undefined,\n  query.status ? sql`(${schema.organization.metadata})::jsonb->>'status' = ${query.status}` : undefined,\n);\n\nconst base = this.db\n  .select({ ...org.select } as SelectedFields)\n  .from(schema.organization)\n  .where(whereExpr);                       // <-- same whereExpr\n\nconst listQ  = applyPagination(base.orderBy(...orderBy), query.page, query.pageSize);\nconst countQ = this.db\n  .select({ c: count() })\n  .from(schema.organization)\n  .where(whereExpr);                       // <-- same whereExpr\n\nconst [rows, [{ c }]] = await Promise.all([listQ, countQ]);\nreturn { rows, total: Number(c) };",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "The \"same where\" rule › Scoped count",
+        "claims": [],
+        "statement": "When `engine.resolveForReadUpdate(...)` + `scopeFilterBuilder.compile(...)` is used, its `where` output must flow into `whereExpr` too. The count then respects the exact same scope filter as the list — unauthorised users see `total: 0` without ever hitting a 403."
+      }
+    ],
+    "review": {
+      "axioms": {
+        "state": "unreviewed"
+      },
+      "purpose": {
+        "state": "unreviewed"
+      },
+      "reference": {
+        "state": "unreviewed"
+      }
+    },
+    "converted": true
+  }
+}

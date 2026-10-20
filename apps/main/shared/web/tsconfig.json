@@ -1,0 +1,20 @@
+{
+  "files": [],
+  "references": [{ "path": "./tsconfig.app.json" }, { "path": "./tsconfig.node.json" }],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@configs/access-control": ["../../../../configs/access-control/index.ts"],
+      "@configs/access-control/*": ["../../../../configs/access-control/*"],
+      "@configs/brand": ["../../../../configs/brand/index.ts"],
+      "@configs/brand/*": ["../../../../configs/brand/*"],
+      "@configs/list-query": ["../../../../configs/libs/list-query/index.ts"],
+      "@configs/user-organization-mgmt": ["../../../../configs/user-organization-mgmt/index.ts"],
+      "@configs/user-organization-mgmt/*": ["../../../../configs/user-organization-mgmt/*"],
+      "@configs/ops-tickets": ["../../../../configs/ops-tickets/index.ts"],
+      "@configs/ops-tickets/*": ["../../../../configs/ops-tickets/*"],
+
+    }
+  }
+}

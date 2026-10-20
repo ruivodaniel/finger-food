@@ -1,0 +1,32 @@
+{
+  "id": "adr/main--scope-names-the-tier",
+  "kind": "adr",
+  "title": "The package scope names the architectural tier",
+  "status": "approved",
+  "subject": "main",
+  "tags": [
+    "main",
+    "architecture"
+  ],
+  "paths": [],
+  "summary": "Scope every workspace package by its tier: `@configs/*` · `@libs/*` · `@modules/*` · `@features/*` · `@apps/*`. Apps get a scope even though nothing imports the",
+  "adr": {
+    "date": "2026-08-11",
+    "context": "Every workspace package was scoped `@prowd/*` — one product scope covering configs, libraries, seed slices and apps alike. At an import site a [[library]], a [[seed slice]] and an [[product slice]] were indistinguishable, so the import boundaries this repo is built on were invisible in the code that violates them, and no boundary rule could be written against the specifier itself.",
+    "decision": "Scope every workspace package by its tier: `@configs/*` · `@libs/*` · `@modules/*` · `@features/*` · `@apps/*`. Apps get a scope even though nothing imports them, because the scope namespace is the vocabulary the boundary rules are written in — `nothing imports an app` is only statable if an app is nameable.",
+    "consequences": [
+      "A violation is readable at the call site: `@modules/a` importing `@modules/b` is wrong on sight, without knowing the codebase.",
+      "Every boundary rule becomes a scope-to-scope lint pattern — no path globs, no resolver knowledge. AC44's linter gets cheap.",
+      "Promoting an [[product slice|product slice]] to a [[seed slice]] rewrites every import of it. That is intended: crossing a tier is a deliberate act and should be visible in the diff.",
+      "A seed slice shipped to another product stops carrying this product's name.",
+      "**Constraint:** non-registry scopes work only because the seed is distributed by cloning the repo. If seed seed slices were ever published to a registry, `@modules` and `@libs` are not ownable npm scopes and this decision would have to be reversed.",
+      "Migration is a bijection (`@prowd/x` → `@<tier>/x`, tier fixed by the folder) touching ~337 import sites in ~277 files. It belongs in one commit of its own, applied by a script: the compiler catches every miss, but only a deterministic rewrite prevents two spellings of the same package.",
+      "Open: `team-cockpit/` sits outside the five tiers and has no scope assigned."
+    ],
+    "affects": [
+      "scaffolding-and-import-boundaries"
+    ],
+    "supersededBy": "product-slice-scope",
+    "adrStatus": "superseded"
+  }
+}

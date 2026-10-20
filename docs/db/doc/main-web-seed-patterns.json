@@ -1,0 +1,39 @@
+{
+  "id": "doc/main-web-seed-patterns",
+  "kind": "doc",
+  "title": "Seed Patterns — apps/web-main",
+  "status": "converted",
+  "subject": "main",
+  "tags": [
+    "main"
+  ],
+  "paths": [
+    "apps/main"
+  ],
+  "summary": "**What.** _Placeholder._ Document here the patterns this web app inherits from the seed — shell wiring (Shell + ShellSideNav + Page from `@prowd/layouts`), p…",
+  "docId": "main-web-seed-patterns",
+  "doc": {
+    "axioms": [],
+    "purpose": {
+      "intro": "**What.** _Placeholder._ Document here the patterns this web app inherits from the seed — shell wiring (Shell + ShellSideNav + Page from `@prowd/layouts`), provider composition order, route tree assembly, adapter pattern (router/toast/apiClient/authClient/queryClient), mixed-ownership sections (settings shell), workspace path resolution (no custom aliases). **How.** _Placeholder._ One short doc per pattern. Each cites the rule, the file in this app where it's wired, and a concrete example. **Why.** _Placeholder._ These patterns are the contract between the seed and any product built on it. Breaking them turns the seed into a one-off codebase."
+    },
+    "reference": [
+      {
+        "topic": "Content",
+        "claims": []
+      }
+    ],
+    "review": {
+      "axioms": {
+        "state": "unreviewed"
+      },
+      "purpose": {
+        "state": "unreviewed"
+      },
+      "reference": {
+        "state": "unreviewed"
+      }
+    },
+    "converted": true
+  }
+}

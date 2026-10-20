@@ -1,0 +1,186 @@
+{
+  "id": "doc/infra-k6",
+  "kind": "doc",
+  "title": "Performance Tests (k6)",
+  "status": "converted",
+  "subject": "infra",
+  "tags": [
+    "infra"
+  ],
+  "paths": [
+    "tests/k6"
+  ],
+  "summary": "k6 test scripts for load and performance testing of Seed-derived services.",
+  "docId": "infra-k6",
+  "doc": {
+    "axioms": [],
+    "purpose": {
+      "intro": "k6 test scripts for load and performance testing of Seed-derived services."
+    },
+    "reference": [
+      {
+        "topic": "Test Types",
+        "claims": [],
+        "imagesAndDiagrams": [
+          {
+            "type": "ascii",
+            "value": "| Script        | Purpose                 | VUs   | Duration | When to Run                 |\n| ------------- | ----------------------- | ----- | -------- | --------------------------- |\n| `smoke.js`    | Quick health check      | 1     | 30s      | Post-deploy CI, always safe |\n| `baseline.js` | Normal load validation  | 10    | 3 min    | Stage, during work hours    |\n| `stress.js`   | Find breaking points    | 10→50 | 3.5 min  | Stage, approved windows     |\n| `soak.js`     | Memory leaks, stability | 5     | 27 min   | Stage, off-hours only       |"
+          }
+        ]
+      },
+      {
+        "topic": "Usage",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "k6 run -e BASE_URL=https://client-dev.example.com \\\n       -e API_URL=https://api-dev.example.com \\\n       tests/k6/smoke.js\n\nk6 run -e BASE_URL=https://client-stage.example.com \\\n       -e API_URL=https://api-stage.example.com \\\n       tests/k6/baseline.js\n\nk6 run -e BASE_URL=https://client-stage.example.com \\\n       -e API_URL=https://api-stage.example.com \\\n       tests/k6/stress.js\n\nk6 run -e BASE_URL=https://client-stage.example.com \\\n       -e API_URL=https://api-stage.example.com \\\n       tests/k6/soak.js",
+                "caption": "bash"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Environment Variables",
+        "claims": [],
+        "imagesAndDiagrams": [
+          {
+            "type": "ascii",
+            "value": "| Variable   | Required | Description                    |\n| ---------- | -------- | ------------------------------ |\n| `BASE_URL` | Yes      | Web app URL                    |\n| `API_URL`  | Yes      | API URL used for health checks |"
+          }
+        ]
+      },
+      {
+        "topic": "Safe Load-Test Limits (Shared Cluster)",
+        "claims": [
+          {
+            "text": "**Never run load tests against production without explicit approval.**"
+          }
+        ],
+        "statement": "The shared cluster runs 3× t4g.large (6 vCPU, 24 GB RAM total). These limits apply:",
+        "imagesAndDiagrams": [
+          {
+            "type": "ascii",
+            "value": "| Test     | Max VUs | Max Duration | Max RPS | Environment      |\n| -------- | ------- | ------------ | ------- | ---------------- |\n| Smoke    | 1–5     | 30s          | —       | Any              |\n| Baseline | ≤20     | 5 min        | —       | Stage only       |\n| Stress   | ≤50     | 5 min        | 100     | Approved windows |\n| Soak     | ≤10     | 30 min       | —       | Off-hours only   |"
+          }
+        ]
+      },
+      {
+        "topic": "Adding New Tests",
+        "claims": [
+          {
+            "text": "Use environment variables for credentials — never hardcode"
+          },
+          {
+            "text": "Clean up test data after each iteration"
+          },
+          {
+            "text": "Set appropriate thresholds tied to SLO targets"
+          },
+          {
+            "text": "Document the test in this README"
+          }
+        ],
+        "statement": "When adding auth-flow or CRUD tests:"
+      },
+      {
+        "topic": "Performance Regression Policy",
+        "claims": [],
+        "statement": "A performance regression is any measurable degradation from the established baseline that exceeds the thresholds below.",
+        "imagesAndDiagrams": [
+          {
+            "type": "ascii",
+            "value": "| Metric      | Threshold                      | Consequence            |\n| ----------- | ------------------------------ | ---------------------- |\n| p95 latency | >20% increase from baseline    | Blocks release         |\n| p99 latency | >50% increase from baseline    | Blocks release         |\n| Error rate  | >1% (any test)                 | Blocks release         |\n| Throughput  | >15% decrease at same VU count | Investigation required |"
+          }
+        ]
+      },
+      {
+        "topic": "Performance Regression Policy › Baseline Management",
+        "claims": [
+          {
+            "text": "The scheduled `performance-baseline.yml` workflow runs weekday mornings against stage"
+          },
+          {
+            "text": "Baseline metrics are stored as workflow artifacts (`k6-summary.json`) for trend comparison"
+          },
+          {
+            "text": "After infrastructure or code changes that affect performance, re-establish the baseline and update thresholds if the change is intentional"
+          }
+        ]
+      },
+      {
+        "topic": "Performance Regression Policy › Regression Response",
+        "claims": [],
+        "imagesAndDiagrams": [
+          {
+            "type": "ascii",
+            "value": "| Severity     | Trigger                    | Owner    | Action                                       |\n| ------------ | -------------------------- | -------- | -------------------------------------------- |\n| **P0**       | Error rate >1% in baseline | Dev team | Rollback or hotfix before next deploy        |\n| **P1**       | p95 >20% degradation       | Dev team | Root-cause within sprint, fix before release |\n| **P2**       | p99 >50% degradation       | Dev team | Investigate, may defer if p95 is healthy     |\n| **Advisory** | Throughput decline <15%    | Dev team | Log and monitor, no action required          |"
+          }
+        ]
+      },
+      {
+        "topic": "Performance Regression Policy › Release Gate",
+        "claims": [
+          {
+            "text": "Baseline test failures on `stage` block promotion to `main`"
+          },
+          {
+            "text": "Stress test results inform capacity planning but do not block releases"
+          },
+          {
+            "text": "Soak test anomalies trigger investigation but do not block releases unless memory growth exceeds 2× initial"
+          }
+        ],
+        "statement": "Performance tests are **advisory** during the 30-day warm-up period after initial deployment. After warm-up:"
+      },
+      {
+        "topic": "Test Data Strategy",
+        "claims": [
+          {
+            "text": "If synthetic data is insufficient, obtain written client approval before using anonymized derivatives of client data, scrub all PII/secrets, and load it into a dedicated test database instance — never production."
+          }
+        ],
+        "statement": "Performance tests use synthetic test data created during the test setup phase. Use a dedicated test organization/tenant when exercising authenticated or CRUD flows, and keep tests idempotent so repeated runs do not require manual cleanup."
+      },
+      {
+        "topic": "Dedicated Performance Environment",
+        "claims": [
+          {
+            "text": "Use a dedicated lean environment when stress tests exceed 50 VUs, soak tests exceed 30 minutes, client-specific SLA validation requires isolation, or database-heavy/multi-service profiles risk saturating shared resources."
+          }
+        ],
+        "statement": "Stage is sufficient when VU count stays within shared-cluster limits, tests target only this project namespace, no other team is running concurrent performance tests, and results are compared against the project's own baseline."
+      },
+      {
+        "topic": "Third-Party Dependency Handling",
+        "claims": [],
+        "statement": "External services must not receive real traffic during load tests.",
+        "imagesAndDiagrams": [
+          {
+            "type": "ascii",
+            "value": "| Dependency Type  | Strategy           |\n| ---------------- | ------------------ |\n| Email            | Stub / disable     |\n| Payment          | Test mode only     |\n| SMS              | Stub / disable     |\n| Maps / Geocoding | Cache or stub      |\n| AI / LLM APIs    | Deterministic mock |\n| Client APIs      | Stub               |\n| Auth providers   | Test accounts      |"
+          }
+        ]
+      },
+      {
+        "topic": "Scheduled Workflow",
+        "claims": [],
+        "statement": "The scheduled GitHub workflow runs against the `stage` environment. Manual dispatch is restricted to `dev` and `stage`; `BASE_URL` and `API_URL` must both be configured on the selected GitHub Environment, and production-like URLs are rejected before k6 starts."
+      }
+    ],
+    "review": {
+      "axioms": {
+        "state": "unreviewed"
+      },
+      "purpose": {
+        "state": "unreviewed"
+      },
+      "reference": {
+        "state": "unreviewed"
+      }
+    },
+    "converted": true
+  }
+}

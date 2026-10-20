@@ -1,0 +1,40 @@
+<!-- label: List -->
+<div class="flex flex-col gap-3">
+  <p element="type--body-extra-small" emphasis="quiet">basic</p>
+  <ul element="list--list" class="flex flex-col" style="max-width: 400px;">
+    <li element="list--item" class="flex items-center justify-between">
+      <span element="type--body">Alice Johnson</span>
+      <span element="surface--badge" status="success" scale="sm">Active</span>
+    </li>
+    <li element="list--item" class="flex items-center justify-between">
+      <span element="type--body">Bob Smith</span>
+      <span element="surface--badge" status="neutral" scale="sm">Invited</span>
+    </li>
+    <li element="list--item" class="flex items-center justify-between">
+      <span element="type--body">Carol White</span>
+      <span element="surface--badge" status="warning" scale="sm">Pending</span>
+    </li>
+  </ul>
+</div>
+
+<div class="flex flex-col gap-3">
+  <p element="type--body-extra-small" emphasis="quiet">with avatar</p>
+  <ul element="list--list" class="flex flex-col" style="max-width: 400px;">
+    <li element="list--item" class="flex items-center gap-3">
+      <span element="surface--avatar" scale="sm" class="relative flex shrink-0 overflow-hidden rounded-full"><span class="flex h-full w-full items-center justify-center">AJ</span></span>
+      <div class="flex flex-col min-w-0">
+        <span element="type--body">Alice Johnson</span>
+        <span element="type--body-small" emphasis="quiet">alice@example.com</span>
+      </div>
+      <span element="surface--badge" status="success" scale="sm" class="ml-auto">Active</span>
+    </li>
+    <li element="list--item" class="flex items-center gap-3">
+      <span element="surface--avatar" scale="sm" class="relative flex shrink-0 overflow-hidden rounded-full"><span class="flex h-full w-full items-center justify-center">BS</span></span>
+      <div class="flex flex-col min-w-0">
+        <span element="type--body">Bob Smith</span>
+        <span element="type--body-small" emphasis="quiet">bob@example.com</span>
+      </div>
+      <span element="surface--badge" status="neutral" scale="sm" class="ml-auto">Invited</span>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,41 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1784559526419,
+      "tag": "0000_sloppy_revanche",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1785335983953,
+      "tag": "0001_absent_donald_blake",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1785373985347,
+      "tag": "0002_concerned_cassandra_nova",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1791908132046,
+      "tag": "0003_violet_spyke",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1792502813996,
+      "tag": "0004_identity_local",
+      "breakpoints": true
+    }
+  ]
+}

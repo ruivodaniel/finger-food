@@ -1,0 +1,27 @@
+{
+  "id": "adr/main--product-slice-scope",
+  "kind": "adr",
+  "title": "Product slices are scoped `@product/…`",
+  "status": "approved",
+  "subject": "main",
+  "tags": [
+    "main",
+    "architecture"
+  ],
+  "paths": [],
+  "summary": "Scope every workspace package by its tier: `@configs/…` · `@libs/…` · `@modules/…` ([[seed slice|seed slices]]) · `@product/…` ([[product slice|product slices]]",
+  "adr": {
+    "date": "2026-10-13",
+    "context": "The decision `scope-names-the-tier` named the product-specific tier `@features/…`, after the `features/` folders product code once lived in. That folder no longer exists: product code lives in [[product slice|product slices]] under `apps/main/slices/product/<s>/`, so `@features/…` named a tier the repo doesn't have — and read as an invitation to recreate a `features/` folder.",
+    "decision": "Scope every workspace package by its tier: `@configs/…` · `@libs/…` · `@modules/…` ([[seed slice|seed slices]]) · `@product/…` ([[product slice|product slices]]) · `@apps/…`. A product slice's package is named after its folder: `apps/main/slices/product/song/` → `@product/song`.",
+    "consequences": [
+      "Everything else in `scope-names-the-tier` still holds: violations read at the call site, boundary rules are scope-to-scope lint patterns, promoting a product slice to a seed slice rewrites its imports, and the registry constraint stands.",
+      "No product slice package exists yet, so nothing is renamed — the first one under `apps/main/slices/product/` takes the scope.",
+      "Seed slices keep `@modules/…`: the existing packages (`@modules/user-organization-mgmt`, `@modules/notifications`) don't move."
+    ],
+    "affects": [
+      "scaffolding-and-import-boundaries"
+    ],
+    "adrStatus": "accepted"
+  }
+}

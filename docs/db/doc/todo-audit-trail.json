@@ -1,0 +1,16 @@
+{
+  "id": "doc/todo-audit-trail",
+  "kind": "doc",
+  "title": "slice: audit-trail (not in the repo yet) (not migrated)",
+  "status": "todo",
+  "subject": "audit-trail",
+  "tags": [
+    "audit-trail"
+  ],
+  "paths": [
+    "apps/main/slices/seed"
+  ],
+  "summary": "Not migrated yet. Starting point: apps/main/slices/seed",
+  "entry": "apps/main/slices/seed",
+  "doc": null
+}

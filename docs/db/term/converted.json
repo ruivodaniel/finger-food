@@ -1,0 +1,17 @@
+{
+  "id": "term/converted",
+  "kind": "term",
+  "title": "converted",
+  "status": "converted",
+  "subjects": [
+    "docs"
+  ],
+  "tags": [
+    "docs"
+  ],
+  "paths": [],
+  "term": {
+    "def": "Mechanically converted from markdown: axioms and purpose still to write, and nothing reviewed.",
+    "aliases": []
+  }
+}

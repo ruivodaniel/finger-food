@@ -1,0 +1,142 @@
+{
+  "id": "doc/list-query-getting-started",
+  "kind": "doc",
+  "title": "Getting Started",
+  "status": "converted",
+  "subject": "list-query",
+  "tags": [
+    "list-query",
+    "consumer"
+  ],
+  "paths": [
+    "shared/libs/list-query"
+  ],
+  "summary": "`@prowd/list-query` is the single source of truth for the pagination + sort + search contract used by every list endpoint in Prowd. This doc gives you everyt…",
+  "docId": "list-query-getting-started",
+  "doc": {
+    "axioms": [],
+    "purpose": {
+      "intro": "`@prowd/list-query` is the single source of truth for the pagination + sort + search contract used by every list endpoint in Prowd. This doc gives you everything you need to wire one up."
+    },
+    "reference": [
+      {
+        "topic": "The contract (locked)",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "Query params (all optional):\n  page       int, min 1, default 1\n  pageSize   int, min 1, max 100, default 25\n  sort       comma-separated field list, leading \"-\" = desc\n             example: sort=type,-name,createdAt\n             unknown field → 400\n             every endpoint declares a MANDATORY default sort\n  search     string; allowed only on endpoints that declare it\n             unsupported search → 400 (never silently ignored)\n  (+ endpoint-specific filters like status, type, isActive)\n\nResponse shape (uniform, always):\n  { rows: T[], total: number }"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "The contract (locked) › Behaviour",
+        "claims": [
+          {
+            "text": "Always paginated. Defaults always apply."
+          },
+          {
+            "text": "Omit both → `page=1, pageSize=25`"
+          },
+          {
+            "text": "Provide only `page` → use it; `pageSize` defaults to 25"
+          },
+          {
+            "text": "Provide only `pageSize` → use it; `page` defaults to 1"
+          },
+          {
+            "text": "`rows` = the sliced window; `total` = full scoped count"
+          },
+          {
+            "text": "`sort` is multi-field, hierarchical. Single field is the 1-field case."
+          },
+          {
+            "text": "The tiebreaker column (usually `id`) is appended automatically as the final sort field."
+          },
+          {
+            "text": "Null ordering follows PostgreSQL defaults (nulls last on ASC, nulls first on DESC)."
+          },
+          {
+            "text": "The count query runs with the exact same `where` clauses as the list query (never diverge)."
+          },
+          {
+            "text": "Past-end requests: `{ rows: [], total: <real> }`, never 404."
+          },
+          {
+            "text": "Router parses → service passes through → repository applies limit/offset/count."
+          },
+          {
+            "text": "One unified query object flows router → service → repository."
+          }
+        ]
+      },
+      {
+        "topic": "Layer-by-layer checklist",
+        "claims": [
+          {
+            "text": "**Validator** (in `configs/<module>/api/*.api.ts`) Compose `createListQuerySchema` + endpoint-specific filters via `.extend({...})` (NOT `.merge()` — `.merge()` silently loses strict mode). Declare `sortable`, `defaultSort`, `searchable`."
+          },
+          {
+            "text": "**Router** (in `shared/modules/<module>/api/routes/*.ts`) `zValidator(\"query\", schema)` → pass validated query through → return `{ rows, total }`."
+          },
+          {
+            "text": "**Service** (in `shared/modules/<module>/api/services/*.ts`) Pure pass-through of the query object. No new logic."
+          },
+          {
+            "text": "**Repository** (in `shared/modules/<module>/api/repositories/*.ts`) Build `whereExpr` once, use it in both the list and count queries, apply `buildOrderBy` + `applyPagination`, return `{ rows, total }`."
+          },
+          {
+            "text": "Full code walkthrough: see `04-EXAMPLES.md`."
+          }
+        ],
+        "statement": "Adding a new list endpoint? Touch these four spots:"
+      },
+      {
+        "topic": "Frontend checklist",
+        "claims": [
+          {
+            "text": "**Module type contract** (in `<module>/web/types.ts`) The API client interface: add `page?`, `pageSize?`, `sort?` (and `search?` if applicable) to the endpoint's `query`, and change the resolved `json()` return type to `{ rows: T[], total: number }`."
+          },
+          {
+            "text": "**Adapter** (in `apps/web-main/src/lib/api/*.ts`) Use `serializeListQuery` to build the URL."
+          },
+          {
+            "text": "**Call sites** Read `.rows` and `.total` from the response instead of treating the payload as an array."
+          }
+        ]
+      },
+      {
+        "topic": "Next",
+        "claims": [
+          {
+            "text": "`02-BACKEND-USAGE.md` — full details on each backend helper"
+          },
+          {
+            "text": "`03-FRONTEND-USAGE.md` — full details on the URL serializer"
+          },
+          {
+            "text": "`04-EXAMPLES.md` — real endpoint walkthrough"
+          },
+          {
+            "text": "`API-REFERENCE.md` — every exported symbol"
+          }
+        ]
+      }
+    ],
+    "review": {
+      "axioms": {
+        "state": "unreviewed"
+      },
+      "purpose": {
+        "state": "unreviewed"
+      },
+      "reference": {
+        "state": "unreviewed"
+      }
+    },
+    "converted": true
+  }
+}

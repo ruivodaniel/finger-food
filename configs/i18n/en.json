@@ -1,0 +1,230 @@
+{
+  "common": {
+    "organizations": "Organizations",
+    "systemUsers": "System Users",
+    "legalDocuments": "Legal Documents",
+    "team": "Team",
+    "myOrganization": "My Organization",
+    "settings": "Settings",
+    "logout": "Log Out",
+    "preparingWorkspace": "Preparing your workspace",
+    "pageNotFound": "Page Not Found",
+    "goToHome": "Go to Home",
+    "email": "Email",
+    "phone": "Phone",
+    "upload": "Upload",
+    "back": "Back",
+    "loading": "Loading...",
+    "version": "Version {{version}}"
+  },
+  "dashboard": {
+    "welcomeHeading": "Hello <user>{{userName}}</user>, welcome to {{orgName}}",
+    "welcomeUserFallback": "User",
+    "welcomeOrgFallback": "your organization",
+    "quickActions": "Select an option from the sidebar to get started."
+  },
+  "pendingInvitations": {
+    "title": "Pending invitations",
+    "description": "You've been invited to join the following organizations.",
+    "invitedBy": "Invited by {{name}}",
+    "expiresIn_one": "Expires in {{count}} day",
+    "expiresIn_other": "Expires in {{count}} days",
+    "accept": "Accept",
+    "decline": "Decline",
+    "declining": "Declining..."
+  },
+  "settings": {
+    "routeTitle": "Settings",
+    "navigation": {
+      "account": "Account",
+      "profile": "Profile",
+      "security": "Security",
+      "legal": "Legal Agreements",
+      "preferences": "Preferences"
+    },
+    "preferences": {
+      "appearanceTitle": "Appearance",
+      "appearanceDescription": "Choose your preferred theme.",
+      "languageTitle": "Language",
+      "languageDescription": "Select your preferred language.",
+      "save": "Save Preferences",
+      "saving": "Saving...",
+      "themeOptions": {
+        "light": "Light",
+        "dark": "Dark",
+        "system": "System"
+      }
+    }
+  },
+  "organization": {
+    "organizationInfo": "Organization Info",
+    "membersList": "Members List",
+    "invite": {
+      "title": "Invite Member",
+      "subtitle": "Invite a new member to your organization",
+      "details": "Member Info",
+      "inviteButton": "Invite Member"
+    }
+  },
+  "legal": {
+    "title": "Legal Policies",
+    "subtitle": "Please read our legal documents carefully. By using our services, you agree to the terms outlined in these documents.",
+    "agreements": "Legal Agreements",
+    "agreementsDescription": "Documents you have accepted. Click to view the version you signed.",
+    "noRecords": "No consent records found.",
+    "accepted": "Accepted {{date}}",
+    "termsAndConditionsLabel": "Terms & Conditions",
+    "privacyPolicyLabel": "Privacy Policy",
+    "noTermsPublished": "No terms and conditions have been published yet.",
+    "noPrivacyPublished": "No privacy policy has been published yet."
+  },
+  "userOrgMgmt": {
+    "mobile": {}
+  },
+  "mobile": {
+    "signIn": {
+      "title": "Sign In",
+      "subtitle": "Sign in to continue"
+    },
+    "home": {
+      "title": "Home",
+      "subtitle": "Welcome to {{appName}}"
+    },
+    "notReady": {
+      "title": "Almost There",
+      "subtitle": "Your account has unmet requirements. Please complete setup on the web app."
+    }
+  },
+  "help": {
+    "widget": {
+      "triggerAriaLabel": "Help — what can I do?",
+      "title": "What can you do?",
+      "description": "Tasks you can start right now, or by switching to another organization you belong to.",
+      "currentOrganizationHeader": "Current Organization",
+      "otherOrganizationsHeader": "Other organizations",
+      "activeBadge": "Active",
+      "emptyTitle": "No actions available yet",
+      "emptyDescription": "Once you join an organization or are granted permissions, available tasks will appear here.",
+      "availableNowHeader": "Available now",
+      "availableInOtherOrgsHeader": "Available in your other organizations",
+      "startCta": "Start",
+      "switchCta": "Switch",
+      "switchToOrgCta": "Switch to {{orgName}}"
+    },
+    "recipes": {
+      "invite-member-company": {
+        "title": "Invite a member to a company",
+        "description": "Send an invitation by email or phone.",
+        "step1": "Open the company from the Organizations list",
+        "step2": "Switch to the Members List tab",
+        "step3": "Click \"Invite Member\" and enter the recipient's email or phone"
+      },
+      "invite-member-ops-center": {
+        "title": "Invite a member to an ops center",
+        "description": "Add operators or managers to your ops center.",
+        "step1": "Open the ops center from the Organizations list",
+        "step2": "Switch to the Members List tab",
+        "step3": "Click \"Invite Member\""
+      },
+      "invite-platform-admin": {
+        "title": "Invite a platform administrator",
+        "description": "Add a new admin to the platform org.",
+        "step1": "Open the platform admin org",
+        "step2": "Switch to the Members List tab",
+        "step3": "Click \"Invite Member\""
+      },
+      "edit-member-roles": {
+        "title": "Edit a member's roles",
+        "description": "Promote, demote, or change a teammate's role.",
+        "step1": "Open your active organization",
+        "step2": "Switch to the Members List tab",
+        "step3": "Click the edit icon next to the member"
+      },
+      "remove-member": {
+        "title": "Remove a member",
+        "description": "Revoke a teammate's access.",
+        "step1": "Open your active organization",
+        "step2": "Switch to the Members List tab",
+        "step3": "Open the member's record and choose \"Remove Member\""
+      },
+      "create-organization": {
+        "title": "Create a new organization",
+        "description": "Spin up an ops center or company.",
+        "step1": "Go to Organizations",
+        "step2": "Click \"Create Organization\"",
+        "step3": "Pick the type and fill in the details"
+      },
+      "edit-organization": {
+        "title": "Edit your organization's details",
+        "description": "Update name, logo, or contact info.",
+        "step1": "Open your active organization",
+        "step2": "Switch to the Organization Info tab",
+        "step3": "Edit the fields you need"
+      },
+      "delete-organization": {
+        "title": "Delete an organization",
+        "description": "Permanently remove an org you administer.",
+        "step1": "Open the organization",
+        "step2": "Switch to the Organization Info tab",
+        "step3": "Scroll to the danger zone and confirm \"Delete\""
+      },
+      "manage-legal-documents": {
+        "title": "Manage legal documents",
+        "description": "Publish or update terms, privacy policy, and consent docs.",
+        "step1": "Open Manage Legal Documents",
+        "step2": "Pick the document type",
+        "step3": "Create a new version or publish an existing draft"
+      }
+    }
+  },
+  "flows": {
+    "wizardTriggerAriaLabel": "Onboarding wizard",
+    "triggerProgressAriaLabel": "Onboarding progress: {{completed}} of {{total}}",
+    "triggerCompleteAriaLabel": "Onboarding complete",
+    "backToChecklistAriaLabel": "Back to checklist",
+    "fallbackTitle": "Getting started",
+    "progress": "{{completed}} of {{total}} complete",
+    "doneBadge": "Done",
+    "cancelCta": "Dismiss",
+    "idle": {
+      "title": "You're all set",
+      "body": "No onboarding steps for you right now. The wizard will let you know when something needs attention."
+    },
+    "bootstrapPlatformAdmin": {
+      "title": "Bootstrap a platform admin",
+      "createPlatformAdmin": {
+        "shortLabel": "Create a platform admin",
+        "title": "Create a platform admin",
+        "body": "Spin up the platform admin organization. This step ticks as soon as it exists.",
+        "cta": "Open organizations"
+      }
+    },
+    "onboardPlatformMembers": {
+      "title": "Onboard your team",
+      "inviteMember": {
+        "shortLabel": "Invite a member",
+        "title": "Invite your first member",
+        "body": "Add another person to your platform admin organization.",
+        "cta": "Open organization"
+      },
+      "createLegalDocument": {
+        "shortLabel": "Create a legal document",
+        "title": "Create a legal document",
+        "body": "Publish your platform's terms of service, privacy policy, or any other consent document so members can review and accept.",
+        "cta": "Open legal documents"
+      }
+    },
+    "onboardingCompany": {
+      "title": "Set up your company",
+      "inviteEmployees": {
+        "shortLabel": "Invite employees",
+        "title": "Invite your first employee",
+        "body": "Add your team so they can access the platform.",
+        "cta": "Invite employees",
+        "pointers": {
+          "inviteCta": "Invite from here"
+        }
+      }
+    }
+  }
+}

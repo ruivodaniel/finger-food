@@ -1,0 +1,18 @@
+{
+  "id": "term/product-slice",
+  "kind": "term",
+  "title": "product slice",
+  "status": "approved",
+  "subjects": [
+    "main"
+  ],
+  "tags": [
+    "architecture"
+  ],
+  "paths": [],
+  "term": {
+    "def": "Product-specific [[slice]] in `apps/main/slices/product/<s>/` — full-stack ([[slice app|slice apps]] + own `shared/`), same anatomy as a [[seed slice]], open import boundaries.",
+    "aliases": [],
+    "proposed": true
+  }
+}

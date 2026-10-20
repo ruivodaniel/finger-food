@@ -1,0 +1,109 @@
+{
+  "id": "doc/list-query-readme",
+  "kind": "doc",
+  "title": "@libs/list-query",
+  "status": "converted",
+  "subject": "list-query",
+  "tags": [
+    "list-query"
+  ],
+  "paths": [
+    "shared/libs/list-query"
+  ],
+  "summary": "Reusable list-query contract for Prowd: pagination + sort + search, uniform across every list endpoint (backend and frontend).",
+  "docId": "list-query-readme",
+  "doc": {
+    "axioms": [],
+    "purpose": {
+      "intro": "Reusable list-query contract for Prowd: pagination + sort + search, uniform across every list endpoint (backend and frontend)."
+    },
+    "reference": [
+      {
+        "topic": "Contract (locked)",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "Query params (optional, standardized across every list endpoint):\n  page       int, min 1, default 1\n  pageSize   int, min 1, max 100, default 25\n  sort       comma-separated field list; leading \"-\" = desc\n             e.g. sort=type,-name,createdAt\n             each field whitelisted per endpoint → unknown → 400\n             every endpoint declares a MANDATORY default stable sort\n  search     string; only on endpoints that declare it\n             unsupported search → 400 (never silent-ignore)\n  (+ endpoint-specific filters like status, type, isActive)\n\nResponse (uniform, always):\n  { rows: T[], total: number }"
+              }
+            ]
+          }
+        ],
+        "statement": "See the full contract in `docs/consumer/01-GETTING-STARTED.md`."
+      },
+      {
+        "topic": "Public entry points",
+        "claims": [],
+        "imagesAndDiagrams": [
+          {
+            "type": "ascii",
+            "value": "| Entry | Use from | What you get |\n|---|---|---|\n| `@libs/list-query` | BE + FE | Types (`SortSpec`, `ListResponse`, `ListQueryBase`), sort-string parser, baseline constants |\n| `@libs/list-query/server` | BE only | `createListQuerySchema` (zod factory), `buildOrderBy`, `applyPagination` |\n| `@libs/list-query/client` | FE only | `serializeListQuery` (URLSearchParams builder) |"
+          }
+        ],
+        "statement": "Deep imports (`@libs/list-query/src/...`) are forbidden — only the three roots."
+      },
+      {
+        "topic": "Quick links",
+        "claims": [
+          {
+            "text": "**Consumer docs** — `docs/consumer/`"
+          },
+          {
+            "text": "— `01-GETTING-STARTED.md` — the contract in one page"
+          },
+          {
+            "text": "— `02-BACKEND-USAGE.md` — zod factory, Drizzle helpers, \"same where\" rule"
+          },
+          {
+            "text": "— `03-FRONTEND-USAGE.md` — URLSearchParams serializer + API adapter pattern"
+          },
+          {
+            "text": "— `04-EXAMPLES.md` — full walkthrough of a list endpoint"
+          },
+          {
+            "text": "— `API-REFERENCE.md` — every exported symbol"
+          },
+          {
+            "text": "**Contributor docs** — `docs/contributor/`"
+          },
+          {
+            "text": "— `ARCHITECTURE.md` — design decisions"
+          },
+          {
+            "text": "— `SORT-SYNTAX.md` — grammar of the sort string"
+          },
+          {
+            "text": "— `TESTING.md` — how to add helpers and their tests"
+          }
+        ]
+      },
+      {
+        "topic": "Peer dependencies",
+        "claims": [
+          {
+            "text": "`zod` — optional; required only when importing from `/server`"
+          },
+          {
+            "text": "`drizzle-orm` — optional; required only when importing from `/server`"
+          },
+          {
+            "text": "The root and `/client` entries have no runtime dependencies."
+          }
+        ]
+      }
+    ],
+    "review": {
+      "axioms": {
+        "state": "unreviewed"
+      },
+      "purpose": {
+        "state": "unreviewed"
+      },
+      "reference": {
+        "state": "unreviewed"
+      }
+    },
+    "converted": true
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "doc/gated-scoped-ac-readme",
+  "kind": "doc",
+  "title": "@prowd/scoped-ac",
+  "status": "converted",
+  "subject": "gated-scoped-ac",
+  "tags": [
+    "gated-scoped-ac"
+  ],
+  "paths": [
+    "shared/libs/gated-scoped-ac"
+  ],
+  "summary": "TypeScript access-control engine library.",
+  "docId": "gated-scoped-ac-readme",
+  "doc": {
+    "axioms": [],
+    "purpose": {
+      "intro": "TypeScript access-control engine library."
+    },
+    "reference": [
+      {
+        "topic": "Build constraints",
+        "claims": [
+          {
+            "text": "Language: TypeScript, strict mode. No `any`, no `@ts-ignore`, no `as` casts to silence errors."
+          },
+          {
+            "text": "Module system: ESM."
+          },
+          {
+            "text": "Runtime: Node 20+."
+          },
+          {
+            "text": "Test framework: Vitest. Tests colocated under `__test__/` next to the code under test."
+          },
+          {
+            "text": "Package manager: pnpm."
+          }
+        ]
+      },
+      {
+        "topic": "Dependencies",
+        "claims": [
+          {
+            "text": "Core engine: zero runtime dependencies."
+          },
+          {
+            "text": "Drizzle adapter: `drizzle-orm` as peer dependency."
+          },
+          {
+            "text": "Hono adapter: `hono` as peer dependency."
+          }
+        ]
+      },
+      {
+        "topic": "Layout",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "src/                   core engine\nsrc/adapters/drizzle/  Drizzle adapter\nsrc/adapters/hono/     Hono adapter"
+              }
+            ]
+          }
+        ],
+        "statement": "Public surface exported from `src/index.ts`."
+      },
+      {
+        "topic": "What's in this folder",
+        "claims": [
+          {
+            "text": "`docs/` — contributor documentation describing the library's behavior and architecture."
+          },
+          {
+            "text": "`contracts/` — TypeScript types and signatures the library must implement."
+          }
+        ]
+      }
+    ],
+    "review": {
+      "axioms": {
+        "state": "unreviewed"
+      },
+      "purpose": {
+        "state": "unreviewed"
+      },
+      "reference": {
+        "state": "unreviewed"
+      }
+    },
+    "converted": true
+  }
+}

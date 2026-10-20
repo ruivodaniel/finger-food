@@ -1,0 +1,383 @@
+{
+  "id": "doc/infra-scripts-lint",
+  "kind": "doc",
+  "title": "Prowd Lint System",
+  "status": "converted",
+  "subject": "infra",
+  "tags": [
+    "infra"
+  ],
+  "paths": [
+    "scripts/lint"
+  ],
+  "summary": "Deterministic architectural enforcement. One config, one pipeline, one output. Run: `pnpm lint:arch`",
+  "docId": "infra-scripts-lint",
+  "doc": {
+    "axioms": [],
+    "purpose": {
+      "intro": "Deterministic architectural enforcement. One config, one pipeline, one output. Run: `pnpm lint:arch`"
+    },
+    "reference": [
+      {
+        "topic": "How it works",
+        "claims": [
+          {
+            "text": "`DA` (data-access) from the old doc no longer exists as a standalone processor. Its role is covered by `CP` (content-patterns rules like `canCreate-only-in-services`) and `PT` (pattern-tags)."
+          }
+        ],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "scripts/lint/lint-controls.ts          ← global rules\nshared/libs/*/lint-controls.ts         ← per-lib rules\napps/main/slices/*/*/lint-controls.ts      ← per-module rules\n         │\n         ▼\n    runner.ts                          ← discovers all control sets\n         │\n         ▼  (13 processors, all parallel)\n  ┌──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┐\n  │      │      │      │      │      │      │      │      │      │      │      │      │      │\n  IE     CP     M      S      DO     ESL    MV     JEA    JAST   CB     DSL    PT     DA(×)\n  │      │      │      │      │      │      │      │      │      │      │      │      │\n  └──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┘\n         │\n         ▼\n    aggregateViolations()              ← collapse same id+file+message\n         │\n         ▼\n    scripts/lint/.lint-report.json     ← unified JSON output\n    scripts/lint/runs/<ts>.json        ← historical run"
+              }
+            ]
+          }
+        ],
+        "statement": "**Processors:**",
+        "imagesAndDiagrams": [
+          {
+            "type": "ascii",
+            "value": "| Key | File | What it checks |\n|-----|------|----------------|\n| `IE`   | `import-export.processor.ts`          | Who can import what. Zone isolation, layering, symbol-level rules |\n| `CP`   | `content-patterns.processor.ts`       | Line regex, block, co-occurrence rules |\n| `M`    | `metrics.processor.ts`                | File/folder/function size limits |\n| `S`    | `structure.processor.ts`              | Required/forbidden file paths |\n| `DO`   | `domain-ownership.processor.ts`       | Type/function name ownership, no redefinitions |\n| `ESL`  | `eslint.processor.ts`                 | Delegates to ESLint Node API |\n| `MV`   | `markup-validation.processor.ts`      | `element=` attribute validity, `type--` CSS axis values |\n| `JEA`  | `jsx-external-allowlist.processor.ts` | JSX from external packages must be allowlisted |\n| `JAST` | `jsx-ast.processor.ts`                | Parent-child JSX structure rules |\n| `CB`   | `cast-boundary.processor.ts`          | `as X` casts gated by file allowlist |\n| `DSL`  | `dsl-coherence.processor.ts`          | AC DSL rule files: detects create/delete + traversal (→) in same block |\n| `PT`   | `pattern-tags.processor.ts`           | Enforces closed authorized set of `[PATTERN:X]` tags across all services and repos |"
+          }
+        ]
+      },
+      {
+        "topic": "Control set format",
+        "claims": [
+          {
+            "text": "All keys are optional. Owner is inferred from file location — never declared."
+          }
+        ],
+        "statement": "Every `lint-controls.ts` exports a `ControlSet` (`types.ts`):",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "import type { ControlSet } from \"../../../scripts/lint/types.ts\"; // adjust path\n\nconst controls: ControlSet = {\n  sourceGlobs: [\"src/**/*.{ts,tsx}\"],   // files to scan (relative to THIS file)\n\n  \"import-export\": [ /* ImportExportControl[] */ ],\n  \"content-patterns\": [ /* ContentPatternControl[] */ ],\n  \"metrics\": [ /* MetricControl[] */ ],\n  \"structure\": [ /* StructureControl[] */ ],\n  \"domain-ownership\": [ /* DomainOwnershipControl[] */ ],\n  \"eslint\": { /* EslintControls */ },\n  \"jsx-external-allowlist\": [ /* JsxExternalAllowlistControl[] */ ],\n  \"jsx-ast\": { /* JsxAstConfig */ },\n  \"cast-boundary\": { /* CastBoundaryConfig */ },\n  \"dsl-coherence\": [ /* DslCoherenceControl[] */ ],\n  \"pattern-tags\": { /* PatternTagsConfig */ },\n};\n\nexport default controls;",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Processor reference › import-export",
+        "claims": [
+          {
+            "text": "Key fields: `from`, `to`, `allow`, `selfImport`, `typeOnlyAllowed`, `symbols`, `exceptions`."
+          }
+        ],
+        "statement": "Controls who can import from whom. Two modes:",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "// DENY: violation if the import exists\n{\n  id: \"module-isolation\",\n  severity: \"error\",\n  direction: \"import\",\n  allow: false,\n  from: \"apps/main/slices/*/*/**\",   // the file doing the importing (glob)\n  to: \"apps/main/slices/*/*/**\",     // what is being imported (glob or package name)\n  selfImport: \"skip\",            // skip if from and to are in the same package\n  exceptions: [\n    { from: \"apps/main/shared/api/src/lib/**\", reason: \"Infrastructure wrapper.\" },\n    // Symbol-level exception:\n    { reason: \"Promoted types\", symbols: [{ name: \"ScopeContext\", kind: \"type\" }] },\n  ],\n}\n\n// ALLOW: violation if the import does NOT exist\n// (rarely used — for enforcing that something must be imported)\n{ allow: true, ... }",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Processor reference › content-patterns",
+        "claims": [
+          {
+            "text": "**`\"line\"` — match individual lines:**"
+          },
+          {
+            "text": "**`\"block\"` — consecutive matching lines:**"
+          },
+          {
+            "text": "**`\"co-occurrence\"` — trigger patterns must coexist with required patterns in same function:**"
+          }
+        ],
+        "statement": "Three subtypes:",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "{\n  id: \"no-manual-role-check\",\n  severity: \"warn\",\n  type: \"line\",\n  match: [\"roles\\\\.includes\\\\(['\\\"]\"],  // string[] of regexes, any match fires\n  in: \"apps/main/slices/**\",              // PathPattern scope (string or string[])\n  skipIfNearby: \"//\\\\s*boundary:\",      // suppress if this regex is on same or preceding line\n  exceptions: [{ in: \"**/middlewares/**\", reason: \"Middleware implements role resolution.\" }],\n}",
+                "caption": "ts"
+              }
+            ]
+          },
+          {
+            "snippets": [
+              {
+                "code": "{\n  id: \"no-commented-code\",\n  severity: \"warn\",\n  type: \"block\",\n  match: [\"^\\\\s*//\"],\n  minLines: 3,     // default 3\n}",
+                "caption": "ts"
+              }
+            ]
+          },
+          {
+            "snippets": [
+              {
+                "code": "{\n  id: \"service-cud-must-gate\",\n  severity: \"warn\",\n  type: \"co-occurrence\",\n  match: [\"this\\\\.repo\\\\.(create|update|delete)\\\\(\"],   // triggers\n  mustCoexist: [\"\\\\.checkWriteScope\\\\(\", \"\\\\.canCreate\\\\(\"], // must also appear\n  in: \"**/services/**\",\n}",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Processor reference › metrics",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "{\n  id: \"max-file-lines\",\n  enabled: false,            // toggle without deleting\n  type: \"file-lines\",        // \"file-lines\" | \"folder-files\" | \"function-lines\" | \"function-params\"\n  warn: 300,\n  error: 500,\n  in: \"shared/libs/scoped-ac/**\",   // optional scope\n  exceptions: [\n    { in: \"src/resolver/**\", reason: \"Cohesive algorithm\", override: { error: 700 } },\n  ],\n}",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Processor reference › structure",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "// Must exist:\n{ id: \"module-has-shared-types\", type: \"required\", path: \"apps/main/slices/*/*/shared/types/\", mustNotBeEmpty: true }\n\n// Must not exist:\n{ id: \"no-stray-root-files\", type: \"forbidden\", path: \"apps/main/slices/*/*/*.ts\",\n  allowedFiles: [\"lint-controls.ts\", \"index.ts\"] }",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Processor reference › domain-ownership",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "{\n  id: \"scope-type-authority\",\n  type: \"type-names\",    // \"type-names\" | \"schema-names\" | \"function-names\" | \"declaration-names\"\n  terms: [\"ScopeContext\", \"ScopeFilter\"],\n  allow: false,           // these terms are BANNED outside exceptions\n  path: \"**\",\n  exceptions: [{ in: \"shared/libs/scoped-ac/**\", reason: \"Canonical source.\" }],\n}",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Processor reference › eslint",
+        "claims": [
+          {
+            "text": "Per-package override (in a module/lib lint-controls.ts):"
+          }
+        ],
+        "statement": "Global config:",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "eslint: {\n  enabled: true,    // false = skip ESLint processor entirely\n  rules: {\n    \"@typescript-eslint/no-explicit-any\": \"error\",\n    \"@typescript-eslint/no-unused-vars\": [\"error\", { \"varsIgnorePattern\": \"^_\" }],\n  },\n}",
+                "caption": "ts"
+              }
+            ]
+          },
+          {
+            "snippets": [
+              {
+                "code": "eslint: {\n  overrides: {\n    \"no-console\": \"error\",   // applied only to this package's files\n  },\n}",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Processor reference › cast-boundary",
+        "claims": [
+          {
+            "text": "Semantics: file on list + correct `// boundary: X` comment → PASS. File on list + missing/wrong comment → WARN. File not on any list → ERROR. `as const` / `as never` / import aliases always exempt."
+          }
+        ],
+        "statement": "File-allowlist gated `as X` enforcement.",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "\"cast-boundary\": {\n  allowLists: {\n    BetterAuth: [\n      { path: \"apps/main/slices/seed/user-organization-mgmt/api/services/mount-user-org-auth.ts\", rationale: \"BetterAuth server setup\" },\n      { path: \"apps/main/slices/*/*/api/services/**\", rationale: \"Services bridge BetterAuth API\" },\n    ],\n    Hono: [\n      { path: \"apps/main/slices/*/*/api/routes/**\", rationale: \"c.req.valid type erasure\" },\n    ],\n    Drizzle: [\n      { path: \"apps/main/slices/*/*/api/repositories/**\", rationale: \"ORM row-read inference\" },\n    ],\n    TanStack: [\n      { path: \"apps/main/shared/web/src/routes/**\", rationale: \"Router strict:false gaps\" },\n    ],\n    Test: [\n      { path: \"**/__test__/**\", rationale: \"Test mocks\" },\n    ],\n  },\n}",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Processor reference › dsl-coherence",
+        "claims": [
+          {
+            "text": "Each control scans the files matched by `in`. Violations reference the line of the offending action declaration."
+          }
+        ],
+        "statement": "Scans access-control DSL rule files (`.ac.ts`) for incoherent role declarations. Currently detects: entity blocks that declare `create` or `delete` actions **and** have a traversal (`→`) target in the same block. `resolveForCreateDelete` cannot follow traversal hops at create/delete time — the engine resolves properties in memory without a DB query.",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "\"dsl-coherence\": [\n  {\n    id: \"no-create-delete-with-traversal\",\n    severity: \"error\",\n    description: \"create/delete with traversal target (→) in same block\",\n    in: \"configs/access-control/rules/**/*.ac.ts\",\n  },\n]",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Processor reference › pattern-tags",
+        "claims": [
+          {
+            "text": "**Unauthorized tag** — `[PATTERN:X]` where X is not in the `authorized` list → ERROR"
+          },
+          {
+            "text": "**Tag requirements** — tagged method body must contain required calls/patterns → ERROR"
+          },
+          {
+            "text": "**Naked guarded call** — a guarded engine call appearing in a non-private, untagged method → ERROR"
+          },
+          {
+            "text": "Unlike all other processor types, `pattern-tags` is a **single config object** (not an array) — there is one authorized list and one set of definitions per control set."
+          },
+          {
+            "text": "**`PatternCoherenceRule` — two modes (mutually exclusive):**"
+          },
+          {
+            "text": "**Tag placement:** `[PATTERN:X]` must appear as a `//` comment on the line immediately before the method signature (blank lines and other `//` comments between the tag and the signature are allowed)."
+          },
+          {
+            "text": "**Private methods are exempt** from naked-call checks — repos conventionally wrap engine calls in `private resolveRead()` / `private resolveWrite()` helpers. The guarded boundary is the public methods that call those helpers."
+          },
+          {
+            "text": "**Authorized patterns** (as of this writing):"
+          },
+          {
+            "text": "Full pattern semantics: `docs/01_reference/access-control.md` (`../../docs/01_reference/access-control.md`)."
+          }
+        ],
+        "statement": "Enforces a **closed, authorized set** of `[PATTERN:X]` tags across all service and repository files in the entire codebase. Three enforcement layers:",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "\"pattern-tags\": {\n  authorized: [\"R\", \"R·S\", \"W1\", \"W1·S\", \"W2\", \"W3\", \"W3·S\", \"W·BA\", \"W·BA·X\", \"W·Self\"],\n\n  definitions: [\n    {\n      name: \"R\",\n      description: \"Read — list, get, paginated\",\n      in: \"**/*.repository.ts\",\n      requires: [\n        { match: \"\\\\.resolveRead\\\\(\", description: \"resolveRead helper call\" },\n      ],\n    },\n    {\n      name: \"W1\",\n      description: \"Create free-standing — service gates via resolveForCreateDelete\",\n      in: \"**/*.service.ts\",\n      requires: [\n        { match: \"\\\\.resolveForCreateDelete\\\\(\", description: \"engine gate\" },\n        { match: \"\\\\bthis\\\\.audit\", description: \"audit log\" },\n        { match: \"\\\\.forbidden\\\\(\", description: \"forbidden() throw\" },\n      ],\n      // Optional: coherence rules for value equality or conditional presence\n      coherence: [\n        {\n          extract1: \"entity:\\\\s*[\\\"']([^\\\"']+)[\\\"']\",   // capture entity from audit\n          extract2: \"resolveForCreateDelete\\\\([^,]+,\\\\s*[\\\"']([^\\\"']+)[\\\"']\", // entity arg\n          description: \"audit entity must match resolveForCreateDelete entity\",\n        },\n      ],\n    },\n    {\n      name: \"W·BA\",\n      description: \"Write via external provider — service gates via checkWriteScope\",\n      in: \"**/*.service.ts\",\n      requires: [\n        {\n          // OR: at least one must match\n          match: [\"\\\\.checkWriteScope\\\\(\", \"\\\\.resolveForCreateDelete\\\\(\"],\n          description: \"engine gate (checkWriteScope or resolveForCreateDelete)\",\n        },\n        { match: \"\\\\bthis\\\\.audit\", description: \"audit log\" },\n        { match: \"\\\\.forbidden\\\\(\", description: \"forbidden() throw\" },\n      ],\n      coherence: [\n        {\n          // If audit action is \"create\", engine must also call resolveForCreateDelete\n          extract1: \"action:\\\\s*[\\\"'](create)[\\\"']\",\n          checkIn: \"\\\\.resolveForCreateDelete\\\\(\",\n          description: \"W·BA create operations must gate via engine.resolveForCreateDelete — using a foreign repo's checkWriteScope gates the wrong entity\",\n        },\n      ],\n    },\n  ],\n\n  // Engine calls that must always appear inside a tagged (or private) method.\n  guardedCalls: [\n    {\n      match: \"\\\\.engine\\\\.resolveForCreateDelete\\\\(\",\n      description: \"engine.resolveForCreateDelete\",\n      in: \"**/*.service.ts\",\n    },\n    {\n      match: \"(?:await )?this\\\\.\\\\w*[Rr]epo\\\\w*\\\\.checkWriteScope\\\\(\",\n      description: \"repo.checkWriteScope\",\n      in: \"**/*.service.ts\",\n    },\n    {\n      match: \"\\\\bthis\\\\.resolveRead\\\\(\",\n      description: \"resolveRead (repo read-scope helper)\",\n      in: \"**/*.repository.ts\",\n    },\n    {\n      match: \"\\\\bthis\\\\.resolveWrite\\\\(\",\n      description: \"resolveWrite (repo write-scope helper)\",\n      in: \"**/*.repository.ts\",\n    },\n  ],\n\n  exceptions: [\n    { in: \"**/repositories/base.repository.ts\", reason: \"Helper definitions, not guarded calls.\" },\n  ],\n}",
+                "caption": "ts"
+              }
+            ]
+          }
+        ],
+        "imagesAndDiagrams": [
+          {
+            "type": "ascii",
+            "value": "| Field | Mode | What it does |\n|-------|------|--------------|\n| `extract1` + `extract2` | Value equality | Both regexes must capture the same string (e.g. entity names must match across two calls) |\n| `extract1` + `checkIn` | Conditional presence | If `extract1` matches the body, `checkIn` regex must also match the body |"
+          },
+          {
+            "type": "ascii",
+            "value": "| Tag | Layer | Operation |\n|-----|-------|-----------|\n| `R` | Repository | Read — list, get, paginated |\n| `R·S` | Repository | Read — scoped to session subject |\n| `W1` | Service | Create free-standing (no container) |\n| `W1·S` | Service | Create free-standing, scoped to session subject |\n| `W2` | Service | Create in container |\n| `W3` | Service | Mutate existing entity (update/delete) |\n| `W3·S` | Service | Mutate, scoped to session subject |\n| `W·BA` | Service | Write via external provider (BetterAuth, etc.) |\n| `W·BA·X` | Service | Write via provider + cross-entity business logic check |\n| `W·Self` | Service | Actor = target, schema-enforced, no role gate |"
+          }
+        ]
+      },
+      {
+        "topic": "PathPattern",
+        "claims": [
+          {
+            "text": "Glob rules: `*` = one segment, `**` = any depth. No magic beyond that."
+          }
+        ],
+        "statement": "All `from`, `to`, `in`, `path` fields accept `string | string[]`.",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "\"apps/main/slices/*/*/**\"          // any module, any depth\n\"@prowd/scoped-ac\"             // exact package name\n[\"apps/main/slices/**\", \"apps/**\"]  // either",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Exceptions",
+        "claims": [
+          {
+            "text": "Always include a `reason`. It's required by type and serves as the audit trail."
+          }
+        ],
+        "statement": "Every control type has `exceptions`. Structure varies slightly but the pattern is always:",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "exceptions: [\n  { in: \"path/or/glob/**\", reason: \"Why this path is exempt.\" },\n  // import-export also supports from/to/symbols in exceptions\n]",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Adding a rule",
+        "claims": [
+          {
+            "text": "Find the right processor (see table above)"
+          },
+          {
+            "text": "Add a control object to the relevant array in `lint-controls.ts`"
+          },
+          {
+            "text": "Give it a unique `id`, a `severity`, a `description`"
+          },
+          {
+            "text": "Run `pnpm lint:arch` to verify it fires on expected files and not on others"
+          },
+          {
+            "text": "Add `exceptions` for any legitimate false positives"
+          }
+        ]
+      },
+      {
+        "topic": "Running",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "pnpm lint:arch                    # full run, writes .lint-report.json\npnpm tsx scripts/lint/runner.ts   # same, directly\n\n# Check count for a specific rule:\npnpm lint:arch 2>&1 | grep \"rule-id\"\n\n# Tests (cast-boundary processor):\npnpm tsx scripts/lint/__test__/cast-boundary.test.ts",
+                "caption": "bash"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Files",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "scripts/lint/\n├── runner.ts                           Orchestrator\n├── lint-controls.ts                    Global control set\n├── types.ts                            All TypeScript types\n├── README.md                           This file\n├── .lint-report.json                   Latest run output (gitignored)\n├── runs/                               Historical runs (gitignored)\n├── processors/\n│   ├── import-export.processor.ts\n│   ├── content-patterns.processor.ts\n│   ├── metrics.processor.ts\n│   ├── structure.processor.ts\n│   ├── domain-ownership.processor.ts\n│   ├── eslint.processor.ts\n│   ├── markup-validation.processor.ts\n│   ├── jsx-external-allowlist.processor.ts\n│   ├── jsx-ast.processor.ts\n│   ├── cast-boundary.processor.ts\n│   ├── dsl-coherence.processor.ts      DSL rule file coherence (create/delete + traversal)\n│   └── pattern-tags.processor.ts       [PATTERN:X] tag enforcement\n├── utils/\n│   ├── files.ts                        pathMatchesPattern, getSourceFiles, readFile, extractImports\n│   └── ast.ts                          AST utilities\n└── __test__/\n    └── cast-boundary.test.ts           Processor unit tests"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "review": {
+      "axioms": {
+        "state": "unreviewed"
+      },
+      "purpose": {
+        "state": "unreviewed"
+      },
+      "reference": {
+        "state": "unreviewed"
+      }
+    },
+    "converted": true
+  }
+}

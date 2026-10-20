@@ -1,0 +1,19 @@
+{
+  "id": "term/intent",
+  "kind": "term",
+  "title": "intent",
+  "status": "converted",
+  "subjects": [
+    "orchestrator"
+  ],
+  "tags": [
+    "orchestrator"
+  ],
+  "paths": [
+    "apps/orchestrator"
+  ],
+  "term": {
+    "def": "What is asked: a user intent at runtime, or a scheduled intent.",
+    "aliases": []
+  }
+}

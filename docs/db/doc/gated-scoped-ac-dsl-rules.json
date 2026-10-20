@@ -1,0 +1,357 @@
+{
+  "id": "doc/gated-scoped-ac-dsl-rules",
+  "kind": "doc",
+  "title": "DSL Rules",
+  "status": "converted",
+  "subject": "gated-scoped-ac",
+  "tags": [
+    "gated-scoped-ac",
+    "consumer"
+  ],
+  "paths": [
+    "shared/libs/gated-scoped-ac"
+  ],
+  "summary": "**What.** The language consumers use to declare access control: roles, hierarchies among roles, and per-operation rules that pair context preconditions with …",
+  "docId": "gated-scoped-ac-dsl-rules",
+  "doc": {
+    "axioms": [],
+    "purpose": {},
+    "reference": [
+      {
+        "topic": "Axioms",
+        "claims": [
+          {
+            "text": "Any access-control business intention is expressible."
+          },
+          {
+            "text": "Rules adapt to any business model and any storage schema."
+          },
+          {
+            "text": "Roles are the unit of access; hierarchies compose them."
+          },
+          {
+            "text": "Rules can traverse entity relationships through joins declared in the schema."
+          },
+          {
+            "text": "Rules are declarations — meaning is independent of order or evaluation strategy."
+          }
+        ]
+      },
+      {
+        "topic": "Purpose",
+        "claims": [
+          {
+            "text": "**Why.** A declarative language is auditable and changeable without touching code. Every product needs the same shapes — roles, inheritance, conditional grants over related entities — and a shared DSL captures them once."
+          },
+          {
+            "text": "**How.** Roles bundle access. Each rule attached to a role pairs a context (preconditions on the bag) with a target (the slice of an entity granted, possibly traversing relationships through joins). Hierarchies declare inheritance: a role automatically grants everything its descendants grant."
+          },
+          {
+            "text": "**Why this way.** Declarations decouple meaning from evaluation. The same rules behave identically regardless of when, where, or in what order they are consulted, which is what makes them auditable. Roles + hierarchies + relationship traversal cover the access-control intentions products actually need without leaking product knowledge into the language."
+          }
+        ],
+        "statement": "**What.** The language consumers use to declare access control: roles, hierarchies among roles, and per-operation rules that pair context preconditions with target scopes."
+      },
+      {
+        "topic": "Reference",
+        "claims": [],
+        "statement": "The examples in this document use a fictional document-management product: workspaces contain folders, folders contain documents, users belong to workspaces through memberships, optionally grouped into teams. None of this vocabulary is built into the library — it is what the consumer declares in their schema and rules."
+      },
+      {
+        "topic": "Reference › Role definition",
+        "claims": [
+          {
+            "text": "The library reads four fields:"
+          }
+        ],
+        "statement": "A role is a named bundle of access rules over one entity, for one or more operations. The library treats the role name as an opaque identifier; the role's meaning is whatever its rules grant.",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "const roles = {\n  workspace_owner: {\n    entity: \"document\",\n    actions: [\"read\", \"create\", \"update\", \"delete\"],\n    accessRules: [\n      // …rules here\n    ],\n    fields: undefined,                 // all columns reachable\n  },\n  document_reader: {\n    entity: \"document\",\n    actions: [\"read\"],\n    accessRules: [\n      // …rules here\n    ],\n    fields: [\"id\", \"title\", \"preview\"],\n  },\n};",
+                "caption": "ts"
+              }
+            ]
+          }
+        ],
+        "imagesAndDiagrams": [
+          {
+            "type": "ascii",
+            "value": "| Field | Required | Meaning |\n|-------|----------|---------|\n| `entity` | yes | Which entity the rules act on. Must be declared in the schema. |\n| `actions` | yes | Which operations this role contributes to. A role with `[\"read\"]` does not affect a `delete` decision. |\n| `accessRules` | yes | List of rules. Order has no semantic effect; rules combine by union. |\n| `fields` | no | Column allowlist. `undefined` = all columns. |"
+          }
+        ]
+      },
+      {
+        "topic": "Reference › Consumer-extended definitions",
+        "claims": [
+          {
+            "text": "The library reads only its four fields and ignores the rest. Extending is the canonical way to keep one declaration object per role without contaminating the engine."
+          }
+        ],
+        "statement": "The library type is intentionally minimal. Consumers needing product-specific fields (UI labels, signals for external systems, anything outside engine evaluation) extend the type:",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "type ProductRoleDefinition = ScopedRoleDefinition & {\n  title?: string;\n  description?: string;\n  // any other product-owned signal\n};",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Reference › Rules: context + target",
+        "claims": [
+          {
+            "text": "**context** — a list of scopes that must all match against the bag for the rule to apply. Empty `context` always applies."
+          },
+          {
+            "text": "**target** — a list of scopes that together describe the rows reachable by this rule. Empty `target` grants the entity unrestricted (all rows)."
+          },
+          {
+            "text": "Multiple rules on a role combine by union: any rule that matches contributes its target."
+          }
+        ],
+        "statement": "A rule has two halves:",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "{\n  context: [\"workspace.type:'team'\"],          // preconditions on the bag\n  target:  [\"document.workspaceId:$session.workspace.id\"],  // the slice granted\n}",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Reference › Grammar",
+        "claims": [
+          {
+            "text": "The parser rejects unquoted literals and unprefixed dotted RHS values at boot."
+          }
+        ],
+        "statement": "Both context and target scopes use the same `LHS:RHS` shape. The class of each side is decided by its sigil:",
+        "imagesAndDiagrams": [
+          {
+            "type": "ascii",
+            "value": "| Class | Sigil | Example | Where it appears |\n|-------|-------|---------|------------------|\n| Entity path | bare | `document.workspaceId` | LHS only — a path into an entity declared in the schema |\n| Subject path | `$` | `$session.user.id` | RHS only — a path into the runtime bag |\n| Literal | `'…'` | `'team'` | RHS only — a quoted string constant |"
+          }
+        ],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "Rule         = ContextScope | TargetScope\nContextScope = EntityPath ':' Literal              (no subject paths on context RHS)\nTargetScope  = EntityPath ':' (SubjectPath | Literal)\nEntityPath   = Identifier ('.' Identifier)+\nSubjectPath  = '$' Identifier ('.' Identifier)+\nLiteral      = \"'\" non-apostrophe-chars \"'\"\nOperator     = ':' | ':!'                          ('!' = not equal)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Reference › Why context RHS is literal-only",
+        "claims": [],
+        "statement": "Context scopes are preconditions evaluated before any target work happens. Allowing subject paths on context RHS produces resolution-time circular dependencies (the subject the context tests may itself depend on the result of the rule). Restricting context RHS to literals removes the cycle and keeps preconditions pure."
+      },
+      {
+        "topic": "Reference › Operators",
+        "claims": [],
+        "imagesAndDiagrams": [
+          {
+            "type": "ascii",
+            "value": "| Operator | Meaning |\n|----------|---------|\n| `:` | equals |\n| `:!` | not equals |"
+          }
+        ],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "workspace.type:'personal'        → workspace's type is \"personal\"\nworkspace.type:!'archived'       → workspace's type is anything except \"archived\"\ndocument.ownerId:$session.user.id    → document's owner is the caller"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Reference › Hierarchy",
+        "claims": [
+          {
+            "text": "Each key is a role name. Its value is a (possibly empty) object of descendants. `{}` = leaf role (no further inheritance). The structure is purely declarative — order is irrelevant, depth is unbounded, the same role may appear under multiple parents."
+          },
+          {
+            "text": "A user assigned `workspace_owner` effectively holds `workspace_owner` + `manage_workspace_members` + `manage_workspace_documents` + `view_workspace_documents`. The library expands assigned roles through the hierarchy at evaluation time — see SCOPE-FILTER (`SCOPE-FILTER.md`)."
+          }
+        ],
+        "statement": "Roles compose through declared inheritance, expressed as a generic nested tree. A parent role automatically grants everything its descendants grant, plus its own rules.",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "const hierarchy: RoleHierarchyConfig = {\n  workspace_owner: {\n    manage_workspace_members: {},\n    manage_workspace_documents: {\n      view_workspace_documents: {},\n    },\n  },\n  team_admin: {\n    invite_team_members: {},\n    view_team_documents: {},\n  },\n  manage_self: { view_self: {} },\n};",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Reference › No special keys, no auto-injection",
+        "claims": [
+          {
+            "text": "The library also **never auto-adds roles** to a request. If a product wants every authenticated user to inherit a baseline set (e.g. \"manage own profile\"), the consumer is responsible for including those role names in the `assignedRoles` array passed to `expandRoles`."
+          },
+          {
+            "text": "Organizing the hierarchy by archetype, baseline-vs-org, or any other product taxonomy is a consumer concern — express it in how the consumer composes the tree from partials, not by relying on library-special keys."
+          }
+        ],
+        "statement": "The hierarchy is a flat top-level map of roots. The library does not interpret any key as special (no `account_baseline`, no `orgTypes`, no archetype concept). Every root is a sibling.",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "// consumer middleware\nconst assignedRoles = [\n  ...productBaselineRoleKeys,    // consumer's choice — library doesn't know\n  ...member.scopedRoles,         // from DB\n];\nconst effective = expandRoles(assignedRoles, hierarchy);",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Reference › Schema",
+        "claims": [
+          {
+            "text": "The schema records *what exists*, not *what AC does with it*. Adding a role never requires schema changes."
+          }
+        ],
+        "statement": "The DSL stays storage-agnostic by referencing entities through a schema map the consumer declares. The schema is the storage-binding for the engine — it tells the resolver which table backs each entity name, what its id column is, and which columns are reachable.",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "const schema = {\n  document: {\n    table:   documentsTable,    // storage handle (e.g. Drizzle table object)\n    id:      documentsTable.id,\n    columns: { id, workspaceId, folderId, ownerId, title },\n  },\n  folder: {\n    table:   foldersTable,\n    id:      foldersTable.id,\n    columns: { id, workspaceId },\n  },\n  workspace: {\n    table:   workspacesTable,\n    id:      workspacesTable.id,\n    columns: { id, ownerId },\n  },\n};",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Reference › Traversal: the arrow",
+        "claims": [
+          {
+            "text": "Reads as: \"members whose `organizationId` joins to an `organization` whose `type` equals `'platform_admin'`.\""
+          },
+          {
+            "text": "The resolver compiles this into a traversal filter:"
+          },
+          {
+            "text": "The engine assumes the FK joins to the toEntity's `id` column. (This is the convention; explicit FK metadata is not declared in the schema.)"
+          },
+          {
+            "text": "Multi-hop chains compose by adding arrows:"
+          },
+          {
+            "text": "Each hop is one LEFT JOIN at SQL emit time. Hops sharing the same `(fromEntity → toEntity)` across multiple roles deduplicate to a single JOIN."
+          },
+          {
+            "text": "The role's `entity` is always the *target* — the thing the filter narrows. The chain starts on the target entity's column and walks outward."
+          }
+        ],
+        "statement": "A target scope can chain across foreign keys with `→`. Each arrow says \"follow this column to the joined entity's id\":",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "member.organizationId → organization.type:'platform_admin'"
+              }
+            ]
+          },
+          {
+            "snippets": [
+              {
+                "code": "{\n  type: \"traversal\",\n  hops: [{ fromEntity: \"member\", fkField: \"organizationId\", toEntity: \"organization\" }],\n  finalCondition: { /* condition on organization */ },\n}",
+                "caption": "ts"
+              }
+            ]
+          },
+          {
+            "snippets": [
+              {
+                "code": "document.folderId → folder.workspaceId → workspace.ownerId:$session.user.id"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Reference › Direct vs. traversal at a glance",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "direct (no arrow)         org.id:$session.org.id\n                          └── condition on the role's entity itself\n\ntraversal (one arrow)     member.organizationId → organization.type:'platform_admin'\n                          └── follow FK, then condition on the joined entity\n\ntraversal (multi-hop)     document.folderId → folder.workspaceId → workspace.ownerId:$session.user.id\n                          └── follow chain of FKs, condition on the last"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Reference › Field-level access",
+        "claims": [
+          {
+            "text": "When multiple roles contribute to the same decision, fields combine permissively:"
+          },
+          {
+            "text": "`undefined` ∪ anything = `undefined` (the broadest wins)"
+          },
+          {
+            "text": "`[\"a\", \"b\"]` ∪ `[\"b\", \"c\"]` = `[\"a\", \"b\", \"c\"]` (set union)"
+          }
+        ],
+        "statement": "The `fields` property on a role definition restricts which columns the resolver permits the caller to read.",
+        "imagesAndDiagrams": [
+          {
+            "type": "ascii",
+            "value": "| `fields` value | Meaning |\n|----------------|---------|\n| `undefined` | All columns reachable |\n| `[\"id\", \"title\"]` | Only these columns reachable |"
+          }
+        ]
+      },
+      {
+        "topic": "Reference › Validation at boot",
+        "claims": [
+          {
+            "text": "Every entity path resolves to an entity declared in the schema."
+          },
+          {
+            "text": "Every subject reference (`$foo.bar`) names a subject declared in the consumer's `subjects` list."
+          },
+          {
+            "text": "Every literal is properly quoted and closed."
+          },
+          {
+            "text": "Every hierarchy edge points to a declared role; no cycles."
+          },
+          {
+            "text": "A failure throws with the offending role and rule pinpointed. Misconfigurations die at boot, not at runtime."
+          }
+        ],
+        "statement": "`assertValidConfiguration({ roles, hierarchy, schema, subjects })` runs at startup and validates:"
+      }
+    ],
+    "review": {
+      "axioms": {
+        "state": "unreviewed"
+      },
+      "purpose": {
+        "state": "unreviewed"
+      },
+      "reference": {
+        "state": "unreviewed"
+      }
+    },
+    "converted": true
+  }
+}

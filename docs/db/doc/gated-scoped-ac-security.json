@@ -1,0 +1,173 @@
+{
+  "id": "doc/gated-scoped-ac-security",
+  "kind": "doc",
+  "title": "Security",
+  "status": "converted",
+  "subject": "gated-scoped-ac",
+  "tags": [
+    "gated-scoped-ac",
+    "consumer"
+  ],
+  "paths": [
+    "shared/libs/gated-scoped-ac"
+  ],
+  "summary": "**What.** The trust model of the engine — what the library guarantees, what the consumer is responsible for, and how the boundary is drawn.",
+  "docId": "gated-scoped-ac-security",
+  "doc": {
+    "axioms": [],
+    "purpose": {},
+    "reference": [
+      {
+        "topic": "Axioms",
+        "claims": [
+          {
+            "text": "The library trusts the bag and the `properties` passed to create/delete. A trustworthy bag and trustworthy properties are the consumer's responsibility."
+          },
+          {
+            "text": "Every reference resolves through the bag (subjects) or through `properties`. There is no out-of-band authority."
+          },
+          {
+            "text": "Every undefined or `null` input fails closed."
+          }
+        ]
+      },
+      {
+        "topic": "Purpose",
+        "claims": [
+          {
+            "text": "**Why.** A pure-logic library cannot enforce trust on its inputs. The boundary must be drawn explicitly so consumers know what they own. Confusion at the boundary is the most common cause of access-control vulnerabilities."
+          },
+          {
+            "text": "**How.** The library trusts every value in the bag. The consumer builds the bag from trusted sources (verified session, DB rows) and never from request-supplied data. Any reference the engine cannot resolve — missing subject, missing field, undefined operation input — fails closed."
+          },
+          {
+            "text": "**Why this way.** Moving trust into the library would force product knowledge into it: where do credentials come from, how is a session validated, what counts as authoritative. Keeping the library logic-only and the boundary explicit lets the engine stay reusable while making the consumer's security responsibility unambiguous."
+          }
+        ],
+        "statement": "**What.** The trust model of the engine — what the library guarantees, what the consumer is responsible for, and how the boundary is drawn."
+      },
+      {
+        "topic": "Reference",
+        "claims": [],
+        "statement": "Examples use the same fictional document-management product as DSL-RULES (`DSL-RULES.md`): workspaces contain folders, folders contain documents, users may belong to teams."
+      },
+      {
+        "topic": "Reference › The trust boundary",
+        "claims": [
+          {
+            "text": "A bag built from request-supplied data (cookies treated as truth without verification, JSON body fields used as identity, JWT claims that weren't validated) is the most common path to access-control vulnerabilities in libraries of this shape. The library cannot detect the difference — every value in the bag is authoritative to the engine."
+          }
+        ],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "┌─────────────────────────────────────────┬───────────────────────────┐\n│  CONSUMER (untrusted inputs in)         │  LIBRARY (trusted only)   │\n├─────────────────────────────────────────┼───────────────────────────┤\n│                                         │                           │\n│  • verify session / cookies / JWT       │                           │\n│  • query DB for caller's roles          │                           │\n│  • populate bag from DB rows ───────────┼─►  evaluate rules         │\n│  • apply returned filter to query       │  ◄─── return filter       │\n│                                         │                           │\n└─────────────────────────────────────────┴───────────────────────────┘\n                                          ▲\n                                          │\n                                          The bag is the boundary.\n                                          Library trusts every value."
+              }
+            ]
+          }
+        ],
+        "statement": "Everything to the left is the consumer's responsibility — auth verification, DB queries, populating the bag from authoritative sources. The library starts the moment the bag is in hand and ends the moment the filter is returned."
+      },
+      {
+        "topic": "Reference › Fail-closed semantics",
+        "claims": [
+          {
+            "text": "Missing data never silently grants access. A rule that reads as \"anyone whose `session.workspace.type` is `'admin'`\" will not match for a caller with no `workspace` in the bag — even though the field absence superficially looks like \"not equal to admin.\""
+          }
+        ],
+        "statement": "Every undefined input denies. There is no permissive fallback anywhere in the engine.",
+        "imagesAndDiagrams": [
+          {
+            "type": "ascii",
+            "value": "| Situation | Behavior |\n|-----------|----------|\n| Subject referenced by a rule (`$session.user.id`) but absent from the bag | rule contributes `{ type: \"none\" }` (denies) |\n| Subject path walks through `undefined` / `null` | rule contributes `{ type: \"none\" }` |\n| Context scope `LHS:'literal'` and the LHS path is absent | scope does not match (rule does not apply) |\n| `ne` operator (`:!`) against a missing path | does not match — missing values never satisfy any operator, including not-equals |\n| Role assigned but not declared in role config | ignored (treated as if not assigned) |\n| Operation requested but no role's `actions` includes it | filter is `{ type: \"none\" }`, verdict is `{ allow: false }` |"
+          }
+        ]
+      },
+      {
+        "topic": "Reference › Boot validation",
+        "claims": [
+          {
+            "text": "Misconfigurations die at boot with the offending role and rule pinpointed — never at 3am in production."
+          }
+        ],
+        "statement": "`assertValidConfiguration({ roles, hierarchy, schema, subjects })` runs once at startup and fails the boot on any of:",
+        "imagesAndDiagrams": [
+          {
+            "type": "ascii",
+            "value": "| Check | Catches |\n|-------|---------|\n| Subject reference resolves | `$foo.bar` where `foo ∉ subjects` (typos like `$sesion`) |\n| Entity reference resolves | `entity` field on role, LHS first segments — must exist in schema |\n| Hierarchy edges valid | every parent and child names a declared role; no cycles |\n| Literals are well-formed | quoted, closed, no stray sigils |\n| Unrestricted access (\"god mode\") | rules with empty `context` AND empty `target` warn (configurable strict mode fails boot) |"
+          }
+        ]
+      },
+      {
+        "topic": "Reference › Filter exhaustiveness (internal — library guarantee)",
+        "claims": [],
+        "statement": "The internal `ScopeFilter` discriminated union is exhaustively handled by the bundled Drizzle compile pipeline. Consumers do not see `ScopeFilter` on the canonical methods — `engine.resolveRead/Update` return `ResolvedScope` (`{ where, select, joins }`) directly. The exhaustive-switch contract still applies inside the library; see `contributor/INTERNALS.md` for details. Forward-compatibility for consumer-defined extension variants is provided through the Drizzle adapter's `customHandler` option."
+      },
+      {
+        "topic": "Reference › Field interpolation",
+        "claims": [
+          {
+            "text": "Drizzle's parameterization handles values automatically; the risk is identifier injection (column / path names), which the library cannot prevent without knowing the consumer's schema policy."
+          }
+        ],
+        "statement": "The `meta` filter variant carries a consumer-routable string (the metadata JSON path). The library does not sanitize it. The Drizzle compile interpolates it as a JSON path against the entity's `metadata` column. Validate against an allowlist if the metadata path is influenced by anything outside config:",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "const ALLOWED_META_FIELDS = [\"type\", \"parentId\", \"status\"];\n\ncase \"meta\":\n  if (!ALLOWED_META_FIELDS.includes(filter.field)) {\n    throw new Error(`unsanctioned meta field: ${filter.field}`);\n  }\n  // safe to interpolate",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Reference › Attack surface",
+        "claims": [
+          {
+            "text": "Identical inputs always produce identical filters (determinism)."
+          },
+          {
+            "text": "No code path produces a filter outside the declared rules (closure)."
+          },
+          {
+            "text": "Missing inputs produce denials, not permissions (fail-closed)."
+          },
+          {
+            "text": "Anything that depends on values being trustworthy is the consumer's responsibility. Common attack patterns the library cannot detect:"
+          }
+        ],
+        "statement": "A pure-logic library cannot prevent every misuse — it can only refuse to be the cause of one. The library guarantees:",
+        "imagesAndDiagrams": [
+          {
+            "type": "ascii",
+            "value": "| Attack | Where it must be stopped |\n|--------|--------------------------|\n| Forged subject (`session.workspace.type = 'admin'` from request body) | bag construction must use DB-verified values |\n| User impersonation (`session.user.id = victim`) | session verification before bag is built |\n| Hierarchy bypass (assigning a role the user shouldn't have) | role-assignment writes must themselves be authorized |\n| Filter not applied (consumer forgets `where`) | consumer code review / test coverage |"
+          }
+        ]
+      },
+      {
+        "topic": "Reference › Beyond scope: entity-level access",
+        "claims": [
+          {
+            "text": "When such mechanisms exist, the consumer adds a second check after the scope filter has narrowed the query. The library will neither help nor hinder — the trust boundary at the bag is the only one it owns."
+          }
+        ],
+        "statement": "Some entities have their own per-row permission records (shares, link tokens, public flags). The engine produces filters over what scope grants — it has no opinion on whether *this specific row* allows access via a share or token."
+      }
+    ],
+    "review": {
+      "axioms": {
+        "state": "unreviewed"
+      },
+      "purpose": {
+        "state": "unreviewed"
+      },
+      "reference": {
+        "state": "unreviewed"
+      }
+    },
+    "converted": true
+  }
+}

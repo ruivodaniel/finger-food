@@ -1,0 +1,9 @@
+{
+  "name": "@configs/access-control",
+  "type": "module",
+  "private": true,
+  "main": "./index.ts",
+  "dependencies": {
+    "@libs/gated-scoped-ac": "workspace:*"
+  }
+}

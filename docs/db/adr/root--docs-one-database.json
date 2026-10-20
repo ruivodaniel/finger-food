@@ -1,0 +1,28 @@
+{
+  "id": "adr/root--docs-one-database",
+  "kind": "adr",
+  "title": "The docs are one database, filtered by tags and paths",
+  "status": "converted",
+  "subject": "docs",
+  "tags": [
+    "docs",
+    "architecture"
+  ],
+  "paths": [],
+  "summary": "Every doc, term and ADR entry is one entry in docs/db, with tags and paths; locations, groups and the glossary are filters.",
+  "adr": {
+    "date": "2026-10-19",
+    "adrStatus": "accepted",
+    "context": "Docs were filed in a docs folder per location, each with a map, an adr/ and a glossary/. Most glossary terms are global, and a location's docs needed terms from others, so the folders duplicated and hid what is shared.",
+    "decision": "Every doc, glossary term and ADR entry is one entry, one json file, in `docs/db`, with tags and the paths it is specific to. An entry with no path is global. The viewer groups by path, kind or tag and filters by kind, status, tag, mapper compliance and text. The registry and the maps are gone. Removing part of the repo is `node docs/engine/remove.ts <path>`: entries wholly inside the path go, shared ones lose only that path, global ones stay.",
+    "consequences": [
+      "The mapper doc's topics on the map, the registry and consumer/contributor folders are out of date and still to rewrite.",
+      "Consumer and contributor are now tags, on reusable domains.",
+      "A path that does not exist makes an entry not mapper compliant, as for the open API.",
+      "Old markdown is untouched in each `.old-markdown-to-sunset` folder."
+    ],
+    "affects": [
+      "mapper"
+    ]
+  }
+}

@@ -1,0 +1,3120 @@
+{
+ "entries": [
+  {
+   "id": "adr/main--ac-reference-states-the-built-system",
+   "kind": "adr",
+   "title": "The access-control Reference states the library as built, and every rule that disagrees stays un-consumed",
+   "status": "approved",
+   "subject": "main",
+   "tags": [
+    "main",
+    "architecture"
+   ],
+   "paths": [],
+   "summary": "Write the Reference from the code, then digest the tracked rules against it. Where a rule and the shipped library disagree, the code wins the claim and the rule",
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "adr/main--doc-scope-split",
+   "kind": "adr",
+   "title": "Scaffolding owns placement and boundaries; Backend Composition owns what is inside the layers",
+   "status": "approved",
+   "subject": "main",
+   "tags": [
+    "main",
+    "architecture"
+   ],
+   "paths": [],
+   "summary": "Scaffolding & Import Boundaries owns where code lives and who may reach whom. Backend Composition owns what happens inside the layers: entities, model ownership",
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "adr/main--frontend-composition-standings",
+   "kind": "adr",
+   "title": "Frontend Composition's claims are sorted into current, target, and undecided",
+   "status": "approved",
+   "subject": "main",
+   "tags": [
+    "main",
+    "architecture"
+   ],
+   "paths": [],
+   "summary": "The doc keeps stating rules in one normative voice — no per-claim status fields; the viewer renders claims bare by design. Where the code embodies a deliberate ",
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "adr/main--orchestration-runs-as-one-app-on-trigger-dev",
+   "kind": "adr",
+   "title": "Background work runs as one app, apps/orchestrator, on Trigger.dev; main runs its own workflow intents",
+   "status": "approved",
+   "subject": "main",
+   "tags": [
+    "main",
+    "architecture"
+   ],
+   "paths": [],
+   "summary": "One app, apps/orchestrator: versioned workers in its shared folder, pipelines in its slices, a hand-written registry per project, a generated catalog and a gene",
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "adr/main--product-slice-scope",
+   "kind": "adr",
+   "title": "Product slices are scoped `@product/…`",
+   "status": "approved",
+   "subject": "main",
+   "tags": [
+    "main",
+    "architecture"
+   ],
+   "paths": [],
+   "summary": "Scope every workspace package by its tier: `@configs/…` · `@libs/…` · `@modules/…` ([[seed slice|seed slices]]) · `@product/…` ([[product slice|product slices]]",
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "adr/main--public-surface-is-capabilities",
+   "kind": "adr",
+   "title": "A public surface exports capabilities, and only the app may name a seed slice",
+   "status": "approved",
+   "subject": "main",
+   "tags": [
+    "main",
+    "architecture"
+   ],
+   "paths": [],
+   "summary": "A [[slice]]'s [[public surface]] is a list of capabilities — services, hooks, components, routes — not services alone. Only the app may name a [[seed slice]]. A",
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "adr/main--repositories-never-join",
+   "kind": "adr",
+   "title": "A repository never joins",
+   "status": "approved",
+   "subject": "main",
+   "tags": [
+    "main",
+    "architecture"
+   ],
+   "paths": [],
+   "summary": "A repository never joins — no exception, engine-built or hand-written. A cross-entity read is either a DB view or service enrichment: the service asks the other",
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "adr/main--runtime-target-in-the-name",
+   "kind": "adr",
+   "title": "Runtime target belongs in the package name, never in the scope",
+   "status": "approved",
+   "subject": "main",
+   "tags": [
+    "main",
+    "architecture"
+   ],
+   "paths": [],
+   "summary": "The tier scope expresses reuse scope only. Runtime target is a separate axis and enters the package name: `@libs/web-components`, `@libs/web-layouts`, `@libs/mo",
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "adr/main--schema-inference-chain",
+   "kind": "adr",
+   "title": "One written model; every schema and type below it is inferred or derived",
+   "status": "approved",
+   "subject": "main",
+   "tags": [
+    "main",
+    "architecture"
+   ],
+   "paths": [],
+   "summary": "The model is the only hand-written entity shape. Entity zod schemas are inferred (createSelectSchema/createInsertSchema); types exist only through z.infer. Inpu",
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "adr/main--scope-names-the-tier",
+   "kind": "adr",
+   "title": "The package scope names the architectural tier",
+   "status": "approved",
+   "subject": "main",
+   "tags": [
+    "main",
+    "architecture"
+   ],
+   "paths": [],
+   "summary": "Scope every workspace package by its tier: `@configs/*` · `@libs/*` · `@modules/*` · `@features/*` · `@apps/*`. Apps get a scope even though nothing imports the",
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "adr/main--the-request-joins-the-access-context",
+   "kind": "adr",
+   "title": "The request body joins the access context, so gating a create on its parent is an ordinary rule",
+   "status": "approved",
+   "subject": "main",
+   "tags": [
+    "main",
+    "architecture"
+   ],
+   "paths": [],
+   "summary": "The request body becomes part of the [[access context]], hydrated by the consuming app's middleware as `requestBody`. A rule then reaches it with the `bag:` sub",
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "adr/root--docs-in-json-per-location",
+   "kind": "adr",
+   "title": "Docs are json, per location, with one registry",
+   "status": "converted",
+   "subject": "docs",
+   "tags": [
+    "docs"
+   ],
+   "paths": [],
+   "summary": "Each location owns a docs folder with a map, its docs, an adr and a glossary. A registry in the root points at the maps. Docs are json read by one viewer. The r",
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "adr/root--docs-one-database",
+   "kind": "adr",
+   "title": "The docs are one database, filtered by tags and paths",
+   "status": "converted",
+   "subject": "docs",
+   "tags": [
+    "docs",
+    "architecture"
+   ],
+   "paths": [],
+   "summary": "Every doc, term and ADR entry is one entry in docs/db, with tags and paths; locations, groups and the glossary are filters.",
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "adr/root--mapr-adapted-to-json-and-registry",
+   "kind": "adr",
+   "title": "MAPR kept, adapted to json and to the registry",
+   "status": "converted",
+   "subject": "docs",
+   "tags": [
+    "docs"
+   ],
+   "paths": [],
+   "summary": "The principles are kept as written. The map is a `map.json`, the ADR an `adr.json`, the central map the registry, and every location gets a glossary. Consumer a",
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "doc/access-control",
+   "kind": "doc",
+   "title": "Access Control",
+   "status": "approved",
+   "subject": "main",
+   "tags": [
+    "main",
+    "access context",
+    "gated db",
+    "library",
+    "scope"
+   ],
+   "paths": [
+    "apps/main"
+   ],
+   "summary": "Role checks alone can't express the access this platform needs — visibility that depends on org type, role hierarchy, and cross-entity conditions, evaluated …",
+   "docId": "access-control",
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "doc/backend-composition",
+   "kind": "doc",
+   "title": "Backend Composition",
+   "status": "approved",
+   "subject": "main",
+   "tags": [
+    "main",
+    "lifecycle hook"
+   ],
+   "paths": [
+    "apps/main"
+   ],
+   "summary": "Many callers reach the same slice operations — client requests, M2M calls, crons, agents. Layering puts the logic below the transport, in one substrate every…",
+   "docId": "backend-composition",
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "doc/frontend-composition",
+   "kind": "doc",
+   "title": "Frontend Composition",
+   "status": "approved",
+   "subject": "main",
+   "tags": [
+    "main",
+    "composition",
+    "library",
+    "page",
+    "section",
+    "shell",
+    "slice",
+    "sub-page"
+   ],
+   "paths": [
+    "apps/main"
+   ],
+   "summary": "Composition rules exist so that every page in the product reads the same way and no page can invent its own authorization. A developer opening any page finds…",
+   "docId": "frontend-composition",
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "doc/gated-scoped-ac-ac-patterns",
+   "kind": "doc",
+   "title": "AC Patterns",
+   "status": "converted",
+   "subject": "gated-scoped-ac",
+   "tags": [
+    "gated-scoped-ac",
+    "consumer"
+   ],
+   "paths": [
+    "shared/libs/gated-scoped-ac"
+   ],
+   "summary": "**What.** The patterns a service or repository uses to call the engine for each CRUD operation. One pattern per (operation × execution target).",
+   "docId": "gated-scoped-ac-ac-patterns",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms",
+     "no purpose"
+    ]
+   }
+  },
+  {
+   "id": "doc/gated-scoped-ac-architecture",
+   "kind": "doc",
+   "title": "Architecture",
+   "status": "converted",
+   "subject": "gated-scoped-ac",
+   "tags": [
+    "gated-scoped-ac",
+    "contributor"
+   ],
+   "paths": [
+    "shared/libs/gated-scoped-ac"
+   ],
+   "summary": "**What.** The internal layout of `@prowd/scoped-ac` — which module owns which concern, what lifetime each piece has, and how the consumer-facing surface comp…",
+   "docId": "gated-scoped-ac-architecture",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms",
+     "no purpose"
+    ]
+   }
+  },
+  {
+   "id": "doc/gated-scoped-ac-bag",
+   "kind": "doc",
+   "title": "Scope Context",
+   "status": "converted",
+   "subject": "gated-scoped-ac",
+   "tags": [
+    "gated-scoped-ac",
+    "consumer"
+   ],
+   "paths": [
+    "shared/libs/gated-scoped-ac"
+   ],
+   "summary": "**What.** The runtime input to the engine — a bag carrying the caller's subject data (whatever identifies \"who is asking, in what setting\") and assigned role…",
+   "docId": "gated-scoped-ac-bag",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms",
+     "no purpose"
+    ]
+   }
+  },
+  {
+   "id": "doc/gated-scoped-ac-dsl-rules",
+   "kind": "doc",
+   "title": "DSL Rules",
+   "status": "converted",
+   "subject": "gated-scoped-ac",
+   "tags": [
+    "gated-scoped-ac",
+    "consumer"
+   ],
+   "paths": [
+    "shared/libs/gated-scoped-ac"
+   ],
+   "summary": "**What.** The language consumers use to declare access control: roles, hierarchies among roles, and per-operation rules that pair context preconditions with …",
+   "docId": "gated-scoped-ac-dsl-rules",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms",
+     "no purpose"
+    ]
+   }
+  },
+  {
+   "id": "doc/gated-scoped-ac-internals",
+   "kind": "doc",
+   "title": "Internals",
+   "status": "converted",
+   "subject": "gated-scoped-ac",
+   "tags": [
+    "gated-scoped-ac",
+    "contributor"
+   ],
+   "paths": [
+    "shared/libs/gated-scoped-ac"
+   ],
+   "summary": "**What.** The internal evaluation algorithm: how the resolver turns rules + bag into a `ScopeFilter`, how the Drizzle builder compiles a `ScopeFilter` into `…",
+   "docId": "gated-scoped-ac-internals",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms",
+     "no purpose"
+    ]
+   }
+  },
+  {
+   "id": "doc/gated-scoped-ac-mount",
+   "kind": "doc",
+   "title": "Mount",
+   "status": "converted",
+   "subject": "gated-scoped-ac",
+   "tags": [
+    "gated-scoped-ac",
+    "consumer"
+   ],
+   "paths": [
+    "shared/libs/gated-scoped-ac"
+   ],
+   "summary": "**What.** The single mount point that turns a configured engine + a request bag-builder into a Hono middleware. After mount, every route handler has `c.get(\"…",
+   "docId": "gated-scoped-ac-mount",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms",
+     "no purpose"
+    ]
+   }
+  },
+  {
+   "id": "doc/gated-scoped-ac-readme",
+   "kind": "doc",
+   "title": "@prowd/scoped-ac",
+   "status": "converted",
+   "subject": "gated-scoped-ac",
+   "tags": [
+    "gated-scoped-ac"
+   ],
+   "paths": [
+    "shared/libs/gated-scoped-ac"
+   ],
+   "summary": "TypeScript access-control engine library.",
+   "docId": "gated-scoped-ac-readme",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms"
+    ]
+   }
+  },
+  {
+   "id": "doc/gated-scoped-ac-security",
+   "kind": "doc",
+   "title": "Security",
+   "status": "converted",
+   "subject": "gated-scoped-ac",
+   "tags": [
+    "gated-scoped-ac",
+    "consumer"
+   ],
+   "paths": [
+    "shared/libs/gated-scoped-ac"
+   ],
+   "summary": "**What.** The trust model of the engine — what the library guarantees, what the consumer is responsible for, and how the boundary is drawn.",
+   "docId": "gated-scoped-ac-security",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms",
+     "no purpose"
+    ]
+   }
+  },
+  {
+   "id": "doc/gated-scoped-ac-troubleshooting",
+   "kind": "doc",
+   "title": "Troubleshooting",
+   "status": "converted",
+   "subject": "gated-scoped-ac",
+   "tags": [
+    "gated-scoped-ac",
+    "consumer"
+   ],
+   "paths": [
+    "shared/libs/gated-scoped-ac"
+   ],
+   "summary": "**What.** Diagnostic guide for debugging access-control behavior — why a decision came out the way it did, and how to fix the most common misconfigurations.",
+   "docId": "gated-scoped-ac-troubleshooting",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms",
+     "no purpose"
+    ]
+   }
+  },
+  {
+   "id": "doc/infra-configs",
+   "kind": "doc",
+   "title": "What's configurable in this product",
+   "status": "converted",
+   "subject": "infra",
+   "tags": [
+    "infra"
+   ],
+   "paths": [
+    "configs"
+   ],
+   "summary": "Every `*.config.ts` and `*.ac.ts` file under `configs/` is an authoritative source of truth for a specific configurable concern. Runtime code, type definitio…",
+   "docId": "infra-configs",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms"
+    ]
+   }
+  },
+  {
+   "id": "doc/infra-helm",
+   "kind": "doc",
+   "title": "⎈ Helm Charts",
+   "status": "converted",
+   "subject": "infra",
+   "tags": [
+    "infra"
+   ],
+   "paths": [
+    "helm"
+   ],
+   "summary": "Kubernetes deployment configurations for all applications, organized as separate Helm charts for modular deployment and management.",
+   "docId": "infra-helm",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms"
+    ]
+   }
+  },
+  {
+   "id": "doc/infra-k6",
+   "kind": "doc",
+   "title": "Performance Tests (k6)",
+   "status": "converted",
+   "subject": "infra",
+   "tags": [
+    "infra"
+   ],
+   "paths": [
+    "tests/k6"
+   ],
+   "summary": "k6 test scripts for load and performance testing of Seed-derived services.",
+   "docId": "infra-k6",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms"
+    ]
+   }
+  },
+  {
+   "id": "doc/infra-scripts-lint",
+   "kind": "doc",
+   "title": "Prowd Lint System",
+   "status": "converted",
+   "subject": "infra",
+   "tags": [
+    "infra"
+   ],
+   "paths": [
+    "scripts/lint"
+   ],
+   "summary": "Deterministic architectural enforcement. One config, one pipeline, one output. Run: `pnpm lint:arch`",
+   "docId": "infra-scripts-lint",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms"
+    ]
+   }
+  },
+  {
+   "id": "doc/infra-terraform",
+   "kind": "doc",
+   "title": "🏗️ Terraform Infrastructure",
+   "status": "converted",
+   "subject": "infra",
+   "tags": [
+    "infra"
+   ],
+   "paths": [
+    "terraform"
+   ],
+   "summary": "Infrastructure as Code (IaC) configurations for provisioning and managing cloud resources using Terraform modules and deployments.",
+   "docId": "infra-terraform",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms"
+    ]
+   }
+  },
+  {
+   "id": "doc/list-query-api-reference",
+   "kind": "doc",
+   "title": "API Reference",
+   "status": "converted",
+   "subject": "list-query",
+   "tags": [
+    "list-query",
+    "consumer"
+   ],
+   "paths": [
+    "shared/libs/list-query"
+   ],
+   "summary": "All exported symbols from `@prowd/list-query`, `@prowd/list-query/server`, and `@prowd/list-query/client`.",
+   "docId": "list-query-api-reference",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms"
+    ]
+   }
+  },
+  {
+   "id": "doc/list-query-architecture",
+   "kind": "doc",
+   "title": "Architecture",
+   "status": "converted",
+   "subject": "list-query",
+   "tags": [
+    "list-query",
+    "contributor"
+   ],
+   "paths": [
+    "shared/libs/list-query"
+   ],
+   "summary": "Design decisions for `@prowd/list-query`. Read this before changing the public surface.",
+   "docId": "list-query-architecture",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms"
+    ]
+   }
+  },
+  {
+   "id": "doc/list-query-backend-usage",
+   "kind": "doc",
+   "title": "Backend Usage",
+   "status": "converted",
+   "subject": "list-query",
+   "tags": [
+    "list-query",
+    "consumer"
+   ],
+   "paths": [
+    "shared/libs/list-query"
+   ],
+   "summary": "Everything in this doc lives under `@prowd/list-query/server`. The root entry (`@prowd/list-query`) exposes only isomorphic types and the sort parser.",
+   "docId": "list-query-backend-usage",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms"
+    ]
+   }
+  },
+  {
+   "id": "doc/list-query-examples",
+   "kind": "doc",
+   "title": "Examples",
+   "status": "converted",
+   "subject": "list-query",
+   "tags": [
+    "list-query",
+    "consumer"
+   ],
+   "paths": [
+    "shared/libs/list-query"
+   ],
+   "summary": "Full walkthrough of wiring a list endpoint end-to-end. This mirrors the structure used by `user-organization-mgmt`.",
+   "docId": "list-query-examples",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms"
+    ]
+   }
+  },
+  {
+   "id": "doc/list-query-frontend-usage",
+   "kind": "doc",
+   "title": "Frontend Usage",
+   "status": "converted",
+   "subject": "list-query",
+   "tags": [
+    "list-query",
+    "consumer"
+   ],
+   "paths": [
+    "shared/libs/list-query"
+   ],
+   "summary": "Everything in this doc lives under `@prowd/list-query/client`. The root entry (`@prowd/list-query`) exposes types the FE also uses (`SortSpec`, `ListResponse…",
+   "docId": "list-query-frontend-usage",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms"
+    ]
+   }
+  },
+  {
+   "id": "doc/list-query-getting-started",
+   "kind": "doc",
+   "title": "Getting Started",
+   "status": "converted",
+   "subject": "list-query",
+   "tags": [
+    "list-query",
+    "consumer"
+   ],
+   "paths": [
+    "shared/libs/list-query"
+   ],
+   "summary": "`@prowd/list-query` is the single source of truth for the pagination + sort + search contract used by every list endpoint in Prowd. This doc gives you everyt…",
+   "docId": "list-query-getting-started",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms"
+    ]
+   }
+  },
+  {
+   "id": "doc/list-query-overview",
+   "kind": "doc",
+   "title": "list-query",
+   "status": "converted",
+   "subject": "list-query",
+   "tags": [
+    "list-query"
+   ],
+   "paths": [
+    "shared/libs/list-query"
+   ],
+   "summary": "**What.** Standardised list endpoint contract — pagination, sort, multi-field ordering, search flag, scoped count, plus the React hook that drives URL-backed…",
+   "docId": "list-query-overview",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms"
+    ]
+   }
+  },
+  {
+   "id": "doc/list-query-readme",
+   "kind": "doc",
+   "title": "@libs/list-query",
+   "status": "converted",
+   "subject": "list-query",
+   "tags": [
+    "list-query"
+   ],
+   "paths": [
+    "shared/libs/list-query"
+   ],
+   "summary": "Reusable list-query contract for Prowd: pagination + sort + search, uniform across every list endpoint (backend and frontend).",
+   "docId": "list-query-readme",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms"
+    ]
+   }
+  },
+  {
+   "id": "doc/list-query-sort-syntax",
+   "kind": "doc",
+   "title": "Sort Syntax",
+   "status": "converted",
+   "subject": "list-query",
+   "tags": [
+    "list-query",
+    "contributor"
+   ],
+   "paths": [
+    "shared/libs/list-query"
+   ],
+   "summary": "Canonical grammar for the `sort` query param.",
+   "docId": "list-query-sort-syntax",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms"
+    ]
+   }
+  },
+  {
+   "id": "doc/list-query-testing",
+   "kind": "doc",
+   "title": "Testing",
+   "status": "converted",
+   "subject": "list-query",
+   "tags": [
+    "list-query",
+    "contributor"
+   ],
+   "paths": [
+    "shared/libs/list-query"
+   ],
+   "summary": "How to add and test helpers in `@prowd/list-query`.",
+   "docId": "list-query-testing",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms"
+    ]
+   }
+  },
+  {
+   "id": "doc/main-api",
+   "kind": "doc",
+   "title": "🔗 API Application",
+   "status": "converted",
+   "subject": "main",
+   "tags": [
+    "main"
+   ],
+   "paths": [
+    "apps/main"
+   ],
+   "summary": "`Hono` (`https://hono.dev/`) backend API service with `Better Auth` (`https://www.better-auth.com/`) authentication and scoped access control.",
+   "docId": "main-api",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms"
+    ]
+   }
+  },
+  {
+   "id": "doc/main-web-docs",
+   "kind": "doc",
+   "title": "apps/web-main — Documentation",
+   "status": "converted",
+   "subject": "main",
+   "tags": [
+    "main"
+   ],
+   "paths": [
+    "apps/main"
+   ],
+   "summary": "**What.** The React 19 + TanStack Router web app that mounts module-contributed pages, owns the shell, and renders the product. **How.** Imports each module'…",
+   "docId": "main-web-docs",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms"
+    ]
+   }
+  },
+  {
+   "id": "doc/main-web-product-specific",
+   "kind": "doc",
+   "title": "Product-Specific — apps/web-main",
+   "status": "converted",
+   "subject": "main",
+   "tags": [
+    "main"
+   ],
+   "paths": [
+    "apps/main"
+   ],
+   "summary": "**What.** _Placeholder._ Document here this web app's product-level choices — theme selection, brand assets, app-only routes, app-only components, sidebar gr…",
+   "docId": "main-web-product-specific",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms",
+     "no reference"
+    ]
+   }
+  },
+  {
+   "id": "doc/main-web-seed-patterns",
+   "kind": "doc",
+   "title": "Seed Patterns — apps/web-main",
+   "status": "converted",
+   "subject": "main",
+   "tags": [
+    "main"
+   ],
+   "paths": [
+    "apps/main"
+   ],
+   "summary": "**What.** _Placeholder._ Document here the patterns this web app inherits from the seed — shell wiring (Shell + ShellSideNav + Page from `@prowd/layouts`), p…",
+   "docId": "main-web-seed-patterns",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms",
+     "no reference"
+    ]
+   }
+  },
+  {
+   "id": "doc/main-web",
+   "kind": "doc",
+   "title": "🌐 Client Application",
+   "status": "converted",
+   "subject": "main",
+   "tags": [
+    "main"
+   ],
+   "paths": [
+    "apps/main"
+   ],
+   "summary": "`React` (`https://react.dev/`) frontend application with `TanStack Router` (`https://tanstack.com/router`) for file-based routing and modern UI components.",
+   "docId": "main-web",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms"
+    ]
+   }
+  },
+  {
+   "id": "doc/mapper",
+   "kind": "doc",
+   "title": "MAPR: the documentation standard",
+   "status": "converted",
+   "subject": "docs",
+   "tags": [
+    "docs"
+   ],
+   "paths": [],
+   "summary": "Map → Axioms → Purpose → Reference: the shape of every doc, map and ADR, and the rules of the registry.",
+   "docId": "mapper",
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "doc/orchestrator-readme",
+   "kind": "doc",
+   "title": "@apps/orchestrator",
+   "status": "converted",
+   "subject": "orchestrator",
+   "tags": [
+    "orchestrator"
+   ],
+   "paths": [
+    "apps/orchestrator"
+   ],
+   "summary": "The seed orchestrator: versioned workers and pipelines run on Trigger.dev, every artifact in object storage, one gated API in front. Design and glossary: `sl…",
+   "docId": "orchestrator-readme",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms"
+    ]
+   }
+  },
+  {
+   "id": "doc/realtime-brief",
+   "kind": "doc",
+   "title": "@libs/realtime — Developer Implementation Brief",
+   "status": "converted",
+   "subject": "realtime",
+   "tags": [
+    "realtime"
+   ],
+   "paths": [
+    "shared/libs/realtime"
+   ],
+   "summary": "**Shared real-time transport engine for server→client push.**",
+   "docId": "realtime-brief",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms"
+    ]
+   }
+  },
+  {
+   "id": "doc/realtime-overview",
+   "kind": "doc",
+   "title": "realtime",
+   "status": "converted",
+   "subject": "realtime",
+   "tags": [
+    "realtime"
+   ],
+   "paths": [
+    "shared/libs/realtime"
+   ],
+   "summary": "**What.** A transport-agnostic push engine for server-to-client events over SSE. **How.** Exposes a connection manager + push primitive on the backend and a …",
+   "docId": "realtime-overview",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms"
+    ]
+   }
+  },
+  {
+   "id": "doc/scaffolding-and-import-boundaries",
+   "kind": "doc",
+   "title": "Scaffolding & Import Boundaries",
+   "status": "approved",
+   "subject": "main",
+   "tags": [
+    "main",
+    "injection",
+    "leaf adapter",
+    "library",
+    "lifecycle hook",
+    "mount",
+    "package",
+    "page",
+    "product slice",
+    "public surface",
+    "seed slice",
+    "shell",
+    "slice",
+    "slice app",
+    "tier"
+   ],
+   "paths": [
+    "apps/main"
+   ],
+   "summary": "This architecture tries to achieve: consistency and decoupability.",
+   "docId": "scaffolding-and-import-boundaries",
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "doc/sitemap-url-paths",
+   "kind": "doc",
+   "title": "Sitemap · URL Paths",
+   "status": "approved",
+   "subject": "main",
+   "tags": [
+    "main"
+   ],
+   "paths": [
+    "apps/main"
+   ],
+   "summary": "One place that shows every URL of the seed baseline as a tree, with what each path shows — so a product slice adds its own paths beside these instead of gues…",
+   "docId": "sitemap-url-paths",
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "doc/todo-audit-trail",
+   "kind": "doc",
+   "title": "slice: audit-trail (not in the repo yet) (not migrated)",
+   "status": "todo",
+   "subject": "audit-trail",
+   "tags": [
+    "audit-trail"
+   ],
+   "paths": [
+    "apps/main/slices/seed"
+   ],
+   "summary": "Not migrated yet. Starting point: apps/main/slices/seed",
+   "entry": "apps/main/slices/seed",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "not migrated"
+    ]
+   }
+  },
+  {
+   "id": "doc/todo-availability-check",
+   "kind": "doc",
+   "title": "lib: availability-check (not migrated)",
+   "status": "todo",
+   "subject": "availability-check",
+   "tags": [
+    "availability-check"
+   ],
+   "paths": [
+    "shared/libs/availability-check"
+   ],
+   "summary": "Not migrated yet. Starting point: shared/libs/availability-check/docs/README.md",
+   "entry": "shared/libs/availability-check/docs/README.md",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "not migrated"
+    ]
+   }
+  },
+  {
+   "id": "doc/todo-notifications",
+   "kind": "doc",
+   "title": "slice: notifications (not migrated)",
+   "status": "todo",
+   "subject": "notifications",
+   "tags": [
+    "notifications"
+   ],
+   "paths": [
+    "apps/main/slices/seed/notifications"
+   ],
+   "summary": "Not migrated yet. Starting point: apps/main/slices/seed/notifications/docs/README.md",
+   "entry": "apps/main/slices/seed/notifications/docs/README.md",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "not migrated"
+    ]
+   }
+  },
+  {
+   "id": "doc/todo-queue",
+   "kind": "doc",
+   "title": "lib: queue (not migrated)",
+   "status": "todo",
+   "subject": "queue",
+   "tags": [
+    "queue"
+   ],
+   "paths": [
+    "shared/libs/queue"
+   ],
+   "summary": "Not migrated yet. Starting point: shared/libs/queue",
+   "entry": "shared/libs/queue",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "not migrated"
+    ]
+   }
+  },
+  {
+   "id": "doc/todo-rich-text-editor",
+   "kind": "doc",
+   "title": "lib: rich-text-editor (not migrated)",
+   "status": "todo",
+   "subject": "rich-text-editor",
+   "tags": [
+    "rich-text-editor"
+   ],
+   "paths": [
+    "shared/libs/rich-text-editor"
+   ],
+   "summary": "Not migrated yet. Starting point: shared/libs/rich-text-editor/docs/README.md",
+   "entry": "shared/libs/rich-text-editor/docs/README.md",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "not migrated"
+    ]
+   }
+  },
+  {
+   "id": "doc/todo-slice-design",
+   "kind": "doc",
+   "title": "slice-design tool (not migrated)",
+   "status": "todo",
+   "subject": "slice-design",
+   "tags": [
+    "slice-design"
+   ],
+   "paths": [
+    "slice-design"
+   ],
+   "summary": "Not migrated yet. Starting point: slice-design/README.md",
+   "entry": "slice-design/README.md",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "not migrated"
+    ]
+   }
+  },
+  {
+   "id": "doc/todo-storage",
+   "kind": "doc",
+   "title": "lib: storage (not migrated)",
+   "status": "todo",
+   "subject": "storage",
+   "tags": [
+    "storage"
+   ],
+   "paths": [
+    "shared/libs/storage"
+   ],
+   "summary": "Not migrated yet. Starting point: shared/libs/storage",
+   "entry": "shared/libs/storage",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "not migrated"
+    ]
+   }
+  },
+  {
+   "id": "doc/todo-team-cockpit",
+   "kind": "doc",
+   "title": "team-cockpit (not migrated)",
+   "status": "todo",
+   "subject": "team-cockpit",
+   "tags": [
+    "team-cockpit"
+   ],
+   "paths": [
+    "team-cockpit"
+   ],
+   "summary": "Not migrated yet. Starting point: team-cockpit/INDEX.md",
+   "entry": "team-cockpit/INDEX.md",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "not migrated"
+    ]
+   }
+  },
+  {
+   "id": "doc/todo-workflows",
+   "kind": "doc",
+   "title": "lib: workflows (not migrated)",
+   "status": "todo",
+   "subject": "workflows",
+   "tags": [
+    "workflows"
+   ],
+   "paths": [
+    "shared/libs/workflows"
+   ],
+   "summary": "Not migrated yet. Starting point: shared/libs/workflows/README.md",
+   "entry": "shared/libs/workflows/README.md",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "not migrated"
+    ]
+   }
+  },
+  {
+   "id": "doc/ui-architecture",
+   "kind": "doc",
+   "title": "Architecture",
+   "status": "converted",
+   "subject": "ui",
+   "tags": [
+    "ui",
+    "contributor"
+   ],
+   "paths": [
+    "shared/libs/ui"
+   ],
+   "summary": "Only the architect may modify this document.",
+   "docId": "ui-architecture",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms"
+    ]
+   }
+  },
+  {
+   "id": "doc/ui-cascade-spec",
+   "kind": "doc",
+   "title": "Cascade Specification",
+   "status": "converted",
+   "subject": "ui",
+   "tags": [
+    "ui",
+    "contributor"
+   ],
+   "paths": [
+    "shared/libs/ui"
+   ],
+   "summary": "Technical details of how the theme cascade translates to CSS. For the conceptual model, see Architecture (`architecture.md`).",
+   "docId": "ui-cascade-spec",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms"
+    ]
+   }
+  },
+  {
+   "id": "doc/ui-engine",
+   "kind": "doc",
+   "title": "Theme Engine",
+   "status": "converted",
+   "subject": "ui",
+   "tags": [
+    "ui",
+    "contributor"
+   ],
+   "paths": [
+    "shared/libs/ui"
+   ],
+   "summary": "How the CSS engine works. The engine compiles a Theme object into a single CSS file that owns all visual styling for the application.",
+   "docId": "ui-engine",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms"
+    ]
+   }
+  },
+  {
+   "id": "doc/ui-layouts",
+   "kind": "doc",
+   "title": "Layouts",
+   "status": "converted",
+   "subject": "ui",
+   "tags": [
+    "ui",
+    "consumer"
+   ],
+   "paths": [
+    "shared/libs/ui"
+   ],
+   "summary": "How to compose page structure using shared layout components and compositions.",
+   "docId": "ui-layouts",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms"
+    ]
+   }
+  },
+  {
+   "id": "doc/ui-markup-dictionary",
+   "kind": "doc",
+   "title": "Markup Dictionary",
+   "status": "converted",
+   "subject": "ui",
+   "tags": [
+    "ui",
+    "consumer"
+   ],
+   "paths": [
+    "shared/libs/ui"
+   ],
+   "summary": "Generated from docs/consumer/developer/markup-dictionary.md by scripts/markup-dictionary-elements.ts; the markdown stays until that script is ported.",
+   "docId": "ui-markup-dictionary",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms"
+    ]
+   }
+  },
+  {
+   "id": "doc/ui-mobile-components-design",
+   "kind": "doc",
+   "title": "Mobile design: why the library is shaped this way",
+   "status": "converted",
+   "subject": "ui",
+   "tags": [
+    "ui"
+   ],
+   "paths": [
+    "shared/libs/ui"
+   ],
+   "summary": "The first version of this library, taken from the LLC project, chose React Native's usual vocabulary (`variant`, `tone`, `size`), a hand-written theme of its…",
+   "docId": "ui-mobile-components-design",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms",
+     "no purpose"
+    ]
+   }
+  },
+  {
+   "id": "doc/ui-mobile-components",
+   "kind": "doc",
+   "title": "`@libs/mobile-components`",
+   "status": "converted",
+   "subject": "ui",
+   "tags": [
+    "ui"
+   ],
+   "paths": [
+    "shared/libs/ui"
+   ],
+   "summary": "The mobile UI library: React Native components on the same contract as `@libs/web-components`. The rationale is in `DESIGN.md` (`./DESIGN.md`).",
+   "docId": "ui-mobile-components",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms"
+    ]
+   }
+  },
+  {
+   "id": "doc/ui-naming",
+   "kind": "doc",
+   "title": "Naming",
+   "status": "converted",
+   "subject": "ui",
+   "tags": [
+    "ui",
+    "consumer"
+   ],
+   "paths": [
+    "shared/libs/ui"
+   ],
+   "summary": "How application components, and their files, are named. This covers the components an app or a slice writes. The library's own elements (`alert-dialog`, `dat…",
+   "docId": "ui-naming",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms"
+    ]
+   }
+  },
+  {
+   "id": "doc/ui-theme-authoring",
+   "kind": "doc",
+   "title": "Theme Authoring",
+   "status": "converted",
+   "subject": "ui",
+   "tags": [
+    "ui",
+    "consumer"
+   ],
+   "paths": [
+    "shared/libs/ui"
+   ],
+   "summary": "How to write a theme object. A theme is a TypeScript object conforming to the `Theme` type (`shared/libs/ui/types/theme.ts`).",
+   "docId": "ui-theme-authoring",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms"
+    ]
+   }
+  },
+  {
+   "id": "doc/ui-web-components",
+   "kind": "doc",
+   "title": "@libs/web-components",
+   "status": "converted",
+   "subject": "ui",
+   "tags": [
+    "ui"
+   ],
+   "paths": [
+    "shared/libs/ui"
+   ],
+   "summary": "Shared UI components following the Content Modularity architecture.",
+   "docId": "ui-web-components",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms"
+    ]
+   }
+  },
+  {
+   "id": "doc/ui-web-layouts",
+   "kind": "doc",
+   "title": "Layout components",
+   "status": "converted",
+   "subject": "ui",
+   "tags": [
+    "ui"
+   ],
+   "paths": [
+    "shared/libs/ui"
+   ],
+   "summary": "Structural scaffolding for page composition. Every component here renders one `layout=\"...\"` attribute and handles exactly one structural concern (scroll, ov…",
+   "docId": "ui-web-layouts",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms"
+    ]
+   }
+  },
+  {
+   "id": "doc/unmet-requirements",
+   "kind": "doc",
+   "title": "Unmet Requirements",
+   "status": "approved",
+   "subject": "main",
+   "tags": [
+    "main"
+   ],
+   "paths": [
+    "apps/main"
+   ],
+   "summary": "Some things a caller must have settled before authorization is even worth evaluating — a verified identifier, a required session factor, mandatory profile da…",
+   "docId": "unmet-requirements",
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "doc/user-org-mgmt-architecture",
+   "kind": "doc",
+   "title": "Architecture",
+   "status": "converted",
+   "subject": "user-organization-mgmt",
+   "tags": [
+    "user-organization-mgmt"
+   ],
+   "paths": [
+    "apps/main/slices/seed/user-organization-mgmt"
+   ],
+   "summary": "`api/identity/identity-provider.port.ts` is the module's ONLY seam to the identity system. The provider owns identities, credentials, verification codes (gen…",
+   "docId": "user-org-mgmt-architecture",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms",
+     "no purpose"
+    ]
+   }
+  },
+  {
+   "id": "doc/user-org-mgmt-auth-config-dsl",
+   "kind": "doc",
+   "title": "The auth-config DSL",
+   "status": "converted",
+   "subject": "user-organization-mgmt",
+   "tags": [
+    "user-organization-mgmt"
+   ],
+   "paths": [
+    "apps/main/slices/seed/user-organization-mgmt"
+   ],
+   "summary": "The module ships the engine (`shared/auth-config/`: types, resolver, validation); the product ships the config instance (`configs/user-organization-mgmt/auth…",
+   "docId": "user-org-mgmt-auth-config-dsl",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms"
+    ]
+   }
+  },
+  {
+   "id": "doc/user-org-mgmt-flows-and-gate",
+   "kind": "doc",
+   "title": "Auth and the gate",
+   "status": "converted",
+   "subject": "user-organization-mgmt",
+   "tags": [
+    "user-organization-mgmt"
+   ],
+   "paths": [
+    "apps/main/slices/seed/user-organization-mgmt"
+   ],
+   "summary": "The module keeps **no flow records**. A credential conversation is the provider's own flow, and the client holds its id. `AuthService` adds only what the pro…",
+   "docId": "user-org-mgmt-flows-and-gate",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms",
+     "no purpose"
+    ]
+   }
+  },
+  {
+   "id": "doc/user-org-mgmt-identifiers",
+   "kind": "doc",
+   "title": "Identifiers",
+   "status": "converted",
+   "subject": "user-organization-mgmt",
+   "tags": [
+    "user-organization-mgmt"
+   ],
+   "paths": [
+    "apps/main/slices/seed/user-organization-mgmt"
+   ],
+   "summary": "Two different things, deliberately kept apart:",
+   "docId": "user-org-mgmt-identifiers",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms",
+     "no purpose"
+    ]
+   }
+  },
+  {
+   "id": "doc/user-org-mgmt-legal",
+   "kind": "doc",
+   "title": "Legal documents and consent",
+   "status": "converted",
+   "subject": "user-organization-mgmt",
+   "tags": [
+    "user-organization-mgmt"
+   ],
+   "paths": [
+    "apps/main/slices/seed/user-organization-mgmt"
+   ],
+   "summary": "Consent has two halves: the CONFIGS say what must be consented to (the auth config's `legalConsent` rules, the org-lifecycle's `creation.ownership.legalConse…",
+   "docId": "user-org-mgmt-legal",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms"
+    ]
+   }
+  },
+  {
+   "id": "doc/user-org-mgmt-organizations",
+   "kind": "doc",
+   "title": "Organizations, memberships, invitations",
+   "status": "converted",
+   "subject": "user-organization-mgmt",
+   "tags": [
+    "user-organization-mgmt"
+   ],
+   "paths": [
+    "apps/main/slices/seed/user-organization-mgmt"
+   ],
+   "summary": "Organizations are the module's own tables and services — the identity provider knows nothing about them. Two configs drive every decision: the auth config (m…",
+   "docId": "user-org-mgmt-organizations",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms"
+    ]
+   }
+  },
+  {
+   "id": "doc/user-org-mgmt-overview",
+   "kind": "doc",
+   "title": "user-organization-mgmt — docs",
+   "status": "converted",
+   "subject": "user-organization-mgmt",
+   "tags": [
+    "user-organization-mgmt"
+   ],
+   "paths": [
+    "apps/main/slices/seed/user-organization-mgmt"
+   ],
+   "summary": "Config-driven identity module: registration, authentication, and account recovery described by a declarative auth DSL, executed over Ory Kratos. The module h…",
+   "docId": "user-org-mgmt-overview",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms"
+    ]
+   }
+  },
+  {
+   "id": "doc/user-org-mgmt-web-surface",
+   "kind": "doc",
+   "title": "Web surface",
+   "status": "converted",
+   "subject": "user-organization-mgmt",
+   "tags": [
+    "user-organization-mgmt"
+   ],
+   "paths": [
+    "apps/main/slices/seed/user-organization-mgmt"
+   ],
+   "summary": "The module's frontend lives in `web/` and follows the contribution pattern: the app mounts what the module exports; pages travel inside route definitions and…",
+   "docId": "user-org-mgmt-web-surface",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms"
+    ]
+   }
+  },
+  {
+   "id": "doc/value-types-overview",
+   "kind": "doc",
+   "title": "value-types",
+   "status": "converted",
+   "subject": "value-types",
+   "tags": [
+    "value-types"
+   ],
+   "paths": [
+    "shared/libs/value-types"
+   ],
+   "summary": "**What.** The universe of standardised value types: BCP 47 locales, IANA timezones, E.164 phone numbers, ISO 3166-1 countries, ISO 4217 currencies. Tuples + …",
+   "docId": "value-types-overview",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms"
+    ]
+   }
+  },
+  {
+   "id": "doc/value-types-readme",
+   "kind": "doc",
+   "title": "@libs/value-types",
+   "status": "converted",
+   "subject": "value-types",
+   "tags": [
+    "value-types"
+   ],
+   "paths": [
+    "shared/libs/value-types"
+   ],
+   "summary": "Universe of valid values for shared vocabulary backed by ISO/IANA/BCP 47/E.164 standards. Pure data + thin validators. **Zero product knowledge.**",
+   "docId": "value-types-readme",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "no axioms"
+    ]
+   }
+  },
+  {
+   "id": "standards/main",
+   "kind": "standards",
+   "title": "Standards — consumption tracker",
+   "status": "converted",
+   "subject": "main",
+   "tags": [
+    "main"
+   ],
+   "paths": [
+    "apps/main"
+   ],
+   "summary": "Temporary: which auto-generated rules were digested into canonical docs.",
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "a standards file is not a MAPR artifact"
+    ]
+   }
+  },
+  {
+   "id": "term/access-context",
+   "kind": "term",
+   "title": "access context",
+   "status": "approved",
+   "subjects": [
+    "main",
+    "gated-scoped-ac"
+   ],
+   "tags": [
+    "access-control"
+   ],
+   "paths": [],
+   "summary": "",
+   "term": {
+    "def": "The per-request bag hydrated once in middleware — who is asking, their active organization, their effective permissions, and the gated database handle. Every gated method takes it as its first parameter and passes it down; it is never recomputed per layer. Written `ac` in code.",
+    "aliases": [
+     "bag"
+    ],
+    "proposed": true
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/adr",
+   "kind": "term",
+   "title": "ADR",
+   "status": "converted",
+   "subjects": [
+    "docs"
+   ],
+   "tags": [
+    "docs"
+   ],
+   "paths": [],
+   "summary": "",
+   "term": {
+    "def": "The append-only journal of a location's decisions.",
+    "aliases": []
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/axiom",
+   "kind": "term",
+   "title": "axiom",
+   "status": "converted",
+   "subjects": [
+    "docs"
+   ],
+   "tags": [
+    "docs"
+   ],
+   "paths": [],
+   "summary": "",
+   "term": {
+    "def": "One universal invariant per line, most abstract first. No mechanism, no method names.",
+    "aliases": []
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/capability",
+   "kind": "term",
+   "title": "capability",
+   "status": "converted",
+   "subjects": [
+    "orchestrator"
+   ],
+   "tags": [
+    "orchestrator"
+   ],
+   "paths": [
+    "apps/orchestrator"
+   ],
+   "summary": "",
+   "term": {
+    "def": "What a worker can do: a node of the capability tree of the [[ontology]].",
+    "aliases": [],
+    "proposed": true
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/charge-credits",
+   "kind": "term",
+   "title": "charge credits",
+   "status": "converted",
+   "subjects": [
+    "orchestrator"
+   ],
+   "tags": [
+    "orchestrator"
+   ],
+   "paths": [
+    "apps/orchestrator"
+   ],
+   "summary": "",
+   "term": {
+    "def": "A worker that asks the open API to charge credits. When a pipeline checks credits in the middle of a run it also charges, so parallel runs cannot overspend.",
+    "aliases": [],
+    "proposed": true
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/check-crons",
+   "kind": "term",
+   "title": "check crons",
+   "status": "converted",
+   "subjects": [
+    "orchestrator"
+   ],
+   "tags": [
+    "orchestrator"
+   ],
+   "paths": [
+    "apps/orchestrator"
+   ],
+   "summary": "",
+   "term": {
+    "def": "A worker, started every N minutes, that asks the open API which crons are due in the next N minutes and starts those pipelines.",
+    "aliases": [],
+    "proposed": true
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/composition",
+   "kind": "term",
+   "title": "composition",
+   "status": "approved",
+   "subjects": [
+    "ui"
+   ],
+   "tags": [
+    "ui"
+   ],
+   "paths": [
+    "shared/libs/ui/web/layouts"
+   ],
+   "summary": "",
+   "term": {
+    "def": "A prebuilt slot wrapper from `@libs/web-layouts` — currently only `AuthPage`. Other pages assemble [[layout primitive|primitives]] via app-level section layouts (`PageFrame`, `SettingsLayout`).",
+    "aliases": [],
+    "proposed": true
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/consumer",
+   "kind": "term",
+   "title": "consumer",
+   "status": "converted",
+   "subjects": [
+    "docs"
+   ],
+   "tags": [
+    "docs"
+   ],
+   "paths": [],
+   "summary": "",
+   "term": {
+    "def": "The docs of a reusable domain about how to use it.",
+    "aliases": []
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/contributor",
+   "kind": "term",
+   "title": "contributor",
+   "status": "converted",
+   "subjects": [
+    "docs"
+   ],
+   "tags": [
+    "docs"
+   ],
+   "paths": [],
+   "summary": "",
+   "term": {
+    "def": "The docs of a reusable domain about how to change it.",
+    "aliases": []
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/converted",
+   "kind": "term",
+   "title": "converted",
+   "status": "converted",
+   "subjects": [
+    "docs"
+   ],
+   "tags": [
+    "docs"
+   ],
+   "paths": [],
+   "summary": "",
+   "term": {
+    "def": "Mechanically converted from markdown: axioms and purpose still to write, and nothing reviewed.",
+    "aliases": []
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/credit-check",
+   "kind": "term",
+   "title": "credit check",
+   "status": "converted",
+   "subjects": [
+    "orchestrator"
+   ],
+   "tags": [
+    "orchestrator"
+   ],
+   "paths": [
+    "apps/orchestrator"
+   ],
+   "summary": "",
+   "term": {
+    "def": "A worker that asks the open API for the credits, at the start of a run and, in a complex pipeline, again during it.",
+    "aliases": [],
+    "proposed": true
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/credits",
+   "kind": "term",
+   "title": "credits",
+   "status": "converted",
+   "subjects": [
+    "open-api",
+    "orchestrator"
+   ],
+   "tags": [
+    "credits"
+   ],
+   "paths": [],
+   "summary": "",
+   "term": {
+    "def": "Only the open API knows the credits of a user or an organization: the orchestrator asks it.",
+    "aliases": []
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/doc",
+   "kind": "term",
+   "title": "doc",
+   "status": "converted",
+   "subjects": [
+    "docs"
+   ],
+   "tags": [
+    "docs"
+   ],
+   "paths": [],
+   "summary": "",
+   "term": {
+    "def": "A canonical document: axiom, purpose, reference.",
+    "aliases": []
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/gated-db",
+   "kind": "term",
+   "title": "gated db",
+   "status": "approved",
+   "subjects": [
+    "gated-scoped-ac"
+   ],
+   "tags": [
+    "access-control"
+   ],
+   "paths": [
+    "shared/libs/gated-scoped-ac"
+   ],
+   "summary": "",
+   "term": {
+    "def": "The per-request database handle the access-control library hands out — the only thing in the system holding the connection. Its reads and writes require a [[scope]]; it never throws, returning no rows or null when access control admits nothing. Distinct from the unmet-requirements **gate**, which answers obligations and never touches data.",
+    "aliases": [],
+    "proposed": true
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/glossary",
+   "kind": "term",
+   "title": "glossary",
+   "status": "converted",
+   "subjects": [
+    "docs"
+   ],
+   "tags": [
+    "docs"
+   ],
+   "paths": [],
+   "summary": "",
+   "term": {
+    "def": "The terms of a location, cross-referenced with `[[term]]`.",
+    "aliases": []
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/injection",
+   "kind": "term",
+   "title": "injection",
+   "status": "approved",
+   "subjects": [
+    "main"
+   ],
+   "tags": [
+    "architecture"
+   ],
+   "paths": [],
+   "summary": "",
+   "term": {
+    "def": "The app supplying configs, slice infra (db), leaf adapters and assets to a [[slice]] at mount. Slices declare needs; they never import the concrete.",
+    "aliases": [],
+    "proposed": true
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/intent",
+   "kind": "term",
+   "title": "intent",
+   "status": "converted",
+   "subjects": [
+    "orchestrator"
+   ],
+   "tags": [
+    "orchestrator"
+   ],
+   "paths": [
+    "apps/orchestrator"
+   ],
+   "summary": "",
+   "term": {
+    "def": "What is asked: a user intent at runtime, or a scheduled intent.",
+    "aliases": []
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/ip-allow-list",
+   "kind": "term",
+   "title": "IP allow-list",
+   "status": "converted",
+   "subjects": [
+    "open-api"
+   ],
+   "tags": [
+    "open-api"
+   ],
+   "paths": [
+    "apps/main/shared/api/open-api"
+   ],
+   "summary": "",
+   "term": {
+    "def": "The open API accepts only the orchestrator's IPs; the main API accepts only clients'.",
+    "aliases": []
+   },
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "the path apps/main/shared/api/open-api does not exist"
+    ]
+   }
+  },
+  {
+   "id": "term/layout-primitive",
+   "kind": "term",
+   "title": "layout primitive",
+   "status": "approved",
+   "subjects": [
+    "ui"
+   ],
+   "tags": [
+    "ui"
+   ],
+   "paths": [
+    "shared/libs/ui/web/layouts"
+   ],
+   "summary": "",
+   "term": {
+    "def": "A component from `@libs/web-layouts` emitting one `layout=\"…\"` region. Structural behaviour only — scroll, overflow, collapse, sticky, width — never visuals. Shell primitives are app-level only.",
+    "aliases": [],
+    "proposed": true
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/leaf-adapter",
+   "kind": "term",
+   "title": "leaf adapter",
+   "status": "approved",
+   "subjects": [
+    "main"
+   ],
+   "tags": [
+    "architecture"
+   ],
+   "paths": [],
+   "summary": "",
+   "term": {
+    "def": "An abstract interface a [[slice]] declares for a swappable capability (toast, i18n); the app injects the concrete implementation at mount.",
+    "aliases": [],
+    "proposed": true
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/library",
+   "kind": "term",
+   "title": "library",
+   "status": "approved",
+   "subjects": [
+    "main"
+   ],
+   "tags": [
+    "architecture"
+   ],
+   "paths": [],
+   "summary": "",
+   "term": {
+    "def": "A low-level reusable engine in `shared/libs/<name>/`. Zero product knowledge, imports node modules only.",
+    "aliases": [],
+    "proposed": true
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/lifecycle-hook",
+   "kind": "term",
+   "title": "lifecycle hook",
+   "status": "approved",
+   "subjects": [
+    "main"
+   ],
+   "tags": [
+    "architecture"
+   ],
+   "paths": [],
+   "summary": "",
+   "term": {
+    "def": "A fact-only event a [[slice]] emits about itself. The app decides what to do with it.",
+    "aliases": [],
+    "proposed": true
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/location",
+   "kind": "term",
+   "title": "location",
+   "status": "converted",
+   "subjects": [
+    "docs"
+   ],
+   "tags": [
+    "docs"
+   ],
+   "paths": [],
+   "summary": "",
+   "term": {
+    "def": "A folder of the repo that owns its docs: the root, main, a library, a slice, an app.",
+    "aliases": []
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/map",
+   "kind": "term",
+   "title": "map",
+   "status": "converted",
+   "subjects": [
+    "docs"
+   ],
+   "tags": [
+    "docs"
+   ],
+   "paths": [],
+   "summary": "",
+   "term": {
+    "def": "The entry point of a location's docs: its entries, with a summary and when to read each. Navigation only.",
+    "aliases": []
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/mapper-compliant",
+   "kind": "term",
+   "title": "mapper compliant",
+   "status": "converted",
+   "subjects": [
+    "docs"
+   ],
+   "tags": [
+    "docs"
+   ],
+   "paths": [],
+   "summary": "",
+   "term": {
+    "def": "A file or folder that follows the rules of the mapper. The registry labels each one.",
+    "aliases": []
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/mapr",
+   "kind": "term",
+   "title": "MAPR",
+   "status": "converted",
+   "subjects": [
+    "docs"
+   ],
+   "tags": [
+    "docs"
+   ],
+   "paths": [],
+   "summary": "",
+   "term": {
+    "def": "Map → Axioms → Purpose → Reference: the documentation standard.",
+    "aliases": []
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/mount",
+   "kind": "term",
+   "title": "mount",
+   "status": "approved",
+   "subjects": [
+    "main"
+   ],
+   "tags": [
+    "architecture"
+   ],
+   "paths": [],
+   "summary": "",
+   "term": {
+    "def": "The single touch point where the app instantiates a [[slice]], wires its hooks and injects its needs (`apps/main/shared/api/src/mounts.ts`).",
+    "aliases": [],
+    "proposed": true
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/ontology",
+   "kind": "term",
+   "title": "ontology",
+   "status": "converted",
+   "subjects": [
+    "orchestrator"
+   ],
+   "tags": [
+    "orchestrator"
+   ],
+   "paths": [
+    "apps/orchestrator"
+   ],
+   "summary": "",
+   "term": {
+    "def": "The versioned trees of capabilities and tools. A worker is labelled for one version and can be relabelled when the ontology improves.",
+    "aliases": []
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/open-api",
+   "kind": "term",
+   "title": "open API",
+   "status": "converted",
+   "subjects": [
+    "open-api"
+   ],
+   "tags": [
+    "open-api"
+   ],
+   "paths": [],
+   "summary": "",
+   "term": {
+    "def": "A second API instance, separate from the main API, that shares only the database connection string with it. Only the orchestrator reaches it.",
+    "aliases": []
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/package",
+   "kind": "term",
+   "title": "package",
+   "status": "approved",
+   "subjects": [
+    "main"
+   ],
+   "tags": [
+    "architecture"
+   ],
+   "paths": [],
+   "summary": "",
+   "term": {
+    "def": "A folder with its own `package.json`, imported by name rather than by path. Every [[library]], [[seed slice]], [[product slice]], config set and app is one.",
+    "aliases": [],
+    "proposed": true
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/page",
+   "kind": "term",
+   "title": "page",
+   "status": "approved",
+   "subjects": [
+    "main",
+    "ui"
+   ],
+   "tags": [
+    "ui"
+   ],
+   "paths": [],
+   "summary": "",
+   "term": {
+    "def": "Everything inside the shell content area — `page-header` plus `page-body` (`left-sidebar`, `main`, `right-sidebar`).",
+    "aliases": [],
+    "proposed": true
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/permission",
+   "kind": "term",
+   "title": "permission",
+   "status": "approved",
+   "subjects": [
+    "main",
+    "gated-scoped-ac"
+   ],
+   "tags": [
+    "access-control"
+   ],
+   "paths": [],
+   "summary": "",
+   "term": {
+    "def": "A leaf of the access-control config: one entity, the actions it covers, an optional column allowlist, and the rules that narrow it. Granted only by holding a role that carries it; permissions never nest.",
+    "aliases": [],
+    "proposed": true
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/pipeline",
+   "kind": "term",
+   "title": "pipeline",
+   "status": "converted",
+   "subjects": [
+    "orchestrator"
+   ],
+   "tags": [
+    "orchestrator"
+   ],
+   "paths": [
+    "apps/orchestrator"
+   ],
+   "summary": "",
+   "term": {
+    "def": "Orchestrates [[worker|workers]] and other pipelines.",
+    "aliases": []
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/platform-bearer-token",
+   "kind": "term",
+   "title": "platform bearer token",
+   "status": "converted",
+   "subjects": [
+    "open-api"
+   ],
+   "tags": [
+    "open-api"
+   ],
+   "paths": [
+    "apps/main/shared/api/open-api"
+   ],
+   "summary": "",
+   "term": {
+    "def": "How a worker authenticates to the open API, since the user's JWT is not available to it.",
+    "aliases": [],
+    "proposed": true
+   },
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "the path apps/main/shared/api/open-api does not exist"
+    ]
+   }
+  },
+  {
+   "id": "term/product-slice",
+   "kind": "term",
+   "title": "product slice",
+   "status": "approved",
+   "subjects": [
+    "main"
+   ],
+   "tags": [
+    "architecture"
+   ],
+   "paths": [],
+   "summary": "",
+   "term": {
+    "def": "Product-specific [[slice]] in `apps/main/slices/product/<s>/` — full-stack ([[slice app|slice apps]] + own `shared/`), same anatomy as a [[seed slice]], open import boundaries.",
+    "aliases": [],
+    "proposed": true
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/public-surface",
+   "kind": "term",
+   "title": "public surface",
+   "status": "approved",
+   "subjects": [
+    "main"
+   ],
+   "tags": [
+    "architecture"
+   ],
+   "paths": [],
+   "summary": "",
+   "term": {
+    "def": "What a [[slice]] exports through its barrels (`api/index.ts`, `models/index.ts`, `web/index.ts`). Anything not in a barrel is internal and unreachable.",
+    "aliases": [],
+    "proposed": true
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/purpose",
+   "kind": "term",
+   "title": "purpose",
+   "status": "converted",
+   "subjects": [
+    "docs"
+   ],
+   "tags": [
+    "docs"
+   ],
+   "paths": [],
+   "summary": "",
+   "term": {
+    "def": "One paragraph: why the decisions exist. It does not restate the axioms.",
+    "aliases": []
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/recipe",
+   "kind": "term",
+   "title": "recipe",
+   "status": "converted",
+   "subjects": [
+    "orchestrator"
+   ],
+   "tags": [
+    "orchestrator"
+   ],
+   "paths": [
+    "apps/orchestrator"
+   ],
+   "summary": "",
+   "term": {
+    "def": "One way to reach a goal with a [[pipeline]]. There can be several recipes per goal, and a benchmark picks the canonical one.",
+    "aliases": [],
+    "proposed": true
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/reference",
+   "kind": "term",
+   "title": "reference",
+   "status": "converted",
+   "subjects": [
+    "docs"
+   ],
+   "tags": [
+    "docs"
+   ],
+   "paths": [],
+   "summary": "",
+   "term": {
+    "def": "The concrete rules and mechanics, with diagrams over prose.",
+    "aliases": []
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/registry-of-methods",
+   "kind": "term",
+   "title": "registry of methods",
+   "status": "converted",
+   "subjects": [
+    "open-api"
+   ],
+   "tags": [
+    "open-api"
+   ],
+   "paths": [
+    "apps/main/shared/api/open-api"
+   ],
+   "summary": "",
+   "term": {
+    "def": "Which services the open API exposes.",
+    "aliases": [],
+    "proposed": true
+   },
+   "compliance": {
+    "compliant": false,
+    "issues": [
+     "the path apps/main/shared/api/open-api does not exist"
+    ]
+   }
+  },
+  {
+   "id": "term/registry",
+   "kind": "term",
+   "title": "registry",
+   "status": "converted",
+   "subjects": [
+    "docs"
+   ],
+   "tags": [
+    "docs"
+   ],
+   "paths": [],
+   "summary": "",
+   "term": {
+    "def": "The global list of locations, each pointing at its map. It holds no content.",
+    "aliases": []
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/reusable-domain",
+   "kind": "term",
+   "title": "reusable domain",
+   "status": "converted",
+   "subjects": [
+    "docs"
+   ],
+   "tags": [
+    "docs"
+   ],
+   "paths": [],
+   "summary": "",
+   "term": {
+    "def": "A library or a seed slice: its docs split into consumer and contributor.",
+    "aliases": []
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/role-forest",
+   "kind": "term",
+   "title": "role forest",
+   "status": "approved",
+   "subjects": [
+    "gated-scoped-ac"
+   ],
+   "tags": [
+    "access-control"
+   ],
+   "paths": [
+    "shared/libs/gated-scoped-ac"
+   ],
+   "summary": "",
+   "term": {
+    "def": "The role hierarchy of one org type — an independent tree per type, plus the account baseline that applies with no org in context. A role resolves to every [[permission]] at or beneath it.",
+    "aliases": [],
+    "proposed": true
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/run",
+   "kind": "term",
+   "title": "run",
+   "status": "converted",
+   "subjects": [
+    "orchestrator"
+   ],
+   "tags": [
+    "orchestrator"
+   ],
+   "paths": [
+    "apps/orchestrator"
+   ],
+   "summary": "",
+   "term": {
+    "def": "One execution of a pipeline. The orchestrator starts a run from a user request or from a scheduled trigger.",
+    "aliases": []
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/scope",
+   "kind": "term",
+   "title": "scope",
+   "status": "approved",
+   "subjects": [
+    "gated-scoped-ac"
+   ],
+   "tags": [
+    "access-control"
+   ],
+   "paths": [
+    "shared/libs/gated-scoped-ac"
+   ],
+   "summary": "",
+   "term": {
+    "def": "What the access-control engine returns for a read, update or delete: the compiled row filter for one entity and one action, plus the column allowlist. Branded by entity and action, and mintable only by the engine — the [[gated db]] refuses to run without the matching one, so an ungated query cannot compile.",
+    "aliases": [],
+    "proposed": true
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/section",
+   "kind": "term",
+   "title": "section",
+   "status": "approved",
+   "subjects": [
+    "main",
+    "ui"
+   ],
+   "tags": [
+    "ui"
+   ],
+   "paths": [],
+   "summary": "",
+   "term": {
+    "def": "A [[page]] whose `left-sidebar` navigates its [[sub-page|sub-pages]] — Settings, for example.",
+    "aliases": [],
+    "proposed": true
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/seed-slice",
+   "kind": "term",
+   "title": "seed slice",
+   "status": "approved",
+   "subjects": [
+    "main"
+   ],
+   "tags": [
+    "architecture"
+   ],
+   "paths": [],
+   "summary": "",
+   "term": {
+    "def": "A self-contained, product-agnostic [[slice]] in `apps/main/slices/seed/<s>/`, reusable across projects. Ships with the seed.",
+    "aliases": [],
+    "proposed": true
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/shell",
+   "kind": "term",
+   "title": "shell",
+   "status": "approved",
+   "subjects": [
+    "main",
+    "ui"
+   ],
+   "tags": [
+    "ui"
+   ],
+   "paths": [],
+   "summary": "",
+   "term": {
+    "def": "The outermost viewport frame: `shell-side-nav`, `shell-top-nav` or `shell-none`. It decides what chrome surrounds the [[page]]. The app picks one per route.",
+    "aliases": [],
+    "proposed": true
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/slice-app",
+   "kind": "term",
+   "title": "slice app",
+   "status": "approved",
+   "subjects": [
+    "main"
+   ],
+   "tags": [
+    "architecture"
+   ],
+   "paths": [],
+   "summary": "",
+   "term": {
+    "def": "One runtime facet of a [[slice]] — `api/`, `web/`, or `mobile/` inside a seed or product slice. Not independently deployable; compiles into the real `apps/main/shared/<app>/` it's mounted into. Named to echo `apps/` without colliding with it.",
+    "aliases": [],
+    "proposed": true
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/slice",
+   "kind": "term",
+   "title": "slice",
+   "status": "approved",
+   "subjects": [
+    "main"
+   ],
+   "tags": [
+    "architecture"
+   ],
+   "paths": [],
+   "summary": "",
+   "term": {
+    "def": "A [[seed slice|seed]] or [[product slice|product]] slice. The unit that owns entities, models and business logic.",
+    "aliases": []
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/stateless",
+   "kind": "term",
+   "title": "stateless",
+   "status": "converted",
+   "subjects": [
+    "orchestrator"
+   ],
+   "tags": [
+    "orchestrator"
+   ],
+   "paths": [
+    "apps/orchestrator"
+   ],
+   "summary": "",
+   "term": {
+    "def": "The orchestrator holds no data and reads no database; it asks the open API for what it needs.",
+    "aliases": []
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/stream",
+   "kind": "term",
+   "title": "stream",
+   "status": "converted",
+   "subjects": [
+    "main",
+    "orchestrator"
+   ],
+   "tags": [
+    "realtime"
+   ],
+   "paths": [],
+   "summary": "",
+   "term": {
+    "def": "Real-time output of a run to the requester, over SSE, one stream per chat.",
+    "aliases": [],
+    "proposed": true
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/sub-page",
+   "kind": "term",
+   "title": "sub-page",
+   "status": "approved",
+   "subjects": [
+    "main",
+    "ui"
+   ],
+   "tags": [
+    "ui"
+   ],
+   "paths": [],
+   "summary": "",
+   "term": {
+    "def": "A page that fills `main` inside a [[section]], rather than the whole [[page]] region.",
+    "aliases": [],
+    "proposed": true
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/substrate",
+   "kind": "term",
+   "title": "substrate",
+   "status": "converted",
+   "subjects": [
+    "main",
+    "open-api"
+   ],
+   "tags": [
+    "api"
+   ],
+   "paths": [],
+   "summary": "",
+   "term": {
+    "def": "Services, repositories and models: the code both APIs share. Deployed, each API carries its own copy.",
+    "aliases": []
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/tier",
+   "kind": "term",
+   "title": "tier",
+   "status": "approved",
+   "subjects": [
+    "main"
+   ],
+   "tags": [
+    "architecture"
+   ],
+   "paths": [],
+   "summary": "",
+   "term": {
+    "def": "One of the levels code lives at: `configs`, `libs`, `slices`, `apps`. The tier fixes what something may import, and the import scope names it — `@modules/…`, `@libs/…`.",
+    "aliases": [],
+    "proposed": true
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/transit",
+   "kind": "term",
+   "title": "transit",
+   "status": "converted",
+   "subjects": [
+    "main",
+    "open-api"
+   ],
+   "tags": [
+    "api"
+   ],
+   "paths": [],
+   "summary": "",
+   "term": {
+    "def": "The routes and middleware of an API: the code written for it. The open API's transit imports the main API's services.",
+    "aliases": []
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/trigger",
+   "kind": "term",
+   "title": "trigger",
+   "status": "converted",
+   "subjects": [
+    "orchestrator"
+   ],
+   "tags": [
+    "orchestrator"
+   ],
+   "paths": [
+    "apps/orchestrator"
+   ],
+   "summary": "",
+   "term": {
+    "def": "What starts a [[run]]: a user or a cron. An agent never starts anything: it acts inside a pipeline, on behalf of the user's request.",
+    "aliases": []
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  },
+  {
+   "id": "term/worker",
+   "kind": "term",
+   "title": "worker",
+   "status": "converted",
+   "subjects": [
+    "orchestrator"
+   ],
+   "tags": [
+    "orchestrator"
+   ],
+   "paths": [
+    "apps/orchestrator"
+   ],
+   "summary": "",
+   "term": {
+    "def": "A task that runs and dies: an intent plus a tool with a closed contract. The output is the same per intent; the input and the config vary.",
+    "aliases": []
+   },
+   "compliance": {
+    "compliant": true,
+    "issues": []
+   }
+  }
+ ]
+}

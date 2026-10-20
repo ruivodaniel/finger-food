@@ -1,0 +1,30 @@
+/*
+ * NEUE HAAS GROTESK - COMMERCIAL FONT
+ *
+ * Licensed under Commercial Type End User License Agreement
+ * License files:
+ * - `commercial-type-2504-RTKXMH.pdf`
+ *
+ * Font files are subject to the terms of the Commercial Type license.
+ * Do not distribute these font files without proper licensing.
+ */
+
+/* Commercial Type fonts - All rights reserved */
+@font-face {
+  font-family: "Neue Haas Grotesk";
+  src: url("./neue-haas-grotesk/NeueHaasGrotesk-Roman.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  /* © 2023 Schwartzco, Inc. d/b/a Commercial Type */
+}
+
+/* Commercial Type fonts - All rights reserved */
+@font-face {
+  font-family: "Neue Haas Grotesk";
+  src: url("./neue-haas-grotesk/NeueHaasGrotesk-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  /* © 2023 Schwartzco, Inc. d/b/a Commercial Type */
+}

@@ -1,0 +1,29 @@
+{
+  "id": "adr/main--schema-inference-chain",
+  "kind": "adr",
+  "title": "One written model; every schema and type below it is inferred or derived",
+  "status": "approved",
+  "subject": "main",
+  "tags": [
+    "main",
+    "architecture"
+  ],
+  "paths": [],
+  "summary": "The model is the only hand-written entity shape. Entity zod schemas are inferred (createSelectSchema/createInsertSchema); types exist only through z.infer. Inpu",
+  "adr": {
+    "date": "2026-08-12",
+    "context": "Three things called \"schema\" lived in three places with no binding: hand-written drizzle models, hand-written zod input schemas beside them (drizzle-zod absent from the repo), and hand-written wire interfaces in shared/. Three sources of truth drift independently, and a parallel hand-written shape is exactly where agents invent fields the model never corrects.",
+    "decision": "The model is the only hand-written entity shape. Entity zod schemas are inferred (createSelectSchema/createInsertSchema); types exist only through z.infer. Input schemas are derivations (pick/omit/extend + refinements) — the diff is the only authored part. Composed shapes take entity fields from the inferred schemas and declare only computed fields; composing services return satisfies the composed type. Wire schemas are zod in the slice's shared/ — web infers from the wire contract, never from entity schemas.",
+    "consequences": [
+      "Drift becomes a compile error at every derivation and satisfies — the compiler is the contract checker; no codegen machinery.",
+      "**Contradicted by the code today:** every `.schemas.ts` in UOM is a from-scratch z.object; drizzle-zod appears nowhere; shared/types/*.ts are plain interfaces, not zod. To fix.",
+      "Membership and consent-record stop lacking schemas — every entity gets them by inference.",
+      "Lint rules become mechanical: a bare z.object over entity fields outside a derivation, or an interface duplicating a z.infer, is a violation."
+    ],
+    "affects": [
+      "backend-composition",
+      "scaffolding-and-import-boundaries"
+    ],
+    "adrStatus": "accepted"
+  }
+}

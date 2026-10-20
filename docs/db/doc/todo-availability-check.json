@@ -1,0 +1,16 @@
+{
+  "id": "doc/todo-availability-check",
+  "kind": "doc",
+  "title": "lib: availability-check (not migrated)",
+  "status": "todo",
+  "subject": "availability-check",
+  "tags": [
+    "availability-check"
+  ],
+  "paths": [
+    "shared/libs/availability-check"
+  ],
+  "summary": "Not migrated yet. Starting point: shared/libs/availability-check/docs/README.md",
+  "entry": "shared/libs/availability-check/docs/README.md",
+  "doc": null
+}

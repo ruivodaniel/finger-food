@@ -1,0 +1,105 @@
+{
+  "id": "doc/infra-helm",
+  "kind": "doc",
+  "title": "⎈ Helm Charts",
+  "status": "converted",
+  "subject": "infra",
+  "tags": [
+    "infra"
+  ],
+  "paths": [
+    "helm"
+  ],
+  "summary": "Kubernetes deployment configurations for all applications, organized as separate Helm charts for modular deployment and management.",
+  "docId": "infra-helm",
+  "doc": {
+    "axioms": [],
+    "purpose": {
+      "intro": "Kubernetes deployment configurations for all applications, organized as separate Helm charts for modular deployment and management."
+    },
+    "reference": [
+      {
+        "topic": "📁 Structure › 🔧 API Chart (`charts/api/` (`charts/api/`))",
+        "claims": [
+          {
+            "text": "**Deployment**: Container orchestration and scaling configuration"
+          },
+          {
+            "text": "**Service**: Internal networking and service discovery"
+          },
+          {
+            "text": "**Ingress**: External traffic routing and SSL termination"
+          },
+          {
+            "text": "**HPA**: Horizontal Pod Autoscaler for automatic scaling"
+          },
+          {
+            "text": "**Secrets**: Secure configuration management"
+          }
+        ],
+        "statement": "Helm chart for the backend API service deployment, including:"
+      },
+      {
+        "topic": "📁 Structure › 💻 Client Chart (`charts/client/` (`charts/client/`))",
+        "claims": [
+          {
+            "text": "**Deployment**: Static asset serving and container management"
+          },
+          {
+            "text": "**Service**: Load balancing and traffic distribution"
+          },
+          {
+            "text": "**Ingress**: Public web access and domain routing"
+          },
+          {
+            "text": "**Secrets**: Environment-specific configuration"
+          }
+        ],
+        "statement": "Helm chart for the frontend React application deployment, featuring:"
+      },
+      {
+        "topic": "📁 Structure › 🏗️ Core Chart (`charts/core/` (`charts/core/`))",
+        "claims": [
+          {
+            "text": "**Namespaces**: Logical separation of environments"
+          },
+          {
+            "text": "**Secrets**: Cluster-level configuration, SecretStore, regcred"
+          }
+        ],
+        "statement": "Foundation chart for cluster-wide resources and shared infrastructure:"
+      },
+      {
+        "topic": "📋 Helmfiles",
+        "claims": [
+          {
+            "text": "**`helmfile-external-secrets.yaml` (`helmfile-external-secrets.yaml`)**: External secrets management configuration"
+          },
+          {
+            "text": "**`helmfile-ingress.yaml` (`helmfile-ingress.yaml`)**: Ingress controller and routing setup"
+          },
+          {
+            "text": "**`helmfile.yaml` (`helmfile.yaml`)**: Main deployment orchestration for all charts"
+          }
+        ]
+      },
+      {
+        "topic": "🚀 Deployment",
+        "claims": [],
+        "statement": "All Helm charts are deployed through GitHub Actions CI/CD pipelines. For detailed deployment workflows and configuration, refer to .github/README_CICD.md (`../.github/README_CICD.md`)."
+      }
+    ],
+    "review": {
+      "axioms": {
+        "state": "unreviewed"
+      },
+      "purpose": {
+        "state": "unreviewed"
+      },
+      "reference": {
+        "state": "unreviewed"
+      }
+    },
+    "converted": true
+  }
+}

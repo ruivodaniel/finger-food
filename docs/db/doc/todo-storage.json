@@ -1,0 +1,16 @@
+{
+  "id": "doc/todo-storage",
+  "kind": "doc",
+  "title": "lib: storage (not migrated)",
+  "status": "todo",
+  "subject": "storage",
+  "tags": [
+    "storage"
+  ],
+  "paths": [
+    "shared/libs/storage"
+  ],
+  "summary": "Not migrated yet. Starting point: shared/libs/storage",
+  "entry": "shared/libs/storage",
+  "doc": null
+}

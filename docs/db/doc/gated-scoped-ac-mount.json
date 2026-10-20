@@ -1,0 +1,193 @@
+{
+  "id": "doc/gated-scoped-ac-mount",
+  "kind": "doc",
+  "title": "Mount",
+  "status": "converted",
+  "subject": "gated-scoped-ac",
+  "tags": [
+    "gated-scoped-ac",
+    "consumer"
+  ],
+  "paths": [
+    "shared/libs/gated-scoped-ac"
+  ],
+  "summary": "**What.** The single mount point that turns a configured engine + a request bag-builder into a Hono middleware. After mount, every route handler has `c.get(\"…",
+  "docId": "gated-scoped-ac-mount",
+  "doc": {
+    "axioms": [],
+    "purpose": {},
+    "reference": [
+      {
+        "topic": "Axioms",
+        "claims": [
+          {
+            "text": "The engine is constructed once at app boot. Reconstructing per request is a misuse."
+          },
+          {
+            "text": "The engine receives the Drizzle schema and `sql` helpers directly. No intermediate normalization is the consumer's responsibility."
+          },
+          {
+            "text": "The Hono middleware receives the engine and the bag-builder. It does no auth itself."
+          },
+          {
+            "text": "Boot is the only place misconfiguration can be detected. The engine throws if rules, schema, or hierarchy are inconsistent."
+          }
+        ]
+      },
+      {
+        "topic": "Purpose",
+        "claims": [
+          {
+            "text": "**Why.** Authorization needs identical inputs across the app. Constructing the engine once at boot and binding it to a middleware once gives every route the same engine, the same compile, and the same trust boundary."
+          },
+          {
+            "text": "**How.** `createScopedAc(...)` runs validation, builds the internal Drizzle filter builder, and returns a `ScopedAc`. `createScopeMiddleware({ engine, buildContext })` wraps it for Hono. The middleware calls `buildContext(c)` per request, expands roles via the engine, and stashes a pre-bound `ScopedAcRequestContext` on the Hono context."
+          },
+          {
+            "text": "**Why this way.** The engine is a configured object, not a class hierarchy. The bag-builder is the trust boundary — keeping it as a function the consumer supplies makes it the explicit place where session/auth verification ends and authorization begins."
+          }
+        ],
+        "statement": "**What.** The single mount point that turns a configured engine + a request bag-builder into a Hono middleware. After mount, every route handler has `c.get(\"scopedAc\")` populated with effective roles and bound CRUD methods."
+      },
+      {
+        "topic": "Reference › Boot wiring",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "// app-level engine assembly — in your app's composition root (e.g. apps/api/src/wiring/)\nimport { createScopedAc } from \"@prowd/scoped-ac\";\nimport { createScopeMiddleware } from \"@prowd/scoped-ac/adapters/hono\";\nimport { eq, ne, and, or, not, inArray, sql } from \"drizzle-orm\";\nimport * as schema from \"@/models\";\nimport { roles, hierarchy, subjects } from \"@configs/access-control\";\nimport { createBuildScopeContext } from \"@prowd/user-organization-mgmt/api\";\nimport { db } from \"@/lib/db\";\n\nconst moduleEntitySchema = {\n  organization: { table: schema.organization, metadata: schema.organization.metadata },\n  member:       { table: schema.member },\n  invitation:   { table: schema.invitation },\n  // …one entry per entity referenced in any rule\n};\n\nexport const engine = createScopedAc({\n  roles,\n  hierarchy,\n  subjects,\n  schema: moduleEntitySchema,\n  sql: { eq, ne, and, or, not, inArray, sql },\n});\n\nexport const ac = {\n  engine,\n  middleware: createScopeMiddleware({\n    engine,\n    buildContext: createBuildScopeContext({ db }),\n  }),\n};",
+                "caption": "ts"
+              }
+            ]
+          },
+          {
+            "snippets": [
+              {
+                "code": "import { ac } from \"./config/access-control.config\";\napp.use(\"*\", ac.middleware);",
+                "caption": "ts"
+              }
+            ]
+          }
+        ],
+        "statement": "In your Hono app setup:"
+      },
+      {
+        "topic": "Reference › Inputs",
+        "claims": [],
+        "imagesAndDiagrams": [
+          {
+            "type": "ascii",
+            "value": "| Field | Source | Trust |\n|---|---|---|\n| `roles` | `@configs/access-control` | Config-time |\n| `hierarchy` | `@configs/access-control` | Config-time |\n| `subjects` | `@configs/access-control` | Config-time |\n| `schema` | Drizzle table objects from your models | Config-time |\n| `sql` | `drizzle-orm` exports | Library |\n| `buildContext(c)` | Returns `{ subjects, assignedRoles } \\| null` | **Consumer-owned trust boundary** |"
+          }
+        ],
+        "statement": "`buildContext` is called per request after auth has verified the session. Return `null` to short-circuit with 401 (or 403 if `unauthenticatedStatus: 403` is configured). **Never put unverified request body or unsigned cookie data into the bag** — see `SECURITY.md`."
+      },
+      {
+        "topic": "Reference › What the engine returns",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "interface ScopedAc {\n  expandRoles(assignedRoles: string[]): string[];\n\n  resolveRead   (effective, entity, subjects):              ResolvedScope;   // { where, select, joins }\n  resolveUpdate (effective, entity, subjects):              ResolvedScope;\n  resolveCreate (effective, entity, subjects, properties):  ScopeVerdict;    // { allow, reason? }\n  resolveDelete (effective, entity, subjects, properties):  ScopeVerdict;\n\n  explainScopeResolution(role, ctx): ScopeExplanation;\n\n  readonly roles, hierarchy, schema, subjects;\n}",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Reference › What the request context holds",
+        "claims": [
+          {
+            "text": "In route handlers, use `getScopedAcContext(c)` instead of raw `c.get(...)` for type narrowing."
+          }
+        ],
+        "statement": "`c.get(\"scopedAc\")` returns:",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "interface ScopedAcRequestContext {\n  subjects;\n  assignedRoles;\n  effectiveRoles;\n  resolveRead   (entity):         ResolvedScope;\n  resolveUpdate (entity):         ResolvedScope;\n  resolveCreate (entity, props):  ScopeVerdict;\n  resolveDelete (entity, props):  ScopeVerdict;\n  explainScopeResolution(role):   ScopeExplanation;\n}",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Reference › Boot validation",
+        "claims": [
+          {
+            "text": "entity referenced in a rule but missing from `schema`"
+          },
+          {
+            "text": "field referenced on an entity but missing from that entity's `columns`"
+          },
+          {
+            "text": "subject referenced as `$session.x` but not in `subjects`"
+          },
+          {
+            "text": "multi-segment field path that isn't the entity's declared metadata column"
+          },
+          {
+            "text": "metadata column declared but not present in `columns`"
+          },
+          {
+            "text": "hierarchy edge to an undeclared role"
+          },
+          {
+            "text": "(strict mode) rule with empty context AND empty target (\"god mode\")"
+          },
+          {
+            "text": "(warning) rule with traversal target on a role that includes `create` or `delete` actions — that combination is inert"
+          },
+          {
+            "text": "These all surface at boot, not at first request."
+          }
+        ],
+        "statement": "`createScopedAc` runs `assertValidConfiguration` internally. It throws `ScopedAcConfigError` on:"
+      },
+      {
+        "topic": "Reference › Optional config",
+        "claims": [],
+        "imagesAndDiagrams": [
+          {
+            "type": "ascii",
+            "value": "| Field | Default | Effect |\n|---|---|---|\n| `strictGodMode` | `false` | When true, empty-context-AND-empty-target rules fail boot |\n| `contextKey` (middleware) | `\"scopedAc\"` | Hono context variable name |\n| `unauthenticatedStatus` | `401` | Status when `buildContext` returns `null` |"
+          }
+        ]
+      },
+      {
+        "topic": "Reference › Where this engine and the middleware should not be reconstructed",
+        "claims": [
+          {
+            "text": "Per request — the engine is stateless after boot; rebuilding is wasted work and bypasses validation"
+          },
+          {
+            "text": "Inside a route handler — handlers consume `c.get(\"scopedAc\")`, not a fresh engine"
+          },
+          {
+            "text": "Inside a repository — repos receive the engine via DI from the module mount"
+          },
+          {
+            "text": "The only place that constructs the engine is the file you put your `createScopedAc(...)` call in."
+          }
+        ]
+      }
+    ],
+    "review": {
+      "axioms": {
+        "state": "unreviewed"
+      },
+      "purpose": {
+        "state": "unreviewed"
+      },
+      "reference": {
+        "state": "unreviewed"
+      }
+    },
+    "converted": true
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "term/location",
+  "kind": "term",
+  "title": "location",
+  "status": "converted",
+  "subjects": [
+    "docs"
+  ],
+  "tags": [
+    "docs"
+  ],
+  "paths": [],
+  "term": {
+    "def": "A folder of the repo that owns its docs: the root, main, a library, a slice, an app.",
+    "aliases": []
+  }
+}

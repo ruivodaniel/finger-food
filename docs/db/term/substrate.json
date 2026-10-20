@@ -1,0 +1,18 @@
+{
+  "id": "term/substrate",
+  "kind": "term",
+  "title": "substrate",
+  "status": "converted",
+  "subjects": [
+    "main",
+    "open-api"
+  ],
+  "tags": [
+    "api"
+  ],
+  "paths": [],
+  "term": {
+    "def": "Services, repositories and models: the code both APIs share. Deployed, each API carries its own copy.",
+    "aliases": []
+  }
+}

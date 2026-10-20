@@ -1,0 +1,175 @@
+<figure style="margin:0">
+<svg viewBox="0 0 1180 812" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;font-family:Inter,system-ui,sans-serif" role="img" aria-label="Import and injection flows between shared code and the apps">
+  <defs>
+    <marker id="mb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#2f7fb8"/>
+    </marker>
+    <marker id="mg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#4f7a4d"/>
+    </marker>
+    <marker id="mr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#c0504d"/>
+    </marker>
+  </defs>
+
+  <style>
+    .container { fill:none; stroke:#d8d1c4; stroke-width:1.5; rx:8; }
+    .section   { fill:none; stroke:#e6dfd2; stroke-width:1.2; }
+    .box       { fill:#fffdf8; stroke:#8c8478; stroke-width:1.1; }
+    .idx       { fill:#f3ead6; stroke:#a9752a; stroke-width:1.2; }
+    .lbl       { font-size:12px; fill:#1b1813; }
+    .cap       { font-size:11.5px; fill:#8c8478; letter-spacing:.08em; }
+    .sec       { font-size:11px;   fill:#8c8478; }
+    .note      { font-size:11px;   fill:#8c8478; font-style:italic; }
+    .imp  { stroke:#2f7fb8; stroke-width:1.6; fill:none; }
+    .inj  { stroke:#c0504d; stroke-width:1.5; fill:none; stroke-dasharray:5 4; }
+    .hook { stroke:#4f7a4d; stroke-width:1.6; fill:none; }
+    .int  { stroke:#9db8c9; stroke-width:1;   fill:none; stroke-dasharray:2 3; }
+  </style>
+
+  <!-- ============ SHARED ============ -->
+  <rect x="20" y="26" width="600" height="734" rx="8" class="container"/>
+  <text x="40" y="52" class="cap">SHARED</text>
+
+  <rect x="50" y="72" width="150" height="34" rx="4" class="box"/>
+  <text x="125" y="93" text-anchor="middle" class="lbl">CONFIGS</text>
+
+  <!-- LIBS -->
+  <rect x="50" y="140" width="200" height="580" rx="8" class="container"/>
+  <text x="70" y="166" class="cap">LIBS</text>
+  <rect x="70" y="190" width="160" height="32" rx="4" class="box"/>
+  <text x="150" y="210" text-anchor="middle" class="lbl">scoped-ac</text>
+  <rect x="70" y="495" width="160" height="32" rx="4" class="box"/>
+  <text x="150" y="515" text-anchor="middle" class="lbl">UI</text>
+  <rect x="70" y="600" width="160" height="32" rx="4" class="box"/>
+  <text x="150" y="620" text-anchor="middle" class="lbl">i18n</text>
+
+  <!-- SEED SLICE -->
+  <rect x="290" y="104" width="310" height="636" rx="8" class="container"/>
+  <text x="310" y="130" class="cap">SEED SLICE · user-organization-mgmt</text>
+
+  <!-- api/ -->
+  <rect x="305" y="146" width="280" height="290" rx="6" class="section"/>
+  <text x="322" y="168" class="sec">api/</text>
+  <rect x="325" y="182" width="112" height="30" rx="4" class="box"/>
+  <text x="381" y="201" text-anchor="middle" class="lbl">model</text>
+  <rect x="325" y="222" width="112" height="30" rx="4" class="box"/>
+  <text x="381" y="241" text-anchor="middle" class="lbl">repo</text>
+  <rect x="325" y="262" width="112" height="30" rx="4" class="box"/>
+  <text x="381" y="281" text-anchor="middle" class="lbl">service</text>
+  <rect x="325" y="302" width="112" height="30" rx="4" class="box"/>
+  <text x="381" y="321" text-anchor="middle" class="lbl">routes</text>
+  <rect x="325" y="342" width="112" height="30" rx="4" class="box"/>
+  <text x="381" y="361" text-anchor="middle" class="lbl">middlewares</text>
+  <rect x="490" y="182" width="80" height="30" rx="4" class="idx"/>
+  <text x="530" y="200" text-anchor="middle" class="lbl" style="font-size:11px">models index</text>
+  <path class="int" d="M437 197 L490 197"/>
+  <rect x="490" y="262" width="80" height="30" rx="4" class="idx"/>
+  <text x="530" y="281" text-anchor="middle" class="lbl">index</text>
+  <!-- api internals feed the barrel -->
+  <path class="int" d="M437 237 C468 240 478 258 490 270"/>
+  <path class="int" d="M437 277 L490 277"/>
+  <path class="int" d="M437 317 C468 314 478 296 490 284"/>
+  <path class="int" d="M437 357 C472 352 484 306 492 292"/>
+
+  <!-- web/ -->
+  <rect x="305" y="452" width="280" height="180" rx="6" class="section"/>
+  <text x="322" y="474" class="sec">web/</text>
+  <rect x="325" y="488" width="112" height="28" rx="4" class="box"/>
+  <text x="381" y="506" text-anchor="middle" class="lbl">routes</text>
+  <rect x="325" y="524" width="112" height="28" rx="4" class="box"/>
+  <text x="381" y="542" text-anchor="middle" class="lbl">pages</text>
+  <rect x="325" y="560" width="112" height="28" rx="4" class="box"/>
+  <text x="381" y="578" text-anchor="middle" class="lbl">components</text>
+  <rect x="490" y="524" width="80" height="30" rx="4" class="idx"/>
+  <text x="530" y="543" text-anchor="middle" class="lbl">index</text>
+  <path class="int" d="M437 502 C466 505 478 518 490 530"/>
+  <path class="int" d="M437 538 L490 538"/>
+  <path class="int" d="M437 574 C466 571 478 556 490 546"/>
+
+  <!-- shared/ -->
+  <rect x="305" y="648" width="280" height="76" rx="6" class="section"/>
+  <text x="322" y="670" class="sec">shared/</text>
+  <rect x="325" y="682" width="150" height="30" rx="4" class="box"/>
+  <text x="400" y="701" text-anchor="middle" class="lbl">types · zod schemas</text>
+  <rect x="490" y="682" width="80" height="30" rx="4" class="idx"/>
+  <text x="530" y="701" text-anchor="middle" class="lbl">index</text>
+  <path class="int" d="M475 697 L490 697"/>
+
+  <!-- ============ APPS ============ -->
+  <rect x="655" y="60" width="380" height="640" rx="8" class="container"/>
+  <text x="675" y="86" class="cap">APPS — product code</text>
+
+  <!-- API app -->
+  <rect x="680" y="104" width="330" height="216" rx="8" class="container"/>
+  <text x="700" y="128" class="cap">API app</text>
+  <rect x="700" y="144" width="104" height="32" rx="4" class="box"/>
+  <text x="752" y="164" text-anchor="middle" class="lbl">mount</text>
+  <rect x="700" y="194" width="104" height="32" rx="4" class="box"/>
+  <text x="752" y="214" text-anchor="middle" class="lbl">inject</text>
+  <rect x="700" y="244" width="104" height="32" rx="4" class="box"/>
+  <text x="752" y="264" text-anchor="middle" class="lbl">server</text>
+  <rect x="830" y="144" width="150" height="32" rx="4" class="box"/>
+  <text x="905" y="164" text-anchor="middle" class="lbl" style="font-size:11px">db client · all models</text>
+  <rect x="830" y="244" width="150" height="32" rx="4" class="box"/>
+  <text x="905" y="264" text-anchor="middle" class="lbl">wiring</text>
+
+  <!-- WEB app -->
+  <rect x="680" y="408" width="330" height="222" rx="8" class="container"/>
+  <text x="700" y="432" class="cap">WEB app</text>
+  <rect x="700" y="448" width="124" height="32" rx="4" class="box"/>
+  <text x="762" y="468" text-anchor="middle" class="lbl">mount routes</text>
+  <rect x="700" y="498" width="104" height="32" rx="4" class="box"/>
+  <text x="752" y="518" text-anchor="middle" class="lbl">inject</text>
+  <rect x="700" y="548" width="104" height="32" rx="4" class="box"/>
+  <text x="752" y="568" text-anchor="middle" class="lbl">shell</text>
+  <rect x="880" y="448" width="100" height="30" rx="4" class="box"/>
+  <text x="930" y="467" text-anchor="middle" class="lbl">toast</text>
+  <rect x="880" y="492" width="100" height="30" rx="4" class="box"/>
+  <text x="930" y="511" text-anchor="middle" class="lbl">i18n adapter</text>
+
+  <!-- DB -->
+  <rect x="1090" y="184" width="70" height="40" rx="4" class="box"/>
+  <text x="1125" y="209" text-anchor="middle" class="lbl">DB</text>
+
+  <!-- ============ IMPORT FLOWS (blue) ============ -->
+  <!-- libs into slice layers -->
+  <path class="imp" marker-end="url(#mb)" d="M230 200 C280 200 295 228 322 235"/>
+  <path class="imp" marker-end="url(#mb)" d="M230 206 C284 212 296 268 322 275"/>
+  <path class="imp" marker-end="url(#mb)" d="M230 212 C288 226 294 348 322 355"/>
+  <path class="imp" marker-end="url(#mb)" d="M230 505 C276 505 296 532 322 538"/>
+  <path class="imp" marker-end="url(#mb)" d="M230 517 C278 524 298 568 322 574"/>
+  <path class="imp" marker-end="url(#mb)" d="M150 632 L150 758 C150 770 400 772 700 772 C860 772 928 700 929 525"/>
+  <!-- barrels into the apps -->
+  <path class="imp" marker-end="url(#mb)" d="M570 277 C640 274 656 180 697 162"/>
+  <path class="imp" marker-end="url(#mb)" d="M570 539 C640 536 656 482 697 466"/>
+  <path class="imp" marker-end="url(#mb)" d="M570 697 C650 700 668 420 700 316"/>
+  <path class="imp" marker-end="url(#mb)" d="M570 703 C660 712 680 640 697 580"/>
+  <!-- configs injected into both mounts -->
+  <path class="inj" marker-end="url(#mr)" d="M200 84 C480 60 640 120 700 152"/>
+  <path class="inj" marker-end="url(#mr)" d="M200 96 C520 130 640 380 700 452"/>
+
+  <!-- ============ INJECTION FLOWS (red, dashed) ============ -->
+  <path class="inj" marker-end="url(#mr)" d="M700 212 C650 220 620 264 588 278"/>
+  <path class="imp" marker-end="url(#mb)" d="M570 197 C640 178 700 160 828 160"/>
+  <path class="imp" marker-end="url(#mb)" d="M980 160 C1030 164 1062 184 1088 200"/>
+  <path class="inj" marker-end="url(#mr)" d="M890 176 C882 198 832 206 806 210"/>
+  <path class="inj" marker-end="url(#mr)" d="M700 516 C650 522 620 534 588 540"/>
+  <path class="inj" marker-end="url(#mr)" d="M880 462 C846 468 826 494 806 506"/>
+  <path class="inj" marker-end="url(#mr)" d="M880 506 C856 508 830 512 806 514"/>
+
+  <path class="hook" marker-end="url(#mg)" d="M585 400 C690 402 774 312 828 266"/>
+  <text x="820" y="99" class="note">mount returns the slice´s capabilities — services · hooks · components · routes</text>
+
+  <!-- ============ LEGEND ============ -->
+  <line x1="655" y1="774" x2="695" y2="774" class="imp" marker-end="url(#mb)"/>
+  <text x="705" y="778" class="note">import — code crossing through a barrel</text>
+  <line x1="330" y1="774" x2="370" y2="774" class="inj" marker-end="url(#mr)"/>
+  <text x="380" y="778" class="note">injection at mount — db · configs · adapters · capabilities</text>
+  <line x1="1000" y1="774" x2="1040" y2="774" class="int"/>
+  <text x="1050" y="778" class="note">internal — feeds the barrel</text>
+  <text x="40" y="778" class="note">only an index crosses</text>
+  <line x1="40" y1="798" x2="80" y2="798" class="hook" marker-end="url(#mg)"/>
+  <text x="90" y="802" class="note">lifecycle hooks — a slice emits, the app wiring reacts</text>
+</svg>
+</figure>

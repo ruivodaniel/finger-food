@@ -1,0 +1,9 @@
+{
+  "name": "@configs/notifications",
+  "type": "module",
+  "private": true,
+  "main": "./index.ts",
+  "peerDependencies": {
+    "@modules/notifications": "workspace:*"
+  }
+}

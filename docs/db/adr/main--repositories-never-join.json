@@ -1,0 +1,28 @@
+{
+  "id": "adr/main--repositories-never-join",
+  "kind": "adr",
+  "title": "A repository never joins",
+  "status": "approved",
+  "subject": "main",
+  "tags": [
+    "main",
+    "architecture"
+  ],
+  "paths": [],
+  "summary": "A repository never joins — no exception, engine-built or hand-written. A cross-entity read is either a DB view or service enrichment: the service asks the other",
+  "adr": {
+    "date": "2026-08-12",
+    "context": "API8 as transcribed allowed AC-built queries to carry joins, and `membership.repository.ts` hand-writes a display-enrichment join over AC-admitted ids, its comment citing missing DSL view support (AC35). Daniel ruled the transcription wrong: a join sitting in a repository can silently bypass access control.",
+    "decision": "A repository never joins — no exception, engine-built or hand-written. A cross-entity read is either a DB view or service enrichment: the service asks the other entity's service for what is missing and merges.",
+    "consequences": [
+      "**Contradicted by the code today:** the stage-2 enrichment join in `apps/main/slices/seed/user-organization-mgmt/api/repositories/membership.repository.ts` (user ⋈ userProfile ⋈ userContact) is a violation — extract to a DB view or service enrichment. To fix.",
+      "AC7 (\"all joins come from the AC resolver/DSL... the repo only executes them\") must be reconciled with this ruling when the access-control doc digests its rules.",
+      "The API8 claim in backend-composition was rewritten to state the rule flat."
+    ],
+    "affects": [
+      "backend-composition",
+      "access-control"
+    ],
+    "adrStatus": "accepted"
+  }
+}

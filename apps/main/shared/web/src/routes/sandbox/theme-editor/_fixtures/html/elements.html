@@ -1,0 +1,393 @@
+<div layout="page" class="flex flex-1 flex-col min-h-0 overflow-clip">
+    <div layout="page-body" class="flex flex-1 min-h-0 overflow-clip">
+        <div layout="main" class="flex flex-1 flex-col min-w-0 min-h-0 overflow-clip">
+            <div layout="main-body" class="flex flex-1 min-h-0 overflow-y-clip overflow-x-clip">
+                <div layout="container" width="lg" align="center" class="w-full mx-auto flex flex-col gap-16 py-12">
+                    <section class="flex flex-col gap-4">
+                        <h2 element="type--heading2">Button</h2>
+                        <div class="flex flex-col gap-2">
+                            <p element="type--body-extra-small" emphasis="quiet">emphasis</p>
+                            <div class="flex gap-3 flex-wrap items-center"><button element="control--button"
+                                    emphasis="primary" scale="md" class=""><span>Default</span></button><button
+                                    element="control--button" emphasis="primary" scale="md"
+                                    class=""><span>Primary</span></button><button element="control--button"
+                                    emphasis="secondary" scale="md" class=""><span>Secondary</span></button><button
+                                    element="control--button" emphasis="tertiary" scale="md"
+                                    class=""><span>Tertiary</span></button><button element="control--button"
+                                    emphasis="quiet" scale="md" class=""><span>Quiet</span></button></div>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <p element="type--body-extra-small" emphasis="quiet">emphasis + status</p>
+                            <div class="flex gap-3 flex-wrap items-center"><button element="control--button"
+                                    emphasis="primary" status="error" scale="md" class=""><span>Primary +
+                                        Error</span></button><button element="control--button" emphasis="primary"
+                                    status="warning" scale="md" class=""><span>Primary + Warning</span></button><button
+                                    element="control--button" emphasis="primary" status="success" scale="md"
+                                    class=""><span>Primary + Success</span></button><button element="control--button"
+                                    emphasis="secondary" status="destructive" scale="md" class=""><span>Secondary +
+                                        Destructive</span></button></div>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <p element="type--body-extra-small" emphasis="quiet">scale</p>
+                            <div class="flex gap-3 flex-wrap items-center"><button element="control--button"
+                                    emphasis="primary" scale="xs" class=""><span>XS</span></button><button
+                                    element="control--button" emphasis="primary" scale="sm"
+                                    class=""><span>SM</span></button><button element="control--button"
+                                    emphasis="primary" scale="md" class=""><span>MD</span></button><button
+                                    element="control--button" emphasis="primary" scale="lg"
+                                    class=""><span>LG</span></button><button element="control--button"
+                                    emphasis="primary" scale="xl" class=""><span>XL</span></button></div>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <p element="type--body-extra-small" emphasis="quiet">state</p>
+                            <div class="flex gap-3 flex-wrap items-center"><button element="control--button"
+                                    emphasis="primary" scale="md" class=""><span>Default</span></button><button
+                                    element="control--button" emphasis="primary" scale="md" class=""
+                                    state="selected"><span>Selected</span></button><button element="control--button"
+                                    emphasis="primary" scale="md" state="disabled" class=""
+                                    disabled=""><span>Disabled</span></button><span
+                                    class="inline-block cursor-not-allowed" data-state="closed"><button
+                                        element="control--button" emphasis="primary" scale="md" state="disabled"
+                                        class="" disabled=""><span>Disabled + reason</span></button></span></div>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <p element="type--body-extra-small" emphasis="quiet">icon-text (left icon)</p>
+                            <div class="flex gap-3 flex-wrap items-center"><button element="control--button"
+                                    emphasis="primary" scale="md" class=""><span data-part="start-icon"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-plus shrink-0" element="shape--icon"
+                                            aria-hidden="true">
+                                            <path d="M5 12h14"></path>
+                                            <path d="M12 5v14"></path>
+                                        </svg></span><span>Add</span></button><button element="control--button"
+                                    emphasis="secondary" scale="md" class=""><span data-part="start-icon"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-pencil shrink-0" element="shape--icon"
+                                            aria-hidden="true">
+                                            <path
+                                                d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z">
+                                            </path>
+                                            <path d="m15 5 4 4"></path>
+                                        </svg></span><span>Edit</span></button><button element="control--button"
+                                    emphasis="primary" status="destructive" scale="md" class=""><span
+                                        data-part="start-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-trash2 lucide-trash-2 shrink-0" element="shape--icon"
+                                            aria-hidden="true">
+                                            <path d="M3 6h18"></path>
+                                            <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+                                            <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+                                            <line x1="10" x2="10" y1="11" y2="17"></line>
+                                            <line x1="14" x2="14" y1="11" y2="17"></line>
+                                        </svg></span><span>Delete</span></button><button element="control--button"
+                                    emphasis="tertiary" scale="md" class=""><span data-part="start-icon"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-download shrink-0" element="shape--icon"
+                                            aria-hidden="true">
+                                            <path d="M12 15V3"></path>
+                                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                            <path d="m7 10 5 5 5-5"></path>
+                                        </svg></span><span>Download</span></button></div>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <p element="type--body-extra-small" emphasis="quiet">text-icon (right icon)</p>
+                            <div class="flex gap-3 flex-wrap items-center"><button element="control--button"
+                                    emphasis="primary" scale="md" class=""><span>Continue</span><span
+                                        data-part="end-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-arrow-right shrink-0" element="shape--icon"
+                                            aria-hidden="true">
+                                            <path d="M5 12h14"></path>
+                                            <path d="m12 5 7 7-7 7"></path>
+                                        </svg></span></button><button element="control--button" emphasis="secondary"
+                                    scale="md" class=""><span>Open link</span><span data-part="end-icon"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-external-link shrink-0" element="shape--icon"
+                                            aria-hidden="true">
+                                            <path d="M15 3h6v6"></path>
+                                            <path d="M10 14 21 3"></path>
+                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        </svg></span></button><button element="control--button" emphasis="tertiary"
+                                    scale="md" class=""><span>Options</span><span data-part="end-icon"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-chevron-down shrink-0" element="shape--icon"
+                                            aria-hidden="true">
+                                            <path d="m6 9 6 6 6-6"></path>
+                                        </svg></span></button></div>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <p element="type--body-extra-small" emphasis="quiet">icon-text-icon (both)</p>
+                            <div class="flex gap-3 flex-wrap items-center"><button element="control--button"
+                                    emphasis="primary" scale="md" class=""><span data-part="start-icon"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-funnel shrink-0" element="shape--icon"
+                                            aria-hidden="true">
+                                            <path
+                                                d="M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z">
+                                            </path>
+                                        </svg></span><span>Filter</span><span data-part="end-icon"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-chevron-down shrink-0" element="shape--icon"
+                                            aria-hidden="true">
+                                            <path d="m6 9 6 6 6-6"></path>
+                                        </svg></span></button><button element="control--button" emphasis="secondary"
+                                    scale="md" class=""><span data-part="start-icon"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-search shrink-0" element="shape--icon"
+                                            aria-hidden="true">
+                                            <path d="m21 21-4.34-4.34"></path>
+                                            <circle cx="11" cy="11" r="8"></circle>
+                                        </svg></span><span>Search</span><span data-part="end-icon"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-x shrink-0" element="shape--icon" aria-hidden="true">
+                                            <path d="M18 6 6 18"></path>
+                                            <path d="m6 6 12 12"></path>
+                                        </svg></span></button></div>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <p element="type--body-extra-small" emphasis="quiet">icon only</p>
+                            <div class="flex gap-3 flex-wrap items-center"><button element="control--button"
+                                    emphasis="primary" scale="md" class=""><span><svg xmlns="http://www.w3.org/2000/svg"
+                                            width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-plus shrink-0" element="shape--icon"
+                                            aria-hidden="true">
+                                            <path d="M5 12h14"></path>
+                                            <path d="M12 5v14"></path>
+                                        </svg></span></button><button element="control--button" emphasis="secondary"
+                                    scale="md" class=""><span><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-pencil shrink-0" element="shape--icon"
+                                            aria-hidden="true">
+                                            <path
+                                                d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z">
+                                            </path>
+                                            <path d="m15 5 4 4"></path>
+                                        </svg></span></button><button element="control--button" emphasis="primary"
+                                    status="destructive" scale="md" class=""><span><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-trash2 lucide-trash-2 shrink-0" element="shape--icon"
+                                            aria-hidden="true">
+                                            <path d="M3 6h18"></path>
+                                            <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+                                            <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+                                            <line x1="10" x2="10" y1="11" y2="17"></line>
+                                            <line x1="14" x2="14" y1="11" y2="17"></line>
+                                        </svg></span></button><button element="control--button" emphasis="quiet"
+                                    scale="md" class=""><span><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-x shrink-0" element="shape--icon" aria-hidden="true">
+                                            <path d="M18 6 6 18"></path>
+                                            <path d="m6 6 12 12"></path>
+                                        </svg></span></button><button element="control--button" emphasis="tertiary"
+                                    scale="md" class=""><span><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-refresh-cw shrink-0" element="shape--icon"
+                                            aria-hidden="true">
+                                            <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path>
+                                            <path d="M21 3v5h-5"></path>
+                                            <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"></path>
+                                            <path d="M8 16H3v5"></path>
+                                        </svg></span></button></div>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <p element="type--body-extra-small" emphasis="quiet">icon background</p>
+                            <div class="flex gap-3 flex-wrap items-center"><button element="control--button"
+                                    emphasis="primary" scale="md" class=""><span data-part="start-icon"
+                                        icon-bg="light"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-plus shrink-0" element="shape--icon"
+                                            aria-hidden="true">
+                                            <path d="M5 12h14"></path>
+                                            <path d="M12 5v14"></path>
+                                        </svg></span><span>Light bg</span></button><button element="control--button"
+                                    emphasis="primary" scale="md" class=""><span data-part="start-icon"
+                                        icon-bg="dark"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-plus shrink-0" element="shape--icon"
+                                            aria-hidden="true">
+                                            <path d="M5 12h14"></path>
+                                            <path d="M12 5v14"></path>
+                                        </svg></span><span>Dark bg</span></button></div>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <p element="type--body-extra-small" emphasis="quiet">icon bleed</p>
+                            <div class="flex gap-3 flex-wrap items-center"><button element="control--button"
+                                    emphasis="primary" scale="md" class=""><span data-part="start-icon" icon-bleed=""
+                                        icon-bleed-position="start"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-plus shrink-0" element="shape--icon"
+                                            aria-hidden="true">
+                                            <path d="M5 12h14"></path>
+                                            <path d="M12 5v14"></path>
+                                        </svg></span><span>Left bleed</span></button><button element="control--button"
+                                    emphasis="primary" scale="md" class=""><span>Right bleed</span><span
+                                        data-part="end-icon" icon-bleed="" icon-bleed-position="end"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-arrow-right shrink-0" element="shape--icon"
+                                            aria-hidden="true">
+                                            <path d="M5 12h14"></path>
+                                            <path d="m12 5 7 7-7 7"></path>
+                                        </svg></span></button></div>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <p element="type--body-extra-small" emphasis="quiet">fill</p>
+                            <div class="flex gap-3 flex-wrap items-center">
+                                <div class="w-72"><button element="control--button" emphasis="primary" scale="md"
+                                        fill="" class=""><span>Fill container</span></button></div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="flex flex-col gap-4">
+                        <h2 element="type--heading2">Badge</h2>
+                        <div class="flex flex-col gap-2">
+                            <p element="type--body-extra-small" emphasis="quiet">status</p>
+                            <div class="flex gap-3 flex-wrap items-center"><span element="surface--badge"
+                                    emphasis="primary" status="neutral" scale="sm"
+                                    class="inline-flex items-center justify-center whitespace-nowrap shrink-0 [&amp;&gt;svg]:pointer-events-none overflow-hidden">Neutral</span><span
+                                    element="surface--badge" emphasis="primary" status="info" scale="sm"
+                                    class="inline-flex items-center justify-center whitespace-nowrap shrink-0 [&amp;&gt;svg]:pointer-events-none overflow-hidden">Info</span><span
+                                    element="surface--badge" emphasis="primary" status="success" scale="sm"
+                                    class="inline-flex items-center justify-center whitespace-nowrap shrink-0 [&amp;&gt;svg]:pointer-events-none overflow-hidden">Success</span><span
+                                    element="surface--badge" emphasis="primary" status="warning" scale="sm"
+                                    class="inline-flex items-center justify-center whitespace-nowrap shrink-0 [&amp;&gt;svg]:pointer-events-none overflow-hidden">Warning</span><span
+                                    element="surface--badge" emphasis="primary" status="error" scale="sm"
+                                    class="inline-flex items-center justify-center whitespace-nowrap shrink-0 [&amp;&gt;svg]:pointer-events-none overflow-hidden">Error</span><span
+                                    element="surface--badge" emphasis="primary" status="destructive" scale="sm"
+                                    class="inline-flex items-center justify-center whitespace-nowrap shrink-0 [&amp;&gt;svg]:pointer-events-none overflow-hidden">Destructive</span>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="flex flex-col gap-4">
+                        <h2 element="type--heading2">Input</h2>
+                        <div class="flex flex-col gap-3 max-w-sm"><input element="field--input" scale="md"
+                                class="flex disabled:pointer-events-none disabled:cursor-not-allowed"
+                                placeholder="Default"><input element="field--input" scale="md" status="error"
+                                class="flex disabled:pointer-events-none disabled:cursor-not-allowed"
+                                placeholder="Error"><input element="field--input" scale="md"
+                                class="flex disabled:pointer-events-none disabled:cursor-not-allowed"
+                                placeholder="Disabled" state="disabled"></div>
+                    </section>
+                    <section class="flex flex-col gap-4">
+                        <h2 element="type--heading2">Switch</h2>
+                        <div class="flex flex-col gap-2">
+                            <p element="type--body-extra-small" emphasis="quiet">states</p>
+                            <div class="flex gap-3 flex-wrap items-center"><button type="button" role="switch"
+                                    aria-checked="false" data-state="unchecked" value="on" element="control--switch"
+                                    emphasis="primary" scale="md"
+                                    class="peer inline-flex shrink-0 items-center transition-all disabled:pointer-events-none disabled:cursor-not-allowed"><span
+                                        data-state="unchecked" data-part="thumb"
+                                        class="pointer-events-none block transition-transform data-[state=checked]:translate-x-[calc(100%-2px)] data-[state=unchecked]:translate-x-0"></span></button><button
+                                    type="button" role="switch" aria-checked="false" data-state="unchecked" value="on"
+                                    element="control--switch" emphasis="primary" scale="md" state="selected"
+                                    class="peer inline-flex shrink-0 items-center transition-all disabled:pointer-events-none disabled:cursor-not-allowed"><span
+                                        data-state="unchecked" data-part="thumb"
+                                        class="pointer-events-none block transition-transform data-[state=checked]:translate-x-[calc(100%-2px)] data-[state=unchecked]:translate-x-0"></span></button><button
+                                    type="button" role="switch" aria-checked="false" data-state="unchecked" value="on"
+                                    element="control--switch" emphasis="primary" scale="md" state="disabled"
+                                    class="peer inline-flex shrink-0 items-center transition-all disabled:pointer-events-none disabled:cursor-not-allowed"><span
+                                        data-state="unchecked" data-part="thumb"
+                                        class="pointer-events-none block transition-transform data-[state=checked]:translate-x-[calc(100%-2px)] data-[state=unchecked]:translate-x-0"></span></button>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="flex flex-col gap-4">
+                        <h2 element="type--heading2">Table</h2>
+                        <div class="relative overflow-x-auto">
+                            <table element="list--table" class="w-full">
+                                <thead element="surface--header" class="">
+                                    <tr class="">
+                                        <th
+                                            class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                            Name</th>
+                                        <th
+                                            class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                            Role</th>
+                                        <th
+                                            class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                            Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="">
+                                    <tr class="">
+                                        <td
+                                            class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                            Alice</td>
+                                        <td
+                                            class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                            Admin</td>
+                                        <td
+                                            class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                            Active</td>
+                                    </tr>
+                                    <tr class="">
+                                        <td
+                                            class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                            Bob</td>
+                                        <td
+                                            class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                            Member</td>
+                                        <td
+                                            class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                            Invited</td>
+                                    </tr>
+                                    <tr class="">
+                                        <td
+                                            class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                            Carol</td>
+                                        <td
+                                            class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                            Owner</td>
+                                        <td
+                                            class="align-middle [&amp;:has([role=checkbox])]:pr-0 [&amp;&gt;[role=checkbox]]:translate-y-[2px]">
+                                            Active</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                    <section class="flex flex-col gap-4">
+                        <h2 element="type--heading2">Card</h2>
+                        <div element="surface--card" class="flex flex-col">
+                            <div element="surface--header"
+                                class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start has-data-[slot=card-action]:grid-cols-[1fr_auto]">
+                                <div class="">Card title</div>
+                            </div>
+                            <div element="surface--content" class="">Card content goes here.</div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

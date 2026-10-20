@@ -1,0 +1,145 @@
+{
+  "id": "doc/ui-theme-authoring",
+  "kind": "doc",
+  "title": "Theme Authoring",
+  "status": "converted",
+  "subject": "ui",
+  "tags": [
+    "ui",
+    "consumer"
+  ],
+  "paths": [
+    "shared/libs/ui"
+  ],
+  "summary": "How to write a theme object. A theme is a TypeScript object conforming to the `Theme` type (`shared/libs/ui/types/theme.ts`).",
+  "docId": "ui-theme-authoring",
+  "doc": {
+    "axioms": [],
+    "purpose": {
+      "intro": "How to write a theme object. A theme is a TypeScript object conforming to the `Theme` type (`shared/libs/ui/types/theme.ts`)."
+    },
+    "reference": [
+      {
+        "topic": "Theme Object Structure",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "Theme\n├── id, name\n│\n├── colors                         L1 primitive\n│   ├── main (white, black)\n│   ├── brand (1–4)\n│   ├── status (success, info, warning, error → can reference flat)\n│   ├── flat (11 accent colors)\n│   └── semanticTokens (primary, secondary, accent, muted)\n│\n├── typography                     L1 primitive\n│   ├── fonts (primary, secondary, quote, monoPrimary, monoSecondary)\n│   └── types (18 scales, each: fontFamily, fontStyle, fontSizeMobile,\n│              fontSizeDesktop, fontWeight, lineHeight, letterSpacing)\n│\n├── spacing                        L1 primitive (unit multiplier → xs..3xl)\n├── radius                         L1 primitive (none, xs, sm, md, lg, xl, full)\n├── effects                        L1 primitive (named effect presets)\n├── transitions                    L1 primitive (duration + timing scales)\n├── borderWidths                   L1 primitive (none → extraThick)\n├── icons                          L1 primitive (set, sizes, weight)\n│\n├── modes                          Cross-cutting\n│   └── colorScheme\n│       └── each mode: background + foreground anchors + derivation params\n│\n├── families                       L2 — morphological family defaults\n│   ├── surfaceContainer           (IS the base shape)\n│   ├── elevatedOverlay            (surface + overlay extras)\n│   ├── listContainer              (surface + row/cell/separator/alternating)\n│   ├── interactiveControl         (surface wrapper)\n│   ├── interactiveControlGroup    (surface wrapper)\n│   ├── field                      (surface + placeholder/caret/obfuscation)\n│   ├── shape                      (surface wrapper)\n│   └── media                      (surface + objectFit/aspectRatio/overlay/filter)\n│\n├── elements                       L3 — element overrides (sparse deltas)\n│\n├── concepts                       L4 — product-specific semantic overrides\n│   └── [conceptName]: { [target]: SurfaceContainerTokens + accent + contextual }\n│\n└── contextual                     L5 — parent → child overrides\n    └── [parent]: { [child]: SurfaceContainerTokens }\n        Keys are element names (e.g. 'sidebar', 'header', 'card')\n        matching the keys in ElementTypes. NOT the full attribute\n        value (not 'surface--sidebar')."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Color References",
+        "claims": [],
+        "statement": "Theme token values can reference colors by name:",
+        "imagesAndDiagrams": [
+          {
+            "type": "ascii",
+            "value": "| Type | Examples |\n|------|----------|\n| Primitive | `'main-white'`, `'brand-1'`, `'status-error'`, `'flat-blue'` |\n| Derived | `'gray-200'`, `'brand-1-light'`, `'status-error-dark'` |\n| Semantic | `'primary'`, `'secondary'`, `'accent'`, `'muted'` |\n| Mode anchors | `'background'`, `'foreground'` (resolved from active color mode, not semantic tokens) |\n| Special | `'tint'` (current tint value), `'smart-bw'` (auto black/white) |\n| CSS | `'transparent'`, `'currentColor'`, `'inherit'` |\n| Raw hex | `'#ff0000'` (escape hatch, avoid when possible) |"
+          }
+        ]
+      },
+      {
+        "topic": "Color References › Which colour to write",
+        "claims": [
+          {
+            "text": "A surface's fill is `'background'`; its text is `'foreground'`. The two swap in dark mode."
+          },
+          {
+            "text": "Text on a coloured fill (a brand, a status) is `'smart-bw'`."
+          },
+          {
+            "text": "`'main-white'` and `'main-black'` are written only where the colour must not swap: the mode anchors and the shadows."
+          },
+          {
+            "text": "A tinted ground is a brand-tinted gray (`'brand-1-gray-50'`), with the amount in the mode's `grayColorMixPercentage`."
+          }
+        ]
+      },
+      {
+        "topic": "Modes",
+        "claims": [],
+        "statement": "Each color mode defines background/foreground anchors and derivation parameters. The engine computes gray scales, brand light/dark, status light/dark from these.",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "modes: {\n  colorScheme: {\n    light: {\n      background: 'main-white',\n      foreground: 'main-black',\n      derivation: {\n        brandLightAmount: 74,\n        brandDarkAmount: 20,\n        statusLightAmount: 74,\n        statusDarkAmount: 20,\n        grayColorMixPercentage: '5%',\n        flatSaturationAdjust: 0,\n      },\n    },\n    dark: { ... },\n  },\n}",
+                "caption": "typescript"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Concepts",
+        "claims": [
+          {
+            "text": "Concepts apply to both elements and layouts. `concept=\"dashboard\"` on a shell → the theme overrides `mainContent` background for dashboard pages."
+          }
+        ],
+        "statement": "Group overrides by business meaning, not by element type:",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "concepts: {\n  knowledge: {\n    card: {\n      accent: 'brand-2',\n      boundary: { border: { width: 'default', color: 'gray-pure-500' } },\n      contextual: {\n        header: {\n          smartBleed: 'normal',\n          interior: { background: 'brand-2', foreground: 'smart-bw' },\n        },\n      },\n    },\n  },\n  dashboard: {\n    mainContent: {\n      interior: { background: 'gray-50' },\n    },\n  },\n}",
+                "caption": "typescript"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Size Variants",
+        "claims": [
+          {
+            "text": "Default scale when absent: `md`."
+          }
+        ],
+        "statement": "Elements that support sizes define them at L3:",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "button: {\n  surface: { /* base */ },\n  sizes: {\n    xs: { partialSurface: { ... }, icon: { size: 'xs' } },\n    sm: { partialSurface: { ... }, icon: { size: 'sm' } },\n    // ...\n  },\n}",
+                "caption": "typescript"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Tint Pattern",
+        "claims": [],
+        "statement": "Define emphasis as a visual pattern, use tint for the color:",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "interactiveControl: {\n  surface: {\n    emphasis: {\n      primary: {\n        partialSurface: {\n          tint: 'primary',                      // accent color\n          interior: { background: 'tint', foreground: 'smart-bw' },\n          boundary: { border: { color: 'transparent' } },\n        },\n      },\n    },\n    status: {\n      error: { partialSurface: { tint: 'status-error' } },\n      // status only overrides tint → pattern stays, color changes\n    },\n  },\n}",
+                "caption": "typescript"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "review": {
+      "axioms": {
+        "state": "unreviewed"
+      },
+      "purpose": {
+        "state": "unreviewed"
+      },
+      "reference": {
+        "state": "unreviewed"
+      }
+    },
+    "converted": true
+  }
+}

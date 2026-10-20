@@ -1,0 +1,128 @@
+{
+  "id": "doc/list-query-frontend-usage",
+  "kind": "doc",
+  "title": "Frontend Usage",
+  "status": "converted",
+  "subject": "list-query",
+  "tags": [
+    "list-query",
+    "consumer"
+  ],
+  "paths": [
+    "shared/libs/list-query"
+  ],
+  "summary": "Everything in this doc lives under `@prowd/list-query/client`. The root entry (`@prowd/list-query`) exposes types the FE also uses (`SortSpec`, `ListResponse…",
+  "docId": "list-query-frontend-usage",
+  "doc": {
+    "axioms": [],
+    "purpose": {
+      "intro": "Everything in this doc lives under `@prowd/list-query/client`. The root entry (`@prowd/list-query`) exposes types the FE also uses (`SortSpec`, `ListResponse<T>`)."
+    },
+    "reference": [
+      {
+        "topic": "`serializeListQuery`",
+        "claims": [],
+        "statement": "Turns a list-query options object into `URLSearchParams` the FE can drop into a URL.",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "import { serializeListQuery } from \"@prowd/list-query/client\";\n\nconst params = serializeListQuery({\n  page: 2,\n  pageSize: 25,\n  sort: \"-createdAt\",\n  search: \"alice\",\n  status: \"active\",\n});\n// → page=2&pageSize=25&sort=-createdAt&search=alice&status=active",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "`serializeListQuery` › Accepted input shape",
+        "claims": [
+          {
+            "text": "`sort` may be already-canonical (`\"type,-name,createdAt\"`) or a `SortSpec[]`. Arrays are re-stringified into the canonical form."
+          },
+          {
+            "text": "`undefined` and `null` values are omitted. `false` and `0` are preserved."
+          },
+          {
+            "text": "Extra filter keys flow through verbatim as `String(value)`."
+          }
+        ],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "{\n  page?:     number | string;\n  pageSize?: number | string;\n  sort?:     string | SortSpec[];\n  search?:   string;\n  [filterKey: string]: string | number | boolean | undefined | null | SortSpec[];\n}",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Adapter pattern",
+        "claims": [],
+        "statement": "The FE adapter wraps every list endpoint call with `serializeListQuery`:",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "// apps/web-main/src/lib/api/user-org-mgmt-api-client.ts\nimport { serializeListQuery } from \"@prowd/list-query/client\";\n\norganizationList: {\n  $get: async (opts) => {\n    const params = serializeListQuery(opts?.query ?? {});\n    const response = await request(`/organizations?${params}`);\n    return { ok: response.ok, json: () => response.json() };\n  },\n},",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Reading the response",
+        "claims": [
+          {
+            "text": "Past-end requests return `{ rows: [], total: <real> }`, not a 404. Call sites render an empty state — no special case for \"page doesn't exist.\""
+          }
+        ],
+        "statement": "Every list endpoint's `json()` resolves to `{ rows: T[]; total: number }`:",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "const response = await apiClient.organizationList.$get({\n  query: { page: 1, pageSize: 25, sort: \"name\" },\n});\nconst { rows, total } = await response.json();",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Typing the client contract",
+        "claims": [
+          {
+            "text": "The stringly-typed query params match the fact that URL params are strings; the zod factory on the backend coerces them to numbers and `SortSpec[]`."
+          }
+        ],
+        "statement": "In the module's `web/types.ts`, declare the endpoint's query shape and response shape using the lib's types:",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "import type { ListResponse } from \"@prowd/list-query\";\n\ninterface OrganizationListRow {\n  id: string;\n  name: string;\n  // ...\n}\n\norganizationList: {\n  $get: (opts?: {\n    query?: {\n      page?: string | number;\n      pageSize?: string | number;\n      sort?: string;\n      search?: string;\n      status?: string;\n      type?: string;\n    };\n  }) => Promise<{\n    ok: boolean;\n    json: () => Promise<ListResponse<OrganizationListRow>>;\n  }>;\n};",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "review": {
+      "axioms": {
+        "state": "unreviewed"
+      },
+      "purpose": {
+        "state": "unreviewed"
+      },
+      "reference": {
+        "state": "unreviewed"
+      }
+    },
+    "converted": true
+  }
+}

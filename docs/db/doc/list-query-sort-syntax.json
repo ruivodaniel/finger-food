@@ -1,0 +1,155 @@
+{
+  "id": "doc/list-query-sort-syntax",
+  "kind": "doc",
+  "title": "Sort Syntax",
+  "status": "converted",
+  "subject": "list-query",
+  "tags": [
+    "list-query",
+    "contributor"
+  ],
+  "paths": [
+    "shared/libs/list-query"
+  ],
+  "summary": "Canonical grammar for the `sort` query param.",
+  "docId": "list-query-sort-syntax",
+  "doc": {
+    "axioms": [],
+    "purpose": {
+      "intro": "Canonical grammar for the `sort` query param."
+    },
+    "reference": [
+      {
+        "topic": "Grammar",
+        "claims": [
+          {
+            "text": "A leading `-` on a field means descending."
+          },
+          {
+            "text": "No prefix means ascending."
+          },
+          {
+            "text": "Fields are comma-separated."
+          },
+          {
+            "text": "Whitespace around tokens is trimmed; whitespace inside an identifier is invalid."
+          }
+        ],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "sort     := field (\",\" field)*\nfield    := [\"-\"] identifier\nidentifier := [A-Za-z_][A-Za-z0-9_]*"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Examples",
+        "claims": [],
+        "imagesAndDiagrams": [
+          {
+            "type": "ascii",
+            "value": "| Input | Parsed |\n|---|---|\n| `name` | `[{name, asc}]` |\n| `-createdAt` | `[{createdAt, desc}]` |\n| `type,-name,createdAt` | `[{type, asc}, {name, desc}, {createdAt, asc}]` |\n| `  name  ` (trimmed) | `[{name, asc}]` |\n| `type, -name , createdAt` (inner whitespace trimmed) | `[{type, asc}, {name, desc}, {createdAt, asc}]` |"
+          }
+        ]
+      },
+      {
+        "topic": "Rejections (all → 400 at the validator)",
+        "claims": [],
+        "imagesAndDiagrams": [
+          {
+            "type": "ascii",
+            "value": "| Input | Reason |\n|---|---|\n| `bogus` (not in whitelist) | `unknown_field` |\n| `name,-name` (same field twice) | `duplicate_field` |\n| `name,` (trailing comma) | `empty_token` |\n| `,name` (leading comma) | `empty_token` |\n| `name$` (bad char) | `invalid_character` |\n| `-` (bare minus, field becomes empty) | `invalid_character` |"
+          }
+        ]
+      },
+      {
+        "topic": "Why this grammar",
+        "claims": [
+          {
+            "text": "**Comma-separated** — widely used, easy to type in URLs, copy-pastable."
+          },
+          {
+            "text": "**`-` prefix for desc** — convention in GitHub API, Stripe API, JSON:API, many others. Zero ceremony compared to `:asc` / `:desc` suffixes."
+          },
+          {
+            "text": "**Duplicate fields rejected, not collapsed** — the client is stating a contradiction (`name` asc AND `name` desc). Silently collapsing would hide a bug."
+          },
+          {
+            "text": "**Empty tokens rejected** — a trailing comma is almost always a bug in URL construction. Never silent."
+          },
+          {
+            "text": "**Identifier-only fields** — the whitelist is the real guard, but rejecting weird characters early produces clearer errors and stops SQL injection attempts dead before they reach Drizzle."
+          }
+        ]
+      },
+      {
+        "topic": "Parser behaviour",
+        "claims": [
+          {
+            "text": "Multiple errors are collected in one parse — if the client sends `sort=nope,alsoNope`, both fields produce errors so the validator can report both at once."
+          }
+        ],
+        "statement": "The parser (`parseSortString`) never throws. It returns a discriminated result:",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "type ParseSortResult =\n  | { ok: true;  value: SortSpec[] }\n  | { ok: false; errors: ParseSortError[] };",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Adding a field to an endpoint's whitelist",
+        "claims": [
+          {
+            "text": "Add it to `sortable` in the endpoint's `createListQuerySchema({...})` call."
+          },
+          {
+            "text": "Add its Drizzle column to the `columnMap` passed to `buildOrderBy` in the repository."
+          },
+          {
+            "text": "Add a test case asserting the new field sorts correctly."
+          },
+          {
+            "text": "The two lists (zod whitelist + repo column map) **must** stay in sync. A field in `sortable` but missing from `columnMap` is a runtime error (thrown by `buildOrderBy`). A column in the map but missing from `sortable` is dead code — the validator will reject it at 400 before it reaches the repo."
+          }
+        ]
+      },
+      {
+        "topic": "Deliberately not supported",
+        "claims": [
+          {
+            "text": "`asc` / `desc` suffixes (e.g. `name:asc`) — use the `-` prefix."
+          },
+          {
+            "text": "Per-field null ordering (`NULLS FIRST/LAST`) — PostgreSQL defaults only."
+          },
+          {
+            "text": "Array parameter syntax (`sort[]=...`) — a single comma-separated `sort` field only."
+          },
+          {
+            "text": "Nested field paths (`organization.name`) — flat identifiers only. Endpoints that join tables pick stable per-endpoint aliases and add them to `sortable`."
+          }
+        ]
+      }
+    ],
+    "review": {
+      "axioms": {
+        "state": "unreviewed"
+      },
+      "purpose": {
+        "state": "unreviewed"
+      },
+      "reference": {
+        "state": "unreviewed"
+      }
+    },
+    "converted": true
+  }
+}

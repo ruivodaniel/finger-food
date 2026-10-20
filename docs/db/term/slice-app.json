@@ -1,0 +1,18 @@
+{
+  "id": "term/slice-app",
+  "kind": "term",
+  "title": "slice app",
+  "status": "approved",
+  "subjects": [
+    "main"
+  ],
+  "tags": [
+    "architecture"
+  ],
+  "paths": [],
+  "term": {
+    "def": "One runtime facet of a [[slice]] — `api/`, `web/`, or `mobile/` inside a seed or product slice. Not independently deployable; compiles into the real `apps/main/shared/<app>/` it's mounted into. Named to echo `apps/` without colliding with it.",
+    "aliases": [],
+    "proposed": true
+  }
+}

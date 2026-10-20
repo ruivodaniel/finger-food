@@ -1,0 +1,177 @@
+{
+  "id": "doc/frontend-composition",
+  "kind": "doc",
+  "title": "Frontend Composition",
+  "status": "approved",
+  "subject": "main",
+  "tags": [
+    "main",
+    "composition",
+    "library",
+    "page",
+    "section",
+    "shell",
+    "slice",
+    "sub-page"
+  ],
+  "paths": [
+    "apps/main"
+  ],
+  "summary": "Composition rules exist so that every page in the product reads the same way and no page can invent its own authorization. A developer opening any page finds…",
+  "docId": "frontend-composition",
+  "doc": {
+    "axioms": [
+      {
+        "text": "The route layer translates and guards. It turns the URL into plain props, picks the shell, and runs the route guards — nothing else.",
+        "sub": [
+          "No page data fetching, no permission-derived rendering, no injected callbacks.",
+          "The guards are the session check and the obligations gate ([[unmet-requirements|Unmet Requirements]]); their only outcomes are pass, login, or the resolve flow."
+        ]
+      },
+      {
+        "text": "A page fetches its own data and renders what the backend returned.",
+        "sub": [
+          "It reads what it needs from props and from context, and owns its loading and error states.",
+          "Empty data renders an empty state. It is never a redirect."
+        ]
+      },
+      {
+        "text": "The frontend never decides authorization. The backend returns capability flags and the page reads them.",
+        "sub": [
+          "No client-side role checks, no visibility computed from config, no redirect based on permission state.",
+          "Two permitted redirects: unauthenticated → login, and unmet obligations → the resolve flow ([[unmet-requirements|Unmet Requirements]]). A restricted page renders empty — restriction never redirects."
+        ]
+      },
+      {
+        "text": "There is one page-entry pattern, and every page is an instance of it.",
+        "sub": [
+          "A login page is the same shape with the capability step switched off; a members list is the same shape with every step on. The structure never changes."
+        ]
+      },
+      {
+        "text": "A [[slice]] consumes app capabilities through injected adapters, never by importing the app.",
+        "sub": [
+          "Router, toast, query client — plus the config the slice builds its own API client from. The direction is always app provides → slice consumes."
+        ]
+      }
+    ],
+    "purpose": {
+      "intro": "Composition rules exist so that every page in the product reads the same way and no page can invent its own authorization. A developer opening any page finds data fetched in the same place, capability flags read from the same source, and loading and error handled with the same primitives — whichever [[slice]] owns it.",
+      "points": [
+        "**One shape:** the route translates, the page fetches and renders, the shared primitives handle the states in between.",
+        "**One authority:** what a user may see and do comes from the backend, in the response, every time."
+      ],
+      "note": "Where this code lives and who may import it is not here — that is [[scaffolding-and-import-boundaries|Scaffolding & Import Boundaries]]. This doc is only about what happens inside a page."
+    },
+    "reference": [
+      {
+        "topic": "Structure comes from the layouts library",
+        "statement": "Every structural region on screen is a `@libs/web-layouts` component. Nobody hand-rolls structure.",
+        "claims": [
+          {
+            "text": "The app picks the [[shell]] per route — `shell-side-nav`, `shell-top-nav` or `shell-none`. Shell primitives are app-level only."
+          },
+          {
+            "text": "Auth pages fill the `AuthPage` [[composition]]; other [[slice]] pages render into app-level section layouts (`PageFrame`, `SettingsLayout`) that assemble primitives. A page never builds a shell and never writes structural CSS."
+          },
+          {
+            "text": "A [[page]] fills the whole `page` region; a [[sub-page]] fills `main` inside a [[section]], which owns `page-header` and `left-sidebar`."
+          }
+        ],
+        "imagesAndDiagrams": [],
+        "examples": []
+      },
+      {
+        "topic": "The page-entry pattern",
+        "statement": "Every page enters the same way. The route layer above it translates and wraps; the page itself fetches and renders; the shared primitives below it carry the states. Naming the three layers is what stops data fetching drifting up into routes and authorization drifting down into pages.",
+        "claims": [
+          {
+            "text": "The route layer translates URL params and search params into plain props, chooses the shell that wraps the page, and runs the route guards. That is all it does."
+          },
+          {
+            "text": "The page reads its props and its context, calls the backend, reads capability flags from the response, handles its own loading and error states, and renders the result."
+          },
+          {
+            "text": "Loading skeletons, error boundaries, dialogs and layout primitives come from the shared UI [[library|libraries]] — a page never rolls its own."
+          },
+          {
+            "text": "By the time any page renders, the session is already hydrated on the provider tree. No page resolves it."
+          }
+        ],
+        "imagesAndDiagrams": [
+          {
+            "title": "One page, three layers",
+            "type": "ascii",
+            "value": "ROUTE LAYER                                            owned by the app\n│  URL params · search params  →  plain props\n│  picks the shell · runs the guards (session, obligations gate)\n│  no page fetching · no permission-derived rendering · no callbacks\n▼\nPAGE COMPONENT                       owned by whoever owns the page\n│  1. receives plain props\n│  2. reads context (api client, auth, config, session)\n│  3. calls the backend over HTTP, fetches its own data\n│  4. reads capability flags from the response — the backend is the authority\n│  5. handles its own loading and error states\n│  6. renders what came back. empty data → empty state, never a redirect\n▼\nSHARED UI PRIMITIVES                                   shared libraries\n   skeletons · error boundaries · dialogs · layout primitives"
+          }
+        ],
+        "examples": []
+      },
+      {
+        "topic": "Navigating between pages",
+        "statement": "Who may render a menu depends on who owns the pages behind it. Three cases, and the third is the one that gets built wrong.",
+        "claims": [
+          {
+            "text": "A slice may render navigation to its own pages when clicking changes the URL. It contributed those routes and assumes the app mounted them; the app's router does the rest."
+          },
+          {
+            "text": "A slice may render navigation that changes only its own local state — a wizard's steps, a tab that swaps content. No URL, no app involvement."
+          },
+          {
+            "text": "A menu whose targets span more than one owner cannot be slice-owned. The app renders it, and the slices contribute metadata into it."
+          }
+        ],
+        "imagesAndDiagrams": [],
+        "examples": []
+      },
+      {
+        "topic": "Overlays",
+        "statement": "Sheets and modals split three ways: the primitive, the orchestration, and the content shown inside. Only the middle one is contested.",
+        "claims": [
+          {
+            "text": "Overlay primitives — sheet, dialog, modal — live in the shared UI libraries. The slice-specific content inside belongs to the slice showing it."
+          },
+          {
+            "text": "An overlay that can stack, or that needs shell-level coordination, goes through the app's overlay controller: one host, one stack, one z-index system."
+          },
+          {
+            "text": "A self-contained dialog or confirm that never stacks may stay slice-local, built from the shared primitives."
+          }
+        ],
+        "imagesAndDiagrams": [],
+        "examples": []
+      },
+      {
+        "topic": "State",
+        "statement": "Four kinds of state, four homes. Choosing by habit rather than by kind is what produces a global store nobody can reason about.",
+        "claims": [
+          {
+            "text": "Server state lives in the query cache — it is a cache of the backend, never a copy to be edited."
+          },
+          {
+            "text": "Genuinely global UI state (sidebar open, theme) lives in a small global store, and stays small."
+          },
+          {
+            "text": "Local component state stays local."
+          },
+          {
+            "text": "Filters, pagination and sorting live in the URL, so a page is shareable and reloadable."
+          }
+        ],
+        "imagesAndDiagrams": [],
+        "examples": []
+      }
+    ],
+    "review": {
+      "axioms": {
+        "state": "unreviewed"
+      },
+      "purpose": {
+        "state": "unreviewed"
+      },
+      "reference": {
+        "state": "unreviewed"
+      }
+    }
+  }
+}

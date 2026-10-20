@@ -1,0 +1,18 @@
+{
+  "id": "term/credits",
+  "kind": "term",
+  "title": "credits",
+  "status": "converted",
+  "subjects": [
+    "open-api",
+    "orchestrator"
+  ],
+  "tags": [
+    "credits"
+  ],
+  "paths": [],
+  "term": {
+    "def": "Only the open API knows the credits of a user or an organization: the orchestrator asks it.",
+    "aliases": []
+  }
+}

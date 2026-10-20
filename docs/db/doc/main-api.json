@@ -1,0 +1,110 @@
+{
+  "id": "doc/main-api",
+  "kind": "doc",
+  "title": "🔗 API Application",
+  "status": "converted",
+  "subject": "main",
+  "tags": [
+    "main"
+  ],
+  "paths": [
+    "apps/main"
+  ],
+  "summary": "`Hono` (`https://hono.dev/`) backend API service with `Better Auth` (`https://www.better-auth.com/`) authentication and scoped access control.",
+  "docId": "main-api",
+  "doc": {
+    "axioms": [],
+    "purpose": {
+      "intro": "`Hono` (`https://hono.dev/`) backend API service with `Better Auth` (`https://www.better-auth.com/`) authentication and scoped access control."
+    },
+    "reference": [
+      {
+        "topic": "📁 Structure › 🧪 Testing (`__test__/` (`__test__/`))",
+        "claims": [],
+        "statement": "Unit testing configuration and test files"
+      },
+      {
+        "topic": "📁 Structure › 🗄️ Database (`drizzle/` (`drizzle/`))",
+        "claims": [],
+        "statement": "Database schema migrations and metadata"
+      },
+      {
+        "topic": "📁 Structure › 🛠️ Scripts (`scripts/` (`scripts/`))",
+        "claims": [],
+        "statement": "Development and database-seeding scripts"
+      },
+      {
+        "topic": "📁 Structure › 📦 Source Code (`src/` (`src/`))",
+        "claims": [
+          {
+            "text": "**⚙️ Wiring** (`src/wiring/` (`src/wiring/`)): App composition — module mounting, cross-module hooks, and notification/wizard wiring"
+          },
+          {
+            "text": "**⏰ Cron** (`src/cron/` (`src/cron/`)): Scheduled job runners"
+          },
+          {
+            "text": "**🧩 Features** (`src/features/` (`src/features/`)): App-owned vertical slices (router → service → repository → model), e.g. `notes`"
+          },
+          {
+            "text": "**📚 Lib** (`src/lib/` (`src/lib/`)): Boundary adapters and cross-cutting infrastructure (db, redis, S3, email, SMS, logging, observability, realtime)"
+          },
+          {
+            "text": "**🔒 Middlewares** (`src/middlewares/` (`src/middlewares/`)): Request-processing middleware"
+          },
+          {
+            "text": "**🏗️ Models** (`src/models/` (`src/models/`)): The drizzle schema barrel — aggregates the module, feature, and app-slice tables for the client and migrations"
+          },
+          {
+            "text": "**🔁 Workflow-intents** (`src/workflow-intents/` (`src/workflow-intents/`)): The durable workflow-intent outbox (commit-then-nudge: model + repository + service + helpers)"
+          },
+          {
+            "text": "**🛣️ Routes** (`src/routes/` (`src/routes/`)): Route registration (`client/` public, `m2m/` worker seam)"
+          }
+        ]
+      },
+      {
+        "topic": "📁 Structure › 🐳 Docker",
+        "claims": [
+          {
+            "text": "**`Dockerfile` (`Dockerfile`)**: Container configuration for deployment"
+          },
+          {
+            "text": "**`docker-compose.yml` (`docker-compose.yml`)**: Local development environment setup"
+          }
+        ]
+      },
+      {
+        "topic": "🏃‍♂️ Running the Project › Development Server",
+        "claims": [],
+        "statement": "_**Note:** Ensure you follow the setup steps from the root README.md (`../../README.md`) before running the development server._",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "# Start the API in development mode\npnpm run dev",
+                "caption": "bash"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "🚀 Deployment",
+        "claims": [],
+        "statement": "The API application is built and deployed through GitHub Actions CI/CD pipelines. For detailed deployment workflows and configuration, refer to .github/README_CICD.md (`../../.github/README_CICD.md`)."
+      }
+    ],
+    "review": {
+      "axioms": {
+        "state": "unreviewed"
+      },
+      "purpose": {
+        "state": "unreviewed"
+      },
+      "reference": {
+        "state": "unreviewed"
+      }
+    },
+    "converted": true
+  }
+}

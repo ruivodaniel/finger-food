@@ -1,0 +1,18 @@
+{
+  "extends": "../../../../../tsconfig.base.json",
+  "compilerOptions": {
+    "composite": true,
+    "outDir": "./dist",
+    "rootDir": ".",
+    "declaration": true,
+    "declarationMap": true,
+    "jsx": "react-jsx",
+    "types": ["node", "vitest/globals"],
+    "paths": {
+      "@configs/notifications": ["../../../../../configs/notifications/index.ts"],
+      "@configs/notifications/*": ["../../../../../configs/notifications/*"]
+    }
+  },
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules", "dist"]
+}

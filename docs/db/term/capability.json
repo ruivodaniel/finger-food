@@ -1,0 +1,20 @@
+{
+  "id": "term/capability",
+  "kind": "term",
+  "title": "capability",
+  "status": "converted",
+  "subjects": [
+    "orchestrator"
+  ],
+  "tags": [
+    "orchestrator"
+  ],
+  "paths": [
+    "apps/orchestrator"
+  ],
+  "term": {
+    "def": "What a worker can do: a node of the capability tree of the [[ontology]].",
+    "aliases": [],
+    "proposed": true
+  }
+}

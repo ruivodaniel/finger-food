@@ -1,0 +1,475 @@
+<!-- Seed baseline — sitemap URL paths. Self-contained fragment: styles · tree · screenshot popovers. Screenshots in ./screenshots/. -->
+<div class="sitemap-frag">
+<style>
+  :root {
+    --ink: #1d2b2a;
+    --muted: #697B79;
+    --line: #b9c6c4;
+    --bg: #f7f9f9;
+    --card: #ffffff;
+    --blue: #0fa4ea;
+    --magenta: #e7107e;
+    --green: #1d8a6b;
+    --amber: #8a7400;
+    --mono: "SF Mono", ui-monospace, Menlo, Consolas, monospace;
+  }
+  * { box-sizing: border-box; }
+      .legend { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 36px; font-size: 11.5px; color: var(--muted); }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .dot { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+  .d-public { background: #bfe6d4; }
+  .d-auth { background: #bfe0f5; }
+  .d-member { background: #f7c3de; }
+  .d-platform { background: #f2e6a2; }
+
+  .section { margin-bottom: 56px; }
+  .section-title {
+    font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em;
+    color: var(--muted); margin-bottom: 22px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .section-title::after { content: ""; flex: 1; height: 1px; background: #dde4e3; }
+
+  /* ---------- TREE ---------- */
+  .tree ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 34px;
+    position: relative;
+  }
+  /* vertical trunk */
+  .tree ul::before {
+    content: "";
+    position: absolute;
+    top: 0; bottom: 14px;
+    left: 12px;
+    border-left: 2px solid var(--line);
+  }
+  .tree li {
+    position: relative;
+    padding: 5px 0 5px 18px;
+  }
+  /* elbow */
+  .tree li::before {
+    content: "";
+    position: absolute;
+    top: 21px;
+    left: -22px;
+    width: 40px;
+    border-top: 2px solid var(--line);
+  }
+  .tree > ul { padding-left: 0; }
+  .tree > ul::before { display: none; }
+  .tree > ul > li { padding-left: 0; }
+  .tree > ul > li::before { display: none; }
+
+  .node {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 10px;
+    background: var(--card);
+    border: 1.5px solid #dbe3e2;
+    border-radius: 8px;
+    padding: 7px 14px;
+    box-shadow: 0 1px 2px rgba(29,43,42,0.06);
+    vertical-align: middle;
+  }
+  .node .url {
+    font-family: var(--mono);
+    font-size: 13px; font-weight: 650; white-space: nowrap;
+  }
+  .node .url .param { color: var(--magenta); }
+  .node .label { font-size: 11.5px; color: var(--muted); white-space: nowrap; }
+
+  .root > .node {
+    border-width: 2px;
+    border-color: var(--ink);
+    background: var(--ink);
+  }
+  .root > .node .url { color: #fff; font-size: 14px; }
+  .root > .node .label { color: #b8c4c2; }
+
+  .n-public > .node { border-color: #8fd0b3; background: #f2faf6; }
+  .n-auth > .node { border-color: #8ec9ec; background: #f1f8fd; }
+  .n-member > .node { border-color: #efa3cd; background: #fdf3f9; }
+  .n-platform > .node { border-color: #e0cd6a; background: #fcf9ea; }
+
+  .note {
+    font-size: 11.5px; color: var(--muted);
+    margin: 6px 0 0 18px; max-width: 640px;
+  }
+
+  /* ---------- SCREENSHOT LINK (camera badge inside a node) ---------- */
+  .shot {
+    align-self: center;
+    display: inline-flex; align-items: center; gap: 3px;
+    margin-left: 2px;
+    padding: 2px 6px 2px 5px;
+    border-radius: 999px;
+    border: 1px solid #cfd9d7;
+    background: #fff;
+    color: var(--blue);
+    font-size: 10.5px; font-weight: 700; line-height: 1;
+    text-decoration: none; cursor: pointer;
+    transition: background .12s, border-color .12s, color .12s;
+  }
+  .shot svg { width: 13px; height: 13px; display: block; }
+  .shot .count { font-variant-numeric: tabular-nums; }
+  .shot:hover, .shot.is-open { background: var(--blue); border-color: var(--blue); color: #fff; }
+  .legend .shot { cursor: default; }
+  .legend .shot:hover { background: #fff; border-color: #cfd9d7; color: var(--blue); }
+
+  /* ---------- POPOVER (the "tooltip" that opens on click) ---------- */
+  .popover {
+    position: absolute; z-index: 50;
+    display: none;
+    width: min(940px, calc(100vw - 32px));
+    background: var(--card);
+    border: 1.5px solid #cfd9d7;
+    border-radius: 12px;
+    box-shadow: 0 14px 40px rgba(29,43,42,0.18), 0 2px 6px rgba(29,43,42,0.08);
+    padding: 12px 14px 14px;
+  }
+  .popover[data-count="1"] { width: min(660px, calc(100vw - 32px)); }
+  .popover.is-open { display: block; }
+  .popover .caret {
+    position: absolute; top: -8.5px; left: 28px;
+    width: 14px; height: 14px;
+    background: var(--card);
+    border-left: 1.5px solid #cfd9d7; border-top: 1.5px solid #cfd9d7;
+    transform: rotate(45deg);
+  }
+  .popover .head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 10px; }
+  .popover .head .path { font-family: var(--mono); font-size: 12.5px; font-weight: 650; }
+  .popover .head .path .param { color: var(--magenta); }
+  .popover .head .meta { font-size: 11px; color: var(--muted); flex: 1; }
+  .popover .close {
+    align-self: center;
+    border: 0; background: transparent; color: var(--muted);
+    font-size: 18px; line-height: 1; cursor: pointer; padding: 0 2px;
+  }
+  .popover .close:hover { color: var(--ink); }
+  .popover .shots { display: flex; gap: 12px; flex-wrap: wrap; }
+  .popover figure { margin: 0; flex: 1 1 380px; min-width: 0; }
+  .popover img {
+    display: block; width: 100%; height: auto;
+    aspect-ratio: 3456 / 2234;
+    border: 1px solid #dbe3e2; border-radius: 6px;
+    background: #eef2f1; cursor: zoom-in;
+  }
+  .popover figcaption { font-size: 11px; color: var(--muted); margin-top: 6px; }
+  .popover figcaption b { color: var(--ink); font-weight: 600; }
+
+  /* ---------- LIGHTBOX (click a screenshot to see it full size) ---------- */
+  .lightbox {
+    position: fixed; inset: 0; z-index: 100;
+    display: none; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
+    background: rgba(29,43,42,0.86);
+    padding: 24px; cursor: zoom-out;
+  }
+  .lightbox.is-open { display: flex; }
+  .lightbox img {
+    max-width: 100%; max-height: calc(100vh - 88px);
+    border-radius: 6px; background: #fff;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  }
+  .lightbox .cap { color: #dfe7e5; font-size: 12px; font-family: var(--mono); }
+</style>
+<div class="legend">
+  <span><i class="dot d-public"></i> Public (no auth)</span>
+  <span><i class="dot d-auth"></i> Protected — authenticated user</span>
+  <span><a class="shot" tabindex="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg><span class="count">2</span></a> click to preview screenshot(s) · click a screenshot to zoom · ⌘-click opens the file</span>
+</div>
+
+<!-- ================= SEED ================= -->
+<div class="section">
+  <div class="section-title">Seed Baseline — unchanged</div>
+  <div class="tree">
+    <ul>
+      <li class="root">
+        <span class="node"><span class="url">Seed Baseline</span><span class="label">account, organizations, settings, legal</span></span>
+        <ul>
+          <li class="n-public"><span class="node"><span class="url">/login</span></span></li>
+          <li class="n-public"><span class="node"><span class="url">/register</span></span></li>
+          <li class="n-public"><span class="node"><span class="url">/forgot-password</span></span></li>
+          <li class="n-public"><span class="node"><span class="url">/reset-password</span></span></li>
+          <li class="n-public">
+            <span class="node"><span class="url">/legal-documents</span></span>
+            <ul>
+              <li class="n-public"><span class="node"><span class="url">/terms-and-conditions</span><span class="label">?orgTypeId ?docId</span></span></li>
+              <li class="n-public"><span class="node"><span class="url">/privacy-policy</span><span class="label">?orgTypeId ?docId</span></span></li>
+            </ul>
+          </li>
+          <li class="n-auth"><span class="node" data-shots="dashboard"><span class="url">/dashboard</span></span></li>
+          <li class="n-auth">
+            <span class="node"><span class="url">/my</span></span>
+            <ul>
+              <li class="n-auth"><span class="node" data-shots="my-memberships"><span class="url">/memberships</span></span></li>
+              <li class="n-auth"><span class="node" data-shots="my-invitations"><span class="url">/invitations</span></span></li>
+              <li class="n-auth">
+                <span class="node"><span class="url">/settings</span></span>
+                <ul>
+                  <li class="n-auth"><span class="node" data-shots="settings-account"><span class="url">/account</span></span></li>
+                  <li class="n-auth"><span class="node" data-shots="settings-profile"><span class="url">/profile</span></span></li>
+                  <li class="n-auth"><span class="node" data-shots="settings-security"><span class="url">/security</span></span></li>
+                  <li class="n-auth"><span class="node" data-shots="settings-legal"><span class="url">/legal</span></span></li>
+                  <li class="n-auth"><span class="node" data-shots="settings-preferences"><span class="url">/preferences</span></span></li>
+                  <li class="n-auth"><span class="node"><span class="url">/notifications</span></span></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="n-auth"><span class="node"><span class="url">/accept-invitation</span></span></li>
+          <li class="n-auth"><span class="node" data-shots="resolve"><span class="url">/resolve</span><span class="label">resolve unmet requirements</span></span></li>
+          <li class="n-auth">
+            <span class="node" data-shots="organizations"><span class="url">/organizations</span></span>
+            <ul>
+              <li class="n-auth">
+                <span class="node"><span class="url">/<span class="param">:organizationId / :current <span class="label">when :current, FE resolves with active org ID. BE is unaware of :current (BE always gets id)</span></span></span></span>
+                <ul>
+                  <li class="n-auth"><span class="node" data-shots="org-info"><span class="url">/info</span></span></li>
+                  <li class="n-auth"><span class="node" data-shots="org-members"><span class="url">/members</span></span></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="n-auth">
+            <span class="node"><span class="url">/manage-legal-documents</span></span>
+            <ul>
+              <li class="n-auth">
+                <span class="node"><span class="url">/<span class="param">:documentType</span></span></span>
+                <ul>
+                  <li class="n-auth"><span class="node" data-shots="mld-orgtype"><span class="url">/<span class="param">:orgTypeKey</span></span></span></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<script>
+(function () {
+  /* ------------------------------------------------------------------
+     Screenshots per node. Key = data-shots on the node.
+     Files live next to this page in ./screenshots/.
+     Not wired (retakes of a shot already used):
+       12.41.36 + 12.42.07 → /organizations (same as 12.42.17)
+       12.43.17            → /settings/account (same as 12.45.03)
+       12.44.56            → /settings/legal   (same as 12.45.25)
+     ------------------------------------------------------------------ */
+  var DIR = (document.currentScript && document.currentScript.dataset.base) || (function(){ var n=document.querySelector('[data-html-src$="sitemap.html"]'); return n ? n.getAttribute('data-html-src').replace(/sitemap\.html$/, 'screenshots/') : 'screenshots/'; })();
+  var SHOTS = {
+    'dashboard': {
+      path: '/dashboard',
+      shots: [
+        { file: 'Screenshot 2026-08-18 at 12.42.03.png', caption: 'Home — welcome, no pending flows' }
+      ]
+    },
+    'my-memberships': {
+      path: '/my/memberships',
+      shots: [
+        { file: 'Screenshot 2026-08-18 at 12.43.04.png', caption: 'My Memberships — Memberships tab' }
+      ]
+    },
+    'my-invitations': {
+      path: '/my/invitations',
+      shots: [
+        { file: 'Screenshot 2026-08-18 at 12.43.08.png', caption: 'My Memberships — Invitations tab (no pending invitations)' }
+      ]
+    },
+    'resolve': {
+      path: '/resolve',
+      shots: [
+        { file: 'Screenshot 2026-08-18 at 12.44.30.png', caption: '?intention=/manage-legal-documents/privacy-policy/platform — accept updated terms to continue' }
+      ]
+    },
+    'organizations': {
+      path: '/organizations',
+      shots: [
+        { file: 'Screenshot 2026-08-18 at 12.42.17.png', caption: 'All Organizations — list' },
+        { file: 'Screenshot 2026-08-18 at 12.42.57.png', caption: 'same page, notifications popover open' }
+      ]
+    },
+    'org-info': {
+      path: '/organizations/<span class="param">:organizationId</span>/info',
+      shots: [
+        { file: 'Screenshot 2026-08-18 at 12.42.23.png', caption: 'top — organization information, contact persons' },
+        { file: 'Screenshot 2026-08-18 at 12.42.30.png', caption: 'scrolled — delete organization' }
+      ]
+    },
+    'org-members': {
+      path: '/organizations/<span class="param">:organizationId</span>/members',
+      shots: [
+        { file: 'Screenshot 2026-08-18 at 12.42.35.png', caption: 'members list, invite member' }
+      ]
+    },
+    'settings-account': {
+      path: '/my/settings/account',
+      shots: [
+        { file: 'Screenshot 2026-08-18 at 12.45.03.png', caption: 'Account — sign-in identifiers' }
+      ]
+    },
+    'settings-profile': {
+      path: '/my/settings/profile',
+      shots: [
+        { file: 'Screenshot 2026-08-18 at 12.45.10.png', caption: 'top — avatar, name, contacts' },
+        { file: 'Screenshot 2026-08-18 at 12.45.12.png', caption: 'scrolled — address, save' }
+      ]
+    },
+    'settings-security': {
+      path: '/my/settings/security',
+      shots: [
+        { file: 'Screenshot 2026-08-18 at 12.45.17.png', caption: 'top — two-factor authentication, change password' },
+        { file: 'Screenshot 2026-08-18 at 12.45.20.png', caption: 'scrolled — delete account' }
+      ]
+    },
+    'settings-legal': {
+      path: '/my/settings/legal',
+      shots: [
+        { file: 'Screenshot 2026-08-18 at 12.45.25.png', caption: 'Legal Agreements — documents accepted' }
+      ]
+    },
+    'settings-preferences': {
+      path: '/my/settings/preferences',
+      shots: [
+        { file: 'Screenshot 2026-08-18 at 12.45.32.png', caption: 'Preferences — language, timezone' }
+      ]
+    },
+    'mld-orgtype': {
+      path: '/manage-legal-documents/<span class="param">:documentType</span>/<span class="param">:orgTypeKey</span>',
+      shots: [
+        { file: 'Screenshot 2026-08-18 at 12.44.02.png', caption: '/terms-and-conditions/platform — no document yet' },
+        { file: 'Screenshot 2026-08-18 at 12.44.16.png', caption: '/privacy-policy/platform — draft v1 saved' }
+      ]
+    }
+  };
+
+  var CAMERA = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>';
+
+  function src(file) { return DIR + encodeURIComponent(file); }
+  function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+
+  /* ---------- popover + lightbox elements ---------- */
+  var pop = document.createElement('div');
+  pop.className = 'popover';
+  pop.setAttribute('role', 'dialog');
+  document.body.appendChild(pop);
+
+  var lb = document.createElement('div');
+  lb.className = 'lightbox';
+  document.body.appendChild(lb);
+
+  var openKey = null, openLink = null, openNode = null;
+
+  /* ---------- inject a camera link into every node that has shots ---------- */
+  var nodes = document.querySelectorAll('.node[data-shots]');
+  Array.prototype.forEach.call(nodes, function (node) {
+    var key = node.getAttribute('data-shots');
+    var entry = SHOTS[key];
+    if (!entry || !entry.shots.length) return;
+    var n = entry.shots.length;
+    var a = document.createElement('a');
+    a.className = 'shot';
+    a.href = src(entry.shots[0].file);
+    a.target = '_blank';
+    a.rel = 'noopener';
+    a.title = n + ' screenshot' + (n > 1 ? 's' : '') + ' — click to preview';
+    a.innerHTML = CAMERA + (n > 1 ? '<span class="count">' + n + '</span>' : '');
+    a.addEventListener('click', function (e) {
+      if (e.metaKey || e.ctrlKey) return;      /* ⌘-click: let the browser open the file */
+      e.preventDefault();
+      e.stopPropagation();
+      if (openKey === key) close(); else open(key, a, node);
+    });
+    node.appendChild(a);
+  });
+
+  /* ---------- popover ---------- */
+  function render(key) {
+    var entry = SHOTS[key];
+    var n = entry.shots.length;
+    var html = '<div class="caret"></div>' +
+      '<div class="head">' +
+        '<span class="path">' + entry.path + '</span>' +
+        '<span class="meta">' + n + ' screenshot' + (n > 1 ? 's' : '') + ' · click to zoom</span>' +
+        '<button class="close" type="button" aria-label="Close">×</button>' +
+      '</div>' +
+      '<div class="shots">';
+    entry.shots.forEach(function (s, i) {
+      html += '<figure>' +
+        '<img src="' + src(s.file) + '" alt="' + esc(s.caption) + '" data-i="' + i + '" decoding="async">' +
+        '<figcaption>' + (n > 1 ? '<b>' + (i + 1) + '/' + n + '</b> · ' : '') + esc(s.caption) + '</figcaption>' +
+      '</figure>';
+    });
+    html += '</div>';
+    pop.innerHTML = html;
+    pop.setAttribute('data-count', n);
+    pop.querySelector('.close').addEventListener('click', close);
+    Array.prototype.forEach.call(pop.querySelectorAll('img'), function (img) {
+      img.addEventListener('click', function () {
+        var s = entry.shots[+img.getAttribute('data-i')];
+        openLightbox(src(s.file), entry.path.replace(/<[^>]+>/g, '') + ' · ' + s.caption);
+      });
+    });
+  }
+
+  function position(node) {
+    var r = node.getBoundingClientRect();
+    var sx = window.pageXOffset, sy = window.pageYOffset;
+    var vw = document.documentElement.clientWidth;
+    var pw = pop.offsetWidth;
+    var left = r.left + sx;
+    var maxLeft = sx + vw - pw - 16;
+    if (left > maxLeft) left = Math.max(sx + 16, maxLeft);
+    var top = r.bottom + sy + 12;
+    pop.style.left = left + 'px';
+    pop.style.top = top + 'px';
+    var caret = pop.querySelector('.caret');
+    var caretLeft = Math.min(Math.max(r.left + sx + 22 - left, 14), pw - 30);
+    caret.style.left = caretLeft + 'px';
+  }
+
+  function open(key, link, node) {
+    if (openLink) openLink.classList.remove('is-open');
+    openKey = key; openLink = link; openNode = node;
+    render(key);
+    pop.classList.add('is-open');
+    link.classList.add('is-open');
+    position(node);
+  }
+
+  function close() {
+    if (!openKey) return;
+    pop.classList.remove('is-open');
+    if (openLink) openLink.classList.remove('is-open');
+    openKey = null; openLink = null; openNode = null;
+  }
+
+  /* ---------- lightbox ---------- */
+  function openLightbox(url, caption) {
+    lb.innerHTML = '<img src="' + url + '" alt="' + esc(caption) + '"><div class="cap">' + esc(caption) + '</div>';
+    lb.classList.add('is-open');
+  }
+  function closeLightbox() {
+    lb.classList.remove('is-open');
+    lb.innerHTML = '';
+  }
+  lb.addEventListener('click', function (e) { e.stopPropagation(); closeLightbox(); });
+
+  /* ---------- dismiss ---------- */
+  document.addEventListener('click', function (e) {
+    if (openKey && !pop.contains(e.target) && !lb.contains(e.target)) close();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    if (lb.classList.contains('is-open')) closeLightbox(); else close();
+  });
+  window.addEventListener('resize', function () { if (openNode) position(openNode); });
+})();
+</script>
+
+
+</div>

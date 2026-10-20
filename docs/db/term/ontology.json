@@ -1,0 +1,19 @@
+{
+  "id": "term/ontology",
+  "kind": "term",
+  "title": "ontology",
+  "status": "converted",
+  "subjects": [
+    "orchestrator"
+  ],
+  "tags": [
+    "orchestrator"
+  ],
+  "paths": [
+    "apps/orchestrator"
+  ],
+  "term": {
+    "def": "The versioned trees of capabilities and tools. A worker is labelled for one version and can be relabelled when the ontology improves.",
+    "aliases": []
+  }
+}

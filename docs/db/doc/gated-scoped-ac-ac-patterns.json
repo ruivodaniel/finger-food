@@ -1,0 +1,234 @@
+{
+  "id": "doc/gated-scoped-ac-ac-patterns",
+  "kind": "doc",
+  "title": "AC Patterns",
+  "status": "converted",
+  "subject": "gated-scoped-ac",
+  "tags": [
+    "gated-scoped-ac",
+    "consumer"
+  ],
+  "paths": [
+    "shared/libs/gated-scoped-ac"
+  ],
+  "summary": "**What.** The patterns a service or repository uses to call the engine for each CRUD operation. One pattern per (operation × execution target).",
+  "docId": "gated-scoped-ac-ac-patterns",
+  "doc": {
+    "axioms": [],
+    "purpose": {},
+    "reference": [
+      {
+        "topic": "Axioms",
+        "claims": [
+          {
+            "text": "Every storage operation is authorized through the engine."
+          },
+          {
+            "text": "Authorization narrows reachable rows and accessible fields."
+          },
+          {
+            "text": "Reads narrow at the repository; writes gate at the service."
+          },
+          {
+            "text": "A write against a specific row passes that row's identity through the engine's filter — by submission (create) or by repository confirmation (update, delete)."
+          },
+          {
+            "text": "Every authorization decision is observable."
+          }
+        ]
+      },
+      {
+        "topic": "Purpose",
+        "claims": [
+          {
+            "text": "**Why.** Without a fixed pattern per operation, every developer rediscovers when to call which `resolve*` method, where to gate, and what to log. Drift produces silent over- or under-permission."
+          },
+          {
+            "text": "**How.** Reads narrow the result set inside the repository; writes gate before executing inside the service. Each operation has between one and two gates depending on whether the row's full identity is known up-front."
+          },
+          {
+            "text": "**Why this way.** Reads need narrowing, not a yes/no — narrowing is the result. Writes need a yes/no, not narrowing — and that yes/no must include any field of the target row the rules reference. The two-gate pattern for update/delete is the only way to answer \"can this user touch *this* row\" when the rule conditions on fields the caller didn't submit."
+          }
+        ],
+        "statement": "**What.** The patterns a service or repository uses to call the engine for each CRUD operation. One pattern per (operation × execution target)."
+      },
+      {
+        "topic": "Reference › CRUD permutation matrix",
+        "claims": [],
+        "imagesAndDiagrams": [
+          {
+            "type": "ascii",
+            "value": "| Operation | Execution target | Gates | Where they live | Engine call |\n|---|---|---|---|---|\n| **Create** | Repository (internal) | 1 | Service | `engine.resolveCreate(roles, entity, subjects, properties)` |\n| **Create** | External provider | 1 | Service | `engine.resolveCreate(...)` |\n| **Read** | Repository (internal) | 1 | Repository | `engine.resolveRead(roles, entity, subjects)` |\n| **Update** | Repository (internal) | 2 | Service (gate 1+2 collapsed) | `repo.findByIdForAllow(id, accessContext)` → boolean |\n| **Update** | External provider | 2 | Service (gate 1+2 collapsed) | `repo.findByIdForAllow(id, accessContext)` → boolean |\n| **Delete** (id only) | Repository / external | 2 | Service | `repo.findByIdForAllow(id, accessContext)` → boolean |\n| **Delete** (row in hand) | Repository / external | 1 | Service | `engine.resolveDelete(roles, entity, subjects, rowProperties)` |"
+          }
+        ],
+        "statement": "There is no `Read / external provider` row: external providers are write-only in this architecture; reads always end at the repository."
+      },
+      {
+        "topic": "Reference › Pattern: Create",
+        "claims": [
+          {
+            "text": "`candidateProperties` come from the validated request body. Untrusted ids inside those properties remain a vulnerability surface — same as any input, validate before passing."
+          }
+        ],
+        "statement": "**Why one gate.** The candidate row's properties are what the caller is about to write. Authorization is a pure function of `(effectiveRoles, subjects, properties)` — no DB lookup needed.",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "// service\nconst verdict = engine.resolveCreate(\n  accessContext.effectiveRoles,\n  \"<entity>\",\n  accessContext.subjects,\n  candidateProperties,\n);\naudit.info({ entity, action: \"create\", decision: verdict.allow ? \"allowed\" : \"denied\", effectiveRoles, properties }, \"access decision\");\nif (!verdict.allow) throw forbidden();\n\n// internal:        await repo.create(candidateProperties);\n// external:        await externalProvider.create(candidateProperties);",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Reference › Pattern: Read",
+        "claims": [
+          {
+            "text": "`where` may be `undefined` (allow all rows). When no role grants read, `where` evaluates to `1 = 0` and `select` is empty — the query returns zero rows naturally without special-casing."
+          },
+          {
+            "text": "The service layer for reads is a thin pass-through. No service-side switch is needed."
+          }
+        ],
+        "statement": "**Why one gate, and why at the repo.** The engine's `where` / `joins` / `select` IS the result narrowing — it must be applied at the SQL boundary, not at the service.",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "// repository\nconst { where, joins, select } = engine.resolveRead(\n  accessContext.effectiveRoles,\n  \"<entity>\",\n  accessContext.subjects,\n);\n\nlet q = db.select(select).from(<table>);\nfor (const j of joins) q = q.leftJoin(j.table, j.on);\nreturn q.where(and(<other-conditions>, where));",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Reference › Pattern: Update",
+        "claims": [
+          {
+            "text": "`findByIdForAllow` is the canonical name and the canonical contract: \"does the engine's update filter, applied to the user's effective roles, include this id?\" It returns `boolean`. It does **not** mutate. It does **not** return the row contents. Returning `boolean` keeps gate 2 unable to leak data when gate 1 has already approved the role."
+          }
+        ],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "GATE 1 (service)     role check: is any rule potentially applicable?\n   ↓ if allow\nfindByIdForAllow      repo lookup: is THIS row inside the engine's WHERE for update?\n   ↓ if returns true\nGATE 2 (service)      execute the update via repo OR external provider"
+              }
+            ]
+          },
+          {
+            "snippets": [
+              {
+                "code": "// service\nconst allowed = await repo.findByIdForAllow(payload.id, accessContext);\naudit.info({ entity, action: \"update\", decision: allowed ? \"allowed\" : \"denied\", targetIds: [payload.id], effectiveRoles }, \"access decision\");\nif (!allowed) throw forbidden();\n\n// internal:        return repo.update(payload.id, payload.data);\n// external:        return externalProvider.update(payload.id, payload.data);",
+                "caption": "ts"
+              }
+            ]
+          },
+          {
+            "snippets": [
+              {
+                "code": "// repository\nasync findByIdForAllow(id, accessContext): Promise<boolean> {\n  const { where, joins } = engine.resolveUpdate(\n    accessContext.effectiveRoles,\n    \"<entity>\",\n    accessContext.subjects,\n  );\n  let q = db.select({ id: <table>.id }).from(<table>);\n  for (const j of joins) q = q.leftJoin(j.table, j.on);\n  const rows = await q.where(and(eq(<table>.id, id), where));\n  return rows.length > 0;\n}",
+                "caption": "ts"
+              }
+            ]
+          }
+        ],
+        "statement": "**Why two gates.** Update rules typically reference fields the caller does not have at hand — e.g. `entity.workspaceId:$session.activeWorkspaceId` requires reading the row's `workspaceId` from storage. The decision cannot come from the request body alone."
+      },
+      {
+        "topic": "Reference › Pattern: Delete",
+        "claims": [
+          {
+            "text": "**Variant A — caller has only the id.** Identical to update."
+          },
+          {
+            "text": "**Variant B — caller has the row already (or a reliable identifier subset).** If the row is already loaded for unrelated reasons, pass its properties to `resolveDelete` directly."
+          },
+          {
+            "text": "**When to choose each:** Variant A is the default. Variant B is an optimization when the row is already in hand. **Do not** fetch the row solely to use Variant B — if you must call the DB anyway, use Variant A and keep gate 2 explicit."
+          }
+        ],
+        "statement": "Two flavors, chosen by what the caller already has.",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "// service\nconst allowed = await repo.findByIdForAllow(id, accessContext);\naudit.info({ entity, action: \"delete\", decision: allowed ? \"allowed\" : \"denied\", targetIds: [id], effectiveRoles }, \"access decision\");\nif (!allowed) throw forbidden();\n\n// internal:    return repo.delete(id);\n// external:    return externalProvider.delete(id);",
+                "caption": "ts"
+              }
+            ]
+          },
+          {
+            "snippets": [
+              {
+                "code": "const target = await repo.findByUserAndOrg(...);  // already fetched for business reasons\nif (!target) throw notFound();\n\nconst verdict = engine.resolveDelete(\n  accessContext.effectiveRoles,\n  \"<entity>\",\n  accessContext.subjects,\n  { organizationId: target.organizationId, ...other identifying fields },\n);\nif (!verdict.allow) throw forbidden();\n\n// internal:    return repo.delete(target.id);\n// external:    return externalProvider.delete(target.id);",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Reference › Audit logging",
+        "claims": [
+          {
+            "text": "Logs go to the **audit channel** (typically `logger.child({ channel: \"audit\" })`), not the diagnostic logger. Audit logs may be retained for compliance; diagnostic logs may not."
+          },
+          {
+            "text": "Reads typically do not log per-row; they may log aggregate access events at the route boundary."
+          }
+        ],
+        "statement": "Every gate that produces a decision must be logged before the throw:",
+        "imagesAndDiagrams": [
+          {
+            "type": "ascii",
+            "value": "| Field | Required | Purpose |\n|---|---|---|\n| `userId` | yes | Who asked |\n| `activeOrgId` (or equivalent tenant key) | yes | Where they asked |\n| `entity` | yes | What kind of thing |\n| `action` | yes | `read` / `create` / `update` / `delete` |\n| `decision` | yes | `\"allowed\"` or `\"denied\"` |\n| `effectiveRoles` | yes | What roles produced the decision |\n| `targetIds` | for update / delete | The row id |\n| `properties` | for create only | The candidate row's properties (validate before logging — never log secrets) |"
+          }
+        ]
+      },
+      {
+        "topic": "Reference › Field-level write gating — known gap",
+        "claims": [],
+        "statement": "Today the engine evaluates target scopes against `properties` for writes but does not narrow the *writable column set* against the role's `fields` allowlist. Until that is implemented, treat field-level write authorization as a **TODO at the service layer** — between the verdict and the executor — using the same `fields` array the role declares. Document such checks inline so they migrate cleanly when the engine surfaces this natively."
+      },
+      {
+        "topic": "Reference › Forbidden patterns",
+        "claims": [
+          {
+            "text": "**Repository re-resolves on writes.** Write repos must NOT call `engine.resolveCreate/Update/Delete` themselves. The service makes the verdict; the repo only executes. (Read repos call `engine.resolveRead` because narrowing IS the result.)"
+          },
+          {
+            "text": "**Service skips `findByIdForAllow` and trusts the id from the request body for update/delete.** Gate 2 is mandatory unless variant B applies."
+          },
+          {
+            "text": "**Service trusts client-supplied properties for create.** Validate properties via the same mechanism as any other request input before passing to `resolveCreate`."
+          },
+          {
+            "text": "**Repository returns the row from `findByIdForAllow`.** It returns `boolean` only. The next step's executor fetches the row by id if needed."
+          },
+          {
+            "text": "**Skipping the audit log on a deny.** A deny is the security-relevant event; not logging it loses the trail."
+          },
+          {
+            "text": "**Hand-rolling a role check anywhere in the codebase.** Authorization is the engine's job — re-implementing it bypasses the rules and is the most common source of permission bugs."
+          }
+        ]
+      }
+    ],
+    "review": {
+      "axioms": {
+        "state": "unreviewed"
+      },
+      "purpose": {
+        "state": "unreviewed"
+      },
+      "reference": {
+        "state": "unreviewed"
+      }
+    },
+    "converted": true
+  }
+}

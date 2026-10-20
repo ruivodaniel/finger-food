@@ -1,0 +1,20 @@
+{
+  "id": "term/charge-credits",
+  "kind": "term",
+  "title": "charge credits",
+  "status": "converted",
+  "subjects": [
+    "orchestrator"
+  ],
+  "tags": [
+    "orchestrator"
+  ],
+  "paths": [
+    "apps/orchestrator"
+  ],
+  "term": {
+    "def": "A worker that asks the open API to charge credits. When a pipeline checks credits in the middle of a run it also charges, so parallel runs cannot overspend.",
+    "aliases": [],
+    "proposed": true
+  }
+}

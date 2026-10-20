@@ -1,0 +1,17 @@
+{
+  "id": "term/open-api",
+  "kind": "term",
+  "title": "open API",
+  "status": "converted",
+  "subjects": [
+    "open-api"
+  ],
+  "tags": [
+    "open-api"
+  ],
+  "paths": [],
+  "term": {
+    "def": "A second API instance, separate from the main API, that shares only the database connection string with it. Only the orchestrator reaches it.",
+    "aliases": []
+  }
+}

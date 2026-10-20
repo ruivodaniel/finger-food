@@ -1,0 +1,32 @@
+{
+  "name": "@libs/realtime",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Transport-agnostic real-time push engine. One connection per user, channel-based event distribution.",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./api": "./src/api/index.ts",
+    "./web": "./src/web/index.ts"
+  },
+  "keywords": [
+    "realtime",
+    "sse",
+    "server-sent-events",
+    "push",
+    "streaming"
+  ],
+  "peerDependencies": {
+    "hono": ">=4.0.0",
+    "react": ">=18.0.0"
+  },
+  "peerDependenciesMeta": {
+    "hono": { "optional": true },
+    "react": { "optional": true }
+  },
+  "devDependencies": {
+    "@types/react": ">=18.0.0",
+    "typescript": "^5.0.0"
+  }
+}

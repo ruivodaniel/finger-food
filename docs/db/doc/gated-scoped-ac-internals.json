@@ -1,0 +1,270 @@
+{
+  "id": "doc/gated-scoped-ac-internals",
+  "kind": "doc",
+  "title": "Internals",
+  "status": "converted",
+  "subject": "gated-scoped-ac",
+  "tags": [
+    "gated-scoped-ac",
+    "contributor"
+  ],
+  "paths": [
+    "shared/libs/gated-scoped-ac"
+  ],
+  "summary": "**What.** The internal evaluation algorithm: how the resolver turns rules + bag into a `ScopeFilter`, how the Drizzle builder compiles a `ScopeFilter` into `…",
+  "docId": "gated-scoped-ac-internals",
+  "doc": {
+    "axioms": [],
+    "purpose": {},
+    "reference": [
+      {
+        "topic": "Axioms",
+        "claims": [
+          {
+            "text": "The engine exposes four CRUD methods and one expansion call: `expandRoles`, `resolveRead`, `resolveUpdate`, `resolveCreate`, `resolveDelete`."
+          },
+          {
+            "text": "Reads and updates internally build a `ScopeFilter` and compile it to `ResolvedScope` before returning. Creates and deletes evaluate against `properties` and return `ScopeVerdict`. Both compile and properties evaluation are internal."
+          },
+          {
+            "text": "For each effective role whose context preconditions match the bag, the rule's target scope contributes to the decision."
+          },
+          {
+            "text": "Contributions combine permissively. `OR` across rules and across roles for read/update; allow-if-any for create/delete; `fields` allowlists combine by union with `undefined` (broadest) shadowing."
+          },
+          {
+            "text": "The `ScopeFilter` is a discriminated union; every variant is total, with no implicit defaults. The Drizzle builder must handle every variant via `assertNever` exhaustiveness."
+          }
+        ]
+      },
+      {
+        "topic": "Purpose",
+        "claims": [
+          {
+            "text": "**Why.** The engine's external surface returns `ResolvedScope` and `ScopeVerdict`. Contributors need to know what's underneath: the union of variants, the combination semantics, the compile rules. Without this, changes to one layer break the other."
+          },
+          {
+            "text": "**How.** The resolver evaluates each applicable rule into a `ScopeFilter` and combines them. For read/update, the combined filter is then handed to the Drizzle builder, which switch-dispatches on the union variant and emits SQL. For create/delete, no compile happens — target scopes are matched against `properties` directly."
+          },
+          {
+            "text": "**Why this way.** Splitting evaluation from compile keeps the resolver storage-agnostic and unit-testable in isolation (a passthrough compile reduces resolver tests to pure-data assertions). The discriminated-union output is what makes the boundary contractual: every variant is named, every variant is total, every adapter must handle them all."
+          }
+        ],
+        "statement": "**What.** The internal evaluation algorithm: how the resolver turns rules + bag into a `ScopeFilter`, how the Drizzle builder compiles a `ScopeFilter` into `{ where, select, joins }`, and how the two compose into the engine's public methods."
+      },
+      {
+        "topic": "Reference › Public engine methods",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "expandRoles(assignedRoles, hierarchy): string[]\n\nresolveRead   (effective, entity, subjects):              ResolvedScope\nresolveUpdate (effective, entity, subjects):              ResolvedScope\nresolveCreate (effective, entity, subjects, properties):  ScopeVerdict\nresolveDelete (effective, entity, subjects, properties):  ScopeVerdict\n\nexplainScopeResolution(scopedRole, roles, ctx): ScopeExplanation",
+                "caption": "ts"
+              }
+            ]
+          }
+        ],
+        "statement": "`expandRoles` is a pure function over assigned roles + hierarchy (no bag, no compile). Cacheable per session. The four CRUD methods take the bag explicitly and produce one decision each."
+      },
+      {
+        "topic": "Reference › Evaluation algorithm",
+        "claims": [
+          {
+            "text": "Filter the role definitions to those whose `entity` matches and whose `actions` includes the requested operation."
+          },
+          {
+            "text": "For each remaining role, for each rule:"
+          },
+          {
+            "text": "— Evaluate every `context` scope against the bag. The role contributes only if all `context` scopes match. (Empty `context` always matches.)"
+          },
+          {
+            "text": "— For each `target` scope, resolve the RHS:"
+          },
+          {
+            "text": "— — Literal → literal value."
+          },
+          {
+            "text": "— — `$subject.path` → walk the bag; if absent, the rule contributes nothing."
+          },
+          {
+            "text": "— Emit a `ScopeFilter` (read/update) or check the property match (create/delete)."
+          },
+          {
+            "text": "Combine all per-rule contributions into one decision."
+          },
+          {
+            "text": "Order of evaluation is irrelevant — rules are declarative, the combinators are order-independent."
+          }
+        ],
+        "statement": "For any `resolve*` call:"
+      },
+      {
+        "topic": "Reference › Combination semantics",
+        "claims": [],
+        "imagesAndDiagrams": [
+          {
+            "type": "ascii",
+            "value": "| Output | Combination |\n|---|---|\n| Filter (read/update) | `OR` across rules, `OR` across roles. AND across target scopes within a single rule. |\n| Verdict (create/delete) | Allow if any rule's context matches AND all its target scopes match `properties`. Deny otherwise. |\n| `fields` allowlist | Set union; `undefined` (full access) wins over any explicit list. |"
+          }
+        ],
+        "statement": "If no role contributes (none match, or none have the operation in `actions`), the filter is `{ type: \"none\" }` for reads/updates and `{ allow: false, reason }` for creates/deletes."
+      },
+      {
+        "topic": "Reference › `ScopeFilter` shape (internal)",
+        "claims": [
+          {
+            "text": "**Rows** — `type` and its payload describe which rows are reachable."
+          },
+          {
+            "text": "**Columns** — `fields` is the allowlist, present on every variant except `none`."
+          },
+          {
+            "text": "The `traversal` variant is what the DSL `→` operator compiles into. Each hop becomes one `LEFT JOIN` at SQL emit; the `finalCondition` is itself a `ScopeFilter` applied to the last hop's entity. **Outer rows survive the join** — a missing related row does not silently exclude the candidate from negation-style filters applied to the outer entity."
+          }
+        ],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "type ScopeFilter =\n  | { type: \"all\";         fields?: string[] }                                          // no row restriction\n  | { type: \"none\";        fields?: never }                                             // no access\n  | { type: \"self\";        id: string;                            fields?: string[] }   // single row by id\n  | { type: \"notSelf\";     id: string;                            fields?: string[] }   // exclude single row\n  | { type: \"children\";    parentId: string;                      fields?: string[] }   // rows by parent\n  | { type: \"notChildren\"; parentId: string;                      fields?: string[] }   // exclude by parent\n  | { type: \"meta\";        field: string; values: string[];\n                           negate?: boolean;                      fields?: string[] }   // app-owned metadata JSON path\n  | { type: \"field\";       entity: string; field: string;\n                           value: string | string[];\n                           negate?: boolean;                      fields?: string[] }   // generic field match\n  | { type: \"composite\";   filters: ScopeFilter[];\n                           logic: \"and\" | \"or\";                   fields?: string[] }   // combine filters (logic required)\n  | { type: \"traversal\";\n      hops: Array<{ fromEntity: string; fkField: string; toEntity: string }>;\n      finalCondition: ScopeFilter;\n                                                                  fields?: string[] }; // FK chain + condition on last entity",
+                "caption": "ts"
+              }
+            ]
+          }
+        ],
+        "statement": "Two axes are encoded:"
+      },
+      {
+        "topic": "Reference › DSL → ScopeFilter mapping",
+        "claims": [
+          {
+            "text": "`entity.id:rhs` (single segment, field is \"id\") → `self` / `notSelf`"
+          },
+          {
+            "text": "`entity.parentId:rhs` (single segment, field is \"parentId\") → `children` / `notChildren`"
+          },
+          {
+            "text": "`entity.<metadataCol>.<key>:rhs` (multi-segment, first segment matches `schema[entity].metadata`) → `meta`"
+          },
+          {
+            "text": "otherwise (single-segment field path, no special meaning) → `field`"
+          },
+          {
+            "text": "with traversal arrows → `traversal` wrapping the inner filter"
+          },
+          {
+            "text": "`schema[entity].metadata` is what gates the meta variant — without that declaration, multi-segment field paths fail boot validation as `INVALID_FIELD_PATH`."
+          }
+        ],
+        "statement": "The resolver maps parsed scopes to filter variants by inspection:"
+      },
+      {
+        "topic": "Reference › Compile pipeline (Drizzle adapter)",
+        "claims": [
+          {
+            "text": "`compile` switch-dispatches on `filter.type`:"
+          },
+          {
+            "text": "Joins emitted by traversal are returned in `ResolvedScope.joins` as `JoinDescriptor[]`. Consumers apply via `for (const j of joins) q = q.leftJoin(j.table, j.on)`."
+          },
+          {
+            "text": "`buildSelect` returns the column map (full or restricted by the `fields` allowlist)."
+          }
+        ],
+        "statement": "`createScopeFilterBuilder({ schema, sql })` returns:",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "interface ScopeFilterBuilder {\n  compile(entity: string, filter: ScopeFilter): ResolvedScope;\n  buildWhere(entity: string, filter: ScopeFilter): SQL | undefined;\n  buildSelect(entity: string, filter: ScopeFilter): Record<string, unknown>;\n}",
+                "caption": "ts"
+              }
+            ]
+          }
+        ],
+        "imagesAndDiagrams": [
+          {
+            "type": "ascii",
+            "value": "| Variant | Where | Notes |\n|---|---|---|\n| `all` | `undefined` | no restriction |\n| `none` | `1 = 0` | empty select |\n| `self` / `notSelf` | `id = ?` / `id <> ?` | uses normalized id column |\n| `children` / `notChildren` | `parentId = ?` / `parentId <> ?` | requires `parentId` column on entity |\n| `field` | `<col> = ?` (or `IN (...)` for array, with optional negation) | column lookup via schema |\n| `meta` | `(metadata)::jsonb->>'<field>' = ?` | requires `metadata` column on the entity schema |\n| `composite` | recursive AND/OR combination | `logic` is required, no fallback |\n| `traversal` | `LEFT JOIN`s + recursive compile of `finalCondition` against last hop's entity | hops dedup by `(from.fk → to)` |"
+          }
+        ]
+      },
+      {
+        "topic": "Reference › Properties matching (create/delete)",
+        "claims": [
+          {
+            "text": "Context scopes evaluated against bag (same as read/update)."
+          },
+          {
+            "text": "Each target scope's LHS field path is walked into `properties`. If absent, the rule denies."
+          },
+          {
+            "text": "RHS resolved (literal or `$subject.path` via bag), compared to the property value."
+          },
+          {
+            "text": "Operator (`eq` / `ne`) applied. Missing values never satisfy any operator."
+          },
+          {
+            "text": "Allow if any rule's context matches AND all its target scopes match `properties`."
+          },
+          {
+            "text": "Traversal targets on create/delete: only the `finalCondition`'s field path is walked into `properties` (hops are ignored — there's no joined data on a single-row decision). If the candidate row doesn't surface that field, the rule denies. The boot validator emits an `INERT_TRAVERSAL_TARGET` warning for any role whose `actions` include `create` or `delete` and which uses a traversal target."
+          }
+        ],
+        "statement": "For create/delete, no `ScopeFilter` is emitted. Instead, the resolver walks each rule:"
+      },
+      {
+        "topic": "Reference › Exhaustiveness contract",
+        "claims": [
+          {
+            "text": "An unhandled variant defaulting to \"no restriction\" is a critical security bug. The Drizzle builder uses an exhaustive switch and a `customHandler` extension point for forward-compatibility with consumer-defined variants."
+          }
+        ],
+        "statement": "Every adapter that consumes `ScopeFilter` must handle every variant. Use `assertNever(filter)` in the default branch:",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "function buildWhere(filter: ScopeFilter): SQL {\n  switch (filter.type) {\n    case \"all\":         return sql`TRUE`;\n    case \"none\":        return sql`FALSE`;\n    case \"self\":        return eq(table.id, filter.id);\n    // … handle every variant\n    default:            return assertNever(filter);   // compile-time error if any variant is missed\n  }\n}",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Reference › Field interpolation safety",
+        "claims": [
+          {
+            "text": "Drizzle's parameterization handles values automatically — the residual risk is identifier injection (column / JSON-path names), which the library cannot prevent without knowing the consumer's schema policy."
+          }
+        ],
+        "statement": "The `field` and `meta` variants carry consumer-routable strings (`field.field`, `meta.field`). The library does not sanitize them. Adapters that interpolate these into raw SQL (the meta variant uses raw `->>` against an identifier name) must validate against an allowlist:",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "const ALLOWED_META_FIELDS = [\"type\", \"parentId\", \"status\"];\n\ncase \"meta\":\n  if (!ALLOWED_META_FIELDS.includes(filter.field)) {\n    throw new Error(`unsanctioned meta field: ${filter.field}`);\n  }\n  // safe to interpolate",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "review": {
+      "axioms": {
+        "state": "unreviewed"
+      },
+      "purpose": {
+        "state": "unreviewed"
+      },
+      "reference": {
+        "state": "unreviewed"
+      }
+    },
+    "converted": true
+  }
+}

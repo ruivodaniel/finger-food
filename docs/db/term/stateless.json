@@ -1,0 +1,19 @@
+{
+  "id": "term/stateless",
+  "kind": "term",
+  "title": "stateless",
+  "status": "converted",
+  "subjects": [
+    "orchestrator"
+  ],
+  "tags": [
+    "orchestrator"
+  ],
+  "paths": [
+    "apps/orchestrator"
+  ],
+  "term": {
+    "def": "The orchestrator holds no data and reads no database; it asks the open API for what it needs.",
+    "aliases": []
+  }
+}

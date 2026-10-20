@@ -1,0 +1,213 @@
+{
+  "id": "doc/list-query-architecture",
+  "kind": "doc",
+  "title": "Architecture",
+  "status": "converted",
+  "subject": "list-query",
+  "tags": [
+    "list-query",
+    "contributor"
+  ],
+  "paths": [
+    "shared/libs/list-query"
+  ],
+  "summary": "Design decisions for `@prowd/list-query`. Read this before changing the public surface.",
+  "docId": "list-query-architecture",
+  "doc": {
+    "axioms": [],
+    "purpose": {
+      "intro": "Design decisions for `@prowd/list-query`. Read this before changing the public surface."
+    },
+    "reference": [
+      {
+        "topic": "Scope",
+        "claims": [
+          {
+            "text": "Types shared BE ↔ FE"
+          },
+          {
+            "text": "Sort-string grammar + parser"
+          },
+          {
+            "text": "Zod schema factory (BE)"
+          },
+          {
+            "text": "Drizzle orderBy + pagination helpers (BE)"
+          },
+          {
+            "text": "URLSearchParams serializer (FE)"
+          },
+          {
+            "text": "It does **not** own:"
+          },
+          {
+            "text": "HTTP error rendering (the app's existing zod → 400 path handles it)"
+          },
+          {
+            "text": "Caching or query-key helpers for TanStack Query"
+          },
+          {
+            "text": "Cursor pagination"
+          },
+          {
+            "text": "SQL-level `NULLS FIRST/LAST` customisation (we use PostgreSQL defaults)"
+          },
+          {
+            "text": "Translation of filter objects beyond the pagination/sort/search triplet plus flat key-value extras"
+          }
+        ],
+        "statement": "The lib owns the mechanism of the pagination + sort + search contract end-to-end:"
+      },
+      {
+        "topic": "Dependency direction",
+        "claims": [
+          {
+            "text": "**The config imports lib types only.** Per the architecture rule (*configs → module public types, and lib types only when not module-mediated*). Pagination defaults are not module-mediated — the module doesn't wrap the lib."
+          },
+          {
+            "text": "**Module validators** import from both and pass defaults explicitly. This keeps the factory pure (no ambient config lookup) and makes the defaults visible at every call site."
+          }
+        ],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "consumer validators (configs/<module>/api/*.api.ts)\n        │\n        ├──→ @configs/list-query           (product defaults)\n        │         │\n        │         └──→ @prowd/list-query   (lib types)\n        │\n        └──→ @prowd/list-query             (createListQuerySchema, types)\n\nconsumer repositories ──→ @prowd/list-query/server  (drizzle helpers)\nconsumer FE adapter   ──→ @prowd/list-query/client  (URL serializer)"
+              }
+            ]
+          }
+        ],
+        "statement": "**The lib never imports from configs, modules, or apps.** It ships baseline constants so it's standalone and fully unit-testable in isolation. The config is thin — it re-exports those baselines as the product-tunable values and adds nothing else today."
+      },
+      {
+        "topic": "Three-tier default fallback",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "LIST_QUERY_BASELINE (lib)\n    → LIST_QUERY_DEFAULTS (product config, typical)\n         → per-call-site override (rare, justified)"
+              }
+            ]
+          }
+        ],
+        "statement": "Call sites normally pass `LIST_QUERY_DEFAULTS`. Overriding on a specific endpoint is permitted when there's a genuine reason (e.g. a heavy join page where 25 rows is too many) but should come with a comment explaining why."
+      },
+      {
+        "topic": "Two entry points, not three",
+        "claims": [
+          {
+            "text": "`.`        — isomorphic (types, sort parser, constants)"
+          },
+          {
+            "text": "`./server` — BE only (zod factory, Drizzle helpers)"
+          },
+          {
+            "text": "`./client` — FE only (URL serializer)"
+          },
+          {
+            "text": "Finer splits (`./zod`, `./drizzle`) were considered and rejected. A BE file already knows it can use both zod and drizzle; pushing users to import from `/zod` and `/drizzle` separately adds ceremony without catching any realistic mistake. `/server` + `/client` is the coarsest split that still prevents the one mistake worth preventing: a FE bundle accidentally pulling in drizzle."
+          }
+        ],
+        "statement": "Splits:"
+      },
+      {
+        "topic": "No envelope executor",
+        "claims": [
+          {
+            "text": "The helper can't actually enforce the invariant — the two queries are built separately and the helper only receives the result of each builder chain. It would be enforcement theatre."
+          },
+          {
+            "text": "The 2-line `Promise.all([listQ, countQ])` is not worth wrapping."
+          },
+          {
+            "text": "The code-review rule (\"one named `whereExpr` variable, passed to both queries\") is more visible in the diff than a helper that hides the shape."
+          },
+          {
+            "text": "The primitive helpers (`buildOrderBy`, `applyPagination`) plus disciplined review are cleaner than an executor pretending to guarantee something it can't."
+          }
+        ],
+        "statement": "An early design considered `executeListQuery({ db, list, count })` that would take two query builders and enforce \"same where\" at the type level. We dropped it:"
+      },
+      {
+        "topic": "Sort grammar choice",
+        "claims": [
+          {
+            "text": "Rejected alternatives:"
+          },
+          {
+            "text": "`sort=type:asc,name:desc` — more verbose, no real advantage"
+          },
+          {
+            "text": "`sort[]=type&sort[]=-name` — spec says a single `sort` field, not array params"
+          },
+          {
+            "text": "JSON in query string — hideous in URLs, hostile to URL-building tools"
+          },
+          {
+            "text": "The `-` prefix is conventional (GitHub, Stripe, many REST APIs) and the resulting strings are compact and easy to read."
+          }
+        ],
+        "statement": "Comma-separated, `-` prefix for descending:",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "sort=type,-name,createdAt"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Tiebreaker behaviour",
+        "claims": [
+          {
+            "text": "Ties on a secondary column still exist beyond the tiebreaker, but they're impossible to observe if the tiebreaker is a primary key. Total ordering is guaranteed."
+          }
+        ],
+        "statement": "The tiebreaker is auto-appended by `buildOrderBy` so call sites can't forget it. When a caller's declared sort already includes the tiebreaker column (by column reference identity), we honour their declared direction and don't duplicate the column in the ORDER BY. This matters for endpoints like \"sort by id desc to show newest first\" — the caller explicitly wants desc and should get it."
+      },
+      {
+        "topic": "Null ordering",
+        "claims": [
+          {
+            "text": "It matches PostgreSQL's built-in behaviour"
+          },
+          {
+            "text": "Overriding would force every call site to think about it"
+          },
+          {
+            "text": "The contract promises \"PostgreSQL defaults\" — explicit, documented, predictable"
+          },
+          {
+            "text": "If a future endpoint needs different null ordering, add it to `buildOrderBy` as an option at that time. Not before."
+          }
+        ],
+        "statement": "PostgreSQL defaults: nulls last on ASC, nulls first on DESC. We don't emit `NULLS FIRST/LAST` because:"
+      },
+      {
+        "topic": "Why co-located tests",
+        "claims": [],
+        "statement": "Matches `availability-check`'s style. Architecture §12 permits either co-located `*.test.ts` or a `__test__/` folder; co-located makes atomic refactors (moving a helper + its test in one diff) straightforward and keeps the test physically next to the code it covers. `scoped-ac` uses `__test__/` for historical reasons and a different module structure; neither is wrong."
+      },
+      {
+        "topic": "Why a thin config package",
+        "claims": [],
+        "statement": "`configs/libs/list-query/` today exports only `LIST_QUERY_DEFAULTS`. It's not overbuilt because pagination defaults are the only product tunable. If future pagination policy ever needs more (e.g. per-endpoint override maps, per-product maximum), it lives in this same folder — the structure is already there."
+      }
+    ],
+    "review": {
+      "axioms": {
+        "state": "unreviewed"
+      },
+      "purpose": {
+        "state": "unreviewed"
+      },
+      "reference": {
+        "state": "unreviewed"
+      }
+    },
+    "converted": true
+  }
+}

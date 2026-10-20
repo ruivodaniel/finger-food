@@ -1,0 +1,17 @@
+{
+  "id": "term/contributor",
+  "kind": "term",
+  "title": "contributor",
+  "status": "converted",
+  "subjects": [
+    "docs"
+  ],
+  "tags": [
+    "docs"
+  ],
+  "paths": [],
+  "term": {
+    "def": "The docs of a reusable domain about how to change it.",
+    "aliases": []
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "term/library",
+  "kind": "term",
+  "title": "library",
+  "status": "approved",
+  "subjects": [
+    "main"
+  ],
+  "tags": [
+    "architecture"
+  ],
+  "paths": [],
+  "term": {
+    "def": "A low-level reusable engine in `shared/libs/<name>/`. Zero product knowledge, imports node modules only.",
+    "aliases": [],
+    "proposed": true
+  }
+}

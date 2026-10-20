@@ -1,0 +1,102 @@
+{
+  "id": "doc/ui-mobile-components",
+  "kind": "doc",
+  "title": "`@libs/mobile-components`",
+  "status": "converted",
+  "subject": "ui",
+  "tags": [
+    "ui"
+  ],
+  "paths": [
+    "shared/libs/ui"
+  ],
+  "summary": "The mobile UI library: React Native components on the same contract as `@libs/web-components`. The rationale is in `DESIGN.md` (`./DESIGN.md`).",
+  "docId": "ui-mobile-components",
+  "doc": {
+    "axioms": [],
+    "purpose": {
+      "intro": "The mobile UI library: React Native components on the same contract as `@libs/web-components`. The rationale is in `DESIGN.md` (`./DESIGN.md`)."
+    },
+    "reference": [
+      {
+        "topic": "The contract",
+        "claims": [
+          {
+            "text": "A mobile component is one element of that table. It has the same name as its web twin and the same axis props: `emphasis`, `status`, `scale`, `state`. Its first line says which element it is and which web component, at which version, it mirrors."
+          },
+          {
+            "text": "The code is not shared. The web component renders HTML and is styled by CSS; this one renders React Native views and reads its style from the native theme."
+          }
+        ],
+        "statement": "One table rules both libraries: `shared/libs/ui/types/elements.ts`. Each row is an element, with its family, the platforms it exists on, and the values it takes on each axis."
+      },
+      {
+        "topic": "Quick start",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "import { ThemeProvider, Button, Card, Badge, Text } from \"@libs/mobile-components\";\nimport { Stack } from \"@libs/mobile-layouts\";\nimport theme from \"<themes>/bounx-mobile/v1/generated/bounx-mobile.native.json\";\n\n<ThemeProvider theme={theme} mode=\"light\">\n  <Card>\n    <Stack dir=\"row\" align=\"center\" justify=\"between\" gap={12}>\n      <Stack gap={4} size=\"fill\">\n        <Badge>Group session</Badge>\n        <Text type=\"heading4\">Junior Squad</Text>\n      </Stack>\n      <Button scale=\"sm\">Start</Button>\n    </Stack>\n  </Card>\n</ThemeProvider>",
+                "caption": "tsx"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Components",
+        "claims": [
+          {
+            "text": "Every interactive component sets its accessibility role and state, and passes the native props of the React Native component it wraps."
+          }
+        ],
+        "imagesAndDiagrams": [
+          {
+            "type": "ascii",
+            "value": "| Component | Element | Web twin |\n|---|---|---|\n| `Button` | `control--button` | Button |\n| `Card`, `CardHeader`, `CardContent`, `CardFooter` | `surface--card`, `--header`, `--content`, `--footer` | Card and its regions |\n| `Badge` | `surface--badge` | Badge |\n| `Avatar` | `surface--avatar` | Avatar |\n| `Input` | `field--input` | Input |\n| `PhoneInput` | `field--phone-input` | PhoneInput |\n| `Field`, `Label` | `surface--label`, `--field-description`, `--field-message` | Label and the field wrappers |\n| `ChoiceGroup` | `control-group--choice-group` with `control--toggle` | the choice group |\n| `Group` | `surface--group` | a titled section |\n| `EmptyState` | `surface--empty-state` | EmptyState |\n| `Icon` | `shape--icon` | Icon, same semantic names, same icon set (Lucide) |\n| `Text` | the typography levels, `type--<level>` | the `type--*` attribute |\n| `Stepper` | a composite of `button-group`, `button`, `button-group-text` | none: mobile's own |"
+          }
+        ],
+        "statement": "`Stack` is in `@libs/mobile-layouts`."
+      },
+      {
+        "topic": "Theme",
+        "claims": [
+          {
+            "text": "`ThemeProvider` takes a native theme (the `<id>.native.json` the mobile theme engine writes) and a colour mode."
+          },
+          {
+            "text": "`useElement(element, axes)` returns the element's style for its axes: `{ view, text, color, icon, extras }`."
+          },
+          {
+            "text": "`usePart(element, part, axes)` does the same for a surface inside an element (a list's row, a switch's thumb)."
+          },
+          {
+            "text": "`useType(level)` and `useColor(name)` read a typography level and a colour."
+          },
+          {
+            "text": "A component never writes a colour, a size or a spacing of its own."
+          }
+        ],
+        "statement": "A component is themed only by reading the theme. There is no cascade in React Native."
+      },
+      {
+        "topic": "States",
+        "claims": [],
+        "statement": "`active` (pressed), `focus`, `selected`, `disabled`, `loading` are shared with the web. `long-pressed` and `swiped` are mobile's. There is no `hover`. A component computes its states from what happens to it and also accepts `state` to force one."
+      }
+    ],
+    "review": {
+      "axioms": {
+        "state": "unreviewed"
+      },
+      "purpose": {
+        "state": "unreviewed"
+      },
+      "reference": {
+        "state": "unreviewed"
+      }
+    },
+    "converted": true
+  }
+}

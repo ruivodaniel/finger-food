@@ -1,0 +1,173 @@
+{
+  "id": "doc/gated-scoped-ac-bag",
+  "kind": "doc",
+  "title": "Scope Context",
+  "status": "converted",
+  "subject": "gated-scoped-ac",
+  "tags": [
+    "gated-scoped-ac",
+    "consumer"
+  ],
+  "paths": [
+    "shared/libs/gated-scoped-ac"
+  ],
+  "summary": "**What.** The runtime input to the engine — a bag carrying the caller's subject data (whatever identifies \"who is asking, in what setting\") and assigned role…",
+  "docId": "gated-scoped-ac-bag",
+  "doc": {
+    "axioms": [],
+    "purpose": {},
+    "reference": [
+      {
+        "topic": "Axioms",
+        "claims": [
+          {
+            "text": "ScopeContext is a bag of subject rows plus the caller's assigned roles — the entire authority surface at evaluation time."
+          },
+          {
+            "text": "The bag's shape is declared by the consumer in `subjects.config.ts`. The library has no built-in shape."
+          },
+          {
+            "text": "The bag is built per request from trusted sources by the consumer. The library does not build it."
+          }
+        ]
+      },
+      {
+        "topic": "Purpose",
+        "claims": [
+          {
+            "text": "**Why.** Authorization depends on the caller's state at the moment of the request, not at config time. Rules reference subject paths (`$session.user.id`, `$session.team.id`); the bag is what those paths resolve against."
+          },
+          {
+            "text": "**How.** The consumer declares the subject names their rules will reference (`subjects.config.ts`). At request time, the consumer populates the bag from trusted sources — DB rows, verified session, whatever is authoritative for that subject — and hands it to the engine."
+          },
+          {
+            "text": "**Why this way.** The library cannot know what \"session\" or \"team\" means in a given product. By making the bag's shape a parameter and leaving population to the consumer, the library stays product-agnostic and the consumer keeps full control over the trust boundary."
+          }
+        ],
+        "statement": "**What.** The runtime input to the engine — a bag carrying the caller's subject data (whatever identifies \"who is asking, in what setting\") and assigned roles, passed in per call."
+      },
+      {
+        "topic": "Reference",
+        "claims": [],
+        "statement": "Examples use the same fictional document-management product as DSL-RULES (`DSL-RULES.md`): workspaces contain folders, folders contain documents, users may belong to teams. None of this vocabulary is built into the library."
+      },
+      {
+        "topic": "Reference › The two halves",
+        "claims": [
+          {
+            "text": "**Subjects** — a bag of named rows describing the caller's identity and state."
+          },
+          {
+            "text": "**Assigned roles** — the scoped role names the caller holds."
+          },
+          {
+            "text": "Both are needed for every evaluation: subjects feed rule references (`$subject.path`), assigned roles select which rules are in scope."
+          }
+        ],
+        "statement": "`ScopeContext` carries two things:",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "type ScopeContext = {\n  subjects: Record<string, Record<string, unknown>>;\n  assignedRoles: string[];\n};",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Reference › Subjects",
+        "claims": [
+          {
+            "text": "Example bag for the documents product:"
+          },
+          {
+            "text": "A rule fragment like `document.workspaceId:$session.workspace.id` resolves against `ctx.subjects.session.workspace.id`. A reference to a subject not present in the bag denies — see SECURITY (`SECURITY.md`)."
+          }
+        ],
+        "statement": "A subject is a top-level key in `subjects`. It groups related state — the session, the request, the tenant, anything the consumer wants rules to be able to reference. Subjects are the contract between rule authors (who write `$subject.path`) and bag builders (who populate the data).",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "const ctx: ScopeContext = {\n  subjects: {\n    session: {\n      user:      { id: \"u-1\", email: \"alice@…\" },\n      workspace: { id: \"w-1\", type: \"team\" },\n      team:      { id: \"t-3\" },\n    },\n  },\n  assignedRoles: [\"workspace_member\", \"document_reader\"],\n};",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Reference › Subjects declaration",
+        "claims": [
+          {
+            "text": "`assertValidConfiguration({ ..., subjects })` validates every `$subject.path` in every rule against this list. Undeclared subject references die at boot with the offending role pinpointed."
+          },
+          {
+            "text": "A product with multiple subject groups (e.g. `session` + `request` + `tenant`) extends the list and adapts its bag-building to populate each."
+          }
+        ],
+        "statement": "The consumer declares the set of allowed subject names at config time:",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "// subjects.config.ts\nexport const subjects = [\"session\"] as const;",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Reference › Assigned roles",
+        "claims": [
+          {
+            "text": "Where the consumer stores roles is a consumer choice — a column, a join table, a JWT claim, a cache. The library only sees the resolved array passed in."
+          },
+          {
+            "text": "Effective roles (assigned ∪ hierarchy-inherited) are computed inside the resolver, not during bag construction. See SCOPE-FILTER (`SCOPE-FILTER.md`)."
+          }
+        ],
+        "statement": "`assignedRoles` is the caller's authorization claim — the list of scoped role names the consumer has determined apply to this request. The library reads from the array and does not look anywhere else for role information."
+      },
+      {
+        "topic": "Reference › Building the bag per request",
+        "claims": [
+          {
+            "text": "\"Trusted source\" means the data is authoritative for that field — typically a database row keyed by an identity the auth provider has already verified. The library treats every value in the bag as truth; the consumer is responsible for not putting client-supplied data there. See SECURITY (`SECURITY.md`)."
+          }
+        ],
+        "statement": "The consumer constructs the bag from trusted sources before each call into the library:",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "const ctx: ScopeContext = {\n  subjects: {\n    session: {\n      user:      await db.user.findById(verifiedSessionUserId),\n      workspace: await db.workspace.findById(verifiedSessionWorkspaceId),\n      team:      await db.team.findById(verifiedSessionTeamId),\n    },\n  },\n  assignedRoles: await rolesFor(verifiedSessionUserId, verifiedSessionWorkspaceId),\n};",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Reference › What the library never does",
+        "claims": [],
+        "statement": "The library does not parse cookies, validate sessions, read databases, or talk to auth providers. The bag is the boundary: everything before it is the consumer's; everything after it is the library's."
+      }
+    ],
+    "review": {
+      "axioms": {
+        "state": "unreviewed"
+      },
+      "purpose": {
+        "state": "unreviewed"
+      },
+      "reference": {
+        "state": "unreviewed"
+      }
+    },
+    "converted": true
+  }
+}

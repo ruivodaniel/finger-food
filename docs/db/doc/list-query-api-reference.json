@@ -1,0 +1,301 @@
+{
+  "id": "doc/list-query-api-reference",
+  "kind": "doc",
+  "title": "API Reference",
+  "status": "converted",
+  "subject": "list-query",
+  "tags": [
+    "list-query",
+    "consumer"
+  ],
+  "paths": [
+    "shared/libs/list-query"
+  ],
+  "summary": "All exported symbols from `@prowd/list-query`, `@prowd/list-query/server`, and `@prowd/list-query/client`.",
+  "docId": "list-query-api-reference",
+  "doc": {
+    "axioms": [],
+    "purpose": {
+      "intro": "All exported symbols from `@prowd/list-query`, `@prowd/list-query/server`, and `@prowd/list-query/client`."
+    },
+    "reference": [
+      {
+        "topic": "`@prowd/list-query` (isomorphic) › `SortDirection`",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "type SortDirection = \"asc\" | \"desc\";",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "`@prowd/list-query` (isomorphic) › `SortSpec`",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "interface SortSpec {\n  field: string;\n  direction: SortDirection;\n}",
+                "caption": "ts"
+              }
+            ]
+          }
+        ],
+        "statement": "One parsed sort field with its direction."
+      },
+      {
+        "topic": "`@prowd/list-query` (isomorphic) › `ListQueryBase`",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "interface ListQueryBase {\n  page: number;\n  pageSize: number;\n  sort: SortSpec[];\n  search?: string;\n}",
+                "caption": "ts"
+              }
+            ]
+          }
+        ],
+        "statement": "The base shape every list endpoint's validated query extends after zod parsing."
+      },
+      {
+        "topic": "`@prowd/list-query` (isomorphic) › `ListResponse<T>`",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "interface ListResponse<T> {\n  rows: T[];\n  total: number;\n}",
+                "caption": "ts"
+              }
+            ]
+          }
+        ],
+        "statement": "The uniform response envelope every list endpoint returns."
+      },
+      {
+        "topic": "`@prowd/list-query` (isomorphic) › `DEFAULT_PAGE`",
+        "claims": [],
+        "statement": "`1` — the lib baseline default page."
+      },
+      {
+        "topic": "`@prowd/list-query` (isomorphic) › `DEFAULT_PAGE_SIZE`",
+        "claims": [],
+        "statement": "`25` — the lib baseline default page size."
+      },
+      {
+        "topic": "`@prowd/list-query` (isomorphic) › `MAX_PAGE_SIZE`",
+        "claims": [],
+        "statement": "`100` — the lib baseline hard ceiling."
+      },
+      {
+        "topic": "`@prowd/list-query` (isomorphic) › `LIST_QUERY_BASELINE`",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "const LIST_QUERY_BASELINE: ListQueryDefaults = {\n  page: 1,\n  pageSize: 25,\n  maxPageSize: 100,\n};",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "`@prowd/list-query` (isomorphic) › `ListQueryDefaults`",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "interface ListQueryDefaults {\n  page: number;\n  pageSize: number;\n  maxPageSize: number;\n}",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "`@prowd/list-query` (isomorphic) › `parseSortString(input, opts): ParseSortResult`",
+        "claims": [
+          {
+            "text": "**Rules:**"
+          },
+          {
+            "text": "Empty, `undefined`, or whitespace-only input uses `defaultSort`."
+          },
+          {
+            "text": "Comma-separated fields, leading `-` = desc."
+          },
+          {
+            "text": "Each field must be in `sortable` (else `unknown_field`)."
+          },
+          {
+            "text": "Duplicates rejected (`duplicate_field`)."
+          },
+          {
+            "text": "Empty tokens (leading/trailing commas) rejected (`empty_token`)."
+          },
+          {
+            "text": "Non-identifier characters rejected (`invalid_character`)."
+          },
+          {
+            "text": "Used internally by `createListQuerySchema`. Rarely needed directly."
+          }
+        ],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "parseSortString(\n  input: string | undefined,\n  opts: { sortable: readonly string[]; defaultSort: string },\n): ParseSortResult",
+                "caption": "ts"
+              }
+            ]
+          }
+        ],
+        "statement": "Parses a `sort` query-param string into `SortSpec[]`. Never throws — returns a discriminated result."
+      },
+      {
+        "topic": "`@prowd/list-query/server` › `createListQuerySchema(opts)`",
+        "claims": [
+          {
+            "text": "Rejects with 400: `page < 1`, `pageSize > max`, unknown sort field, duplicate sort field, `search` on non-searchable endpoint, any unknown key."
+          }
+        ],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "createListQuerySchema(opts: {\n  sortable: readonly string[];\n  defaultSort: string;\n  searchable?: boolean;\n  defaults?: ListQueryDefaults;\n}): ZodObject",
+                "caption": "ts"
+              }
+            ]
+          },
+          {
+            "snippets": [
+              {
+                "code": "{\n  page: number;            // default from opts.defaults.page\n  pageSize: number;        // default from opts.defaults.pageSize\n  sort: SortSpec[];        // default parsed from opts.defaultSort\n  search?: string;          // only present when searchable: true\n}",
+                "caption": "ts"
+              }
+            ]
+          }
+        ],
+        "statement": "Returns a strict ZodObject ready to be `.merge()`'d with endpoint-specific filters. Output type:"
+      },
+      {
+        "topic": "`@prowd/list-query/server` › `buildOrderBy(sort, columnMap, tiebreaker): SQL[]`",
+        "claims": [
+          {
+            "text": "**Throws:** if `sort` references a field absent from `columnMap` (programmer error — the zod factory already rejected unknown fields)."
+          }
+        ],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "buildOrderBy(\n  sort: SortSpec[],\n  columnMap: Readonly<Record<string, Column>>,\n  tiebreaker: Column,\n): SQL[]",
+                "caption": "ts"
+              }
+            ]
+          }
+        ],
+        "statement": "Translates `SortSpec[]` into a Drizzle orderBy expression list with the tiebreaker auto-appended (as `asc`) unless already present by column identity."
+      },
+      {
+        "topic": "`@prowd/list-query/server` › `applyPagination(qb, page, pageSize): T`",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "applyPagination<T extends PaginatableQueryBuilder<T>>(\n  qb: T,\n  page: number,\n  pageSize: number,\n): T",
+                "caption": "ts"
+              }
+            ]
+          }
+        ],
+        "statement": "Applies `.limit(pageSize).offset((page - 1) * pageSize)` to a Drizzle query builder, preserving its type chain."
+      },
+      {
+        "topic": "`@prowd/list-query/server` › `ColumnMap`",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "type ColumnMap = Readonly<Record<string, Column>>;",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "`@prowd/list-query/server` › `PaginatableQueryBuilder<Self>`",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "interface PaginatableQueryBuilder<Self> {\n  limit(n: number): Self;\n  offset(n: number): Self;\n}",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "`@prowd/list-query/server` › `CreateListQuerySchemaOptions`",
+        "claims": [],
+        "statement": "Options object accepted by `createListQuerySchema`."
+      },
+      {
+        "topic": "`@prowd/list-query/client` › `serializeListQuery(input): URLSearchParams`",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "serializeListQuery(input: SerializeListQueryInput): URLSearchParams",
+                "caption": "ts"
+              }
+            ]
+          }
+        ],
+        "statement": "Serializes a list-query options object into `URLSearchParams`. `sort` may be a canonical string or a `SortSpec[]` (re-stringified). `undefined`/`null` values omitted. `false`/`0` preserved."
+      },
+      {
+        "topic": "`@prowd/list-query/client` › `SerializeListQueryInput`",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "interface SerializeListQueryInput {\n  page?: number | string;\n  pageSize?: number | string;\n  sort?: string | SortSpec[];\n  search?: string;\n  [filterKey: string]: string | number | boolean | undefined | null | SortSpec[];\n}",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "review": {
+      "axioms": {
+        "state": "unreviewed"
+      },
+      "purpose": {
+        "state": "unreviewed"
+      },
+      "reference": {
+        "state": "unreviewed"
+      }
+    },
+    "converted": true
+  }
+}

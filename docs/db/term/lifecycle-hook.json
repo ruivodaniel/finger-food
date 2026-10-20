@@ -1,0 +1,18 @@
+{
+  "id": "term/lifecycle-hook",
+  "kind": "term",
+  "title": "lifecycle hook",
+  "status": "approved",
+  "subjects": [
+    "main"
+  ],
+  "tags": [
+    "architecture"
+  ],
+  "paths": [],
+  "term": {
+    "def": "A fact-only event a [[slice]] emits about itself. The app decides what to do with it.",
+    "aliases": [],
+    "proposed": true
+  }
+}

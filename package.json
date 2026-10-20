@@ -1,0 +1,110 @@
+{
+  "name": "finger-food",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "init:project": "node --experimental-strip-types --no-warnings scripts/init-new-project.ts",
+    "init:githubsecrets": "node --experimental-strip-types --no-warnings scripts/init-github-secrets.ts",
+    "setup": "bash scripts/setup.sh",
+    "setup:kubeconfig": "node --experimental-strip-types --no-warnings scripts/setup-kubeconfig.ts",
+    "setup:db": "node --experimental-strip-types --no-warnings scripts/setup-db.ts",
+    "docker:up": "docker compose -f apps/main/shared/api/docker-compose.yml up -d",
+    "docker:down": "docker compose -f apps/main/shared/api/docker-compose.yml down",
+    "dev:api": "pnpm --filter @apps/api run dev",
+    "dev:web-main": "concurrently \"pnpm theme:watch\" \"pnpm --filter @apps/web-main run dev\"",
+    "theme:build:web": "pnpm exec tsx shared/libs/ui/web/theme-engine/build.ts",
+    "theme:watch": "pnpm exec nodemon --watch shared/libs/ui/themes --watch shared/libs/ui/web/theme-engine/emit.ts --watch shared/libs/ui/web/theme-engine/theme-process.ts --watch shared/libs/ui/web/theme-engine/conventions.ts -e ts --exec 'pnpm exec tsx shared/libs/ui/web/theme-engine/build.ts'",
+    "build": "pnpm run theme:build && pnpm --filter @apps/api run build && pnpm --filter @apps/web-main run build",
+    "start": "pnpm --filter @apps/api --filter @apps/web-main --parallel run start",
+    "test:unit": "pnpm --filter \"*\" test:unit",
+    "lint": "pnpm --filter \"*\" lint",
+    "prettier": "pnpm --filter \"*\" prettier --write . --ignore-path .prettierignore",
+    "docker:api": "docker build -f apps/main/shared/api/Dockerfile -t api-app .",
+    "mirror:drizzle": "echo 'TODO: update mirror:drizzle for new definitions structure'",
+    "llm:up": "cd services/llm-api && docker-compose up -d",
+    "llm:down": "cd services/llm-api && docker-compose down",
+    "llm:logs": "cd services/llm-api && docker-compose logs -f",
+    "llm:rebuild": "cd services/llm-api && docker-compose up -d --build",
+    "llm:status": "ollama list && echo '' && ollama ps",
+    "validate:scaffolding": "node --experimental-strip-types --no-warnings scripts/validate-scaffolding.ts",
+    "lint:arch": "node --experimental-strip-types --no-warnings scripts/lint/runner.ts",
+    "lint:boundaries": "npx depcruise shared/ apps/ --config .dependency-cruiser.cjs --output-type err",
+    "lint:all": "pnpm lint && pnpm lint:arch && pnpm lint:boundaries"
+  },
+  "dependencies": {
+    "@dbml/core": "^7.1.0",
+    "@eslint/js": "9.27.0",
+    "chalk": "5.4.1",
+    "esbuild": "0.25.5",
+    "eslint": "9.27.0",
+    "hono": "4.12.17",
+    "motion": "^12.34.0",
+    "otplib": "^13.4.0",
+    "typescript": "5.8.3",
+    "typescript-eslint": "8.33.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/glob": "^9.0.0",
+    "@types/node": "22.15.23",
+    "@types/pg": "8.15.2",
+    "@typescript-eslint/eslint-plugin": "8.33.0",
+    "@typescript-eslint/parser": "8.33.0",
+    "better-auth": "1.6.9",
+    "chokidar": "^5.0.0",
+    "concurrently": "^9.1.2",
+    "dependency-cruiser": "^17.3.10",
+    "embedded-postgres": "18.1.0-beta.15",
+    "eslint-config-prettier": "10.1.5",
+    "eslint-plugin-i18next": "^6.1.3",
+    "eslint-plugin-prettier": "5.4.0",
+    "eslint-plugin-react-refresh": "0.4.20",
+    "glob": "^13.0.0",
+    "maildev": "^2.2.1",
+    "nodemon": "^3.1.14",
+    "pg": "8.16.0",
+    "playwright": "^1.52.0",
+    "tsx": "^4.21.0",
+    "vitest": "3.1.4"
+  },
+  "pnpm": {
+    "ignoredBuiltDependencies": [
+      "@tailwindcss/oxide",
+      "esbuild"
+    ],
+    "onlyBuiltDependencies": [
+      "@embedded-postgres/darwin-arm64"
+    ],
+    "overrides": {
+      "drizzle-orm": "0.43.1",
+      "pg": "8.16.0",
+      "@types/pg": "8.15.2",
+      "@types/react": "19.2.14",
+      "@types/react-dom": "19.2.3",
+      "@tanstack/react-query": "5.77.2",
+      "@tanstack/react-router": "1.120.13",
+      "@tanstack/react-router-devtools": "1.120.13",
+      "hono": "4.12.17",
+      "zod": "^4.4.3",
+      "better-auth": "1.6.9",
+      "@better-auth/core": "1.6.9",
+      "@hookform/resolvers": "5.2.2"
+    }
+  },
+  "engines": {
+    "node": ">=22.16.0",
+    "pnpm": ">=10.11.0"
+  },
+  "packageManager": "pnpm@10.11.0",
+  "workspaces": [
+    "apps/*",
+    "apps/main/shared/api",
+    "apps/main/shared/web",
+    "apps/main/slices/seed/*",
+    "apps/main/slices/product/*",
+    "configs/*",
+    "configs/libs/*",
+    "shared/libs/*",
+    "shared/libs/ui/web/*"
+  ]
+}

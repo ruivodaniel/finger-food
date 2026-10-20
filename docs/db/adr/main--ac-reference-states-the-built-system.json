@@ -1,0 +1,34 @@
+{
+  "id": "adr/main--ac-reference-states-the-built-system",
+  "kind": "adr",
+  "title": "The access-control Reference states the library as built, and every rule that disagrees stays un-consumed",
+  "status": "approved",
+  "subject": "main",
+  "tags": [
+    "main",
+    "architecture"
+  ],
+  "paths": [],
+  "summary": "Write the Reference from the code, then digest the tracked rules against it. Where a rule and the shipped library disagree, the code wins the claim and the rule",
+  "adr": {
+    "date": "2026-08-14",
+    "context": "[[access-control|Access Control]] was created with an empty Reference so the document division would be visible without faking a digestion (`doc-scope-split`). Meanwhile the thing it documents shipped: `shared/libs/gated-scoped-ac` is written, tested against a real database, and consumed by UOM. Filling the Reference from the tracker alone would have repeated the mistake the scaffolding doc made — an agent pulling rules it judged applicable — and the rules are older than the library, so several of them describe a system that was never built.",
+    "decision": "Write the Reference from the code, then digest the tracked rules against it. Where a rule and the shipped library disagree, the code wins the claim and the rule stays un-consumed carrying a warning that names the disagreement. Nothing in the Reference describes behaviour that does not exist, and no rule is quietly rewritten into agreement.",
+    "consequences": [
+      "The Reference is accurate and NOT canonical: it says what the system does, not what Daniel has ruled it should do. Reviewing it means ruling on the built behaviour, which is a different act from approving prose.",
+      "**AC31 was transcribed backwards.** The engine ORs the rules inside a permission and ANDs the conditions inside one rule; the config already depends on it (`accept_own_invitation` matches email OR phone). The doc states the corrected rule. Nothing to rule on unless the engine is wrong.",
+      "**Create never sees the payload.** AC9 says create checks permission on the parent container; `allowCreate` decides on context alone and ignores the candidate row, so a caller holding a create permission can insert a row carrying another user's owning id unless the service stamps it. Today every service does stamp. Open: does AC grow a create-time target, or is \"the service owns owning ids\" the rule?",
+      "**AC7 and AC8 are both unbuilt and both un-consumed.** Enrichment joins are already forbidden in a repository by `repositories-never-join`; field access is narrowed out of the projection, never blanked; and a view is an ordinary entity with no composing-entity config behind it. Open: are these targets, or rules to retire?",
+      "**AC38 overreaches.** Zod sits behind a real port; drizzle does not — the engine and gate emit drizzle fragments directly. Open: adapt the ORM, or narrow the rule to the validator.",
+      "**AC28 is a convention, not a constraint.** User roles and membership roles share one namespace and one uniqueness check, and hydration unions them into one flat list; nothing rejects a baseline role granted on a membership. Open: enforce it, or restate the rule as guidance.",
+      "**Axiom 8 describes a system that does not exist.** The bag carries a session user and an active org — there is no system identity, no principal-through-delegate composition, and no authorization recorded at dispatch for queued work. The axiom is left standing and the Reference claims none of it. Open: target or overreach?",
+      "**\"Gate\" names two unrelated things.** The [[gated db]] is access control's database handle; the gate in [[unmet-requirements|Unmet Requirements]] answers obligations with a 428 and never touches data. Both appear in one middleware chain. The glossary now separates them; the code still calls both `gate`.",
+      "AC36 is retired rather than consumed — the placeholder markers it governs are gone now that AC has landed.",
+      "`scope`, `gated db`, `permission` and `role forest` entered the glossary as proposed terms, taken from the code's own names."
+    ],
+    "affects": [
+      "access-control"
+    ],
+    "adrStatus": "proposed"
+  }
+}

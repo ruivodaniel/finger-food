@@ -1,0 +1,27 @@
+<!-- label: Accordion -->
+<div class="flex flex-col gap-3">
+  <p element="type--body-extra-small" emphasis="quiet">closed / open / closed</p>
+  <div class="flex flex-col" style="max-width: 400px;">
+    <div element="list--accordion" data-state="closed">
+      <button element="control--button" emphasis="tertiary" scale="md" class="w-full justify-between">
+        <span>What is Acme?</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" element="shape--icon" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+    </div>
+    <div element="list--accordion" data-state="open">
+      <button element="control--button" emphasis="tertiary" scale="md" class="w-full justify-between">
+        <span>How do I manage my organization?</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" element="shape--icon" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg>
+      </button>
+      <div class="px-4 pb-4">
+        <p element="type--body-small" emphasis="quiet">Navigate to Settings → Organization to invite members, change roles, and configure access.</p>
+      </div>
+    </div>
+    <div element="list--accordion" data-state="closed">
+      <button element="control--button" emphasis="tertiary" scale="md" class="w-full justify-between">
+        <span>What roles are available?</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" element="shape--icon" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+    </div>
+  </div>
+</div>

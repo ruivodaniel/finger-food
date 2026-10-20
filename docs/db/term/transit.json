@@ -1,0 +1,18 @@
+{
+  "id": "term/transit",
+  "kind": "term",
+  "title": "transit",
+  "status": "converted",
+  "subjects": [
+    "main",
+    "open-api"
+  ],
+  "tags": [
+    "api"
+  ],
+  "paths": [],
+  "term": {
+    "def": "The routes and middleware of an API: the code written for it. The open API's transit imports the main API's services.",
+    "aliases": []
+  }
+}

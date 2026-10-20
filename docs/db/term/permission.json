@@ -1,0 +1,19 @@
+{
+  "id": "term/permission",
+  "kind": "term",
+  "title": "permission",
+  "status": "approved",
+  "subjects": [
+    "main",
+    "gated-scoped-ac"
+  ],
+  "tags": [
+    "access-control"
+  ],
+  "paths": [],
+  "term": {
+    "def": "A leaf of the access-control config: one entity, the actions it covers, an optional column allowlist, and the rules that narrow it. Granted only by holding a role that carries it; permissions never nest.",
+    "aliases": [],
+    "proposed": true
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "adr/main--runtime-target-in-the-name",
+  "kind": "adr",
+  "title": "Runtime target belongs in the package name, never in the scope",
+  "status": "approved",
+  "subject": "main",
+  "tags": [
+    "main",
+    "architecture"
+  ],
+  "paths": [],
+  "summary": "The tier scope expresses reuse scope only. Runtime target is a separate axis and enters the package name: `@libs/web-components`, `@libs/web-layouts`, `@libs/mo",
+  "adr": {
+    "date": "2026-08-11",
+    "context": "The UI libraries are nested a level deeper than every other library — `shared/libs/ui/web/*` and `shared/libs/ui/mobile/*` — but a package identifier is flat. Two packages were both really \"components\", so the mobile one carried its platform in its name and the web one did not. That asymmetry was a name collision being worked around, not a decision.",
+    "decision": "The tier scope expresses reuse scope only. Runtime target is a separate axis and enters the package name: `@libs/web-components`, `@libs/web-layouts`, `@libs/mobile-components`.",
+    "consequences": [
+      "One scope per tier survives; no `@libs-ui-web/*` sub-scopes.",
+      "Every UI library states its platform — none by accident, none by omission.",
+      "Folder nesting stays as it is. A package identifier does not inherit folder depth, so any distinction the tree makes must be restated in the name or it is lost."
+    ],
+    "affects": [
+      "scaffolding-and-import-boundaries"
+    ],
+    "adrStatus": "accepted"
+  }
+}

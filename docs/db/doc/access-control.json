@@ -1,0 +1,497 @@
+{
+  "id": "doc/access-control",
+  "kind": "doc",
+  "title": "Access Control",
+  "status": "approved",
+  "subject": "main",
+  "tags": [
+    "main",
+    "access context",
+    "gated db",
+    "library",
+    "scope"
+  ],
+  "paths": [
+    "apps/main"
+  ],
+  "summary": "Role checks alone can't express the access this platform needs — visibility that depends on org type, role hierarchy, and cross-entity conditions, evaluated …",
+  "docId": "access-control",
+  "doc": {
+    "axioms": [
+      {
+        "text": "Authentication and authorization are separate. The auth seed slice verifies the session and returns the user; scoped-ac decides what that user may do."
+      },
+      {
+        "text": "The access context is hydrated once per request — active org, membership, effective roles — and the rest of the request reads it."
+      },
+      {
+        "text": "Rules live in config as a DSL, never in code. Roles, hierarchy, conditions, traversals are declared, not programmed."
+      },
+      {
+        "text": "The engine decides; callers apply. Joins, traversals, hierarchy expansion, and field selection are engine internals — the caller applies what it returns without inspecting it."
+      },
+      {
+        "text": "Enforcement is authored blind to the rules. The developer gating a method doesn't know what the config will declare; they route every protected operation through the engine and apply its result, never assuming or hard-coding a rule."
+      },
+      {
+        "text": "Every protected operation is gated. No read or write reaches data except through the engine.",
+        "sub": [
+          "This is enforced by the type system, not by convention: the database handle will not move without a token only the engine can mint, so skipping access control is a compile error."
+        ]
+      },
+      {
+        "text": "The frontend reflects, never decides. It shows what the backend already authorized."
+      },
+      {
+        "text": "AccessContext is identity-polymorphic, and the same rules apply across all our datastores. Identity can be a session-user, the system, or composed (a principal acting through a delegate — for example an agent resolving a user request).",
+        "sub": [
+          "Every operation runs under an identity. Access control evaluates rules against it.",
+          "When one identity acts on behalf of another, the effective permission is the narrower of the two.",
+          "When the AC decision and the execution are separated in time (queued work, crons), the decision is recorded at dispatch; the worker executes against that pre-resolved authorization, not a live identity."
+        ]
+      }
+    ],
+    "purpose": {
+      "intro": "Role checks alone can't express the access this platform needs — visibility that depends on org type, role hierarchy, and cross-entity conditions, evaluated per tenant on every read and write. Hand-rolling that in each method scatters the rules through the code, where they drift and can't be audited. So the rules live as declarative config and a single engine decides; enforcement code calls the engine and applies what it returns without knowing what the rules say. Authorization can then be read, audited, and changed in one place, and no caller can reach data on a path that quietly skips a check. Backend layering puts access control below the transport, in the one substrate every caller passes through, so the rules are written and enforced once."
+    },
+    "reference": [
+      {
+        "topic": "Two halves: the engine resolves, the gate executes",
+        "statement": "Access control is one [[library]] in two parts. The engine is pure — it reads config and the [[access context]] and produces a [[scope]], never touching a connection. The [[gated db]] is the only thing holding the database handle, and it will not move without a scope. Nothing sits between them that could decide.",
+        "claims": [
+          {
+            "id": "AC4",
+            "text": "The engine returns query parts — where, select, join — and nothing else. It decides nothing, holds no conditionals, and is never a god method."
+          },
+          {
+            "id": "AC11",
+            "text": "A boolean gate is named `allow*`; a query builder is named `resolve*`. Never one name for both."
+          },
+          {
+            "ids": [
+              "AC17",
+              "AC18"
+            ],
+            "text": "Every gated query carries a branded [[scope]] only the engine can mint, and the [[gated db]] requires the one matching that entity and action. Reaching the database without it is a compile error — enforced by type design, not by a linter."
+          },
+          {
+            "id": "AC1",
+            "text": "Default deny. A protected operation grants zero access; only an explicit rule grants any, and a [[scope]] no rule contributed to matches no rows."
+          },
+          {
+            "id": "AC5",
+            "text": "On a read the service is a pass-through: the engine builds the WHERE, select and join, and the repository executes it."
+          },
+          {
+            "id": "AC6",
+            "text": "On create, update and delete the service is the gate — it holds the allow/deny; repositories and external providers never decide."
+          },
+          {
+            "text": "The [[gated db]] never throws. A denied write returns null and an unmatched read returns no rows; what that emptiness means is business logic, so the service decides it and raises the error."
+          },
+          {
+            "text": "Hydration is the one sanctioned ungated path: it must read the database *before* the [[access context]] exists, so the library mints a single named handle that reaches the database without a [[scope]], and nothing reachable from a route may use it."
+          }
+        ],
+        "imagesAndDiagrams": [
+          {
+            "title": "A scope is minted by the engine and spent at the gate",
+            "type": "ascii",
+            "value": "  config — declarative, boot-time        access context — per request\n  ┌──────────────────────────┐          ┌──────────────────────────────┐\n  │  permissions (leaves)    │          │  $session.user.id   …        │\n  │  role forests (branches) │          │  $requestBody.*     …        │\n  └────────────┬─────────────┘          │  permissions: string[]       │\n               │                        └───────────────┬──────────────┘\n               └───────────────┬────────────────────────┘\n                               ▼\n                    ┌─────────────────────┐   CONTEXT — in memory, never a query\n                    │       ENGINE        │   TARGET  — compiled into the WHERE\n                    │        (pure)       │   PAYLOAD — an existence check to run\n                    └──────────┬──────────┘\n                               │  a scope, branded by entity and action —\n                               │  or, for a create, a verdict\n                               ▼\n                    ┌─────────────────────┐   read · update · delete  require the scope\n                    │      GATED DB       │   create                  takes the verdict\n                    │  (owns the handle)  │   hydration               the one ungated path\n                    └──────────┬──────────┘\n                               ▼\n                              DB"
+          }
+        ],
+        "examples": [
+          {
+            "title": "A gated update, end to end",
+            "text": "The service runs the cheap column verdict first, resolves the row [[scope]] second, and hands both to the repository. The write is fused into one statement: the scope is part of the WHERE, so a row outside it is never touched and comes back as null. Nothing in the service knows what the rule says — it applies what the engine returned.",
+            "snippets": [
+              {
+                "caption": "apps/main/slices/seed/user-organization-mgmt/api/services/organization.service.ts — trimmed",
+                "code": "// Cheap in-memory column verdict first (AC10), then the scoped row write.\nconst verdict = this.deps.engine.allowUpdate(\n  ac.permissions, \"organization\", patch, ac.bag,\n);\nif (!verdict.allow) {\n  throw this.deps.errors.forbidden(verdict.reason ?? \"cannot update organization\");\n}\n\nconst scope = this.deps.engine.resolveUpdate(\n  ac.permissions, \"organization\", ac.bag,\n);\nconst updated = await this.deps.orgRepo.update(\n  visibility, orgId, patch, scope, ac.gateDb,\n);\n\n// null ⇒ the Scope admitted no such row (denied, AC6/AC9)\nif (!updated) throw this.deps.errors.forbidden(\"cannot update organization\");"
+              },
+              {
+                "caption": "The repository signature — it cannot be called without a scope",
+                "code": "update(\n  visibility: Private,\n  id: string,\n  patch: OrganizationPatch,\n  scope: Scope<\"organization\", \"update\">,\n  gateDb: GatedDb<SchemaTables>,\n): Promise<UomOrganizationSelect | null>;"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "The access context",
+        "statement": "One resolution per request, computed before the handler and read by every layer beneath it. Roles become permissions once; everything below the middleware receives permissions and never sees a role.",
+        "claims": [
+          {
+            "id": "AC14",
+            "text": "The [[access context]] — session subject, active org, effective permissions, gated handle — is hydrated once in middleware and passed through all layers, never recomputed per layer."
+          },
+          {
+            "id": "AC15",
+            "text": "Memberships and roles re-resolve server-side every request against the active org. A client-asserted role or org context is never trusted; the active-org header is validated against the caller's real memberships before anything reads it."
+          },
+          {
+            "id": "AC16",
+            "text": "Effective permissions resolve only from the active org's memberships. Account-level security gates are the exception and evaluate across all memberships — they belong to the [[unmet-requirements|unmet-requirements gate]], not here."
+          },
+          {
+            "id": "AC19",
+            "text": "A request with no active organization resolves account-baseline roles only. Every membership-scoped rule then fails its context check, so those operations deny — they never fall through unscoped."
+          },
+          {
+            "id": "AC41",
+            "text": "Request-scoped cross-cutting data travels in a generic bag, not in anything named session. A service takes only the minimal id it needs unless it must resolve scope, and role or membership lookups are injected into the bag rather than exposed as a service."
+          },
+          {
+            "ids": [
+              "AC3",
+              "AC22"
+            ],
+            "text": "Every private endpoint passes through access control and public endpoints skip it. An endpoint invoked before any session exists must be public: hydration builds no context for an unauthenticated request and passes it through rather than rejecting it."
+          },
+          {
+            "id": "AC39",
+            "text": "The library performs no authentication and no session verification — it trusts the consumer's middleware."
+          },
+          {
+            "text": "Roles are resolved into permissions exactly once, in hydration. Permissions cannot change mid-request, so the resolvers and verdicts below take permissions as their input and the engine knows nothing about roles at request time."
+          },
+          {
+            "text": "Request-scoped facts belong to the [[access context]] too — the body a caller sent, and whatever else the request carries. A rule names them by path exactly as it names the caller, and the engine resolves whatever path it is handed without knowing what the context holds, so a new kind of request fact is a hydration change and never a library one."
+          },
+          {
+            "text": "An unauthenticated request has no [[access context]], so no rule can be written against what it sent. A public write is guarded by its own means — a capability URL, a signature — never by access control."
+          },
+          {
+            "text": "Only role names are persisted on a membership. The hierarchy and the permissions each role carries live in config, so granting capability is a config change and never a migration."
+          }
+        ],
+        "imagesAndDiagrams": [
+          {
+            "title": "Where access control sits in the request",
+            "type": "ascii",
+            "value": "request ─→ session ─→ hydrate access context ─→ unmet-req gate ─→ router ─→ service\n                              │                        │                          │\n           validate active org│                        │428 unmet                 │ resolve* / allow*\n           roles → permissions│                        ▼                          ▼\n           bind the gated db  │                    short-circuit            engine → scope\n                              │                                                   │\n                              └──── ac: bag · roles · permissions · gateDb ───────┘\n\nno session  ─→  no access context, no error  ─→  the route must be public"
+          }
+        ],
+        "examples": []
+      },
+      {
+        "topic": "Three slots: context, target, payload",
+        "statement": "A rule is built from three slots, and each reads from exactly one place: **context** from the [[access context]], **target** from the rows that already exist, **payload** from the row about to be written. Context never costs a query and always runs first; a slot that must ask the database runs only after it.",
+        "claims": [
+          {
+            "id": "AC20",
+            "text": "Context — the session and environment facts, such as role and org type — is checked in memory before any query, and never triggers a database read. Target is the specific entity being acted on."
+          },
+          {
+            "id": "AC21",
+            "text": "Keep the redundant context check even when the target check subsumes it — it is free defence in depth."
+          },
+          {
+            "id": "AC10",
+            "text": "On update, the in-memory field-level check runs first and the row-level query only after it."
+          },
+          {
+            "id": "AC9",
+            "text": "Update and delete gate through a read-style query against the target: zero rows is a denial. Create computes no target — the row does not exist yet to be constrained."
+          },
+          {
+            "text": "Payload gates on the row being written. It reaches that row through the [[access context]], so its conditions carry a context path and never a column: the row has no columns to name yet."
+          },
+          {
+            "text": "A payload condition that only compares values settles in memory. One that follows the written row's reference into another entity — \"the song this slice points at must be one I may edit\" — becomes a single existence check, run before the write and never after it."
+          },
+          {
+            "text": "A payload subject whose value is absent denies. It never widens into a check that every parent row would satisfy."
+          },
+          {
+            "text": "Payload is a create-only slot today, and a rule carrying one on any other action is refused when the config loads — a slot the engine would ignore must never look like a gate."
+          }
+        ],
+        "imagesAndDiagrams": [],
+        "examples": [
+          {
+            "title": "Reading the two stages off a permission",
+            "text": "`manage_own_notes` is held by the employee role. Its context says the rule exists only for a caller acting inside a company org; its target says the rows are the ones this caller authored. A manager in the same org holds no rule whose target admits an employee's note, so the manager's update resolves to a scope that matches nothing — the denial needs no code.",
+            "snippets": [
+              {
+                "caption": "The permission",
+                "code": "{\n  name: \"manage_own_notes\",\n  entity: \"note\",\n  actions: [\"read\", \"update\", \"delete\"],\n  rules: [\n    {\n      context: [{ bag: \"$session.organization.type\", has: { value: \"company\" } }],\n      target:  [{ field: \"note.authorUserId\", has: { bag: \"$session.user.id\" } }],\n    },\n  ],\n}"
+              },
+              {
+                "caption": "Context first, in memory — is this caller in a company org?  Then the target, in SQL",
+                "code": "-- caller: an employee acting in a company org\nWHERE note.author_user_id = $1        -- the target, compiled\n\n-- caller: the same person with no active org\nWHERE false                           -- no rule survived the context slot"
+              }
+            ]
+          },
+          {
+            "title": "Gating a create on its parent",
+            "text": "A slice may be appended to a song only by someone who may edit that song — they created it, or it is shared with them for editing. The song id arrives in the request body, which the consuming app's middleware puts on the [[access context]], so the rule reaches it the same way it reaches the caller's user id. Two rules, so the two ways of reaching a song are OR-ed. Nothing here knows what a slice is: the same shape gates any child on any parent.",
+            "snippets": [
+              {
+                "caption": "The permission",
+                "code": "{\n  name: \"append_song_session\",\n  entity: \"song_session_slice\",\n  actions: [\"create\"],\n  rules: [\n    // the song's creator\n    { context: [], target: [],\n      payload: [{ bag: \"$requestBody.songId\", join: \"song\",\n                  where: [{ field: \"song.creatorUserId\", has: { bag: \"$session.user.id\" } }] }] },\n\n    // …or someone it is edit-shared with. song_share is keyed by songId,\n    // not by id, so the far-side column is named.\n    { context: [], target: [],\n      payload: [{ bag: \"$requestBody.songId\", join: \"song_share\", on: \"songId\",\n                  where: [{ field: \"song_share.userId\", has: { bag: \"$session.user.id\" } }] }] },\n  ],\n}"
+              },
+              {
+                "caption": "What runs before the insert — either one is enough",
+                "code": "SELECT 1 FROM song\n WHERE song.id = $songId AND song.creator_user_id = $me LIMIT 1\n\nSELECT 1 FROM song_share\n WHERE song_share.song_id = $songId AND song_share.user_id = $me LIMIT 1\n\n-- neither returns a row → nothing is written, and the caller gets null"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "The DSL",
+        "statement": "A permission is a leaf: an entity, the actions it covers, and the rules that narrow them. A role is a branch that carries leaves and other branches. Both are data — the engine treats entity names, role names and org types as opaque strings and holds no knowledge of what any of them mean.",
+        "claims": [
+          {
+            "id": "AC23",
+            "text": "The DSL is explicit: no inference, no magic. Flatten and name each part."
+          },
+          {
+            "id": "AC24",
+            "text": "A permission is an entity plus actions, optionally narrowed by access rules. No rule means unrestricted for the matching entity and action; a rule only ever narrows."
+          },
+          {
+            "id": "AC26",
+            "text": "Permissions are always leaves and roles are always branches — a permission never nests inside a permission."
+          },
+          {
+            "id": "AC27",
+            "text": "The role hierarchy is a forest: one independent tree per org type, plus the account baseline that applies with no org in context."
+          },
+          {
+            "text": "An ancestor role resolves the union of every permission beneath it, so the owner at the top of a tree is the most capable role in it. A branch may carry no leaves of its own and exist only to imply its children."
+          },
+          {
+            "id": "AC28",
+            "text": "User roles and membership roles are separate and never cross-assignable: a role from the account baseline is not grantable on a membership, and the reverse."
+          },
+          {
+            "id": "AC29",
+            "text": "Every permission and role name is unique system-wide, even across org types — checked when the config loads, so a duplicate is a startup crash."
+          },
+          {
+            "id": "AC30",
+            "text": "Permission names read verb-then-entity, with the org type appended when the permission is scoped to one: `read_organization_company`. Rules read as close to the path as possible."
+          },
+          {
+            "id": "AC31",
+            "text": "Conditions inside one rule are AND-ed. Rules inside one permission are OR-ed, and permissions are OR-ed with each other — so a second rule is how a permission says \"or this way\"."
+          },
+          {
+            "id": "AC32",
+            "text": "Rules reference field names and values only, never storage shape, so a model change never forces a rule change."
+          },
+          {
+            "id": "AC33",
+            "text": "A create rule declares no target, and the type system rejects one that does."
+          },
+          {
+            "id": "AC35",
+            "text": "No speculative DSL product slices. A form is added when a real case needs it; rare edges are handled in code."
+          },
+          {
+            "text": "The DSL's symbols are distinct: `$` opens a path into the [[access context]], a bare dotted string is an entity field, and quoted values are literals."
+          },
+          {
+            "id": "AC34",
+            "text": "Four operators, and no others. `has` and `hasNot` ask whether a value is **in** a column — the same question whether that column holds one value or many, so a column becoming a list never forces a rule to change. `is` and `isNot` are the strict form: a single value, refusing a collection outright."
+          },
+          {
+            "text": "`has` never means substring. Containment on a string over-grants silently — a caller registered as `m@altar.io` would match an invitation addressed to `tim@altar.io` — so a string is compared whole, and a rule wanting a collection must point at one."
+          },
+          {
+            "text": "A negation includes rows whose column is empty. A row holding nothing does not contain the value, so it satisfies `hasNot` — SQL's default would silently drop it instead."
+          },
+          {
+            "text": "An operator that cannot mean anything for a column is refused when the config loads, not at request time: `is` against a column holding a collection is a startup error."
+          },
+          {
+            "text": "A rule reaches a related entity with a traversal: follow a value into another entity, then filter on it. Several conditions on the far side are AND-ed together, and the column joined against is named when it is not the related entity's own identity — a table keyed by its parent is joined on that key."
+          },
+          {
+            "text": "A traversal is the only condition in its slot. Conditions in a slot are AND-ed, but a traversal is compiled alone, so anything standing beside it would be dropped and the rule would grant more than it reads — the config is refused instead."
+          },
+          {
+            "text": "A database view is an ordinary entity. It sits in the entity map beside the tables, and the same rules, resolvers, field lists and gate paths apply to it with nothing naming it a view."
+          }
+        ],
+        "imagesAndDiagrams": [
+          {
+            "title": "One forest per org type — an ancestor resolves everything beneath it",
+            "type": "ascii",
+            "value": "account baseline — applies with no org in context\n  authenticated ───────── create_organization · accept_own_invitation · manage_own_profile · …\n\nforests[\"company\"] — applies when the active org type is company\n  company_owner ───────── (a branch marker — no leaves of its own)\n  └ company_manager ───── update_organization_company · manage_members_company · …\n    └ company_standard ── read_organization_company · list_members_company\n\nforests[\"platform_admin\"] — applies when the active org type is platform_admin\n  platform_owner ──────── (a branch marker — no leaves of its own)\n  ├ manage_platform ───── read_organization_platform · manage_members_platform · …\n  └ manage_legal_docs ─── manage_legal_document_platform\n\na role resolves to its own leaves ∪ every leaf beneath it: company_manager gets\ncompany_standard's too, and company_owner — carrying none — gets the whole tree.\nresolved role set = baseline roles ∪ the active membership's roles"
+          }
+        ],
+        "examples": [
+          {
+            "title": "Two rules mean OR",
+            "text": "An invitation is addressed to an email address or to a phone number, and the invited person may reach it by matching either. That is two rules inside one permission — the engine ORs them — not two conditions inside one, which would demand both.",
+            "snippets": [
+              {
+                "caption": "configs/access-control/index.ts",
+                "code": "{\n  name: \"accept_own_invitation\",\n  entity: \"invitation\",\n  actions: [\"read\", \"update\"],\n  rules: [\n    { context: [], target: [{ field: \"invitation.email\", has: { bag: \"$session.user.email\" } }] },\n    { context: [], target: [{ field: \"invitation.phone\", has: { bag: \"$session.user.phone\" } }] },\n  ],\n}"
+              },
+              {
+                "caption": "compiles to",
+                "code": "WHERE invitation.email = $1 OR invitation.phone = $2"
+              }
+            ]
+          },
+          {
+            "title": "A traversal — filtering on a related entity",
+            "text": "An auditor may read any note that belongs to a company org. The note table carries no org type, so the rule follows `note.organizationId` into `organization` and filters there. The engine emits it as a sub-query on ids; the gate assembles and runs it. No repository ever writes the join.",
+            "snippets": [
+              {
+                "caption": "The rule",
+                "code": "target: [\n  {\n    field: \"note.organizationId\",\n    join:  \"organization\",\n    where: { field: \"organization.type\", has: { value: \"company\" } },\n  },\n]"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "What a caller may do with a scope",
+        "statement": "A [[scope]] is a grant with an edge. A caller may push that edge inward — fewer rows, fewer columns — and has no way to push it outward.",
+        "claims": [
+          {
+            "id": "AC12",
+            "text": "A consumer may only narrow a resolved query, by AND. A root-level OR is forbidden and no clause may be added that widens what the engine admitted."
+          },
+          {
+            "id": "AC13",
+            "text": "A per-method access-control config may only restrict the base grant, never expand it."
+          },
+          {
+            "id": "AC25",
+            "text": "An unset or empty field list means all fields; a set list restricts read and update to those fields. Fields never default to deny."
+          },
+          {
+            "text": "A field list narrows the columns returned, never the rows: a caller entitled to any column of a row they may see gets that row, carrying the columns they are allowed."
+          },
+          {
+            "text": "One list governs both read and update — the columns a permission projects are the columns it may write."
+          },
+          {
+            "text": "Where several permissions contribute, their field lists union, and one contributing permission with no list means all columns."
+          },
+          {
+            "text": "An entity may declare visibility channels — a second entity whose rows confer sight of it, such as a share table over the thing shared. The engine emits each channel as an id sub-query OR-ed into the read scope; channels apply to reads only."
+          }
+        ],
+        "imagesAndDiagrams": [],
+        "examples": []
+      },
+      {
+        "topic": "Public and private are typed",
+        "statement": "Whether an operation is public or private is not a flag on the context, which would be one place to get it wrong. It is a token every layer declares in its own signature, and the compiler checks that they agree.",
+        "claims": [
+          {
+            "id": "AC42",
+            "text": "Every layer — route, service, repository — declares and types its own public/private flag, and a cross-layer mismatch is a compile error. Public at the router means public all the way down; services and repositories are private by default and exposing one is explicit."
+          },
+          {
+            "id": "AC17",
+            "text": "The router only classifies an endpoint public or private and passes through. It never gates, and it is not the decision point: visibility propagates conservatively, and private always wins over public."
+          },
+          {
+            "text": "The private token structurally extends the public one, so holding the stricter token where a public one is required is always safe and the reverse cannot compile. A public flow can never escalate itself to private."
+          },
+          {
+            "id": "AC43",
+            "text": "Two authorization layers, always: gate the caller before the service, and re-pass and re-check at the repository. A repository is never trusted safe because its caller gates."
+          },
+          {
+            "id": "AC2",
+            "text": "The database is private-first. Public rows and fields are the narrow, explicit exception — never the default, and never a public-permission join bolted onto every query."
+          }
+        ],
+        "imagesAndDiagrams": [],
+        "examples": [
+          {
+            "title": "The same rows, two doors",
+            "text": "An organization is readable by a public invitation-capability view and by an authenticated caller. Both reach the repository, so the repository states which door each method serves: the public one takes the public token and is ungated, the private one takes the private token and refuses to run without a read [[scope]].",
+            "snippets": [
+              {
+                "caption": "apps/main/slices/seed/user-organization-mgmt/api/repositories/organization.repository.ts",
+                "code": "/** Ungated narrow accessor — reached by the public invitation view. */\nfindByIds(visibility: Public, ids: string[]): Promise<UomOrganizationSelect[]>;\n\n/** The same read, gated — only the authenticated getById reaches this. */\nfindByIdsScoped(\n  visibility: Private,\n  ids: string[],\n  scope: Scope<\"organization\", \"read\">,\n  gateDb: GatedDb<SchemaTables>,\n): Promise<UomOrganizationSelect[]>;"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "The library knows nothing about the app",
+        "statement": "Scoped access control is a [[library]], so it carries zero product knowledge. Entities, roles, org types and even the path to the caller's org type arrive from outside it; strip the config and the app away and nothing about this repo remains in it.",
+        "claims": [
+          {
+            "id": "AC37",
+            "text": "The library knows nothing of the app, membership, organization or auth provider. It resolves roles into permissions from config alone, and runtime slice concepts arrive in a generic bag at call time."
+          },
+          {
+            "text": "Entity names, role names and org types are opaque strings to the engine. Config is their only source of truth, and the app injects the entity-name-to-table map at mount."
+          },
+          {
+            "text": "Even the location of the caller's org type inside the bag is injected. The library has no business knowing that an app calls it `session.organization.type`."
+          },
+          {
+            "id": "AC40",
+            "text": "The requester's roles stay separate from target-entity resolution, so roles may come from a different source later without touching either side."
+          },
+          {
+            "id": "AC38",
+            "text": "The schema validator sits behind a port: the library declares the shape check it wants and an adapter supplies it, so swapping validators changes one adapter file and nothing else."
+          },
+          {
+            "text": "Config is validated when it loads, not per request — a duplicate name, a malformed rule or a create rule carrying a target fails the boot."
+          }
+        ],
+        "imagesAndDiagrams": [],
+        "examples": [
+          {
+            "title": "What the app injects at mount",
+            "text": "One file names the app's tables in the config's entity vocabulary and binds the two singletons. The keys must match the config exactly — that map is the whole of what the library learns about this product.",
+            "snippets": [
+              {
+                "caption": "apps/main/shared/api/src/access-control.ts — trimmed",
+                "code": "const tables: SchemaTables = {\n  organization: uomOrganization,\n  membership:   uomMembership,\n  user_profile: uomUserProfile,\n  legal_document: uomLegalDocument,\n  // …\n};\n\nexport const acEngine = createAc({ ...accessControlConfig, tables });\nexport const gatedDb  = createGatedDb(db, {\n  tables,\n  engine: acEngine,\n  // entities whose identity column is not `id`\n  idColumns: { user_profile: \"userId\" },\n});"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "The frontend reflects",
+        "statement": "The client renders affordances, and the server decides. A role list shared with the frontend exists so the UI can hide what would fail; it is never what makes the operation safe.",
+        "claims": [
+          {
+            "id": "FE5",
+            "text": "Every config-driven role constraint has two consumers: the frontend for UX and the backend service for security. The frontend check is never sufficient.",
+            "source": "frontend.md"
+          },
+          {
+            "text": "The frontend receives assigned role names, not resolved permissions, and no hierarchy is expanded on the client — a list shared for UI purposes must therefore name every role that implies the capability."
+          },
+          {
+            "text": "The server enforces regardless of what the client rendered, so a stale or wrong client list costs an affordance, never a grant."
+          }
+        ],
+        "imagesAndDiagrams": [],
+        "examples": []
+      }
+    ],
+    "review": {
+      "axioms": {
+        "state": "unreviewed",
+        "note": "Imported verbatim from the draft at `_meta/_docs_to_adapt/04_access-control.md` on 2026-08-11. Daniel wrote these with an agent and considers them roughly right, but they have not been reviewed since. One `sub` was added to axiom 6 on 2026-08-14 (compile-time enforcement), because the shipped library proves that property and no axiom stated it. Axiom 8 describes a system that does not exist yet — see the `ac-reference-states-the-built-system` decision."
+      },
+      "purpose": {
+        "state": "unreviewed"
+      },
+      "reference": {
+        "state": "unreviewed",
+        "note": "Written on 2026-08-14 by reading `shared/libs/gated-scoped-ac/`, `configs/access-control/index.ts` and their consumers, then digesting the AC rules the tracker holds. Every claim here describes the library as built — where a tracked rule and the code disagreed, the code won and the rule stayed un-consumed with a warning on it. Updated the same day alongside roadmap step 4, which added the payload slot, the four operators, the named join column and the traversal guard; AC34 was rewritten there rather than kept. That makes this Reference accurate but not canonical: nobody has ruled on whether the built behaviour is the intended one."
+      }
+    }
+  }
+}

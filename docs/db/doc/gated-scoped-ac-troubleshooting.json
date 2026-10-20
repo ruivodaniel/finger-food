@@ -1,0 +1,260 @@
+{
+  "id": "doc/gated-scoped-ac-troubleshooting",
+  "kind": "doc",
+  "title": "Troubleshooting",
+  "status": "converted",
+  "subject": "gated-scoped-ac",
+  "tags": [
+    "gated-scoped-ac",
+    "consumer"
+  ],
+  "paths": [
+    "shared/libs/gated-scoped-ac"
+  ],
+  "summary": "**What.** Diagnostic guide for debugging access-control behavior — why a decision came out the way it did, and how to fix the most common misconfigurations.",
+  "docId": "gated-scoped-ac-troubleshooting",
+  "doc": {
+    "axioms": [],
+    "purpose": {},
+    "reference": [
+      {
+        "topic": "Purpose",
+        "claims": [
+          {
+            "text": "**Why.** Authorization failures look opaque from the outside: a query silently returns zero rows, a verdict denies, and there is no immediate signal as to whether the cause is a missing subject, a misspelled field, an unmatched precondition, or a hierarchy gap. A canonical debug surface and a recipe list save hours."
+          },
+          {
+            "text": "**How.** Use the engine's explain output to trace a decision to the rule and reference that produced it. Cross-reference the recipes in this document for known patterns: missing subjects in the bag, schema/field mismatches, hierarchy not yet populated, fail-closed behavior on undeclared references."
+          },
+          {
+            "text": "**Why this way.** A pure-logic library cannot introspect itself at runtime, but it can emit a structured trace of what it did. Pairing that trace with a small set of known failure shapes is the highest-leverage diagnostic surface for an agnostic engine."
+          }
+        ],
+        "statement": "**What.** Diagnostic guide for debugging access-control behavior — why a decision came out the way it did, and how to fix the most common misconfigurations."
+      },
+      {
+        "topic": "Reference",
+        "claims": [],
+        "statement": "Examples use the same fictional document-management product as DSL-RULES (`DSL-RULES.md`): workspaces contain folders, folders contain documents, users may belong to teams."
+      },
+      {
+        "topic": "Reference › explainScopeResolution",
+        "claims": [
+          {
+            "text": "Sample output:"
+          },
+          {
+            "text": "Diagnostic only — never expose to end users (leaks rule structure and bag contents)."
+          }
+        ],
+        "statement": "When a resolver returns `{ type: \"none\" }` (read/update) or `{ allow: false }` (create/delete), `explainScopeResolution` traces the decision back to the rule and reference that produced it.",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "import { explainScopeResolution } from \"@prowd/scoped-ac\";\n\nconst explanation = explainScopeResolution(\"workspace_member\", roles, ctx);\nconsole.log(JSON.stringify(explanation, null, 2));",
+                "caption": "ts"
+              }
+            ]
+          },
+          {
+            "snippets": [
+              {
+                "code": "{\n  \"scopedRole\": \"workspace_member\",\n  \"found\": true,\n  \"rules\": [\n    {\n      \"ruleIndex\": 0,\n      \"contextChecks\": [\n        {\n          \"scope\": \"session.workspace.type:'team'\",\n          \"expected\": \"team\",\n          \"actual\": \"personal\",\n          \"operator\": \"eq\",\n          \"matched\": false\n        }\n      ],\n      \"contextMatched\": false\n    }\n  ],\n  \"finalResult\": \"denied\",\n  \"denialReason\": \"no rule's context matched the bag\"\n}",
+                "caption": "json"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Reference › Decision denied — `actual: undefined` in the trace",
+        "claims": [
+          {
+            "text": "Cause: the path the rule walks is missing from the bag, or walks into `undefined`."
+          },
+          {
+            "text": "Common reasons:"
+          },
+          {
+            "text": "The bag was built without fetching the row the rule references (e.g. rule reads `session.workspace.type` but the bag has only `session.user`)."
+          },
+          {
+            "text": "Field name mismatch: rule says `session.workspace.type`, bag has `session.workspace.workspaceType`."
+          },
+          {
+            "text": "The DB row exists but a JSON column was passed unparsed (`'{\"type\":\"team\"}'` as a string, not an object)."
+          },
+          {
+            "text": "Fix: rebuild the bag to include the missing data; or correct the field name in the rule; or parse JSON columns before populating."
+          }
+        ],
+        "statement": "Symptom: `explainScopeResolution` shows `actual: undefined` for a context or target reference.",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "const workspace = await db.query.workspace.findFirst({\n  where: eq(schema.workspace.id, session.activeWorkspaceId),\n});\n\nconst ctx = {\n  subjects: {\n    session: {\n      user:      { id: user.id },\n      workspace: {\n        id:   workspace.id,\n        type: workspace.type,                          // direct column\n        meta: typeof workspace.meta === \"string\"       // JSON parsed\n          ? JSON.parse(workspace.meta)\n          : workspace.meta,\n      },\n    },\n  },\n  assignedRoles,\n};",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Reference › Boot error — `Undeclared subject: \"<name>\"`",
+        "claims": [
+          {
+            "text": "Cause: a `$subject.path` references a name not in the consumer's `subjects` declaration. Usually a typo (`$sesion` vs `$session`)."
+          },
+          {
+            "text": "Fix: correct the name in the rule, or add the subject to `subjects.config.ts` and extend the bag-building code to populate it."
+          }
+        ],
+        "statement": "Symptom:",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "Invalid scope configuration:\n  - [UNDECLARED_SUBJECT] Undeclared subject: \"sesion\" in \"$sesion.user.id\"\n    in role \"workspace_member\" (at scopedRoles.workspace_member.accessRules[0].target)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Reference › Boot error — `RHS must be $subject.path or 'literal'`",
+        "claims": [
+          {
+            "text": "Cause: a target RHS uses an unquoted literal or an unprefixed dotted path. Both are rejected at parse time — there is no fallback."
+          },
+          {
+            "text": "Fix: quote literals (`'workspace_id'`) or prefix subject paths (`$session.workspace.id`)."
+          }
+        ],
+        "statement": "Symptom:",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "[INVALID_TARGET_SCOPE] Invalid target scope \"document.workspaceId:workspace_id\":\n  RHS must be $subject.path or 'literal' in role \"workspace_member\""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Reference › Boot error — `context scope RHS must be a quoted literal`",
+        "claims": [
+          {
+            "text": "Cause: a context scope used a subject path on the RHS. Context scopes are preconditions and v2 forbids subject paths on context RHS — they create resolution-time circular dependencies."
+          },
+          {
+            "text": "Fix: if the rule meant \"this row IS the session's workspace,\" that is a *target* scope, not a context one — `workspace.id:$session.workspace.id` belongs in `target`, not `context`. If the rule meant \"the caller's workspace type equals X,\" use a literal: `session.workspace.type:'X'`."
+          }
+        ],
+        "statement": "Symptom:",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "[INVALID_CONTEXT_SCOPE] Invalid context scope \"session.workspace.id:$session.workspace.id\":\n  context RHS must be a quoted literal, not a subject path"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Reference › Boot error — `Entity \"<name>\" not in schema`",
+        "claims": [
+          {
+            "text": "Cause: the role's `entity` field, or the LHS first segment of a target scope, names an entity not registered in the schema. Typo, or the entity was renamed without sweeping rules."
+          },
+          {
+            "text": "Fix: correct the rule, or add the entity to the schema."
+          }
+        ],
+        "statement": "Symptom:",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "[UNKNOWN_ENTITY] Entity \"documnet\" not in schema, in role \"document_reader\""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Reference › Traversal returns no rows after a schema change",
+        "claims": [
+          {
+            "text": "Cause: the FK column referenced in the hop (`member.organizationId → org…`) was renamed or removed in the schema. The engine assumes the FK joins to the toEntity's `id` — if the column no longer points to that, the LEFT JOIN matches nothing."
+          },
+          {
+            "text": "Fix: confirm the FK column still exists in the schema entry's `columns` map and still references the toEntity's id column. Schema drift between rule authoring and table evolution is the most common cause of silent traversal failures."
+          }
+        ],
+        "statement": "Symptom: a `→` traversal that worked before now returns empty even though data exists."
+      },
+      {
+        "topic": "Reference › SQL error on `meta` variant — `operator does not exist`",
+        "claims": [
+          {
+            "text": "Cause: the column backing `meta` filtering is TEXT, not JSONB. The `->>` operator requires JSONB."
+          },
+          {
+            "text": "Fix: cast in the consumer's filter translation, or migrate the column to JSONB."
+          }
+        ],
+        "statement": "Symptom: PostgreSQL error referencing the `->>` operator on a TEXT column.",
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "case \"meta\":\n  return sql`(${schema.workspace.meta})::jsonb->>${filter.field} = ${filter.values[0]}`;",
+                "caption": "ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Reference › Quick debugging checklist",
+        "claims": [
+          {
+            "text": "Run `explainScopeResolution` for the role in question."
+          },
+          {
+            "text": "Check the bag — does every path the rule references actually have a value?"
+          },
+          {
+            "text": "Check the role definition — `entity` matches the entity you're querying? `actions` includes the operation?"
+          },
+          {
+            "text": "Check the hierarchy — is the role actually an effective role for the caller, or only a descendant the caller does not hold?"
+          },
+          {
+            "text": "Check the filter exhaustiveness in your storage adapter — is some variant silently defaulting?"
+          },
+          {
+            "text": "For traversals, check the schema — does the FK column still exist with the expected name?"
+          }
+        ],
+        "statement": "When a decision feels wrong:"
+      }
+    ],
+    "review": {
+      "axioms": {
+        "state": "unreviewed"
+      },
+      "purpose": {
+        "state": "unreviewed"
+      },
+      "reference": {
+        "state": "unreviewed"
+      }
+    },
+    "converted": true
+  }
+}

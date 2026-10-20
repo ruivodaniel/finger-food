@@ -1,0 +1,17 @@
+{
+  "id": "term/doc",
+  "kind": "term",
+  "title": "doc",
+  "status": "converted",
+  "subjects": [
+    "docs"
+  ],
+  "tags": [
+    "docs"
+  ],
+  "paths": [],
+  "term": {
+    "def": "A canonical document: axiom, purpose, reference.",
+    "aliases": []
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "name": "@modules/user-organization-mgmt",
+  "version": "0.1.0",
+  "description": "User & organization management — config-driven authentication, organizations, memberships, invitations, and legal consent",
+  "type": "module",
+  "exports": {
+    "./shared": {
+      "types": "./shared/index.ts",
+      "import": "./shared/index.ts"
+    },
+    "./api": {
+      "types": "./api/index.ts",
+      "import": "./api/index.ts"
+    },
+    "./models": {
+      "types": "./api/models/index.ts",
+      "import": "./api/models/index.ts",
+      "default": "./api/models/index.ts"
+    },
+    "./web": {
+      "types": "./web/index.ts",
+      "import": "./web/index.ts"
+    }
+  },
+  "files": [
+    "shared",
+    "api",
+    "web"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test:unit": "vitest run",
+    "test:contract": "vitest run --config vitest.contract.config.ts",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@libs/gated-scoped-ac": "workspace:*",
+    "sanitize-html": "^2.17.4"
+  },
+  "peerDependencies": {
+    "@hono/zod-validator": ">=0.4.0",
+    "@paralleldrive/cuid2": "^3.0.0",
+    "@libs/web-components": "workspace:*",
+    "@libs/web-layouts": "workspace:*",
+    "@libs/list-query": "workspace:*",
+    "@libs/rich-text-editor": "workspace:*",
+    "@libs/value-types": "workspace:*",
+    "@tanstack/react-query": "^5.77.0",
+    "@tanstack/react-router": "^1.120.0",
+    "drizzle-orm": ">=0.30.0",
+    "hono": "^4.12.17",
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0",
+    "zod": "^4.4.3"
+  },
+  "peerDependenciesMeta": {
+    "@libs/web-components": {
+      "optional": true
+    },
+    "@libs/web-layouts": {
+      "optional": true
+    },
+    "@libs/list-query": {
+      "optional": true
+    },
+    "@libs/rich-text-editor": {
+      "optional": true
+    },
+    "@libs/value-types": {
+      "optional": true
+    },
+    "@tanstack/react-query": {
+      "optional": true
+    },
+    "@tanstack/react-router": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0 || ^19.0.0",
+    "@types/sanitize-html": "^2.13.0",
+    "otplib": "^12.0.1",
+    "typescript": "^5.0.0",
+    "vitest": "^3.1.4"
+  }
+}

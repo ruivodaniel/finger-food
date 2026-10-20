@@ -1,0 +1,113 @@
+{
+  "id": "doc/orchestrator-readme",
+  "kind": "doc",
+  "title": "@apps/orchestrator",
+  "status": "converted",
+  "subject": "orchestrator",
+  "tags": [
+    "orchestrator"
+  ],
+  "paths": [
+    "apps/orchestrator"
+  ],
+  "summary": "The seed orchestrator: versioned workers and pipelines run on Trigger.dev, every artifact in object storage, one gated API in front. Design and glossary: `sl…",
+  "docId": "orchestrator-readme",
+  "doc": {
+    "axioms": [],
+    "purpose": {
+      "intro": "The seed orchestrator: versioned workers and pipelines run on Trigger.dev, every artifact in object storage, one gated API in front. Design and glossary: `slice-design/projects/seed-orchestrator` (exploration \"Orchestrator API and its concepts\"; v7 is the as-built record)."
+    },
+    "reference": [
+      {
+        "topic": "Layout",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "apps/orchestrator/\n  registry.ts              what this project runs: each pipeline and the roles that may start it\n  trigger.config.ts        the Trigger.dev project (cloud)\n  shared/\n    env.ts · db.ts · storage.ts   once-only init (SCF10)\n    api/                   index.ts (entrypoint, composition root) · app.ts (the factory) · middlewares\n                           routes/index.ts · services/{files,pipelines,runs} · lib/{http,openapi}\n    ontology/              vocabulary.ts, capabilities.ts (as const: every id is a type)\n    runtime/               slot · envelope · validate · pipeline · usage · storage · run\n                           worker.ts (contracts, one step) · run-pipeline.ts (the task, one run, its steps)\n                           models/ and repositories/ of the run store\n    workers/index.ts       every worker version, one line each\n    workers/<id>/v<N>/     contract.ts (meta, config, input, output) · worker.ts\n    trigger/tasks.ts       run-pipeline, the one Trigger.dev task\n    lib/                   pure helpers\n  slices/\n    seed/<slice>/pipelines/<id>/v<N>/pipeline.ts\n    product/<slice>/pipelines/<id>/v<N>/pipeline.ts"
+              }
+            ]
+          }
+        ],
+        "statement": "Nothing is generated: the registry, the worker list and the ontology are imported, so the compiler checks every id, version and slot."
+      },
+      {
+        "topic": "Local loop",
+        "claims": [
+          {
+            "text": "To watch runs live (for demos): `pnpm --filter @apps/orchestrator run-viewer`, then open http://localhost:4010. It reads the run store directly and prices each run as if on Trigger.dev, from `_meta/research/orchestrator/run-viewer/pricing.json`."
+          }
+        ],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "pnpm docker:up && pnpm docker:up:orchestrator     # main's localstack (S3) + the orchestrator's postgres (:5444)\ncd apps/orchestrator && bash setup.sh             # .env, the Qwen model, LibreOffice check\npnpm --filter @apps/orchestrator db:push\nollama serve                                       # Qwen transcribes scanned pages\npnpm dev:orchestrator                              # the api on :4003; TRIGGER_MODE=inline runs tasks in-process\npnpm --filter @apps/orchestrator test:e2e          # upload → run → poll → assert the artifacts",
+                "caption": "bash"
+              }
+            ]
+          },
+          {
+            "snippets": [
+              {
+                "code": "T=$(pnpm --filter @apps/orchestrator token --role agent | tail -1)\ncurl -H \"Authorization: Bearer $T\" -F file=@doc.pdf localhost:4003/uploads\ncurl -H \"Authorization: Bearer $T\" -H 'content-type: application/json' \\\n  -d '{\"input\":{\"document\":{\"type\":\"type-text\",\"format\":\"format-pdf\",\"ref\":\"<the ref>\"}}}' \\\n  localhost:4003/pipelines/document-to-text/runs\ncurl -H \"Authorization: Bearer $T\" localhost:4003/runs/<run id>",
+                "caption": "bash"
+              }
+            ]
+          }
+        ],
+        "statement": "A token for curl: `pnpm --filter @apps/orchestrator token --role agent`."
+      },
+      {
+        "topic": "Adding a worker",
+        "claims": [
+          {
+            "text": "`shared/workers/<id>/v1/contract.ts` — `meta` (the capability, an id in `shared/ontology/capabilities.ts`, and the vendor), `config` (Zod, with defaults), `input` and `output` slot maps. A slot is `slot(\"type-image\", {...})` for content or `slot({ formats: [...] })` for a file; the output may be a function of the config."
+          },
+          {
+            "text": "`worker.ts` — `export const run: WorkerRun<typeof contract>`; it reads its input refs from `ctx.artifacts`, does the work, stores its outputs with `ctx.artifacts`, reports usage with `ctx.report`."
+          },
+          {
+            "text": "One line in `shared/workers/index.ts`."
+          },
+          {
+            "text": "A unit test under `__test__/unit/workers/` with the vendor mocked; a live check with `pnpm run-worker <id> <file> '{config}'`."
+          }
+        ]
+      },
+      {
+        "topic": "Adding a pipeline",
+        "claims": [
+          {
+            "text": "`slices/<seed|product>/<slice>/pipelines/<id>/v1/pipeline.ts` — default-export `pipeline({ id, version, input, output, maxCredits, machine, maxDuration }, body)`. The body calls `ctx.worker(id, input, { config, version, step })`."
+          },
+          {
+            "text": "Import it in `registry.ts` with the `roles` that may start it. To ship a new version, import the new folder instead; the old one stays in the code."
+          }
+        ]
+      },
+      {
+        "topic": "Cloud",
+        "claims": [
+          {
+            "text": "Checks: `pnpm --filter @apps/orchestrator typecheck`, `lint`, `test:unit`; repo-wide `pnpm lint:arch` and `pnpm validate:scaffolding` (node ≥ 22.6)."
+          }
+        ],
+        "statement": "`trigger login` once, then `TRIGGER_PROJECT_REF`, `TRIGGER_SECRET_KEY` and `CLOUD_DATABASE_URL` in `.env`; `pnpm --filter @apps/orchestrator deploy` (add `--dry-run` first). The API triggers `run-pipeline` with the pipeline's machine and time limit in the environment its secret key names; the tasks read `DATABASE_URL` and the S3 variables pushed at deploy."
+      }
+    ],
+    "review": {
+      "axioms": {
+        "state": "unreviewed"
+      },
+      "purpose": {
+        "state": "unreviewed"
+      },
+      "reference": {
+        "state": "unreviewed"
+      }
+    },
+    "converted": true
+  }
+}

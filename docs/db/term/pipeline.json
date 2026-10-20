@@ -1,0 +1,19 @@
+{
+  "id": "term/pipeline",
+  "kind": "term",
+  "title": "pipeline",
+  "status": "converted",
+  "subjects": [
+    "orchestrator"
+  ],
+  "tags": [
+    "orchestrator"
+  ],
+  "paths": [
+    "apps/orchestrator"
+  ],
+  "term": {
+    "def": "Orchestrates [[worker|workers]] and other pipelines.",
+    "aliases": []
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "@configs/list-query",
+  "type": "module",
+  "private": true,
+  "main": "./index.ts",
+  "peerDependencies": {
+    "@libs/list-query": "workspace:*"
+  }
+}

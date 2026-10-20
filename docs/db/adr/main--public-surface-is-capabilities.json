@@ -1,0 +1,29 @@
+{
+  "id": "adr/main--public-surface-is-capabilities",
+  "kind": "adr",
+  "title": "A public surface exports capabilities, and only the app may name a seed slice",
+  "status": "approved",
+  "subject": "main",
+  "tags": [
+    "main",
+    "architecture"
+  ],
+  "paths": [],
+  "summary": "A [[slice]]'s [[public surface]] is a list of capabilities — services, hooks, components, routes — not services alone. Only the app may name a [[seed slice]]. A",
+  "adr": {
+    "date": "2026-08-11",
+    "context": "A team-member picker owns [[seed slice|UOM]] knowledge — which users exist, which are visible, their name and avatar — and several product slices need it. If a product slice imports it from UOM directly, deleting UOM breaks that product slice at an edge nobody declared, and the removal test's promise that \"nothing else breaks\" turns out to have been an overclaim: of course something breaks, the capability is gone.",
+    "decision": "A [[slice]]'s [[public surface]] is a list of capabilities — services, hooks, components, routes — not services alone. Only the app may name a [[seed slice]]. Anything else declares a need and the app [[injection|injects]] the implementation at [[mount]], exactly as it injects a [[leaf adapter]].",
+    "consequences": [
+      "The removal test is restated: it guarantees locality, not zero impact. Deleting a seed slice breaks only what declared a need for it, and it breaks there — never at a hidden edge.",
+      "The Purpose's \"nothing else breaks\" was corrected to match.",
+      "The consumer declares what it needs, in its own types; the app satisfies that declaration with the provider. Injecting a provider service handle directly (`users: userOrg.services.user`) would put a seed slice type in the consumer's signature — naming the seed slice by the back door, granting more capability than needed, and breaking the consumer's compile when the seed slice is deleted. The declaration stays a plain function on the mount options: naming it as an interface would be an abstraction for one method (PRC3).",
+      "`UserProfileService.getAllByUserIds` is seed slice-internal — it is not on UOM's mount result, so no other slice can consume it. Exporting a capability is exactly the act of putting it there.",
+      "**Contradicted by the code today:** `apps/main/shared/web/src/config/navigation.config.ts` hardcodes every nav entry — titles, icons, paths of seed slice pages — in app config. Slices must contribute their nav entries on their public surface; the app assembles and renders. To fix."
+    ],
+    "affects": [
+      "scaffolding-and-import-boundaries"
+    ],
+    "adrStatus": "accepted"
+  }
+}

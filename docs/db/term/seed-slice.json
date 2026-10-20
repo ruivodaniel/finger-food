@@ -1,0 +1,18 @@
+{
+  "id": "term/seed-slice",
+  "kind": "term",
+  "title": "seed slice",
+  "status": "approved",
+  "subjects": [
+    "main"
+  ],
+  "tags": [
+    "architecture"
+  ],
+  "paths": [],
+  "term": {
+    "def": "A self-contained, product-agnostic [[slice]] in `apps/main/slices/seed/<s>/`, reusable across projects. Ships with the seed.",
+    "aliases": [],
+    "proposed": true
+  }
+}

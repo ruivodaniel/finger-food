@@ -1,0 +1,147 @@
+{
+  "id": "doc/list-query-testing",
+  "kind": "doc",
+  "title": "Testing",
+  "status": "converted",
+  "subject": "list-query",
+  "tags": [
+    "list-query",
+    "contributor"
+  ],
+  "paths": [
+    "shared/libs/list-query"
+  ],
+  "summary": "How to add and test helpers in `@prowd/list-query`.",
+  "docId": "list-query-testing",
+  "doc": {
+    "axioms": [],
+    "purpose": {
+      "intro": "How to add and test helpers in `@prowd/list-query`."
+    },
+    "reference": [
+      {
+        "topic": "Running",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "pnpm --filter @prowd/list-query test:unit       # run once\npnpm --filter @prowd/list-query test:watch      # watch mode\npnpm --filter @prowd/list-query typecheck       # tsc --noEmit",
+                "caption": "bash"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Conventions",
+        "claims": [
+          {
+            "text": "**Co-located tests.** `foo.ts` and `foo.test.ts` live side by side. Vitest is configured to pick up `src/**/*.test.ts`."
+          },
+          {
+            "text": "**One test file per helper.** If `foo.ts` exports three functions, they all go in `foo.test.ts`. If the file grows past ~300 lines, that's a signal the helper itself needs splitting."
+          },
+          {
+            "text": "**No integration tests in this lib.** The module's existing unit / integration tests cover the full wiring once the lib is adopted. The lib's own tests cover only the pure functions."
+          },
+          {
+            "text": "**No real Drizzle in tests.** `build-order-by.test.ts` stubs `drizzle-orm` at the module level with `vi.mock`. `apply-pagination.test.ts` uses a fake query builder that records calls. Neither needs a database."
+          },
+          {
+            "text": "**No real zod schemas outside the zod helper's own test file.** The factory test exercises `z.parse()` but the Drizzle helpers test stays ORM-agnostic and zod-free."
+          }
+        ]
+      },
+      {
+        "topic": "Adding a new helper",
+        "claims": [
+          {
+            "text": "Put the code in the appropriate folder:"
+          },
+          {
+            "text": "— isomorphic → `src/` (top level, or a new subfolder if it's meaningful)"
+          },
+          {
+            "text": "— BE-only → `src/server/...`"
+          },
+          {
+            "text": "— FE-only → `src/client/...`"
+          },
+          {
+            "text": "Export it from that folder's `index.ts`."
+          },
+          {
+            "text": "If it's a BE helper, also export it from `src/server/index.ts`."
+          },
+          {
+            "text": "Write `foo.test.ts` co-located."
+          },
+          {
+            "text": "Document it in `docs/consumer/API-REFERENCE.md` and add a usage example to `02-BACKEND-USAGE.md` or `03-FRONTEND-USAGE.md` as appropriate."
+          },
+          {
+            "text": "Run `pnpm --filter @prowd/list-query test:unit && pnpm --filter @prowd/list-query typecheck` before committing."
+          }
+        ]
+      },
+      {
+        "topic": "What to test",
+        "claims": [
+          {
+            "text": "The happy path with realistic input."
+          },
+          {
+            "text": "Every branch / early return."
+          },
+          {
+            "text": "Every error or rejection mode — with assertions on the specific reason, not just \"it threw\"."
+          },
+          {
+            "text": "Type preservation where relevant (e.g. `applyPagination` returns the same qb type)."
+          },
+          {
+            "text": "Do not test:"
+          },
+          {
+            "text": "Zod internals (assume `.parse` works)."
+          },
+          {
+            "text": "Drizzle internals (assume `asc` / `desc` emit correct SQL — we stub them)."
+          },
+          {
+            "text": "Things the parser already rejects at an earlier layer (don't re-test `unknown_field` in `buildOrderBy.test.ts` — the factory already rejected it)."
+          }
+        ],
+        "statement": "For every helper:"
+      },
+      {
+        "topic": "Adding a sort syntax rule",
+        "claims": [
+          {
+            "text": "Update the grammar block in `docs/contributor/SORT-SYNTAX.md`."
+          },
+          {
+            "text": "Add a test case to `parse-sort-string.test.ts`."
+          },
+          {
+            "text": "Re-verify `create-list-query-schema.test.ts` — the factory uses the parser, so schema behaviour may shift."
+          }
+        ],
+        "statement": "If you change `parseSortString`:"
+      }
+    ],
+    "review": {
+      "axioms": {
+        "state": "unreviewed"
+      },
+      "purpose": {
+        "state": "unreviewed"
+      },
+      "reference": {
+        "state": "unreviewed"
+      }
+    },
+    "converted": true
+  }
+}

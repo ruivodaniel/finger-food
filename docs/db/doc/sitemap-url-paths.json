@@ -1,0 +1,74 @@
+{
+  "id": "doc/sitemap-url-paths",
+  "kind": "doc",
+  "title": "Sitemap · URL Paths",
+  "status": "approved",
+  "subject": "main",
+  "tags": [
+    "main"
+  ],
+  "paths": [
+    "apps/main"
+  ],
+  "summary": "One place that shows every URL of the seed baseline as a tree, with what each path shows — so a product slice adds its own paths beside these instead of gues…",
+  "docId": "sitemap-url-paths",
+  "doc": {
+    "axioms": [
+      {
+        "text": "A URL path is the contract between navigation and the app: every screen the user can land on has a path; a modal window is not a path."
+      },
+      {
+        "text": "Paths carry identity, not state.",
+        "sub": [
+          "Route params (`:organizationId`) name the thing on screen.",
+          "`:current` is resolved by the front end to the active organization; the back end never sees it."
+        ]
+      }
+    ],
+    "purpose": {
+      "intro": "One place that shows every URL of the seed baseline as a tree, with what each path shows — so a product slice adds its own paths beside these instead of guessing where they go.",
+      "points": [
+        "The tree is the baseline: account, organizations, settings, legal.",
+        "Each node can carry the screenshot of the screen it lands on."
+      ]
+    },
+    "reference": [
+      {
+        "topic": "The seed baseline paths",
+        "statement": "The tree as it stands. Public paths need no session; protected paths need an authenticated user. `/settings` lives under `/my`.",
+        "claims": [
+          {
+            "text": "`/my` groups everything about the signed-in user: memberships, invitations, settings."
+          },
+          {
+            "text": "`/organizations/:organizationId` and `/organizations/:current` render the same pages; `:current` is a front-end alias for the active organization."
+          },
+          {
+            "text": "`/legal-documents/*` is public and takes `?orgTypeId` and `?docId` as query parameters."
+          },
+          {
+            "text": "`/resolve` is where unmet requirements are resolved before the user continues."
+          }
+        ],
+        "imagesAndDiagrams": [
+          {
+            "type": "html",
+            "src": "../assets/sitemap-url-paths/sitemap.html",
+            "title": "the tree — click a camera for the screenshot"
+          }
+        ]
+      }
+    ],
+    "review": {
+      "axioms": {
+        "state": "unreviewed"
+      },
+      "purpose": {
+        "state": "unreviewed"
+      },
+      "reference": {
+        "state": "unreviewed"
+      }
+    }
+  }
+}

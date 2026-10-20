@@ -1,0 +1,245 @@
+{
+  "id": "doc/mapper",
+  "kind": "doc",
+  "title": "MAPR: the documentation standard",
+  "status": "converted",
+  "subject": "docs",
+  "tags": [
+    "docs"
+  ],
+  "paths": [],
+  "summary": "Map → Axioms → Purpose → Reference: the shape of every doc, map and ADR, and the rules of the registry.",
+  "docId": "mapper",
+  "doc": {
+    "axioms": [
+      {
+        "text": "Each thing is documented in one canonical place, nothing is duplicated."
+      },
+      {
+        "text": "Documentation is positional: a doc lives at the scaffolding level it governs and applies to everything below it; navigation points to it."
+      },
+      {
+        "text": "Every doc follows the same structure, so a reader always knows where to look."
+      },
+      {
+        "text": "The structure runs axiom principles → purpose → reference detail. By reading the axiom principles you should understand the architecture principles and no reference should drift from axioms."
+      },
+      {
+        "text": "Documentation of reusable domains (example: shared libs and seed slices) separates **consumer** (how to use) from **contributor** (how to change)."
+      }
+    ],
+    "purpose": {
+      "intro": "Agents write verbose, drifting prose by default, and no human can re-read every doc on every change. MAPR fixes the shape so the constraints are impossible to miss because every doc leads with its what and why before the how."
+    },
+    "reference": [
+      {
+        "topic": "Artifacts",
+        "statement": "MAPR stands for Map → Axioms → Purpose → Reference. Three artifacts, one job each.",
+        "claims": [
+          {
+            "text": "**Map**: navigate. Pointers only, never teaches. It is a `map.json`."
+          },
+          {
+            "text": "**Doc**: the canonical reference. Axioms → Purpose → Reference. It is a `<id>.json` in a folder of its own."
+          },
+          {
+            "text": "**ADR**: record one past decision. Context → Decision → Consequences. It is an `adr.json`."
+          },
+          {
+            "text": "A map that teaches, a doc that records history, or an ADR in a canonical doc are all violations."
+          }
+        ]
+      },
+      {
+        "topic": "Doc structure",
+        "statement": "Axioms, then purpose, then reference, in that order.",
+        "claims": [
+          {
+            "text": "**Axioms**: plain sentences. One universal invariant per line, most abstract first, most concrete after. Easy to read, no long prose, no subjectiveness, no method names or shapes."
+          },
+          {
+            "text": "If it is a mechanism, it is Reference, not an axiom."
+          },
+          {
+            "text": "**Purpose**: one paragraph, plain dev voice. State why the decisions were made. Do not define universal concepts, do not restate the axioms."
+          },
+          {
+            "text": "Someone reading the axioms might understand the rules but the purpose of those rules might not be self evident: that is the role of the purpose."
+          },
+          {
+            "text": "**Reference**: all concrete rules and mechanics that are relevant, still plain dev voice and with diagrams over prose."
+          },
+          {
+            "text": "**Cross-cutting rationale** is stated once, in the constitution, and referenced. Never repeated per doc."
+          }
+        ],
+        "examples": [
+          {
+            "title": "The shape of a doc",
+            "snippets": [
+              {
+                "caption": "<id>/<id>.json",
+                "code": "{\n  \"id\": \"<id>\",\n  \"type\": \"doc\",\n  \"title\": \"Title\",\n  \"axioms\": [ { \"text\": \"numbered sentences, one idea each, abstract to concrete\" } ],\n  \"purpose\": { \"intro\": \"one paragraph: why these decisions exist\" },\n  \"reference\": [ { \"topic\": \"…\", \"claims\": [ … ] } ]\n}"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Map structure",
+        "statement": "A map is navigation only.",
+        "claims": [
+          {
+            "text": "The central map is the registry (`docs/engine/registry.ts`): domain entry points only, one per location."
+          },
+          {
+            "text": "A local map (`<location>/docs/map.json`) points to everything inside that context, nothing outside it."
+          },
+          {
+            "text": "An entry is a pointer and a one-liner: id, title, path, kind and summary, plus its status."
+          },
+          {
+            "text": "A map starts with instructions for whoever reads it."
+          },
+          {
+            "text": "A map of a reusable domain points to `consumer/` and `contributor/` docs, then `adr/` and `glossary/`. Nothing else."
+          }
+        ],
+        "examples": [
+          {
+            "title": "A reusable domain",
+            "snippets": [
+              {
+                "caption": "shared/libs/<name>/docs/",
+                "code": "map.json          ← local map\nglossary/         ← the terms\nconsumer/         ← usage docs (how to use)\ncontributor/      ← internal docs (how to change)\nadr/              ← decisions"
+              }
+            ]
+          },
+          {
+            "title": "A location that is not a reusable domain",
+            "snippets": [
+              {
+                "caption": "apps/main/docs/",
+                "code": "map.json          ← local map\nglossary/         ← the terms\n<doc>/            ← the docs, flat\nadr/              ← decisions"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Consumer and contributor",
+        "statement": "The split applies to reusable domains.",
+        "claims": [
+          {
+            "text": "Libraries and seed slices are reusable domains: their docs split into `consumer/` and `contributor/`."
+          },
+          {
+            "text": "The root, main, the apps and infra are not reusable domains: their docs stay flat, with no consumer and no contributor."
+          }
+        ]
+      },
+      {
+        "topic": "ADR structure",
+        "statement": "An ADR records one past decision.",
+        "claims": [
+          {
+            "text": "An entry has a date, a title, a context, a decision and consequences, and it is append-only."
+          },
+          {
+            "text": "A decision that stops being true is superseded by a new entry, never rewritten."
+          },
+          {
+            "text": "The ADR is stored in `adr/`, beside the docs it concerns."
+          }
+        ]
+      },
+      {
+        "topic": "Glossary",
+        "statement": "Every location has its own glossary.",
+        "claims": [
+          {
+            "text": "Terms are written inline as `[[term]]` or `[[term|shown text]]`."
+          },
+          {
+            "text": "A term can be used across locations: the viewer reads every glossary at runtime."
+          }
+        ]
+      },
+      {
+        "topic": "Map and ADR locations",
+        "statement": "A map and an ADR sit with the docs they concern.",
+        "claims": [
+          {
+            "text": "Global: the registry and the root's `adr/`."
+          },
+          {
+            "text": "Seed slice: `<slice>/docs/map.json` and `<slice>/docs/adr/`."
+          },
+          {
+            "text": "Lib: `shared/libs/<name>/docs/map.json` and `…/docs/adr/`."
+          },
+          {
+            "text": "App: `apps/<name>/docs/map.json` and `…/docs/adr/`."
+          }
+        ]
+      },
+      {
+        "topic": "Maintenance loop",
+        "statement": "The order is fixed: axioms approved before reference, never the reverse.",
+        "claims": [
+          {
+            "text": "Draft the axioms, or the change needed."
+          },
+          {
+            "text": "Human approves."
+          },
+          {
+            "text": "Write from scratch, or scan the Reference for gaps and clashes."
+          },
+          {
+            "text": "Report gaps and clashes to the human."
+          },
+          {
+            "text": "Human approves the resolution."
+          },
+          {
+            "text": "Update the Reference."
+          },
+          {
+            "text": "Human approves the reference."
+          },
+          {
+            "text": "Update the history in `adr/` if it is an architectural change."
+          }
+        ]
+      },
+      {
+        "topic": "Compliance",
+        "statement": "Each file and folder of the registry is labelled mapper compliant or not.",
+        "claims": [
+          {
+            "text": "A doc is compliant when its id is its folder and file name, it has axioms, a purpose and a reference, and it sits where its location's rules say."
+          },
+          {
+            "text": "A location is compliant when it has a map, an `adr/` and a `glossary/`, and every file under its docs is in the map or is an asset."
+          },
+          {
+            "text": "Markdown left in a location is not compliant: it waits in `.old-markdown-to-sunset`."
+          }
+        ]
+      }
+    ],
+    "review": {
+      "axioms": {
+        "state": "unreviewed"
+      },
+      "purpose": {
+        "state": "unreviewed"
+      },
+      "reference": {
+        "state": "unreviewed"
+      }
+    },
+    "converted": true
+  }
+}

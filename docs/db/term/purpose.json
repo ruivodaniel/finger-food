@@ -1,0 +1,17 @@
+{
+  "id": "term/purpose",
+  "kind": "term",
+  "title": "purpose",
+  "status": "converted",
+  "subjects": [
+    "docs"
+  ],
+  "tags": [
+    "docs"
+  ],
+  "paths": [],
+  "term": {
+    "def": "One paragraph: why the decisions exist. It does not restate the axioms.",
+    "aliases": []
+  }
+}

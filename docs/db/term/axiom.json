@@ -1,0 +1,17 @@
+{
+  "id": "term/axiom",
+  "kind": "term",
+  "title": "axiom",
+  "status": "converted",
+  "subjects": [
+    "docs"
+  ],
+  "tags": [
+    "docs"
+  ],
+  "paths": [],
+  "term": {
+    "def": "One universal invariant per line, most abstract first. No mechanism, no method names.",
+    "aliases": []
+  }
+}

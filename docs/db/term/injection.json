@@ -1,0 +1,18 @@
+{
+  "id": "term/injection",
+  "kind": "term",
+  "title": "injection",
+  "status": "approved",
+  "subjects": [
+    "main"
+  ],
+  "tags": [
+    "architecture"
+  ],
+  "paths": [],
+  "term": {
+    "def": "The app supplying configs, slice infra (db), leaf adapters and assets to a [[slice]] at mount. Slices declare needs; they never import the concrete.",
+    "aliases": [],
+    "proposed": true
+  }
+}

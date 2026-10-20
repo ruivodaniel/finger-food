@@ -1,0 +1,371 @@
+id,invoice_id,line_no,description,quantity,unit_price,discount_pct,vat_rate,total_gross
+inv:FA2023/15:1,inv:FA2023/15,1,Serviço de Comidas,1.0,153.55,0,13,173.51
+inv:FA2023/15:2,inv:FA2023/15,2,Serviço de Bebidas,1.0,70.5,0,23,86.72
+inv:FA2023/2:1,inv:FA2023/2,1,"Dia 22, CB - serviço de Comidas",50.0,6.0,0,13,339.0
+inv:FA2023/2:2,inv:FA2023/2,2,"Dia 22, CB - serviço de Bebidas",50.0,1.5,0,23,92.23
+inv:FA2023/2:3,inv:FA2023/2,3,"Dia 22, Almoço - serviço de Comidas",25.0,15.0,0,13,423.75
+inv:FA2023/2:4,inv:FA2023/2,4,"Dia 22, Almoço - serviço de Bebidas",25.0,1.5,0,23,46.13
+inv:FA2023/2:5,inv:FA2023/2,5,"Dia 23, CB - serviço de Comidas",25.0,6.0,0,13,169.5
+inv:FA2023/2:6,inv:FA2023/2,6,"Dia 23, CB - serviço de Bebidas",25.0,1.5,0,23,46.13
+inv:FA2023/2:7,inv:FA2023/2,7,"Dia 23, Almoço - serviço de Comidas",25.0,15.0,0,13,423.75
+inv:FA2023/2:8,inv:FA2023/2,8,"Dia 23, Almoço - serviço de Bebidas",25.0,1.5,0,23,46.13
+inv:FA2023/2:9,inv:FA2023/2,9,"Dia 24, CB - serviço de Comidas",25.0,6.0,0,13,169.5
+inv:FA2023/2:10,inv:FA2023/2,10,"Dia 24, CB - serviço de Bebidas",25.0,1.5,0,23,46.13
+inv:FA2023/2:11,inv:FA2023/2,11,"Dia 24, Almoço - serviço de Comidas",25.0,15.0,0,13,423.75
+inv:FA2023/2:12,inv:FA2023/2,12,"Dia 24, Almoço - serviço de Bebidas",25.0,1.5,0,23,46.13
+inv:FA2023/25:1,inv:FA2023/25,1,Serviço de Comidas,1.0,121.36,0,13,137.14
+inv:FA2023/25:2,inv:FA2023/25,2,Serviço de Bebidas,1.0,12.5,0,23,15.38
+inv:FA2023/6:1,inv:FA2023/6,1,Serviço de Comidas,40.0,4.43,0,13,200.24
+inv:FA2023/6:2,inv:FA2023/6,2,Serviço de Bebidas,40.0,0.81,0,23,39.85
+inv:FA2023/31:1,inv:FA2023/31,1,Serviço de Coffee-break,1.0,192.5,0,23,236.78
+inv:FA2023/27:1,inv:FA2023/27,1,Serviço de Comidas,1.0,1242.0,0,13,1403.46
+inv:FA2023/27:2,inv:FA2023/27,2,Serviço de Bebidas,1.0,138.0,0,23,169.74
+inv:FA2023/14:1,inv:FA2023/14,1,Serviço de Comidas,1.0,300.0,0,13,339.0
+inv:FA2023/14:2,inv:FA2023/14,2,Serviço de Bebidas,1.0,137.0,0,23,168.51
+inv:FA2023/5:1,inv:FA2023/5,1,Serviço de Comidas,75.0,3.56,0,13,301.71
+inv:FA2023/5:2,inv:FA2023/5,2,Serviço de Bebidas,75.0,0.8,0,23,73.8
+inv:FA2023/1:1,inv:FA2023/1,1,Serviço de Comidas,35.0,6.0,0,13,237.3
+inv:FA2023/1:2,inv:FA2023/1,2,Serviço de Bebidas,35.0,1.5,0,23,64.58
+inv:FA2023/13:1,inv:FA2023/13,1,Serviço de Comidas,1.0,544.25,0,13,615.0
+inv:FA2023/13:2,inv:FA2023/13,2,Serviço de Bebidas,1.0,250.0,0,23,307.5
+inv:FA2023/33:1,inv:FA2023/33,1,Serviço de Comidas Dia 19 Almoço,25.0,16.0,0,13,452.0
+inv:FA2023/33:2,inv:FA2023/33,2,Serviço de Comidas Dia 19 Jantar,25.0,32.8,0,13,926.6
+inv:FA2023/33:3,inv:FA2023/33,3,Serviço de Comidas Dia 20 Coffee Break,25.0,6.4,0,13,180.8
+inv:FA2023/33:4,inv:FA2023/33,4,Serviço de Comida Dia 20 Almoços,25.0,3.2,0,13,90.4
+inv:FA2023/33:5,inv:FA2023/33,5,Serviço de Comidas Brownie,1.0,22.5,100,13,0.0
+inv:FA2023/17:1,inv:FA2023/17,1,Serviço de Comidas,1.0,501.48,0,13,566.67
+inv:FA2023/17:2,inv:FA2023/17,2,Serviço de Bebidas,1.0,230.35,0,23,283.33
+inv:FA2023/32:1,inv:FA2023/32,1,Serviço de Coffee-break,50.0,6.5,0,23,399.75
+inv:FA2023/32:2,inv:FA2023/32,2,Serviço de Comidas,4.0,7.0,100,13,0.0
+inv:FA2023/11:1,inv:FA2023/11,1,Serviço de Comidas,1.0,2067.0,0,13,2335.71
+inv:FA2023/11:2,inv:FA2023/11,2,Serviço de Bebidas,1.0,948.0,0,23,1166.04
+inv:FA2023/10:1,inv:FA2023/10,1,Serviço de Comidas,1.0,525.1,0,13,593.36
+inv:FA2023/10:2,inv:FA2023/10,2,Serviço de Bebidas,1.0,241.87,0,23,297.5
+inv:FA2023/9:1,inv:FA2023/9,1,Serviço de Comidas,1.0,1118.58,0,13,1264.0
+inv:FA2023/9:2,inv:FA2023/9,2,Serviço de Bebidas,1.0,513.82,0,23,632.0
+inv:FA2023/7:1,inv:FA2023/7,1,Serviço de Comidas,1.0,855.0,0,13,966.15
+inv:FA2023/7:2,inv:FA2023/7,2,Serviço de Bebidas,1.0,393.5,0,23,484.01
+inv:FA2023/21:1,inv:FA2023/21,1,Serviço de Comidas,1.0,2631.56,0,13,2973.66
+inv:FA2023/21:2,inv:FA2023/21,2,Serviço de Bebidas,1.0,1208.0,0,23,1485.84
+inv:FA2024/1:1,inv:FA2024/1,1,Serviço de Coffee-break,1.0,262.6,0,23,323.0
+inv:FA2023/22:1,inv:FA2023/22,1,Serviço de Comidas,1.0,1632.74,0,13,1845.0
+inv:FA2023/22:2,inv:FA2023/22,2,Serviço de Bebidas,1.0,750.0,0,23,922.5
+inv:FA2023/28:1,inv:FA2023/28,1,Serviço de Comidas,1.0,1242.0,0,13,1403.46
+inv:FA2023/28:2,inv:FA2023/28,2,Serviço de Bebidas,1.0,138.0,0,23,169.74
+inv:FA2023/29:1,inv:FA2023/29,1,Serviço de Coffee-break,1.0,702.0,0,23,863.46
+inv:FA2023/18:1,inv:FA2023/18,1,Serviço de Bebidas,1.0,677.51,0,23,833.34
+inv:FA2023/18:2,inv:FA2023/18,2,Serviço de Comidas,1.0,1474.92,0,13,1666.66
+inv:FA2023/30:1,inv:FA2023/30,1,Serviço de Comidas,1.0,480.0,0,13,542.4
+inv:FA2023/24:1,inv:FA2023/24,1,Serviço de Comidas,1.0,176.99,0,13,200.0
+inv:FA2023/24:2,inv:FA2023/24,2,Serviço de Bebidas,1.0,16.26,0,23,20.0
+inv:FA2023/19:1,inv:FA2023/19,1,Serviço de Comidas,1.0,326.55,0,13,369.0
+inv:FA2023/19:2,inv:FA2023/19,2,Serviço de Bebidas,1.0,150.0,0,23,184.5
+inv:FA2023/3:1,inv:FA2023/3,1,Serviço de Comidas,72.0,4.44,0,13,361.24
+inv:FA2023/3:2,inv:FA2023/3,2,Serviço de Bebidas,72.0,2.43,0,23,215.2
+inv:FA2023/26:1,inv:FA2023/26,1,Serviço de Comidas,1.0,1345.0,0,13,1519.85
+inv:FA2023/12:1,inv:FA2023/12,1,Serviço de Comidas,1.0,174.16,0,13,196.8
+inv:FA2023/12:2,inv:FA2023/12,2,Serviço de Bebidas,1.0,80.0,0,23,98.4
+inv:FA2023/20:1,inv:FA2023/20,1,Serviço de Comidas,94.0,10.62,0,13,1128.06
+inv:FA2023/16:1,inv:FA2023/16,1,Serviço de Comidas,1.0,471.98,0,13,533.34
+inv:FA2023/16:2,inv:FA2023/16,2,Serviço de Bebidas,1.0,216.8,0,23,266.66
+inv:FA2024/51:1,inv:FA2024/51,1,Serviço de Coffee-break,60.0,7.0,0,23,516.6
+inv:FA2024/12:1,inv:FA2024/12,1,Serviço de Comidas,1.0,1390.3,0,13,1571.04
+inv:FA2024/18:1,inv:FA2024/18,1,Serviço de Coffee-break,180.0,6.5,0,23,1439.1
+inv:FA2024/11:1,inv:FA2024/11,1,Serviço de Coffee-break,40.0,6.5,0,23,319.8
+inv:FA2024/35:1,inv:FA2024/35,1,Serviço de Comidas,3.0,460.5,0,13,1561.1
+inv:FA2024/42:1,inv:FA2024/42,1,Serviço de Comidas,25.0,16.48,0,13,465.56
+inv:FA2024/21:1,inv:FA2024/21,1,Serviço de Comidas,1.0,398.25,0,13,450.02
+inv:FA2024/53:1,inv:FA2024/53,1,Serviço de Coffee-break,50.0,26.5,0,23,1629.75
+inv:FA2024/5:1,inv:FA2024/5,1,Serviço de Coffee-break,1.0,121.95,0,23,150.0
+inv:FA2024/63:1,inv:FA2024/63,1,Serviço de Coffee-break,1.0,164.0,0,23,201.72
+inv:FA2024/26:1,inv:FA2024/26,1,Serviço de Coffee-break,200.0,5.5,0,23,1353.0
+inv:FA2024/45:1,inv:FA2024/45,1,Serviço de Coffee-break,20.0,7.8,0,23,191.88
+inv:FA2024/23:1,inv:FA2024/23,1,Serviço de Comidas,30.0,18.6,0,13,630.54
+inv:FA2024/55:1,inv:FA2024/55,1,Serviço de Coffee-break,100.0,6.5,0,23,799.5
+inv:FA2024/50:1,inv:FA2024/50,1,Serviço de Coffee-break,25.0,8.0,0,23,246.0
+inv:FA2024/44:1,inv:FA2024/44,1,Serviço de Coffee-break,50.0,8.0,0,23,492.0
+inv:FA2024/15:1,inv:FA2024/15,1,Serviço de Coffee-break,8.0,25.0,0,23,246.0
+inv:FA2024/24:1,inv:FA2024/24,1,Serviço de Comidas,30.0,39.5,0,13,1339.05
+inv:FA2024/10:1,inv:FA2024/10,1,Serviço de Coffee-break,39.0,7.0,0,23,335.79
+inv:FA2024/14:1,inv:FA2024/14,1,Serviço de Coffee-break,30.0,8.67,0,23,319.92
+inv:FA2024/4:1,inv:FA2024/4,1,Serviço de Coffee-break,40.0,6.5,0,23,319.8
+inv:FA2024/62:1,inv:FA2024/62,1,Serviço de Coffee-break,1.0,270.0,0,23,332.1
+inv:FA2024/13:1,inv:FA2024/13,1,Serviço de Comidas,1.0,1612.39,0,13,1822.0
+inv:FA2024/9:1,inv:FA2024/9,1,Serviço de Comidas,20.0,24.78,0,13,560.03
+inv:FA2024/28:1,inv:FA2024/28,1,Serviço de Coffee-break,60.0,7.5,0,23,553.5
+inv:FA2024/17:1,inv:FA2024/17,1,Serviço de Comidas,1.0,2974.34,0,13,3361.0
+inv:FA2024/61:1,inv:FA2024/61,1,Serviço de Coffee-break,1.0,265.0,0,23,325.95
+inv:FA2024/43:1,inv:FA2024/43,1,Serviço de Coffee-break,50.0,8.0,0,23,492.0
+inv:FA2024/48:1,inv:FA2024/48,1,Serviço de Comidas CB Am,200.0,7.5,0,13,1695.0
+inv:FA2024/48:2,inv:FA2024/48,2,Serviço de Comidas CB Pm,200.0,7.5,0,13,1695.0
+inv:FA2024/48:3,inv:FA2024/48,3,Serviço de Comidas  Lunch,200.0,17.7,0,13,4000.2
+inv:FA2024/32:1,inv:FA2024/32,1,Serviço de Coffee-break,500.0,5.0,0,23,3075.0
+inv:FA2024/6:1,inv:FA2024/6,1,Serviço de Coffee-break,1.0,121.95,0,23,150.0
+inv:FA2024/31:1,inv:FA2024/31,1,8 Serviços de Coffee-break 65 pessoas  por serviço,520.0,7.8,0,23,4988.88
+inv:FA2024/54:1,inv:FA2024/54,1,Serviço de Comidas,45.0,16.0,0,13,813.6
+inv:FA2024/19:1,inv:FA2024/19,1,Serviço de Comidas,1.0,2473.45,0,13,2795.0
+inv:FA2024/60:1,inv:FA2024/60,1,Serviço de Coffee-break,1.0,325.0,0,23,399.75
+inv:FA2024/8:1,inv:FA2024/8,1,Serviço de Coffee-break,280.0,6.0,0,23,2066.4
+inv:FA2024/22:1,inv:FA2024/22,1,Serviço de Coffee-break,20.0,8.6,0,23,211.56
+inv:FA2024/3:1,inv:FA2024/3,1,Serviço de Comidas,1.0,900.0,0,13,1017.0
+inv:FA2024/16:1,inv:FA2024/16,1,Serviço de Coffee-break,9.0,25.0,0,23,276.75
+inv:FA2024/25:1,inv:FA2024/25,1,Serviço de Coffee-break,20.0,6.5,0,23,159.9
+inv:FA2024/25:2,inv:FA2024/25,2,Serviço de Coffee-break,50.0,6.5,0,23,399.75
+inv:FA2024/2:1,inv:FA2024/2,1,Serviço de Comidas,1.0,600.0,0,13,678.0
+inv:FA2024/30:1,inv:FA2024/30,1,Serviço de Coffee-break,80.0,7.5,0,23,738.0
+inv:FA2024/46:1,inv:FA2024/46,1,Serviço de Coffee-break,55.0,12.8,0,23,865.92
+inv:FA2024/41:1,inv:FA2024/41,1,Serviço de Coffee-break,25.0,22.0,0,23,676.5
+inv:FA2024/57:1,inv:FA2024/57,1,Serviço de Comidas,50.0,26.0,0,13,1469.0
+inv:FA2024/34:1,inv:FA2024/34,1,Serviço de Comidas,1.0,1556.55,0,13,1758.9
+inv:FA2024/36:1,inv:FA2024/36,1,Serviço de Bebidas,50.0,1.0,0,23,61.5
+inv:FA2024/27:1,inv:FA2024/27,1,Serviço de Coffee-break,72.0,7.5,0,23,664.2
+inv:FA2024/56:1,inv:FA2024/56,1,Serviço de Coffee-break,100.0,8.0,0,23,984.0
+inv:FA2024/37:1,inv:FA2024/37,1,Serviço de Comidas,50.0,7.5,0,13,423.75
+inv:FA2024/47:1,inv:FA2024/47,1,Serviço de Coffee-break,30.0,40.0,0,23,1476.0
+inv:FA2024/38:1,inv:FA2024/38,1,Serviço de Comidas,60.0,17.7,0,13,1200.06
+inv:FA2024/39:1,inv:FA2024/39,1,Serviço de Coffee-break,1.0,300.0,0,23,369.0
+inv:FA2024/20:1,inv:FA2024/20,1,Serviço de Coffee-break,1.0,1056.91,0,23,1300.0
+inv:FA2024/33:1,inv:FA2024/33,1,Serviço de Comidas,23.0,23.7,0,13,615.96
+inv:FA2024/64:1,inv:FA2024/64,1,Serviço de Almoço de Natal,50.0,25.0,0,23,1537.5
+inv:FA2024/64:2,inv:FA2024/64,2,Serviço de Aluguer de toalhas/lavandaria,3.0,10.0,0,13,33.9
+inv:FA2024/49:1,inv:FA2024/49,1,Serviço de Comidas,80.0,27.0,45,13,1342.44
+inv:FA2024/7:1,inv:FA2024/7,1,Serviço de Coffee-break,1.0,1350.0,0,23,1660.5
+inv:FA2024/59:1,inv:FA2024/59,1,Serviço de Comidas,70.0,41.6,0,13,3290.56
+inv:FA2024/52:1,inv:FA2024/52,1,Serviço de Comidas,50.0,26.0,0,13,1469.0
+inv:FA2024/29:1,inv:FA2024/29,1,Serviço de Coffee-break,150.0,6.0,0,23,1107.0
+inv:FA2024/40:1,inv:FA2024/40,1,Serviço de Coffee-break,20.0,22.0,0,23,541.2
+inv:FA2024/58:1,inv:FA2024/58,1,Serviço de Coffee-break,100.0,7.5,0,23,922.5
+inv:FA2025/17:1,inv:FA2025/17,1,Serviço de Coffee-break dia 4 de Julho 2024,1.0,265.0,0,23,325.95
+inv:FA2025/58:1,inv:FA2025/58,1,Serviço de Coffee Break Am,20.0,6.0,0,13,135.6
+inv:FA2025/58:2,inv:FA2025/58,2,Serviço de Almoço,20.0,20.0,0,13,452.0
+inv:FA2025/58:3,inv:FA2025/58,3,Serviço de Coffee Break Pm,20.0,6.0,0,13,135.6
+inv:FA2025/33:1,inv:FA2025/33,1,Serviço de Coffe Break,150.0,4.5,0,13,762.75
+inv:FA2025/34:1,inv:FA2025/34,1,Serviço de Comidas,25.0,32.5,0,13,918.13
+inv:FA2025/42:1,inv:FA2025/42,1,Serviço de coffee break Dia 3,40.0,8.5,0,13,384.2
+inv:FA2025/42:2,inv:FA2025/42,2,Serviço de coffee break Dia 4 am,40.0,6.5,0,13,293.8
+inv:FA2025/42:3,inv:FA2025/42,3,Serviço de coffee break Dia 4 pm,40.0,8.5,0,13,384.2
+inv:FA2025/42:4,inv:FA2025/42,4,Serviço de coffee break Dia 5 am,40.0,6.5,0,13,293.8
+inv:FA2025/42:5,inv:FA2025/42,5,Serviço de coffee break Dia 5 pm,40.0,8.5,0,13,384.2
+inv:FA2025/35:1,inv:FA2025/35,1,Serviço de Comidas,400.0,16.5,0,13,7458.0
+inv:FA2025/63:1,inv:FA2025/63,1,Serviço de Comidas,1.0,1140.0,0,13,1288.2
+inv:FA2025/56:1,inv:FA2025/56,1,Serviço de Comidas,24.0,16.0,0,13,433.92
+inv:FA2025/31:1,inv:FA2025/31,1,Serviço de Wellcome Coffee,120.0,1.0,0,13,135.6
+inv:FA2025/9:1,inv:FA2025/9,1,Serviço de Coffee-break,12.0,5.0,0,23,73.8
+inv:FA2025/65:1,inv:FA2025/65,1,Serviço de Comidas,1.0,1045.0,0,13,1180.85
+inv:FA2025/65:2,inv:FA2025/65,2,Serviço de Bebidas,1.0,170.0,0,23,209.1
+inv:FA2025/12:1,inv:FA2025/12,1,Serviço de Comidas,14.0,32.5,0,13,514.15
+inv:FA2025/7:1,inv:FA2025/7,1,Serviço de Comidas,15.0,42.8,0,13,725.46
+inv:FA2025/41:1,inv:FA2025/41,1,Serviço de Comidas,73.0,17.0,0,13,1402.33
+inv:FA2025/28:1,inv:FA2025/28,1,Serviço de Comidas Coffee break Almoço e Coffee Break,60.0,25.35,0,13,1718.73
+inv:FA2025/19:1,inv:FA2025/19,1,Serviço de Coffee-break,1.0,164.0,0,23,201.72
+inv:FA2025/26:1,inv:FA2025/26,1,Serviço de Recepção de boas vindas,50.0,10.0,0,13,565.0
+inv:FA2025/69:1,inv:FA2025/69,1,Jantar de Ergonomia e Saúde Ocupacional (Aveiro),42.0,17.5,0,13,830.55
+inv:FA2025/69:2,inv:FA2025/69,2,Serviço de Coffee break para Intervenção em deslocação (SGobain),48.0,8.0,0,13,433.92
+inv:FA2025/69:3,inv:FA2025/69,3,Serviço de Coffee break para Intervenção em deslocação (ADRA),92.0,8.0,0,13,831.68
+inv:FA2025/23:1,inv:FA2025/23,1,Serviço de Coffee Break dia 23 AM e PM,220.0,5.0,0,13,1243.0
+inv:FA2025/23:2,inv:FA2025/23,2,Serviço de Almoço dia 23,110.0,15.0,0,13,1864.5
+inv:FA2025/23:3,inv:FA2025/23,3,Serviço de Welcome drink,110.0,10.0,0,23,1353.0
+inv:FA2025/23:4,inv:FA2025/23,4,Serviço de Coffee Break dia 24 AM e PM,220.0,5.0,0,13,1243.0
+inv:FA2025/23:5,inv:FA2025/23,5,Serviço de Almoço dia 24,110.0,15.0,0,13,1864.5
+inv:FA2025/23:6,inv:FA2025/23,6,Serviço de Coffee Break dia 25 AM e PM,220.0,5.0,0,13,1243.0
+inv:FA2025/23:7,inv:FA2025/23,7,Serviço de Almoço dia 24,110.0,15.0,0,13,1864.5
+inv:FA2025/60:1,inv:FA2025/60,1,Serviço de Comidas,40.0,22.95,0,13,1037.34
+inv:FA2025/3:1,inv:FA2025/3,1,Serviço de Coffee-break,52.0,6.0,0,23,383.76
+inv:FA2025/3:2,inv:FA2025/3,2,Serviço de Almoço,26.0,28.0,0,23,895.44
+inv:FA2025/43:1,inv:FA2025/43,1,Serviço de boas vindas,46.0,2.6,0,13,135.15
+inv:FA2025/43:2,inv:FA2025/43,2,Serviço de coffee break,46.0,9.8,0,13,509.4
+inv:FA2025/6:1,inv:FA2025/6,1,Serviço de Coffee- 17/01/25,35.0,7.0,0,23,301.35
+inv:FA2025/6:2,inv:FA2025/6,2,Serviço de Coffee-break 07/02/25,35.0,7.0,0,23,301.35
+inv:FA2025/52:1,inv:FA2025/52,1,Serviço de Almoço,160.0,15.22,0,13,2751.78
+inv:FA2025/4:1,inv:FA2025/4,1,Serviço de Comidas,40.0,7.6,0,13,343.52
+inv:FA2025/30:1,inv:FA2025/30,1,Serviço de Catering workshop I3N/CICECO,1.0,4560.0,0,13,5152.8
+inv:FA2025/24:1,inv:FA2025/24,1,Serviço de Coffee break,60.0,2.5,0,13,169.5
+inv:FA2025/24:2,inv:FA2025/24,2,Serviço de Coffee break,60.0,9.3,0,13,630.54
+inv:FA2025/36:1,inv:FA2025/36,1,Serviço de Comidas,20.0,32.5,0,13,734.5
+inv:FA2025/13:1,inv:FA2025/13,1,Serviço de Comidas,160.0,9.0,0,13,1627.2
+inv:FA2025/45:1,inv:FA2025/45,1,Serviço de Comidas,48.0,12.5,0,13,678.0
+inv:FA2025/39:1,inv:FA2025/39,1,Serviço de Coffee Break dia 4 Junho,35.0,7.0,0,13,276.83
+inv:FA2025/39:2,inv:FA2025/39,2,Serviço Simples dia 23 de Junho,35.0,2.5,0,13,98.88
+inv:FA2025/39:3,inv:FA2025/39,3,Serviço Simples dia 25 de Junho,35.0,2.5,0,13,98.88
+inv:FA2025/39:4,inv:FA2025/39,4,Serviço Simples dia 30 de Junho,35.0,2.5,0,13,98.88
+inv:FA2025/39:5,inv:FA2025/39,5,Serviço Simples dia 4 de JUlho,35.0,2.5,0,13,98.88
+inv:FA2025/39:6,inv:FA2025/39,6,Serviço de Coffee break dia 7 de Julho,35.0,7.0,0,13,276.85
+inv:FA2025/64:1,inv:FA2025/64,1,Serviço de Comidas,1.0,1278.0,0,13,1444.14
+inv:FA2025/22:1,inv:FA2025/22,1,Serviço de Coffee break dias 22 e 23 de Maio,300.0,7.0,0,13,2373.0
+inv:FA2025/54:1,inv:FA2025/54,1,Serviço de Comidas,1.0,2435.66,0,13,2752.3
+inv:FA2025/14:1,inv:FA2025/14,1,Serviço de Comidas Am,40.0,7.8,0,13,352.56
+inv:FA2025/14:2,inv:FA2025/14,2,Serviço de Comidas Pm,40.0,7.8,0,13,352.56
+inv:FA2025/32:1,inv:FA2025/32,1,Serviço de Coffee Break,15.0,8.5,0,13,144.08
+inv:FA2025/16:1,inv:FA2025/16,1,Serviço de Coffee-break dia 8 Maio 2024 Am,20.0,10.4,0,23,255.84
+inv:FA2025/16:2,inv:FA2025/16,2,Serviço de Coffee-break dia 8 Maio 2024  Pm,20.0,10.4,0,23,255.84
+inv:FA2025/29:1,inv:FA2025/29,1,Serviço de Coffee Breaks e Almoço para os participantes do Workshop,1.0,760.0,0,13,858.8
+inv:FA2025/57:1,inv:FA2025/57,1,Serviço de Comidas,1.0,200.0,0,13,226.0
+inv:FA2025/18:1,inv:FA2025/18,1,Serviço de Comidas 26 Almoços,1.0,260.0,0,13,293.8
+inv:FA2025/37:1,inv:FA2025/37,1,Serviço de Comidas,30.0,2.0,0,13,67.8
+inv:FA2025/51:1,inv:FA2025/51,1,Serviço de Coffee Break Am,160.0,5.95,0,13,1075.76
+inv:FA2025/51:2,inv:FA2025/51,2,Serviço de Coffe Break Pm,160.0,5.95,0,13,1075.76
+inv:FA2025/50:1,inv:FA2025/50,1,Serviço de Comidas,30.0,9.5,0,13,322.05
+inv:FA2025/62:1,inv:FA2025/62,1,Serviço de Comidas,1.0,150.0,0,13,169.5
+inv:FA2025/61:1,inv:FA2025/61,1,Serviço de Comidas,40.0,22.95,0,13,1037.34
+inv:FA2025/48:1,inv:FA2025/48,1,Serviço de Comidas,50.0,25.6,0,13,1446.4
+inv:FA2025/27:1,inv:FA2025/27,1,Serviço de Coffee break,72.0,7.5,0,13,610.2
+inv:FA2025/21:1,inv:FA2025/21,1,Serviço de Comidas 3 Junho,35.0,8.5,0,13,336.18
+inv:FA2025/2:1,inv:FA2025/2,1,5 Serviço de Coffee-break,155.0,8.0,0,23,1525.2
+inv:FA2025/2:2,inv:FA2025/2,2,3 Serviço de Almoço,93.0,26.0,0,23,2974.14
+inv:FA2025/2:3,inv:FA2025/2,3,1 Serviço de Jantar,31.0,32.0,0,23,1220.16
+inv:FA2025/2:4,inv:FA2025/2,4,Serviço de Bacalhau,6.0,7.0,0,23,51.66
+inv:FA2025/2:5,inv:FA2025/2,5,Serviço de Chilli veg,6.0,7.0,0,23,51.66
+inv:FA2025/53:1,inv:FA2025/53,1,Serviço de Comidas,1.0,1903.54,0,13,2151.0
+inv:FA2025/38:1,inv:FA2025/38,1,Serviço de Comidas,20.0,6.4,0,13,144.64
+inv:FA2025/47:1,inv:FA2025/47,1,Serviço de Coffee de boas vindas,390.0,2.0,0,13,881.4
+inv:FA2025/47:2,inv:FA2025/47,2,Serviço de Café da manhã,390.0,6.5,0,13,2864.55
+inv:FA2025/47:3,inv:FA2025/47,3,Serviço de Almoço volante,390.0,22.0,0,13,9695.4
+inv:FA2025/47:4,inv:FA2025/47,4,Serviço de Coffee break tarde,390.0,5.0,0,13,2203.5
+inv:FA2025/47:5,inv:FA2025/47,5,Serviço de Welcome drink,390.0,2.6,0,13,1145.82
+inv:FA2025/8:1,inv:FA2025/8,1,Serviço de Comidas,25.0,25.0,0,13,706.25
+inv:FA2025/55:1,inv:FA2025/55,1,Serviço de Coffee Braks dia 13 Pm,30.0,7.0,0,13,237.3
+inv:FA2025/55:2,inv:FA2025/55,2,Serviço de Coffee Break dia 14 Am,30.0,7.0,0,13,237.3
+inv:FA2025/10:1,inv:FA2025/10,1,Serviço de Coffee-break,1.0,270.0,0,23,332.1
+inv:FA2025/40:1,inv:FA2025/40,1,Serviço de Comidas,100.0,16.5,0,13,1864.5
+inv:FA2025/67:1,inv:FA2025/67,1,Serviço de Comidas,20.0,6.5,0,13,146.9
+inv:FA2025/15:1,inv:FA2025/15,1,Serviço de Comidas Dia 9 Abril Pm,20.0,8.5,0,13,192.1
+inv:FA2025/15:2,inv:FA2025/15,2,Serviço de Comidas Dia 10 Abril Am,15.0,8.5,0,13,144.08
+inv:FA2025/25:1,inv:FA2025/25,1,Serviço de Coffee Breask,10.0,8.0,0,13,90.4
+inv:FA2025/46:1,inv:FA2025/46,1,Serviço de Coffee Break,300.0,6.0,0,13,2034.0
+inv:FA2025/46:2,inv:FA2025/46,2,Serviço de Almoço,24.0,20.0,0,13,542.4
+inv:FA2025/46:3,inv:FA2025/46,3,Serviço de Comidas (Bolachinhas),40.0,3.4,0,13,153.68
+inv:FA2025/68:1,inv:FA2025/68,1,Serviço de coffee break reunião fisiomanual ( Aveiro - Pav Galitos),28.0,8.0,0,13,253.12
+inv:FA2025/68:2,inv:FA2025/68,2,Serviço de coffee break reunião fisiomanual (Aveiro - ACADOF),26.0,8.0,0,13,235.04
+inv:FA2025/68:3,inv:FA2025/68,3,Serviço de coffee break reunião fisiomanual (Aveiro - Piscinas D.Carvalho),23.0,8.0,0,13,207.92
+inv:FA2025/49:1,inv:FA2025/49,1,Serviço Welcome coffee,130.0,1.95,0,13,286.46
+inv:FA2025/49:2,inv:FA2025/49,2,Serviço de Comidas,130.0,18.86,0,13,2770.53
+inv:FA2025/11:1,inv:FA2025/11,1,Serviço de Coffee-break,1.0,164.0,0,23,201.72
+inv:FA2025/66:1,inv:FA2025/66,1,Serviço de Comidas,50.0,36.75,0,13,2076.38
+inv:FA2025/59:1,inv:FA2025/59,1,Serviço de Comidas,1.0,177.0,0,13,200.01
+inv:FA2025/20:1,inv:FA2025/20,1,Serviço de Comidas,1.0,455.75,0,13,515.0
+inv:FA2026/54:1,inv:FA2026/54,1,Serviço de Comidas Sandes de Cogumelos,40.0,3.0,0,13,135.6
+inv:FA2026/64:1,inv:FA2026/64,1,Serviço de Comidas,1.0,1300.0,0,13,1469.0
+inv:FA2026/11:1,inv:FA2026/11,1,Serviço de Comidas,1.0,384.85,0,13,434.88
+inv:FA2026/65:1,inv:FA2026/65,1,Serviço de Comidas,60.0,10.0,0,13,678.0
+inv:FA2026/65:2,inv:FA2026/65,2,Serviço de Bebidas,10.0,10.0,0,23,123.0
+inv:FA2026/23:1,inv:FA2026/23,1,Serviço de Comidas,1.0,126.0,0,13,142.38
+inv:FA2026/43:1,inv:FA2026/43,1,Serviço de Comidas,220.0,8.0,0,13,1988.8
+inv:FA2026/41:1,inv:FA2026/41,1,Serviço de Comidas Cb am,80.0,6.5,0,13,587.6
+inv:FA2026/41:2,inv:FA2026/41,2,Serviço de Comidas Cb pm,80.0,6.5,0,13,587.6
+inv:FA2026/22:1,inv:FA2026/22,1,Serviço de Comidas,1.0,84.0,0,13,94.92
+inv:FA2026/17:1,inv:FA2026/17,1,Serviço de Comidas Watch Party 10/02/26,1.0,190.0,0,13,214.7
+inv:FA2026/17:2,inv:FA2026/17,2,Serviço de Comidas Sky Tech Talk 17/03/26,1.0,625.0,0,13,706.25
+inv:FA2026/17:3,inv:FA2026/17,3,Serviço de Bebidas Sky Tech Talk 17/03/26,1.0,125.0,0,23,153.75
+inv:FA2026/17:4,inv:FA2026/17,4,Serviço de Comidas Open Day 19/03/26,1.0,625.0,0,13,706.25
+inv:FA2026/17:5,inv:FA2026/17,5,Serviço de Comidas Mobile All Hands 27/03/26,1.0,160.0,0,13,180.8
+inv:FA2026/12:1,inv:FA2026/12,1,Serviço de Comidas,36.0,12.0,0,13,488.16
+inv:FA2026/16:1,inv:FA2026/16,1,Serviço de Coffee Break 19 de Março am,40.0,7.0,0,13,316.4
+inv:FA2026/16:2,inv:FA2026/16,2,Serviço de Almoço 19 de Março,40.0,26.5,0,13,1197.8
+inv:FA2026/16:3,inv:FA2026/16,3,Serviço de Coffee Break 20 de Março am,40.0,7.0,0,13,316.4
+inv:FA2026/16:4,inv:FA2026/16,4,Serviço de Almoço 20 de Março,30.0,27.5,0,13,932.25
+inv:FA2026/16:5,inv:FA2026/16,5,Serviço de Coffee break  20 Março pm,20.0,7.5,0,13,169.5
+inv:FA2026/57:1,inv:FA2026/57,1,Serviço de Comidas,70.0,8.0,0,13,632.8
+inv:FA2026/57:2,inv:FA2026/57,2,Serviço de Comidas,40.0,0.45,0,13,20.34
+inv:FA2026/2:1,inv:FA2026/2,1,Serviço de Comidas,37.0,10.0,0,13,418.1
+inv:FA2026/2:2,inv:FA2026/2,2,Serviço de Bebidas,37.0,2.0,0,23,91.02
+inv:FA2026/24:1,inv:FA2026/24,1,Serviço de Comidas,1.0,224.0,0,13,253.12
+inv:FA2026/24:2,inv:FA2026/24,2,Serviço de Comidas,1.0,384.0,0,13,433.92
+inv:FA2026/32:1,inv:FA2026/32,1,Serviço de Comidas CB am dia 9,24.0,6.0,0,13,162.72
+inv:FA2026/32:2,inv:FA2026/32,2,Serviço de Comidas Almoço dia 9,24.0,27.0,0,13,732.24
+inv:FA2026/32:3,inv:FA2026/32,3,Serviço de Comidas CB pm dia 9,24.0,6.0,0,13,162.72
+inv:FA2026/32:4,inv:FA2026/32,4,Serviço de Comidas CB am dia 10,24.0,6.0,0,13,162.72
+inv:FA2026/32:5,inv:FA2026/32,5,Serviço de Comidas Almoço dia 10,24.0,27.0,0,13,732.24
+inv:FA2026/10:1,inv:FA2026/10,1,Serviço de Comidas,32.0,13.0,0,13,470.08
+inv:FA2026/26:1,inv:FA2026/26,1,Serviço de welcome coffee,50.0,2.0,0,13,113.0
+inv:FA2026/26:2,inv:FA2026/26,2,Serviço de coffee break am,50.0,7.0,0,13,395.5
+inv:FA2026/26:3,inv:FA2026/26,3,Serviço de Almoço,50.0,18.0,0,13,1017.0
+inv:FA2026/26:4,inv:FA2026/26,4,Serviço de coffee break pm,50.0,7.0,0,13,395.5
+inv:FA2026/55:1,inv:FA2026/55,1,Serviço de Comidas,1.0,280.0,0,13,316.4
+inv:FA2026/55:2,inv:FA2026/55,2,Serviço de Comidas,1.0,29.59,0,13,33.44
+inv:FA2026/55:3,inv:FA2026/55,3,Serviço de Comidas,1.0,28.31,0,13,31.99
+inv:FA2026/67:1,inv:FA2026/67,1,Serviço de Bebidas,1.0,221.0,0,23,271.83
+inv:FA2026/45:1,inv:FA2026/45,1,Serviço de Comidas Almoço,96.0,15.0,0,13,1627.2
+inv:NC2026/3:1,inv:NC2026/3,1,Serviço de Comidas,50.0,10.0,0,13,565.0
+inv:NC2026/3:2,inv:NC2026/3,2,Serviço de Bebidas,50.0,2.0,0,23,123.0
+inv:FA2026/51:1,inv:FA2026/51,1,Serviço de Bebidas,500.0,3.2,0,23,1968.0
+inv:FA2026/3:1,inv:FA2026/3,1,Serviço de Comidas,20.0,25.0,0,13,565.0
+inv:FA2026/4:1,inv:FA2026/4,1,Serviço de Coffee break,24.0,6.0,0,13,162.72
+inv:FA2026/4:2,inv:FA2026/4,2,Serviço de Almoço,24.0,19.0,0,13,515.28
+inv:FA2026/21:1,inv:FA2026/21,1,Serviço de Comidas,80.0,8.3,0,13,750.32
+inv:FA2026/37:1,inv:FA2026/37,1,Serviço de Comidas,30.0,7.0,0,13,237.3
+inv:FA2026/39:1,inv:FA2026/39,1,Serviço de Comidas Coffee Break am,14.0,7.0,0,13,110.74
+inv:FA2026/39:2,inv:FA2026/39,2,Serviço de Comidas Almoço,14.0,12.0,0,13,189.84
+inv:FA2026/39:3,inv:FA2026/39,3,Serviço de Comidas Coffee breal pm,14.0,7.0,0,13,110.74
+inv:FA2026/44:1,inv:FA2026/44,1,Serviço de Comidas,90.0,20.0,0,13,2034.0
+inv:FA2026/59:1,inv:FA2026/59,1,Serviço de Comidas,19.0,4.0,0,13,85.88
+inv:FA2026/59:2,inv:FA2026/59,2,Serviço de Comidas,1.0,8.85,0,13,10.0
+inv:FA2026/1:1,inv:FA2026/1,1,Serviço de Comidas,50.0,10.0,0,13,565.0
+inv:FA2026/1:2,inv:FA2026/1,2,Serviço de Bebidas,50.0,2.0,0,23,123.0
+inv:FA2026/49:1,inv:FA2026/49,1,Serviço de Comidas CB ab dia 19,60.0,5.0,0,13,339.0
+inv:FA2026/62:1,inv:FA2026/62,1,Serviço de Comidas,1.0,430.0,0,13,485.9
+inv:FA2026/66:1,inv:FA2026/66,1,Serviço de Comidas,30.0,8.0,0,13,271.2
+inv:FA2026/35:1,inv:FA2026/35,1,Serviço de Comidas,1.0,382.5,0,13,432.23
+inv:FA2026/50:1,inv:FA2026/50,1,Serviço de Comidas CB am Habilitação Eletrica 2,15.0,4.0,0,13,67.8
+inv:FA2026/50:2,inv:FA2026/50,2,Serviço de Comidas Almoço Habilitação Eletrica 2,15.0,12.0,0,13,203.4
+inv:FA2026/50:3,inv:FA2026/50,3,Serviço de Comidas CB pm Habilitação Eletrica 2,15.0,4.0,0,13,67.8
+inv:FA2026/50:4,inv:FA2026/50,4,Serviço de Comidas CB am Redes IT na Industria,16.0,4.0,0,13,72.32
+inv:FA2026/50:5,inv:FA2026/50,5,Serviço de Comidas CB pm Redes IT na Industria,16.0,4.0,0,13,72.32
+inv:FA2026/50:6,inv:FA2026/50,6,Serviço de Comidas CB am Interfaces HMI,18.0,4.0,0,13,81.36
+inv:FA2026/50:7,inv:FA2026/50,7,Serviço de Comidas Almoço Interfaces HMI,18.0,12.0,0,13,244.08
+inv:FA2026/50:8,inv:FA2026/50,8,Serviço de Comidas CB pm Interfaces HMI,18.0,4.0,0,13,81.36
+inv:FA2026/50:9,inv:FA2026/50,9,Serviço de Comidas CB am Oleo- Hidraulica,39.0,4.0,0,13,176.28
+inv:FA2026/50:10,inv:FA2026/50,10,Serviço de Comidas CB pm Oleo- Hidraulica,39.0,4.0,0,13,176.28
+inv:FA2026/31:1,inv:FA2026/31,1,Serviço de Comidas Lunch Box,1.0,816.37,0,13,922.5
+inv:FA2026/42:1,inv:FA2026/42,1,Serviço de Comidas e bebidas não alcoólicas,100.0,15.5,0,13,1751.5
+inv:FA2026/48:1,inv:FA2026/48,1,Serviço de Comidas CB am dia 17,90.0,5.0,0,13,508.5
+inv:FA2026/48:2,inv:FA2026/48,2,Serviço de Comidas Almoço dia 17,90.0,17.0,0,13,1728.9
+inv:FA2026/48:3,inv:FA2026/48,3,Serviço de Comidas CB pm dia 17,80.0,5.0,0,13,452.0
+inv:FA2026/48:4,inv:FA2026/48,4,Serviço de Comidas CB am dia 18,60.0,5.0,0,13,339.0
+inv:FA2026/48:5,inv:FA2026/48,5,Serviço de Comidas Almoço dia 18,60.0,16.0,0,13,1084.8
+inv:FA2026/48:6,inv:FA2026/48,6,Serviço de Comidas CB pm dia 18,60.0,5.0,0,13,339.0
+inv:FA2026/14:1,inv:FA2026/14,1,Serviço de Coffee break base,20.0,6.0,0,13,135.6
+inv:FA2026/14:2,inv:FA2026/14,2,Serviço de Comidas simples,20.0,18.0,0,13,406.8
+inv:FA2026/56:1,inv:FA2026/56,1,Serviço de Comidas,50.0,7.5,0,13,423.75
+inv:FA2026/56:2,inv:FA2026/56,2,Serviço de Comidas,100.0,3.0,0,13,339.0
+inv:FA2026/58:1,inv:FA2026/58,1,Serviço de Comidas,1.0,816.37,0,13,922.5
+inv:FA2026/40:1,inv:FA2026/40,1,Serviço de Comidas Almoço,119.0,18.0,0,13,2420.46
+inv:FA2026/40:2,inv:FA2026/40,2,Serviço de Bebidas,300.0,0.5,0,23,184.5
+inv:FA2026/40:3,inv:FA2026/40,3,Serviço de Comidas,1.0,350.0,0,13,395.5
+inv:FA2026/8:1,inv:FA2026/8,1,Serviço de Comidas coffee break,70.0,7.5,0,13,593.25
+inv:FA2026/7:1,inv:FA2026/7,1,Serviço de Comidas,15.0,18.6,0,13,315.27
+inv:FA2026/33:1,inv:FA2026/33,1,Serviço de Comidas Coffee Break am,12.0,7.0,0,13,94.92
+inv:FA2026/33:2,inv:FA2026/33,2,Serviço de Comidas Coffee Break pm,12.0,7.0,0,13,94.92
+inv:FA2026/63:1,inv:FA2026/63,1,Serviço de Comidas,330.0,11.0,0,13,4101.9
+inv:FA2026/63:2,inv:FA2026/63,2,Serviço de Bebidas,330.0,1.0,0,23,405.9
+inv:FA2026/34:1,inv:FA2026/34,1,Serviço de Comidas,12.0,7.0,0,13,94.92
+inv:FA2026/34:2,inv:FA2026/34,2,Serviço de Comidas,12.0,7.0,0,13,94.92
+inv:FA2026/27:1,inv:FA2026/27,1,Serviço de Comidas,40.0,8.85,0,13,400.02
+inv:FA2026/29:1,inv:FA2026/29,1,Serviço de Comidas CB am,12.0,7.0,0,13,94.92
+inv:FA2026/29:2,inv:FA2026/29,2,Serviço de Comidas,12.0,12.0,0,13,162.72
+inv:FA2026/29:3,inv:FA2026/29,3,Serviço de Comidas CB pm,12.0,7.0,0,13,94.92
+inv:FA2026/30:1,inv:FA2026/30,1,Serviço de Comidas CB am,12.0,7.0,0,13,94.92
+inv:FA2026/30:2,inv:FA2026/30,2,Serviço de Comidas Almoço,12.0,12.0,0,13,162.72
+inv:FA2026/30:3,inv:FA2026/30,3,Serviço de Comidas CB pm,12.0,7.0,0,13,94.92
+inv:FA2026/18:1,inv:FA2026/18,1,Serviço de Comidas,1.0,450.0,0,13,508.5
+inv:FA2026/20:1,inv:FA2026/20,1,Serviço de Comidas,20.0,20.0,0,13,452.0
+inv:FA2026/28:1,inv:FA2026/28,1,Serviço de Comidas CB am,12.0,7.0,0,13,94.92
+inv:FA2026/28:2,inv:FA2026/28,2,Serviço de Comidas Almoço,12.0,12.0,0,13,162.72
+inv:FA2026/28:3,inv:FA2026/28,3,Serviço de Comidas CB pm,12.0,7.0,0,13,94.92
+inv:FA2026/53:1,inv:FA2026/53,1,Serviço de Comidas CB am dia 26,250.0,6.05,0,13,1709.12
+inv:FA2026/53:2,inv:FA2026/53,2,Serviço de Comidas CB am dia 27,250.0,6.05,0,13,1709.13
+inv:FA2026/53:3,inv:FA2026/53,3,Serviço de Bolachas Bacalhaus,36.0,3.4,0,13,138.31
+inv:FA2026/6:1,inv:FA2026/6,1,Serviço de Comidas,35.0,21.0,0,13,830.55
+inv:FA2026/6:2,inv:FA2026/6,2,Serviço de Bebidas,35.0,5.0,0,23,215.25
+inv:FA2026/6:3,inv:FA2026/6,3,Serviço de Comidas (Tarte Basca),1.0,40.0,0,13,45.2
+inv:FA2026/15:1,inv:FA2026/15,1,Serviço de Comidas coffee break base,20.0,6.0,0,13,135.6
+inv:FA2026/15:2,inv:FA2026/15,2,Serviço de Comidas simples,20.0,18.0,0,13,406.8
+inv:FA2026/36:1,inv:FA2026/36,1,Serviço de Comidas (Almoço),15.0,23.0,0,13,389.85
+inv:FA2026/60:1,inv:FA2026/60,1,Serviço de Comidas Almoço,13.0,26.0,0,13,381.94
+inv:FA2026/52:1,inv:FA2026/52,1,Serviço de Comidas cb,175.0,7.0,0,13,1384.25
+inv:FA2026/52:2,inv:FA2026/52,2,Serviço de Comidas almoços,140.0,25.0,0,13,3955.0
+inv:FA2026/13:1,inv:FA2026/13,1,Serviço de Comidas,30.0,5.5,0,13,186.45
+inv:FA2026/5:1,inv:FA2026/5,1,Serviço de Fornecimento,90.0,8.3,0,13,844.11
+inv:FA2026/19:1,inv:FA2026/19,1,Serviço de Comidas,1.0,300.0,0,13,339.0
+inv:FA2026/38:1,inv:FA2026/38,1,Serviço de Comidas,1.0,975.0,0,13,1101.75
+inv:FA2026/25:1,inv:FA2026/25,1,Serviço de Comidas Almoço,16.0,22.0,0,13,397.76
+inv:FA2026/9:1,inv:FA2026/9,1,Serviço de Comidas Wellcome Coffee,140.0,3.0,0,13,474.6

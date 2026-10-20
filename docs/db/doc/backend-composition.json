@@ -1,0 +1,428 @@
+{
+  "id": "doc/backend-composition",
+  "kind": "doc",
+  "title": "Backend Composition",
+  "status": "approved",
+  "subject": "main",
+  "tags": [
+    "main",
+    "lifecycle hook"
+  ],
+  "paths": [
+    "apps/main"
+  ],
+  "summary": "Many callers reach the same slice operations — client requests, M2M calls, crons, agents. Layering puts the logic below the transport, in one substrate every…",
+  "docId": "backend-composition",
+  "doc": {
+    "axioms": [
+      {
+        "text": "Every entity has exactly one schema definition across slices and apps."
+      },
+      {
+        "text": "APIs come in two kinds: client (user-facing) and M2M (service-to-service)."
+      },
+      {
+        "text": "Five layers, one responsibility each: middleware · router · service · repository · model."
+      },
+      {
+        "text": "The substrate is shared and transport-agnostic; only the edge changes.",
+        "sub": [
+          "Service, repository and model never know how they were reached.",
+          "Each kind of caller — client, M2M, background — brings its own router and middlewares, and calls the same substrate."
+        ]
+      },
+      {
+        "text": "The call graph is fixed.",
+        "sub": [
+          "A client — the API consumer — calls only the router.",
+          "The router calls its middlewares, then one service.",
+          "A middleware calls a repository for hydration reads only.",
+          "A service calls its own entity's repository, never another entity's.",
+          "Cross-entity calls are service to service; across backends, over the M2M edge.",
+          "Only a repository calls the database, through the model.",
+          "A repository carries no application logic; a model carries no logic."
+        ]
+      },
+      {
+        "text": "Background works (cron jobs, agents, pipelines) plug into the service layer or run independently."
+      }
+    ],
+    "purpose": {
+      "intro": "Many callers reach the same slice operations — client requests, M2M calls, crons, agents. Layering puts the logic below the transport, in one substrate every caller passes through: the edge adapts the caller, the substrate holds the logic. Adding a caller or a datastore means writing an edge, not reimplementing the core. And because every slice's API has the same five layers and the same strict chain, a developer knows where anything lives before opening a folder."
+    },
+    "reference": [
+      {
+        "topic": "Entry points and request classes",
+        "statement": "The substrate — service, repository, model, AC engine — is reached from different edges. What differs per caller is middleware and router; the substrate is shared.",
+        "claims": [
+          {
+            "id": "MOD12",
+            "text": "Client-facing and machine-to-machine routes are distinct top-level paths: `/api/client/*` for end-user agents, `/api/m2m/*` for server-to-server."
+          },
+          {
+            "text": "An external provider that ships its own router mounts under those two namespaces — `api/client/<provider>/*` — never alongside them, so `client/*` covers every endpoint a client hits.",
+            "source": "03 draft"
+          },
+          {
+            "text": "Auth endpoints are their own request class: `/api/client/auth/*` is provider-owned, session lifecycle only, and access-context hydration never runs on it.",
+            "source": "03 draft"
+          },
+          {
+            "id": "API3",
+            "text": "Backends with no API surface (e.g. cron over self-contained libraries) are exempt from the 5-layer/2-path rule."
+          },
+          {
+            "id": "SCF10",
+            "text": "Process singletons — the server, the db pool, the redis connection — are created once, in top-level files at the app's `src/` root: one file, one instantiation."
+          }
+        ],
+        "imagesAndDiagrams": [
+          {
+            "title": "Edges differ; the substrate is shared",
+            "type": "ascii",
+            "value": "HTTP client     ─→ middleware (session)  ─┐\nHTTP M2M        ─→ middleware (service)  ─┤      build\nin-process cron ─────────────────────────►├─→   Access  ─→ service ─→ engine ─→ repository ─→ DB\nagent runtime   ─────────────────────────►│    Context             (filters)\nautonomous worker ────────────────────────────────────────────────────────────→ repository ─→ DB"
+          }
+        ],
+        "examples": []
+      },
+      {
+        "topic": "The five layers",
+        "claims": [
+          {
+            "id": "API1",
+            "text": "Five layers, one responsibility each: middleware (hydration/auth) → router (HTTP transport) → service (business logic) → repository (data access) → model."
+          },
+          {
+            "id": "API2",
+            "text": "Only repositories touch the database — read and write, no exception. Two valid paths: middleware→router→service→repo→db, or middleware→repo→db (hydration reads only)."
+          },
+          {
+            "id": "SCF2",
+            "text": "One abstraction per file, maximally separated."
+          }
+        ],
+        "imagesAndDiagrams": [
+          {
+            "title": "What each layer owns — and what it must never do",
+            "type": "html",
+            "src": "../assets/backend-composition/five-layers.html"
+          },
+          {
+            "title": "The data path — any other layer calling the DB is a violation",
+            "type": "ascii",
+            "value": "  Requester     Router       Middleware       Service     Repository       DB\n  ─────────     ──────       ──────────       ───────     ──────────       ──\n      │           │              │               │            │             │\n      │── request>│              │               │            │             │\n      │           │── dispatch ─>│               │            │             │\n      │           │              │── hydrate ────────────────>│             │\n      │           │              │               │            │── query ───>│\n      │           │              │               │            │<── rows ────│\n      │           │              │<────── ctx rows ───────────│             │\n      │           │<── return ───│               │            │             │\n      │           │── call svc ─────────────────>│            │             │\n      │           │              │               │── call ───>│             │\n      │           │              │               │            │── query ───>│\n      │           │              │               │            │<── rows ────│\n      │           │              │               │<───────────│             │\n      │           │<──── response ───────────────│            │             │\n      │<─ response│              │               │            │             │"
+          }
+        ],
+        "examples": []
+      },
+      {
+        "topic": "Middleware",
+        "claims": [
+          {
+            "id": "API20",
+            "text": "Middleware hydrates blindly — no business branching (no if/else on session validity; the service throws when there's no session). Hydration is the one sanctioned exception to \"all DB access goes through AC\": it must read the DB *before* AC exists (it produces the bag AC needs), so it uses a dedicated method minted by scoped AC that reaches the DB without a Scope. Kept safe by being a public service method with no route exposing it."
+          },
+          {
+            "id": "API21",
+            "text": "Protected requests pass a fixed linear middleware sequence before the handler: set/validate session → fetch roles/memberships → hydrate effective-permissions bag → unmet-requirements gate."
+          }
+        ],
+        "imagesAndDiagrams": [],
+        "examples": []
+      },
+      {
+        "topic": "Routers",
+        "claims": [
+          {
+            "id": "API18",
+            "text": "Routers are thin: extract request identity, zod-parse input, call one service, return. Never import a repo or db; zero business logic; never decide access."
+          },
+          {
+            "id": "API19",
+            "text": "Design and finalize routes first — the route is the interface; the service shape emerges from routes + repo."
+          }
+        ],
+        "imagesAndDiagrams": [],
+        "examples": []
+      },
+      {
+        "topic": "Services",
+        "claims": [
+          {
+            "ids": [
+              "API11",
+              "API17"
+            ],
+            "text": "The service owns the business logic: the conditionals, the decisions, the validations — and the throws. Only a service throws, and only typed `AppError` subclasses, never a raw `new Error()`."
+          },
+          {
+            "ids": [
+              "SCF9",
+              "PRC6"
+            ],
+            "text": "A Helper is self-sufficient: no db access, data passed in. A helper consumed by one service stays with that service. A helper consumed by more than one goes to the nearest `shared/` level above all its consumers — the same sharing principle as everywhere."
+          }
+        ],
+        "imagesAndDiagrams": [],
+        "examples": []
+      },
+      {
+        "topic": "Repositories",
+        "claims": [
+          {
+            "id": "API4, API10",
+            "text": "One repository = one table. Every model/table gets a repository and a service — the service may be a thin route→repo proxy."
+          },
+          {
+            "id": "API5",
+            "text": "The standard repo shape: `findAll` (paginated, identical WHERE for list + count, returns `{ rows, total }`) · `findByIds` (always an array — want one? pass `[id]`; no `findById`) · `create` · `update` · `delete`."
+          },
+          {
+            "id": "API6",
+            "text": "Extra repo methods only for a genuinely specific query shape, with a stated reason. Named for the field filtered, plural, array params: `findAllByOrgIds`, never `listFor*`. Specificity and product constraints are the role of services, not repos."
+          },
+          {
+            "id": "API7",
+            "text": "Repos are dumb: zero business logic — no conditional, switch, throw, or decision. A repo never throws; it returns empty state. A permission-style lookup returns rows/count, never a boolean (boolean = business logic = service)."
+          },
+          {
+            "id": "API8",
+            "text": "A repository never joins. The moment a repo joins a second entity, that entity's rows enter the query with its access control missing — that is the reason. A cross-entity read is a DB view or service enrichment: the service gets its own rows, asks the other entity's service for what is missing, joins, and serves."
+          },
+          {
+            "id": "API9",
+            "text": "A view ends in `View`, and its owner follows its rows. If the served rows are entity A's rows — however enriched — the view lives in A's repository as a queryable relation. If the served rows are an abstraction that is no single entity, the view gets a repository of its own."
+          }
+        ],
+        "imagesAndDiagrams": [],
+        "examples": [
+          {
+            "title": "The standard method set, in the repo today",
+            "text": "The membership repository carries the full contract: `findAll` returning `{ rows, total }`, `findByIds` taking an array, `create` · `update` · `delete`, and the extra lookups named for the field they filter, plural, array params.",
+            "snippets": [
+              {
+                "caption": "apps/main/slices/seed/user-organization-mgmt/api/repositories/membership.repository.ts — interface, trimmed",
+                "code": "create(/* … */): Promise<UomMembershipSelect>;\nfindByIds(ids: string[]): Promise<UomMembershipSelect[]>;\nfindAll(query: {\n  /* … */\n}): Promise<{ rows: UomMembershipSelect[]; total: number }>;\nfindAllByOrgIds(/* … */): Promise<UomMembershipSelect[]>;\nfindAllByUserIds(/* … */): Promise<UomMembershipSelect[]>;\nupdate(visibility: Private, id: string, roles: string[]): Promise<void>;\ndelete(visibility: Private, id: string): Promise<void>;"
+              }
+            ]
+          },
+          {
+            "title": "Service enrichment, in the repo today",
+            "text": "A caller holding user ids asks the profile service and merges in memory — the cross-entity read happens with no join anywhere.",
+            "snippets": [
+              {
+                "caption": "user-profile.service.ts — the enrichment seam",
+                "code": "/** Profiles for the given users, keyed by user id — the gated enrichment seam\n *  for callers holding user rows (API12: they never touch our repo). */\nasync getAllByUserIds(\n  ac: ScopedAcRequestContext,\n  userIds: string[],\n): Promise<Map<string, UomUserProfileSelect>>"
+              }
+            ]
+          },
+          {
+            "title": "Who owns a view — both cases",
+            "text": "Illustrative shapes — neither view exists in the repo yet. `memberListView` serves membership rows enriched with profile name and avatar: the rows are still memberships, so it lives in the membership repository. `orgActivityView` serves one row per organization per day — members joined, invitations sent, consents signed: those rows are no single entity, so the view gets its own repository.",
+            "snippets": [
+              {
+                "caption": "Rows are entity A's — the view lives in A's repository",
+                "code": "// models/membership.model.ts\nexport const memberListView = pgView(\"member_list_view\" /* membership ⋈ profile ⋈ contact */);\n\n// repositories/membership.repository.ts — the view is this repo's queryable relation\nfindAllByOrgIds(/* … */): Promise<{ rows: MemberListRow[]; total: number }>;"
+              },
+              {
+                "caption": "Rows are no single entity — the view gets its own repository",
+                "code": "// models/org-activity.model.ts\nexport const orgActivityView = pgView(\"org_activity_view\");\n// one row per (org, day): members joined · invitations sent · consents signed\n\n// repositories/org-activity-view.repository.ts — standard shape, one relation\nfindAllByOrgIds(/* … */): Promise<{ rows: OrgActivityRow[]; total: number }>;"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Models, schemas and data shape",
+        "statement": "One hand-written shape per entity — the model. Everything below it is inferred or derived, so the compiler chains every schema and type back to the model and nothing drifts silently.",
+        "claims": [
+          {
+            "id": "SCF4",
+            "text": "One canonical **model** per entity, one declarer — re-declaring elsewhere is a violation. Models carry no business logic."
+          },
+          {
+            "id": "SCF3",
+            "text": "Models: `<entity>.model.ts` + `<entity>.schemas.ts` side by side, in a folder named `models` (never `schemas`)."
+          },
+          {
+            "id": "SCF5",
+            "text": "The model is the only hand-written entity shape. Entity zod schemas are inferred from it (`createSelectSchema` / `createInsertSchema`); types exist only through `z.infer`. A hand-written entity schema or a hand-written interface duplicating one is a violation."
+          },
+          {
+            "text": "An input schema is a derivation: `entitySchema.pick/omit/extend` plus refinements. The diff is the only hand-authored part — it is the business decision of what a caller may set. A from-scratch `z.object` over entity fields is a violation."
+          },
+          {
+            "text": "A composed shape — a wire view, an app-specific type — takes its entity fields from the inferred schemas (`Schema.shape.field`) and declares only what is genuinely new (computed fields). The service composing it returns `satisfies` the composed type, so drifting from the model is a compile error."
+          },
+          {
+            "text": "Wire schemas are the client contract and live in the slice's `shared/`; web infers its types from them — never from entity schemas, so the persistence shape never leaks to a client."
+          },
+          {
+            "id": "SCF7",
+            "text": "Module entities in `<seed slice>/api/models/`; product slice entities in `apps/main/slices/product/<f>/api/models/` — same shape, one declarer each; `src/models/index.ts` re-exports only (db-client aggregation), declares nothing."
+          },
+          {
+            "id": "API34",
+            "text": "Immutable classification fields (e.g. org type) never change post-creation; denormalize them onto dependent records for convenience."
+          },
+          {
+            "id": "API35",
+            "text": "Request-scoped, client-owned state (e.g. active org) is never persisted — the client sends it every request; the server re-derives and re-checks. (Exception: real-time server-initiated actions.)"
+          }
+        ],
+        "imagesAndDiagrams": [],
+        "examples": [
+          {
+            "title": "The chain, end to end",
+            "text": "One rename in the model — `name` → `displayName` — breaks the build at every derivation and every `satisfies`, pointing at exactly what must follow.",
+            "snippets": [
+              {
+                "caption": "Written once — the model",
+                "code": "// organization.model.ts\nexport const uomOrganization = pgTable(\"organization\", {\n  id: text(\"id\").primaryKey(),\n  name: text(\"name\").notNull(),\n  logo: text(\"logo\"),\n  createdAt: timestamp(\"created_at\").notNull(),\n});"
+              },
+              {
+                "caption": "Inferred, never written",
+                "code": "// organization.schemas.ts\nexport const OrganizationSchema = createSelectSchema(uomOrganization);\nexport type Organization = z.infer<typeof OrganizationSchema>;"
+              },
+              {
+                "caption": "Input = derivation; the diff is the decision",
+                "code": "export const CreateOrganizationInput = createInsertSchema(uomOrganization)\n  .omit({ id: true, createdAt: true });   // server-owned fields"
+              },
+              {
+                "caption": "Composed shape — entity fields from the chain, new fields declared",
+                "code": "export const OrgCardSchema = z.object({\n  id:   OrganizationSchema.shape.id,\n  name: OrganizationSchema.shape.name,\n  memberCount: z.number(),              // computed — genuinely new\n});\nexport type OrgCard = z.infer<typeof OrgCardSchema>;\n\n// the composing service is bound by the compiler:\nreturn { id: org.id, name: org.name, memberCount } satisfies OrgCard;"
+              },
+              {
+                "caption": "The violation, for contrast",
+                "code": "// same data, hand-typed, bound to nothing — the shape an agent invents\n// and the model never corrects:\ninterface OrgCard { id: string; title: string }"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Naming",
+        "claims": [
+          {
+            "id": "API24",
+            "text": "Repos use `find*`; services use `get*`; `load*` is reserved for config — and a config loader is never named like a DB accessor. Layers don't share one name: repo `findByX` → service `getByX`."
+          },
+          {
+            "id": "API25",
+            "text": "`getMy*` is allowed in services."
+          },
+          {
+            "id": "API26",
+            "text": "Multi-record lookups are plural and take array params; singular names only for single-unique-entity lookups."
+          },
+          {
+            "id": "API27",
+            "text": "Mutate endpoints are named `update`, not `patch`."
+          },
+          {
+            "id": "API28",
+            "text": "Recovery/reset endpoints are named after the slice object (`completePasswordRecovery`), not generic verbs."
+          },
+          {
+            "id": "API29",
+            "text": "Public endpoint names never leak internal mechanism (`register`, not `flows`); services are named for what they do, not how (`auth`, not `relay`)."
+          },
+          {
+            "id": "API30",
+            "text": "`getCurrent*` is `getLatest*` when no rollback exists — names reflect what the system actually does."
+          },
+          {
+            "id": "API31",
+            "text": "`me` namespace = data of the requesting user and no organization. A route is `me` only if both hold: it touches no other user's data, and it works without an active org. Fails the first → `admin` or the entity's route; fails the second → the entity's route under the active org. `me` routes are exactly the ones allowed to run with no active-org context."
+          },
+          {
+            "id": "API32",
+            "text": "Route grouping follows the primary entity retrieved, not URL nesting (`/organization/invitations` is an invitation route); a route path need not match its service name."
+          },
+          {
+            "id": "API33",
+            "text": "Identity-provider-specific lookups never live in the generic user model/service — they belong to the integration layer."
+          }
+        ],
+        "imagesAndDiagrams": [],
+        "examples": []
+      },
+      {
+        "topic": "Hooks and webhooks",
+        "claims": [
+          {
+            "id": "MOD4",
+            "text": "A [[lifecycle hook|hook]] carries the bare fact only — message/template content is exported separately."
+          },
+          {
+            "id": "MOD5",
+            "text": "A seed slice that receives an external webhook owns it exclusively and translates it into an internal lifecycle hook; other seed slices react to the hook, never the webhook."
+          }
+        ],
+        "imagesAndDiagrams": [],
+        "examples": []
+      },
+      {
+        "topic": "External providers",
+        "statement": "An external provider is a system a seed slice collaborates with that owns its own persistence. Providers do not appear in the five-layer model: their internal writes are theirs, and the seed slice's responsibility ends at the adapter call.",
+        "claims": [
+          {
+            "id": "PRV1",
+            "text": "Every touch-point with an external provider routes through ONE abstraction/integration layer in its owning seed slice. App code never calls provider endpoints or imports the provider directly — the app must not even know the provider's name."
+          },
+          {
+            "text": "Providers are called from the **service** layer, optionally through a seed slice-owned **adapter** — a thin facade that translates between our slice and the provider's API. Adapters carry no business logic.",
+            "source": "03 draft"
+          },
+          {
+            "text": "A provider's internal storage is not our database, even when co-deployed — provider calls do not violate \"only repositories access our database\". Mirroring provider state into our db goes through a repository like any other write; the adapter or service sequences the provider call and the mirror write.",
+            "source": "03 draft"
+          },
+          {
+            "id": "SCF13",
+            "text": "Integration code for a **consumed** provider lives in its own folder, not `api/` — `api/` is what you expose, not what you consume."
+          }
+        ],
+        "imagesAndDiagrams": [],
+        "examples": [
+          {
+            "title": "The identity provider, in the repo today",
+            "text": "UOM consumes Kratos. The seed slice declares a provider-agnostic port; everything Kratos-specific — client, adapter, infra — lives in its own `identity/` folder. Nothing outside the seed slice knows the provider's name, and the rest of UOM depends on the port, not on Kratos.",
+            "snippets": [
+              {
+                "caption": "apps/main/slices/seed/user-organization-mgmt/api/identity/",
+                "code": "identity/\n├── identity-provider.port.ts        the provider-agnostic contract\n└── kratos/\n    ├── kratos-client.ts             HTTP calls to the provider\n    ├── kratos-identity-provider.ts  implements the port\n    └── infra/                       the provider's own runtime (docker-compose)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "List endpoints",
+        "claims": [
+          {
+            "text": "Every endpoint returning a collection follows one standard contract via the `list-query` lib — no carve-outs. Query params: `page` · `pageSize` · `sort` (whitelisted per endpoint, mandatory default stable sort, unknown field → 400) · `search` (only on endpoints declaring themselves searchable, unsupported → 400, never silent-ignore). Response: `{ rows, total }`.",
+            "source": "03 draft"
+          },
+          {
+            "text": "Always paginated, defaults always apply. `total` reflects the full scoped count — same WHERE as the list query, never diverging. Past-end returns `{ rows: [], total }`, never 404. A stable tiebreaker column is appended as the final sort field — pagination without one is forbidden.",
+            "source": "03 draft"
+          }
+        ],
+        "imagesAndDiagrams": [],
+        "examples": []
+      }
+    ],
+    "review": {
+      "axioms": {
+        "state": "unreviewed"
+      },
+      "purpose": {
+        "state": "unreviewed"
+      },
+      "reference": {
+        "state": "unreviewed"
+      }
+    }
+  }
+}

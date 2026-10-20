@@ -1,0 +1,17 @@
+{
+  "id": "term/map",
+  "kind": "term",
+  "title": "map",
+  "status": "converted",
+  "subjects": [
+    "docs"
+  ],
+  "tags": [
+    "docs"
+  ],
+  "paths": [],
+  "term": {
+    "def": "The entry point of a location's docs: its entries, with a summary and when to read each. Navigation only.",
+    "aliases": []
+  }
+}

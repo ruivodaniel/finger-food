@@ -1,0 +1,19 @@
+{
+  "id": "term/worker",
+  "kind": "term",
+  "title": "worker",
+  "status": "converted",
+  "subjects": [
+    "orchestrator"
+  ],
+  "tags": [
+    "orchestrator"
+  ],
+  "paths": [
+    "apps/orchestrator"
+  ],
+  "term": {
+    "def": "A task that runs and dies: an intent plus a tool with a closed contract. The output is the same per intent; the input and the config vary.",
+    "aliases": []
+  }
+}

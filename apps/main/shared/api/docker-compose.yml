@@ -1,0 +1,60 @@
+name: finger-food
+
+services:
+  postgres:
+    image: postgres:17.5
+    container_name: postgres-finger-food
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: finger_food
+    ports:
+      # host 5436 -> container 5432. Matches DATABASE_URL (…@localhost:5436) and
+      # keeps clear of a stock postgres occupying the host's 5432. In-cluster
+      # consumers (kratos, migrations) still reach postgres:5432 over the network.
+      - "5436:5432"
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d finger_food"]
+      interval: 3s
+      timeout: 3s
+      retries: 10
+
+  maildev:
+    image: maildev/maildev:2.2.1
+    container_name: maildev-finger-food
+    ports:
+      - "1081:1080"
+      - "1026:1025"
+
+
+  # SMS-Dev: run separately via `npx @relay-works/sms-dev start`
+  # UI at http://localhost:4000, API at http://localhost:4001
+  # (npm package, no Docker image available)
+
+  localstack:
+    env_file: .env
+    # image: localstack/localstack-pro:4.6.0 # (PRO IMAGE)
+    image: localstack/localstack:4.6.0
+    container_name: localstack-finger-food
+    environment:
+      - LOCALSTACK_AUTH_TOKEN="{{YOUR_TOKEN}}" # (PRO IMAGE)
+      - PERSISTENCE=1 # enables data persistence (PRO IMAGE)
+      - SNAPSHOT_SAVE_STRATEGY=ON_SHUTDOWN # (PRO IMAGE)
+      - SNAPSHOT_LOAD_STRATEGY=ON_STARTUP # (PRO IMAGE)
+      - DEBUG=${DEBUG:-0}
+      - SERVICES=s3
+    ports:
+      - "127.0.0.1:4568:4566"
+    volumes:
+      - "localstack-data:/tmp/finger-food-localstack/data"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "./scripts/init-awslocal.sh:/etc/localstack/init/ready.d/init-awslocal.sh"
+
+volumes:
+  pg-data:
+    name: finger-food-postgres-data
+  localstack-data:
+    name: finger-food-localstack-data

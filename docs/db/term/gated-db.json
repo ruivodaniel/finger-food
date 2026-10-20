@@ -1,0 +1,20 @@
+{
+  "id": "term/gated-db",
+  "kind": "term",
+  "title": "gated db",
+  "status": "approved",
+  "subjects": [
+    "gated-scoped-ac"
+  ],
+  "tags": [
+    "access-control"
+  ],
+  "paths": [
+    "shared/libs/gated-scoped-ac"
+  ],
+  "term": {
+    "def": "The per-request database handle the access-control library hands out — the only thing in the system holding the connection. Its reads and writes require a [[scope]]; it never throws, returning no rows or null when access control admits nothing. Distinct from the unmet-requirements **gate**, which answers obligations and never touches data.",
+    "aliases": [],
+    "proposed": true
+  }
+}

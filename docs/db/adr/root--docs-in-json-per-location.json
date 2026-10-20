@@ -1,0 +1,26 @@
+{
+  "id": "adr/root--docs-in-json-per-location",
+  "kind": "adr",
+  "title": "Docs are json, per location, with one registry",
+  "status": "converted",
+  "subject": "docs",
+  "tags": [
+    "docs"
+  ],
+  "paths": [],
+  "summary": "Each location owns a docs folder with a map, its docs, an adr and a glossary. A registry in the root points at the maps. Docs are json read by one viewer. The r",
+  "adr": {
+    "date": "2026-10-19",
+    "context": "Docs were half markdown, half leftovers, with no registry, and the root held docs that belong to main.",
+    "decision": "Each location owns a docs folder with a map, its docs, an adr and a glossary. A registry in the root points at the maps. Docs are json read by one viewer. The root's docs moved to main.",
+    "consequences": [
+      "Markdown moves to `.old-markdown-to-sunset` in each location and is deleted when the conversion is ready.",
+      "Converted docs have empty axioms and purpose until written.",
+      "Removing a location breaks its import in the registry."
+    ],
+    "affects": [
+      "mapper"
+    ],
+    "adrStatus": "accepted"
+  }
+}

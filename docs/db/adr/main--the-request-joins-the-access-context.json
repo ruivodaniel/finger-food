@@ -1,0 +1,35 @@
+{
+  "id": "adr/main--the-request-joins-the-access-context",
+  "kind": "adr",
+  "title": "The request body joins the access context, so gating a create on its parent is an ordinary rule",
+  "status": "approved",
+  "subject": "main",
+  "tags": [
+    "main",
+    "architecture"
+  ],
+  "paths": [],
+  "summary": "The request body becomes part of the [[access context]], hydrated by the consuming app's middleware as `requestBody`. A rule then reaches it with the `bag:` sub",
+  "adr": {
+    "date": "2026-08-14",
+    "context": "A create could only be gated on the session, so anyone holding a create permission could append a child row to ANY parent by guessing its id — append a slice to someone else's song. The parent check can be done in the service (`requireSong`, then insert), but it is discipline rather than enforcement: one handler that forgets reopens the hole silently, and the rule is invisible to anyone auditing the config, which contradicts this doc's own axioms 3 and 5.",
+    "decision": "The request body becomes part of the [[access context]], hydrated by the consuming app's middleware as `requestBody`. A rule then reaches it with the `bag:` subject the DSL already had, and gating a create on its parent is an ordinary traversal — no new value source, no new operand, no new grammar. A traversal's SUBJECT decides how it compiles: a column varies per row and stays a correlated sub-query; a context value is a constant and becomes a single existence check the gate runs before the write. `has` splits into four operators — `is`/`isNot` strict, `has`/`hasNot` shape-independent.",
+    "consequences": [
+      "The library learns nothing. It resolves whatever path a rule names, so `$requestParams` or `$requestIp` later are a hydration change and never a library one.",
+      "The check is NOT fused into the INSERT. `INSERT … SELECT … WHERE EXISTS` would close a microsecond check-then-write window that the existing requireX-then-insert pattern has had all along, and would cost hand-built parameter casts for every jsonb and array column. The window is accepted deliberately.",
+      "**`has` never means substring.** One operator meaning both containment and equality would have made `invitation.email has $session.user.email` — an account-baseline rule every authenticated user holds — match by substring, letting a caller registered as \"m@altar.io\" accept an invitation addressed to \"tim@altar.io\". Splitting the operator is what makes containment safe to have at all.",
+      "`has` stays shape-independent on purpose: a column going from `text` to `text[]` must not touch a rule (AC32). `is` is the strict opt-in and refuses a collection at boot rather than quietly widening.",
+      "The 27 existing `has:` rules are all on scalar columns, where `has` compiles to `=`. Nothing was migrated and nothing changed meaning.",
+      "Two bugs older than this step were fixed with it, both silent: a traversal sharing its slot dropped the conditions beside it (conditions AND, so that was a GRANT), and every traversal joined on the parent's `id`, so any table keyed by its parent joined the wrong column and matched nothing.",
+      "A missing payload value DENIES. It must never widen into a check every parent row satisfies.",
+      "`payload` is create-only for now and refused loudly anywhere else — a slot the engine would ignore must never look like a gate. Lifting it is additive.",
+      "The delegating form (`in: { entity, action }`, pointing at the parent's own rules instead of restating them) is deferred until a rule needs it. Its recursion worry is gone: a payload probe resolves the parent's TARGET scope, and targets carry no payload, so depth is one by construction.",
+      "**A public write can no longer be gated on its body.** Unauthenticated requests get no access context, so `$requestBody` is unreachable — the public invitation-accept stays guarded by its capability URL, not by AC. That is now a stated boundary rather than an accident.",
+      "Open, and outside the library: the song id lives in the route path, not the body, so `$requestBody.songId` resolves to nothing and the append always denies. Either the body restates the id, or hydration carries route params too."
+    ],
+    "affects": [
+      "access-control"
+    ],
+    "adrStatus": "accepted"
+  }
+}

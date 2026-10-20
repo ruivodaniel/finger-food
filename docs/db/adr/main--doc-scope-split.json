@@ -1,0 +1,30 @@
+{
+  "id": "adr/main--doc-scope-split",
+  "kind": "adr",
+  "title": "Scaffolding owns placement and boundaries; Backend Composition owns what is inside the layers",
+  "status": "approved",
+  "subject": "main",
+  "tags": [
+    "main",
+    "architecture"
+  ],
+  "paths": [],
+  "summary": "Scaffolding & Import Boundaries owns where code lives and who may reach whom. Backend Composition owns what happens inside the layers: entities, model ownership",
+  "adr": {
+    "date": "2026-08-11",
+    "context": "The Reference of [[scaffolding-and-import-boundaries|Scaffolding & Import Boundaries]] had been filled by an agent pulling every standard it judged relevant. It carried entity, model and schema rules — but Backend Composition's first axiom is already \"every entity has exactly one schema definition across slices and apps\", and that doc has a written Model Ownership section. Two docs were claiming one subject.",
+    "decision": "Scaffolding & Import Boundaries owns where code lives and who may reach whom. Backend Composition owns what happens inside the layers: entities, model ownership, layer responsibilities, list contracts, external-provider adapters. The general sharing principle — shared code sits at the nearest level above all its consumers — stays in Scaffolding, with schemas appearing there only as an example of it.",
+    "consequences": [
+      "SCF2, SCF3, SCF4, SCF5, SCF6, SCF7, SCF9, SCF13, API33 and PRV1 were un-consumed from Scaffolding and point at Backend Composition in the tracker. SCF1 stays: the fixed folder shape of every slice is scaffolding; what lives inside the folders is layering.",
+      "AC44 has no destination: it governs how every doc is enforced, and the DOC/PRC rules have no target document in the mind map.",
+      "Scaffolding's Reference went from six blocks and 26 claims to five blocks and roughly half that.",
+      "Some rules are consumed without a reference claim: MOD6 and MOD9 by the axioms, MOD11 by the Purpose (decoupability), MOD8 by the glossary (its content is the library and seed slice definitions).",
+      "`backend-composition` and `access-control` were created carrying axioms and purpose only, with an empty Reference: the division has to be visible for either doc to stay honest, but filling a Reference nobody has reviewed would fake a digestion that has not happened."
+    ],
+    "affects": [
+      "scaffolding-and-import-boundaries",
+      "backend-composition"
+    ],
+    "adrStatus": "accepted"
+  }
+}

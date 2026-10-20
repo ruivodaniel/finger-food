@@ -1,0 +1,43 @@
+<!-- label: Table -->
+<div class="flex flex-col gap-3">
+  <p element="type--body-extra-small" emphasis="quiet">header + body + footer</p>
+  <table element="table--root" class="w-full">
+    <thead element="table--header">
+      <tr element="table--header-row">
+        <th element="table--header-cell">Name</th>
+        <th element="table--header-cell">Role</th>
+        <th element="table--header-cell">Status</th>
+        <th element="table--header-cell">Members</th>
+        <th element="table--header-cell"></th>
+      </tr>
+    </thead>
+    <tbody element="table--body">
+      <tr element="table--row">
+        <td element="table--cell"><div element="table--cell-content" class="flex items-center gap-2"><span element="surface--avatar" scale="sm" class="relative flex shrink-0 overflow-hidden rounded-full"><span class="flex h-full w-full items-center justify-center">PA</span></span><span element="type--body-small">Platform Admin</span></div></td>
+        <td element="table--cell"><div element="table--cell-content"><span element="type--body-small">Owner</span></div></td>
+        <td element="table--cell"><div element="table--cell-content"><span element="surface--badge" status="success" scale="sm">Active</span></div></td>
+        <td element="table--cell"><div element="table--cell-content"><span element="surface--badge" concept="member-count" scale="xs">24</span></div></td>
+        <td element="table--cell"><div element="table--cell-content"><button element="control--button" emphasis="secondary" scale="sm"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" element="shape--icon" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></button></div></td>
+      </tr>
+      <tr element="table--row">
+        <td element="table--cell"><div element="table--cell-content" class="flex items-center gap-2"><span element="surface--avatar" scale="sm" class="relative flex shrink-0 overflow-hidden rounded-full"><span class="flex h-full w-full items-center justify-center">HC</span></span><span element="type--body-small">Health Co</span></div></td>
+        <td element="table--cell"><div element="table--cell-content"><span element="type--body-small">Member</span></div></td>
+        <td element="table--cell"><div element="table--cell-content"><span element="surface--badge" status="neutral" scale="sm">Inactive</span></div></td>
+        <td element="table--cell"><div element="table--cell-content"><span element="surface--badge" concept="member-count" scale="xs">7</span></div></td>
+        <td element="table--cell"><div element="table--cell-content"><button element="control--button" emphasis="secondary" scale="sm"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" element="shape--icon" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></button></div></td>
+      </tr>
+      <tr element="table--row">
+        <td element="table--cell"><div element="table--cell-content" class="flex items-center gap-2"><span element="surface--avatar" scale="sm" class="relative flex shrink-0 overflow-hidden rounded-full"><span class="flex h-full w-full items-center justify-center">CN</span></span><span element="type--body-small">Organization</span></div></td>
+        <td element="table--cell"><div element="table--cell-content"><span element="type--body-small">Admin</span></div></td>
+        <td element="table--cell"><div element="table--cell-content"><span element="surface--badge" status="success" scale="sm">Active</span></div></td>
+        <td element="table--cell"><div element="table--cell-content"><span element="surface--badge" concept="member-count" scale="xs">41</span></div></td>
+        <td element="table--cell"><div element="table--cell-content"><button element="control--button" emphasis="secondary" scale="sm"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" element="shape--icon" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></button></div></td>
+      </tr>
+    </tbody>
+    <tfoot element="table--footer">
+      <tr element="table--footer-row">
+        <td element="table--footer-cell" colspan="5"><div element="table--cell-content"><span element="type--body-small" emphasis="quiet">Showing 3 of 3</span></div></td>
+      </tr>
+    </tfoot>
+  </table>
+</div>

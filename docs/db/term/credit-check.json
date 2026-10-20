@@ -1,0 +1,20 @@
+{
+  "id": "term/credit-check",
+  "kind": "term",
+  "title": "credit check",
+  "status": "converted",
+  "subjects": [
+    "orchestrator"
+  ],
+  "tags": [
+    "orchestrator"
+  ],
+  "paths": [
+    "apps/orchestrator"
+  ],
+  "term": {
+    "def": "A worker that asks the open API for the credits, at the start of a run and, in a complex pipeline, again during it.",
+    "aliases": [],
+    "proposed": true
+  }
+}

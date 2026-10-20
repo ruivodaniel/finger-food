@@ -1,0 +1,45 @@
+@import "@theme-fonts";
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "@theme";
+
+/* Utility classes used inside the UI libraries (dialog centring, Stack's
+   alignment map) only exist if Tailwind scans them — paths from this file. */
+@source "../../../../../shared/libs/ui/web/components/src";
+@source "../../../../../shared/libs/ui/web/layouts/src";
+@source "../../../slices/seed/user-organization-mgmt/web";
+
+/* Anchor the height chain so h-full works everywhere */
+html,
+body,
+#root {
+  height: 100%;
+}
+
+/* Link affordance — the theme engine's typography tokens carry no color or
+   text-decoration slot yet, and Tailwind's preflight strips the browser's
+   default anchor look, so themed links would render as plain text (e.g. the
+   consent items' document titles). Until the token schema grows a link
+   treatment, give every type--link anchor a visible underline. */
+a[element="type--link"] {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ProseMirror / TipTap rich text content */
+.ProseMirror {
+  text-align: left;
+  outline: none;
+}
+.ProseMirror p { margin-bottom: 0.75em; }
+.ProseMirror h1 { font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5em; }
+.ProseMirror h2 { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5em; }
+.ProseMirror h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5em; }
+.ProseMirror strong { font-weight: 700; }
+.ProseMirror em { font-style: italic; }
+.ProseMirror u { text-decoration: underline; }
+.ProseMirror ul { list-style-type: disc; padding-left: 1.5em; margin-bottom: 0.75em; }
+.ProseMirror ol { list-style-type: decimal; padding-left: 1.5em; margin-bottom: 0.75em; }
+.ProseMirror li { margin-bottom: 0.25em; }
+.ProseMirror a { text-decoration: underline; color: var(--primary); }
+.ProseMirror blockquote { border-left: 3px solid var(--muted); padding-left: 1em; color: var(--muted-foreground); }

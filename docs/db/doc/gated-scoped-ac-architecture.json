@@ -1,0 +1,147 @@
+{
+  "id": "doc/gated-scoped-ac-architecture",
+  "kind": "doc",
+  "title": "Architecture",
+  "status": "converted",
+  "subject": "gated-scoped-ac",
+  "tags": [
+    "gated-scoped-ac",
+    "contributor"
+  ],
+  "paths": [
+    "shared/libs/gated-scoped-ac"
+  ],
+  "summary": "**What.** The internal layout of `@prowd/scoped-ac` — which module owns which concern, what lifetime each piece has, and how the consumer-facing surface comp…",
+  "docId": "gated-scoped-ac-architecture",
+  "doc": {
+    "axioms": [],
+    "purpose": {},
+    "reference": [
+      {
+        "topic": "Axioms",
+        "claims": [
+          {
+            "text": "The engine is a function of `(rules, bag, operation, optional properties) → decision`. Reads/updates return `ResolvedScope`; creates/deletes return `ScopeVerdict`."
+          },
+          {
+            "text": "The engine is bound to one storage adapter per construction. The adapter's compile is internal to the engine — consumers see only `ResolvedScope` / `ScopeVerdict`."
+          },
+          {
+            "text": "Three consumer declarations at boot: roles + hierarchy (DSL), `subjects` (bag shape), Drizzle entity schema. Validation runs at construction."
+          },
+          {
+            "text": "Every undefined input fails closed. Missing subjects, missing fields, missing properties, `null` values, undeclared operations — all deny."
+          }
+        ]
+      },
+      {
+        "topic": "Purpose",
+        "claims": [
+          {
+            "text": "**Why.** The engine is one factory but several pieces under the hood. Without an explicit map, contributors duplicate logic, push concerns into the wrong layer, or accidentally couple the resolver to Drizzle."
+          },
+          {
+            "text": "**How.** A configured engine instance holds a resolver and an internally-constructed Drizzle filter builder. The resolver evaluates rules to an abstract `ScopeFilter`; the builder compiles that to `ResolvedScope`. The Hono middleware binds an engine + bag-builder to a Hono context."
+          },
+          {
+            "text": "**Why this way.** Keeping the resolver storage-agnostic (it emits `ScopeFilter`) preserves the unit-testable pure-evaluation core. Wrapping the compile inside the engine factory means consumers never see the abstract form — `engine.resolveRead(...)` returns `ResolvedScope` directly. Two layers, one external surface."
+          }
+        ],
+        "statement": "**What.** The internal layout of `@prowd/scoped-ac` — which module owns which concern, what lifetime each piece has, and how the consumer-facing surface composes them."
+      },
+      {
+        "topic": "Reference › Module layout",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "src/\n├── index.ts                           Public surface — createScopedAc, types, expandRoles\n│\n├── types/                             Pure type definitions (no logic)\n│   ├── dsl.ts                         AccessRule, ContextScope, TargetScope\n│   ├── role.ts                        Action, ScopedRoleDefinition(s), BaseAction\n│   ├── hierarchy.ts                   RoleHierarchyConfig, RoleTree\n│   ├── schema.ts                      CoreSchema (engine-internal, normalized form)\n│   ├── scope-context.ts               ScopeContext, SubjectsBag\n│   └── scope-filter.ts                ScopeFilter (internal output of resolver), ScopeVerdict\n│\n├── parser/scope.ts                    DSL → ParsedScope (used by validator + resolver)\n├── validate/index.ts                  assertValidConfiguration\n├── expand-roles.ts                    Hierarchy walk → effective roles\n├── explain.ts                         explainScopeResolution (diagnostic)\n│\n├── resolver/                          Rule evaluation (storage-agnostic)\n│   ├── index.ts                       makeResolver — takes a `compile` callback, applies it for read/update\n│   └── bag.ts                         walkPath / ABSENT (fail-closed bag walk)\n│\n└── adapters/\n    ├── drizzle/                       Used by createScopedAc internally; also exported as escape hatch\n    │   ├── index.ts                   Re-exports\n    │   ├── builder.ts                 createScopeFilterBuilder — compile(entity, ScopeFilter) → ResolvedScope\n    │   ├── normalize.ts               toCoreSchema, normalizeSchema — Drizzle → CoreSchema\n    │   └── types.ts                   DrizzleEntitySchema(s), DrizzleSqlHelpers, ResolvedScope, JoinDescriptor\n    └── hono/                          Public surface for Hono middleware\n        ├── index.ts                   Re-exports\n        ├── middleware.ts              createScopeMiddleware, getScopedAcContext\n        └── types.ts                   ScopedAcRequestContext"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topic": "Reference › Lifetimes",
+        "claims": [],
+        "imagesAndDiagrams": [
+          {
+            "type": "ascii",
+            "value": "| Piece | Constructed | Lives for |\n|---|---|---|\n| `engine` (`ScopedAc`) | Once at app boot | App lifetime |\n| Internal Drizzle `builder` | Inside `createScopedAc`, once | App lifetime |\n| Internal `resolver` | Inside `createScopedAc`, once | App lifetime |\n| `middleware` | Once at app boot | App lifetime |\n| `ctx` (Hono request context) | Per request, by middleware | Request lifetime |"
+          }
+        ],
+        "statement": "The engine is stateless after boot — no per-request fields on the engine itself."
+      },
+      {
+        "topic": "Reference › How a request flows",
+        "claims": [],
+        "examples": [
+          {
+            "snippets": [
+              {
+                "code": "auth verifies session\n  └─ buildContext(c) → { subjects, assignedRoles } | null\n       └─ middleware: engine.expandRoles(assignedRoles) → effectiveRoles\n            └─ middleware stashes ScopedAcRequestContext on c\n                 │\n                 ▼\n       route handler:\n         ctx.resolveRead(\"entity\")        → engine.resolveRead → resolver(filter) → builder.compile(entity, filter) → ResolvedScope\n         ctx.resolveCreate(entity, props) → engine.resolveCreate → resolver evaluates against props → ScopeVerdict"
+              }
+            ]
+          }
+        ],
+        "statement": "The abstract `ScopeFilter` exists for one function-call's worth of time inside `engine.resolveRead/Update`, then is compiled and dropped. It never escapes the engine."
+      },
+      {
+        "topic": "Reference › Where each concern lives",
+        "claims": [],
+        "imagesAndDiagrams": [
+          {
+            "type": "ascii",
+            "value": "| Concern | File(s) |\n|---|---|\n| What rules look like, traversal grammar | `parser/scope.ts`, `types/dsl.ts` |\n| How the bag is shaped, fail-closed walk | `resolver/bag.ts`, `types/scope-context.ts` |\n| Hierarchy expansion | `expand-roles.ts` |\n| Boot validation, all error codes | `validate/index.ts` |\n| Rule evaluation algorithm | `resolver/index.ts` |\n| `ScopeFilter` discriminated union | `types/scope-filter.ts` |\n| `ScopeFilter → SQL` translation | `adapters/drizzle/builder.ts` |\n| Drizzle-schema normalization | `adapters/drizzle/normalize.ts` |\n| Hono middleware + ctx accessor | `adapters/hono/middleware.ts` |\n| Diagnostic trace | `explain.ts` |"
+          }
+        ]
+      },
+      {
+        "topic": "Reference › What the public surface hides",
+        "claims": [
+          {
+            "text": "`ScopeFilter` is internal to the resolver. `resolveRead`/`resolveUpdate` return compiled `ResolvedScope` directly; consumers never see the abstract filter."
+          },
+          {
+            "text": "`CoreSchema` is the engine-internal normalized schema form. Consumers pass `DrizzleEntitySchemaInputs` to `createScopedAc`; the engine normalizes internally."
+          },
+          {
+            "text": "The `adapters/drizzle/` entry point is published as an escape hatch for low-level access (e.g. building a custom `compile` step). The standard path goes through the engine's `resolveRead`/`resolveUpdate`."
+          }
+        ]
+      },
+      {
+        "topic": "Reference › Adapters at a glance",
+        "claims": [
+          {
+            "text": "**Drizzle** — `adapters/drizzle/`. Translates `ScopeFilter` to `{ where, select, joins }` against Drizzle tables. Used internally by `createScopedAc`. Also exported as a low-level escape hatch."
+          },
+          {
+            "text": "**Hono** — `adapters/hono/`. Wraps an engine + bag-builder into a Hono middleware. Stashes a pre-bound `ScopedAcRequestContext` on the request."
+          },
+          {
+            "text": "The core engine (`resolver`, `parser`, `validate`, `expand-roles`, `explain`) has zero adapter imports — it's a pure-logic core that the factory wires together."
+          }
+        ]
+      },
+      {
+        "topic": "Reference › Pointer to deeper detail",
+        "claims": [],
+        "statement": "See INTERNALS.md (`INTERNALS.md`) for the resolver algorithm, the abstract `ScopeFilter` union, and the compile pipeline."
+      }
+    ],
+    "review": {
+      "axioms": {
+        "state": "unreviewed"
+      },
+      "purpose": {
+        "state": "unreviewed"
+      },
+      "reference": {
+        "state": "unreviewed"
+      }
+    },
+    "converted": true
+  }
+}
