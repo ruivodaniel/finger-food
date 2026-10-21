@@ -43,6 +43,13 @@
       "when": 1792503351958,
       "tag": "0005_finger_food_domain",
       "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1792583948199,
+      "tag": "0006_finger_food_components_ontology",
+      "breakpoints": true
     }
   ]
 }

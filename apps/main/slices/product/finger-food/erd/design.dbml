@@ -1,24 +1,18 @@
-// FINGER FOOD: the catalog of everything an event needs, how a prepared item is assembled, the stock, the menu lines, and the event with its proposals and its invoice.
-// Everything the kitchen makes is an assembly of other items. A food item is raw or prepared; anything else the event uses is a utility.
+// FINGER FOOD: the catalog of everything an event needs, the stock, the menu lines, and the event with its proposals and its invoice.
+// A menu line holds components: what is served and what it takes to serve it (a skewer, a croquete, an azeitona, a plate). A component is an atom: it is bought as it is.
+// One ontology classifies components and menu lines: a tree of terms whose first level is the kind of tree (segments, tags of food, tags of material). One polymorphic mapping table links a term to any row of any table, so a component or a menu line maps to any number of terms.
 
-enum menu_segment {
-  savory_miniature
-  sweet_miniature
-  starter
-  main_dish
-  dessert
+enum washing_place {
+  client_kitchen
+  warehouse
 }
 
-enum unit_dimension {
-  count
-  mass
-  volume
-}
-
-enum service_type {
-  coffee_break
-  lunch
-  dinner
+enum unit {
+  piece
+  g
+  kg
+  ml
+  l
 }
 
 enum client_kind {
@@ -29,6 +23,9 @@ enum client_kind {
 enum event_stage {
   lead
   awarded
+  closed
+  invoiced
+  paid
 }
 
 enum operation_role {
@@ -43,110 +40,136 @@ enum proposal_state {
   rejected
 }
 
-table unit {
-  id uuid [pk, not null]
-  name text [not null, unique, note: 'the unit a quantity is in: piece, box, tray, g, kg, ml, l']
-  dimension unit_dimension [not null, note: 'what it measures: count (pieces, boxes), mass (grams, kilos), volume (millilitres, litres). Only units of the same dimension convert into each other']
-  base_factor decimal [not null, note: 'how many of the base unit one of this unit is. The base is the piece for count, the gram for mass, the millilitre for volume: kg is 1000, l is 1000, a box of 12 is 12, piece is 1. Metric only']
+table catering_company {
+  id uuid [pk, not null, note: 'a catering business. It owns its clients, vendors, ontology, proposal templates, team and distribution rules']
+  organization_id text [not null, unique, note: 'the organization of type company that is this catering company. The organization is the seed\'s and is not changed']
 }
 
-table item_category {
-  id uuid [pk, not null]
+table distribution_rule_set {
+  id uuid [pk, not null, note: 'the rules of the catering company for one type of moment: what a guest gets at a coffee break, at a cocktail, at a catering. One set per type']
+  catering_company_id uuid [not null, note: 'only the owner, or the role that manages templates, changes the rules']
+  event_type_term_id uuid [not null, note: 'the term under "tipo de evento" this set is for']
+  rules jsonb [not null, note: 'the rules, as one typed document: a list of { selector: term ids, quantity, unit, for_every guests, splits }, where splits is a tree of { selector: term ids, percent, splits }. miniaturas 4 per guest, split salgadas 66 % / doces 34 %, under salgadas vegetarianas 30 % / outras 70 %. A menu line matches a selector when it maps to all its terms. Siblings add to 100. At runtime only the branches that have menu lines in the moment count and their percents are renormalized; within a branch with no further split the lines share equally. The user can move any number or percent on the moment and the rest rebalances; only the numbers on the menu lines are saved. The API checks the term ids against the ontology on save']
+
+  indexes {
+    (catering_company_id, event_type_term_id) [unique]
+  }
+}
+
+table ontology_term {
+  id uuid [pk, not null, note: 'one term of the ontology of the catering company: a node of one tree']
+  catering_company_id uuid [not null, note: 'the catering company this belongs to']
   name text [not null]
-  parent_id uuid [note: 'the category it is part of. Empty for the top of the tree: raw food, prepared food, utility']
+  parent_id uuid [note: 'the term it is under. Empty for the root. The first level under the root is the kind of tree: segments (fritos, doces, bebidas ...), tags of food (vegetarian, vegan, meat, fish, gluten ...), tags of material (wood, metal, disposable ...). A screen shows one tree or several']
+
+  indexes {
+    (catering_company_id, parent_id, name) [unique]
+  }
+}
+
+table ontology_mapping {
+  id uuid [pk, not null]
+  ontology_term_id uuid [not null]
+  entity_type text [not null, note: 'the table of what is mapped: component, menu_line_template, menu_line, moment, proposal_template_moment, event. Always this way round: a thing has terms, never a term column on the thing. One table for every mapping, so a new kind of thing gets terms without a new table']
+  entity_id uuid [not null, note: 'the row of that table']
+
+  indexes {
+    (ontology_term_id, entity_type, entity_id) [unique]
+    (entity_type, entity_id)
+  }
 }
 
 table vendor {
   id uuid [pk, not null]
+  catering_company_id uuid [not null, note: 'the catering company this belongs to']
   name text [not null, unique]
 }
 
 table vendor_price {
   id uuid [pk, not null]
   vendor_id uuid [not null]
-  item_id uuid [not null]
+  component_id uuid [not null]
   quantity decimal [not null, note: 'the price is for this many of the unit below: 10 pieces, 5 kg, 2 l']
-  unit_id uuid [not null, note: 'the unit the vendor sells in. It can differ from the unit of the item: a box of 12 for an item counted by the piece. It must be of the same dimension as the item']
+  unit unit [not null, note: 'the unit the price is quoted in: pieces, g, kg, ml or l. It can differ from the unit of the component, within the same dimension. A pack is a quantity: 12 pieces']
   price decimal [not null, note: 'for that quantity. The price of one unit is price divided by quantity, not stored']
 }
 
-table item {
-  id uuid [pk, not null]
-  name text [not null, unique]
-  category_id uuid [not null, note: 'the most specific category of the tree the item belongs to']
-  unit_id uuid [not null, note: 'the unit this item is counted in']
-  price decimal [note: 'what the company charges for one unit of this item. Empty for what is not sold. A proposal copies it when the item is added and may change it for that proposal, so a change here never reaches a proposal already made']
-  vat_rate decimal [note: 'the VAT of this item as a percentage: 13 for food, 23 for beer. Empty for what is not sold']
-  reusable boolean [note: 'utility only (under the utility category). true: comes back to the warehouse after the event. false: thrown away. Empty for food']
-}
-
 table component {
-  id uuid [pk, not null]
-  assembly_id uuid [not null, note: 'the item that is assembled']
-  part_id uuid [not null, note: 'the item that goes into it: raw food, prepared food or a utility']
-  quantity decimal [not null, note: 'how many of the part, in the part\'s unit, for one of the assembly']
+  id uuid [pk, not null, note: 'one atom of the catalog: anything an event needs, as it is bought. What it is (fritos, bread, material) and what it carries (vegetarian, gluten, wood) are its terms in the ontology, through ontology_mapping']
+  name text [not null, unique]
+  unit unit [not null, note: 'the unit this component is counted in. What each unit measures (count, mass, volume) and how they convert is config, not data The component has no quantity: quantities are on the menu line component and on the vendor price.']
+  reusable boolean [note: 'true: used many times, it comes back to the warehouse after the event (a plate, a table). false: consumed or thrown away (a skewer, a napkin, the food itself)']
 }
 
 table stock {
-  item_id uuid [pk, not null, note: 'one row per item kept in the warehouse']
-  quantity decimal [not null, note: 'in the item\'s unit']
+  component_id uuid [pk, not null, note: 'one row per component kept in the warehouse']
+  quantity decimal [not null, note: 'in the component\'s unit']
   counted_at timestamp [not null]
 }
 
 table menu_line {
   id uuid [pk, not null]
   moment_id uuid [not null, note: 'the moment of a proposal it is in. A copy: it points to no menu line template']
-  segment menu_segment [not null, note: 'what the line is: savory miniatures, sweet miniatures, starters, main dishes, desserts']
+  quantity decimal [not null, note: 'per guest, in the unit below: pieces of miniatures, grams of a main dish, litres of a drink. Filled by the distribution rules of the moment\'s type when a menu line template is added to a moment, and it can be changed for this moment. The menu line template has no quantity. At runtime: guests of the moment x this quantity = what is served. The purchase list and the logistics are computed from it, not stored']
+  unit unit [not null, note: 'piece, g, ml or l, as in the distribution rule that filled it']
+  price decimal [note: 'what the client pays for one of the line. Copied from the menu line template when added, can be changed for this proposal. Fixed once the proposal is sent. The component has no price: selling is by the line']
+  vat_rate decimal [note: 'copied with the price, can be changed for this proposal']
+  note text [note: 'what the author adds for this line of this proposal, in their words: the client wants Coca-Cola and Fanta. Shown on the proposal']
   position integer [not null]
 }
 
-table menu_line_item {
+table menu_line_component {
   id uuid [pk, not null]
   menu_line_id uuid [not null]
-  item_id uuid [not null, note: 'a prepared item']
-  quantity decimal [not null, note: 'how many of the item, in the item\'s unit']
-  price decimal [note: 'copied from the item when it is added to the proposal, and it can be changed for this proposal. Fixed once the proposal is sent']
-  vat_rate decimal [note: 'copied from the item together with the price']
+  component_id uuid [not null, note: 'a component: what is served, or what it takes to serve it']
+  quantity decimal [not null, note: 'how many of the component go in one of the menu line, in the component\'s unit. It is a share, not a total: the total is computed at runtime as guests of the moment x the quantity of the menu line x this quantity, and it feeds the purchase list. The component itself only has its unit']
+  for_every decimal [not null, default: 1, note: 'of how many of the line: quantity 1 for_every 40 is one plate for every 40 croquetes']
 }
 
 table client {
   id uuid [pk, not null]
+  catering_company_id uuid [not null, note: 'the catering company this belongs to']
   name text [not null]
   kind client_kind [not null, note: 'company | individual']
+  tax_id text [note: 'the tax number (NIF) as written on the invoices. Empty when the client has none']
 }
 
 table event {
   id uuid [pk, not null]
   client_id uuid [not null, note: 'the client the event is for']
-  starts_at timestamp [not null]
+  starts_at timestamp [not null, note: 'when the event starts. The moments of its proposals happen between starts_at and ends_at']
+  ends_at timestamp [not null, note: 'when the event ends. The API refuses a moment that falls outside the event\'s starts_at and ends_at']
+  place text [note: 'where the event is, as written: a town or a venue']
+  washing washing_place [note: 'where the used material is washed after the event: in the kitchen of the client, or back at the warehouse']
   budget decimal [note: 'what the client says they want to spend']
-  stage event_stage [not null, note: 'lead | awarded']
+  stage event_stage [not null, note: 'lead | awarded | closed | invoiced | paid. A lead has proposals; awarded when one is accepted; closed when the service was delivered; invoiced when its invoice was issued; paid when it was paid']
 }
 
 table proposal_template {
   id uuid [pk, not null, note: 'a template belongs to the system: nothing of a proposal points to it. A proposal made from it gets a copy of its moments and their menu lines']
+  catering_company_id uuid [not null, note: 'the catering company this belongs to']
   name text [not null]
   upload_id uuid [note: 'the picture of the template, a file of the project\'s Files, for the visual menu shown to the client']
 }
 
 table menu_line_template {
-  id uuid [pk, not null, note: 'a menu line kept by the system: an assembled thing that is sold, such as a set of savory miniatures or a main dish. Adding it to a moment copies it as a menu line']
+  id uuid [pk, not null, note: 'a menu line kept by the system: a thing that is sold, such as a set of savory miniatures or a main dish. Adding it to a moment copies it as a menu line']
   name text [not null, unique]
-  segment menu_segment [not null, note: 'how the line is categorized']
+  price decimal [note: 'what the client pays for one of the line, in the unit of the line. Empty when not priced yet. Copied to the menu line when the template is added to a moment']
+  vat_rate decimal [note: 'the VAT of the line as a percentage: 13 for food, 23 for drinks with alcohol. Copied with the price']
 }
 
-table menu_line_template_item {
+table menu_line_template_component {
   id uuid [pk, not null]
   menu_line_template_id uuid [not null]
-  item_id uuid [not null, note: 'a prepared item of the line']
-  quantity decimal [not null, note: 'how many of the item, in the item\'s unit']
+  component_id uuid [not null, note: 'a component: what is served, or what it takes to serve it']
+  quantity decimal [not null, note: 'how many of the component, in the component\'s unit']
+  for_every decimal [not null, default: 1, note: 'of how many of the line: quantity 1 for_every 40 is one plate for every 40 croquetes The same pair is copied with the line.']
 }
 
 table proposal_template_moment {
-  id uuid [pk, not null]
+  id uuid [pk, not null, note: 'one moment of a proposal template. Its type is a term under "tipo de evento", through ontology_mapping']
   proposal_template_id uuid [not null]
-  service_type service_type [not null]
-  units_per_guest integer [note: 'coffee break: 4 miniatures per guest, divided among the items of the moment']
   position integer [not null]
 }
 
@@ -166,16 +189,17 @@ table proposal {
 }
 
 table moment {
-  id uuid [pk, not null, note: 'one moment of a proposal: a coffee break, a lunch, a cocktail. Its menu lines are what is served at it']
+  id uuid [pk, not null, note: 'one moment of a proposal: a coffee break, a cocktail, a catering. Its type is a term under "tipo de evento", through ontology_mapping like everything else; it picks the distribution rule set that fills the quantities of its menu lines. Its menu lines are what is served at it']
   proposal_id uuid [not null]
-  service_type service_type [not null]
-  units_per_guest integer [note: 'coffee break: 4 miniatures per guest, divided among the items of the moment']
+  starts_at timestamp [not null, note: 'the day and the time the moment begins. It must fall inside the event\'s starts_at and ends_at: the API refuses a moment outside them']
+  ends_at timestamp [not null, note: 'the day and the time the moment ends: a moment can be on any day of the event']
   guests integer [not null, note: 'the people to feed at this moment. It can be different from one moment to the next']
   position integer [not null]
 }
 
 table team_member {
   id uuid [pk, not null]
+  catering_company_id uuid [not null, note: 'the catering company this belongs to']
   name text [not null]
   user_id text [not null, unique, note: 'the user this person signs in as. The user is the seed\'s, and it is not changed: the team member points to it']
 }
@@ -191,6 +215,29 @@ table operation {
   proposal_id uuid [not null, unique, note: 'every proposal has an operation: what it takes to do it. The accepted proposal\'s operation is the one carried out']
 }
 
+table stock_allocation {
+  id uuid [pk, not null]
+  operation_id uuid [not null]
+  component_id uuid [not null]
+  quantity decimal [not null, note: 'how much of the stock is reserved for this operation, in the component\'s unit. Made when the event is awarded, so two events one after the other do not count the same stock']
+}
+
+table purchase_component {
+  id uuid [pk, not null]
+  operation_id uuid [not null]
+  component_id uuid [not null]
+  quantity decimal [not null, note: 'how much has to be bought for this operation, in the component\'s unit: what it needs minus what the stock allocation covers']
+  bought_at timestamp [note: 'empty until someone marks it as bought. Marking it adds the quantity to the stock']
+  user_id text [note: 'the user who marked it as bought. Empty until bought_at is filled']
+}
+
+table logistics_component {
+  id uuid [pk, not null]
+  operation_id uuid [not null]
+  component_id uuid [not null, note: 'the material: a table, a plate, a cup']
+  quantity decimal [not null, note: 'how many of it the operation needs, in the component\'s unit. Whether they are free on the dates of the event, or already in another event, is worked out at runtime']
+}
+
 table operation_member {
   id uuid [pk, not null]
   operation_id uuid [not null]
@@ -200,27 +247,59 @@ table operation_member {
   hourly_rate decimal [not null, note: 'the price of this person\'s time, part of the proposal\'s cost']
 }
 
-table invoice {
-  id uuid [pk, not null]
-  event_id uuid [not null, note: 'the event it is for. An event can have several invoices, for example one on award and one on the day. It does not depend on a proposal or an operation']
+table proposal_ad_hoc_line {
+  id uuid [pk, not null, note: 'something charged in the proposal that is not a moment or the operation: transport, rental, an extra']
+  proposal_id uuid [not null]
+  description text [not null, note: 'what is charged, in the author\'s words']
+  quantity decimal [not null]
+  price decimal [not null, note: 'for one of the quantity. Typed for this proposal, fixed once the proposal is sent']
+  vat_rate decimal [not null, note: 'the VAT of this line as a percentage']
+  position integer [not null]
 }
 
-ref: item_category.parent_id > item_category.id
-ref: item.category_id > item_category.id
+table invoice {
+  id uuid [pk, not null]
+  event_id uuid [not null, note: 'the event it is for. What the invoice charges is the accepted proposal of the event, not stored again. An event can have several invoices, for example one on award and one on the day']
+  number text [not null, unique, note: 'the number of the invoice, as issued: FA2025/17']
+  issued_at timestamp [not null]
+  due_at timestamp [note: 'the due date, from the payment terms']
+  payment_terms text [note: 'as written on the invoice: 30 days, 50% on award and 50% on the day']
+  net decimal [not null, note: 'the amount before VAT, as issued']
+  vat decimal [not null, note: 'the VAT, as issued']
+  total decimal [not null, note: 'what the client pays: net plus VAT, as issued. The invoice is a fiscal document: these amounts do not follow later changes']
+  cancelled_at timestamp [note: 'when the invoice was cancelled, for example issued by mistake. Empty while it stands. A cancelled invoice keeps its number and is not charged']
+}
+
+table credit_note {
+  id uuid [pk, not null]
+  invoice_id uuid [not null, note: 'the invoice it credits']
+  number text [not null, unique, note: 'the number of the credit note, as issued: NC2025/2']
+  issued_at timestamp [not null]
+  net decimal [not null, note: 'the amount credited before VAT, as issued']
+  vat decimal [not null]
+  total decimal [not null, note: 'what is credited to the client, as issued']
+  reason text [note: 'why it was issued, in the author\'s words']
+}
+
+table payment {
+  id uuid [pk, not null]
+  invoice_id uuid [not null]
+  received_at timestamp [not null, note: 'the day the money arrived']
+  amount decimal [not null, note: 'what arrived. An invoice can be paid in several payments']
+}
+
+ref: ontology_term.parent_id > ontology_term.id
+ref: ontology_mapping.ontology_term_id > ontology_term.id
 ref: vendor_price.vendor_id > vendor.id
-ref: vendor_price.item_id > item.id
-ref: vendor_price.unit_id > unit.id
-ref: item.unit_id > unit.id
-ref: component.assembly_id > item.id
-ref: component.part_id > item.id
-ref: stock.item_id - item.id
+ref: vendor_price.component_id > component.id
+ref: stock.component_id - component.id
 ref: menu_line.moment_id > moment.id
-ref: menu_line_template_item.menu_line_template_id > menu_line_template.id
-ref: menu_line_template_item.item_id > item.id
+ref: menu_line_template_component.menu_line_template_id > menu_line_template.id
+ref: menu_line_template_component.component_id > component.id
 ref: proposal_template_moment_line.proposal_template_moment_id > proposal_template_moment.id
 ref: proposal_template_moment_line.menu_line_template_id > menu_line_template.id
-ref: menu_line_item.menu_line_id > menu_line.id
-ref: menu_line_item.item_id > item.id
+ref: menu_line_component.menu_line_id > menu_line.id
+ref: menu_line_component.component_id > component.id
 ref: event.client_id > client.id
 ref: proposal_template_moment.proposal_template_id > proposal_template.id
 ref: proposal.event_id > event.id
@@ -232,3 +311,21 @@ ref: operation.proposal_id - proposal.id
 ref: operation_member.operation_id > operation.id
 ref: operation_member.team_member_id > team_member.id
 ref: invoice.event_id > event.id
+ref: payment.invoice_id > invoice.id
+ref: credit_note.invoice_id > invoice.id
+ref: proposal_ad_hoc_line.proposal_id > proposal.id
+ref: ontology_term.catering_company_id > catering_company.id
+ref: vendor.catering_company_id > catering_company.id
+ref: client.catering_company_id > catering_company.id
+ref: proposal_template.catering_company_id > catering_company.id
+ref: team_member.catering_company_id > catering_company.id
+ref: catering_company.organization_id - organization.id
+ref: distribution_rule_set.catering_company_id > catering_company.id
+ref: distribution_rule_set.event_type_term_id > ontology_term.id
+ref: logistics_component.operation_id > operation.id
+ref: logistics_component.component_id > component.id
+ref: stock_allocation.operation_id > operation.id
+ref: stock_allocation.component_id > component.id
+ref: purchase_component.operation_id > operation.id
+ref: purchase_component.component_id > component.id
+ref: purchase_component.user_id > user.id
