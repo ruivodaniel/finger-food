@@ -25,6 +25,7 @@ const dec = (n: number) => n.toFixed(3);
 
 type Price = { label?: string; unit_price?: number; quantity?: number; line_total?: number; vat_rate?: number };
 type Quote = { quote_id: string; client?: string; event_dates: { day?: number; month?: number; year?: number }[]; place?: string; moments: { name_as_written?: string; service_type?: string; guests?: number; menu_lines: { segment: string; items: { text: string; quantity?: number }[] }[]; prices: Price[] }[]; prices_not_in_a_moment: Price[]; total?: number };
+type InvoiceLine = { invoice_id: string; line_no: number; description: string; quantity: number; unit_price: number; vat_rate: number };
 type Invoice = { id: string; number: string; doc_type: string; issue_date: string; due_date?: string; customer_name: string; customer_tax_id?: string; payment_terms?: string; net: string; vat: string; gross: string; cancelled?: boolean };
 type Payment = { entity: string; issue_date: string; gross: number; received_date?: string; cancelled: boolean };
 type Rule = { selector: string[]; unit: string; quantity: number; for_every: number; splits: { selector: string[]; percent: number; splits: unknown[] }[] };
@@ -33,7 +34,9 @@ async function main() {
   const company = (await db.select().from(ffCateringCompany).limit(1))[0];
   if (!company) throw new Error("run seed-finger-food-catalog first");
   const quotes = readdirSync(join(RAW, "llm")).filter((f) => f.endsWith(".json")).map((f) => JSON.parse(readFileSync(join(RAW, "llm", f), "utf8")) as Quote);
-  const invoices = jsonl<Invoice>("invoices.jsonl"), payments = jsonl<Payment>("payments.jsonl");
+  const invoices = jsonl<Invoice>("invoices.jsonl"), payments = jsonl<Payment>("payments.jsonl"), invoiceLines = jsonl<InvoiceLine>("invoice_lines.jsonl");
+  // the reviewed links: invoice number -> quote id, decided by hand (data/raw/invoice_to_proposal.json)
+  const overrides = JSON.parse(readFileSync(join(RAW, "invoice_to_proposal.json"), "utf8")) as Record<string, string>;
   const resolve = JSON.parse(readFileSync(join(RAW, "history_to_menu_items.json"), "utf8")) as Record<string, string[]>;
 
   // the catalog, by name
@@ -131,8 +134,16 @@ async function main() {
     const k = norm(i.customer_name), at = new Date(i.issue_date);
     // the proposal's client is the contact, the invoice's the billing entity: an invoice meets its proposal by the amount (gross or net) within 120 days
     const near = byTotal.filter((e) => !taken.has(e.eid) && (Math.abs(e.total - Number(i.gross)) < 1 || Math.abs(e.total - Number(i.net)) < 1) && Math.abs(+e.at - +at) < 120 * 86400000).sort((a, b) => Math.abs(+a.at - +at) - Math.abs(+b.at - +at))[0];
-    let eid = near?.eid; if (eid) taken.add(eid);
-    if (!eid) { eid = id("event", "invoice", i.id); own++; await db.insert(ffEvent).values({ id: eid, clientId: clientId(k), startsAt: at, endsAt: new Date(+at + 86400000 - 1000), stage: "invoiced" }).onConflictDoNothing(); }
+    let eid = overrides[i.number] ? id("event", overrides[i.number]) : near?.eid; if (eid) taken.add(eid);
+    if (!eid) {
+      // no proposal for this invoice: the business always sold through one, so the event gets a proposal made from the invoice lines, accepted
+      eid = id("event", "invoice", i.id); own++;
+      await db.insert(ffEvent).values({ id: eid, clientId: clientId(k), startsAt: at, endsAt: new Date(+at + 86400000 - 1000), stage: "invoiced" }).onConflictDoNothing();
+      const pid = id("proposal", "invoice", i.id);
+      await db.insert(ffProposal).values({ id: pid, eventId: eid, number: 1, sentAt: at, state: "accepted" }).onConflictDoNothing();
+      await db.delete(ffProposalAdHocLine).where(eq(ffProposalAdHocLine.proposalId, pid));
+      for (const l of invoiceLines.filter((x) => x.invoice_id === i.id)) await db.insert(ffProposalAdHocLine).values({ id: id("adhoc", "invoice", i.id, String(l.line_no)), proposalId: pid, description: l.description, quantity: dec(l.quantity), price: l.unit_price.toFixed(2), vatRate: String(l.vat_rate), position: l.line_no });
+    }
     const paid = payments.some((p) => p.received_date && !p.cancelled && Math.abs(p.gross - Number(i.gross)) < 0.05 && p.issue_date === i.issue_date);
     await db.update(ffEvent).set({ stage: paid ? "paid" : "invoiced" }).where(eq(ffEvent.id, eid));
     await db.insert(ffInvoice).values({ id: id("invoice", i.id), eventId: eid, number: i.number, issuedAt: at, dueAt: i.due_date ? new Date(i.due_date) : null, paymentTerms: i.payment_terms ?? null, net: Number(i.net).toFixed(2), vat: Number(i.vat).toFixed(2), total: Number(i.gross).toFixed(2), cancelledAt: i.cancelled ? at : null })
