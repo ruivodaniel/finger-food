@@ -1,0 +1,50 @@
+{
+  "quote_id": "q:b135ec24-5747-4016-bb9b-1df37397f6d8",
+  "client": "Paula Ferreira",
+  "client_source": "file_name",
+  "event_dates": [{"day": 16, "month": 7, "year": null, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Almoço",
+      "service_type": "lunch",
+      "guests": 25,
+      "guests_raw": "20€ x 25 pax",
+      "menu_lines": [
+        {"segment": "other", "items": [
+          {"text": "Buffet de Saladas, alface, tomate, cenoura, milho", "quantity": null},
+          {"text": "Salada de Bacalhau c/ grão e salicórnia", "quantity": null},
+          {"text": "Salada de massa com fiambre e queijo mozarela", "quantity": null},
+          {"text": "Salada vegetariana com arroz primavera", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Brownie c/ Nozes e Caramelo Salgado", "quantity": null},
+          {"text": "Tacinhas c/ salada de fruta", "quantity": null},
+          {"text": "Bolachinhas Bacalhaus salgados do CASCI", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Frutos vermelhos", "quantity": null},
+          {"text": "Maçã canela", "quantity": null},
+          {"text": "Café e descafeinado (cápsulas)", "quantity": null}
+        ]}
+      ],
+      "prices": [{"label": "Almoço", "unit_price": 20, "quantity": 25, "line_total": 500, "vat_rate": 13}]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 565,
+  "total_includes_vat": true,
+  "staff_mentioned": null,
+  "notes": [
+    "Nos serviços apresentados não serão utilizados materiais plásticos",
+    "Bolachinhas do CASCI: Centro de Ação Social do Concelho de Ílhavo"
+  ],
+  "uncertain": [
+    "Client name comes from the file name only",
+    "The text has no hour; the Almoço is the only moment",
+    "The Bolachinhas are placed under dessert because they follow the Sobremesa heading"
+  ]
+}

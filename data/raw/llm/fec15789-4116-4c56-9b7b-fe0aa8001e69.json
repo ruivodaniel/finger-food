@@ -1,0 +1,61 @@
+{
+  "quote_id": "q:fec15789-4116-4c56-9b7b-fe0aa8001e69",
+  "client": "Patricia Balacó",
+  "client_source": "file_name",
+  "event_dates": [{"day": 16, "month": 1, "year": null, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Comidas",
+      "service_type": "other",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Tábuas de Queijos decoradas c/ frutos secos", "quantity": null},
+          {"text": "Tábuas de enchidos decoradas c/ azeitonas", "quantity": null},
+          {"text": "Variedade de pães e tostas sem gluten", "quantity": null},
+          {"text": "Panqueca de centeio c/guacamole queijo e tomate", "quantity": null},
+          {"text": "Panqueca de Hummus c/ queijo e azeitonas", "quantity": null},
+          {"text": "Tarte de Camembert c/ compota e frutos secos", "quantity": null},
+          {"text": "Salada de Salmão fumado no copo", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Ovos Moles de Aveiro", "quantity": null},
+          {"text": "Brownie c/ Nozes e caramelo salgado", "quantity": null},
+          {"text": "Variedade de Brigadeiros", "quantity": null},
+          {"text": "Tarte basca c/ frutos vermelhos", "quantity": null},
+          {"text": "Espetadas de Fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água engarrafada", "quantity": null},
+          {"text": "Água aromatizada", "quantity": null},
+          {"text": "Sumo de laranja Natural (exprimido na hora servido em flutes)", "quantity": null},
+          {"text": "Sumos Compal", "quantity": null},
+          {"text": "Vinho do Porto", "quantity": null},
+          {"text": "Espumante", "quantity": null},
+          {"text": "Café e Descafeinado", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Comidas", "unit_price": 21, "quantity": 35, "line_total": 735, "vat_rate": 13},
+        {"label": "Bebidas", "unit_price": 5, "quantity": 35, "line_total": 175, "vat_rate": 23}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 1045.25,
+  "total_includes_vat": true,
+  "staff_mentioned": "dois funcionários",
+  "notes": [
+    "Sub-total 830.55€ (comidas, IVA 13%); sub-total 215.25€ (bebidas, IVA 23%)",
+    "Nos serviços apresentados não serão utilizados materiais plásticos",
+    "Disponibiliza atoalhados e todo o material necessário ao serviço",
+    "Um funcionário para servir as bebidas e outro para manter a mesa das comidas organizada"
+  ],
+  "uncertain": [
+    "Client name comes from the file name only",
+    "Event day, month and year: the file name reads '16 de Janeiro 26'; the year is not written in full",
+    "No service type is written; set to other"
+  ]
+}

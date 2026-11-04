@@ -1,0 +1,57 @@
+{
+  "quote_id": "q:27f73d06-b990-49f7-a22b-50583faa9df8",
+  "client": null,
+  "client_source": null,
+  "event_dates": [],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Lunch Box",
+      "service_type": "lunch",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "other", "items": [
+          {"text": "Lunch Box 5*: Saco reutilizável 1; Salada composta embalada (tempero, talher de madeira); Sandes c/ alface: patê de frango, de atum ou húmus c/ azeitona; Brownie c/ nozes; Maçã; Banana; Água; Sumo Compal", "quantity": null},
+          {"text": "Lunch Box 4*: Saco reutilizável; Salada composta embalada (tempero, talher de madeira); Sandes c/ alface: patê de frango, de atum ou húmus c/ azeitona; Brownie c/ nozes; Maçã; Água de; Sumo Compal", "quantity": null},
+          {"text": "Lunch Box 3*: Saco reutilizável; Sandes c/ alface: patê de frango, de atum ou húmus c/ azeitona; Brownie c/ nozes; Maçã; Água de; Sumo Compal", "quantity": null},
+          {"text": "Lunch Box 2*: Saco reutilizável; Sandes c/ alface: patê de frango, de atum ou húmus c/ azeitona; Maçã; Água; Sumo Compal", "quantity": null},
+          {"text": "Lunch Box 1*: Saco reutilizável; Sandes c/ alface: patê de frango, de atum ou húmus c/ azeitona; Maçã; Água", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Lunch box 5*", "unit_price": 17, "quantity": null, "line_total": null, "vat_rate": null},
+        {"label": "Lunch box 4*", "unit_price": 16, "quantity": null, "line_total": null, "vat_rate": null},
+        {"label": "Lunch box 3*", "unit_price": 11, "quantity": null, "line_total": null, "vat_rate": null},
+        {"label": "Lunch box 2*", "unit_price": 9, "quantity": null, "line_total": null, "vat_rate": null},
+        {"label": "Lunch box 1*", "unit_price": 8, "quantity": null, "line_total": null, "vat_rate": null}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [
+    {"label": "Saco reutilizável", "unit_price": 1, "quantity": null, "line_total": null, "vat_rate": 13},
+    {"label": "Salada composta embalada", "unit_price": 6, "quantity": null, "line_total": null, "vat_rate": 13},
+    {"label": "Sandes c/ alface: patê de frango, de atum ou húmus c/ azeitona", "unit_price": 5, "quantity": null, "line_total": null, "vat_rate": 13},
+    {"label": "Sandes c/ alface: panado de frango, lombo de porco assado, filete de pescada, cogumelos de cebolada, omelete c/ queijo", "unit_price": 6, "quantity": null, "line_total": null, "vat_rate": 13},
+    {"label": "Brownie c/ nozes", "unit_price": 2, "quantity": null, "line_total": null, "vat_rate": 13},
+    {"label": "Ovo Mole", "unit_price": 1.5, "quantity": null, "line_total": null, "vat_rate": 13},
+    {"label": "Salame", "unit_price": 1, "quantity": null, "line_total": null, "vat_rate": 13},
+    {"label": "Maçã", "unit_price": 1, "quantity": null, "line_total": null, "vat_rate": 13},
+    {"label": "Banana", "unit_price": 1, "quantity": null, "line_total": null, "vat_rate": 13},
+    {"label": "Água de 0.50cl", "unit_price": 1, "quantity": null, "line_total": null, "vat_rate": 13},
+    {"label": "Sumo Compal", "unit_price": 1, "quantity": null, "line_total": null, "vat_rate": 13}
+  ],
+  "total": null,
+  "total_includes_vat": null,
+  "staff_mentioned": null,
+  "notes": [
+    "Sandes são em pão d´avó de diâmetro 16/18 cm",
+    "Caso queiram construir a vossa própria Lunch Box segue o preço individual de cada item.",
+    "Salada composta embalada: as saladas são da Vitacress, produzidas no dia antes da encomenda."
+  ],
+  "uncertain": [
+    "Sem cliente, data, local ou quantidade de caixas no texto ou no nome do ficheiro.",
+    "Não há total final; os preços são por caixa (5* a 1*) e por item.",
+    "A referência 'Água de' das caixas 4* e 3* está incompleta no original."
+  ]
+}

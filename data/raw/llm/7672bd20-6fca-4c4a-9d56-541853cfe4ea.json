@@ -1,0 +1,63 @@
+{
+  "quote_id": "q:7672bd20-6fca-4c4a-9d56-541853cfe4ea",
+  "client": "Daniela Oliveira",
+  "client_source": "file_name",
+  "event_dates": [],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Miniaturas Salgadas e Grazing",
+      "service_type": "other",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Espetada de bolinhos de bacalhau c/ cherry", "quantity": null},
+          {"text": "Rissóis de camarão", "quantity": null},
+          {"text": "Tabuas de enchidos decoradas c/ azeitonas", "quantity": null},
+          {"text": "Croquetes de novilho c/ azeitona", "quantity": null},
+          {"text": "Croissants c/ fiambre", "quantity": null},
+          {"text": "Folhados de salsicha", "quantity": null},
+          {"text": "Folhados mistos", "quantity": null},
+          {"text": "Espetada de mozarela c/ cherry e manjericão", "quantity": null},
+          {"text": "Tabuas de queijos e decoradas c/ frutos secos", "quantity": null},
+          {"text": "Vol au vents de guacamole c/ azeitona", "quantity": null},
+          {"text": "Croissants c/ Queijo", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Bownie c/ Nozes e Caramelo salgado", "quantity": null},
+          {"text": "Variedade de brigadeiros", "quantity": null},
+          {"text": "Variedade de macarrons", "quantity": null},
+          {"text": "Pasteis de nata", "quantity": null}
+        ]},
+        {"segment": "other", "items": [
+          {"text": "Espetadas de Fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Sumo de laranja natural (espremido na hora, servido em flutes)", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio) Hortelã, Frutos vermelhos", "quantity": null},
+          {"text": "Água garrafas de vidro 1Lt", "quantity": null},
+          {"text": "Café e descafeinado (cápsulas)", "quantity": null}
+        ]}
+      ],
+      "prices": [{"label": "Comidas e Bebidas não alcoólicas", "unit_price": 20, "quantity": 50, "line_total": 1000, "vat_rate": 13}]
+    }
+  ],
+  "prices_not_in_a_moment": [
+    {"label": "Deslocação 30km+30km", "unit_price": null, "quantity": null, "line_total": 60, "vat_rate": null}
+  ],
+  "total": 1190,
+  "total_includes_vat": null,
+  "staff_mentioned": "2 funcionários que iram dispor as mesas em buffet para servir",
+  "notes": [
+    "Sub-total 1130€ (comidas e bebidas, IVA 13%)",
+    "Todo o serviço é realizado com loiças e toalhas de pano"
+  ],
+  "uncertain": [
+    "Client name comes from the file name only",
+    "No event date written in the text or the file name",
+    "Headcount is not written; 50 is the price quantity",
+    "The text does not say whether the Deslocação line carries VAT; total_includes_vat is null"
+  ]
+}

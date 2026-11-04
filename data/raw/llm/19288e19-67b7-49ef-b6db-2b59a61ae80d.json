@@ -1,0 +1,61 @@
+{
+  "quote_id": "q:19288e19-67b7-49ef-b6db-2b59a61ae80d",
+  "client": "Rosa Andias",
+  "client_source": "file_name",
+  "event_dates": [
+    {"day": 19, "month": 7, "year": null, "source": "file_name"}
+  ],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Almoço (volante) 12h30",
+      "service_type": "lunch",
+      "guests": 55,
+      "guests_raw": "55",
+      "menu_lines": [
+        {"segment": "other", "items": [
+          {"text": "Croquetes de Vitela", "quantity": null},
+          {"text": "Bolinhos de Bacalhau", "quantity": null},
+          {"text": "Espetada de Cherry c/ Mozarela e Manjericão", "quantity": null},
+          {"text": "Camarão cozido", "quantity": null},
+          {"text": "Wraps de Frango, Delícias e Guacamole c/ queijo e rúcula", "quantity": null},
+          {"text": "Saladas Variadas Alface, tomate, cenoura, milho, couve roxa", "quantity": null},
+          {"text": "Feijão Frade com Quinoa de Legumes (vegan)", "quantity": null},
+          {"text": "Salada de Bacalhau c/ grão de bico", "quantity": null},
+          {"text": "Leitão assado á Bairrada c/ laranja", "quantity": null},
+          {"text": "Batatas fritas", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Brownie c/ nozes e caramelo salgado", "quantity": null},
+          {"text": "Variedade de Brigadeiros", "quantity": null},
+          {"text": "Bolinhas de Berlim", "quantity": null},
+          {"text": "Espetadas de Fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo Compal", "quantity": null},
+          {"text": "Águas aromatizadas", "quantity": null},
+          {"text": "Limonada c/ Hortelã", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Almoço", "unit_price": 38, "quantity": 55, "line_total": 2090, "vat_rate": 13}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 2361.70,
+  "total_includes_vat": true,
+  "staff_mentioned": "2 funcionários",
+  "notes": [
+    "Empréstimo de copos para o vosso vinho.",
+    "Todo o material necessário ao serviço incluído, assim como atoalhados e guardanapos.",
+    "O local deve ter um ponto de água para lavar as loiças, a não ser que seja num parque e usem materiais de papel.",
+    "Nos serviços apresentados não serão utilizados materiais plásticos.",
+    "Todo o serviço é realizado com loiças e toalhas de pano."
+  ],
+  "uncertain": [
+    "Os pratos não têm cabeçalhos de secção; ficaram como other.",
+    "Data 19 Julho só no nome do ficheiro; o texto não tem data."
+  ]
+}

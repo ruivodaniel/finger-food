@@ -1,0 +1,44 @@
+{
+  "quote_id": "q:62884639-81f6-419e-a8b4-8cd6730ed6ca",
+  "client": "Maythe",
+  "client_source": "file_name",
+  "event_dates": [],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Entradas (volante) e Sobremesa",
+      "service_type": "other",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "starter", "items": [
+          {"text": "Bolinhos de Bacalhau em espeto de Cherry c/ Azeitona", "quantity": 50},
+          {"text": "2 Tabuas de Queijos e decoradas c/ frutos secos - 4 variedades", "quantity": null},
+          {"text": "2 Tabuas de Enchidos decoradas c/ azeitonas - 4 variedades", "quantity": null},
+          {"text": "Mini Hambúrgueres", "quantity": 25},
+          {"text": "Folhados Mistos", "quantity": 25},
+          {"text": "Folhados de Salsicha", "quantity": 25}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Espetadas de Fruta", "quantity": 50},
+          {"text": "Bolinhas de Berlim", "quantity": 25},
+          {"text": "Variedade de brigadeiros", "quantity": 50}
+        ]}
+      ],
+      "prices": [
+        {"label": "Comidas c/ entrega", "unit_price": null, "quantity": null, "line_total": 400, "vat_rate": null}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 400,
+  "total_includes_vat": null,
+  "staff_mentioned": null,
+  "notes": [
+    "Comidas c/ entrega 400€."
+  ],
+  "uncertain": [
+    "Client name taken from the file name ('Maythe quantidades'); the text gives none.",
+    "No event date, place or guest count; the text does not say whether VAT applies."
+  ]
+}

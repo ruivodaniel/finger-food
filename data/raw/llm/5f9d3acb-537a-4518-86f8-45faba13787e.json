@@ -1,0 +1,52 @@
+{
+  "quote_id": "q:5f9d3acb-537a-4518-86f8-45faba13787e",
+  "client": "Patricia Lito",
+  "client_source": "file_name",
+  "event_dates": [{"day": 22, "month": 4, "year": null, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Coffee Break 17h",
+      "service_type": "coffee_break",
+      "guests": 250,
+      "guests_raw": "x 250",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Vol au vents de Frango", "quantity": null},
+          {"text": "Folhados Mistos", "quantity": null},
+          {"text": "Bolinhos de Bacalhau", "quantity": null},
+          {"text": "Croquetes de Vitela", "quantity": null},
+          {"text": "Vol au vents de Guacamole (Veg)", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Brownie c/ nozes e caramelo salgado", "quantity": null},
+          {"text": "Mil Folhas Glacê", "quantity": null},
+          {"text": "Bolachinhas Bacalhaus do CASCI", "quantity": null},
+          {"text": "Ovos Moles", "quantity": null},
+          {"text": "Espetadas de fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Café e descafeinado (cápsulas)", "quantity": null},
+          {"text": "Vinho do Porto ( Servido em flutes)", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Serviço de Coffee break", "unit_price": 6.7, "quantity": 250, "line_total": 1675, "vat_rate": 13},
+        {"label": "Serviço de Vinho do Porto (Barros)", "unit_price": 0.8, "quantity": 250, "line_total": 200, "vat_rate": 23}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 2138.75,
+  "total_includes_vat": true,
+  "staff_mentioned": "dois funcionários",
+  "notes": [
+    "Nos serviços apresentados não serão utilizados materiais plásticos, demonstrando assim a nossa consciência ambiental.",
+    "O nosso serviço inclui todos os materiais necessários para o menu apresentado, assim como dois funcionários para servir cafés e o Vinho do Porto, mantendo as mesas limpas e arrumadas.",
+    "Nas miniaturas doces temos um item muito especial que começamos a introduzir nos nossos menus, as bolachinhas do CASCI – O CASCI é o Centro de Ação Social do Concelho de Ílhavo e habilita para a inclusão social pessoas com deficiência, pessoas idosas, crianças e públicos de risco, ao comprarmos estes produtos estamos a ajudar."
+  ],
+  "uncertain": []
+}

@@ -1,0 +1,11 @@
+{"id": "f784b1b9-15ad-53ea-a8bb-8f0baac1dbb8", "catering_company_id": "22465785-b83c-55ee-b755-036884f5a565", "name": "Prepared food", "parent_id": null}
+{"id": "8fb8eb54-a2b4-557c-aab5-65021b8b0ed7", "catering_company_id": "22465785-b83c-55ee-b755-036884f5a565", "name": "Beverages", "parent_id": null}
+{"id": "1b0212e5-e502-5f2f-94f4-46d30f92ba53", "catering_company_id": "22465785-b83c-55ee-b755-036884f5a565", "name": "Water", "parent_id": "8fb8eb54-a2b4-557c-aab5-65021b8b0ed7"}
+{"id": "91fa1b81-1dff-540f-822e-fa7df1abdc07", "catering_company_id": "22465785-b83c-55ee-b755-036884f5a565", "name": "Juice", "parent_id": "8fb8eb54-a2b4-557c-aab5-65021b8b0ed7"}
+{"id": "b4f44073-4293-529d-bc55-9a55f6e7d2c1", "catering_company_id": "22465785-b83c-55ee-b755-036884f5a565", "name": "Soft drink", "parent_id": "8fb8eb54-a2b4-557c-aab5-65021b8b0ed7"}
+{"id": "2db21cf2-9c17-5b82-b11b-686305adc054", "catering_company_id": "22465785-b83c-55ee-b755-036884f5a565", "name": "Sparkling wine", "parent_id": "8fb8eb54-a2b4-557c-aab5-65021b8b0ed7"}
+{"id": "fac7883f-3d20-5eba-91bc-3b6e784ab2ad", "catering_company_id": "22465785-b83c-55ee-b755-036884f5a565", "name": "Wine", "parent_id": "8fb8eb54-a2b4-557c-aab5-65021b8b0ed7"}
+{"id": "806bdb73-2454-5fff-b44e-c3ac7ba9b42e", "catering_company_id": "22465785-b83c-55ee-b755-036884f5a565", "name": "Beer", "parent_id": "8fb8eb54-a2b4-557c-aab5-65021b8b0ed7"}
+{"id": "92b7a2e5-a77e-5edb-9437-e51d2c0de71b", "catering_company_id": "22465785-b83c-55ee-b755-036884f5a565", "name": "Coffee", "parent_id": "8fb8eb54-a2b4-557c-aab5-65021b8b0ed7"}
+{"id": "4cc590a4-9ecb-5eb1-aa82-38b42c428d57", "catering_company_id": "22465785-b83c-55ee-b755-036884f5a565", "name": "Tea", "parent_id": "8fb8eb54-a2b4-557c-aab5-65021b8b0ed7"}
+{"id": "1a699498-f7df-5f9e-a7a1-753c59875488", "catering_company_id": "22465785-b83c-55ee-b755-036884f5a565", "name": "Other drink", "parent_id": "8fb8eb54-a2b4-557c-aab5-65021b8b0ed7"}

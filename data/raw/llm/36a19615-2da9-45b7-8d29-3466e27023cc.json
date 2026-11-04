@@ -1,0 +1,37 @@
+{
+  "quote_id": "q:36a19615-2da9-45b7-8d29-3466e27023cc",
+  "client": "Municipio de Ilhavo",
+  "client_source": "file_name",
+  "event_dates": [{"day": 23, "month": 5, "year": null, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Almoço (volante) 12h30",
+      "service_type": "lunch",
+      "guests": 100,
+      "guests_raw": "100",
+      "menu_lines": [
+        {"segment": "starter", "items": [{"text": "Creme de Cenoura (quente no copo) (veg.)", "quantity": null}, {"text": "Variedade de Saladas (alfaces, cenoura, milho, couve roxa…)", "quantity": null}]},
+        {"segment": "main_dish", "items": [{"text": "Bacalhau c/ Natas", "quantity": null}, {"text": "Arroz de Pato", "quantity": null}, {"text": "Quinoa c/ Legumes salteados", "quantity": null}]},
+        {"segment": "dessert", "items": [{"text": "Brownie c/ nozes e caramelo salgado", "quantity": null}, {"text": "Variedade de Brigadeiros", "quantity": null}, {"text": "Ovos Moles", "quantity": null}, {"text": "Espetadas de Fruta", "quantity": null}]},
+        {"segment": "drink", "items": [{"text": "Água garrafas de vidro", "quantity": null}, {"text": "Sumo (Compal) sabores variados", "quantity": null}, {"text": "Águas aromatizadas (Chá frio)", "quantity": null}, {"text": "Café e descafeinado (cápsulas)", "quantity": null}]}
+      ],
+      "prices": [{"label": "Almoço", "unit_price": 16.5, "quantity": 100, "line_total": 1650, "vat_rate": 13}]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 1864.50,
+  "total_includes_vat": true,
+  "staff_mentioned": "4 funcionários para servir, assim como 4 máquinas de café",
+  "notes": [
+    "Mesa de bebidas presente em todos os momentos",
+    "Nos serviços apresentados não serão utilizados materiais plásticos, demonstrando assim a nossa consciência ambiental.",
+    "as bolachinhas do CASCI – O CASCI é o Centro de Ação Social do Concelho de Ílhavo"
+  ],
+  "uncertain": [
+    "Cliente e data vêm do nome do ficheiro; o texto não os indica.",
+    "Ano do evento não está escrito no texto nem no nome do ficheiro.",
+    "Local 'Biblioteca Municipal Isabel Machado Teixeira' existe só no nome do ficheiro; não foi usado como local.",
+    "Linha 'Almoço (volante) 12h30?' tem interrogação no original."
+  ]
+}

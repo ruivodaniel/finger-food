@@ -1,0 +1,56 @@
+{
+  "quote_id": "q:827d55bd-8e98-45c1-8cb8-d2f111b74df1",
+  "client": "Cesar Setenis",
+  "client_source": "file_name",
+  "event_dates": [{"day": 21, "month": 11, "year": null, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Jantar (volante) 19h30?",
+      "service_type": "dinner",
+      "guests": 50,
+      "guests_raw": "50 pessoas",
+      "menu_lines": [
+        {"segment": "starter", "items": [
+          {"text": "Buffet de Saladas (alfaces, cenoura, milho, couve roxa…) (Vegan)", "quantity": null},
+          {"text": "Rissóis, Croquetes de Vitela, Bolos de bacalhau", "quantity": null},
+          {"text": "Vol au vents de Delicias do mar, Frango, Guacamole", "quantity": null}
+        ]},
+        {"segment": "main_dish", "items": [
+          {"text": "Bacalhau c/ Natas", "quantity": null},
+          {"text": "Arroz de Pato", "quantity": null},
+          {"text": "Quinoa de Legumes (Vegan)", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Bolo de Bolacha", "quantity": null},
+          {"text": "Brownie c/ Nozes e caramelo Salgado", "quantity": null},
+          {"text": "Espetadas de Fruta (Vegan)", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Vinho branco e tinto", "quantity": null},
+          {"text": "Cerveja Mini", "quantity": null},
+          {"text": "Espumante (1 Copo) para as sobremesas", "quantity": null},
+          {"text": "Café e descafeinado", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Comidas e bebidas não alcoólicas", "unit_price": 25, "quantity": 50, "line_total": 1250, "vat_rate": 13},
+        {"label": "Bebidas alcoólicas", "unit_price": 1, "quantity": 50, "line_total": 50, "vat_rate": 23},
+        {"label": "Tabuas de queijos e enchidos (extra, p/p)", "unit_price": 5, "quantity": null, "line_total": null, "vat_rate": 13}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 1474,
+  "total_includes_vat": true,
+  "staff_mentioned": "4 funcionários",
+  "notes": [
+    "Nos serviços apresentados não serão utilizados materiais plásticos, demonstrando assim a nossa consciência ambiental.",
+    "Todo o serviço é realizado com loiças e toalhas de pano."
+  ],
+  "uncertain": [
+    "A hora do jantar vem escrita como '19h30?' com ponto de interrogação."
+  ]
+}

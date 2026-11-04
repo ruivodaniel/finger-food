@@ -1,0 +1,61 @@
+{
+  "quote_id": "q:273cfa83-2741-4e4e-9782-ac5189d95ff2",
+  "client": "Catarina Mafalda Soares",
+  "client_source": "file_name",
+  "event_dates": [{"day": 17, "month": 5, "year": null, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Menu Almoço 12h – 15h",
+      "service_type": "lunch",
+      "guests": 40,
+      "guests_raw": "40 pessoas",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Tábuas de Queijos decoradas c/ frutos secos", "quantity": null},
+          {"text": "Tábuas de Enchidos decoradas c/ azeitonas", "quantity": null},
+          {"text": "Rissóis de camarão", "quantity": null},
+          {"text": "Espetada de bolinhos de bacalhau c/ cherry", "quantity": null},
+          {"text": "Chamuças de vegetais c/ azeitona", "quantity": null},
+          {"text": "Croquetes de vitela", "quantity": null}
+        ]},
+        {"segment": "starter", "items": [
+          {"text": "Variado de saladas (Alfaces, tomate, milho, cenoura, c. roxa…)", "quantity": null},
+          {"text": "Sopa Creme de cenoura (copo)", "quantity": null}
+        ]},
+        {"segment": "main_dish", "items": [
+          {"text": "Bacalhau c/ Natas gratinado", "quantity": null},
+          {"text": "Arroz de Pato c/ enchidos", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Bolo no copo com frutos vermelhos", "quantity": null},
+          {"text": "Brownie c/ Nozes e caramelo salgado", "quantity": null},
+          {"text": "Espetadas de fruta variada", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Oferta de serviço de Café e descafeinado", "quantity": null}
+        ]},
+        {"segment": "other", "items": [
+          {"text": "Empréstimo de copos de tubo, de vinho e de shot grande", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Almoço", "unit_price": 25, "quantity": 40, "line_total": 1085, "vat_rate": 13}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 1226.05,
+  "total_includes_vat": true,
+  "staff_mentioned": "três funcionários",
+  "notes": [
+    "Para pagamento 50% na adjudicação e 50% no dia do evento.",
+    "A partir das 10h gostaríamos de aceder ao espaço; serviço contínuo até às 15h e desmontagem até às 16h.",
+    "As horas que coloquei são meramente indicativas."
+  ],
+  "uncertain": [
+    "Client name and date (17 de Maio) taken from the file name; the text gives neither. Year not in the file name.",
+    "The text writes 25€ x 40 pessoas = 1085€, which does not multiply out; the written 1085 is kept as the line total.",
+    "The file name says 'Batizado'; not in the text, not used."
+  ]
+}

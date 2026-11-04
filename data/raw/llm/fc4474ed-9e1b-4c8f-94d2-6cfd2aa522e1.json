@@ -1,0 +1,82 @@
+{
+  "quote_id": "q:fc4474ed-9e1b-4c8f-94d2-6cfd2aa522e1",
+  "client": "Aleksandra",
+  "client_source": "file_name",
+  "event_dates": [{"day": 30, "month": 10, "year": null, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Coffee-Break 10h30 – 90 pax",
+      "service_type": "coffee_break",
+      "guests": 90,
+      "guests_raw": "90 pax",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Croissant Brioche c/ Queijo (veg.) e Croissant Brioche c/ Fiambre", "quantity": null},
+          {"text": "Pão de Sementes c/ Queijo(veg.) e Pão de Sementes c/ Fiambre", "quantity": null},
+          {"text": "Folhados de salsicha", "quantity": null},
+          {"text": "Vol au vents de Guacamole (veg.)", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Muffins de Laranja e Muffins de Cenoura", "quantity": null},
+          {"text": "Bolachinhas Bacalhaus do CASCI", "quantity": null},
+          {"text": "Palmiers", "quantity": null},
+          {"text": "Pasteis de Nata", "quantity": null},
+          {"text": "Folhado de Chocolate", "quantity": null},
+          {"text": "Espetadas de fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Café e descafeinado", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Coffee-Break 10h30", "unit_price": 7, "quantity": 90, "line_total": 630, "vat_rate": null}
+      ]
+    },
+    {
+      "name_as_written": "Almoço (volante) 12h - 14h - 50 pax",
+      "service_type": "lunch",
+      "guests": 50,
+      "guests_raw": "50 pax",
+      "menu_lines": [
+        {"segment": "starter", "items": [
+          {"text": "Buffet de Saladas (alfaces, cenoura, milho, couve roxa…)", "quantity": null},
+          {"text": "Bolinhos de Bacalhau", "quantity": null},
+          {"text": "Croquetes de Vitela", "quantity": null},
+          {"text": "Empadas de Cogumelos", "quantity": null}
+        ]},
+        {"segment": "main_dish", "items": [
+          {"text": "Arroz de Pato", "quantity": null},
+          {"text": "Bacalhau c/ Natas", "quantity": null},
+          {"text": "Quinoa c/ Legumes salteados (vegi.)", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Brownie c/ Nozes e Caramelo Salgado", "quantity": null},
+          {"text": "Espetadas de Fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Café e descafeinado", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Almoço (volante) 12h - 14h", "unit_price": 20, "quantity": 50, "line_total": 1000, "vat_rate": null}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 1841.9,
+  "total_includes_vat": true,
+  "staff_mentioned": "4 funcionários",
+  "notes": [
+    "Todo o serviço é realizado com loiças e toalhas de pano.",
+    "Nos serviços apresentados não serão utilizados materiais plásticos, demonstrando assim a nossa consciência ambiental.",
+    "Nas miniaturas doces temos um item muito especial que começamos a introduzir nos nossos menus, as bolachinhas do CASCI – O CASCI é o Centro de Ação Social do Concelho de Ílhavo e habilita para a inclusão social pessoas com deficiência, pessoas idosas, crianças e públicos de risco, ao comprarmos estes produtos estamos a ajudar."
+  ],
+  "uncertain": []
+}

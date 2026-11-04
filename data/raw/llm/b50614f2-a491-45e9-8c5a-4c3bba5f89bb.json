@@ -1,0 +1,57 @@
+{
+  "quote_id": "q:b50614f2-a491-45e9-8c5a-4c3bba5f89bb",
+  "client": null,
+  "client_source": null,
+  "event_dates": [],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Lunch Box - Completa",
+      "service_type": "lunch",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "other", "items": [
+          {"text": "Salada composta embalada (tempero, talher de madeira)", "quantity": null},
+          {"text": "Sandes de Panado de frango ou Omelete c/ Alfece e queijo", "quantity": null},
+          {"text": "Maçã ou Banana", "quantity": null},
+          {"text": "Mini KitKat ou similar", "quantity": null},
+          {"text": "Água 0.50cl", "quantity": null},
+          {"text": "Sumo Bongo 0.20cl", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Lunch Box - Completa", "unit_price": 15, "quantity": null, "line_total": 15, "vat_rate": 13}
+      ]
+    },
+    {
+      "name_as_written": "Lunch Box – Base",
+      "service_type": "lunch",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "other", "items": [
+          {"text": "Sandes de Panado de frango ou Omelete c/ Alfece e queijo", "quantity": null},
+          {"text": "Maçã ou Banana", "quantity": null},
+          {"text": "Mini KitKat ou similar", "quantity": null},
+          {"text": "Água 0.50cl", "quantity": null},
+          {"text": "Sumo Bongo 0.20cl", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Lunch Box – Base", "unit_price": 10, "quantity": null, "line_total": 10, "vat_rate": 13}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": null,
+  "total_includes_vat": null,
+  "staff_mentioned": null,
+  "notes": [
+    "EX: de salada composta (Vitacress/Florett)"
+  ],
+  "uncertain": [
+    "No client, date or quantity is written in the text; the file name is 'Lunch Box 10 e 15€'.",
+    "The Completa and Base prices are written as final values (15€ and 10€) with VAT at 13% noted at the end."
+  ]
+}

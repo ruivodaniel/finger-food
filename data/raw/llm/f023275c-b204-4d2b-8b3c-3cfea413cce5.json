@@ -1,0 +1,80 @@
+{
+  "quote_id": "q:f023275c-b204-4d2b-8b3c-3cfea413cce5",
+  "client": "Leonor Gonçalves",
+  "client_source": "file_name",
+  "event_dates": [
+    {"day": 26, "month": null, "year": null, "source": "text"},
+    {"day": 27, "month": null, "year": null, "source": "text"}
+  ],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Dia 26 Coffee-Break 10h30 – 250 pax",
+      "service_type": "coffee_break",
+      "guests": 250,
+      "guests_raw": "250 pessoas",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Croissant Brioche c/ Queijo (veg.)", "quantity": null},
+          {"text": "Croissant Brioche c/ Fiambre", "quantity": null},
+          {"text": "Vol au vents de Guacamole (veg.)", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Pasteis de Nata", "quantity": null},
+          {"text": "Queques Variados", "quantity": null},
+          {"text": "Folhado de Chocolate", "quantity": null},
+          {"text": "Espetadas de fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Chás variados", "quantity": null},
+          {"text": "Café e descafeinado", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Dia 26", "unit_price": 6.05, "quantity": 250, "line_total": 1512.5, "vat_rate": null}
+      ]
+    },
+    {
+      "name_as_written": "Dia 27 Coffee-Break 10h30 – 250 pax",
+      "service_type": "coffee_break",
+      "guests": 250,
+      "guests_raw": "250 pessoas",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Pão de sementes c/ Queijo (veg.)", "quantity": null},
+          {"text": "Pão c/ Fiambre", "quantity": null},
+          {"text": "Vol au vents de Guacamole (veg.)", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Pasteis de Nata", "quantity": null},
+          {"text": "Queques variados", "quantity": null},
+          {"text": "Espetadas de fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Chás variados", "quantity": null},
+          {"text": "Café e descafeinado", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Dia 27", "unit_price": 6.05, "quantity": 250, "line_total": 1512.5, "vat_rate": null}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 3418.25,
+  "total_includes_vat": true,
+  "staff_mentioned": "3 funcionários",
+  "notes": [
+    "Nos serviços apresentados não serão utilizados materiais plásticos, apenas papel e reciclados demonstrando assim a nossa consciência ambiental.",
+    "Em cada coffee break serão servidas 900 unidades, ou seja, aproximadamente 100 peças de cada item."
+  ],
+  "uncertain": [
+    "O mês (Junho) vem só do nome do ficheiro; o texto indica apenas os dias 26 e 27."
+  ]
+}

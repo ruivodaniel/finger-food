@@ -1,0 +1,52 @@
+{
+  "quote_id": "q:101de16c-7e5c-4b4d-867a-70a92fd86e0e",
+  "client": "Eliana Sofia",
+  "client_source": "text",
+  "event_dates": [{"day": 20, "month": 7, "year": 2026, "source": "text"}],
+  "place": "Gafanha",
+  "moments": [
+    {
+      "name_as_written": "Casamento",
+      "service_type": "other",
+      "guests": 34,
+      "guests_raw": "N. pessoas: 34",
+      "menu_lines": [
+        {"segment": "starter", "items": [
+          {"text": "Tábuas de Queijos decoradas c/ frutos secos (veg.)", "quantity": null},
+          {"text": "Tábuas de enchidos decoradas c/ azeitonas", "quantity": null},
+          {"text": "Acompanhadas c/ variedade de tostas e broa", "quantity": null},
+          {"text": "Rissóis de camarão", "quantity": null},
+          {"text": "Espetada de Bolinhos de Bacalhau", "quantity": null},
+          {"text": "Croquetes de Vitela", "quantity": null}
+        ]},
+        {"segment": "main_dish", "items": [
+          {"text": "Bifanas (Estufadas)", "quantity": null},
+          {"text": "Bacalhau c/ Natas", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Bolo de Bolacha", "quantity": null},
+          {"text": "Bolo no copo variados", "quantity": null},
+          {"text": "Brownie c/ nozes e caramelo salgado", "quantity": null}
+        ]},
+        {"segment": "other", "items": [
+          {"text": "Espetadas de Frutas variadas", "quantity": null}
+        ]}
+      ],
+      "prices": [{"label": "Comidas", "unit_price": 30, "quantity": 34, "line_total": 1020, "vat_rate": 13}]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 1152.6,
+  "total_includes_vat": true,
+  "staff_mentioned": "três funcionários",
+  "notes": [
+    "Levamos copos de tubo, copos de vinho e de espumante, para as vossas bebidas",
+    "Todos os materiais necessários à elaboração do serviço estão incluídos no orçamento",
+    "Atoalhados e todo o material necessário ao serviço",
+    "O orçamento contempla 6h: 2h de montagem, 3h de serviço e 1h para desmontar; início nas vossas instalações às 18h, saída às 24h",
+    "Qualquer atraso terá um custo extra de 8.50€/hora por funcionário"
+  ],
+  "uncertain": [
+    "The text does not list drinks for the service; the drinks section is absent"
+  ]
+}

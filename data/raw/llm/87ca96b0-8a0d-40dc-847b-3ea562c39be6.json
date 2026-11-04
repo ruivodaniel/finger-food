@@ -1,0 +1,46 @@
+{
+  "quote_id": "q:87ca96b0-8a0d-40dc-847b-3ea562c39be6",
+  "client": "Monica Aresta",
+  "client_source": "file_name",
+  "event_dates": [{"day": 22, "month": 4, "year": null, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Almoço (volante) 12h30",
+      "service_type": "lunch",
+      "guests": 22,
+      "guests_raw": "x 22",
+      "menu_lines": [
+        {"segment": "other", "items": [
+          {"text": "Salada de Quinoa c/ legumes", "quantity": null},
+          {"text": "Wraps de milho c/ Frango, rúcula e cenoura", "quantity": null},
+          {"text": "Wraps de milho c/ Atum, rúcula e cenoura", "quantity": null},
+          {"text": "Wraps de Guacamole c/ cenoura e rúcula", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Tarte Basca c/ frutos vermelhos", "quantity": null},
+          {"text": "Espetadas de Fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio): Frutos vermelhos", "quantity": null},
+          {"text": "Café e descafeinado (cápsulas)", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Almoço", "unit_price": 16, "quantity": 22, "line_total": 352, "vat_rate": 13}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 397.76,
+  "total_includes_vat": true,
+  "staff_mentioned": null,
+  "notes": [
+    "Tudo opções sem glúten"
+  ],
+  "uncertain": [
+    "O nome do ficheiro diz 14 pax; o texto usa 22 (16€ x 22)."
+  ]
+}

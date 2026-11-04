@@ -1,0 +1,52 @@
+{
+  "quote_id": "q:1c753744-e050-4e82-a7ec-c1725fa993e8",
+  "client": "Inês Pinheiro",
+  "client_source": "file_name",
+  "event_dates": [{"day": 30, "month": 5, "year": null, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Almoço (volante) 12h30",
+      "service_type": "lunch",
+      "guests": 100,
+      "guests_raw": "x 100",
+      "menu_lines": [
+        {"segment": "starter", "items": [
+          {"text": "Croquetes de Vitela em espeto de azeitona", "quantity": null},
+          {"text": "Espetada de bolinhos de Bacalhau", "quantity": null},
+          {"text": "Vol au vents de Guacamole (veg.)", "quantity": null},
+          {"text": "Saladas Variadas Alface, tomate, cenoura, milho, couve roxa (veg.)", "quantity": null},
+          {"text": "Salada de Feijao Frade com Quinoa de Legumes (veg.)", "quantity": null}
+        ]},
+        {"segment": "main_dish", "items": [
+          {"text": "Bacalhau c/ Natas", "quantity": null},
+          {"text": "Arroz de Pato c/ enchidos", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Brownie c/ nozes e caramelo salgado", "quantity": null},
+          {"text": "Variedade de Brigadeiros", "quantity": null},
+          {"text": "Espetadas de Fruta", "quantity": null},
+          {"text": "Bolachinhas Bacalhaus Salgados de CASCI", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Café e descafeinado (cápsulas)", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Almoço", "unit_price": 18, "quantity": 100, "line_total": 1800, "vat_rate": 13}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 2034,
+  "total_includes_vat": true,
+  "staff_mentioned": "4 funcionários",
+  "notes": [
+    "Nos serviços apresentados não serão utilizados materiais plásticos, demonstrando assim a nossa consciência ambiental.",
+    "Nas miniaturas doces temos um item muito especial que começamos a introduzir nos nossos menus, as bolachinhas do CASCI – O CASCI é o Centro de Ação Social do Concelho de Ílhavo e habilita para a inclusão social pessoas com deficiência, pessoas idosas, crianças e públicos de risco, ao comprarmos estes produtos estamos a ajudar."
+  ],
+  "uncertain": []
+}

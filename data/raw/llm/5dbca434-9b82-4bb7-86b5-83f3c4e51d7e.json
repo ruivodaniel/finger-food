@@ -1,0 +1,233 @@
+{
+  "quote_id": "q:5dbca434-9b82-4bb7-86b5-83f3c4e51d7e",
+  "client": "Mariana Rapozo",
+  "client_source": "file_name",
+  "event_dates": [
+    {"day": 22, "month": 6, "year": null, "source": "text"},
+    {"day": 23, "month": 6, "year": null, "source": "text"},
+    {"day": 24, "month": 6, "year": null, "source": "text"},
+    {"day": 25, "month": 6, "year": null, "source": "text"},
+    {"day": 26, "month": 6, "year": null, "source": "text"}
+  ],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Dia 22 de Junho Coffee-Break - am",
+      "service_type": "coffee_break",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Pão sementes c/ Fiambre", "quantity": null},
+          {"text": "Vol au vents de Atum", "quantity": null},
+          {"text": "Pão de sementes c/ Queijo (vegetarianos)", "quantity": null},
+          {"text": "Vol au vents de Guacamole (vegetarianos)", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Espetadas de fruta", "quantity": null},
+          {"text": "Pasteis de Nata", "quantity": null},
+          {"text": "Salame de Chocolate", "quantity": null},
+          {"text": "Bolachinhas Bacalhaus do CASCI", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "Dia 22 Almoço",
+      "service_type": "lunch",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "starter", "items": [
+          {"text": "Buffet de Saladas", "quantity": null}
+        ]},
+        {"segment": "main_dish", "items": [
+          {"text": "Peixe: Bacalhau com Natas", "quantity": null},
+          {"text": "Carne: Arroz de Pato", "quantity": null},
+          {"text": "Vegan: Quinoa com legumes Salteados", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Brownie com nozes e caramelo salgado", "quantity": null},
+          {"text": "Ovos Moles", "quantity": null},
+          {"text": "Espetadas de Fruta", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "Dia 23 de Junho Coffee-Break - am",
+      "service_type": "coffee_break",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Croissant c/ fiambre", "quantity": null},
+          {"text": "Vol au vents de frutos do mar", "quantity": null},
+          {"text": "Croissant simples (vegetarianos)", "quantity": null},
+          {"text": "Croissant c/ queijo (vegetarianos)", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Espetadas de fruta", "quantity": null},
+          {"text": "Folhados de chocolate", "quantity": null},
+          {"text": "Pasteis de Nata", "quantity": null},
+          {"text": "Bolachinhas Bacalhaus do CASCI", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "Dia 23 de Junho Almoço",
+      "service_type": "lunch",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "starter", "items": [
+          {"text": "Buffet de Saladas", "quantity": null}
+        ]},
+        {"segment": "main_dish", "items": [
+          {"text": "Peixe: Jardineira de Lulas", "quantity": null},
+          {"text": "Carne: Arroz á Valenciana", "quantity": null},
+          {"text": "Vegan: Couscous com legumes Salteados", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Bolo brigadeiro", "quantity": null},
+          {"text": "Ovos Moles", "quantity": null},
+          {"text": "Espetadas de Fruta", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "Dia 24 de Junho Coffee-Break - am",
+      "service_type": "coffee_break",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Pão de Leite c/ Fiambre", "quantity": null},
+          {"text": "Vol au vent de Atum", "quantity": null},
+          {"text": "Pão de Leite c/ Queijo (vegetarianos)", "quantity": null},
+          {"text": "Vol au vent de Guacamole (vegetarianos)", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Espetadas de fruta", "quantity": null},
+          {"text": "Iogurte c/ granola", "quantity": null},
+          {"text": "Rosquinhas de Chocolate preto", "quantity": null},
+          {"text": "Bolachinhas Bacalhaus do CASCI", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "Dia 24 de Junho Almoço",
+      "service_type": "lunch",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "starter", "items": [
+          {"text": "Buffet de Saladas", "quantity": null}
+        ]},
+        {"segment": "main_dish", "items": [
+          {"text": "Peixe: Pescada Primavera", "quantity": null},
+          {"text": "Carne: Frango (cubinhos) c/ Batatas (assado)", "quantity": null},
+          {"text": "Vegan: Jardineira de Soja", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Tarte de amêndoa", "quantity": null},
+          {"text": "Ovos Moles", "quantity": null},
+          {"text": "Espetadas de Fruta", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "Dia 25 de Junho Coffee-Break - am",
+      "service_type": "coffee_break",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Pão de Sementes c/ Fiambre", "quantity": null},
+          {"text": "Vol au vents de frutos do mar", "quantity": null},
+          {"text": "Pão de Sementes c/ Queijo (vegetarianos)", "quantity": null},
+          {"text": "Bolinhas de Pão de Queijo (vegetarianos)", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Espetadas de fruta", "quantity": null},
+          {"text": "Iogurte c/ granola", "quantity": null},
+          {"text": "Salame de Chocolate", "quantity": null},
+          {"text": "Bolachinhas Bacalhaus do CASCI", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "Dia 25 de Junho Almoço",
+      "service_type": "lunch",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "starter", "items": [
+          {"text": "Buffet de Saladas", "quantity": null}
+        ]},
+        {"segment": "main_dish", "items": [
+          {"text": "Peixe: Salmão c/ Batatas (assado)", "quantity": null},
+          {"text": "Carne: Carne de Porco Estufada c/ Arroz", "quantity": null},
+          {"text": "Vegan: Tabulê Marroquin", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Bolo de bolacha", "quantity": null},
+          {"text": "Ovos Moles", "quantity": null},
+          {"text": "Espetadas de Fruta", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "Dia 26 de Junho Coffee-Break – am",
+      "service_type": "coffee_break",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Croissant c/ fiambre", "quantity": null},
+          {"text": "Vol au vents de Atum", "quantity": null},
+          {"text": "Croissant simples (vegetarianos)", "quantity": null},
+          {"text": "Croissant c/ queijo (vegetarianos)", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Espetadas de fruta", "quantity": null},
+          {"text": "Folhados de chocolate", "quantity": null},
+          {"text": "Pasteis de Nata", "quantity": null},
+          {"text": "Bolachinhas Bacalhaus do CASCI", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Mesa de bebidas presente em todos os momentos", "quantity": null},
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Café e descafeinado (cápsulas)", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    }
+  ],
+  "prices_not_in_a_moment": [
+    {"label": "Coffee breaks pm 7€ x 35 = 245€ x 5", "unit_price": 7, "quantity": 35, "line_total": 1225, "vat_rate": 13},
+    {"label": "Almoços 25€ x 35€ = 875€ x 4", "unit_price": 25, "quantity": 35, "line_total": 3500, "vat_rate": 13}
+  ],
+  "total": 5339.25,
+  "total_includes_vat": true,
+  "staff_mentioned": "2 funcionários para servir, assim como 2 máquinas de café",
+  "notes": [
+    "Sub-total = 4725€.",
+    "Todas as deslocações, mão de obra e materiais estão incluídas no orçamento.",
+    "Nas miniaturas doces, bolachinhas do CASCI: apoio à inclusão social."
+  ],
+  "uncertain": [
+    "Client name taken from the file name ('Mariana Rapozo'); the text gives none. 'RESINSURF' in the file name is not used.",
+    "Guest counts are not written per moment; the price lines show 35 for the lunches.",
+    "Coffee breaks are labelled 'am' in the menu but 'pm' in the price line; kept as written.",
+    "Price lines show '5 x' and '4 x' multipliers that are not tied to specific days; kept as written."
+  ]
+}

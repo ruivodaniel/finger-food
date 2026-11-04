@@ -1,0 +1,70 @@
+{
+  "quote_id": "q:4b889b18-0087-4c26-911f-65b031719380",
+  "client": "Tânia Baptista",
+  "client_source": "file_name",
+  "event_dates": [{"day": 17, "month": 6, "year": null, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Comidas (Entradas volante 16h-21h, Prato Principal, Sobremesa)",
+      "service_type": "other",
+      "guests": null,
+      "guests_raw": "PREÇOS para 50 pessoas / PREÇOS para 70 pessoas",
+      "menu_lines": [
+        {"segment": "starter", "items": [
+          {"text": "Bolinhos de Bacalhau", "quantity": null},
+          {"text": "Croquetes de vitela", "quantity": null},
+          {"text": "Batatas fritas", "quantity": null},
+          {"text": "Mini pão de sementes c/ queijo", "quantity": null},
+          {"text": "Mini pão de sementes c/ fiambre", "quantity": null},
+          {"text": "Amendoins, Tremoços, Azeitonas", "quantity": null}
+        ]},
+        {"segment": "main_dish", "items": [
+          {"text": "Bifanas estufadas desfiadas", "quantity": null},
+          {"text": "Cogumelos de cebolada Veg.", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Espetadas de Fruta", "quantity": null},
+          {"text": "Ovos Moles de Aveiro", "quantity": null},
+          {"text": "Variedade de Brigadeiros", "quantity": null},
+          {"text": "Brownie c/ nozes e caramelo salgado", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Sumo (Compal)", "quantity": null},
+          {"text": "Coca-cola", "quantity": null},
+          {"text": "Sumol", "quantity": null},
+          {"text": "Cerveja Mini Sagres ou Super?", "quantity": null},
+          {"text": "Sangria tinta de frutas", "quantity": null},
+          {"text": "Café e descafeinado (cápsulas)", "quantity": null}
+        ]},
+        {"segment": "decoration", "items": [
+          {"text": "Relava 2 x 6 mts c/ marcas de áreas, 2 balizas, 5 bolas futebol, Bandeiras, Toalhas e guardanapos ao tema", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Comidas (50 pessoas)", "unit_price": 25, "quantity": 50, "line_total": 1250, "vat_rate": null},
+        {"label": "Staff (50 pessoas)", "unit_price": 4.5, "quantity": 50, "line_total": 225, "vat_rate": null},
+        {"label": "Decoração (50 pessoas)", "unit_price": 4, "quantity": 50, "line_total": 200, "vat_rate": null},
+        {"label": "Comidas (70 pessoas)", "unit_price": 24, "quantity": 70, "line_total": 1680, "vat_rate": null},
+        {"label": "Staff (70 pessoas)", "unit_price": 3.2, "quantity": 70, "line_total": 225, "vat_rate": null},
+        {"label": "Decoração (70 pessoas)", "unit_price": 3, "quantity": 70, "line_total": 200, "vat_rate": null}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": null,
+  "total_includes_vat": true,
+  "staff_mentioned": "3 funcionários que iram dispor as mesas em buffet para servir os pratos quentes e as bebidas",
+  "notes": [
+    "Total para 50 pessoas = 1675€.",
+    "Total para 70 pessoas = 2105€.",
+    "Iva incluído a taxa de 13% e 23%."
+  ],
+  "uncertain": [
+    "Client name and date (17 de Junho) taken from the file name; the text gives neither. Year not in the file name.",
+    "Two guest counts (50 and 70) are quoted as alternatives, so the total is null.",
+    "The text says VAT of 13% and 23% but does not say which line carries which rate, so vat_rate is left null."
+  ]
+}

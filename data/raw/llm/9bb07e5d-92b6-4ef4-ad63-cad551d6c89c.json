@@ -1,0 +1,50 @@
+{
+  "quote_id": "q:9bb07e5d-92b6-4ef4-ad63-cad551d6c89c",
+  "client": "Sofia Marto",
+  "client_source": "file_name",
+  "event_dates": [{"day": 18, "month": 1, "year": 2026, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": null,
+      "service_type": "other",
+      "guests": 40,
+      "guests_raw": "x 40",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Tábuas de Queijos decoradas c/ frutos secos", "quantity": 2},
+          {"text": "Tábuas de enchidos decoradas c/ azeitonas", "quantity": 1},
+          {"text": "Acompanhadas c/ variedade de tostas e broa", "quantity": null},
+          {"text": "Bifanas á moda do Porto", "quantity": 50},
+          {"text": "Bolinhos de Bacalhau", "quantity": 30},
+          {"text": "Croquetes de Vitela", "quantity": 30},
+          {"text": "Croissants c/ Queijo", "quantity": 20},
+          {"text": "Croissants c/ Fiambre", "quantity": 20}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Variedade de Brigadeiros", "quantity": 40},
+          {"text": "Pasteis de Nata", "quantity": 40},
+          {"text": "Mouse de Chocolate no copo", "quantity": 40}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água engarrafada", "quantity": 10},
+          {"text": "Sumo Compal", "quantity": 5},
+          {"text": "Cerveja Mini", "quantity": 60},
+          {"text": "Espumante", "quantity": 10}
+        ]}
+      ],
+      "prices": [
+        {"label": "Comidas", "unit_price": 15, "quantity": 40, "line_total": 600, "vat_rate": null},
+        {"label": "Bebidas", "unit_price": 3, "quantity": 40, "line_total": 120, "vat_rate": null}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 720,
+  "total_includes_vat": null,
+  "staff_mentioned": null,
+  "notes": [],
+  "uncertain": [
+    "Sumo Compal indicado como '5 lts' no texto; registado como quantidade 5 sem unidade."
+  ]
+}

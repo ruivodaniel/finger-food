@@ -1,0 +1,543 @@
+{
+ "out": "/Users/danieldedecastroruivo/DEV/finger-food/data/analysis/dup/4.json",
+ "neighbourhoods": [
+  [
+   {
+    "item": "rissois croquetes de vitela bolos de bacalhau",
+    "count": 3,
+    "example": "Rissóis, Croquetes de Vitela, Bolos de bacalhau"
+   },
+   {
+    "item": "rissois de camarao",
+    "count": 63,
+    "example": "Rissóis de camarão"
+   },
+   {
+    "item": "rissois de camarao em espeto de camarao",
+    "count": 4,
+    "example": "Rissóis de camarão em espeto de camarão"
+   },
+   {
+    "item": "rissois de carne",
+    "count": 1,
+    "example": "Rissóis de carne"
+   },
+   {
+    "item": "salada de bacalhau c grao de bico",
+    "count": 1,
+    "example": "Salada de Bacalhau c/ grão de bico"
+   },
+   {
+    "item": "salada de bacalhau c grao e salicornia",
+    "count": 1,
+    "example": "Salada de Bacalhau c/ grão e salicórnia"
+   },
+   {
+    "item": "salada de feijao frade c atum",
+    "count": 2,
+    "example": "Salada de Feijao frade c/ Atum"
+   },
+   {
+    "item": "salada de feijao frade com cebola e salsa",
+    "count": 2,
+    "example": "Salada de feijão frade com cebola e salsa"
+   },
+   {
+    "item": "salada de feijao frade com quinoa de legumes",
+    "count": 1,
+    "example": "Salada de Feijao Frade com Quinoa de Legumes (veg.)"
+   },
+   {
+    "item": "salada de quinoa c legumes",
+    "count": 4,
+    "example": "Salada de Quinoa c/ legumes"
+   },
+   {
+    "item": "salada de quinoa c legumes salteados",
+    "count": 2,
+    "example": "Salada de Quinoa c/ legumes salteados"
+   },
+   {
+    "item": "salame de chocolate",
+    "count": 69,
+    "example": "Salame de Chocolate"
+   },
+   {
+    "item": "sopa creme de cenoura",
+    "count": 10,
+    "example": "Sopa Creme de cenoura (copo)"
+   },
+   {
+    "item": "sopa creme de legumes",
+    "count": 4,
+    "example": "Sopa Creme de legumes (copo)"
+   },
+   {
+    "item": "sopa de legumes",
+    "count": 2,
+    "example": "Sopa de Legumes (copo)"
+   },
+   {
+    "item": "tacinhas de salada de atum c feijao frade cebola e salsa",
+    "count": 1,
+    "example": "Tacinhas de salada de Atum c/ feijão frade cebola e salsa"
+   },
+   {
+    "item": "tacos de salmao e abacate c rucula e tangerina",
+    "count": 1,
+    "example": "Tacos de Salmão e abacate c/ rúcula e tangerina"
+   },
+   {
+    "item": "tacos de salmao fumado c queijo creme rucula e tangerina",
+    "count": 3,
+    "example": "Tacos de Salmão Fumado c/ queijo creme, rúcula e tangerina"
+   },
+   {
+    "item": "tarte basca c frutos vermelhos",
+    "count": 2,
+    "example": "Tarte basca c/ frutos vermelhos"
+   },
+   {
+    "item": "trilogia no copo",
+    "count": 1,
+    "example": "Trilogia no copo"
+   },
+   {
+    "item": "triologia no copo",
+    "count": 3,
+    "example": "Triologia no copo"
+   },
+   {
+    "item": "variado de alfaces",
+    "count": 1,
+    "example": "Variado de Alfaces"
+   },
+   {
+    "item": "variado de bolacchas",
+    "count": 2,
+    "example": "Variado de Bolacchas"
+   },
+   {
+    "item": "variado de bolachas",
+    "count": 8,
+    "example": "Variado de Bolachas"
+   },
+   {
+    "item": "variado de miniaturas fritas bolinhos de bacalhau croquetes",
+    "count": 1,
+    "example": "Variado de miniaturas fritas: Bolinhos de Bacalhau, Croquetes…"
+   },
+   {
+    "item": "variado de saladas",
+    "count": 6,
+    "example": "Variado de saladas (Alfaces, tomate, milho, cenoura, c. roxa…)"
+   },
+   {
+    "item": "variedade de bolachas manteiga",
+    "count": 5,
+    "example": "Variedade de Bolachas manteiga"
+   },
+   {
+    "item": "variedade de brigadeiros",
+    "count": 88,
+    "example": "Variedade de Brigadeiros"
+   },
+   {
+    "item": "variedade de brigadeiros espetadas de fruta",
+    "count": 2,
+    "example": "Variedade de Brigadeiros, Espetadas de Fruta"
+   },
+   {
+    "item": "variedade de brigadeiros ovos moles espetadas de fruta",
+    "count": 4,
+    "example": "Variedade de Brigadeiros, Ovos Moles, Espetadas de Fruta"
+   },
+   {
+    "item": "variedade de fritinhos",
+    "count": 4,
+    "example": "Variedade de Fritinhos"
+   },
+   {
+    "item": "variedade de fritinhos bolinhos de bacalhau croquetes",
+    "count": 1,
+    "example": "Variedade de Fritinhos Bolinhos de Bacalhau, Croquetes…"
+   },
+   {
+    "item": "variedade de macarrons",
+    "count": 14,
+    "example": "Variedade de Macarrons"
+   },
+   {
+    "item": "variedade de macarrons espetadas de fruta",
+    "count": 2,
+    "example": "Variedade de Macarrons, Espetadas de Fruta"
+   },
+   {
+    "item": "variedade de macarrons ovos moles espetadas de fruta",
+    "count": 2,
+    "example": "Variedade de Macarrons, Ovos Moles, Espetadas de Fruta"
+   },
+   {
+    "item": "variedade de pizzas",
+    "count": 1,
+    "example": "Variedade de Pizzas"
+   },
+   {
+    "item": "variedade de saladas",
+    "count": 55,
+    "example": "Variedade de Saladas (alfaces, cenoura, milho, couve roxa…)"
+   },
+   {
+    "item": "variedade de saladas em bufett",
+    "count": 2,
+    "example": "Variedade de Saladas em Bufett (variado de alfaces, cenoura ralada, milho, couve roxa, beterraba)"
+   },
+   {
+    "item": "variedade de sobremesas",
+    "count": 1,
+    "example": "Variedade de sobremesas"
+   },
+   {
+    "item": "variedade de sobremesas no copo e espetadas de fruta",
+    "count": 1,
+    "example": "Variedade de sobremesas no Copo e Espetadas de Fruta"
+   }
+  ],
+  [
+   {
+    "item": "cafe e descafeinado",
+    "count": 227,
+    "example": "Café e descafeinado (cápsulas)"
+   },
+   {
+    "item": "cafe",
+    "count": 10,
+    "example": "Café"
+   },
+   {
+    "item": "oferta de servico de cafe e descafeinado",
+    "count": 2,
+    "example": "Oferta de serviço de Café e descafeinado"
+   },
+   {
+    "item": "chavenas de cafe",
+    "count": 1,
+    "example": "Chávenas de café (levar só)"
+   },
+   {
+    "item": "cafe e descafeinado x",
+    "count": 1,
+    "example": "Café e descafeinado (cápsulas)x"
+   }
+  ],
+  [
+   {
+    "item": "brownie c nozes e caramelo salgado",
+    "count": 137,
+    "example": "Brownie c/ nozes e caramelo salgado"
+   },
+   {
+    "item": "bownie c nozes e caramelo salgado",
+    "count": 24,
+    "example": "Bownie c/ Nozes e Caramelo salgado"
+   },
+   {
+    "item": "brownie com nozes e caramelo salgado",
+    "count": 8,
+    "example": "Brownie com nozes e caramelo salgado"
+   },
+   {
+    "item": "brownie c nozes",
+    "count": 3,
+    "example": "Brownie c/ nozes"
+   }
+  ],
+  [
+   {
+    "item": "pasteis de nata",
+    "count": 144,
+    "example": "Pasteis de Nata"
+   },
+   {
+    "item": "pastel de nata",
+    "count": 5,
+    "example": "Pastel de Nata"
+   },
+   {
+    "item": "pasteis nata",
+    "count": 3,
+    "example": "Pastéis nata"
+   },
+   {
+    "item": "mini pasteis de nata",
+    "count": 1,
+    "example": "Mini Pasteis de Nata"
+   }
+  ],
+  [
+   {
+    "item": "tabuas de enchidos decoradas c azeitonas",
+    "count": 35,
+    "example": "Tábuas de enchidos decoradas c/ azeitonas"
+   },
+   {
+    "item": "tabuas de queijos decoradas c frutos secos",
+    "count": 28,
+    "example": "Tábuas de Queijos decoradas c/ frutos secos"
+   },
+   {
+    "item": "acompanhadas c variedade de tostas e broa",
+    "count": 19,
+    "example": "Acompanhadas c/ variedade de tostas e broa"
+   },
+   {
+    "item": "tabuas de queijos e decoradas c frutos secos",
+    "count": 12,
+    "example": "Tabuas de queijos e decoradas c/ frutos secos"
+   },
+   {
+    "item": "tabuas de queijos",
+    "count": 6,
+    "example": "Tábuas de Queijos"
+   },
+   {
+    "item": "tabuas de enchidos decorados c azeitonas",
+    "count": 4,
+    "example": "Tábuas de Enchidos decorados c/ azeitonas"
+   },
+   {
+    "item": "acompanhadas c variedade de tostas e gressinos",
+    "count": 3,
+    "example": "Acompanhadas c/ variedade de tostas e gressinos"
+   },
+   {
+    "item": "tabua de enchidos",
+    "count": 2,
+    "example": "Tabua de Enchidos"
+   },
+   {
+    "item": "tabua de queijos",
+    "count": 2,
+    "example": "Tabua de Queijos"
+   },
+   {
+    "item": "tabuas de enchidos decoradas",
+    "count": 2,
+    "example": "Tábuas de enchidos decoradas"
+   },
+   {
+    "item": "tabuas de enchidos decoradas c azeitonas acompanhadas c variedade de tostas e broa",
+    "count": 2,
+    "example": "Tábuas de Enchidos decoradas c/ azeitonas, acompanhadas c/ variedade de tostas e broa (veg.)"
+   },
+   {
+    "item": "charcutaria e grazing tabuas de queijos decoradas c frutos secos",
+    "count": 1,
+    "example": "Charcutaria e grazing: Tábuas de Queijos decoradas c/ frutos secos"
+   },
+   {
+    "item": "charcutaria e grazing tabuas de enchidos c variado de azeitonas",
+    "count": 1,
+    "example": "Charcutaria e grazing: Tábuas de Enchidos c/ variado de azeitonas"
+   },
+   {
+    "item": "2 tabuas de queijos e decoradas c frutos secos 4 variedades",
+    "count": 1,
+    "example": "2 Tabuas de Queijos e decoradas c/ frutos secos - 4 variedades"
+   },
+   {
+    "item": "2 tabuas de enchidos decoradas c azeitonas 4 variedades",
+    "count": 1,
+    "example": "2 Tabuas de Enchidos decoradas c/ azeitonas - 4 variedades"
+   },
+   {
+    "item": "tabuas de enchidos c azeitonas verdes recheadas e pretas",
+    "count": 1,
+    "example": "Tabuas de enchidos c/ azeitonas verdes recheadas e pretas (sem caroço)"
+   },
+   {
+    "item": "tabuas de enchidos",
+    "count": 1,
+    "example": "Tabuas de Enchidos"
+   },
+   {
+    "item": "tabua de queijos decoradas c frutos secos",
+    "count": 1,
+    "example": "Tábua de Queijos decoradas c/ frutos secos"
+   },
+   {
+    "item": "tabua de enchidos decoradas c azeitonas",
+    "count": 1,
+    "example": "Tábua de Enchidos decoradas c/ azeitonas"
+   },
+   {
+    "item": "tabuas de enchidos decoradas c azeitonas acompanhadas c variedade de tostas e gressinos",
+    "count": 1,
+    "example": "Tábuas de enchidos decoradas c/ azeitonas, acompanhadas c/ variedade de tostas e gressinos"
+   },
+   {
+    "item": "tabuas de queijos c frutos secos",
+    "count": 1,
+    "example": "Tábuas de queijos c/ frutos secos"
+   },
+   {
+    "item": "tabuas de enchidos c azeitonas",
+    "count": 1,
+    "example": "Tábuas de enchidos c/ azeitonas"
+   }
+  ],
+  [
+   {
+    "item": "bolinhas de berlim",
+    "count": 23,
+    "example": "Bolinhas de Berlim"
+   },
+   {
+    "item": "bolas de berlim",
+    "count": 5,
+    "example": "Bolas de Berlim"
+   },
+   {
+    "item": "bolinhas de hummus",
+    "count": 3,
+    "example": "Bolinhas de Hummus (Veg)"
+   },
+   {
+    "item": "bolinha de berlim",
+    "count": 1,
+    "example": "Bolinha de berlim"
+   }
+  ],
+  [
+   {
+    "item": "mesa de bebidas presente em todos os momentos",
+    "count": 19,
+    "example": "Mesa de bebidas presente em todos os momentos"
+   },
+   {
+    "item": "mesa de bebidas",
+    "count": 9,
+    "example": "Mesa de bebidas"
+   }
+  ],
+  [
+   {
+    "item": "coca cola sumol ice tea",
+    "count": 8,
+    "example": "Coca-cola, Sumol, Ice tea"
+   },
+   {
+    "item": "sumo coca cola sumol",
+    "count": 4,
+    "example": "Sumo (Compal), Coca-cola, Sumol"
+   },
+   {
+    "item": "coca cola",
+    "count": 3,
+    "example": "Coca-cola"
+   },
+   {
+    "item": "coca cola zero",
+    "count": 2,
+    "example": "Coca-cola Zero"
+   },
+   {
+    "item": "coca cola 7up ice tea",
+    "count": 1,
+    "example": "Coca-cola, 7Up, Ice tea"
+   }
+  ],
+  [
+   {
+    "item": "mini kitkat ou similar",
+    "count": 8,
+    "example": "Mini KitKat ou similar"
+   },
+   {
+    "item": "mini kitkat",
+    "count": 5,
+    "example": "mini kitkat (ou similar)"
+   }
+  ],
+  [
+   {
+    "item": "tostas c pates de guacamole e humus",
+    "count": 9,
+    "example": "Tostas c/ patês de Guacamole e Húmus (veg.)"
+   },
+   {
+    "item": "pate de humus e guacamole",
+    "count": 3,
+    "example": "Patê de Húmus e Guacamole"
+   }
+  ],
+  [
+   {
+    "item": "caldo verde",
+    "count": 5,
+    "example": "Caldo Verde"
+   },
+   {
+    "item": "caldo verde c chourica",
+    "count": 2,
+    "example": "Caldo Verde c/ chouriça"
+   }
+  ],
+  [
+   {
+    "item": "mini hamburgueres",
+    "count": 2,
+    "example": "Mini Hambúrgueres"
+   },
+   {
+    "item": "mini hamburgueres c cheddar",
+    "count": 2,
+    "example": "Mini Hambúrgueres c/ Cheddar"
+   },
+   {
+    "item": "mini hamburguer de salmao",
+    "count": 1,
+    "example": "Mini Hambúrguer de Salmão"
+   },
+   {
+    "item": "mini hamburguer de carne",
+    "count": 1,
+    "example": "Mini Hambúrguer de Carne"
+   }
+  ],
+  [
+   {
+    "item": "sangria vinho branca c frutas",
+    "count": 3,
+    "example": "Sangria vinho branca c/ frutas"
+   },
+   {
+    "item": "sangria tinta de frutas",
+    "count": 1,
+    "example": "Sangria tinta de frutas"
+   }
+  ],
+  [
+   {
+    "item": "tarte de camembert c compota e frutos secos",
+    "count": 1,
+    "example": "Tarte de Camembert c/ compota e frutos secos"
+   },
+   {
+    "item": "tarte de camembert c molho pesto",
+    "count": 1,
+    "example": "Tarte de Camembert c/ molho Pesto"
+   },
+   {
+    "item": "tarte de camembert c molho pesto c frutos secos",
+    "count": 1,
+    "example": "Tarte de Camembert c/ molho Pesto c/ frutos secos"
+   },
+   {
+    "item": "tarte de chevre c molho pesto",
+    "count": 1,
+    "example": "Tarte de Chévre c/ molho Pesto"
+   }
+  ]
+ ]
+}

@@ -1,0 +1,68 @@
+{
+  "quote_id": "q:a591bd05-8703-4673-82da-4cad743ad1a7",
+  "client": "Bling Tânia Baptista",
+  "client_source": "file_name",
+  "event_dates": [
+    {"day": 17, "month": 6, "year": null, "source": "file_name"}
+  ],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Entradas: (volante) – 16h-21h",
+      "service_type": "other",
+      "guests": null,
+      "guests_raw": "50 pessoas / 70 pessoas",
+      "menu_lines": [
+        {"segment": "starter", "items": [
+          {"text": "Bolinhos de Bacalhau", "quantity": null},
+          {"text": "Croquetes de vitela", "quantity": null},
+          {"text": "Batatas fritas", "quantity": null},
+          {"text": "Mini pão de sementes c/ queijo", "quantity": null},
+          {"text": "Mini pão de sementes c/ fiambre", "quantity": null},
+          {"text": "Amendoins, Tremoços, Azeitonas", "quantity": null}
+        ]},
+        {"segment": "main_dish", "items": [
+          {"text": "Bifanas estufadas desfiadas", "quantity": null},
+          {"text": "Cachorros c/ batata palha", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Bolinhas de Berlim", "quantity": null},
+          {"text": "Pasteis de Nata", "quantity": null},
+          {"text": "Mini Mil Folhas", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Sumo (Compal), Coca-cola, Sumol", "quantity": null},
+          {"text": "Cerveja Mini Sagres ou Super?", "quantity": null},
+          {"text": "Café e descafeinado (cápsulas)", "quantity": null}
+        ]},
+        {"segment": "decoration", "items": [
+          {"text": "Relva 2 x 6 mts c/ marcas de áreas, 2 balizas, 5 bolas futebol, Bandeiras…", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Comidas (PREÇOS para 50 pessoas)", "unit_price": 18.5, "quantity": 50, "line_total": 925, "vat_rate": null},
+        {"label": "Staff (PREÇOS para 50 pessoas)", "unit_price": 4.5, "quantity": 50, "line_total": 225, "vat_rate": null},
+        {"label": "Decoração (PREÇOS para 50 pessoas)", "unit_price": null, "quantity": null, "line_total": 150, "vat_rate": null},
+        {"label": "Comidas (PREÇOS para 70 pessoas)", "unit_price": 18, "quantity": 70, "line_total": 1260, "vat_rate": null},
+        {"label": "Staff (PREÇOS para 70 pessoas)", "unit_price": 3.2, "quantity": 70, "line_total": 225, "vat_rate": null},
+        {"label": "Decoração (PREÇOS para 70 pessoas)", "unit_price": null, "quantity": null, "line_total": 150, "vat_rate": null}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": null,
+  "total_includes_vat": true,
+  "staff_mentioned": "3 funcionários que iram dispor as mesas em buffet para servir os pratos quentes e as bebidas",
+  "notes": [
+    "Total para 50 pessoas = 1300€.",
+    "Total para 70 pessoas = 1635€."
+  ],
+  "uncertain": [
+    "Two guest counts are priced (50 and 70 pessoas) and the text does not say which applies, so guests is null.",
+    "The file name gives the client as 'Bling Tânia Baptista'; kept as written.",
+    "The text says '(Iva incluído a taxa de 13% e 23%)' without saying which line takes which rate, so vat_rate is left null on each line.",
+    "The text offers 'Cerveja Mini Sagres ou Super?' as a choice, kept as written."
+  ]
+}

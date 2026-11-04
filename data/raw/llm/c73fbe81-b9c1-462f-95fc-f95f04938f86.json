@@ -1,0 +1,56 @@
+{
+  "quote_id": "q:c73fbe81-b9c1-462f-95fc-f95f04938f86",
+  "client": "Mariana Rodrigues",
+  "client_source": "file_name",
+  "event_dates": [
+    {"day": 13, "month": 10, "year": null, "source": "file_name"}
+  ],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Coffee break pm",
+      "service_type": "coffee_break",
+      "guests": 30,
+      "guests_raw": "30",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Croissant Fiambre", "quantity": null},
+          {"text": "Croquetes de Vitela", "quantity": null},
+          {"text": "Folhados c/ salsicha", "quantity": null},
+          {"text": "Bolinhos de Bacalhau", "quantity": null},
+          {"text": "Rissóis camarão", "quantity": null},
+          {"text": "Croissant Queijo", "quantity": null},
+          {"text": "Vol au vents de Guacamole", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Brownie com nozes e caramelo salgado", "quantity": null},
+          {"text": "Iogurte c/ granola", "quantity": null},
+          {"text": "Pastéis nata", "quantity": null},
+          {"text": "Espetadas de frutas", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Frutos vermelhos", "quantity": null},
+          {"text": "Maçã canela", "quantity": null},
+          {"text": "Café e descafeinado (cápsulas)", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Coffee break pm", "unit_price": 8, "quantity": 30, "line_total": 240, "vat_rate": 13}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 271.20,
+  "total_includes_vat": true,
+  "staff_mentioned": "dois funcionários para dispor as mesas em buffet e servir os cafés",
+  "notes": [
+    "Nos serviços apresentados não serão utilizados materiais plásticos."
+  ],
+  "uncertain": [
+    "The day 13 and month 10 come from the file name; the text has no date and no year is written.",
+    "The moment has no heading in the text; the name is taken from the price line."
+  ]
+}

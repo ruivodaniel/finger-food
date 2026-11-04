@@ -1,0 +1,138 @@
+{
+  "quote_id": "q:f3a9ca89-e202-44a9-b8b7-c1b4641c6710",
+  "client": "Inês Carvalho",
+  "client_source": "file_name",
+  "event_dates": [
+    {"day": 9, "month": 4, "year": null, "source": "file_name"},
+    {"day": 10, "month": 4, "year": null, "source": "file_name"}
+  ],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Dia 9 Coffee-Break – 11h30 ?",
+      "service_type": "coffee_break",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Croissant c/ Queijo (veg.)", "quantity": null},
+          {"text": "Croissant c/ Fiambre", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Bolhachinhas Bacalhaus do CASCI", "quantity": null},
+          {"text": "Croissant simples", "quantity": null},
+          {"text": "Folhado de Chocolate", "quantity": null},
+          {"text": "Peças de fruta", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "Almoço (volante) 12h30",
+      "service_type": "lunch",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "starter", "items": [
+          {"text": "Creme de Cenoura (quente no copo) (veg.)", "quantity": null},
+          {"text": "Variedade de miniaturas Rissóis, Chamuças, Croquetes…", "quantity": null},
+          {"text": "Tostas c/ patês de Guacamole e Húmus (veg.)", "quantity": null},
+          {"text": "Variedade de Saladas (alfaces, cenoura, milho, couve roxa…)", "quantity": null}
+        ]},
+        {"segment": "main_dish", "items": [
+          {"text": "Bacalhau c/ Natas", "quantity": null},
+          {"text": "Arroz de Pato", "quantity": null},
+          {"text": "Quinoa c/ Legumes salteados", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Brownie c/ nozes e caramelo salgado", "quantity": null},
+          {"text": "Espetadas de Fruta", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "Dia 9 Coffee-Break – 15h30 ??",
+      "service_type": "coffee_break",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Pão de Queijo", "quantity": null},
+          {"text": "Folhados Mistos", "quantity": null},
+          {"text": "Folhados Salsisha", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Palmiers", "quantity": null},
+          {"text": "Mil folhas", "quantity": null},
+          {"text": "Salame de chocolate", "quantity": null},
+          {"text": "Peças de fruta", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "Dia 10 Coffee-Break – 10h30 ??",
+      "service_type": "coffee_break",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Pão c/ Queijo", "quantity": null},
+          {"text": "Pão c/ Fiambre", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Variado de Bolachas", "quantity": null},
+          {"text": "Pasteis de Nata", "quantity": null},
+          {"text": "Folhados de chocolate", "quantity": null},
+          {"text": "Peças de fruta", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "Almoço (volante) 12h45",
+      "service_type": "lunch",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "starter", "items": [
+          {"text": "Creme de Legumes (quente no copo) (veg.)", "quantity": null},
+          {"text": "Variedade de miniaturas Rissóis, Chamuças, Croquetes…", "quantity": null},
+          {"text": "Tostas c/ patês de Guacamole e Húmus (veg.)", "quantity": null},
+          {"text": "Variedade de Saladas (alfaces, cenoura, milho, couve roxa…)", "quantity": null}
+        ]},
+        {"segment": "main_dish", "items": [
+          {"text": "Bacalhau c/ Batatas a Murro e Broa", "quantity": null},
+          {"text": "Lombo Assado c/ Batatas a Murro", "quantity": null},
+          {"text": "Feijão frade c/ cogumelos salteados", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Tarte de Amêndoa", "quantity": null},
+          {"text": "Espetadas de Fruta", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    }
+  ],
+  "prices_not_in_a_moment": [
+    {"label": "Dia 5 coffee breaks (como escrito: 6€ x 23 + 23)", "unit_price": 6, "quantity": null, "line_total": 276, "vat_rate": 13},
+    {"label": "Dia 5 almoço", "unit_price": 27, "quantity": 23, "line_total": 621, "vat_rate": 13},
+    {"label": "Dia 6 coffee breaks", "unit_price": 6, "quantity": 23, "line_total": 138, "vat_rate": 13},
+    {"label": "Dia 6 almoço", "unit_price": 27, "quantity": 23, "line_total": 621, "vat_rate": 13}
+  ],
+  "total": 1871.28,
+  "total_includes_vat": true,
+  "staff_mentioned": null,
+  "notes": [
+    "Sub Total 1656 € (IVA 13% acresce).",
+    "Mesa de bebidas presente em todos os momentos: Água garrafas de vidro; Sumo de Laranja Natural; Sumo (Compal) sabores variados; Águas aromatizadas (Chá frio); Frutos vermelhos; Maçã canela; Café e descafeinado (cápsulas).",
+    "Nas miniaturas doces temos as bolachinhas do CASCI.",
+    "Nos serviços apresentados não serão utilizados materiais plásticos."
+  ],
+  "uncertain": [
+    "O texto dá Dia 9 e Dia 10 nos momentos, mas os preços falam em Dia 5 e Dia 6.",
+    "O almoço de 12h45 não tem dia escrito.",
+    "Os preços Dia 5 e Dia 6 não se ligam a um momento específico."
+  ]
+}

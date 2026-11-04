@@ -1,0 +1,41 @@
+{
+  "quote_id": "q:79171e6c-bd63-4264-843d-6eabf15857f0",
+  "client": "Daniela Oliveira",
+  "client_source": "file_name",
+  "event_dates": [{"day": 5, "month": 7, "year": null, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Mesa de bebidas",
+      "service_type": "other",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "drink", "items": [
+          {"text": "Sumo de laranja natural (espremido na hora, servido em flutes)", "quantity": null},
+          {"text": "Águas aromatizadas Frutos vermelhos, Laranja e gengibre", "quantity": null},
+          {"text": "Limonada c/ Hortelã", "quantity": null},
+          {"text": "Água garrafas de vidro 1Lt", "quantity": null},
+          {"text": "Café e descafeinado (cápsulas)", "quantity": null},
+          {"text": "Espumante Caves São Domingos", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Bebidas não alcoólicas", "unit_price": 4, "quantity": 50, "line_total": 200, "vat_rate": 13},
+        {"label": "Espumante", "unit_price": 2.5, "quantity": 50, "line_total": 125, "vat_rate": 23}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 379.75,
+  "total_includes_vat": true,
+  "staff_mentioned": "2 funcionários, 1 para servir o sumo de laranja e outro para servir o espumante e os cafés",
+  "notes": [
+    "Sub total 226€ (IVA 13%); Sub-Total 153.75€ (IVA 23%).",
+    "Todo o serviço é realizado com copos de vidro e toalhas de pano."
+  ],
+  "uncertain": [
+    "No service name is written; the single moment is named after the drinks table.",
+    "The file name has no year; the text has no date."
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "quote_id": "q:e151e93b-0471-432f-877c-35cf964435f2",
+  "client": "Diogo Dias",
+  "client_source": "file_name",
+  "event_dates": [],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Menu Almoço 12h – 15h",
+      "service_type": "lunch",
+      "guests": 35,
+      "guests_raw": "81€ x 35 pessoas",
+      "menu_lines": [
+        {"segment": "other", "items": [
+          {"text": "Rissóis de camarão em espeto de camarão", "quantity": null},
+          {"text": "Espetada de bolinhos de bacalhau c/ cherry e azeitona", "quantity": null},
+          {"text": "Chamuças de vegetais c/ ananás grelhado", "quantity": null},
+          {"text": "Croquetes de vitela c/ azeitona", "quantity": null},
+          {"text": "Variado de saladas (Alfaces, tomate, milho, cenoura, c. roxa…)", "quantity": null},
+          {"text": "Sopa Creme de cenoura (copo)", "quantity": null},
+          {"text": "Bacalhau c/ Natas", "quantity": null},
+          {"text": "Arroz de Pato", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Bolo brigadeiro", "quantity": null},
+          {"text": "Torta de Laranja", "quantity": null},
+          {"text": "Tiramisu", "quantity": null},
+          {"text": "Espetadas de fruta", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "Menu Lanche ajantarado 19h – 22h",
+      "service_type": "other",
+      "guests": 35,
+      "guests_raw": "81€ x 35 pessoas",
+      "menu_lines": [
+        {"segment": "other", "items": [
+          {"text": "Tábuas de Queijos", "quantity": null},
+          {"text": "Compotas de frutas variadas c/ frutos secos", "quantity": null},
+          {"text": "Espetadas de cherry c/ manjericão e azeitona", "quantity": null},
+          {"text": "Tábuas de enchidos decoradas", "quantity": null},
+          {"text": "Acompanhadas c/ variedade de tostas e gressinos", "quantity": null},
+          {"text": "Patê de Húmus e Guacamole", "quantity": null},
+          {"text": "Tacos de Salmão fumado c/ queijo creme, rúcula e tangerina", "quantity": null},
+          {"text": "Wraps de frango c/ cheddar e rúcula em espeto de cherry", "quantity": null},
+          {"text": "Camarão cozido (40/60)", "quantity": null},
+          {"text": "Bifanas desfiadas", "quantity": null},
+          {"text": "Moelas estufadas", "quantity": null},
+          {"text": "Cachorrinho de camarão c/ maionese de wasabi", "quantity": null},
+          {"text": "Espetadas de fruta variada", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Brigadeiros", "quantity": null},
+          {"text": "Ovos moles", "quantity": null},
+          {"text": "Macarrons", "quantity": null},
+          {"text": "Brownie c/ Nozes e caramelo salgado", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    }
+  ],
+  "prices_not_in_a_moment": [
+    {"label": "Menu (81€ x 35 pessoas)", "unit_price": 81, "quantity": 35, "line_total": 2835, "vat_rate": 13}
+  ],
+  "total": null,
+  "total_includes_vat": false,
+  "staff_mentioned": "três funcionários",
+  "notes": [
+    "Serviço de café e descafeinado sempre disponível durante todo evento",
+    "Empréstimo de copos de tubo, de vinho e de shot grande",
+    "Serviço contínuo até às 22h; as horas são meramente indicativas; a partir das 10h acesso ao espaço",
+    "Pagamento 50% na adjudicação e 50% no dia do evento",
+    "Disponibiliza atoalhados e todo o material necessário; todo o serviço com materiais não plásticos",
+    "No menu tentou apresentar boa variedade e as quantidades podem ser ajustadas para não haver sobras"
+  ],
+  "uncertain": [
+    "Client name comes from the file name only",
+    "No event date is written in the text or the file name",
+    "Headcount 35 is written next to the menu price; applied to both moments",
+    "Lanche ajantarado is not a standard service type; set to other",
+    "No total is written; the price line is stated before VAT (+ iva 13%)"
+  ]
+}

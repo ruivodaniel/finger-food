@@ -1,0 +1,110 @@
+{
+  "quote_id": "q:cb9cf264-7f8e-40f7-b787-088ee69d4f73",
+  "client": "Catia Monteiro",
+  "client_source": "file_name",
+  "event_dates": [
+    {"day": 24, "month": 10, "year": null, "source": "file_name"}
+  ],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "15h Serviço de Bebidas acompanhadas com variado de bolachas",
+      "service_type": "other",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "other", "items": [
+          {"text": "Variado de bolachas", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "17h – 18h30 Miniaturas Salgadas e Grazing Table",
+      "service_type": "other",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Bolinhos de bacalhau", "quantity": null},
+          {"text": "Rissóis de camarão", "quantity": null},
+          {"text": "Tartes de atum c/ cebolinho", "quantity": null},
+          {"text": "Wraps de Delícias do mar c/ queijo e rúcula", "quantity": null},
+          {"text": "Tabuas de enchidos c/ azeitonas verdes recheadas e pretas (sem caroço)", "quantity": null},
+          {"text": "Croissants c/ fiambre", "quantity": null},
+          {"text": "Croquetes de vitela", "quantity": null},
+          {"text": "Hambúrgueres c/ queijo e bacon", "quantity": null},
+          {"text": "Wraps de Frango", "quantity": null},
+          {"text": "Espetada de mozarela c/ cherry e manjericão", "quantity": null},
+          {"text": "Tabuas de queijos e decoradas c/ frutos secos", "quantity": null},
+          {"text": "Croissants c/ Queijo", "quantity": null},
+          {"text": "Variado de tostas e gressinos e Pão de Rio Maior", "quantity": null},
+          {"text": "Pizzas de cogumelos e azeitona preta", "quantity": null},
+          {"text": "Hambúrgueres de cogumelos", "quantity": null}
+        ]},
+        {"segment": "other", "items": [
+          {"text": "Buffet de Saladas: alface, cherry, cenoura, milho, couve rocha e feta", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "18h – 18h30 Miniaturas doces",
+      "service_type": "other",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Tiramisu (copo)", "quantity": null},
+          {"text": "Cheesecake de frutos vermelhos / Limão (copo)", "quantity": null},
+          {"text": "Brownie c/ Nozes e Caramelo salgado", "quantity": null},
+          {"text": "Brigadeiros (Morango, Chocolate e Côco)", "quantity": null},
+          {"text": "Ovos Moles", "quantity": null},
+          {"text": "Espetadas de Fruta", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "18h30 – 19h Corte do Bolo e serviço",
+      "service_type": "other",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [],
+      "prices": []
+    },
+    {
+      "name_as_written": "15h – 19h Mesa de bebidas",
+      "service_type": "other",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "drink", "items": [
+          {"text": "Sumo de Laranja Natural (exprimido na hora e servido em flutes)", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio) Hortelã, Frutos vermelhos…", "quantity": null},
+          {"text": "Água garrafas de vidro 1Lt", "quantity": null},
+          {"text": "Águas das Pedras", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    }
+  ],
+  "prices_not_in_a_moment": [
+    {"label": "Comidas e Bebidas não alcoólicas", "unit_price": null, "quantity": null, "line_total": 1420, "vat_rate": null}
+  ],
+  "total": 1420,
+  "total_includes_vat": null,
+  "staff_mentioned": "3 funcionários: 1 servir as bebidas das 15h – 19h; 2 dispor as mesas em buffet 17h – 19h; 3 apoio na copa 13h – 20h",
+  "notes": [
+    "Todo o serviço é realizado com loiças e toalhas de pano.",
+    "Levamos chávenas de café, pratos e garfos para os vossos produtos.",
+    "Necessitamos de chegar ao local às 13h e terminando o serviço do bolo às 19h; às 21h estaremos com tudo arrumado.",
+    "19h início da desmontagem (passamos as comidas que sobrarem para os vossos pratos e as bebidas abertas ficam para as poderem terminar com os vossos copos)."
+  ],
+  "uncertain": [
+    "The day 24 and month 10 come from the file name; the text has no date.",
+    "The Total 1420 has no VAT rate written.",
+    "The 'Corte do Bolo' moment has no menu lines written."
+  ]
+}

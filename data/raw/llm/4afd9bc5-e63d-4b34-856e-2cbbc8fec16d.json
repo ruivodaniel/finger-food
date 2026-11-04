@@ -1,0 +1,56 @@
+{
+  "quote_id": "q:4afd9bc5-e63d-4b34-856e-2cbbc8fec16d",
+  "client": "Ines Santos Palbit",
+  "client_source": "file_name",
+  "event_dates": [{"day": 27, "month": 3, "year": null, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Coffee Break 16h",
+      "service_type": "coffee_break",
+      "guests": 35,
+      "guests_raw": "35",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Croissant c/ Queijo (veg.)", "quantity": null},
+          {"text": "Croissant c/ Fiambre", "quantity": null},
+          {"text": "Folhados Mistos", "quantity": null},
+          {"text": "Folhados Salcisha", "quantity": null},
+          {"text": "Vol au vents de Guacamole", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Bolhachinhas Bacalhaus do CASCI", "quantity": null},
+          {"text": "Brownie c/ Nozes e Caramelo Salgado", "quantity": null},
+          {"text": "Croissant simples", "quantity": null},
+          {"text": "Pasteis de Nata", "quantity": null},
+          {"text": "Espetadas de Fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Sumo de laranja natural (espremido na hora e servido em flutes)", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Frutos vermelhos", "quantity": null},
+          {"text": "Maçã canela", "quantity": null},
+          {"text": "Café e descafeinado (cápsulas)", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Coffee break pm", "unit_price": 8.6, "quantity": 35, "line_total": 301, "vat_rate": 13}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 340.13,
+  "total_includes_vat": true,
+  "staff_mentioned": "dois funcionários para servir",
+  "notes": [
+    "Nos serviços apresentados não serão utilizados materiais plásticos, apenas pratos de papel e garfos de madeira.",
+    "Nas miniaturas doces, bolachinhas do CASCI: apoio à inclusão social."
+  ],
+  "uncertain": [
+    "Client name and date (27 Março) taken from the file name; the text gives neither. Year not in the file name.",
+    "The price line is labelled 'Coffee break pm' while the moment is 16h, as written.",
+    "The text also says '2 máquinas de café afim de evitar filas' (2 coffee machines), kept out of the item list."
+  ]
+}

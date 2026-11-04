@@ -1,0 +1,46 @@
+{
+  "quote_id": "q:96927372-d9d7-4fb4-83c0-540fb66b79b8",
+  "client": "Liliana Costa",
+  "client_source": "file_name",
+  "event_dates": [{"day": 4, "month": 3, "year": null, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Coffee-Break – 16h30",
+      "service_type": "coffee_break",
+      "guests": 30,
+      "guests_raw": "30 Pessoas",
+      "menu_lines": [
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Bolhachinhas Bacalhaus do CASCI", "quantity": null},
+          {"text": "Palmieres", "quantity": null},
+          {"text": "Húngaros", "quantity": null},
+          {"text": "Salame de Chocolate", "quantity": null},
+          {"text": "Espetadas de Fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Café e descafeinado (cápsulas)", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Coffee break", "unit_price": 5.5, "quantity": 30, "line_total": 165, "vat_rate": 13}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 186.45,
+  "total_includes_vat": true,
+  "staff_mentioned": "1 funcionário para servir",
+  "notes": [
+    "O orçamento contempla 3h, considerando 1h de montagem, 1h de serviço e 1h para desmontar iniciando-se os trabalhos nas vossas instalações às 15h30m.",
+    "Qualquer atraso terá um custo extra de 8.50€/hora.",
+    "Nos serviços apresentados não serão utilizados materiais plásticos, demonstrando assim a nossa consciência ambiental.",
+    "Bolachinhas do CASCI: ao comprarmos estes produtos estamos a ajudar."
+  ],
+  "uncertain": [
+    "Client and event date come from the file name; the text has neither."
+  ]
+}

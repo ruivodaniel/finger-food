@@ -1,0 +1,76 @@
+{
+  "quote_id": "q:108c8b95-3e90-48a7-95a5-4999cf00a1bc",
+  "client": "Diogo Dias",
+  "client_source": "file_name",
+  "event_dates": [],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Menu Almoço 12h – 15h",
+      "service_type": "lunch",
+      "guests": 35,
+      "guests_raw": "35 pessoas",
+      "menu_lines": [
+        {"segment": "other", "items": [
+          {"text": "Rissóis de camarão", "quantity": null},
+          {"text": "Espetada de bolinhos de bacalhau", "quantity": null},
+          {"text": "Chamuças de vegetais", "quantity": null},
+          {"text": "Croquetes de vitela", "quantity": null},
+          {"text": "Variado de saladas (Alfaces, tomate, milho, cenoura, c. roxa…)", "quantity": null},
+          {"text": "Sopa Creme de cenoura (copo)", "quantity": null},
+          {"text": "Bacalhau c/ Natas", "quantity": null},
+          {"text": "Arroz de Pato", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Bolo brigadeiro", "quantity": null},
+          {"text": "Tiramissu", "quantity": null},
+          {"text": "Torta de Laranja", "quantity": null},
+          {"text": "Espetadas de fruta", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "Menu Lanche ajantarado 19h – 22h",
+      "service_type": "other",
+      "guests": 35,
+      "guests_raw": "35 pessoas",
+      "menu_lines": [
+        {"segment": "other", "items": [
+          {"text": "Tábuas de Queijos", "quantity": null},
+          {"text": "Compotas de frutas variadas c/ frutos secos", "quantity": null},
+          {"text": "Espetadas de cherry c/ manjericão e azeitona", "quantity": null},
+          {"text": "Tábuas de enchidos decoradas (acompanhadas c/ variedade de tostas e gressinos)", "quantity": null},
+          {"text": "Cachorrinho de camarão c/ maionese de wasabi", "quantity": null},
+          {"text": "Bifanas desfiadas ou Moelas estufadas", "quantity": null},
+          {"text": "Espetadas de fruta variada", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Brigadeiros", "quantity": null},
+          {"text": "Bolo de bolacha do Céu", "quantity": null},
+          {"text": "Brownie c/ Nozes e caramelo salgado", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    }
+  ],
+  "prices_not_in_a_moment": [
+    {"label": "50€ x 35 pessoas", "unit_price": 50, "quantity": 35, "line_total": 1750, "vat_rate": 13}
+  ],
+  "total": null,
+  "total_includes_vat": null,
+  "staff_mentioned": "três funcionários, para servirem e manterem as mesas sempre impecáveis",
+  "notes": [
+    "Serviço de café e descafeinado sempre disponível durante todo o evento.",
+    "Empréstimo de copos de tubo, de vinho e de shot grande.",
+    "As horas que coloquei são meramente indicativas; a partir das 10h gostaríamos de aceder ao espaço e ficamos em serviço contínuo até às 22h para começarmos a desmontar e a arrumar materiais, deixamos as mesas com a comida que sobrou.",
+    "Pagamento 50% na adjudicação e 50% no dia do evento.",
+    "Nos serviços apresentados não serão utilizados materiais plásticos, demonstrando assim a nossa consciência ambiental.",
+    "Para os serviços apresentados disponibilizo atoalhados e todo o material necessário para esta ementa."
+  ],
+  "uncertain": [
+    "The price is one line for both menus (50€ per person for 35 people, + IVA 13%); it cannot be tied to a single moment.",
+    "No total is written; only the 1750€ line.",
+    "No event date is written in the text or the file name."
+  ]
+}

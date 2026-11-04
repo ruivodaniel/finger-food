@@ -1,0 +1,68 @@
+{
+  "quote_id": "q:9ebc285b-c20e-4bdd-8ce7-4020ab1a668f",
+  "client": "Inês Raquel",
+  "client_source": "file_name",
+  "event_dates": [
+    {"day": 19, "month": 7, "year": null, "source": "file_name"}
+  ],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Menu Almoço 12h – 15h",
+      "service_type": "lunch",
+      "guests": 40,
+      "guests_raw": "40 pessoas",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Rissóis de camarão", "quantity": null},
+          {"text": "Espetada de bolinhos de bacalhau c/ cherry", "quantity": null},
+          {"text": "Chamuças de vegetais c/ azeitona", "quantity": null},
+          {"text": "Croquetes de vitela", "quantity": null}
+        ]},
+        {"segment": "starter", "items": [
+          {"text": "Variado de saladas (Alfaces, tomate, milho, cenoura, c. roxa…)", "quantity": null}
+        ]},
+        {"segment": "main_dish", "items": [
+          {"text": "Bacalhau c/ Natas gratinado", "quantity": null},
+          {"text": "Arroz de Pato c/ enchidos", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Variedade de Brigadeiros", "quantity": null},
+          {"text": "Brownie c/ Nozes e caramelo salgado", "quantity": null},
+          {"text": "Espetadas de fruta variada", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água engarrafada", "quantity": null},
+          {"text": "Agua aromatizada", "quantity": null},
+          {"text": "Sumos Compal", "quantity": null},
+          {"text": "Refrigerantes", "quantity": null},
+          {"text": "Café e Descafeinado", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "26€ x 40 pessoas", "unit_price": 26, "quantity": 40, "line_total": 1040, "vat_rate": 13}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [
+    {"label": "Extra: Tabuas de Queijos", "unit_price": 40, "quantity": null, "line_total": null, "vat_rate": null},
+    {"label": "Extra: Tabuas de Enchidos", "unit_price": 40, "quantity": null, "line_total": null, "vat_rate": null},
+    {"label": "Extra: Camarão Cozido", "unit_price": 60, "quantity": null, "line_total": null, "vat_rate": null},
+    {"label": "Extra: Leitão Assado á Bairrada", "unit_price": 150, "quantity": null, "line_total": null, "vat_rate": null},
+    {"label": "Extra: Bolo de bolacha c/ leite condensado", "unit_price": 30, "quantity": null, "line_total": null, "vat_rate": null},
+    {"label": "Extra: Tarte de Amêndoa", "unit_price": 30, "quantity": null, "line_total": null, "vat_rate": null}
+  ],
+  "total": 1175.20,
+  "total_includes_vat": true,
+  "staff_mentioned": "três funcionários, para servirem as comidas e bebidas e manterem as mesas",
+  "notes": [
+    "As horas indicadas são meramente indicativas; a partir das 10h acedem ao espaço, serviço contínuo até às 15h e desmontagem até às 16h.",
+    "Pagamento 50% na adjudicação e 50% no dia do evento.",
+    "Nos serviços apresentados não serão utilizados materiais plásticos, demonstrando assim a nossa consciência ambiental.",
+    "Podemos apresentar mais opções."
+  ],
+  "uncertain": [
+    "Os extras são listados sem indicação de que são por pessoa; registados como preço unitário escrito.",
+    "A data 19 Julho vem só do nome do ficheiro; o texto não tem data."
+  ]
+}

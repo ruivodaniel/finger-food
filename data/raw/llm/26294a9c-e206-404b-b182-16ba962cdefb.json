@@ -1,0 +1,51 @@
+{
+  "quote_id": "q:26294a9c-e206-404b-b182-16ba962cdefb",
+  "client": "Medical Dra Claudia Cunha",
+  "client_source": "file_name",
+  "event_dates": [{"day": 28, "month": 2, "year": null, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": null,
+      "service_type": "other",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Espetada de bolinhos de bacalhau", "quantity": null},
+          {"text": "Chamuças de vegetais", "quantity": null},
+          {"text": "Croquetes de vitela c/ azeitona", "quantity": null},
+          {"text": "Croissants c/ Queijo", "quantity": null},
+          {"text": "Croissant c/ Fiambre", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Espetadas de fruta", "quantity": null},
+          {"text": "Variedade de Brigadeiros", "quantity": null},
+          {"text": "Bolo no copo c/ iogurte e amêndoa", "quantity": null},
+          {"text": "Brownie c/ Nozes e Caramelo salgado", "quantity": null},
+          {"text": "Bolachinhas Bacalhaus Salgados do C.A.S.C.I.", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Sumo de Laranja Natural (espremido na hora)", "quantity": null},
+          {"text": "Sumo Compal vários sabores", "quantity": null},
+          {"text": "Água aromatizada de frutos vermelhos", "quantity": null},
+          {"text": "Café e descafeinado", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Preço", "unit_price": null, "quantity": null, "line_total": 360, "vat_rate": 13}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 360,
+  "total_includes_vat": false,
+  "staff_mentioned": "dois funcionários",
+  "notes": [
+    "Nos serviços apresentados não serão utilizados materiais plásticos, demonstrando assim a nossa consciência ambiental.",
+    "Nas miniaturas doces temos um item muito especial que começamos a introduzir nos nossos menus, as bolachinhas do CASCI – O CASCI é o Centro de Ação Social do Concelho de Ílhavo e habilita para a inclusão social pessoas com deficiência, pessoas idosas, crianças e públicos de risco, ao comprarmos estes produtos estamos a ajudar."
+  ],
+  "uncertain": [
+    "O preço de 360€ não indica se é por pessoa nem o número de convidados."
+  ]
+}

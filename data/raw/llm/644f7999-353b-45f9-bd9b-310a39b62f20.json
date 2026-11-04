@@ -1,0 +1,145 @@
+{
+  "quote_id": "q:644f7999-353b-45f9-bd9b-310a39b62f20",
+  "client": "Sonia Nunes",
+  "client_source": "file_name",
+  "event_dates": [{"day": 26, "month": null, "year": null, "source": "text"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Coffee-Break 10h30 – 80 pax x 7.50€ = 600€",
+      "service_type": "coffee_break",
+      "guests": 80,
+      "guests_raw": "80 pax",
+      "menu_lines": [
+        {"segment": "other", "items": [
+          {"text": "Croissant Brioche c/ Queijo (veg.) e Croissant Brioche c/ Fiambre", "quantity": null},
+          {"text": "Vol au vents de Guacamole (veg.)", "quantity": null},
+          {"text": "Bolachinhas Bacalhaus do CASCI", "quantity": null},
+          {"text": "Iogurte de Soja c/ granola", "quantity": null},
+          {"text": "Folhado de Chocolate", "quantity": null},
+          {"text": "Espetadas de fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Chás variados", "quantity": null},
+          {"text": "Café e descafeinado", "quantity": null}
+        ]}
+      ],
+      "prices": [{"label": "Coffee-Break 10h30", "unit_price": 7.5, "quantity": 80, "line_total": 600, "vat_rate": 13}]
+    },
+    {
+      "name_as_written": "Almoço (volante) 12h30 - 14h - 40 pax 25€ = 1000€",
+      "service_type": "lunch",
+      "guests": 40,
+      "guests_raw": "40 pax",
+      "menu_lines": [
+        {"segment": "other", "items": [
+          {"text": "Bolinhos de bacalhau, Rissóis, Croquetes, Bolinhas de Legumes-(vegi)", "quantity": null},
+          {"text": "Variedade de Saladas (alfaces, cenoura, milho, couve roxa…)", "quantity": null},
+          {"text": "Bacalhau c/ Natas", "quantity": null},
+          {"text": "Arroz a Valenciana", "quantity": null},
+          {"text": "Feijão Frade c/ Quinoa de Legumes", "quantity": null},
+          {"text": "Variedade de Brigadeiros, Ovos Moles, Espetadas de Fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Chás variados", "quantity": null},
+          {"text": "Café e descafeinado", "quantity": null}
+        ]}
+      ],
+      "prices": [{"label": "Almoço (volante)", "unit_price": 25, "quantity": 40, "line_total": 1000, "vat_rate": 13}]
+    },
+    {
+      "name_as_written": "Coffee-Break 16h – 45 pax x 7.50€ = 337.50€",
+      "service_type": "coffee_break",
+      "guests": 45,
+      "guests_raw": "45 pax",
+      "menu_lines": [
+        {"segment": "other", "items": [
+          {"text": "Folhados mistos e Folhados de Salsicha", "quantity": null},
+          {"text": "Vol au vents de Frango", "quantity": null},
+          {"text": "Vol au vents de Húmus", "quantity": null},
+          {"text": "Variedade de Brigadeiros", "quantity": null},
+          {"text": "Bolinhas de Berlim", "quantity": null},
+          {"text": "Espetadas de Fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Chás variados", "quantity": null},
+          {"text": "Café e descafeinado", "quantity": null}
+        ]}
+      ],
+      "prices": [{"label": "Coffee-Break 16h", "unit_price": 7.5, "quantity": 45, "line_total": 337.5, "vat_rate": 13}]
+    },
+    {
+      "name_as_written": "Serviço de entrega 9h – 40 pax x 7€ = 280€",
+      "service_type": "delivery",
+      "guests": 40,
+      "guests_raw": "40 pax",
+      "menu_lines": [
+        {"segment": "other", "items": [
+          {"text": "Croissant folhado c/ Queijo (veg.) e Croissant folhado c/ Fiambre", "quantity": null},
+          {"text": "Bolachas de milho c/ Guacamole", "quantity": null},
+          {"text": "Bolachinhas Bacalhaus do CASCI", "quantity": null},
+          {"text": "Pasteis de Nata", "quantity": null},
+          {"text": "Folhado de Chocolate", "quantity": null},
+          {"text": "Espetadas de fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Chás variados", "quantity": null},
+          {"text": "Café e descafeinado", "quantity": null}
+        ]}
+      ],
+      "prices": [{"label": "Serviço de entrega 9h", "unit_price": 7, "quantity": 40, "line_total": 280, "vat_rate": 13}]
+    },
+    {
+      "name_as_written": "Serviço de entrega 14h – 40 pax x 7€ = 280€",
+      "service_type": "delivery",
+      "guests": 40,
+      "guests_raw": "40 pax",
+      "menu_lines": [
+        {"segment": "other", "items": [
+          {"text": "Pão sementes c/ Queijo (veg.) e Pão sementes c/ Fiambre", "quantity": null},
+          {"text": "Bolachas de arroz c/ compotas", "quantity": null},
+          {"text": "Bolachinhas Bacalhaus do CASCI", "quantity": null},
+          {"text": "Tarte de amêndoa", "quantity": null},
+          {"text": "Brownie c/ nozes e caramelo salgado", "quantity": null},
+          {"text": "Espetadas de fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Chás variados", "quantity": null},
+          {"text": "Café e descafeinado", "quantity": null}
+        ]}
+      ],
+      "prices": [{"label": "Serviço de entrega 14h", "unit_price": 7, "quantity": 40, "line_total": 280, "vat_rate": 13}]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 2822.175,
+  "total_includes_vat": true,
+  "staff_mentioned": "3 funcionários que iram dispor as mesas em buffet para servir os pratos quentes, assim como o café, equipados com 2 máquinas para evitar filas",
+  "notes": [
+    "Sub-total 2497.50€; acresce IVA à taxa legal em vigor, 13%.",
+    "Nos serviços apresentados não serão utilizados materiais plásticos, demonstrando assim a nossa consciência ambiental.",
+    "Todo o serviço é realizado com loiças e toalhas de pano.",
+    "Bolachinhas do CASCI: o Centro de Ação Social do Concelho de Ílhavo, que habilita para a inclusão social pessoas com deficiência, pessoas idosas, crianças e públicos de risco."
+  ],
+  "uncertain": [
+    "Only 'Dia 26' is written; the first moments carry no day label, and the file name says 25 e 26 Junho.",
+    "Month and year are not written in the text.",
+    "The drinks table is written once after the Dia 26 items; it is repeated in each moment here because it is stated for all moments.",
+    "The written total 2822.175 has three decimal places, kept as written."
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "quote_id": "q:51fe1cf5-796c-4f8a-9990-f21e2013dad3",
+  "client": "Ana Sofia Teixeita",
+  "client_source": "file_name",
+  "event_dates": [
+    {"day": 21, "month": 11, "year": null, "source": "file_name"}
+  ],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Almoço (volante) 12h30?",
+      "service_type": "lunch",
+      "guests": 60,
+      "guests_raw": "60 pessoas",
+      "menu_lines": [
+        {"segment": "starter", "items": [
+          {"text": "Buffet de Saladas (alfaces, cenoura, milho, couve roxa…) (Vegan)", "quantity": null},
+          {"text": "Rissóis", "quantity": null},
+          {"text": "Croquetes de Vitela", "quantity": null},
+          {"text": "Bolos de bacalhau", "quantity": null},
+          {"text": "Vol au vents de Delicias do mar", "quantity": null},
+          {"text": "Vol au vents de Frango", "quantity": null},
+          {"text": "Vol au vents de Guacamole", "quantity": null}
+        ]},
+        {"segment": "main_dish", "items": [
+          {"text": "Bacalhau c/ Natas", "quantity": null},
+          {"text": "Arroz de Pato", "quantity": null},
+          {"text": "Quinoa de Legumes (Vegan)", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Bolo de Bolacha", "quantity": null},
+          {"text": "Brownie c/ Nozes e caramelo Salgado", "quantity": null},
+          {"text": "Espetadas de Fruta (Vegan)", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Mesa de bebidas presente em todos os momentos", "quantity": null},
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Vinho branco e tinto", "quantity": null},
+          {"text": "Espumante (1 Copo) para as sobremesas", "quantity": 1},
+          {"text": "Café e descafeinado", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Comidas e bebidas não alcoólicas", "unit_price": 29, "quantity": 60, "line_total": 1740, "vat_rate": 13},
+        {"label": "Bebidas alcoólicas", "unit_price": 1, "quantity": 60, "line_total": 60, "vat_rate": 23}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [
+    {"label": "Extra: Bacalhau com broa", "unit_price": 3, "quantity": null, "line_total": null, "vat_rate": 13},
+    {"label": "Extra: Pato Confitado com puré de aboora", "unit_price": 5, "quantity": null, "line_total": null, "vat_rate": 13}
+  ],
+  "total": 2040,
+  "total_includes_vat": true,
+  "staff_mentioned": "3 funcionários",
+  "notes": [
+    "Sub-total 1966.20€ (IVA 13%) e sub-total 73.80€ (IVA 23%).",
+    "Nos serviços apresentados não serão utilizados materiais plásticos.",
+    "Todo o serviço é realizado com loiças e toalhas de pano."
+  ],
+  "uncertain": [
+    "Lista de extras com preço unitário apenas; sem quantidade.",
+    "Data 21 de Novembro só no nome do ficheiro."
+  ]
+}

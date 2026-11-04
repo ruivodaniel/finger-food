@@ -1,0 +1,59 @@
+{
+  "quote_id": "q:e4f8dddf-5891-457a-a656-ada08e2ed264",
+  "client": "Madalena Ferreira",
+  "client_source": "file_name",
+  "event_dates": [
+    {"day": 13, "month": 6, "year": 2026, "source": "file_name"}
+  ],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Serviço (sem horário no texto)",
+      "service_type": "other",
+      "guests": 100,
+      "guests_raw": "x 100",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Tábuas de Queijos decoradas c/ frutos secos (veg.)", "quantity": null},
+          {"text": "Tábuas de enchidos decoradas c/ azeitonas", "quantity": null},
+          {"text": "Acompanhadas c/ variedade de tostas e broa", "quantity": null},
+          {"text": "Rissóis de camarão", "quantity": null},
+          {"text": "Espetada de Bolinhos de Bacalhau", "quantity": null},
+          {"text": "Croissants c/ Queijo (Veg.)", "quantity": null},
+          {"text": "Croissants c/ Fiambre", "quantity": null},
+          {"text": "Vol au vents de Guacamole (veg.)", "quantity": null},
+          {"text": "Espetada de mozarela c/ azeitona, cherry e manjericão (veg.)", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Bolachinhas Bacalhaus Salgados do CASCI", "quantity": null},
+          {"text": "Mil folhas glacê", "quantity": null},
+          {"text": "Pasteis de Nata", "quantity": null},
+          {"text": "Variedade de Brigadeiros", "quantity": null},
+          {"text": "Brownie c/ Nozes e caramelo salgado", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água engarrafada", "quantity": null},
+          {"text": "Sumo Compal", "quantity": null},
+          {"text": "Sumo de Laranja natural (exprimido na hora, servido em flutes)", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Comidas – 15.50€ x 100", "unit_price": 15.5, "quantity": 100, "line_total": 1550, "vat_rate": 13}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 1751.50,
+  "total_includes_vat": true,
+  "staff_mentioned": "três funcionários",
+  "notes": [
+    "Nos orçamento apresentado estão incluídos todos os materiais necessários a elaboração deste serviço.",
+    "O orçamento contempla 9h: 2h de montagem, 5h de serviço e 2h para desmontar, iniciando-se os trabalhos nas vossas instalações às 13h.",
+    "Qualquer atraso terá um custo extra de 8.50€/hora por funcionário.",
+    "Bolachinhas do CASCI: o CASCI é o Centro de Ação Social do Concelho de Ílhavo e habilita para a inclusão social pessoas com deficiência, pessoas idosas, crianças e públicos de risco."
+  ],
+  "uncertain": [
+    "O nome do ficheiro diz 'alcool' (sem álcool); o texto não tem serviço de bebidas alcoólicas, o que é consistente.",
+    "O texto não tem horário de serviço nem local; a data 13 de Junho 2026 vem do nome do ficheiro."
+  ]
+}

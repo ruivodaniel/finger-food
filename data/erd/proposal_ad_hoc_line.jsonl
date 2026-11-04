@@ -1,0 +1,326 @@
+{"id": "1c6b1cb6-890a-5499-8631-3c06d68adc26", "proposal_id": "4d7c188c-800d-5701-8db4-5a5792739074", "description": "Almoço", "quantity": 40, "price": 35, "vat_rate": 13, "position": 0}
+{"id": "dc0c1d58-ccf8-5f99-8674-41037d642ce1", "proposal_id": "ea0839cc-830b-56b8-9836-71041ff44624", "description": "Coffee break pm", "quantity": 35, "price": 8.6, "vat_rate": 13, "position": 0}
+{"id": "d77ca9f4-7a11-5cdc-b17c-1845eee2d3f7", "proposal_id": "62d22f87-096a-5b38-8b81-3da469f9ae9d", "description": "Coffee break pm", "quantity": 40, "price": 8, "vat_rate": 13, "position": 0}
+{"id": "0ed07cc4-4cac-56c3-81fa-462222960a43", "proposal_id": "39b98470-d00c-5711-b1d6-fc09501cc9a0", "description": "Coffee Break", "quantity": 20, "price": 6, "vat_rate": 13, "position": 0}
+{"id": "4f787dd1-6303-5fb8-adcf-2fa5c8ee541a", "proposal_id": "39b98470-d00c-5711-b1d6-fc09501cc9a0", "description": "Almoço", "quantity": 20, "price": 18, "vat_rate": 13, "position": 1}
+{"id": "e527faca-ca19-5168-b28c-e2acaf38bfbd", "proposal_id": "96fd312d-3435-5ad1-80a6-59a408d56dcc", "description": "Coffee breaks am", "quantity": 150, "price": 6, "vat_rate": 13, "position": 0}
+{"id": "2c178956-d91e-59a1-9229-b6cea39b3ce8", "proposal_id": "96fd312d-3435-5ad1-80a6-59a408d56dcc", "description": "Almoço", "quantity": 100, "price": 15, "vat_rate": 13, "position": 1}
+{"id": "90cbeebe-0389-55fc-aaa7-9477a4f82ddc", "proposal_id": "96fd312d-3435-5ad1-80a6-59a408d56dcc", "description": "Coffee breaks pm", "quantity": 150, "price": 6, "vat_rate": 13, "position": 2}
+{"id": "5c37b0d3-b3b5-5a98-ab4d-6262d62740dc", "proposal_id": "aecbeb99-ef41-5239-94c4-ec9d0c88c27d", "description": "Almoço", "quantity": 40, "price": 25, "vat_rate": 13, "position": 0}
+{"id": "6a5d90d4-c6c7-5c76-acf9-3324c4ef4b72", "proposal_id": "202afc9d-6468-5248-8373-b5c201ced579", "description": "Coffee breaks", "quantity": 15, "price": 8.5, "vat_rate": 13, "position": 0}
+{"id": "1d8ba791-c38b-5a2c-a9d9-ed4ffefee003", "proposal_id": "202afc9d-6468-5248-8373-b5c201ced579", "description": "Dia 28 Coffee breaks (15am + 15pm)", "quantity": 30, "price": 8.5, "vat_rate": 13, "position": 1}
+{"id": "09282091-8bed-5b58-ba6c-9d955a074397", "proposal_id": "66765f8c-5559-511c-8a63-a8c4815ede08", "description": "Coffee-Break", "quantity": 300, "price": 5.5, "vat_rate": 13, "position": 0}
+{"id": "fa8e85a5-e1b7-55ee-b0c0-114da60c0d5a", "proposal_id": "66765f8c-5559-511c-8a63-a8c4815ede08", "description": "Coffee-Break", "quantity": 300, "price": 5.5, "vat_rate": 13, "position": 1}
+{"id": "5cb2f47f-8bc6-5a4e-bb53-5349d3b6266d", "proposal_id": "7f3d7c8d-3b9b-55ae-aec7-1d18910288d3", "description": "Dia 25 sub total (Coffee Break am + Almoço + Coffee Break pm)", "quantity": 50, "price": 31.5, "vat_rate": 13, "position": 5}
+{"id": "a637336f-7ebf-5b57-a17b-f3910e4d9a59", "proposal_id": "7f3d7c8d-3b9b-55ae-aec7-1d18910288d3", "description": "Dia 26 sub total (Almoço + Coffee Break pm)", "quantity": 30, "price": 27.1, "vat_rate": 13, "position": 6}
+{"id": "14ad82fb-20c3-5190-b961-ff73416b0824", "proposal_id": "167728e3-3d97-55ab-93a0-2056f6fc5b82", "description": "Cb am", "quantity": 40, "price": 7, "vat_rate": 13, "position": 0}
+{"id": "8e0937f1-9e4d-5fe7-ac80-9385a90ed44c", "proposal_id": "167728e3-3d97-55ab-93a0-2056f6fc5b82", "description": "Almoço", "quantity": 40, "price": 26.5, "vat_rate": 13, "position": 1}
+{"id": "cf9d2eff-9651-555a-aab7-0a1b826428fe", "proposal_id": "167728e3-3d97-55ab-93a0-2056f6fc5b82", "description": "Cb am", "quantity": 40, "price": 7, "vat_rate": 13, "position": 2}
+{"id": "3a158e22-811c-534b-a8c6-3c60c95973b8", "proposal_id": "167728e3-3d97-55ab-93a0-2056f6fc5b82", "description": "Almoço", "quantity": 30, "price": 27.5, "vat_rate": 13, "position": 3}
+{"id": "69c40f83-227c-50e7-95e2-5f1d8d2f40fe", "proposal_id": "167728e3-3d97-55ab-93a0-2056f6fc5b82", "description": "Cb pm", "quantity": 20, "price": 7.5, "vat_rate": 13, "position": 4}
+{"id": "6af26504-57c2-54d5-a739-aebd613f5329", "proposal_id": "6fbd03d1-cf9e-5f7f-80df-6a60c585be6f", "description": "Coffee breaks pm 7€ x 35 = 245€ x 5", "quantity": 35, "price": 7, "vat_rate": 13, "position": 0}
+{"id": "4240c013-4e29-501d-9deb-e7d7d5762cbf", "proposal_id": "6fbd03d1-cf9e-5f7f-80df-6a60c585be6f", "description": "Almoços 25€ x 35€ = 875€ x 4", "quantity": 35, "price": 25, "vat_rate": 13, "position": 1}
+{"id": "121a62ee-3f02-5c6d-9d24-2d2b56989870", "proposal_id": "dc8b60e9-71a8-574c-bb36-2cbf59df13ee", "description": "Almoço", "quantity": 100, "price": 15, "vat_rate": 13, "position": 0}
+{"id": "30e112f4-9d05-54f5-a6fc-a0462ac84fd0", "proposal_id": "da73cebd-cf6e-5338-8f86-58fc98c9b87a", "description": "Comidas", "quantity": 100, "price": 15, "vat_rate": 13, "position": 0}
+{"id": "e74cdcf6-1674-5c03-bc29-1aa83522a1e9", "proposal_id": "da73cebd-cf6e-5338-8f86-58fc98c9b87a", "description": "Bebidas", "quantity": 100, "price": 2.5, "vat_rate": 23, "position": 1}
+{"id": "7a522185-68cc-5fa9-ba10-cd18d1a41519", "proposal_id": "5e8c7398-8ec8-5801-b812-a0a674be77bf", "description": "Comidas e Bebidas não alcoólicas", "quantity": 50, "price": 12, "vat_rate": 13, "position": 0}
+{"id": "e5eb2d84-695a-5260-b6d8-75ab7a3f9185", "proposal_id": "7d200bd0-0270-56ac-b4c7-076fd0a41610", "description": "Comidas", "quantity": 100, "price": 14, "vat_rate": 13, "position": 0}
+{"id": "2d114f3e-346a-5318-8f8c-fb0db459dc14", "proposal_id": "7d200bd0-0270-56ac-b4c7-076fd0a41610", "description": "Bebidas", "quantity": 100, "price": 2, "vat_rate": 23, "position": 1}
+{"id": "15e7c27d-8c4e-5f37-8127-3a4126cc7d34", "proposal_id": "8efc81bf-67a8-506d-bd8e-0fe36a1aef2b", "description": "Coffee-Break e Almoço (preço por pessoa)", "quantity": 60, "price": 34, "vat_rate": 13, "position": 0}
+{"id": "480e5a85-b34e-558d-9fb8-ab6b010444c0", "proposal_id": "a3547287-ca88-5e42-ad96-98db79e5f65a", "description": "Coffee Break", "quantity": 20, "price": 6, "vat_rate": 13, "position": 0}
+{"id": "4f6dc1b0-c12e-5d3b-a492-b74d44582399", "proposal_id": "a3547287-ca88-5e42-ad96-98db79e5f65a", "description": "Almoço", "quantity": 20, "price": 18, "vat_rate": 13, "position": 1}
+{"id": "5960b2f4-4f0b-507c-8c85-3a1928b92639", "proposal_id": "b600ad33-7d53-5bcd-9bc8-920c3af6e488", "description": "Almoço", "quantity": 40, "price": 26, "vat_rate": 13, "position": 0}
+{"id": "b8b74b63-30e1-5c15-9233-2dbfaab0380f", "proposal_id": "1d5bc543-871e-5da1-a8c4-8f682f922ef7", "description": "Coffee break", "quantity": 50, "price": 5.5, "vat_rate": 13, "position": 0}
+{"id": "8264d749-43fa-53c7-8e7d-56a867892dae", "proposal_id": "c81ccfb4-3127-58b3-90bd-5685f842be5d", "description": "Dia 26", "quantity": 300, "price": 6, "vat_rate": 13, "position": 0}
+{"id": "931632e0-b3b0-5620-9b85-86ba36d44ea1", "proposal_id": "c81ccfb4-3127-58b3-90bd-5685f842be5d", "description": "Dia 27", "quantity": 300, "price": 6, "vat_rate": 13, "position": 1}
+{"id": "e1d2584f-bb66-5c7b-9146-06ea7288bc9f", "proposal_id": "1ee147dd-0872-592e-bc38-141b5ef2dc22", "description": "Coffee breaks am (Dia 15)", "quantity": 20, "price": 8, "vat_rate": 13, "position": 0}
+{"id": "f8af7bff-fb96-50cd-aaf8-8ecae6b12000", "proposal_id": "1ee147dd-0872-592e-bc38-141b5ef2dc22", "description": "Almoço (Dia 15)", "quantity": 20, "price": 27, "vat_rate": 13, "position": 1}
+{"id": "a799d81b-9411-5725-b911-18fd447bf1d7", "proposal_id": "1ee147dd-0872-592e-bc38-141b5ef2dc22", "description": "Coffee breaks pm (Dia 15)", "quantity": 20, "price": 8, "vat_rate": 13, "position": 2}
+{"id": "b128d3bd-359c-529a-9f4c-9ccfe0807440", "proposal_id": "1ee147dd-0872-592e-bc38-141b5ef2dc22", "description": "Coffee breaks am (Dia 16)", "quantity": 20, "price": 8, "vat_rate": 13, "position": 3}
+{"id": "9f497451-811a-504b-99da-8f530a4c5d9c", "proposal_id": "73043fdc-0597-5f1f-b6b1-a47e051216e0", "description": "Comidas e Bebidas não alcoólicas", "quantity": 50, "price": 16, "vat_rate": 13, "position": 0}
+{"id": "fa6c54e0-abd1-5582-ac12-a7e1a12e10d0", "proposal_id": "44ee2ddf-20c5-5988-857a-de2e874e8e63", "description": "Comidas", "quantity": 15, "price": 18.6, "vat_rate": 13, "position": 0}
+{"id": "2536b828-a007-53bb-99d4-46082eb4bbd9", "proposal_id": "0371479c-bb29-5c89-95fa-a8b34922f87d", "description": "Coffee breaks", "quantity": 75, "price": 6.6, "vat_rate": 13, "position": 0}
+{"id": "ee45fb6f-f82f-5527-bc03-df1517942a62", "proposal_id": "0371479c-bb29-5c89-95fa-a8b34922f87d", "description": "Almoço", "quantity": 75, "price": 17, "vat_rate": 13, "position": 1}
+{"id": "24230ebc-95af-5b16-8031-0b61fa43b615", "proposal_id": "7f010ae2-04db-5249-8537-68d1bf187978", "description": "Coffee breaks am", "quantity": 90, "price": 6.5, "vat_rate": 13, "position": 0}
+{"id": "48ec4f85-f89a-54c6-aa18-d06983a15f0b", "proposal_id": "7f010ae2-04db-5249-8537-68d1bf187978", "description": "Coffee breaks pm", "quantity": 90, "price": 6.5, "vat_rate": 13, "position": 1}
+{"id": "893fa578-042e-57c7-b3dc-2fe4c31940b4", "proposal_id": "40522ccf-122d-55f5-a994-8d400167a94c", "description": "Comidas e Bebidas não alcoólicas", "quantity": 60, "price": 22, "vat_rate": 13, "position": 0}
+{"id": "16e1942f-a4b2-5136-8ea6-bdb2261ac11b", "proposal_id": "9dcf239e-3277-5612-93b9-62e0815a315e", "description": "Valor final Lunch box", "quantity": 60, "price": 8.5, "vat_rate": 13, "position": 0}
+{"id": "e169ce13-3b93-53a3-a346-0fe6672234d7", "proposal_id": "759dbc77-efa6-5543-aa99-c5b30ad7c881", "description": "Dia 9 Coffee breaks (7€ x 26 + 26)", "quantity": 26, "price": 7, "vat_rate": 13, "position": 0}
+{"id": "6fa9f23c-02a0-524c-8d83-cb10cb3f7587", "proposal_id": "759dbc77-efa6-5543-aa99-c5b30ad7c881", "description": "Dia 9 Almoço (12€ x 16)", "quantity": 16, "price": 12, "vat_rate": 13, "position": 1}
+{"id": "2a05debe-a285-50e6-98db-6126b7121f39", "proposal_id": "759dbc77-efa6-5543-aa99-c5b30ad7c881", "description": "Dia 10 Coffee breaks (7€ x 26 + 26)", "quantity": 26, "price": 7, "vat_rate": 13, "position": 2}
+{"id": "30542f8c-34bc-59e3-bb7a-8ac2705b2439", "proposal_id": "759dbc77-efa6-5543-aa99-c5b30ad7c881", "description": "Dia 10 Almoço (12€ x 16)", "quantity": 16, "price": 12, "vat_rate": 13, "position": 3}
+{"id": "2cba72b6-adad-5971-8691-2bced9cce865", "proposal_id": "dd741388-1b28-58c4-a3c4-420082123520", "description": "Serviço de Coffee break", "quantity": 250, "price": 7.5, "vat_rate": 13, "position": 0}
+{"id": "8f5d7201-3920-55d8-ba43-05adcf7b9bcd", "proposal_id": "dd741388-1b28-58c4-a3c4-420082123520", "description": "Serviço de Vinho do Porto (Barros)", "quantity": 250, "price": 0.8, "vat_rate": 23, "position": 1}
+{"id": "42c18061-aae1-544b-a481-45d0ec31274f", "proposal_id": "9e30fbda-6832-5f15-8c09-db1d3f83fd98", "description": "Coffee break pm", "quantity": 20, "price": 9, "vat_rate": 13, "position": 0}
+{"id": "88b30a2d-e1bd-5b29-9bfc-37b70bff4ab7", "proposal_id": "a4deccdf-a3d2-5617-bfd9-1e17130964e6", "description": "Comidas e Bebidas não alcoólicas", "quantity": 30, "price": 20, "vat_rate": 13, "position": 0}
+{"id": "613e52f4-b984-5d93-aa0f-9e070c62430d", "proposal_id": "58b8cfb8-92fc-5bc5-abc1-e4916dae752d", "description": "Coffee break pm", "quantity": 30, "price": 8, "vat_rate": 13, "position": 0}
+{"id": "0f73d19a-4b8d-551a-bff4-a6b309638149", "proposal_id": "ca0cfb93-08d3-5861-8022-851608984922", "description": "Almoço (comidas e bebidas não alcoólicas)", "quantity": 200, "price": 15, "vat_rate": 13, "position": 0}
+{"id": "5a3afa18-08bf-5761-b956-a0e5c3cd56ae", "proposal_id": "ca0cfb93-08d3-5861-8022-851608984922", "description": "Cerveja", "quantity": 200, "price": 2, "vat_rate": 23, "position": 1}
+{"id": "5cd5ebe3-28e4-5add-99a3-723dc0e5be22", "proposal_id": "d9d6038b-656d-5200-aaec-e92d443e2f4c", "description": "Coffee-Break 10h30", "quantity": 60, "price": 5, "vat_rate": 13, "position": 0}
+{"id": "3e9c3eed-f8ad-5d4f-b539-cba6856c9cde", "proposal_id": "b9dd43e1-8cab-51c8-bf17-2f9fc8afafca", "description": "Coffee break pm", "quantity": 50, "price": 8.5, "vat_rate": 13, "position": 0}
+{"id": "bcbde085-c847-5dac-be23-3728997ed5d4", "proposal_id": "b9dd43e1-8cab-51c8-bf17-2f9fc8afafca", "description": "Espumante", "quantity": 50, "price": 1.5, "vat_rate": 23, "position": 1}
+{"id": "05f84a55-60c5-5787-868a-8100167c9422", "proposal_id": "8fac24ee-96ac-517a-9cf4-b53487a7b16c", "description": "Cb am", "quantity": 20, "price": 8, "vat_rate": 13, "position": 0}
+{"id": "7f45be48-b3b0-5bd4-884e-39aebb8d1786", "proposal_id": "8fac24ee-96ac-517a-9cf4-b53487a7b16c", "description": "Cb pm", "quantity": 20, "price": 8, "vat_rate": 13, "position": 1}
+{"id": "1e85ae7f-bc89-57b6-85fe-e5f7eafc9392", "proposal_id": "68a0f650-3058-5c9e-8a22-35318769645b", "description": "Almoço", "quantity": 119, "price": 18, "vat_rate": 13, "position": 0}
+{"id": "945be5dc-4bfd-520c-800d-27d2c1314903", "proposal_id": "68a0f650-3058-5c9e-8a22-35318769645b", "description": "Cerveja", "quantity": 300, "price": 0.5, "vat_rate": 23, "position": 1}
+{"id": "aacd713c-755b-5481-9de8-8f88d4041712", "proposal_id": "2e278bfc-c64e-571c-86c0-c8350b88aa7b", "description": "Comidas", "quantity": 35, "price": 21, "vat_rate": 13, "position": 0}
+{"id": "3b36452b-2a26-50f5-872b-502dc4b2083b", "proposal_id": "2e278bfc-c64e-571c-86c0-c8350b88aa7b", "description": "Bebidas", "quantity": 35, "price": 5, "vat_rate": 23, "position": 1}
+{"id": "581422c0-e02b-58e6-965e-9f78603afcd5", "proposal_id": "b06642ec-4577-5823-bdba-eb6bccc3c243", "description": "Almoço", "quantity": 22, "price": 16, "vat_rate": 13, "position": 0}
+{"id": "200fb635-d9f8-5d3b-9a1e-4063d0ee347a", "proposal_id": "5b111f02-ec2a-597d-a0c8-0e5ab4c462b1", "description": "Dia 27 Coffee breaks", "quantity": 15, "price": 8.5, "vat_rate": 13, "position": 0}
+{"id": "2200e18f-b972-504e-9720-94ae55d9a7fa", "proposal_id": "5b111f02-ec2a-597d-a0c8-0e5ab4c462b1", "description": "Dia 28 Coffee breaks", "quantity": 15, "price": 8.5, "vat_rate": 13, "position": 1}
+{"id": "2db1c11d-743d-5157-9c33-d276276e670c", "proposal_id": "ef44129f-b477-5806-a846-04056f8ace6c", "description": "Coffee break 2 serviços (7.50€ x 25 pessoas x 2 serviços)", "quantity": 25, "price": 7.5, "vat_rate": 13, "position": 0}
+{"id": "18b74837-40d3-5639-ad7b-e80f180cd5b8", "proposal_id": "ef44129f-b477-5806-a846-04056f8ace6c", "description": "Wellcome coffee 4 serviços (3€ x 25 pessoas x 4 serviços)", "quantity": 25, "price": 3, "vat_rate": 13, "position": 1}
+{"id": "3282d51d-91ed-5253-a012-57dd725a27c9", "proposal_id": "bdb60e91-38aa-5193-af0a-daf43d9f6135", "description": "Menu (81€ x 35 pessoas)", "quantity": 35, "price": 81, "vat_rate": 13, "position": 0}
+{"id": "5d3a2099-1fdb-5602-a64c-283e89a9b3cd", "proposal_id": "71389f00-ec4e-5219-a356-7538535aa9fa", "description": "Menu de Almoço", "quantity": 20, "price": 26, "vat_rate": 13, "position": 0}
+{"id": "dc33d072-b00e-55e2-859f-1fcd34a89695", "proposal_id": "16fa261e-e9fa-53fa-a3a6-f23cfedc8ac3", "description": "Comidas", "quantity": 34, "price": 30, "vat_rate": 13, "position": 0}
+{"id": "1bffd84e-e205-515a-a9bc-a5f1686851ff", "proposal_id": "533b9c19-4a49-5f1f-bcb6-69fcee68cd3b", "description": "Coffee break", "quantity": 50, "price": 5, "vat_rate": 13, "position": 0}
+{"id": "a3049894-fbd7-5d46-b9a7-22253b239504", "proposal_id": "8e4a24db-8a4e-5022-94e2-f0a5579856d0", "description": "Coffee-Break 10h30", "quantity": 50, "price": 8, "vat_rate": 13, "position": 0}
+{"id": "61292167-59a4-5783-bfc7-a97b0509c504", "proposal_id": "8e4a24db-8a4e-5022-94e2-f0a5579856d0", "description": "Coffee-Break 15h30", "quantity": 50, "price": 8, "vat_rate": 13, "position": 1}
+{"id": "04f2334f-1103-5244-b1da-33df38549e46", "proposal_id": "57b6c2d3-b917-5d39-afac-004e6303e102", "description": "Coffee break pm", "quantity": 220, "price": 6.5, "vat_rate": 13, "position": 0}
+{"id": "069a8238-26ab-515a-885d-3c40cad71a0b", "proposal_id": "56307d40-6a45-560f-aa1b-e9cd2c5b38e8", "description": "Dia 15 Coffee breaks am", "quantity": 20, "price": 8, "vat_rate": 13, "position": 0}
+{"id": "2a3f5aca-47d7-567a-9ecd-f918dda8adbc", "proposal_id": "56307d40-6a45-560f-aa1b-e9cd2c5b38e8", "description": "Dia 15 Almoço", "quantity": 20, "price": 27, "vat_rate": 13, "position": 1}
+{"id": "babf359d-0a12-591b-a31f-8855c574a1ad", "proposal_id": "56307d40-6a45-560f-aa1b-e9cd2c5b38e8", "description": "Dia 15 Coffee breaks pm", "quantity": 20, "price": 8, "vat_rate": 13, "position": 2}
+{"id": "fbbaf480-851d-5429-84a5-39cd344cba67", "proposal_id": "56307d40-6a45-560f-aa1b-e9cd2c5b38e8", "description": "Dia 16 Coffee breaks am", "quantity": 20, "price": 8, "vat_rate": 13, "position": 3}
+{"id": "df3f744c-39a3-5d71-a475-4b7230d2442b", "proposal_id": "4e70770f-8b6b-56e2-91a6-c808f2768f04", "description": "Comidas", "quantity": 70, "price": 19.5, "vat_rate": 13, "position": 0}
+{"id": "766e3480-429a-551b-b0d1-d71f04964551", "proposal_id": "4e70770f-8b6b-56e2-91a6-c808f2768f04", "description": "Bebidas", "quantity": 70, "price": 2.5, "vat_rate": 23, "position": 1}
+{"id": "8f87a3a5-93ce-52b2-84ce-0f4c2c1cde68", "proposal_id": "b2336f52-2bd6-5532-9302-10c7a42d3b56", "description": "Coffee break pm", "quantity": 60, "price": 10, "vat_rate": 13, "position": 0}
+{"id": "ce9dcca4-604e-5285-b555-18db754b5003", "proposal_id": "d46a0bd0-e4df-5935-9944-6f725adb4e13", "description": "Sub total – 12€ por pessoa x 30", "quantity": 30, "price": 12, "vat_rate": 13, "position": 0}
+{"id": "ec9d409b-b2b0-56c0-956d-76ba316266b3", "proposal_id": "3e8e414f-2e64-5409-b99a-277678668db1", "description": "Coffee break pm", "quantity": 300, "price": 11, "vat_rate": 13, "position": 0}
+{"id": "70a257c2-3932-5606-8aa1-dc9fe0e949ae", "proposal_id": "3e8e414f-2e64-5409-b99a-277678668db1", "description": "Espumante", "quantity": 300, "price": 1, "vat_rate": 23, "position": 1}
+{"id": "71bac6e7-dde9-5a4f-9e89-b9269bc7bb12", "proposal_id": "46f15673-03b1-51e2-81f1-0077bd8e757d", "description": "Coffee break pm", "quantity": 50, "price": 8.6, "vat_rate": 13, "position": 0}
+{"id": "b42d0d9a-75b4-589d-96c5-34233decccb7", "proposal_id": "a55f7e79-23d1-596b-9e40-db74395d12ea", "description": "Coffee break", "quantity": 150, "price": 6.5, "vat_rate": 13, "position": 0}
+{"id": "697aa676-3821-5bd3-8401-15932726997a", "proposal_id": "af23a3df-975e-59f8-86ab-994b02c02d9e", "description": "Comidas e Bebidas não alcoólicas", "quantity": 50, "price": 20, "vat_rate": 13, "position": 0}
+{"id": "b19d722f-d16d-5533-97d5-3d42eff1ab39", "proposal_id": "c884b4ea-f58a-5b5b-9e3c-134e9168c704", "description": "Almoço", "quantity": 25, "price": 20, "vat_rate": 13, "position": 0}
+{"id": "a307ab83-3bf1-5358-acae-619fc665db15", "proposal_id": "ee9c3efa-8749-51a1-9aa5-5db71a52a7c7", "description": "Coffee break pm", "quantity": 50, "price": 8, "vat_rate": 13, "position": 0}
+{"id": "42ca642f-c9b5-5465-8420-586c463141c4", "proposal_id": "a8a58695-cf26-5125-a1cb-7810d667bf75", "description": "Desconto por adjudicação dos dois serviços (26€ x 75)", "quantity": 75, "price": 26, "vat_rate": 13, "position": 2}
+{"id": "82dee178-55bb-53df-97a2-2a4b6853fdd8", "proposal_id": "e3a9e8b9-de15-504c-9a47-38fe43b29dea", "description": "Comidas", "quantity": 50, "price": 12.5, "vat_rate": 13, "position": 0}
+{"id": "d2150304-a12b-56fe-b7a2-18408b24f32e", "proposal_id": "e3a9e8b9-de15-504c-9a47-38fe43b29dea", "description": "Bebidas", "quantity": 50, "price": 2.5, "vat_rate": 23, "position": 1}
+{"id": "0e3781d1-1c8a-533a-891a-bf7f5092295c", "proposal_id": "07ca4b12-d2c6-5e45-9b87-65a8caba4fc4", "description": "Coffee break pm", "quantity": 60, "price": 8.5, "vat_rate": 13, "position": 0}
+{"id": "862381b9-171a-50d2-a3d9-cb37bc0baf17", "proposal_id": "55cf7a90-8d5d-5493-9523-e31a15d27758", "description": "Wellcome Coffee am", "quantity": 20, "price": 2, "vat_rate": 13, "position": 0}
+{"id": "eeff09fe-4bbd-5d1e-a75a-ad870c9d2096", "proposal_id": "55cf7a90-8d5d-5493-9523-e31a15d27758", "description": "Almoço", "quantity": 20, "price": 23, "vat_rate": 13, "position": 1}
+{"id": "e224d3a3-ab24-59f6-b57c-a0758a94db61", "proposal_id": "d13bbd4d-2821-56d1-8d1b-230a2a6c1806", "description": "Serviço de Coffee break", "quantity": 250, "price": 6.5, "vat_rate": 13, "position": 0}
+{"id": "f3a260fa-1873-557f-bb2d-fee61a9626a0", "proposal_id": "d13bbd4d-2821-56d1-8d1b-230a2a6c1806", "description": "Serviço de Vinho do Porto (Barros)", "quantity": 250, "price": 0.8, "vat_rate": 23, "position": 1}
+{"id": "d84a7902-8474-5944-abef-6609f0c724fa", "proposal_id": "f0059f07-54e7-5b4d-8dc7-7d73df2b2f13", "description": "Entrega 9h", "quantity": 20, "price": 7.5, "vat_rate": 13, "position": 0}
+{"id": "a3e3ed36-eb75-5747-ad3a-129bab323f3f", "proposal_id": "f0059f07-54e7-5b4d-8dc7-7d73df2b2f13", "description": "Almoço (volante) 12h30 - 13h45", "quantity": 20, "price": 25, "vat_rate": 13, "position": 1}
+{"id": "a13908bd-996d-5d70-a614-61910a316686", "proposal_id": "f0059f07-54e7-5b4d-8dc7-7d73df2b2f13", "description": "Entrega 13h45", "quantity": 20, "price": 7.5, "vat_rate": 13, "position": 2}
+{"id": "883f0120-2e7f-5a4f-b79c-b73af008c2f4", "proposal_id": "f0059f07-54e7-5b4d-8dc7-7d73df2b2f13", "description": "Serviço de entrega 9h", "quantity": 20, "price": 7.5, "vat_rate": 13, "position": 3}
+{"id": "f2ba0edf-b56c-5c79-8195-70df276ee80d", "proposal_id": "f0059f07-54e7-5b4d-8dc7-7d73df2b2f13", "description": "Serviço de entrega 13h45", "quantity": 20, "price": 7.5, "vat_rate": 13, "position": 4}
+{"id": "27145597-acd8-5da6-88ec-e4fa54e02072", "proposal_id": "f0059f07-54e7-5b4d-8dc7-7d73df2b2f13", "description": "Entrega 9h", "quantity": 20, "price": 7.5, "vat_rate": 13, "position": 5}
+{"id": "bd6bbf38-28b1-5e6c-a392-383a6e7033a5", "proposal_id": "f0059f07-54e7-5b4d-8dc7-7d73df2b2f13", "description": "Entrega 13h45", "quantity": 20, "price": 7.5, "vat_rate": 13, "position": 6}
+{"id": "d36d67f6-0ff0-5c9f-8ab2-6f7d9391d9c4", "proposal_id": "57f2aff8-ba9f-5eb8-bb5f-4bebb1ffaf7b", "description": null, "quantity": 90, "price": 8.3, "vat_rate": 13, "position": 0}
+{"id": "5d52c41d-791c-5ed3-9a3a-2bdb8efbe1b2", "proposal_id": "fbe05cc5-ba59-5932-b9a9-d463e50f375b", "description": "Comidas e Bebidas não alcoólicas", "quantity": 40, "price": 28, "vat_rate": 13, "position": 0}
+{"id": "cdb319c9-27b4-5ed7-9430-7b9c7ff28542", "proposal_id": "fbe05cc5-ba59-5932-b9a9-d463e50f375b", "description": "Cerveja", "quantity": 40, "price": 2, "vat_rate": 23, "position": 1}
+{"id": "09ea5a1c-8b30-56a3-8a48-1179a55de6b8", "proposal_id": "4ee4bc14-ce36-5fca-bf72-866bc635e0ad", "description": "Coffee-Break 10h30", "quantity": 60, "price": 9, "vat_rate": 13, "position": 0}
+{"id": "e10419b5-23b0-5695-a9a8-9b1b8f56e9e4", "proposal_id": "4ee4bc14-ce36-5fca-bf72-866bc635e0ad", "description": "Almoço (volante) 13h", "quantity": 60, "price": 25, "vat_rate": 13, "position": 1}
+{"id": "8452e857-54b6-5015-b6c8-2892aaa66ce1", "proposal_id": "967c7cc8-42b1-562f-95bb-e6093cee5bda", "description": "Coffee break am", "quantity": 30, "price": 7.5, "vat_rate": 13, "position": 0}
+{"id": "61631f84-eff1-5278-8fda-7633f0511f4c", "proposal_id": "967c7cc8-42b1-562f-95bb-e6093cee5bda", "description": "Cofee break pm", "quantity": 30, "price": 7.5, "vat_rate": 13, "position": 1}
+{"id": "4d628105-1b84-5202-be34-34b6a462a0b5", "proposal_id": "cecdf0a0-d96b-5b2a-8d2c-621d1e6dfad2", "description": "Lunch box 8€ x 15 = 120€ x 10 dias = 1200€", "quantity": 15, "price": 8, "vat_rate": 13, "position": 0}
+{"id": "6c57fe04-75c8-5119-9975-fc14f3667725", "proposal_id": "f63163ed-93eb-5f4d-ab2e-8367a0553226", "description": "Almoço", "quantity": 50, "price": 14, "vat_rate": 13, "position": 0}
+{"id": "18206e86-0ca6-52d5-96fc-8bc03b2aa84f", "proposal_id": "f63163ed-93eb-5f4d-ab2e-8367a0553226", "description": "Coffee breaks", "quantity": 100, "price": 6, "vat_rate": 13, "position": 1}
+{"id": "d53beaec-0e78-5532-8c19-d5230c6ace44", "proposal_id": "9d5a4837-b7d8-5892-a39a-3be09709a887", "description": "Comidas e Bebidas não alcoólicas", "quantity": 50, "price": 16, "vat_rate": 13, "position": 0}
+{"id": "49fe3f2f-f2e8-5824-9b5f-c60728c71b08", "proposal_id": "4ca8a379-b375-5c0c-924b-ea56e0c9d4f8", "description": "Coffee-Break 10", "quantity": 50, "price": 5, "vat_rate": 13, "position": 0}
+{"id": "030701d9-3922-51d9-a97f-04cc18b5fa3b", "proposal_id": "eba1a76c-4f3b-52f1-971f-dc8828a017c6", "description": "Comidas e Bebidas não alcoólicas", "quantity": 50, "price": 12, "vat_rate": 13, "position": 0}
+{"id": "f6195504-db1c-55ab-bca3-f8fd0e21e8c7", "proposal_id": "fef6ad6b-4260-5066-8c3b-31a643b68f6c", "description": "Valor final Lunch box", "quantity": 60, "price": 8.3, "vat_rate": 13, "position": 0}
+{"id": "2fbe55f9-58b0-5ae5-b7fd-7af15a4ce57e", "proposal_id": "25796a7a-398f-5819-a9ab-d51286350f39", "description": "Comidas e Bebidas", "quantity": 40, "price": 17, "vat_rate": 13, "position": 0}
+{"id": "3181115c-3fee-5022-96a3-e12d1e21f134", "proposal_id": "0688ebba-c0d2-5d86-a7bc-ac472e422320", "description": "Comidas e bebidas não alcoólicas", "quantity": 100, "price": 15.5, "vat_rate": 13, "position": 0}
+{"id": "de02042b-8d9f-5e3f-9fb5-b8d1e5e055af", "proposal_id": "696efec9-48bf-5ffa-a464-43d28b511fa4", "description": "Dia 5 Coffee breaks 6€ x 23 + 23", "quantity": 23, "price": 6, "vat_rate": 13, "position": 0}
+{"id": "c92f1e58-f02b-5ef3-b530-be4e1feab21e", "proposal_id": "696efec9-48bf-5ffa-a464-43d28b511fa4", "description": "Dia 5 Almoço 27€ x 23", "quantity": 23, "price": 27, "vat_rate": 13, "position": 1}
+{"id": "14fe61ee-3123-5053-9970-4b5806588633", "proposal_id": "696efec9-48bf-5ffa-a464-43d28b511fa4", "description": "Dia 6 Coffee breaks 6€ x 23", "quantity": 23, "price": 6, "vat_rate": 13, "position": 2}
+{"id": "f3011d68-7ebe-521d-8170-12d811dc6f93", "proposal_id": "696efec9-48bf-5ffa-a464-43d28b511fa4", "description": "Dia 6 Almoço 27€ x 23", "quantity": 23, "price": 27, "vat_rate": 13, "position": 3}
+{"id": "18aaaf55-ba3d-51d7-9740-243112bfdec0", "proposal_id": "fec8d0fa-6563-5ca5-986f-1bd3ff2d6f1b", "description": "Almoço", "quantity": 90, "price": 15, "vat_rate": 13, "position": 0}
+{"id": "8fefd5cc-9960-5655-978b-3805ecf19316", "proposal_id": "1a0f23d5-1052-590e-943a-fb3bb7e34b3a", "description": "Comidas e Bebidas não alcoólicas", "quantity": 60, "price": 18, "vat_rate": 13, "position": 0}
+{"id": "15510c23-840f-50ee-8972-7e7f0c6d7807", "proposal_id": "1a0f23d5-1052-590e-943a-fb3bb7e34b3a", "description": "Espumante", "quantity": 60, "price": 2, "vat_rate": 23, "position": 1}
+{"id": "0efca18e-0f94-569e-a8a2-aa3e6f683d8a", "proposal_id": "f209143e-d0f2-5404-993b-b73a155edee0", "description": "Comidas e Bebidas não alcoólicas", "quantity": 50, "price": 16, "vat_rate": 13, "position": 0}
+{"id": "41240770-5b90-543d-90ac-040038639e6b", "proposal_id": "af324ac7-336f-5d89-b1c5-4aff75ffbe1c", "description": null, "quantity": 130, "price": 5.6, "vat_rate": 13, "position": 0}
+{"id": "ebf6c8e2-d9c3-56bc-ac5e-7bf8b1e0940c", "proposal_id": "2f2076c2-9b89-5426-a594-3d8ec9bf4fca", "description": "Coffee break pm", "quantity": 70, "price": 7, "vat_rate": 13, "position": 0}
+{"id": "5a0854c3-2d76-5b44-ab2c-437b2bd2761a", "proposal_id": "161718bb-a064-50dd-b98a-174b7afa2c37", "description": "Almoço", "quantity": 90, "price": 20, "vat_rate": 13, "position": 0}
+{"id": "247ed5d8-e9ce-5a85-9dcb-f85d5c8b181a", "proposal_id": "c94c1869-a62d-588b-9cd6-e89f43b0052b", "description": "Dia 25 pm", "quantity": 55, "price": 4.5, "vat_rate": 13, "position": 0}
+{"id": "79c3b492-636c-5ddc-8d6a-e8c3c822a80e", "proposal_id": "c94c1869-a62d-588b-9cd6-e89f43b0052b", "description": "Dia 26 am", "quantity": 370, "price": 6.2, "vat_rate": 13, "position": 1}
+{"id": "a60c7783-01fb-59a8-9337-9cc6237d0a64", "proposal_id": "c94c1869-a62d-588b-9cd6-e89f43b0052b", "description": "Dia 26 pm", "quantity": 350, "price": 4, "vat_rate": 13, "position": 2}
+{"id": "554c3866-ab56-5d1a-969a-8d997f04fdc9", "proposal_id": "c94c1869-a62d-588b-9cd6-e89f43b0052b", "description": "Dia 27 am", "quantity": 350, "price": 5, "vat_rate": 13, "position": 3}
+{"id": "e65ba77b-60d4-55b4-b6d9-478bb5b488df", "proposal_id": "9a1f51d5-4bb2-5787-b29b-b3dc4e131027", "description": "Welcome Coffee", "quantity": 50, "price": 7.5, "vat_rate": 13, "position": 0}
+{"id": "5fd9167f-8a1c-55c4-85ee-a416b3a8c76f", "proposal_id": "9a1f51d5-4bb2-5787-b29b-b3dc4e131027", "description": "Jantar", "quantity": 50, "price": 26, "vat_rate": 13, "position": 1}
+{"id": "b85a1999-c1b1-54bf-8c16-e010788d3b2b", "proposal_id": "f6a00103-a81d-5d81-bc2c-6090f35df308", "description": "8€ x 70 pax", "quantity": 70, "price": 8, "vat_rate": 13, "position": 0}
+{"id": "770d8994-5dc5-541e-8a8a-887947fbe9a2", "proposal_id": "f6a00103-a81d-5d81-bc2c-6090f35df308", "description": "8€ x 70 pax", "quantity": 70, "price": 8, "vat_rate": 13, "position": 2}
+{"id": "2a573fdc-d525-55a2-afd6-78fb1f6345f9", "proposal_id": "e8cd64da-0fff-5ec6-923e-e8193f38c4f6", "description": "Coffee breaks", "quantity": 22, "price": 7, "vat_rate": 13, "position": 0}
+{"id": "fdd4a014-01bd-5e78-8b93-e04b1a2a1752", "proposal_id": "ce21f12e-508a-5279-8b21-aeb3f33ae8bf", "description": "Comidas", "quantity": 15, "price": 18.6, "vat_rate": 13, "position": 0}
+{"id": "24bc7471-8b35-5670-bbab-a8ae230caef7", "proposal_id": "18769e22-9380-51df-8e2a-628b97023791", "description": "Dia 19 – Cb am", "quantity": 40, "price": 7, "vat_rate": 13, "position": 0}
+{"id": "24f71949-ae72-59d3-b666-8696eea094ea", "proposal_id": "18769e22-9380-51df-8e2a-628b97023791", "description": "Dia 20 – Cb am", "quantity": 40, "price": 7, "vat_rate": 13, "position": 1}
+{"id": "762f9baf-1f40-5c7f-aaa6-0c0edc49cf40", "proposal_id": "18769e22-9380-51df-8e2a-628b97023791", "description": "Dia 20 – Cb pm", "quantity": 20, "price": 7.5, "vat_rate": 13, "position": 2}
+{"id": "046aaad6-cbe5-5914-8e54-a4e7e3fea0df", "proposal_id": "18769e22-9380-51df-8e2a-628b97023791", "description": "Dia 19 – Almoço", "quantity": 40, "price": 26.5, "vat_rate": 13, "position": 3}
+{"id": "d9490216-625d-5bbd-8ca0-403926c6659c", "proposal_id": "18769e22-9380-51df-8e2a-628b97023791", "description": "Dia 20 – Almoço", "quantity": 30, "price": 27.5, "vat_rate": 13, "position": 4}
+{"id": "564e2068-998b-56ca-bbb1-a1cfa9d24f93", "proposal_id": "9c46ba0a-e301-537e-b8e1-3865fa307c63", "description": "Dia 19 Coffee-Break 10h", "quantity": 20, "price": 7.5, "vat_rate": 13, "position": 0}
+{"id": "035ed85b-746e-5278-bbef-495d5c744eeb", "proposal_id": "9c46ba0a-e301-537e-b8e1-3865fa307c63", "description": "Dia 19 Coffee-Break 16h", "quantity": 20, "price": 7.5, "vat_rate": 13, "position": 1}
+{"id": "ee02e7f7-3fff-5143-947e-b808cabc25d2", "proposal_id": "9c46ba0a-e301-537e-b8e1-3865fa307c63", "description": "Dia 20 Coffee-Break 9h", "quantity": 20, "price": 7.5, "vat_rate": 13, "position": 2}
+{"id": "2da540cb-95b5-503b-b311-426d67a5ef5d", "proposal_id": "9c46ba0a-e301-537e-b8e1-3865fa307c63", "description": "Dia 20 Coffee-Break 16h", "quantity": 20, "price": 7.5, "vat_rate": 13, "position": 3}
+{"id": "531ab838-e26c-5249-951e-f44d6b118f3a", "proposal_id": "c9e1edab-3045-5c4a-996b-b24ebf8fc44f", "description": "Coffee break pm – 8€ x 220", "quantity": 220, "price": 8, "vat_rate": 13, "position": 0}
+{"id": "68709a0d-ee76-5101-b66c-c9eb2d5e8941", "proposal_id": "8ae50386-2995-5ec5-b223-a4f47b0c26ad", "description": "Almoço 13€ x 30", "quantity": 30, "price": 13, "vat_rate": 13, "position": 0}
+{"id": "0f1c53b7-64b9-58bf-a7de-7181d792a75a", "proposal_id": "f299cc5e-8d72-5e25-a4cd-6c9513603783", "description": "26€ x 40 pessoas", "quantity": 40, "price": 26, "vat_rate": 13, "position": 0}
+{"id": "762bf929-8e20-5bae-a427-f0cd8b09f133", "proposal_id": "ec2f8436-1bae-5ae3-8789-7b2b45c88501", "description": "Coffee break 16h – 6.50€ x 30", "quantity": 30, "price": 6.5, "vat_rate": 13, "position": 0}
+{"id": "c540d828-0d51-5c95-a275-4259e29bad0c", "proposal_id": "ec2f8436-1bae-5ae3-8789-7b2b45c88501", "description": "Coffee break 19h – 9.50€ x 30", "quantity": 30, "price": 9.5, "vat_rate": 13, "position": 1}
+{"id": "0e5816a0-6e23-578a-b975-7e220859f756", "proposal_id": "e5212a35-7fda-5129-af89-d2a3b97bf48a", "description": "Coffee Break 6€ x 20", "quantity": 20, "price": 6, "vat_rate": 13, "position": 0}
+{"id": "f8fc3310-6375-5253-babb-422a15d0838a", "proposal_id": "e5212a35-7fda-5129-af89-d2a3b97bf48a", "description": "Almoço 18€ x 20 Pessoas", "quantity": 20, "price": 18, "vat_rate": 13, "position": 1}
+{"id": "109a3511-eb5a-5afd-b817-73d3bccbae06", "proposal_id": "8958335a-34fc-5cd3-8f92-917d85bff71e", "description": "Coffee breaks pm 8€ x 25 = 200€ x 7= 1400€", "quantity": 25, "price": 8, "vat_rate": 13, "position": 0}
+{"id": "885012e2-b7e2-5fe8-bb90-34cb3cfd4681", "proposal_id": "544e225c-c3ea-57ed-9edc-defc6e47748e", "description": "Comidas – 14€ x 100", "quantity": 100, "price": 14, "vat_rate": 13, "position": 0}
+{"id": "c2187d24-c93c-52f8-b27c-2cee87ae646b", "proposal_id": "544e225c-c3ea-57ed-9edc-defc6e47748e", "description": "Bebidas – 2€ x 100", "quantity": 100, "price": 2, "vat_rate": 23, "position": 1}
+{"id": "6c614f80-7520-5a69-ab81-0691b2fd0ad2", "proposal_id": "02479fbd-400c-56b1-aaa6-19a69bdb1380", "description": "Comidas e Bebidas não alcoólicas 18€ x 30 = 540€", "quantity": 30, "price": 18, "vat_rate": 13, "position": 0}
+{"id": "bff8c005-0ccb-5426-bac8-42bd947f197b", "proposal_id": "bc625597-1cf5-5824-859c-21bab2062341", "description": "Dia 19 – Cb am", "quantity": 40, "price": 7, "vat_rate": 13, "position": 0}
+{"id": "b18b02e9-5db0-5620-9cd0-832f20a0d5a9", "proposal_id": "bc625597-1cf5-5824-859c-21bab2062341", "description": "Dia 20 – Cb am", "quantity": 40, "price": 7, "vat_rate": 13, "position": 1}
+{"id": "0f9e690d-6bdc-5dcb-b4f6-7aa1806b82a1", "proposal_id": "bc625597-1cf5-5824-859c-21bab2062341", "description": "Dia 20 – Cb pm", "quantity": 20, "price": 7.5, "vat_rate": 13, "position": 2}
+{"id": "a4347a87-6b75-5ac6-aac8-b56cca1c4401", "proposal_id": "bc625597-1cf5-5824-859c-21bab2062341", "description": "Dia 19 – Almoço", "quantity": 40, "price": 26.5, "vat_rate": 13, "position": 3}
+{"id": "9d0622bb-963d-5779-886d-1057ef9c2401", "proposal_id": "bc625597-1cf5-5824-859c-21bab2062341", "description": "Dia 20 – Almoço", "quantity": 30, "price": 27.5, "vat_rate": 13, "position": 4}
+{"id": "59d5d0bc-5ebc-5009-a952-a927f75af9bb", "proposal_id": "fef0df99-b57e-5075-8c03-c4157472bc1f", "description": "Comidas – 15.50€ x 100", "quantity": 100, "price": 15.5, "vat_rate": 13, "position": 0}
+{"id": "09ef6f96-9617-5239-b301-dfa0857f8df7", "proposal_id": "4d6baa1c-ae1e-598e-ab9d-1330d7c73864", "description": "Serviço de Coffee break", "quantity": 250, "price": 6.7, "vat_rate": 13, "position": 0}
+{"id": "624c74ff-8794-5819-bd18-8a9886226525", "proposal_id": "4d6baa1c-ae1e-598e-ab9d-1330d7c73864", "description": "Serviço de Vinho do Porto (Barros)", "quantity": 250, "price": 0.8, "vat_rate": 23, "position": 1}
+{"id": "48d2532f-0d4e-57a3-a40d-c87b88298af1", "proposal_id": "db5560f5-79ae-5836-8636-e535a8b95877", "description": "Coffee break 16h", "quantity": 30, "price": 6.5, "vat_rate": 13, "position": 0}
+{"id": "e10f872e-ad0d-565f-bcb8-b20f37ee11fb", "proposal_id": "db5560f5-79ae-5836-8636-e535a8b95877", "description": "Coffee break 19h", "quantity": 30, "price": 9.5, "vat_rate": 13, "position": 1}
+{"id": "bc0b019f-6afa-58a2-b8f1-7c8983c84e61", "proposal_id": "f6bf7b94-7d73-53ad-9dc7-cc4b84fbd3c1", "description": "Comidas e bebidas não alcoólicas", "quantity": 50, "price": 25, "vat_rate": 13, "position": 0}
+{"id": "ae60317e-d54e-5db9-9830-2c91deec846e", "proposal_id": "f6bf7b94-7d73-53ad-9dc7-cc4b84fbd3c1", "description": "Bebidas alcoólicas", "quantity": 50, "price": 1, "vat_rate": 23, "position": 1}
+{"id": "53a088f6-a5f7-5bda-af03-0e56bf108f6c", "proposal_id": "439acb1a-beb2-52f5-84c5-a943425ca11e", "description": "Coffee break pm", "quantity": 175, "price": 7.5, "vat_rate": 13, "position": 0}
+{"id": "56ae353b-3e19-56a1-a436-890a9f96953e", "proposal_id": "379aeac6-dbae-570d-9f76-5cca5ac69d31", "description": "Almoço", "quantity": 100, "price": 18, "vat_rate": 13, "position": 0}
+{"id": "fe63b628-0979-544d-8b31-84eaf201dab8", "proposal_id": "fd5feee2-c4ca-5fd2-98a3-951a2c84992a", "description": "Espumante", "quantity": 50, "price": 1.5, "vat_rate": 23, "position": 1}
+{"id": "a7151636-895c-573c-8605-f363a2bf4e85", "proposal_id": "82df12d9-a253-58f4-b443-9972661c6ca0", "description": "Almoço", "quantity": 22, "price": 16, "vat_rate": 13, "position": 0}
+{"id": "21b5f05f-a338-5c56-96c1-9f7ee0d75961", "proposal_id": "c8de2132-3ee2-590d-a9f2-21864b1cb1c4", "description": "8.50€ x 20 pessoas", "quantity": 20, "price": 8.5, "vat_rate": 13, "position": 0}
+{"id": "7af291cd-d48f-5f6a-b438-bfef2e3c03df", "proposal_id": "74585789-0f4b-517a-89c0-841b40616a47", "description": "Comidas e Bebidas não alcoólicas", "quantity": 330, "price": 11, "vat_rate": 13, "position": 0}
+{"id": "9fe054b4-107d-527f-b0f7-1e2aa9e0644d", "proposal_id": "74585789-0f4b-517a-89c0-841b40616a47", "description": "Espumante", "quantity": 330, "price": 1, "vat_rate": 23, "position": 1}
+{"id": "5d21a088-4745-5b9f-8d30-4ad1a251308d", "proposal_id": "02b8893a-15b2-50ef-b749-d0e89701802e", "description": "Almoço", "quantity": 80, "price": 20, "vat_rate": 13, "position": 0}
+{"id": "c5a0eae6-e608-5f55-b869-7541bf4b3830", "proposal_id": "197b7d49-47b3-546f-a3a9-9f61d819d261", "description": "8.50€ x 20 pessoas", "quantity": 20, "price": 8.5, "vat_rate": 13, "position": 0}
+{"id": "231fbdc7-f343-56ed-b9fb-5a113164ad84", "proposal_id": "622a7e9c-f040-5edc-9fad-f432fc07d482", "description": "Comidas e Bebidas não alcoólicas", "quantity": 50, "price": 25, "vat_rate": 13, "position": 0}
+{"id": "584a38c5-a145-5878-a1e5-6b07c2a7d1ce", "proposal_id": "73b277cc-5d26-51e3-b2f7-749cd16ba35d", "description": "Coffee break pm", "quantity": 50, "price": 8.6, "vat_rate": 13, "position": 0}
+{"id": "daf34968-888f-5227-91af-cdbfedf26f53", "proposal_id": "05f68b62-6f4a-592b-a952-a9187ff2c315", "description": "Comidas e bebidas não alcoólicas", "quantity": 100, "price": 15.5, "vat_rate": 13, "position": 0}
+{"id": "bd0ac350-69dd-50c4-b4d3-f966fcc5b815", "proposal_id": "f04b8e9e-2212-534b-b6c5-865ec01ed2e1", "description": "Coffee breaks pm 8€ x 25 = 200€ x 7", "quantity": 25, "price": 8, "vat_rate": 13, "position": 0}
+{"id": "aec90593-579a-510d-8ac0-42e2a815786a", "proposal_id": "b907be3e-0b85-5625-8b32-36fa4391b647", "description": "Comidas", "quantity": 70, "price": 21.5, "vat_rate": 13, "position": 0}
+{"id": "34ec1bf2-a490-5217-9795-5229eb274ec1", "proposal_id": "b907be3e-0b85-5625-8b32-36fa4391b647", "description": "Bebidas não alcoólicas", "quantity": 70, "price": 2.5, "vat_rate": 13, "position": 1}
+{"id": "21fbb8d3-b29f-5eca-9074-fcf7d159386f", "proposal_id": "b907be3e-0b85-5625-8b32-36fa4391b647", "description": "Cerveja", "quantity": 210, "price": 0.6, "vat_rate": 23, "position": 2}
+{"id": "869a9b06-9c87-56af-989b-bb74c340aa62", "proposal_id": "ea152be1-921e-5dcd-9525-5199408e832b", "description": "Coffee break pm", "quantity": 30, "price": 6.5, "vat_rate": 13, "position": 0}
+{"id": "899cf3b7-60e3-562e-aea2-b1bb695b95e4", "proposal_id": "62202b20-9756-51ad-9cf5-545d83b2c5b8", "description": "Dia 5 almoço", "quantity": 23, "price": 27, "vat_rate": 13, "position": 1}
+{"id": "e1c86195-9d7b-5761-88c0-4149b9946ddc", "proposal_id": "62202b20-9756-51ad-9cf5-545d83b2c5b8", "description": "Dia 6 coffee breaks", "quantity": 23, "price": 6, "vat_rate": 13, "position": 2}
+{"id": "16e548d4-e893-55f1-9a85-47d727c4ec51", "proposal_id": "62202b20-9756-51ad-9cf5-545d83b2c5b8", "description": "Dia 6 almoço", "quantity": 23, "price": 27, "vat_rate": 13, "position": 3}
+{"id": "55038ce6-2063-515f-abfb-1acd80bf13bb", "proposal_id": "792efe69-4945-527a-8d87-fb35bb1ad680", "description": "Almoço", "quantity": 90, "price": 18, "vat_rate": 13, "position": 0}
+{"id": "82f736a3-bc86-59ae-a632-d2264a7dd33b", "proposal_id": "02a5b82b-743d-5ad5-805e-2fb65c2b91ba", "description": "Comidas", "quantity": 100, "price": 14, "vat_rate": 13, "position": 0}
+{"id": "726a0050-5442-59ad-ba99-99fc5303650e", "proposal_id": "02a5b82b-743d-5ad5-805e-2fb65c2b91ba", "description": "Bebidas", "quantity": 100, "price": 2.5, "vat_rate": 23, "position": 1}
+{"id": "cd9fbce8-08c3-50e5-8eef-76005a720604", "proposal_id": "2729e132-cf3e-5508-8851-9b7b006367c6", "description": "Lunch box Completa", "quantity": 50, "price": 15, "vat_rate": 13, "position": 0}
+{"id": "d22c6bd6-6d2a-546f-923e-835013775e1e", "proposal_id": "a8ff668a-9620-5ffe-8058-248cdd849164", "description": "Almoço", "quantity": 150, "price": 18, "vat_rate": 13, "position": 0}
+{"id": "2aa7540a-97f2-5a94-9e99-724faa208bfc", "proposal_id": "a8ff668a-9620-5ffe-8058-248cdd849164", "description": "Cerveja", "quantity": 300, "price": 0.5, "vat_rate": 23, "position": 1}
+{"id": "9758120b-8177-527e-8ff9-0f7646b0274d", "proposal_id": "a8ff668a-9620-5ffe-8058-248cdd849164", "description": "Sangria 15lts", "quantity": 150, "price": 0.8, "vat_rate": 23, "position": 2}
+{"id": "d20dbbee-014e-5505-975e-5af7aa4d8d21", "proposal_id": "d7849967-3b5a-548c-996c-2677609b3dba", "description": "Coffee break am", "quantity": 90, "price": 10, "vat_rate": 13, "position": 0}
+{"id": "75f59f7b-7eb8-5acc-b835-e35b00e1a145", "proposal_id": "54a8c05f-da0c-5b66-90d1-154d418fdeae", "description": "Comidas e Bebidas não alcoólicas", "quantity": 60, "price": 22, "vat_rate": 13, "position": 0}
+{"id": "97a1867f-411c-5896-9be8-d65cffc22d29", "proposal_id": "c6a5a0da-e253-5404-a595-54556304ae1d", "description": "Comidas e bebidas não alcoólicas", "quantity": 60, "price": 29, "vat_rate": 13, "position": 0}
+{"id": "9035a450-d15d-565e-aa45-a88607043fa4", "proposal_id": "c6a5a0da-e253-5404-a595-54556304ae1d", "description": "Bebidas alcoólicas", "quantity": 60, "price": 1, "vat_rate": 23, "position": 1}
+{"id": "9808c9a3-a9d6-5a2f-86ab-ae98e8469084", "proposal_id": "d6155da5-b011-5814-964e-d7175d570b6d", "description": "Comidas", "quantity": 15, "price": 18.6, "vat_rate": 13, "position": 0}
+{"id": "adbbfa80-442f-595f-855c-7116dda81d53", "proposal_id": "001da6e3-b16a-5d4c-a6f4-783da60ab8b7", "description": "Comidas", "quantity": 15, "price": 18.6, "vat_rate": 13, "position": 0}
+{"id": "21539a91-aa93-5108-a144-77adc4a27257", "proposal_id": "8d67b878-3b1a-5271-b596-ffc2696443af", "description": "Dia 5 almoço", "quantity": 23, "price": 27, "vat_rate": 13, "position": 1}
+{"id": "1010daf7-76da-57bb-aa57-ddf227b42058", "proposal_id": "8d67b878-3b1a-5271-b596-ffc2696443af", "description": "Dia 6 coffee breaks", "quantity": 23, "price": 6, "vat_rate": 13, "position": 2}
+{"id": "282b6332-3cd8-58d7-b5c0-d9f64222297f", "proposal_id": "8d67b878-3b1a-5271-b596-ffc2696443af", "description": "Dia 6 almoço", "quantity": 23, "price": 27, "vat_rate": 13, "position": 3}
+{"id": "ea5aad6b-8a7a-5b14-a7d7-2595ccdd2a9f", "proposal_id": "c1c850ec-1e39-5ad8-be45-1b65beaad843", "description": "Dia 5 almoço", "quantity": 24, "price": 27, "vat_rate": 13, "position": 1}
+{"id": "50b5222c-ce87-5f21-a566-6dce55ad6344", "proposal_id": "c1c850ec-1e39-5ad8-be45-1b65beaad843", "description": "Dia 6 coffee breaks", "quantity": 24, "price": 6, "vat_rate": 13, "position": 2}
+{"id": "9d4f463e-b4ca-5ffc-80ad-aa0b6321efe7", "proposal_id": "c1c850ec-1e39-5ad8-be45-1b65beaad843", "description": "Dia 6 almoço", "quantity": 24, "price": 27, "vat_rate": 13, "position": 3}
+{"id": "07c29e68-a77c-56f6-af50-715361ed6c78", "proposal_id": "0c99ec90-bf73-54cb-917b-01925588b3b8", "description": "Almoço", "quantity": 55, "price": 38, "vat_rate": 13, "position": 0}
+{"id": "edddba93-c383-5741-b8de-acaf24ea2302", "proposal_id": "85b1e3e3-be9e-5452-a508-9f70c776bdd9", "description": "Comidas e Bebidas não alcoólicas", "quantity": 150, "price": 13.5, "vat_rate": 13, "position": 0}
+{"id": "226f31d9-ecd4-5b88-b312-3f0bf77e88fb", "proposal_id": "85b1e3e3-be9e-5452-a508-9f70c776bdd9", "description": "Bebidas alcoólicas", "quantity": 150, "price": 1.5, "vat_rate": 23, "position": 1}
+{"id": "85e13a61-364a-5a39-aaaa-6d479173a322", "proposal_id": "3b6db2a1-1146-516a-b159-37c55e8ab3ca", "description": "Comidas", "quantity": 100, "price": 13.5, "vat_rate": 13, "position": 0}
+{"id": "4df5762c-d596-597f-8661-adca44d28c92", "proposal_id": "3b6db2a1-1146-516a-b159-37c55e8ab3ca", "description": "Bebidas", "quantity": 100, "price": 2, "vat_rate": 23, "position": 1}
+{"id": "c39a1ae1-d353-5c57-a538-3a025bdd95c6", "proposal_id": "366d7925-5fca-532e-a0cd-131f456b4bab", "description": "Comidas", "quantity": 100, "price": 16.5, "vat_rate": 13, "position": 0}
+{"id": "71c806cc-f023-5491-91d0-32ef0c841d5e", "proposal_id": "366d7925-5fca-532e-a0cd-131f456b4bab", "description": "Bebidas", "quantity": 100, "price": 2.5, "vat_rate": 23, "position": 1}
+{"id": "c1787302-aaf8-57a6-8755-e0d84fc3243e", "proposal_id": "4e119e7b-ff10-5498-9fdd-d20df2e78557", "description": "Bebidas não alcoólicas", "quantity": 65, "price": 4, "vat_rate": 13, "position": 0}
+{"id": "28f85fc5-7044-52fc-a9b9-df662307e66f", "proposal_id": "4e119e7b-ff10-5498-9fdd-d20df2e78557", "description": "Espumante", "quantity": 65, "price": 2.5, "vat_rate": 23, "position": 1}
+{"id": "eef9c201-7115-5243-b417-d7707c5a872a", "proposal_id": "09a7818a-70df-59d2-b743-17be83669563", "description": "Comidas", "quantity": 40, "price": 20, "vat_rate": 13, "position": 0}
+{"id": "ff25117a-d7c8-5d9b-91d4-13fd109d3474", "proposal_id": "09a7818a-70df-59d2-b743-17be83669563", "description": "Bebidas", "quantity": 40, "price": 5, "vat_rate": 23, "position": 1}
+{"id": "ef3760b8-9a25-52cf-8525-bc2f4a53d56d", "proposal_id": "72aa5f00-eeb5-5546-8301-b926603f76dd", "description": "Serviço de Coffee break", "quantity": 250, "price": 7.5, "vat_rate": 13, "position": 0}
+{"id": "f7e80fe0-0bb1-565b-9f90-63365cce826f", "proposal_id": "72aa5f00-eeb5-5546-8301-b926603f76dd", "description": "Serviço de Vinho do Porto (Barros)", "quantity": 250, "price": 0.8, "vat_rate": 23, "position": 1}
+{"id": "2bbbf641-541c-5f61-9a69-833b108168e6", "proposal_id": "8c302e59-d99c-5d58-9bd4-8aad7666197d", "description": null, "quantity": 20, "price": 8, "vat_rate": 13, "position": 0}
+{"id": "1d6bbebe-79e8-53c6-ba89-3c24b4bafa78", "proposal_id": "0b06a259-fda9-54e4-a0f3-b7d1a5bc0769", "description": "Catering 1 e 2", "quantity": 50, "price": 12.5, "vat_rate": 13, "position": 0}
+{"id": "aa39b95a-997d-5fda-b1b2-528353659af3", "proposal_id": "fc11ea4a-f6ae-5535-bc25-5f0169db36a9", "description": "Entrega de Comidas", "quantity": 20, "price": 22.5, "vat_rate": 13, "position": 0}
+{"id": "57db3dff-1434-57ab-bab9-e071340e9614", "proposal_id": "6c7739d1-a6e5-5e90-8e9c-d5becdf245d1", "description": "Catering 1 e 2", "quantity": 50, "price": 12.5, "vat_rate": 13, "position": 0}
+{"id": "79e72931-d72c-5b1d-a975-ac4ec6357511", "proposal_id": "2eb90c47-f92c-5516-a37a-db733257fbfe", "description": "Wellcome Coffee", "quantity": 50, "price": 2, "vat_rate": 13, "position": 0}
+{"id": "e7392e6b-6d3a-5dd1-b10d-7caf8d466d4b", "proposal_id": "2eb90c47-f92c-5516-a37a-db733257fbfe", "description": "Coffee break am", "quantity": 50, "price": 7, "vat_rate": 13, "position": 1}
+{"id": "345e36ce-005c-527c-ac6c-dfbdc12030e8", "proposal_id": "2eb90c47-f92c-5516-a37a-db733257fbfe", "description": "Almoço", "quantity": 50, "price": 18, "vat_rate": 13, "position": 2}
+{"id": "d9aa3eef-7247-53c1-be5b-ff911410f339", "proposal_id": "2eb90c47-f92c-5516-a37a-db733257fbfe", "description": "Coffee break pm", "quantity": 50, "price": 7, "vat_rate": 13, "position": 3}
+{"id": "631ba00d-5a8c-5d1c-9111-30a5f5610be4", "proposal_id": "18c25024-eb80-5c53-b3f8-8bdfa6687332", "description": null, "quantity": 100, "price": 8, "vat_rate": 13, "position": 0}
+{"id": "f7989128-a0f0-5a2d-9542-db4a5095a526", "proposal_id": "8ba22062-cfdd-53d1-8d93-5b7b4699c42a", "description": "Coffee break", "quantity": 30, "price": 5.5, "vat_rate": 13, "position": 0}
+{"id": "4dbebbe7-84e5-5d9d-8c16-0a23180cc9de", "proposal_id": "3ace6366-32dc-5fc3-918b-6cf8d82b6518", "description": "Coffee Break", "quantity": 20, "price": 6, "vat_rate": 13, "position": 0}
+{"id": "7d653007-7716-5a1c-9631-e7880ec7a1fa", "proposal_id": "3ace6366-32dc-5fc3-918b-6cf8d82b6518", "description": "Almoço", "quantity": 20, "price": 20, "vat_rate": 13, "position": 1}
+{"id": "327d2658-5e2e-5b59-8542-80ce6e5ad389", "proposal_id": "38debc85-7a10-5b90-b7f3-8c706b5c75dc", "description": "Coffee break e Almoço", "quantity": 90, "price": 15, "vat_rate": 13, "position": 0}
+{"id": "dffc4c36-42ec-598f-891a-440f9321c699", "proposal_id": "bdbefcf9-ab7e-5969-a016-4f94febb77aa", "description": "Wellcome Coffee", "quantity": 50, "price": 2, "vat_rate": 13, "position": 0}
+{"id": "ec999bb4-1edb-5a77-97dd-d8a5c32adc1a", "proposal_id": "bdbefcf9-ab7e-5969-a016-4f94febb77aa", "description": "Coffee break am", "quantity": 50, "price": 7, "vat_rate": 13, "position": 1}
+{"id": "9ec04acc-1648-5da4-b92c-e628e683484f", "proposal_id": "bdbefcf9-ab7e-5969-a016-4f94febb77aa", "description": "Almoço", "quantity": 50, "price": 18, "vat_rate": 13, "position": 2}
+{"id": "57146c80-4a0b-50d0-bc45-ade5cde6c968", "proposal_id": "bdbefcf9-ab7e-5969-a016-4f94febb77aa", "description": "Coffee break pm", "quantity": 50, "price": 7, "vat_rate": 13, "position": 3}
+{"id": "2f5456ee-7d4f-510c-812c-fc2b51f2ce50", "proposal_id": "e108104f-d6b1-56f6-82d8-13b31ea12595", "description": "Almoço", "quantity": 20, "price": 20, "vat_rate": 13, "position": 0}
+{"id": "cf357006-329c-5736-81e5-4f575623625a", "proposal_id": "e13f5936-009f-5e8b-986d-eceaf1324497", "description": "Quote with 150 pessoas", "quantity": 150, "price": 23, "vat_rate": 13, "position": 4}
+{"id": "7f208ef0-6170-5743-8c58-e1ae073e1434", "proposal_id": "e13f5936-009f-5e8b-986d-eceaf1324497", "description": "Quote with 200 pessoas", "quantity": 200, "price": 22, "vat_rate": 13, "position": 5}
+{"id": "69e5f9db-6fa0-5114-b78f-abb3dc1fbfdc", "proposal_id": "e13f5936-009f-5e8b-986d-eceaf1324497", "description": "Quote with 300 pessoas", "quantity": 300, "price": 20, "vat_rate": 13, "position": 6}
+{"id": "a63f7676-3954-513a-b813-9d40800d6e30", "proposal_id": "b7acc83b-f92e-5784-8877-1445a5f0a777", "description": "Comidas e Bebidas não alcoólicas", "quantity": 40, "price": 28, "vat_rate": 13, "position": 0}
+{"id": "c98a159d-d771-5f57-bd68-abf5d9769538", "proposal_id": "b7acc83b-f92e-5784-8877-1445a5f0a777", "description": "Cerveja", "quantity": 40, "price": 2, "vat_rate": 23, "position": 1}
+{"id": "77076b0e-3b46-5c0e-aad6-459c245e5cbe", "proposal_id": "f8992778-720b-5725-8406-145ba359f61a", "description": "Comidas", "quantity": 15, "price": 23, "vat_rate": 13, "position": 0}
+{"id": "c1af20c4-0c8d-5c47-8149-5c3c3b5a1c0a", "proposal_id": "600d86f9-293b-5894-a1f7-496334cd379e", "description": "Almoço", "quantity": 140, "price": 15.5, "vat_rate": 13, "position": 0}
+{"id": "cebe6819-f03e-5822-96d7-59b593322e17", "proposal_id": "086fbaee-aefa-5189-981e-b79e874d5fca", "description": "Comidas e bebidas não alcoólicas", "quantity": 150, "price": 25, "vat_rate": 13, "position": 0}
+{"id": "2a911f54-f333-5e5c-b959-e529d7f5696a", "proposal_id": "086fbaee-aefa-5189-981e-b79e874d5fca", "description": "Bebidas alcoólicas", "quantity": 150, "price": 2.5, "vat_rate": 23, "position": 1}
+{"id": "04af18e5-7b95-57b5-a4e9-0e5de8bbfe34", "proposal_id": "7bbdc340-1595-5966-b043-c9d93b4d2892", "description": "Coffee breaks am", "quantity": 80, "price": 6.5, "vat_rate": 13, "position": 0}
+{"id": "263e5018-8a4d-5e69-a901-75a483ab49ec", "proposal_id": "7bbdc340-1595-5966-b043-c9d93b4d2892", "description": "Coffee breaks pm", "quantity": 80, "price": 6.5, "vat_rate": 13, "position": 1}
+{"id": "32eafd5b-5c87-5d6f-b248-a7bc6159b4b9", "proposal_id": "7acd757b-d33c-5673-bc09-f831276520ee", "description": "Coffee breaks am", "quantity": 140, "price": 6.5, "vat_rate": 13, "position": 0}
+{"id": "72aacb72-537e-57de-98aa-418272994cbd", "proposal_id": "7acd757b-d33c-5673-bc09-f831276520ee", "description": "Coffee breaks pm", "quantity": 140, "price": 6.5, "vat_rate": 13, "position": 1}
+{"id": "56ee9fea-f3dd-5af9-8224-b3b5045902a0", "proposal_id": "84e5f447-e390-5775-afc2-0035b22b7144", "description": "Comidas e Bebidas não alcoólicas", "quantity": 60, "price": 24, "vat_rate": 13, "position": 0}
+{"id": "1c1eeddd-64b8-5ad4-9616-a8c32b9de2aa", "proposal_id": "3bc95b1d-f769-5fc4-8002-c94ce9be9c38", "description": "Almoço", "quantity": 150, "price": 18, "vat_rate": 13, "position": 0}
+{"id": "04ec9aae-d288-50ee-8ab5-e32784ba224c", "proposal_id": "3bc95b1d-f769-5fc4-8002-c94ce9be9c38", "description": "Cerveja", "quantity": 300, "price": 0.5, "vat_rate": 23, "position": 1}
+{"id": "7c5842b6-aad7-5d0f-9d09-6173acdf7c06", "proposal_id": "3bc95b1d-f769-5fc4-8002-c94ce9be9c38", "description": "Sangria 15lts", "quantity": 150, "price": 0.8, "vat_rate": 23, "position": 2}
+{"id": "cf9bd9d4-1a56-545c-88a9-4becd31861fb", "proposal_id": "871d8dcb-8e56-53df-a4e7-f7ccff9bf86c", "description": "Coffee break pm", "quantity": 250, "price": 7.5, "vat_rate": 13, "position": 0}
+{"id": "31362835-c1a1-5958-bdd6-c97231315120", "proposal_id": "4da7cc1d-35ef-5928-baed-5e19584fc1a9", "description": null, "quantity": 40, "price": 13.5, "vat_rate": 13, "position": 0}
+{"id": "2fb21853-2df5-526c-af21-76fbc4eb1bb7", "proposal_id": "2cbeafe3-c62f-518d-ad29-689538ae6ecd", "description": "Coffee breaks pm", "quantity": 35, "price": 7, "vat_rate": 13, "position": 0}
+{"id": "9f18d032-ba6d-5c54-b058-d9ae70cb2ddd", "proposal_id": "2cbeafe3-c62f-518d-ad29-689538ae6ecd", "description": "Almoços", "quantity": 35, "price": 25, "vat_rate": 13, "position": 1}
+{"id": "03e3f98c-82dc-58e3-aed8-ecaf35ebed23", "proposal_id": "dc583401-af94-59b2-82d0-ab1df08a50ae", "description": "Coffee-Break 11h", "quantity": 90, "price": 5, "vat_rate": 13, "position": 0}
+{"id": "221b3b47-bed3-5484-9b92-866f1aa7a5b4", "proposal_id": "dc583401-af94-59b2-82d0-ab1df08a50ae", "description": "Almoço (volante) 13h", "quantity": 90, "price": 17, "vat_rate": 13, "position": 1}
+{"id": "89d4250e-9337-5fdc-9e95-a6b7cc5b83a2", "proposal_id": "dc583401-af94-59b2-82d0-ab1df08a50ae", "description": "Coffee-Break 15h30", "quantity": 80, "price": 5, "vat_rate": 13, "position": 2}
+{"id": "45322f01-d191-5612-850c-39a4f3160361", "proposal_id": "dc583401-af94-59b2-82d0-ab1df08a50ae", "description": "Coffee-Break 10h30", "quantity": 60, "price": 5, "vat_rate": 13, "position": 3}
+{"id": "2c10e3cd-1670-5eff-8101-92df34ae3ee3", "proposal_id": "dc583401-af94-59b2-82d0-ab1df08a50ae", "description": "Almoço (volante) 12h30 - 14h", "quantity": 60, "price": 16, "vat_rate": 13, "position": 4}
+{"id": "e0f51172-23c6-5f81-bcfc-e99531eb620c", "proposal_id": "dc583401-af94-59b2-82d0-ab1df08a50ae", "description": "Coffee-Break 15h30", "quantity": 60, "price": 5, "vat_rate": 13, "position": 5}
+{"id": "970b64a9-6cee-5e29-9112-21e5699fb0f4", "proposal_id": "7f426b3c-1643-561a-a3ba-d24ee14ee7a7", "description": "Comidas", "quantity": 65, "price": 20.5, "vat_rate": 13, "position": 0}
+{"id": "bd4c7efd-f737-58b2-9096-ddc94fad1025", "proposal_id": "7f426b3c-1643-561a-a3ba-d24ee14ee7a7", "description": "Bebidas não alcoólicas", "quantity": 65, "price": 2.5, "vat_rate": 13, "position": 1}
+{"id": "0e90fb5a-5a44-5eb6-8769-ef3cd3f01ea6", "proposal_id": "7f426b3c-1643-561a-a3ba-d24ee14ee7a7", "description": "Cerveja", "quantity": 180, "price": 0.6, "vat_rate": 23, "position": 2}
+{"id": "f6c7b85f-862f-54bd-963f-b805988a8ea8", "proposal_id": "84857927-92e7-5933-a15f-e7259b9b7508", "description": "Coffee-Break 10h30", "quantity": 80, "price": 7.5, "vat_rate": 13, "position": 0}
+{"id": "1500ff9a-a900-5bcb-9f3e-1e739db80560", "proposal_id": "84857927-92e7-5933-a15f-e7259b9b7508", "description": "Almoço (volante)", "quantity": 40, "price": 25, "vat_rate": 13, "position": 1}
+{"id": "4f25c3a6-827c-55bb-9015-791f1bcd57d9", "proposal_id": "84857927-92e7-5933-a15f-e7259b9b7508", "description": "Coffee-Break 16h", "quantity": 45, "price": 7.5, "vat_rate": 13, "position": 2}
+{"id": "837f17b7-63ef-5bad-9ac9-b685b1bf50b4", "proposal_id": "84857927-92e7-5933-a15f-e7259b9b7508", "description": "Serviço de entrega 9h", "quantity": 40, "price": 7, "vat_rate": 13, "position": 3}
+{"id": "2a489f89-6584-5ab9-b8cf-2ee6f43cc096", "proposal_id": "84857927-92e7-5933-a15f-e7259b9b7508", "description": "Serviço de entrega 14h", "quantity": 40, "price": 7, "vat_rate": 13, "position": 4}
+{"id": "95fb451e-b050-5de7-a9b8-89e2df117306", "proposal_id": "791d8e48-1283-5916-a6d1-6e48303750fa", "description": "Comidas e Bebidas não alcoólicas", "quantity": 60, "price": 18, "vat_rate": 13, "position": 0}
+{"id": "98298952-59a7-5d8f-b48c-f3296037a877", "proposal_id": "791d8e48-1283-5916-a6d1-6e48303750fa", "description": "Espumante", "quantity": 60, "price": 2, "vat_rate": 23, "position": 1}
+{"id": "04947fea-6f19-5622-9c79-232b48dbd93a", "proposal_id": "49945922-a132-559c-b8f2-7b6ae2cc8c3f", "description": "Coffee break pm", "quantity": 70, "price": 8, "vat_rate": 13, "position": 0}
+{"id": "2e0c3859-654b-5ed3-b6c1-0fda1d4dae99", "proposal_id": "21c72c98-016d-577d-a3fc-b5a0967fc8de", "description": "Almoço (volante)", "quantity": 15, "price": 20, "vat_rate": 13, "position": 0}
+{"id": "da51c3fc-b355-5103-af91-19519a7a939d", "proposal_id": "21c72c98-016d-577d-a3fc-b5a0967fc8de", "description": "Coffee-Break", "quantity": 35, "price": 6, "vat_rate": 13, "position": 1}
+{"id": "8237344f-23df-589d-aea5-21526089a06e", "proposal_id": "c9f067dc-b90a-5562-89a1-b420fab7cdb0", "description": "Almoço (volante)", "quantity": 15, "price": 20, "vat_rate": 13, "position": 0}
+{"id": "cfa3aab1-37fc-501c-9bc1-84ca00025e6e", "proposal_id": "c9f067dc-b90a-5562-89a1-b420fab7cdb0", "description": "Coffee-Break", "quantity": 35, "price": 6, "vat_rate": 13, "position": 1}
+{"id": "621e2a22-c86c-535f-ab75-74ba1516ec9b", "proposal_id": "03a95f18-3f61-5008-984d-2c909f204c2d", "description": "50€ x 35 pessoas", "quantity": 35, "price": 50, "vat_rate": 13, "position": 0}
+{"id": "0a0fb1e3-15bc-5915-887b-a82e48e486af", "proposal_id": "7f240125-7bb0-526a-bab3-52e1f50def9d", "description": "Serviço de Coffee break", "quantity": 30, "price": 7, "vat_rate": 13, "position": 0}
+{"id": "e1fff8dc-9d99-5c68-b207-af0779097780", "proposal_id": "7dd8c699-f98c-532d-87d8-8919e9dc8e7c", "description": "Comidas", "quantity": 12, "price": 20, "vat_rate": 13, "position": 0}
+{"id": "c9bacabe-ed7b-51a7-b129-ac569f4290e2", "proposal_id": "5e9cc7cf-1e0b-5f34-af6b-c7a6651c5f9d", "description": "Jantar", "quantity": 45, "price": 27, "vat_rate": 13, "position": 0}
+{"id": "353cb1a6-e01f-5f5c-a5d5-37cf87f15183", "proposal_id": "4c521731-d66a-56ae-9099-b4d22334c18c", "description": "Bebidas não alcoólicas", "quantity": 50, "price": 4, "vat_rate": 13, "position": 0}
+{"id": "fedb2458-184f-5089-a5f8-fc11303fae3d", "proposal_id": "4c521731-d66a-56ae-9099-b4d22334c18c", "description": "Espumante", "quantity": 50, "price": 2.5, "vat_rate": 23, "position": 1}
+{"id": "b3439d1b-0b3c-56af-b0c4-589bf4bc9a6a", "proposal_id": "f87047a8-6abd-5fc9-8bd9-7e539985325e", "description": "Almoço", "quantity": 140, "price": 22, "vat_rate": 13, "position": 0}
+{"id": "99038139-15f0-5508-8139-2626ab1b3fc9", "proposal_id": "6ac8671f-e1fa-5177-88f9-94dcb47a327c", "description": "Almoço", "quantity": 30, "price": 13, "vat_rate": 13, "position": 0}
+{"id": "46247e2c-1357-5478-bb27-8bb4503d878a", "proposal_id": "c937c14c-4988-5231-a521-4d75da2ffed1", "description": "Coffee breaks", "quantity": 50, "price": 7, "vat_rate": 13, "position": 0}
+{"id": "7687ce20-d756-5128-9213-430126ddfc44", "proposal_id": "c937c14c-4988-5231-a521-4d75da2ffed1", "description": "Almoço", "quantity": 50, "price": 18, "vat_rate": 13, "position": 1}
+{"id": "cce72171-da9e-5fe6-94da-56ace973edd2", "proposal_id": "cdac028d-2534-513d-a303-f8c222a9510f", "description": "Coffee-Break 10h30", "quantity": 50, "price": 8, "vat_rate": 13, "position": 0}
+{"id": "43d267a1-232c-5bc6-bb90-2398edce6764", "proposal_id": "cdac028d-2534-513d-a303-f8c222a9510f", "description": "Coffee-Break 15h30", "quantity": 50, "price": 8, "vat_rate": 13, "position": 1}
+{"id": "1d13482c-089b-5cbf-894e-7d30066d00c0", "proposal_id": "f14b115d-4e8b-54d6-b265-4cff8cefde4c", "description": null, "quantity": 20, "price": 27.5, "vat_rate": 13, "position": 0}
+{"id": "ea978b00-c1c4-5afe-995d-6a62d2e5d3b3", "proposal_id": "58e4f7a1-1892-5143-925d-d63616befcf3", "description": "Comidas", "quantity": 100, "price": 14, "vat_rate": 13, "position": 0}
+{"id": "fda3a074-aef9-53b3-b2f3-59a1f9a1da06", "proposal_id": "58e4f7a1-1892-5143-925d-d63616befcf3", "description": "Bebidas", "quantity": 100, "price": 2.5, "vat_rate": 23, "position": 1}
+{"id": "4d8ff360-9b4a-5e06-b44a-310ac4f7f3a1", "proposal_id": "e6b158e9-a1a5-5f09-bf67-0d8389064384", "description": null, "quantity": 90, "price": 8.3, "vat_rate": 13, "position": 0}
+{"id": "fc9a2002-b32b-5612-b027-3e34ec4c9147", "proposal_id": "31d0fae5-cf52-53b3-9ba5-abbd2d9e6d90", "description": null, "quantity": 20, "price": 20, "vat_rate": 13, "position": 0}
+{"id": "9694a986-90d3-5acf-9d29-b50ea3328078", "proposal_id": "62126521-7433-5519-b58f-2c1337f98dea", "description": "Comidas", "quantity": 13, "price": 26, "vat_rate": 13, "position": 0}
+{"id": "30c1e15f-9eca-5bae-bc90-9aeb7ffeab6e", "proposal_id": "cb29e5b7-5339-5997-b926-96533decc6f4", "description": "Comidas", "quantity": 100, "price": 14, "vat_rate": 13, "position": 0}
+{"id": "317b1660-6559-581b-a60b-cf2eccb7b78b", "proposal_id": "cb29e5b7-5339-5997-b926-96533decc6f4", "description": "Bebidas", "quantity": 100, "price": 2, "vat_rate": 23, "position": 1}
+{"id": "7ac3cd06-2be9-5a04-98d1-e4063189f08b", "proposal_id": "59fd63b6-71d5-560e-a701-a97efb84c857", "description": "Coffee break pm", "quantity": 60, "price": 13.5, "vat_rate": 13, "position": 0}
+{"id": "214e3470-c759-5cc9-a310-be820d904405", "proposal_id": "62fbb7b7-2f47-5e6a-bda5-c56be6ef46bb", "description": "Comidas e bebidas não alcoólicas", "quantity": 50, "price": 25, "vat_rate": 13, "position": 0}
+{"id": "68925b3c-aed5-55b2-b493-aa1d9d726885", "proposal_id": "62fbb7b7-2f47-5e6a-bda5-c56be6ef46bb", "description": "Bebidas alcoólicas", "quantity": 50, "price": 1, "vat_rate": 23, "position": 1}
+{"id": "6391c7ba-e858-5988-8c44-9158010d27e8", "proposal_id": "a54b6d73-ba11-5001-ad14-f6c5a3e76cf7", "description": null, "quantity": 40, "price": 25, "vat_rate": 13, "position": 0}
+{"id": "f2d171d3-c5f9-52e2-927f-4c87908dd26c", "proposal_id": "3ed4402b-1fa4-58a4-8c6c-1b943d079b38", "description": "Comidas", "quantity": 100, "price": 10, "vat_rate": 13, "position": 0}
+{"id": "b9cb4a90-88e8-520a-b4a9-3d224fd52cb8", "proposal_id": "3ed4402b-1fa4-58a4-8c6c-1b943d079b38", "description": "Bebidas", "quantity": 100, "price": 2.5, "vat_rate": 23, "position": 1}
+{"id": "73b5365b-f30f-511b-b469-e40bab52768b", "proposal_id": "49094a22-d34c-58ce-97f5-357f025b1b17", "description": "Almoço", "quantity": 140, "price": 15.5, "vat_rate": 13, "position": 0}
+{"id": "d39a718c-e59a-536a-ab9a-21b509c86a00", "proposal_id": "4c3d7b1f-8c30-56c5-b18a-d31ebd986ba1", "description": "Comidas", "quantity": 100, "price": 16.5, "vat_rate": 13, "position": 0}
+{"id": "c258aaa3-e3a4-56b6-89c8-67f6399f8b6b", "proposal_id": "4c3d7b1f-8c30-56c5-b18a-d31ebd986ba1", "description": "Bebidas", "quantity": 100, "price": 2.5, "vat_rate": 23, "position": 1}
+{"id": "b8eeaa99-c3e0-595f-85d3-3fdf923ddd54", "proposal_id": "ace5f777-9e02-5ff3-a1aa-21474e5e4e00", "description": "Lunch box 8€ x 15 = 120€ x 10 dias = 1200€", "quantity": 15, "price": 8, "vat_rate": 13, "position": 0}
+{"id": "7f2ed694-f3c4-54d4-8ec9-2eba2b8c46a1", "proposal_id": "992d35c9-294d-5970-91b1-819c83a2aa74", "description": "Comidas", "quantity": 60, "price": 18, "vat_rate": 13, "position": 0}
+{"id": "fde26f05-e047-5668-8c69-db9cf58f8a91", "proposal_id": "992d35c9-294d-5970-91b1-819c83a2aa74", "description": "Bebidas não alcoólicas", "quantity": 60, "price": 2.5, "vat_rate": 13, "position": 1}
+{"id": "85dd1239-35d2-58b3-8375-69785457a7ae", "proposal_id": "992d35c9-294d-5970-91b1-819c83a2aa74", "description": "Cerveja", "quantity": 180, "price": 0.6, "vat_rate": 23, "position": 2}
+{"id": "fd371d61-3352-565f-bf59-b0348c3d57a0", "proposal_id": "8fa59e81-5a20-51ba-b595-ebc6ac3615ad", "description": "Coffee break pm", "quantity": 70, "price": 7, "vat_rate": 13, "position": 0}
+{"id": "6e00e7ed-73a1-5fb8-849d-5e778085c09f", "proposal_id": "a5e38973-5d3a-55b9-9b2a-d61563c1b0b7", "description": "Almoço", "quantity": 100, "price": 16.5, "vat_rate": 13, "position": 0}
+{"id": "24f6a4b6-6f0e-5f92-9ad9-4a8664a42027", "proposal_id": "f58d9afc-2ff6-5136-9c99-6f9ee270c894", "description": "Almoço", "quantity": 80, "price": 20, "vat_rate": 13, "position": 0}

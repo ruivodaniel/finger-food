@@ -1,0 +1,57 @@
+{
+  "quote_id": "q:bef08f09-7c0c-46d8-89c7-09e1d7142046",
+  "client": "Sofia Maroto",
+  "client_source": "file_name",
+  "event_dates": [{"day": 18, "month": 1, "year": 2026, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": null,
+      "service_type": "other",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Tabuas de Queijos decoradas c/ frutos secos", "quantity": 2},
+          {"text": "Tarte de Chévre c/ molho Pesto", "quantity": 1},
+          {"text": "Tabuas de enchidos decoradas c/ azeitonas", "quantity": 2},
+          {"text": "Bifanas á moda do Porto", "quantity": 50},
+          {"text": "Bolinhos de Bacalhau", "quantity": 30},
+          {"text": "Croquetes de Vitela", "quantity": 30},
+          {"text": "Croissants c/ Queijo", "quantity": 20},
+          {"text": "Croissants c/ Fiambre", "quantity": 20}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Variedade de Brigadeiros", "quantity": 40},
+          {"text": "Pasteis de Nata", "quantity": 40},
+          {"text": "Trilogia no copo", "quantity": 40},
+          {"text": "Bolo de Aniversário Creme de Ovos ou Brigadeiro", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água engarrafada", "quantity": 10},
+          {"text": "Água aromatizada – 1 jarro", "quantity": 1},
+          {"text": "Sumos de Laranja natural (exprimido na hora, servido em flutes)", "quantity": null},
+          {"text": "Cerveja Mini", "quantity": 60},
+          {"text": "Espumante", "quantity": 10}
+        ]}
+      ],
+      "prices": [
+        {"label": "Comidas", "unit_price": 20, "quantity": 40, "line_total": 800, "vat_rate": 13},
+        {"label": "Bebidas", "unit_price": 5, "quantity": 40, "line_total": 200, "vat_rate": 23}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 1150,
+  "total_includes_vat": true,
+  "staff_mentioned": "dois funcionários",
+  "notes": [
+    "Nos serviços apresentados não serão utilizados materiais plásticos, demonstrando assim a nossa consciência ambiental.",
+    "Para os serviços apresentados disponibilizo atoalhados e todo o material necessário ao serviço, assim como dois funcionários para fazerem toda a montagem, serviço, desmontagem e limpeza.",
+    "Acompanhadas c/ variedade de tostas e broa"
+  ],
+  "uncertain": [
+    "Client and event date come from the file name; the text has neither.",
+    "The text gives no guest count; the price lines use 40 units."
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "quote_id": "q:1d1ecb88-7360-47c8-8288-e63305634439",
+  "client": "Paulo Barroca",
+  "client_source": "file_name",
+  "event_dates": [],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Serviço 17h – 18h · Serviço para 500 pessoas",
+      "service_type": "other",
+      "guests": 500,
+      "guests_raw": "Serviço para 500 pessoas",
+      "menu_lines": [
+        {"segment": "drink", "items": [
+          {"text": "Espumante Baga Primavera", "quantity": 50}
+        ]},
+        {"segment": "other", "items": [
+          {"text": "Flutes de acrílico", "quantity": 500},
+          {"text": "Ovos moles", "quantity": 500}
+        ]}
+      ],
+      "prices": [
+        {"label": "Espumante Baga Primavera", "unit_price": 10, "quantity": 50, "line_total": 500, "vat_rate": null},
+        {"label": "Flutes de acrílico", "unit_price": 0.45, "quantity": 500, "line_total": 225, "vat_rate": null},
+        {"label": "Ovos moles", "unit_price": 0.55, "quantity": 500, "line_total": 275, "vat_rate": null},
+        {"label": "Deslocação", "unit_price": null, "quantity": null, "line_total": 380, "vat_rate": null},
+        {"label": "Mão de obra", "unit_price": 90, "quantity": null, "line_total": 90, "vat_rate": null}
+      ]
+    },
+    {
+      "name_as_written": "Serviço 17h – 18h · Serviço para 1000 pessoas",
+      "service_type": "other",
+      "guests": 1000,
+      "guests_raw": "Serviço para 1000 pessoas",
+      "menu_lines": [
+        {"segment": "drink", "items": [
+          {"text": "Espumante Baga Primavera", "quantity": 100}
+        ]},
+        {"segment": "other", "items": [
+          {"text": "Flutes de acrílico", "quantity": 1000},
+          {"text": "Ovos moles", "quantity": 1000}
+        ]}
+      ],
+      "prices": [
+        {"label": "Espumante Baga Primavera", "unit_price": 10, "quantity": 100, "line_total": 1000, "vat_rate": null},
+        {"label": "Flutes de acrílico", "unit_price": 0.45, "quantity": 1000, "line_total": 450, "vat_rate": null},
+        {"label": "Ovos moles", "unit_price": 0.55, "quantity": 1000, "line_total": 550, "vat_rate": null},
+        {"label": "Deslocação", "unit_price": null, "quantity": null, "line_total": 380, "vat_rate": null},
+        {"label": "Mão de obra", "unit_price": 90, "quantity": 2, "line_total": 180, "vat_rate": null}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": null,
+  "total_includes_vat": false,
+  "staff_mentioned": null,
+  "notes": [
+    "Sub total = 1470€ (500 pessoas), acresce IVA à taxa legal em vigor.",
+    "Sub total = 2560€ (1000 pessoas), acresce IVA à taxa legal em vigor.",
+    "Para este serviço está contemplado: uma mesa com toalha branca para dispor as bandejas com os ovos moles, copos e frapês para o espumante."
+  ],
+  "uncertain": [
+    "O orçamento tem duas opções (500 e 1000 pessoas) e não tem total final.",
+    "Sem data nem local no texto; 'Santarem' só aparece no nome do ficheiro e não foi usado como local.",
+    "Os valores de Mão de obra e Deslocação não têm taxa de IVA escrita por linha."
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "quote_id": "q:a53e2610-e886-4762-a9c2-65c503116805",
+  "client": "Silvina",
+  "client_source": "file_name",
+  "event_dates": [
+    {"day": 5, "month": 12, "year": null, "source": "file_name"}
+  ],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Miniaturas Salgadas e Grazing",
+      "service_type": "other",
+      "guests": 150,
+      "guests_raw": "13.50€ x 150 = 2025€",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Bolinhos de Bacalhau", "quantity": null},
+          {"text": "Vol au vents de Patê do mar", "quantity": null},
+          {"text": "Wraps de Salmão fumado c/ queijo rúcula e tangerina", "quantity": null},
+          {"text": "Tabua de Enchidos", "quantity": null},
+          {"text": "Croquetes de novilho c/ azeitona", "quantity": null},
+          {"text": "Croissants c/ fiambre", "quantity": null},
+          {"text": "Folhados mistos", "quantity": null},
+          {"text": "Tabua de Queijos", "quantity": null},
+          {"text": "Espetada de mozarela c/ cherry e manjericão", "quantity": null},
+          {"text": "Vol au vents de guacamole c/ azeitona", "quantity": null},
+          {"text": "Croissants c/ Queijo", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Bownie c/ Nozes e Caramelo salgado", "quantity": null},
+          {"text": "Bolo Rei", "quantity": null},
+          {"text": "Rabanadas c/ ovos moles ou vinho do porto", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Espetadas de Fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Mesa de bebidas", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas Hortelã, Frutos vermelhos, Laranja e gengibre", "quantity": null},
+          {"text": "Espumante (á descrição)", "quantity": null},
+          {"text": "Água garrafas de vidro 1Lt", "quantity": null},
+          {"text": "Café e descafeinado (cápsulas)", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Comidas e Bebidas não alcoólicas", "unit_price": 13.5, "quantity": 150, "line_total": 2025, "vat_rate": 13},
+        {"label": "Bebidas alcoólicas", "unit_price": 1.5, "quantity": 150, "line_total": 225, "vat_rate": 23}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 2565,
+  "total_includes_vat": true,
+  "staff_mentioned": "4 funcionários que iram dispor as mesas em buffet para servir",
+  "notes": [
+    "Sub-Total = 2288.25€ (comidas e bebidas não alcoólicas, IVA 13%).",
+    "Sub-Total = 276.75€ (bebidas alcoólicas, IVA 23%).",
+    "Todo o serviço é realizado com loiças e toalhas de pano."
+  ],
+  "uncertain": [
+    "O nome do ficheiro diz 'Lanche 15€'; o texto diz 13.50€ por pessoa e não diz 'lanche'.",
+    "Os grupos Peixe, Carne e Vegetariano são subcabeçalhos das miniaturas salgadas e não foram registados como linhas separadas.",
+    "Espetadas de Fruta aparece no topo da página 2 sem cabeçalho; ficou como dessert.",
+    "Data 5 de Dezembro só no nome do ficheiro."
+  ]
+}

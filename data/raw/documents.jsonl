@@ -245,468 +245,468 @@
 {"upload_id": "4c6e4438-4b6b-4985-803f-2fe2c641eba2", "name": "Fatura do serviço 17 de Abril Ana Neves.pdf", "kind": "invoice", "status": "ok", "issue": null}
 {"upload_id": "794bc0df-6c0e-47ae-b3e3-d6d6e6946aad", "name": "fatura do serviço Wellcome Coffee Conceição C..pdf", "kind": "invoice", "status": "ok", "issue": null}
 {"upload_id": "585ecaa9-0304-47f2-a82a-8f3a66e65d23", "name": "Situação Fiscal Integrada CAE.pdf", "kind": "other", "status": "skipped", "issue": "no invoice header"}
-{"upload_id": "f88724cd-94c7-4026-b924-f85c752fdddb", "name": "Orçamento Bling Tânia Baptista 17 de Junho 25.379€.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "7d1b4e76-1fdc-416b-be03-2b6a204f6ca1", "name": "Orçamento 29 de Abril 2026 CS Wind.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "333fd3d1-e6ed-4c35-a428-8c914fc5b581", "name": "Lunch Box 10 e 15€.pdf", "kind": "quote", "status": "issue", "issue": "no total"}
-{"upload_id": "8d451b61-daf0-432c-8c77-16f2a47e072f", "name": "Orçamento Fabridoce  (Porco Espeto).pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "e001b84f-d831-4775-ab46-a15deddb39a9", "name": "Orçamento 26 de Setembro Orbis.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "effa0b3a-aaa9-4733-8764-76ec6d99c421", "name": "Orçamento para AD Air Centre Lunch Box.pdf", "kind": "quote", "status": "issue", "issue": "no total"}
-{"upload_id": "2b20575c-4859-4529-a718-e69b8f3dfea0", "name": "Orçamento 13 de Junho 2026 Madalena Ferreira só espumante.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "90e00089-76a5-499b-8c6e-4400c259263b", "name": "Orçamento 22 de Abril Pedro Oliveira 30 pax.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "2e4df04f-1042-40b6-a430-dc4378684429", "name": "Orçamento 21 de Abril Enrikson 50 pax.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "10d7d024-d705-4e2f-9e04-54f18a0ceeba", "name": "Orçamento Inês Direito17 e 18 Junho Cb + Almoço +Cb.docx", "kind": "quote", "status": "issue", "issue": "no guests"}
-{"upload_id": "c3302f66-ef2b-4af5-a22f-ae98cd6f787d", "name": "Orçamento Bling Tânia Baptista 17 de Junho 65 pax.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "3b3f4315-6bb9-4420-b588-cc889217a62a", "name": "Orçamento Bling Tânia Baptista 17 de Junho 25.379€.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "4f31835c-98c5-4c5b-8612-6ba78e77d1c5", "name": "Orçamento Raquel Barrocas.docx", "kind": "quote", "status": "issue", "issue": "no date"}
-{"upload_id": "0a139db7-372c-4841-8b6e-a09fafbedd07", "name": "Orçamento Leonor Gonçalves 26 e 27 Junho Cb.docx", "kind": "quote", "status": "issue", "issue": "no guests"}
-{"upload_id": "ea092034-2f0b-43fe-a2cd-f1395f09827c", "name": "Orçamento Inês Pinheiro  30 de Maio  Almoço+Cb 80pax.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "209e6c88-a48e-4383-ab5a-900521f67324", "name": "Orçamento 7 a 9 de Setembro Cb + Almoços Margarida Pereira.docx", "kind": "quote", "status": "issue", "issue": "no total, no guests"}
-{"upload_id": "9d2aca46-9e43-46c1-b37c-31ed87b12a0d", "name": "Orçamento Isabel Teixeira.docx", "kind": "quote", "status": "issue", "issue": "no date"}
-{"upload_id": "b79090dc-5b46-4afa-b7e9-1b7f3e0942ee", "name": "Orçamento 26 Março Isabel César Cb Médio UA.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "f0d23119-8e86-42b2-ad98-a338851f7e22", "name": "Orçamento 18 de Abril Pedro Marto.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "cf5d91b1-6463-48ce-84b1-69016b4dc074", "name": "Orçamento 25 de Abril 2026 Madalena Ferreira.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "615891b5-f77d-4d7c-a018-550da3ecfbd0", "name": "Orçamento Maria Judite Mendes 9 Agosto 60 pax.pdf", "kind": "quote", "status": "issue", "issue": "no total"}
-{"upload_id": "b5907a6d-0093-4aae-8d77-c6967ff1fd1a", "name": "Orçamento 9 e 10 de Abril FFonseca Inês Vergas.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "d20d1e4b-576c-4aeb-94ec-e426d23fb128", "name": "Orçamento 19 e 20 de Março Rita S. Freitas CMA Final.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "e086609c-a9cb-4de3-ae87-22b84b703810", "name": "Orçamento Leonor Gonçalves 26 e 27 Junho Cb 5.50€.docx", "kind": "quote", "status": "issue", "issue": "no guests"}
-{"upload_id": "f05fcb3b-1ffc-40ea-b650-2aad9e4b076d", "name": "Orçamento Humberto Remax Inauguração.docx", "kind": "quote", "status": "issue", "issue": "no date"}
-{"upload_id": "b97ae067-2963-4aa8-8be1-6aed45c794a1", "name": "Orçamento Conceição carvalho Junho e Julho.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "1c753744-e050-4e82-a7ec-c1725fa993e8", "name": "Orçamento Inês Pinheiro  30 de Maio  Almoço.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "d7ea5a76-fd3f-4a60-a02f-8fd15ca8ec85", "name": "Orçamento Francisca Ferreira 14 de Março  Almoço+Cb Reduzido.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "c3b569f9-38b0-4265-88cf-1e3a2065568e", "name": "Orçamento Daniela Oliveira  4 Julho final.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "d87f8c96-2b05-442a-bb8d-77bb4cae204b", "name": "Orçamento Silvina 5 de Dezembro Jantar 27.50€.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "b463b863-b36c-4d05-a173-14e5d43434ad", "name": "Orçamento Fabridoce  (Porco, Cerveja e Sangria).docx", "kind": "quote", "status": "issue", "issue": "no date"}
-{"upload_id": "63c4c593-ea2b-462f-848b-183ec1276815", "name": "Orçamento Fevereiro 2026 Res Argentea.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "af06f9bd-f481-437e-ae03-c7694747d626", "name": "Orçamento Ana Pereira 23 de Maio.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "c817a4b1-a1cd-49ca-94ad-4ead0065472c", "name": "Orçamento Inês Direito 19 Junho Cb am 60 pax.docx", "kind": "quote", "status": "issue", "issue": "no guests"}
-{"upload_id": "62884639-81f6-419e-a8b4-8cd6730ed6ca", "name": "Orçamento Maythe quantidades.docx", "kind": "quote", "status": "issue", "issue": "no date, no total, no guests"}
-{"upload_id": "76087b95-41cf-4dfe-8ea2-aada1cfb8c55", "name": "Orçamento Load Cb - 6.60€ + Almoço - 17€   75 pax.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "5502d510-bcfb-438a-bf80-f5088001af78", "name": "Orçamento Silvina 5 de Dezembro Jantar 27.50€.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "9bb07e5d-92b6-4ef4-ad63-cad551d6c89c", "name": "Orçamento 18 Janeiro 2026 Sofia Marto.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "9a1012d7-ea42-444f-b525-e6ef391620f5", "name": "Orçamento 5, 6 e 7 Março Dra. Sofia Moreira.pdf", "kind": "quote", "status": "issue", "issue": "no guests"}
-{"upload_id": "38d6981b-d2d8-4045-9f62-43926507376a", "name": "Orçamento 31 de Março Carisa Martins InovaRia Almoço 20 pax-20€.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "3c30cdcf-e6bf-432d-868d-74d305da2bb7", "name": "Cb Anabela Anjos 15 de Maio.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "55ff616b-ea56-49ba-ad27-f14002b913a3", "name": "Orçamento Paulo Pereira  Almoço 8€.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "94340aab-9813-4449-a412-fef276d0676a", "name": "Orçamento Daniela Oliveira 5 de Julho.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "8b3b0db5-ae2d-447d-82de-ebb743a159ef", "name": "Orçamento Patricia Lito 22 Abril 250 Pax.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "d502f4cd-bf3a-43dc-8a03-930937858d8d", "name": "Orçamento 13 de Junho 2026 Madalena Ferreira Pedido 2.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "db3fbae8-25bd-4b41-8188-5422d5db89d7", "name": "Orçamento Maria Teresa Herdeiro.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "67bfa38d-65be-49e9-96b7-8f5b1ce2429d", "name": "Orçamento Catia Monteiro 24 de Outubro.pdf", "kind": "quote", "status": "issue", "issue": "no guests"}
-{"upload_id": "2f3d857a-4152-4105-b625-22d1301db027", "name": "Orçamento Dra Elsa 28 de Outubro Almoço +Cb.docx", "kind": "quote", "status": "issue", "issue": "no guests"}
-{"upload_id": "69f05e95-18f8-4465-a8aa-20f500c29162", "name": "Orçamento 3 e 4 de Setembro Cb am e pm Sonia Nunes.docx", "kind": "quote", "status": "issue", "issue": "no total, no guests"}
-{"upload_id": "be842f96-a37b-4928-9e40-657ca0c52655", "name": "Orçamento Sofia Andrade Ajustado.docx", "kind": "quote", "status": "issue", "issue": "no date"}
-{"upload_id": "47a412b4-9a95-4326-9bcc-3b5d2b2e8a46", "name": "Orçamento 13 de Junho Mike Almoço e Jantar 8€.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "b6144dd2-a6ba-4f3b-ba57-2d63bfa1f7a6", "name": "Orçamento Joao Amorim Cb am e Cb pm.docx", "kind": "quote", "status": "issue", "issue": "no date"}
-{"upload_id": "ad60b92f-6196-4074-8b03-43c93e11cf1d", "name": "Orçamento Fanny SEAC 14,15,16 Outubro.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "87ca96b0-8a0d-40dc-847b-3ea562c39be6", "name": "Orçamento 22 de Abril Monica Aresta 14 pax.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "f8050de5-2e78-4833-b094-11b615ff3562", "name": "Orçamento 30 de Outubro Rita Serrano.docx", "kind": "quote", "status": "issue", "issue": "no total, no guests"}
-{"upload_id": "467bca5d-fea7-4a7a-acff-2044e7da2507", "name": "Orçamento 26 de Setembro Orbis.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "1d285e4f-2259-48f3-a47c-396cfa805bbd", "name": "Orçamento Amara N Zero 22 Outubro.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "958487be-2da7-49bf-b1e6-f98788acbb5b", "name": "Orçamento Joao Amorim Cb am e Cb pm.pdf", "kind": "quote", "status": "issue", "issue": "no date"}
-{"upload_id": "0317f634-89c0-4e6e-a041-0eb3b6187615", "name": "Orçamento 27 de Março Ines Costa Sky.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "70ce900a-4541-467c-a57e-8d91208454d9", "name": "Orçamento Maria Teresa Herdeiro 7 CB.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "9aea5490-5a6f-4b47-b23c-b3abaff3d89e", "name": "Orçamento 1 de Agosto Monica Santos Almoço 40 pax.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "70824660-04fc-4893-9cb4-6322a0a54402", "name": "Orçamento 28 de Maio Ines Santos Palbit.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "4a26f45a-16e2-43c9-870f-99d7b6d72dd4", "name": "Orçamento 30 de Junho 2026 CS Wind.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "bff73c83-ac19-4da2-ba5d-7cfac998d658", "name": "Orçamento Paulo Barroca Santarem.pdf", "kind": "quote", "status": "issue", "issue": "no total"}
-{"upload_id": "7d9fcc8a-e661-49b1-941d-bfc2245166af", "name": "Orçamento 13 de Junho Mike Almoço e Jantar 8€ - 180 PAX.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "41ec9714-fe05-4354-8b83-ec4500afd01c", "name": "Orçamento 31 de Março Carisa Martins InovaRia Almoço 20 pax-20€.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "6ecba42a-ad62-41fe-a803-a369fc60f111", "name": "Orçamento 10 de  Outubro Corrida AAUAv.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "579b5961-6083-4edb-a8ef-5542aaaa4497", "name": "Orçamento 22 de Abril Pedro Oliveira 30 pax.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "665c61ab-e6e2-4167-aa4c-9d9e03ee335b", "name": "Orçamento 5 e 11 de Março  Living Tours Carolina.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "ff05ce15-6415-4073-8dc5-8a06d215566c", "name": "Orçamento 11 de Dezembro Carolina Batista.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "d6998f8e-4c01-46af-8161-aa7d9906e81f", "name": "Orçamento Inês Pinheiro  30 de Maio  Almoço+Cb.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "046b69bf-83b4-440c-935d-178a67c3dce2", "name": "Orçamento Sandra Silva 31 Outubro.pdf", "kind": "quote", "status": "issue", "issue": "no total, no guests"}
-{"upload_id": "efb775e1-b3cb-4c29-82be-c93e80bbdfe0", "name": "Orçamento 21 de Fevereiro 26 CS Wind.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "19288e19-67b7-49ef-b6db-2b59a61ae80d", "name": "Orçamento Rosa Andias 19 Julho.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "dd5442ad-12b4-4629-b0aa-41988acf335f", "name": "Orçamento 31 de Outubro Tatiana Cb.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "4e2b7dba-5a0f-4242-aca4-32dca88899fd", "name": "Orçamento Ana Sofia Teixeita 21 de Novembro Almoço.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "1e3c8e98-5a31-4d40-93d1-98e8b71c8bed", "name": "Orçamento Daniela Oliveira  4 Julho final.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "77b737a2-2b59-4823-8dcf-8487ce30a7ea", "name": "Orçamento Sonia Nunes 9-10-11 Setembro Cb + Almoço +Cb.pdf", "kind": "quote", "status": "issue", "issue": "no guests"}
-{"upload_id": "355ede81-70e7-46fb-8fb6-472db5b8a5e1", "name": "Orçamento Humberto Remax Inauguração 10 de Julho.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "c256b435-6656-4bc3-a0b1-af0c0e001c2d", "name": "Orçamento Mariana Rodrigues 23 e 24 de Outubro.pdf", "kind": "quote", "status": "issue", "issue": "no total, no guests"}
-{"upload_id": "fc4d8b38-4ba3-4f34-8462-0ade3c731aa1", "name": "Orçamento 17 de Março SKY Inês Costa.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "6b07688b-1e78-46b0-b413-b0a22cbc2cd9", "name": "Orçamento Load Cb - 6.60€ + Almoço - 17€   75 pax.docx", "kind": "quote", "status": "issue", "issue": "no date"}
-{"upload_id": "327d38fd-7f24-4698-a128-132ef7c1d6c0", "name": "Orçamento 9 e 10 de Abril Inês Carvalho.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "aaae2900-492b-46d1-aba7-7f534c90248a", "name": "Orçamento Patricia Lito 22 Abril 250 Pax 8.30€.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "03c2aed0-8a9a-468d-a8b6-88cc3c7e420d", "name": "Orçamento 26 Março Isabel César Cb Médio.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "95de9fd6-8a79-472f-9218-1ff17e7702f5", "name": "Orçamento Fabridoce  (Porco Espeto).docx", "kind": "quote", "status": "issue", "issue": "no date"}
-{"upload_id": "9182d5b7-bc0d-4fb5-9c50-f95e1f5d452d", "name": "Orçamento Estudio PT Pedro.docx", "kind": "quote", "status": "issue", "issue": "no date, no total"}
-{"upload_id": "b0eac091-a169-4f3d-b636-72828e573350", "name": "Orçamento Conceição carvalho Junho e Julho.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "e266a540-4106-4557-b095-05ae50c5e67e", "name": "Orçamento 21 de Abril Enrikson 50 pax.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "8a0b94de-4535-4e63-b431-040a30de0d2f", "name": "Mix menus ( a defenir) Load.pdf", "kind": "quote", "status": "issue", "issue": "no total"}
-{"upload_id": "b5ba2947-e56b-44b7-86a7-5b4ab4a42231", "name": "Orçamento 9 e 10 de Abril Joana Inês Carvalho 24 pax.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "3071bad6-6869-457e-8dc2-50c19b6c4c63", "name": "Orçamento 5 de Maio Pedro Oliveira.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "bf17ea71-bd2e-4594-9122-dd6777a2836f", "name": "Mix menus aberto a negociação.docx", "kind": "quote", "status": "issue", "issue": "no date, no total, no guests"}
-{"upload_id": "d1b4e47f-fca4-4541-8b86-2ad073b30693", "name": "Orçamento 17 de Abril Ana Neves 22 pax.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "3a8c8f17-ec1b-4d88-a097-c204606a16e5", "name": "Orçamento Sandra Silva 31 Outubro.docx", "kind": "quote", "status": "issue", "issue": "no total, no guests"}
-{"upload_id": "b99fa1db-dadd-4079-afcb-eb04996b2d7d", "name": "Orçamento Mariana Rapozo 5 cb 4 almoços.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "098eac83-80a1-4449-98cf-ca82f65c6924", "name": "Orçamento Francisca Ferreira 28 de Fev  Almoço+Cb Reduzido.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "b116fde1-e97d-4553-a188-fa8414f4c2a5", "name": "Orçamento 17 Janeiro 2026 Manuela Marques.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "7cd7fa79-1fe8-42ec-a440-3a82a21996c2", "name": "Orçamento Inês Pinheiro  30 de Maio  Almoço+Cb.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "8da673d4-836c-4d3c-b40c-22641a08fed4", "name": "Orçamento Dra Elsa 28 de Outubro Almoço +Cb (Vasco).pdf", "kind": "quote", "status": "issue", "issue": "no guests"}
-{"upload_id": "11492e21-b958-444e-8011-d9ebfa679e2b", "name": "Cb Anabela Anjos 15 de Maio.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "e9b3a890-2de8-43bd-87a1-833d45d4c6b8", "name": "Lunch Box 8€.docx", "kind": "quote", "status": "issue", "issue": "no date"}
-{"upload_id": "227119ab-473a-4c35-90f6-47ceea6f6355", "name": "Orçamento 25 de Abril 2026 Madalena Ferreira 10.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "b9ba20af-29b3-4e52-954a-5599bda98194", "name": "Orçamento Rita Marques 27-7-26 c serviço e s serviço.pdf", "kind": "quote", "status": "issue", "issue": "no guests"}
-{"upload_id": "bbbe49c1-c05c-4566-8529-f917ed518ab8", "name": "Orçamento Quinta das Azenhas 2 cb + almoço.pdf", "kind": "quote", "status": "issue", "issue": "no date, no total"}
-{"upload_id": "10fdcc7a-c105-4644-95c1-2dd5a081efaf", "name": "Orçamento 30€ Aveiro com Paixão Sandra.pdf", "kind": "quote", "status": "issue", "issue": "no date"}
-{"upload_id": "865a5407-c718-47bd-922c-5a16e6133474", "name": "Orçamento Daniela Oliveira 12€ Final.docx", "kind": "quote", "status": "issue", "issue": "no date"}
-{"upload_id": "21f67770-527e-45b3-9e70-1dfe15f6fb8e", "name": "Orçamento 23 de Maio Municipio de Ilhavo Cb+Almoço+Cb.docx", "kind": "quote", "status": "issue", "issue": "no guests"}
-{"upload_id": "4719f879-df29-4711-a48a-af32342bca5f", "name": "Orçamento Rita CMA.docx", "kind": "quote", "status": "issue", "issue": "no date"}
-{"upload_id": "4e71b230-3e00-4b3a-9ed4-86d52c5f8011", "name": "Orçamento Fabridoce  (Porco, Cerveja e Sangria).pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "794663f1-e77e-4b54-976b-096aa9d5feb1", "name": "Orçamento Daniela Oliveira 5 de Julho 65.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "e0909981-359f-4d5c-844f-82b917b4b4fe", "name": "Orçamento 22 de Julho Ines Santos Palbit 70 pax 8€.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "b135ec24-5747-4016-bb9b-1df37397f6d8", "name": "Orçamento Paula ferreira 16 de Julho.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "9cd24b6d-b4ba-415e-a7e2-34c03a976858", "name": "Orçamento 13 de Junho 2026 Madalena Ferreira 1751.50.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "cfd04752-9b3a-45e1-82e3-a86a57848b83", "name": "Orçamento 27 Outubrobro Cb + Almoço Daniela Pedro.docx", "kind": "quote", "status": "issue", "issue": "no date"}
-{"upload_id": "aecc7fc5-fe95-4509-996a-204d6ea31bc6", "name": "Orçamento 23 de Maio Isabel Arribas.docx", "kind": "quote", "status": "issue", "issue": "no total, no guests"}
-{"upload_id": "bed0eac7-064b-4864-9499-c0b167b04976", "name": "Orçamento Francisca Ferreira 28 de Fevereiro  Almoço+Cb Reduzido.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "52a82d30-6c2f-4eca-bb4a-9e3dbbd645cf", "name": "Orçamento 28 de Maio Ines Santos Palbit (Prata).pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "38b68707-2430-41cb-88a7-9541b151d196", "name": "Orçamento Daniela Oliveira 12€.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "74df1ef0-f2e7-4189-be4b-cdaf281ef88e", "name": "Orçamento Sofia Anfrade.docx", "kind": "quote", "status": "issue", "issue": "no date"}
-{"upload_id": "5d80bc64-5137-45a8-bc7d-9033b52c4afc", "name": "Orçamento 5, 6 e 7 Março Dra. Sofia Moreira.docx", "kind": "quote", "status": "issue", "issue": "no guests"}
-{"upload_id": "1d1ecb88-7360-47c8-8288-e63305634439", "name": "Orçamento Paulo Barroca Santarem.docx", "kind": "quote", "status": "issue", "issue": "no date, no total"}
-{"upload_id": "a605eb3e-b0b9-4407-af86-361408c2a1d9", "name": "Orçamento Francisca Ferreira 14 de Março  Almoço+Cb Reduzido.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "b6ed3817-2513-4442-8dc9-bccf49ed1b59", "name": "Orçamento 27 e  28 de Abril Gloria Pinto 15 pax. Am e Pm.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "90db6a60-e27d-4744-93f7-a95e0393fc45", "name": "Orçamento 25 de Abril Madalena Ferreira 2026.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "ff384872-b5fe-459d-b153-3a53547f2a79", "name": "Orçamento Mariana Rapozo 5 cb 4 almoços.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "5dbca434-9b82-4bb7-86b5-83f3c4e51d7e", "name": "Orçamento Mariana Rapozo 5 cb 4 almoços (RESINSURF).docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "bd3d6464-2caa-4d0a-9160-4d0ed1ef0f73", "name": "Orçamento Inês Direito17 e 18 Junho Cb + Almoço +Cb final.docx", "kind": "quote", "status": "issue", "issue": "no guests"}
-{"upload_id": "aa83ba24-c4dc-45b7-879b-ba8ecd1d4c14", "name": "Orçamento 10 de  Outubro Corrida AAUAv.docx", "kind": "quote", "status": "issue", "issue": "no guests"}
-{"upload_id": "7f3064fb-51e3-4f8c-931e-ab17fe81bebd", "name": "Orçamento Catarina Mano 23M 5 de Fevereiro  Almoço.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "7f0ba4c5-8548-4df7-858f-ef1700ef074c", "name": "Orçamento Catarina Mafalda Soares Batizado 17 de Maio.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "fbe7dabe-e052-4093-928a-1f69eecc37cd", "name": "Orçamento 12 Junho Madalena Gloria.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "24588d5a-e844-441e-a018-bfc621043296", "name": "Orçamento 13 de Junho 2026 Madalena Ferreira 14.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "82e0a731-7eb3-42c1-8129-d29db71a2597", "name": "Orçamento 30€ Aveiro com Paixão Sandra.docx", "kind": "quote", "status": "issue", "issue": "no date, no guests"}
-{"upload_id": "7672bd20-6fca-4c4a-9d56-541853cfe4ea", "name": "Orçamento Daniela Oliveira 20€.docx", "kind": "quote", "status": "issue", "issue": "no date"}
-{"upload_id": "098e5e71-30ef-4251-a77a-df83f13eda58", "name": "Lunch Box 8€.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "2ea1ec3d-12c5-4401-9d74-84061032f96d", "name": "Orçamento 30€ Aveiro com Paixão.docx", "kind": "quote", "status": "issue", "issue": "no date, no guests"}
-{"upload_id": "84816ec1-c0cb-4579-84c8-7ed620d57533", "name": "Orçamento 19 de Fevereiro 2026 CS Wind.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "3c269f63-0a3b-485f-9e0f-9924ac8d7cd8", "name": "Orçamento 19 e 20 de Março Rita S. Freitas CMA.pdf", "kind": "quote", "status": "issue", "issue": "no guests"}
-{"upload_id": "51fe1cf5-796c-4f8a-9990-f21e2013dad3", "name": "Orçamento Ana Sofia Teixeita 21 de Novembro Almoço.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "f619dfa4-b475-4efc-8702-e5ef0ce6250b", "name": "Orçamento Paulo Pereira  CB 6.5€.pdf", "kind": "quote", "status": "issue", "issue": "no date"}
-{"upload_id": "bfc5c0d8-5b5d-4498-9433-70c38fd11374", "name": "Orçamento 19 e 20 de Março Rita S. Freitas CMA Valores discriminados.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "7de5363a-c3dc-45cd-b65c-41782f9c2431", "name": "Orçamento 5 de Maio Pedro Oliveira Reduzido.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "fce27fa1-f66d-483b-b464-8cf369717b66", "name": "Orçamento Bling Tânia Baptista 17 de Junho 70 pax.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "1d79462c-78e2-4e76-a4e3-4e05f8a875a6", "name": "Orçamento Fabridoce 12 de Maio (Porco, Cerveja e Sangria).docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "9deb83a4-7785-4a7c-b449-85eaa7afcf7f", "name": "Orçamento 25 de Abril 2026 Madalena Ferreira 10.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "0494052f-5b18-4c27-9b30-25e1fd2f6fa9", "name": "Orçamento para AD Air Centre Lunch Box Completa.pdf", "kind": "quote", "status": "issue", "issue": "no total"}
-{"upload_id": "cb81bb74-cb41-42fd-aa9a-81ba676a060d", "name": "Orçamento Marta Trindade Lunch Box.pdf", "kind": "quote", "status": "issue", "issue": "no total"}
-{"upload_id": "bef08f09-7c0c-46d8-89c7-09e1d7142046", "name": "Orçamento 18 Janeiro 2026 Sofia Maroto.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "2636d93a-6170-47ec-9afb-e3c3e28a0e3f", "name": "Orçamento Prazeres Maria 28 de Abril Jantar 45 Pax.docx", "kind": "quote", "status": "issue", "issue": "no total"}
-{"upload_id": "419287b6-c360-402f-9e95-908feb09361b", "name": "Mix menus ( a defenir) Load.docx", "kind": "quote", "status": "issue", "issue": "no date, no total, no guests"}
-{"upload_id": "90053ee3-b25b-429e-ae1a-1f90b1f8286d", "name": "Orçamento Sonia Nunes 9-10-11 Setembro Cb + Almoço +Cb.docx", "kind": "quote", "status": "issue", "issue": "no guests"}
-{"upload_id": "1a883d6c-f250-4e33-a30b-a22bd21ffd26", "name": "Orçamento 19 e 20 de Março Rita S. Freitas CMA Final.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "e6f77078-0089-42b9-a10e-c6f17ffdd948", "name": "Orçamento 25 e 26 de Março  Arthur Araujo.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "ddf995fb-c2ca-4531-8d24-9952ef69638b", "name": "Orçamento 27 de Março Ines Costa Sky.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "396154e3-0154-4b62-8c5a-a0c0ee94bd98", "name": "Orçamento 13 de Junho Mike (sopa e bifanas)..docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "1c16d63a-f010-431c-a715-cea5d18fdee1", "name": "Orçamento 31 de Março Carisa Martins InovaRia Almoço.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "caaa5539-fc92-4fd8-b166-a4755ab56fd3", "name": "Orçamento Rita Marques 27-7-26 c serviço e s serviço.docx", "kind": "quote", "status": "issue", "issue": "no date, no guests"}
-{"upload_id": "a9d1cf1b-2a08-43b7-927d-9b5398f0e24b", "name": "Orçamento Paula ferreira 16 de Julho.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "749dc015-29a1-4ee1-9ed1-dff10ca1aa0d", "name": "Orçamento 19 de Março SKY Ines Costa.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "6ad289db-f537-4d64-a8da-699fa93241a2", "name": "Orçamento 22 de Julho Ines Santos Palbit 70 pax 8€.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "cfdcec28-067f-4ea0-90e7-2609ac2972b2", "name": "Orçamento 5 de Março Eva Andrade.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "c8b0035c-68c4-4eb5-8c0a-0fc11639558b", "name": "Mix menus ( a defenir).pdf", "kind": "quote", "status": "issue", "issue": "no date, no total"}
-{"upload_id": "f360898d-a076-45f1-ba25-8aef2b24e303", "name": "Orçamento 13 de Junho 2026 Madalena Ferreira 1751.50.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "664c3d1e-3979-491a-95b5-e00f8e11ce8b", "name": "Orçamento Amara N Zero 29 Outubro.pdf", "kind": "quote", "status": "issue", "issue": "no total"}
-{"upload_id": "27bec1a4-58a6-4550-96c5-c3993cb513ae", "name": "Orçamento 27 Março Ines Santos Palbit - 2 cb.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "58b6dfad-bb97-428e-b20d-df628838fd7d", "name": "Orçamento 21 de Fevereiro 2026 CS Wind.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "972c5a09-1d89-435a-9736-4b4d431283d7", "name": "Orçamento Mariana Rapozo 5 cb 4 almoços (RESINSURF).pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "7321fde2-5faa-4860-b2cf-97c2c2277b02", "name": "Orçamento 23 de Maio Municipio de Ilhavo Cb+Almoço+Cb base.pdf", "kind": "quote", "status": "issue", "issue": "no guests"}
-{"upload_id": "35c1cbba-d6bb-48dc-8fb7-478203b794a7", "name": "Orçamento Sonia Nunes 25 e 26 Junho Cb + Almoço +Cb.pdf", "kind": "quote", "status": "issue", "issue": "no guests"}
-{"upload_id": "d606e185-437e-4092-ada2-ab4cdc4f6cbc", "name": "Orçamento 27 e  28 de Abril Gloria Pinto 15 pax..docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "af6e2cf4-2e57-4884-9431-132a9eb41b0f", "name": "Orçamento 13 de Junho 2026 Madalena Ferreira Pedido 1.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "f9aed788-0f44-4c54-9dc1-056c7aaed879", "name": "Orçamento 21 de Julho HomyCasa.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "36a76a04-5522-40b9-8853-ddfe3e58938b", "name": "Orçamento AIDA Susana Carvalho.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "244ab69e-e196-47b1-be53-b281075f37d9", "name": "Orçamento Vera Reis PCI  8 de Abril wc + cb.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "b178a689-6bbf-4c9a-8665-8b23440d3493", "name": "Orçamento 18 de Novembro Cb + Almoço Maria Paulo.pdf", "kind": "quote", "status": "issue", "issue": "no total"}
-{"upload_id": "78b395d8-9269-4178-9019-0bf2e2ec1641", "name": "Orçamento Dra Elsa 28 de Outubro Almoço +Cb (Vasco).docx", "kind": "quote", "status": "issue", "issue": "no guests"}
-{"upload_id": "6550cf0f-0b72-46d6-9873-82dac7389d89", "name": "Orçamento Marta Trindade Cb + Almoço +Cb.pdf", "kind": "quote", "status": "issue", "issue": "no guests"}
-{"upload_id": "1513748e-2b15-4a78-9e37-98ea0a000232", "name": "Orçamento 17 Janeiro 2026 Manuela Marques.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "36c7a991-2b34-41e2-9a11-835a14ac2e47", "name": "Orçamento Rodrigo Cb e Almoço.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "d52939e3-7430-4a05-92d3-83a10db7bba1", "name": "Orçamento para AD Air Centre Lunch Box Completa.docx", "kind": "quote", "status": "issue", "issue": "no date, no total"}
-{"upload_id": "917e082c-52db-4a99-9330-15af904157ea", "name": "Orçamento Patricia Lito 22 Abril 250 Pax 8.30€.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "98a22920-2c81-47c1-9caf-7d9255bee250", "name": "Orçamento 18 Janeiro 2026 Sofia Maroto.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "54b67e02-456f-4c91-a1c5-5cfa76274876", "name": "Orçamento Daniela Oliveira 5 de Julho 65.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "e1e46e4c-0cc6-4b9c-bc5f-def5ce4f3f7a", "name": "Orçamento Gonçalo Fonseca 4 de Setembro.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "36a19615-2da9-45b7-8d29-3466e27023cc", "name": "Orçamento 23 de Maio Municipio de Ilhavo, Biblioteca Municipal Isabel Machado Teixeira.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "c153d1e9-9ecf-4c0d-9aa8-43bb2a152fac", "name": "Orçamento 25 de Abril 2026 Madalena Ferreira 14.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "e19363c5-a977-4a46-8fc0-fff81e43f973", "name": "Orçamento 15 Outubro Pedro Oliveira Cb am + Cb pm.pdf", "kind": "quote", "status": "issue", "issue": "no guests"}
-{"upload_id": "3cac61e3-f653-430e-968c-a73c32f41f31", "name": "Orçamento Paulo Barroca Santarem 500.docx", "kind": "quote", "status": "issue", "issue": "no date"}
-{"upload_id": "c73fbe81-b9c1-462f-95fc-f95f04938f86", "name": "Orçamento CB 13 Outubro Mariana Rodrigues.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "f158130e-6f56-4763-9083-ffec4af23f68", "name": "Orçamento Fabridoce 12 de Maio (Porco, Cerveja e Sangria).pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "090bc05d-8e68-4d52-826e-74d3914dd6a7", "name": "Orçamento Maythe.docx", "kind": "quote", "status": "issue", "issue": "no date, no total, no guests"}
-{"upload_id": "0dd3f55f-be54-4a25-a181-501d104a4e25", "name": "Orçamento Leonor Gonçalves 26 e 27 Junho Cb.pdf", "kind": "quote", "status": "issue", "issue": "no guests"}
-{"upload_id": "76bd92ab-bde9-446b-86a0-7bb835f874f7", "name": "Orçamento Ines Costa SKY.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "f01ac36e-3ec6-4096-b0ba-5b22ed662bb7", "name": "Orçamento 17 de Março Mariana Gonçalves (Tondela).pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "4fdf2718-223b-4a0b-bed3-7cb8b1e16d25", "name": "Orçamento 4 de Setembro Gonçalo Fonseca.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "b1ea75ff-cf15-4749-b07e-d060e0f23482", "name": "Orçamento Ana Pereira 23 de Maio CB 7.5€.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "f23dc4cd-4a59-4222-85aa-f57a07dcecd6", "name": "Orçamento 28 de Fevereiro Medical Dra Claudia Cunha.pdf", "kind": "quote", "status": "issue", "issue": "no total"}
-{"upload_id": "83be43c9-5d92-4ea2-94b7-7bc6eca96fe1", "name": "Orçamento 5 de Maio Pedro Oliveira Reduzido.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "0006d1ac-6e33-4357-a780-50bc8ee6510e", "name": "Orçamento 5 e 11 de Março Carolina.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "ff6dd04c-07f8-4956-905f-d997a50bf3c7", "name": "Orçamento Amara N Zero 29 Outubro.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "8a71c3e9-bcc4-49b5-8d89-bdeeff926fd4", "name": "Orçamento 13 de Junho 2026 Madalena Ferreira 1600.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "1cdc7f48-cf3b-437c-bb79-7ca16f5eed0c", "name": "Orçamento 23 de Maio Isabel Arribas.pdf", "kind": "quote", "status": "issue", "issue": "no total, no guests"}
-{"upload_id": "115ca986-b14c-4dc7-8474-eabc6b837300", "name": "Orçamento Sofia Andrade Ajustado.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "3fbe780c-33e0-4da0-acb3-334d446e12d3", "name": "Orçamento 13 de Junho 2026 Madalena Ferreira Pedido 2.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "8abfcf88-a12f-45c4-ade8-e0789c8d831a", "name": "Orçamento 27 Outubrobro Cb + Almoço Daniela Pedro 1.docx", "kind": "quote", "status": "issue", "issue": "no date, no total"}
-{"upload_id": "e2b94c79-a6bb-4a3b-8a44-ebb19102999c", "name": "Orçamento Catarina Mafalda Soares Batizado 17 de Maio.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "69e036ac-48c0-4d4f-9f8e-c082819b18f1", "name": "Orçamento Paulo Pereira  Almoço 8€.docx", "kind": "quote", "status": "issue", "issue": "no date"}
-{"upload_id": "8e99fddf-7c1f-4f1e-8d26-55b1df5212e9", "name": "Orçamento Pedro Oliveira 22 Abril 30 Pax 7€.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "6c8ad713-71a2-4970-bd32-ee01ffaebe49", "name": "Orçamento 5 de Março Ines Costa Sky.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "1a857f6b-f066-4948-a2f3-45c07499cce2", "name": "Orçamento Daniela Oliveira 12€ Final.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "82d3003a-b0cc-4bd1-9752-3376ee7ab5d8", "name": "Orçamento 7 a 9 de Setembro Cb + Almoços Margarida Pereira Final.pdf", "kind": "quote", "status": "issue", "issue": "no total, no guests"}
-{"upload_id": "d6680a20-9531-478b-912d-a8e021ff249a", "name": "Orçamento 5 de Maio Pedro Oliveira.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "f1c3e344-99cc-47f8-914a-9d332d4f14e4", "name": "Orçamento 23 de Maio Municipio de Ilhavo, Biblioteca Municipal Almoço.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "6331c4ad-7213-44a6-ad86-dfca22672844", "name": "Orçamento 5 e 11 de Março  Living Tours Carolina.docx", "kind": "quote", "status": "issue", "issue": "no guests"}
-{"upload_id": "7a5ae10c-c08d-48e8-9174-2a91bb32cc1e", "name": "Orçamento Ana Pereira 23 de Maio CB 7.5€.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "fb41b28d-487c-4bbf-87f6-0454de18c0c4", "name": "Orçamento Catarina Mano 23M  5 de Fevereiro  Almoço 30 Pax.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "e108b64a-8469-4d71-b8da-a389267aef1e", "name": "Orçamento 21 de Julho HomyCasa.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "c8d4b292-ea35-425e-961b-406df6a168aa", "name": "Orçamento Catarina Mano 23M 5 de Fevereiro CB + Almoço.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "1a313e63-561d-4b9b-a5a1-a0ef7a753d2a", "name": "Orçamento Fabridoce.docx", "kind": "quote", "status": "issue", "issue": "no date"}
-{"upload_id": "7cb228b3-c91b-44e0-b59f-cbd07b954072", "name": "Orçamento Gonçalo Fonseca 4 de Setembro.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "f9577a8a-4492-4f18-8715-46aa1c6ead77", "name": "Orçamento 31 de Março Carisa Martins InovaRia Almoço 20 pax.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "7167cd6a-0821-4233-8677-cd7d632d9c4b", "name": "Orçamento 19 de Março SKY Ines Costa Final.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "7fac93ff-ac82-4870-9aa0-f5463762ecaf", "name": "Orçamento 17 de Abril Ana Neves 22 pax.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "34c1f89f-5b90-4053-840f-fcfa23007e7b", "name": "Orçamento 13 de Junho 2026 Madalena Ferreira só espumante.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "868e07b8-7806-4982-a726-b18d96573f0b", "name": "Orçamento 23 de Maio Municipio de Ilhavo Cb+Almoço+Cb.pdf", "kind": "quote", "status": "issue", "issue": "no guests"}
-{"upload_id": "cb9cf264-7f8e-40f7-b787-088ee69d4f73", "name": "Orçamento Catia Monteiro 24 de Outubro.docx", "kind": "quote", "status": "issue", "issue": "no guests"}
-{"upload_id": "d6749296-e46b-4c22-8d26-a83add28b401", "name": "Orçamento Prazeres Maria 28 de Abril Jantar 45 Pax 60 anos.docx", "kind": "quote", "status": "issue", "issue": "no total"}
-{"upload_id": "c0c9be26-1c25-43b9-82d0-7da66dd92c12", "name": "Mix menus ( a defenir).docx", "kind": "quote", "status": "issue", "issue": "no date, no total, no guests"}
-{"upload_id": "fec15789-4116-4c56-9b7b-fe0aa8001e69", "name": "Orçamento 16 de Janeiro 26 Patricia Balacó.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "b083d648-8afc-4198-99f2-83f1c5b180f2", "name": "Orçamento Sofia Andrade.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "6fa7a47f-3db3-4c93-8c59-ad3decf939d2", "name": "Orçamento 7 a 9 de Setembro Cb + Almoços Margarida Pereira Final.docx", "kind": "quote", "status": "issue", "issue": "no total, no guests"}
-{"upload_id": "8b798e82-4289-40df-b4fc-7f0834ea2022", "name": "Orçamento Diogo Dias.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "b8d980eb-86d0-46e9-b631-f638e6705bfc", "name": "Orçamento 25 de Abril 2026 Madalena Ferreira.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "560d8d06-0b72-4a5b-ad97-4fdb29a97e2d", "name": "Orçamento Amara N Zero 22 Outubro.pdf", "kind": "quote", "status": "issue", "issue": "no total"}
-{"upload_id": "9e65fd4d-5389-41ff-9e6d-2472bddd9deb", "name": "Lunch Box 8€ Madalena Salema.docx", "kind": "quote", "status": "issue", "issue": "no date"}
-{"upload_id": "a25a3774-d81f-4859-aecc-0672e40ceafb", "name": "Orçamento para AD Air Centre Lunch Box.docx", "kind": "quote", "status": "issue", "issue": "no date, no total, no guests"}
-{"upload_id": "4afd9bc5-e63d-4b34-856e-2cbbc8fec16d", "name": "Orçamento 27 Março Ines Santos Palbit.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "78ae4d75-bf78-4872-9c22-af091dbbd867", "name": "Orçamento 13 de Junho Mike (sopa e bifanas).pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "b0d4735d-d86f-4f32-86ef-4bebe8297791", "name": "Orçamento 21 de Abril Enrikson 50 pax wc + cb  + almoço + cb.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "8024ed1c-1bfc-42be-b217-4eef8dd1afda", "name": "Orçamento Load Cb + Almoço 75 pax.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "5fa54b33-c38f-41fb-995d-7f2e1b336766", "name": "Orçamento 17 de Julho Lu Werneck.docx", "kind": "quote", "status": "issue", "issue": "no guests"}
-{"upload_id": "f1be5508-61f0-429b-8eee-76e64b269e01", "name": "Orçamento Ines Costa SKY.docx", "kind": "quote", "status": "issue", "issue": "no date, no guests"}
-{"upload_id": "aaa2373e-4822-4201-89ff-2f936979349d", "name": "Orçamento Marta Trindade Lunch Box 8.50€.pdf", "kind": "quote", "status": "issue", "issue": "no total"}
-{"upload_id": "79171e6c-bd63-4264-843d-6eabf15857f0", "name": "Orçamento Daniela Oliveira 5 de Julho.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "5b57722f-94ec-4b03-8d59-9450e68d3006", "name": "Orçamento 31 de Março Carisa Martins InovaRia Almoço.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "c7634f96-2406-49e6-9df8-46f885442717", "name": "Orçamento Maria Judite Mendes 9 Agosto 60 pax a.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "65e0e37d-a0be-4bad-bfb8-4caa3e9797dc", "name": "Orçamento Fanny SEAC 14,15,16 Outubro.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "255f444d-140e-4d08-8e8c-35a2409e16ff", "name": "Orçamento 27 e  28 de Abril Gloria Pinto 15 pax.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "d4869685-a46f-4c49-813b-90a107704194", "name": "Orçamento Raquel Barroca.docx", "kind": "quote", "status": "issue", "issue": "no date"}
-{"upload_id": "e3234f8b-36fd-41bf-9a64-77952bb71bba", "name": "Orçamento Daniela Oliveira F. 4 Julho.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "4360685a-8291-41a3-af74-7d1234dfc7dd", "name": "Orçamento 11 de Dezembro Carolina Batista.docx", "kind": "quote", "status": "issue", "issue": "no guests"}
-{"upload_id": "644f7999-353b-45f9-bd9b-310a39b62f20", "name": "Orçamento Sonia Nunes 25 e 26 Junho Cb + Almoço +Cb.docx", "kind": "quote", "status": "issue", "issue": "no guests"}
-{"upload_id": "dcb4522e-e324-4ed7-aa8e-6379316669e4", "name": "Orçamento Liliana Costa 4 de Março CB.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "cbd21ddd-e94c-4e18-965d-23b80002329e", "name": "Orçamento Bling Tânia Baptista 17 de Junho 70 pax.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "c56d5a6f-6983-4359-8644-4d9bf25b5c4e", "name": "Orçamento 17 de Março Mariana Gonçalves (Tondela).docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "4158b2a6-ed23-4170-b37c-e81c3494f8a3", "name": "Orçamento Eugenio Rocha  3 de Junho  Almoço.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "ab5325da-e3c7-404a-8655-c5ae76d10a67", "name": "Orçamento Inês Direito 19 Junho Cb am.pdf", "kind": "quote", "status": "issue", "issue": "no guests"}
-{"upload_id": "13854a48-97b5-45af-a0c0-4f556f48ddba", "name": "Orçamento Menu de 25€ Ana Luisa Festas.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "9ebc285b-c20e-4bdd-8ce7-4020ab1a668f", "name": "Orçamento Inês Raquel 19 Julho Almoço.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "d9ba33dd-671c-43db-9d9d-ab4baa707675", "name": "Orçamento 21 de Maio João Pinto 80pax.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "cf0908ff-4f96-4cbe-ae00-10a54657cd71", "name": "Orçamento 21 de Maio João Pinto 90pax.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "fc4474ed-9e1b-4c8f-94d2-6cfd2aa522e1", "name": "Orçamento 30 de Outubro Aleksandra.docx", "kind": "quote", "status": "issue", "issue": "no guests"}
-{"upload_id": "0f08f28b-0523-42e5-a7fc-5a913edc2129", "name": "Orçamento Inês Pinheiro  30 de Maio  Almoço+Cb 90 pax.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "4f72167e-1e46-4d58-9863-f55722b0adf2", "name": "Orçamento Jaqueline 15 de Janeiro CB + Almoço.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "7e73f27a-74bb-4cef-83f9-2cdf84e18f3d", "name": "Orçamento 23 de Maio Isabel Arribança.pdf", "kind": "quote", "status": "issue", "issue": "no total"}
-{"upload_id": "63741fe1-8010-4dba-878d-1ec7045d25f6", "name": "Orçamento 13 de Junho 2026 Madalena Ferreira 14.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "cba97762-16fb-4a64-9444-965011623016", "name": "Orçamento Leonor Gonçalves 26 e 27 Junho Cb 500pax.pdf", "kind": "quote", "status": "issue", "issue": "no guests"}
-{"upload_id": "f023275c-b204-4d2b-8b3c-3cfea413cce5", "name": "Orçamento Leonor Gonçalves 26 e 27 Junho Cb 500pax.docx", "kind": "quote", "status": "issue", "issue": "no guests"}
-{"upload_id": "108c8b95-3e90-48a7-95a5-4999cf00a1bc", "name": "Orçamento Diogo Dias Reduzido.docx", "kind": "quote", "status": "issue", "issue": "no date"}
-{"upload_id": "7961ba17-7e83-4e1b-90e8-3204bae9f334", "name": "Orçamento Prazeres Maria 28 de Abril Jantar.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "6ae66fa9-44d1-4d2b-80d5-06a24a173e6d", "name": "Orçamento para AD Air Centre Lunch Box 10 e 15€.docx", "kind": "quote", "status": "issue", "issue": "no date, no total, no guests"}
-{"upload_id": "efb9b17b-d668-42bc-9e52-42a7966d6dc2", "name": "Orçamento Francisca Ferreira 28 de Fevereiro  Almoço+Cb.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "ad4c9260-e0be-4acd-b13a-fd76ad1d5e5c", "name": "Orçamento 12 Junho Madalena Gloria.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "956be97b-77a5-4f24-898c-0807e4465ef1", "name": "Orçamento 22 de Julho Ines Santos Palbit 50 pax 8€.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "6d0f6ca2-2d75-42f7-8075-7bc5e66c691e", "name": "Orçamento 25 de Abril 2026 Madalena Ferreira 15.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "4b889b18-0087-4c26-911f-65b031719380", "name": "Orçamento Bling Tânia Baptista 17 de Junho.docx", "kind": "quote", "status": "issue", "issue": "no total"}
-{"upload_id": "273cfa83-2741-4e4e-9782-ac5189d95ff2", "name": "Orçamento Catarina Mafalda Soares Batizado 17 de Maio Final.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "73582ac8-778c-4c3b-914c-2075ef87ab12", "name": "Orçamento Vera Reis PCI  8 de Abril wc + cb 90 pax.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "f20f85e7-c04c-4f1d-a062-b284f8f2dc6d", "name": "Orçamento 22 de Julho Ines Santos Palbit 70 pax.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "6c0191f6-abb7-4218-ac11-771efaa2bb8a", "name": "Orçamento 27 Outubrobro Cb + Almoço Daniela Pedro.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "544dc19b-1be6-4e32-b9b9-5ae21e0b63b7", "name": "Orçamento 1 de Agosto Monica Santos Almoço 40 pax.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "301abf96-f915-4de8-a0b7-21dacfb7e5a1", "name": "Orçamento Eugenio Rocha  3 de Junho  Almoço.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "813364a0-f4ab-460c-a42a-fb6e7e1365b6", "name": "Orçamento 23 de Maio Municipio de Ilhavo Cb+Almoço+Cb base.docx", "kind": "quote", "status": "issue", "issue": "no guests"}
-{"upload_id": "19c539c9-43f6-4f66-a571-87a12345eed8", "name": "Orçamento 29 de Abril 2026 CS Wind 23.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "25a6a826-079d-422c-90ff-fabd97c17e9f", "name": "Orçamento Cesar Setenis 21 de Novembro Almoço.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "0f319e34-0f87-4bad-b575-b209f4b20714", "name": "Orçamento Maythe.pdf", "kind": "quote", "status": "issue", "issue": "no total, no guests"}
-{"upload_id": "5933b45a-b383-4005-886c-8d4a16b3cb23", "name": "Orçamento 15 de Outubro Catarina Sobral.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "72bb50fc-4eb9-4cf7-8728-73676c9f8feb", "name": "Orçamento Eugenio Rocha  3 de Junho  Almoço 15.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "d5a6e64d-23cf-4e78-87fa-dc849763be4a", "name": "Orçamento Vera Reis PCI  8 de Abril wc + cb.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "a46d21c8-14c2-44f3-88c3-4075b221e7d3", "name": "Orçamento 11 de Março  Living Tours Carolina Poças.docx", "kind": "quote", "status": "issue", "issue": "no guests"}
-{"upload_id": "7970f3ed-5ef5-4cc4-9072-4ceeacb20e75", "name": "Orçamento Pedro Oliveira Cb am + Cb pm.docx", "kind": "quote", "status": "issue", "issue": "no date, no guests"}
-{"upload_id": "209feb32-bc07-4819-85fb-eb7550310a88", "name": "Orçamento 3-4 e 7-8 de Setembro Cb am e pm Sonia Nunes Salt.pdf", "kind": "quote", "status": "issue", "issue": "no total, no guests"}
-{"upload_id": "bcc01a8e-d148-48e6-b0cb-a79472951cad", "name": "Orçamento 13 de Junho Mike Almoço e Jantar 8€.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "14368a9a-1aa0-43c4-95b6-a1332f77d2a3", "name": "Orçamento 25 de Abril 2026 Madalena Ferreira 14.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "6a70f1ff-e04f-4a29-95f0-d2f7dc4934d6", "name": "Orçamento 23 de Maio Isabel Arribança.docx", "kind": "quote", "status": "issue", "issue": "no total, no guests"}
-{"upload_id": "5d2f7d8c-4d54-4c60-9421-9d6e74dc2330", "name": "Orçamento Ines Costa SKY reduzido.docx", "kind": "quote", "status": "issue", "issue": "no date, no total, no guests"}
-{"upload_id": "26294a9c-e206-404b-b182-16ba962cdefb", "name": "Orçamento 28 de Fevereiro Medical Dra Claudia Cunha.docx", "kind": "quote", "status": "issue", "issue": "no total, no guests"}
-{"upload_id": "1fe47703-4bc4-4096-9bd4-cf4fe3ea0778", "name": "Orçamento Silvina 5 de Dezembro Lanche 15€.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "6fe544c5-3c3a-4952-84f5-1c8b5d59a3ae", "name": "Orçamento Francisca Ferreira 28 de Fevereiro  Almoço+Cb Reduzido.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "663782a7-d6f9-41ad-bb97-41a3f9e3c28b", "name": "Orçamento 17 de Julho Lu Werneck.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "c07228dc-d983-4fec-b03c-9dd76003b93b", "name": "Orçamento Jaqueline 15 de Janeiro CB + Almoço.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "ddc05dde-b079-4658-b0dd-79bcd22f6ab5", "name": "Orçamento 22 de Julho Ines Santos Palbit 50 pax 8€.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "3266b207-7671-4b20-93ce-dbc180ade76b", "name": "Orçamento 29 de Abril 2026 CS Wind.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "827d55bd-8e98-45c1-8cb8-d2f111b74df1", "name": "Orçamento Cesar Setenis 21 de Novembro Jantar.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "3a2e1cdc-2ef0-4051-a0d9-fe88ee32ad61", "name": "Orçamento Rodrigo Cb e Almoço.docx", "kind": "quote", "status": "issue", "issue": "no date"}
-{"upload_id": "44e2edea-a293-4fdb-b5d5-b615c0b2d6bf", "name": "Lunch Box 5€ a 17€.pdf", "kind": "quote", "status": "issue", "issue": "no total"}
-{"upload_id": "28863804-7348-4e8f-b2bb-74eb57bf241f", "name": "Orçamento Anabela Anjos 23 de Abril CB.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "50ac2cc7-4c09-4433-ba75-bdf083f71021", "name": "Orçamento 9 e 10 de Abril Joana Inês Carvalho 24 pax.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "d3d9b943-0776-49d2-8da2-a8b9c3877340", "name": "Orçamento 21 de Maio João Pinto 80pax NIF.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "916659a6-6df0-4893-b57a-891491e16b0b", "name": "Orçamento AIDA Susana Carvalho.docx", "kind": "quote", "status": "issue", "issue": "no date"}
-{"upload_id": "6173989b-7a08-4d47-8ea3-5837324e41d1", "name": "Orçamento Bling Tânia Baptista 17 de Junho 65 pax.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "9d574d5c-8b4b-47da-96a6-60c677303e88", "name": "Orçamento Inês Pinheiro  30 de Maio  Almoço.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "88aa4d5d-a6bf-4424-b087-13d3b3431476", "name": "Orçamento para AD Air Centre Lunch Box 10 e 15€.pdf", "kind": "quote", "status": "issue", "issue": "no total"}
-{"upload_id": "5475dce4-16a3-4a94-9d53-3ac4a47d19c0", "name": "Orçamento 27 e  28 de Abril Gloria Pinto 15 pax.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "507b3dc9-4649-4655-aa72-5c09e987e595", "name": "Orçamento 23 de Maio Municipio de Ilhavo, Biblioteca Municipal Almoço.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "6bcaa494-fa6c-4ef7-97e6-fa3ddd226b94", "name": "Orçamento 29 de Abril 2026 CS Wind 23.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "cab32b40-d03a-41ad-80d0-0892a89c27ba", "name": "Orçamento 31 de Março Carisa Martins InovaRia Almoço 20 pax.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "f090aa5a-9c0c-4379-b141-43acc8245b03", "name": "Orçamento Inês Direito 19 Junho Cb am.docx", "kind": "quote", "status": "issue", "issue": "no guests"}
-{"upload_id": "a26c8014-5335-4bf4-b7ff-c178d56a646d", "name": "Orçamento CB 13 Outubro Mariana Rodrigues.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "5f9d3acb-537a-4518-86f8-45faba13787e", "name": "Orçamento Patricia Lito 22 Abril 250 Pax 7.50€.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "101de16c-7e5c-4b4d-867a-70a92fd86e0e", "name": "Orçamento Eliana Sofia 20 de Julho.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "7b1d03e4-9238-42ef-ab89-9b1aaa888936", "name": "Orçamento 18 de Abril Pedro Marto.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "f1296699-4242-4575-bc4e-0d4f6ba04ae5", "name": "Orçamento Junho Maria Santos.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "982bd242-723c-429f-bf1b-90dc7220ea5f", "name": "Orçamento Isabel Machado Teixeira.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "ca20d814-0272-4fe6-a142-ffdcd2705ec4", "name": "Orçamento Eugenia Pereira.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "c72e7372-afa8-4292-8024-808c04e6f9c0", "name": "Orçamento Paulo Pereira  CB 6.5€.docx", "kind": "quote", "status": "issue", "issue": "no date"}
-{"upload_id": "0a350d7f-1693-4aa4-80dd-6951f953d82b", "name": "Orçamento 18 Janeiro 2026 Sofia Marto.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "a907b513-44c1-4188-bfe6-24866171ebb7", "name": "Orçamento 21 de maio Joâo Pinto.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "409dd629-d018-429d-aeaa-9bf6ed0716d0", "name": "Mix Menus.pdf", "kind": "quote", "status": "issue", "issue": "no date, no total"}
-{"upload_id": "60501dd2-bd3c-4ad4-84a4-1cfd02706cef", "name": "Orçamento Anabela Anjos 23 de Abril CB Reduzido.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "c04bee78-8ebe-4700-9cd4-5d7a3f29b4ad", "name": "Orçamento 16 de Janeiro 26 Patricia Balacó.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "ef817fdb-d8b0-492a-8a6e-fc143354f8a7", "name": "Orçamento Fabridoce  (Bifanas).docx", "kind": "quote", "status": "issue", "issue": "no date"}
-{"upload_id": "41cea06b-9796-4806-bbff-b2ae1187bdae", "name": "Orçamento 19 de Fevereiro 2026 CS Wind.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "39065f03-64d7-4b55-b570-6441735734c4", "name": "Orçamento 9 e 10 de Abril Inês Carvalho.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "33e5d8f3-e4f4-44a3-bd8c-ed5233812530", "name": "Orçamento Fabridoce  (Bifanas).pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "46f4fd9d-d27e-496e-82b0-afcba46b622a", "name": "Orçamento 19 de Março SKY Ines Costa Final.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "aeb57f46-13e4-4113-9bb8-7cdec485423a", "name": "Orçamento Fabridoce 12 de Maio (Porco, Cerveja e Sangria) corrigido.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "9cd8d38b-76de-4465-b309-d6365df0b1c6", "name": "Mix menus Ostraveiro.pdf", "kind": "quote", "status": "issue", "issue": "no date, no total"}
-{"upload_id": "a0f3b636-b518-4cb4-a982-e150a83b398e", "name": "Orçamento Francisca Ferreira 28 de Fev  Almoço+Cb Reduzido.docx", "kind": "quote", "status": "issue", "issue": "no date"}
-{"upload_id": "61d44e6b-95ac-4688-b6cf-138ddc1c5bdb", "name": "Orçamento Marta Trindade Cb + Almoço +Cb.docx", "kind": "quote", "status": "issue", "issue": "no date, no guests"}
-{"upload_id": "03f99235-29d2-4693-a3a1-b02f57f251cf", "name": "Orçamento 21 de Fevereiro 2026 CS Wind.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "81797774-e97a-4329-93f3-5af9b13cb021", "name": "Lunch Box 8€ Madalena Salema.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "7868585f-ec38-4e5d-8b38-293bacb607ec", "name": "Orçamento 22 de Julho Ines Santos Palbit 70 pax 7€.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "6f25b30c-47fe-408b-844c-fee6472d50cc", "name": "Orçamento 21 de Maio João Pinto 80pax NIF.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "baa8a959-4f8e-46aa-9cfd-aba7a65310ea", "name": "Orçamento 5 de Março Ines Costa Sky.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "7214bfc9-565c-4aac-810a-cbeb98622b1a", "name": "Orçamento 17 de Março SKY Inês Costa.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "7c32d1c7-62ef-4159-8665-74ba69be3762", "name": "Orçamento Ana Pereira 23 de Maio.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "c2dbb088-5584-42ae-8643-96945f5c622d", "name": "Orçamento Isabel Machado Teixeira.docx", "kind": "quote", "status": "issue", "issue": "no date"}
-{"upload_id": "d51b62f4-52a6-428b-834f-91afc25e83ed", "name": "Orçamento Fabridoce.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "70cb889c-e6e2-47db-b633-12a31880e901", "name": "Orçamento Catarina Mano 23M  5 de Fevereiro  Almoço 30 Pax.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "77ead8c0-0d1f-467a-a625-ffedb6899d8f", "name": "Orçamento 5 e 11 de Março  Living Tours Carolina Poças.docx", "kind": "quote", "status": "issue", "issue": "no guests"}
-{"upload_id": "f24fea6b-4277-4b7f-aae9-355df473cd22", "name": "Orçamento Load Cb + Almoço 75 pax.docx", "kind": "quote", "status": "issue", "issue": "no date"}
-{"upload_id": "d3ffb99d-7889-450f-af73-b43e1bddfdd6", "name": "Orçamento 20 de Abril Enrikson 50 pax wc + cb  + almoço + cb.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "b9c5f953-d94f-4fd0-846e-af2451ffc4cc", "name": "Orçamento 9 e 10 de Abril Joana Inês Carvalho 24 pax ..docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "be635ff7-6c3e-4396-ab2b-3c3d204e5599", "name": "Orçamento Daniela Oliveira 16€.docx", "kind": "quote", "status": "issue", "issue": "no date"}
-{"upload_id": "f427c495-5455-4005-9c6d-ac13255ae1a8", "name": "Orçamento Menu de 25€ Ana Luisa Festas.docx", "kind": "quote", "status": "issue", "issue": "no date"}
-{"upload_id": "0984f224-638d-48f1-97bd-b3ed873b7805", "name": "Orçamento 30 de Junho 2026 CS Wind.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "b5d45da1-8eae-446a-9054-e14fb1c2cd7a", "name": "Orçamento Inês Raquel 19 Julho Almoço.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "6718e20a-6570-4c94-a2a6-61421e44191e", "name": "Orçamento Marta Trindade Lunch Box.docx", "kind": "quote", "status": "issue", "issue": "no date, no total"}
-{"upload_id": "1dbc2bd5-83e4-420d-856c-3057dc0e4933", "name": "Orçamento Inês F Fonseca- 2 cb + almoço.docx", "kind": "quote", "status": "issue", "issue": "no date, no total, no guests"}
-{"upload_id": "11ce5695-4660-49fa-a6de-6af827a5eb34", "name": "Orçamento Eugenio Rocha  3 de Junho  Almoço 15.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "265b7fe3-ff11-4c8b-91bd-4cbf2e18178b", "name": "Orçamento Inês Direito 19 Junho Cb am 60 pax.pdf", "kind": "quote", "status": "issue", "issue": "no guests"}
-{"upload_id": "14417be0-32f5-40f6-a921-cb2f6dcbc39d", "name": "Orçamento Daniela Oliveira 20€.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "4c74b520-c745-4f25-a39e-2e1e281d7e86", "name": "Orçamento Inês F Fonseca- 2 cb + almoço.pdf", "kind": "quote", "status": "issue", "issue": "no date, no total, no guests"}
-{"upload_id": "61e621da-b5e3-4df9-83c1-d931b7bac9b8", "name": "Orçamento 21 de Fevereiro 2026 CS Wind final.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "6f8e3159-f24e-40cc-bc16-eaa7a7e07f89", "name": "Orçamento 27 Março Ines Santos Palbit - 2 cb.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "23c563ca-0846-4b1f-8a00-4ce2b89d3164", "name": "Orçamento 13 de Junho 2026 Madalena Ferreira Final.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "14a0762c-b298-4b1b-8795-eea1a52a578c", "name": "Orçamento 25 de Outubro Rita Lopes.pdf", "kind": "quote", "status": "issue", "issue": "no total"}
-{"upload_id": "ef3332db-b9cd-4458-a523-78dc229a4758", "name": "Orçamento 18 de Novembro Cb + Almoço Maria Paulo.docx", "kind": "quote", "status": "issue", "issue": "no total"}
-{"upload_id": "b8f951b3-260c-4488-b018-3c8a2afb87f1", "name": "Orçamento Daniela Oliveira F. 4 Julho.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "7e50364e-3a53-4909-8a8e-c53f44d89e29", "name": "Orçamento Catarina Mano 23M 5 de Fevereiro  Almoço.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "b83a0e10-0b71-4dc1-a78e-62dbc77ca8b0", "name": "Orçamento 21 de Maio João Pinto 80pax 6.50.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "3492bbdf-6a19-4503-b38a-f3ef5cf3b029", "name": "Orçamento 21 de Fevereiro 2026 CS Wind final.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "f81723d2-5710-4d7e-a21f-f0b83a91e58c", "name": "Orçamento 26 Março Isabel César Cb Médio.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "1eb54016-5d63-43ab-a9a4-7a5491776534", "name": "Orçamento 9 e 10 de Abril FFonseca Inês Vergas.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "6e85e589-09db-49a0-9cde-3abca4766ffe", "name": "Orçamento 19 de Março SKY Ines Costa.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "53df2f5a-5360-4f68-84fa-d5257fa0b569", "name": "Orçamento Patricia Lito 22 Abril 250 Pax 7.30€.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "108f7cbe-eafc-4c3b-9fdf-e653d389bfdc", "name": "Orçamento 19 e 20 de Março Rita S. Freitas CMA.docx", "kind": "quote", "status": "issue", "issue": "no guests"}
-{"upload_id": "cd29441d-05fe-4c40-9286-7cc8ad4ccbfa", "name": "Orçamento 3-4 e 7-8 de Setembro Cb am e pm Sonia Nunes Salt.docx", "kind": "quote", "status": "issue", "issue": "no total, no guests"}
-{"upload_id": "6d648f56-87aa-49b5-a361-c98c6cf37289", "name": "Orçamento 21 de Maio João Pinto 80pax.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "a9682be1-bf3a-4e90-9ee8-2a725f81e669", "name": "Orçamento 7 a 9 de Setembro Cb + Almoços Margarida Pereira.pdf", "kind": "quote", "status": "issue", "issue": "no total, no guests"}
-{"upload_id": "aa8c3153-4b4a-4c5d-9eba-0a5d49217c24", "name": "Orçamento 23 de Maio Municipio de Ilhavo, Biblioteca Municipal Isabel Machado Teixeira.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "d218ec96-bc83-42b8-8f92-2739848565c5", "name": "Orçamento Inês Raquel 19 de Julho Almoço.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "f2a54c05-8928-4641-bf0e-d9e4cfab3af0", "name": "Orçamento Prazeres Maria 28 de Abril Jantar.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "760bb187-1554-4d0f-88bc-b289f4c1cd1f", "name": "Orçamento Leonor Gonçalves 26 e 27 Junho Cb 5.50€.pdf", "kind": "quote", "status": "issue", "issue": "no guests"}
-{"upload_id": "b4aabace-c480-4e69-9c41-0f595fdee22c", "name": "Orçamento Paulo Barroca Santarem 500.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "b210a64e-811f-404c-9e0c-1ba12ef4acfe", "name": "Orçamento Francisca Ferreira 28 de Fevereiro  Almoço+Cb.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "0a502e16-f6ea-464a-92a6-43e7366dde1e", "name": "Orçamento Daniela Oliveira 4 Julho.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "f096b943-939c-4ef3-b5b5-a6892332f3ed", "name": "Orçamento Catarina Mafalda Soares Batizado 17 de Maio Final.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "fa6f413b-6ea1-4573-b3e8-d9f173315b02", "name": "Orçamento 13 de Junho 2026 Madalena Ferreira s alcool.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "020b0358-7960-4973-af55-7fdace3f140d", "name": "Orçamento Bling Tânia Baptista 17 de Junho.pdf", "kind": "quote", "status": "issue", "issue": "no total"}
-{"upload_id": "8c13bbfc-3681-4619-b573-8115acb0401a", "name": "Orçamento 5 e 11 de Março  Living Tours Carolina Poças.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "c3dbb73d-5e53-40c9-9d34-d27130698e4c", "name": "Orçamento Eugenia Pereira.docx", "kind": "quote", "status": "issue", "issue": "no date"}
-{"upload_id": "b50614f2-a491-45e9-8c5a-4c3bba5f89bb", "name": "Lunch Box 10 e 15€.docx", "kind": "quote", "status": "issue", "issue": "no date, no total, no guests"}
-{"upload_id": "e4f8dddf-5891-457a-a656-ada08e2ed264", "name": "Orçamento 13 de Junho 2026 Madalena Ferreira s alcool.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "a08fac57-c016-4952-bcf9-8b75c850c607", "name": "Orçamento 13 de Junho 2026 Madalena Ferreira Final.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "a591bd05-8703-4673-82da-4cad743ad1a7", "name": "Orçamento Bling Tânia Baptista 17 de Junho reduzido.docx", "kind": "quote", "status": "issue", "issue": "no total"}
-{"upload_id": "a53e2610-e886-4762-a9c2-65c503116805", "name": "Orçamento Silvina 5 de Dezembro Lanche 15€.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "0732a60e-71be-44ee-bf9b-f1ac400a0f52", "name": "Orçamento Bling Tânia Baptista 17 de Junho reduzido.pdf", "kind": "quote", "status": "issue", "issue": "no total"}
-{"upload_id": "0274f97f-e185-4c5c-af5f-97f97a98d456", "name": "Orçamento 25 de Outubro Rita Lopes.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "f3ce88bb-3505-4f44-b3b5-174540ebca97", "name": "Orçamento Pedro Oliveira 22 Abril 30 Pax 7€.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "73302bb3-74b6-4f48-96bd-8f45d2afc658", "name": "Orçamento 13 de Junho Mike (sopa e bifanas).docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "19ba728a-e525-4347-b875-e5b61cdcf47b", "name": "Orçamento Daniela Oliveira 16€.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "b93cedd2-13b8-427e-827e-0ee42f60edbb", "name": "Orçamento Anabela Anjos 23 de Abril CB Reduzido.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "6c20c58f-682e-4d33-9d0b-fe1a3d0136d8", "name": "Orçamento Inês Pinheiro  30 de Maio  Almoço+Cb 90 pax.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "c2265f31-cccd-468a-b8c6-12e53e51e6b5", "name": "Orçamento Junho Maria Santos.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "34faee2d-87d4-47c6-a05c-5082e992c7a0", "name": "Orçamento 13 de Junho Mike Almoço e Jantar 8€ - 180 PAX.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "e151e93b-0471-432f-877c-35cf964435f2", "name": "Orçamento Diogo Dias.docx", "kind": "quote", "status": "issue", "issue": "no date"}
-{"upload_id": "8344b87f-345b-4021-93b1-9bce4a67bee2", "name": "Orçamento 27 e  28 de Abril Gloria Pinto 15 pax. Am e Pm.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "4431589c-eaba-4250-8c22-147ac26a750b", "name": "Orçamento 20€ Aveiro com Paixão Sandra.pdf", "kind": "quote", "status": "issue", "issue": "no date"}
-{"upload_id": "377fbb13-3cc2-4f12-bfd2-5ab8699b23bb", "name": "Orçamento Prazeres Maria 28 de Abril Jantar 45 Pax.pdf", "kind": "quote", "status": "issue", "issue": "no total"}
-{"upload_id": "da479391-fb92-40f6-81f8-78e94063de4e", "name": "Orçamento Anabela Anjos 23 de Abril CB.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "316e318b-61f0-4466-80c8-5f0b8ddc48a0", "name": "Orçamento Prazeres Maria 28 de Abril Jantar 45 Pax 60 anos.pdf", "kind": "quote", "status": "issue", "issue": "no total"}
-{"upload_id": "5a5e0127-8013-4de4-906e-d785d8a713b0", "name": "Orçamento Fabridoce 12 de Maio (Porco, Cerveja e Sangria) corrigido.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "63323ff5-1f4d-485e-899d-65e87d4d109b", "name": "Orçamento Raquel Barrocas.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "0892fbc5-1c46-42c4-b3d5-d98cc4c51665", "name": "Orçamento 30 de Outubro Aleksandra.pdf", "kind": "quote", "status": "issue", "issue": "no guests"}
-{"upload_id": "96927372-d9d7-4fb4-83c0-540fb66b79b8", "name": "Orçamento Liliana Costa 4 de Março CB.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "e57ee6a1-67e4-4942-8892-ece571c2b7f8", "name": "Orçamento Ana Braga APECE 25 a 27 Fevereiro.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "fafb19bc-317d-4df2-8136-0a3af392af11", "name": "Orçamento 21 de Maio João Pinto 90pax.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "e474b124-58f6-4356-9a6a-1224bf6d35c9", "name": "Orçamento Inês Direito17 e 18 Junho Cb + Almoço +Cb.pdf", "kind": "quote", "status": "issue", "issue": "no guests"}
-{"upload_id": "1f95743b-a45f-481a-a208-f69445de2a9f", "name": "Orçamento Inês Raquel 19 de Julho Almoço.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "2f3a6e3d-dc26-45aa-acef-d71a4e656a77", "name": "Orçamento 25 de Abril Madalena Ferreira 2026.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "2fb6c5ee-9976-468f-99d7-e70a5cc167fb", "name": "Orçamento Quinta das Azenhas 2 cb + almoço.docx", "kind": "quote", "status": "issue", "issue": "no date, no total, no guests"}
-{"upload_id": "c7e9c55b-313a-4749-ba13-1ade02a464b6", "name": "Orçamento 30 de Outubro Rita Serrano.pdf", "kind": "quote", "status": "issue", "issue": "no total"}
-{"upload_id": "c37469cb-7dcc-4c22-bfed-6ded434c3734", "name": "Orçamento Catarina Mano 23M 5 de Fevereiro CB + Almoço.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "c899e763-a2f4-4250-8ec1-15c6528c3978", "name": "Orçamento Patricia Lito 22 Abril 250 Pax 7.30€.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "e3643c96-e323-4b92-8f40-1a27a7f37897", "name": "Orçamento Maria Teresa Herdeiro 7 CB.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "69154dae-e9cf-44b0-87b2-d27ea5af6791", "name": "Orçamento 25 e 26 de Março  Arthur Araujo.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "a75eb224-da05-42d7-9a50-61dce4530157", "name": "Orçamento 11 de Março  Living Tours Carolina Poças.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "6c7cbef6-086b-4792-a2ef-07ea6ae0a3e2", "name": "Orçamento Estudio PT Pedro.pdf", "kind": "quote", "status": "issue", "issue": "no total"}
-{"upload_id": "4fff3a1f-b177-409f-8a7a-2cd45a0fc621", "name": "Orçamento Maythe quantidades.pdf", "kind": "quote", "status": "issue", "issue": "no total, no guests"}
-{"upload_id": "4a1e227c-563d-4a87-ae48-93d2017a890e", "name": "Orçamento 22 de Julho Ines Santos Palbit 70 pax.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "535c315a-3dc7-476c-8424-af244583a864", "name": "Orçamento Inês F Fonseca- 2 cb.docx", "kind": "quote", "status": "issue", "issue": "no date"}
-{"upload_id": "5aa1d5e7-ed02-47a6-b04d-f331da36341b", "name": "Orçamento 31 de Outubro Tatiana Cb.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "27f73d06-b990-49f7-a22b-50583faa9df8", "name": "Lunch Box 5€ a 15€.docx", "kind": "quote", "status": "issue", "issue": "no date, no total, no guests"}
-{"upload_id": "29d2f77a-6b41-42e3-898b-5d9b7274c33b", "name": "Orçamento Maria Judite Mendes 9 Agosto 60 pax.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "9e58b493-d359-418b-8cb5-7624ebd8e56f", "name": "Orçamento Mariana Rodrigues 23 e 24 de Outubro.docx", "kind": "quote", "status": "issue", "issue": "no total, no guests"}
-{"upload_id": "dddd194a-b978-47cf-b02a-68c205a34107", "name": "Orçamento Ines Costa SKY reduzido.pdf", "kind": "quote", "status": "issue", "issue": "no total"}
-{"upload_id": "e26246d1-57d8-496d-9e24-c56c6e9e7e4c", "name": "Mix menus aberto a negociação.pdf", "kind": "quote", "status": "issue", "issue": "no date, no total"}
-{"upload_id": "50a69476-2816-459c-868e-be3fefdde94b", "name": "Orçamento 27 Março Ines Santos Palbit.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "f3a9ca89-e202-44a9-b8b7-c1b4641c6710", "name": "Orçamento 9 e 10 de Abril Inês Carvalho Final.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "c291403d-1801-428a-9f0b-3dc5bf91c035", "name": "Mix menus Ostraveiro.docx", "kind": "quote", "status": "issue", "issue": "no date, no total, no guests"}
-{"upload_id": "f8577f73-bcdf-434e-a7bd-08330b2cf52f", "name": "Orçamento Sofia Andrade.docx", "kind": "quote", "status": "issue", "issue": "no date"}
-{"upload_id": "ad3e76f5-0c17-40fb-901c-3d1dcb92e54a", "name": "Orçamento 5 de Março Eva Andrade.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "9d585128-b1f1-4d19-9a93-84e31a5bf856", "name": "Orçamento Pedro Pais 15 de Janeiro WC + Almoço.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "c87c5d42-5438-4d0a-a999-bb6ba2e26cd8", "name": "Orçamento 28 de Maio Ines Santos Palbit (Prata).docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "71959fe6-00f6-4139-9da7-c7147018e15f", "name": "Lunch Box 5€ a 17€.docx", "kind": "quote", "status": "issue", "issue": "no date, no total, no guests"}
-{"upload_id": "94a475ad-c869-4f8d-b3bf-ceb004ba08d8", "name": "Orçamento Cesar Setenis 21 de Novembro Almoço.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "733d4803-00e9-402c-8c90-ecf903b82aef", "name": "Orçamento Inês Direito17 e 18 Junho Cb + Almoço +Cb final.pdf", "kind": "quote", "status": "issue", "issue": "no guests"}
-{"upload_id": "36edb724-0621-4fe1-abe3-d82239be8536", "name": "Orçamento Pedro Pais 15 de Janeiro WC + Almoço.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "add8f72d-4379-4673-9777-6446b0aedc60", "name": "Orçamento Dra Elsa 28 de Outubro Almoço +Cb.pdf", "kind": "quote", "status": "issue", "issue": "no guests"}
-{"upload_id": "0f0d2daf-7551-4796-a679-f4059e4189d2", "name": "Orçamento 19 e 20 de Março Rita S. Freitas CMA Valores discriminados.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "01d7afbe-b380-42a7-9a35-cc861887aed2", "name": "Orçamento Patricia Lito 22 Abril 250 Pax 7.50€.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "8c8c40b2-8629-4648-8446-e91937fe5db9", "name": "Orçamento Rosa Andias 19 Julho.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "5dd3b068-ee6f-4d24-8326-fa1a1f5e2237", "name": "Orçamento 22 de Julho Ines Santos Palbit 70 pax 7€.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "6cc27a45-b560-47c1-8678-0f4e71d9c57b", "name": "Mix Menus.docx", "kind": "quote", "status": "issue", "issue": "no date, no total, no guests"}
-{"upload_id": "d0af9dd7-0c04-4415-84d0-0046191d812c", "name": "Orçamento Fevereiro 2026 Res Argentea.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "082b73a2-4359-4a06-a9fb-17ba55a73484", "name": "Orçamento Diogo Dias Reduzido.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "ccd80624-a4e6-4150-b728-a9fb6a1f9c5d", "name": "Orçamento Ana Braga APECE 25 a 27 Fevereiro.pdf", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "53f0d9ae-5d04-45b6-9ffe-e51e6bd748ae", "name": "Orçamento Humberto Remax Inauguração 10 de Julho.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "ece99e49-3658-4ecb-ae80-a5cba5e13c2f", "name": "Orçamento Marta Trindade Lunch Box 8.50€.docx", "kind": "quote", "status": "issue", "issue": "no date, no total"}
-{"upload_id": "4e174c5c-5124-49e5-8516-eb92e602590d", "name": "Orçamento 28 de Maio Ines Santos Palbit.docx", "kind": "quote", "status": "ok", "issue": null}
-{"upload_id": "110c1483-fc9b-4e29-b172-dfb8fa879de9", "name": "Orçamento Daniela Oliveira 12€.docx", "kind": "quote", "status": "issue", "issue": "no date"}
-{"upload_id": "d1ae3761-b8bf-4bc5-8061-f37d1771e530", "name": "Orçamento 20€ Aveiro com Paixão Sandra.docx", "kind": "quote", "status": "issue", "issue": "no date, no guests"}
+{"upload_id": "f88724cd-94c7-4026-b924-f85c752fdddb", "name": "Orçamento Bling Tânia Baptista 17 de Junho 25.379€.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "7d1b4e76-1fdc-416b-be03-2b6a204f6ca1", "name": "Orçamento 29 de Abril 2026 CS Wind.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "333fd3d1-e6ed-4c35-a428-8c914fc5b581", "name": "Lunch Box 10 e 15€.pdf", "kind": "proposal", "status": "issue", "issue": "no total"}
+{"upload_id": "8d451b61-daf0-432c-8c77-16f2a47e072f", "name": "Orçamento Fabridoce  (Porco Espeto).pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "e001b84f-d831-4775-ab46-a15deddb39a9", "name": "Orçamento 26 de Setembro Orbis.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "effa0b3a-aaa9-4733-8764-76ec6d99c421", "name": "Orçamento para AD Air Centre Lunch Box.pdf", "kind": "proposal", "status": "issue", "issue": "no total"}
+{"upload_id": "2b20575c-4859-4529-a718-e69b8f3dfea0", "name": "Orçamento 13 de Junho 2026 Madalena Ferreira só espumante.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "90e00089-76a5-499b-8c6e-4400c259263b", "name": "Orçamento 22 de Abril Pedro Oliveira 30 pax.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "2e4df04f-1042-40b6-a430-dc4378684429", "name": "Orçamento 21 de Abril Enrikson 50 pax.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "10d7d024-d705-4e2f-9e04-54f18a0ceeba", "name": "Orçamento Inês Direito17 e 18 Junho Cb + Almoço +Cb.docx", "kind": "proposal", "status": "issue", "issue": "no guests"}
+{"upload_id": "c3302f66-ef2b-4af5-a22f-ae98cd6f787d", "name": "Orçamento Bling Tânia Baptista 17 de Junho 65 pax.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "3b3f4315-6bb9-4420-b588-cc889217a62a", "name": "Orçamento Bling Tânia Baptista 17 de Junho 25.379€.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "4f31835c-98c5-4c5b-8612-6ba78e77d1c5", "name": "Orçamento Raquel Barrocas.docx", "kind": "proposal", "status": "issue", "issue": "no date"}
+{"upload_id": "0a139db7-372c-4841-8b6e-a09fafbedd07", "name": "Orçamento Leonor Gonçalves 26 e 27 Junho Cb.docx", "kind": "proposal", "status": "issue", "issue": "no guests"}
+{"upload_id": "ea092034-2f0b-43fe-a2cd-f1395f09827c", "name": "Orçamento Inês Pinheiro  30 de Maio  Almoço+Cb 80pax.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "209e6c88-a48e-4383-ab5a-900521f67324", "name": "Orçamento 7 a 9 de Setembro Cb + Almoços Margarida Pereira.docx", "kind": "proposal", "status": "issue", "issue": "no total, no guests"}
+{"upload_id": "9d2aca46-9e43-46c1-b37c-31ed87b12a0d", "name": "Orçamento Isabel Teixeira.docx", "kind": "proposal", "status": "issue", "issue": "no date"}
+{"upload_id": "b79090dc-5b46-4afa-b7e9-1b7f3e0942ee", "name": "Orçamento 26 Março Isabel César Cb Médio UA.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "f0d23119-8e86-42b2-ad98-a338851f7e22", "name": "Orçamento 18 de Abril Pedro Marto.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "cf5d91b1-6463-48ce-84b1-69016b4dc074", "name": "Orçamento 25 de Abril 2026 Madalena Ferreira.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "615891b5-f77d-4d7c-a018-550da3ecfbd0", "name": "Orçamento Maria Judite Mendes 9 Agosto 60 pax.pdf", "kind": "proposal", "status": "issue", "issue": "no total"}
+{"upload_id": "b5907a6d-0093-4aae-8d77-c6967ff1fd1a", "name": "Orçamento 9 e 10 de Abril FFonseca Inês Vergas.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "d20d1e4b-576c-4aeb-94ec-e426d23fb128", "name": "Orçamento 19 e 20 de Março Rita S. Freitas CMA Final.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "e086609c-a9cb-4de3-ae87-22b84b703810", "name": "Orçamento Leonor Gonçalves 26 e 27 Junho Cb 5.50€.docx", "kind": "proposal", "status": "issue", "issue": "no guests"}
+{"upload_id": "f05fcb3b-1ffc-40ea-b650-2aad9e4b076d", "name": "Orçamento Humberto Remax Inauguração.docx", "kind": "proposal", "status": "issue", "issue": "no date"}
+{"upload_id": "b97ae067-2963-4aa8-8be1-6aed45c794a1", "name": "Orçamento Conceição carvalho Junho e Julho.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "1c753744-e050-4e82-a7ec-c1725fa993e8", "name": "Orçamento Inês Pinheiro  30 de Maio  Almoço.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "d7ea5a76-fd3f-4a60-a02f-8fd15ca8ec85", "name": "Orçamento Francisca Ferreira 14 de Março  Almoço+Cb Reduzido.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "c3b569f9-38b0-4265-88cf-1e3a2065568e", "name": "Orçamento Daniela Oliveira  4 Julho final.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "d87f8c96-2b05-442a-bb8d-77bb4cae204b", "name": "Orçamento Silvina 5 de Dezembro Jantar 27.50€.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "b463b863-b36c-4d05-a173-14e5d43434ad", "name": "Orçamento Fabridoce  (Porco, Cerveja e Sangria).docx", "kind": "proposal", "status": "issue", "issue": "no date"}
+{"upload_id": "63c4c593-ea2b-462f-848b-183ec1276815", "name": "Orçamento Fevereiro 2026 Res Argentea.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "af06f9bd-f481-437e-ae03-c7694747d626", "name": "Orçamento Ana Pereira 23 de Maio.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "c817a4b1-a1cd-49ca-94ad-4ead0065472c", "name": "Orçamento Inês Direito 19 Junho Cb am 60 pax.docx", "kind": "proposal", "status": "issue", "issue": "no guests"}
+{"upload_id": "62884639-81f6-419e-a8b4-8cd6730ed6ca", "name": "Orçamento Maythe quantidades.docx", "kind": "proposal", "status": "issue", "issue": "no date, no total, no guests"}
+{"upload_id": "76087b95-41cf-4dfe-8ea2-aada1cfb8c55", "name": "Orçamento Load Cb - 6.60€ + Almoço - 17€   75 pax.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "5502d510-bcfb-438a-bf80-f5088001af78", "name": "Orçamento Silvina 5 de Dezembro Jantar 27.50€.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "9bb07e5d-92b6-4ef4-ad63-cad551d6c89c", "name": "Orçamento 18 Janeiro 2026 Sofia Marto.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "9a1012d7-ea42-444f-b525-e6ef391620f5", "name": "Orçamento 5, 6 e 7 Março Dra. Sofia Moreira.pdf", "kind": "proposal", "status": "issue", "issue": "no guests"}
+{"upload_id": "38d6981b-d2d8-4045-9f62-43926507376a", "name": "Orçamento 31 de Março Carisa Martins InovaRia Almoço 20 pax-20€.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "3c30cdcf-e6bf-432d-868d-74d305da2bb7", "name": "Cb Anabela Anjos 15 de Maio.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "55ff616b-ea56-49ba-ad27-f14002b913a3", "name": "Orçamento Paulo Pereira  Almoço 8€.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "94340aab-9813-4449-a412-fef276d0676a", "name": "Orçamento Daniela Oliveira 5 de Julho.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "8b3b0db5-ae2d-447d-82de-ebb743a159ef", "name": "Orçamento Patricia Lito 22 Abril 250 Pax.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "d502f4cd-bf3a-43dc-8a03-930937858d8d", "name": "Orçamento 13 de Junho 2026 Madalena Ferreira Pedido 2.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "db3fbae8-25bd-4b41-8188-5422d5db89d7", "name": "Orçamento Maria Teresa Herdeiro.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "67bfa38d-65be-49e9-96b7-8f5b1ce2429d", "name": "Orçamento Catia Monteiro 24 de Outubro.pdf", "kind": "proposal", "status": "issue", "issue": "no guests"}
+{"upload_id": "2f3d857a-4152-4105-b625-22d1301db027", "name": "Orçamento Dra Elsa 28 de Outubro Almoço +Cb.docx", "kind": "proposal", "status": "issue", "issue": "no guests"}
+{"upload_id": "69f05e95-18f8-4465-a8aa-20f500c29162", "name": "Orçamento 3 e 4 de Setembro Cb am e pm Sonia Nunes.docx", "kind": "proposal", "status": "issue", "issue": "no total, no guests"}
+{"upload_id": "be842f96-a37b-4928-9e40-657ca0c52655", "name": "Orçamento Sofia Andrade Ajustado.docx", "kind": "proposal", "status": "issue", "issue": "no date"}
+{"upload_id": "47a412b4-9a95-4326-9bcc-3b5d2b2e8a46", "name": "Orçamento 13 de Junho Mike Almoço e Jantar 8€.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "b6144dd2-a6ba-4f3b-ba57-2d63bfa1f7a6", "name": "Orçamento Joao Amorim Cb am e Cb pm.docx", "kind": "proposal", "status": "issue", "issue": "no date"}
+{"upload_id": "ad60b92f-6196-4074-8b03-43c93e11cf1d", "name": "Orçamento Fanny SEAC 14,15,16 Outubro.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "87ca96b0-8a0d-40dc-847b-3ea562c39be6", "name": "Orçamento 22 de Abril Monica Aresta 14 pax.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "f8050de5-2e78-4833-b094-11b615ff3562", "name": "Orçamento 30 de Outubro Rita Serrano.docx", "kind": "proposal", "status": "issue", "issue": "no total, no guests"}
+{"upload_id": "467bca5d-fea7-4a7a-acff-2044e7da2507", "name": "Orçamento 26 de Setembro Orbis.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "1d285e4f-2259-48f3-a47c-396cfa805bbd", "name": "Orçamento Amara N Zero 22 Outubro.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "958487be-2da7-49bf-b1e6-f98788acbb5b", "name": "Orçamento Joao Amorim Cb am e Cb pm.pdf", "kind": "proposal", "status": "issue", "issue": "no date"}
+{"upload_id": "0317f634-89c0-4e6e-a041-0eb3b6187615", "name": "Orçamento 27 de Março Ines Costa Sky.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "70ce900a-4541-467c-a57e-8d91208454d9", "name": "Orçamento Maria Teresa Herdeiro 7 CB.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "9aea5490-5a6f-4b47-b23c-b3abaff3d89e", "name": "Orçamento 1 de Agosto Monica Santos Almoço 40 pax.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "70824660-04fc-4893-9cb4-6322a0a54402", "name": "Orçamento 28 de Maio Ines Santos Palbit.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "4a26f45a-16e2-43c9-870f-99d7b6d72dd4", "name": "Orçamento 30 de Junho 2026 CS Wind.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "bff73c83-ac19-4da2-ba5d-7cfac998d658", "name": "Orçamento Paulo Barroca Santarem.pdf", "kind": "proposal", "status": "issue", "issue": "no total"}
+{"upload_id": "7d9fcc8a-e661-49b1-941d-bfc2245166af", "name": "Orçamento 13 de Junho Mike Almoço e Jantar 8€ - 180 PAX.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "41ec9714-fe05-4354-8b83-ec4500afd01c", "name": "Orçamento 31 de Março Carisa Martins InovaRia Almoço 20 pax-20€.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "6ecba42a-ad62-41fe-a803-a369fc60f111", "name": "Orçamento 10 de  Outubro Corrida AAUAv.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "579b5961-6083-4edb-a8ef-5542aaaa4497", "name": "Orçamento 22 de Abril Pedro Oliveira 30 pax.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "665c61ab-e6e2-4167-aa4c-9d9e03ee335b", "name": "Orçamento 5 e 11 de Março  Living Tours Carolina.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "ff05ce15-6415-4073-8dc5-8a06d215566c", "name": "Orçamento 11 de Dezembro Carolina Batista.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "d6998f8e-4c01-46af-8161-aa7d9906e81f", "name": "Orçamento Inês Pinheiro  30 de Maio  Almoço+Cb.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "046b69bf-83b4-440c-935d-178a67c3dce2", "name": "Orçamento Sandra Silva 31 Outubro.pdf", "kind": "proposal", "status": "issue", "issue": "no total, no guests"}
+{"upload_id": "efb775e1-b3cb-4c29-82be-c93e80bbdfe0", "name": "Orçamento 21 de Fevereiro 26 CS Wind.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "19288e19-67b7-49ef-b6db-2b59a61ae80d", "name": "Orçamento Rosa Andias 19 Julho.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "dd5442ad-12b4-4629-b0aa-41988acf335f", "name": "Orçamento 31 de Outubro Tatiana Cb.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "4e2b7dba-5a0f-4242-aca4-32dca88899fd", "name": "Orçamento Ana Sofia Teixeita 21 de Novembro Almoço.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "1e3c8e98-5a31-4d40-93d1-98e8b71c8bed", "name": "Orçamento Daniela Oliveira  4 Julho final.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "77b737a2-2b59-4823-8dcf-8487ce30a7ea", "name": "Orçamento Sonia Nunes 9-10-11 Setembro Cb + Almoço +Cb.pdf", "kind": "proposal", "status": "issue", "issue": "no guests"}
+{"upload_id": "355ede81-70e7-46fb-8fb6-472db5b8a5e1", "name": "Orçamento Humberto Remax Inauguração 10 de Julho.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "c256b435-6656-4bc3-a0b1-af0c0e001c2d", "name": "Orçamento Mariana Rodrigues 23 e 24 de Outubro.pdf", "kind": "proposal", "status": "issue", "issue": "no total, no guests"}
+{"upload_id": "fc4d8b38-4ba3-4f34-8462-0ade3c731aa1", "name": "Orçamento 17 de Março SKY Inês Costa.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "6b07688b-1e78-46b0-b413-b0a22cbc2cd9", "name": "Orçamento Load Cb - 6.60€ + Almoço - 17€   75 pax.docx", "kind": "proposal", "status": "issue", "issue": "no date"}
+{"upload_id": "327d38fd-7f24-4698-a128-132ef7c1d6c0", "name": "Orçamento 9 e 10 de Abril Inês Carvalho.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "aaae2900-492b-46d1-aba7-7f534c90248a", "name": "Orçamento Patricia Lito 22 Abril 250 Pax 8.30€.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "03c2aed0-8a9a-468d-a8b6-88cc3c7e420d", "name": "Orçamento 26 Março Isabel César Cb Médio.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "95de9fd6-8a79-472f-9218-1ff17e7702f5", "name": "Orçamento Fabridoce  (Porco Espeto).docx", "kind": "proposal", "status": "issue", "issue": "no date"}
+{"upload_id": "9182d5b7-bc0d-4fb5-9c50-f95e1f5d452d", "name": "Orçamento Estudio PT Pedro.docx", "kind": "proposal", "status": "issue", "issue": "no date, no total"}
+{"upload_id": "b0eac091-a169-4f3d-b636-72828e573350", "name": "Orçamento Conceição carvalho Junho e Julho.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "e266a540-4106-4557-b095-05ae50c5e67e", "name": "Orçamento 21 de Abril Enrikson 50 pax.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "8a0b94de-4535-4e63-b431-040a30de0d2f", "name": "Mix menus ( a defenir) Load.pdf", "kind": "proposal", "status": "issue", "issue": "no total"}
+{"upload_id": "b5ba2947-e56b-44b7-86a7-5b4ab4a42231", "name": "Orçamento 9 e 10 de Abril Joana Inês Carvalho 24 pax.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "3071bad6-6869-457e-8dc2-50c19b6c4c63", "name": "Orçamento 5 de Maio Pedro Oliveira.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "bf17ea71-bd2e-4594-9122-dd6777a2836f", "name": "Mix menus aberto a negociação.docx", "kind": "proposal", "status": "issue", "issue": "no date, no total, no guests"}
+{"upload_id": "d1b4e47f-fca4-4541-8b86-2ad073b30693", "name": "Orçamento 17 de Abril Ana Neves 22 pax.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "3a8c8f17-ec1b-4d88-a097-c204606a16e5", "name": "Orçamento Sandra Silva 31 Outubro.docx", "kind": "proposal", "status": "issue", "issue": "no total, no guests"}
+{"upload_id": "b99fa1db-dadd-4079-afcb-eb04996b2d7d", "name": "Orçamento Mariana Rapozo 5 cb 4 almoços.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "098eac83-80a1-4449-98cf-ca82f65c6924", "name": "Orçamento Francisca Ferreira 28 de Fev  Almoço+Cb Reduzido.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "b116fde1-e97d-4553-a188-fa8414f4c2a5", "name": "Orçamento 17 Janeiro 2026 Manuela Marques.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "7cd7fa79-1fe8-42ec-a440-3a82a21996c2", "name": "Orçamento Inês Pinheiro  30 de Maio  Almoço+Cb.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "8da673d4-836c-4d3c-b40c-22641a08fed4", "name": "Orçamento Dra Elsa 28 de Outubro Almoço +Cb (Vasco).pdf", "kind": "proposal", "status": "issue", "issue": "no guests"}
+{"upload_id": "11492e21-b958-444e-8011-d9ebfa679e2b", "name": "Cb Anabela Anjos 15 de Maio.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "e9b3a890-2de8-43bd-87a1-833d45d4c6b8", "name": "Lunch Box 8€.docx", "kind": "proposal", "status": "issue", "issue": "no date"}
+{"upload_id": "227119ab-473a-4c35-90f6-47ceea6f6355", "name": "Orçamento 25 de Abril 2026 Madalena Ferreira 10.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "b9ba20af-29b3-4e52-954a-5599bda98194", "name": "Orçamento Rita Marques 27-7-26 c serviço e s serviço.pdf", "kind": "proposal", "status": "issue", "issue": "no guests"}
+{"upload_id": "bbbe49c1-c05c-4566-8529-f917ed518ab8", "name": "Orçamento Quinta das Azenhas 2 cb + almoço.pdf", "kind": "proposal", "status": "issue", "issue": "no date, no total"}
+{"upload_id": "10fdcc7a-c105-4644-95c1-2dd5a081efaf", "name": "Orçamento 30€ Aveiro com Paixão Sandra.pdf", "kind": "proposal", "status": "issue", "issue": "no date"}
+{"upload_id": "865a5407-c718-47bd-922c-5a16e6133474", "name": "Orçamento Daniela Oliveira 12€ Final.docx", "kind": "proposal", "status": "issue", "issue": "no date"}
+{"upload_id": "21f67770-527e-45b3-9e70-1dfe15f6fb8e", "name": "Orçamento 23 de Maio Municipio de Ilhavo Cb+Almoço+Cb.docx", "kind": "proposal", "status": "issue", "issue": "no guests"}
+{"upload_id": "4719f879-df29-4711-a48a-af32342bca5f", "name": "Orçamento Rita CMA.docx", "kind": "proposal", "status": "issue", "issue": "no date"}
+{"upload_id": "4e71b230-3e00-4b3a-9ed4-86d52c5f8011", "name": "Orçamento Fabridoce  (Porco, Cerveja e Sangria).pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "794663f1-e77e-4b54-976b-096aa9d5feb1", "name": "Orçamento Daniela Oliveira 5 de Julho 65.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "e0909981-359f-4d5c-844f-82b917b4b4fe", "name": "Orçamento 22 de Julho Ines Santos Palbit 70 pax 8€.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "b135ec24-5747-4016-bb9b-1df37397f6d8", "name": "Orçamento Paula ferreira 16 de Julho.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "9cd24b6d-b4ba-415e-a7e2-34c03a976858", "name": "Orçamento 13 de Junho 2026 Madalena Ferreira 1751.50.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "cfd04752-9b3a-45e1-82e3-a86a57848b83", "name": "Orçamento 27 Outubrobro Cb + Almoço Daniela Pedro.docx", "kind": "proposal", "status": "issue", "issue": "no date"}
+{"upload_id": "aecc7fc5-fe95-4509-996a-204d6ea31bc6", "name": "Orçamento 23 de Maio Isabel Arribas.docx", "kind": "proposal", "status": "issue", "issue": "no total, no guests"}
+{"upload_id": "bed0eac7-064b-4864-9499-c0b167b04976", "name": "Orçamento Francisca Ferreira 28 de Fevereiro  Almoço+Cb Reduzido.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "52a82d30-6c2f-4eca-bb4a-9e3dbbd645cf", "name": "Orçamento 28 de Maio Ines Santos Palbit (Prata).pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "38b68707-2430-41cb-88a7-9541b151d196", "name": "Orçamento Daniela Oliveira 12€.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "74df1ef0-f2e7-4189-be4b-cdaf281ef88e", "name": "Orçamento Sofia Anfrade.docx", "kind": "proposal", "status": "issue", "issue": "no date"}
+{"upload_id": "5d80bc64-5137-45a8-bc7d-9033b52c4afc", "name": "Orçamento 5, 6 e 7 Março Dra. Sofia Moreira.docx", "kind": "proposal", "status": "issue", "issue": "no guests"}
+{"upload_id": "1d1ecb88-7360-47c8-8288-e63305634439", "name": "Orçamento Paulo Barroca Santarem.docx", "kind": "proposal", "status": "issue", "issue": "no date, no total"}
+{"upload_id": "a605eb3e-b0b9-4407-af86-361408c2a1d9", "name": "Orçamento Francisca Ferreira 14 de Março  Almoço+Cb Reduzido.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "b6ed3817-2513-4442-8dc9-bccf49ed1b59", "name": "Orçamento 27 e  28 de Abril Gloria Pinto 15 pax. Am e Pm.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "90db6a60-e27d-4744-93f7-a95e0393fc45", "name": "Orçamento 25 de Abril Madalena Ferreira 2026.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "ff384872-b5fe-459d-b153-3a53547f2a79", "name": "Orçamento Mariana Rapozo 5 cb 4 almoços.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "5dbca434-9b82-4bb7-86b5-83f3c4e51d7e", "name": "Orçamento Mariana Rapozo 5 cb 4 almoços (RESINSURF).docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "bd3d6464-2caa-4d0a-9160-4d0ed1ef0f73", "name": "Orçamento Inês Direito17 e 18 Junho Cb + Almoço +Cb final.docx", "kind": "proposal", "status": "issue", "issue": "no guests"}
+{"upload_id": "aa83ba24-c4dc-45b7-879b-ba8ecd1d4c14", "name": "Orçamento 10 de  Outubro Corrida AAUAv.docx", "kind": "proposal", "status": "issue", "issue": "no guests"}
+{"upload_id": "7f3064fb-51e3-4f8c-931e-ab17fe81bebd", "name": "Orçamento Catarina Mano 23M 5 de Fevereiro  Almoço.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "7f0ba4c5-8548-4df7-858f-ef1700ef074c", "name": "Orçamento Catarina Mafalda Soares Batizado 17 de Maio.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "fbe7dabe-e052-4093-928a-1f69eecc37cd", "name": "Orçamento 12 Junho Madalena Gloria.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "24588d5a-e844-441e-a018-bfc621043296", "name": "Orçamento 13 de Junho 2026 Madalena Ferreira 14.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "82e0a731-7eb3-42c1-8129-d29db71a2597", "name": "Orçamento 30€ Aveiro com Paixão Sandra.docx", "kind": "proposal", "status": "issue", "issue": "no date, no guests"}
+{"upload_id": "7672bd20-6fca-4c4a-9d56-541853cfe4ea", "name": "Orçamento Daniela Oliveira 20€.docx", "kind": "proposal", "status": "issue", "issue": "no date"}
+{"upload_id": "098e5e71-30ef-4251-a77a-df83f13eda58", "name": "Lunch Box 8€.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "2ea1ec3d-12c5-4401-9d74-84061032f96d", "name": "Orçamento 30€ Aveiro com Paixão.docx", "kind": "proposal", "status": "issue", "issue": "no date, no guests"}
+{"upload_id": "84816ec1-c0cb-4579-84c8-7ed620d57533", "name": "Orçamento 19 de Fevereiro 2026 CS Wind.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "3c269f63-0a3b-485f-9e0f-9924ac8d7cd8", "name": "Orçamento 19 e 20 de Março Rita S. Freitas CMA.pdf", "kind": "proposal", "status": "issue", "issue": "no guests"}
+{"upload_id": "51fe1cf5-796c-4f8a-9990-f21e2013dad3", "name": "Orçamento Ana Sofia Teixeita 21 de Novembro Almoço.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "f619dfa4-b475-4efc-8702-e5ef0ce6250b", "name": "Orçamento Paulo Pereira  CB 6.5€.pdf", "kind": "proposal", "status": "issue", "issue": "no date"}
+{"upload_id": "bfc5c0d8-5b5d-4498-9433-70c38fd11374", "name": "Orçamento 19 e 20 de Março Rita S. Freitas CMA Valores discriminados.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "7de5363a-c3dc-45cd-b65c-41782f9c2431", "name": "Orçamento 5 de Maio Pedro Oliveira Reduzido.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "fce27fa1-f66d-483b-b464-8cf369717b66", "name": "Orçamento Bling Tânia Baptista 17 de Junho 70 pax.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "1d79462c-78e2-4e76-a4e3-4e05f8a875a6", "name": "Orçamento Fabridoce 12 de Maio (Porco, Cerveja e Sangria).docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "9deb83a4-7785-4a7c-b449-85eaa7afcf7f", "name": "Orçamento 25 de Abril 2026 Madalena Ferreira 10.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "0494052f-5b18-4c27-9b30-25e1fd2f6fa9", "name": "Orçamento para AD Air Centre Lunch Box Completa.pdf", "kind": "proposal", "status": "issue", "issue": "no total"}
+{"upload_id": "cb81bb74-cb41-42fd-aa9a-81ba676a060d", "name": "Orçamento Marta Trindade Lunch Box.pdf", "kind": "proposal", "status": "issue", "issue": "no total"}
+{"upload_id": "bef08f09-7c0c-46d8-89c7-09e1d7142046", "name": "Orçamento 18 Janeiro 2026 Sofia Maroto.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "2636d93a-6170-47ec-9afb-e3c3e28a0e3f", "name": "Orçamento Prazeres Maria 28 de Abril Jantar 45 Pax.docx", "kind": "proposal", "status": "issue", "issue": "no total"}
+{"upload_id": "419287b6-c360-402f-9e95-908feb09361b", "name": "Mix menus ( a defenir) Load.docx", "kind": "proposal", "status": "issue", "issue": "no date, no total, no guests"}
+{"upload_id": "90053ee3-b25b-429e-ae1a-1f90b1f8286d", "name": "Orçamento Sonia Nunes 9-10-11 Setembro Cb + Almoço +Cb.docx", "kind": "proposal", "status": "issue", "issue": "no guests"}
+{"upload_id": "1a883d6c-f250-4e33-a30b-a22bd21ffd26", "name": "Orçamento 19 e 20 de Março Rita S. Freitas CMA Final.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "e6f77078-0089-42b9-a10e-c6f17ffdd948", "name": "Orçamento 25 e 26 de Março  Arthur Araujo.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "ddf995fb-c2ca-4531-8d24-9952ef69638b", "name": "Orçamento 27 de Março Ines Costa Sky.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "396154e3-0154-4b62-8c5a-a0c0ee94bd98", "name": "Orçamento 13 de Junho Mike (sopa e bifanas)..docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "1c16d63a-f010-431c-a715-cea5d18fdee1", "name": "Orçamento 31 de Março Carisa Martins InovaRia Almoço.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "caaa5539-fc92-4fd8-b166-a4755ab56fd3", "name": "Orçamento Rita Marques 27-7-26 c serviço e s serviço.docx", "kind": "proposal", "status": "issue", "issue": "no date, no guests"}
+{"upload_id": "a9d1cf1b-2a08-43b7-927d-9b5398f0e24b", "name": "Orçamento Paula ferreira 16 de Julho.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "749dc015-29a1-4ee1-9ed1-dff10ca1aa0d", "name": "Orçamento 19 de Março SKY Ines Costa.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "6ad289db-f537-4d64-a8da-699fa93241a2", "name": "Orçamento 22 de Julho Ines Santos Palbit 70 pax 8€.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "cfdcec28-067f-4ea0-90e7-2609ac2972b2", "name": "Orçamento 5 de Março Eva Andrade.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "c8b0035c-68c4-4eb5-8c0a-0fc11639558b", "name": "Mix menus ( a defenir).pdf", "kind": "proposal", "status": "issue", "issue": "no date, no total"}
+{"upload_id": "f360898d-a076-45f1-ba25-8aef2b24e303", "name": "Orçamento 13 de Junho 2026 Madalena Ferreira 1751.50.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "664c3d1e-3979-491a-95b5-e00f8e11ce8b", "name": "Orçamento Amara N Zero 29 Outubro.pdf", "kind": "proposal", "status": "issue", "issue": "no total"}
+{"upload_id": "27bec1a4-58a6-4550-96c5-c3993cb513ae", "name": "Orçamento 27 Março Ines Santos Palbit - 2 cb.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "58b6dfad-bb97-428e-b20d-df628838fd7d", "name": "Orçamento 21 de Fevereiro 2026 CS Wind.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "972c5a09-1d89-435a-9736-4b4d431283d7", "name": "Orçamento Mariana Rapozo 5 cb 4 almoços (RESINSURF).pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "7321fde2-5faa-4860-b2cf-97c2c2277b02", "name": "Orçamento 23 de Maio Municipio de Ilhavo Cb+Almoço+Cb base.pdf", "kind": "proposal", "status": "issue", "issue": "no guests"}
+{"upload_id": "35c1cbba-d6bb-48dc-8fb7-478203b794a7", "name": "Orçamento Sonia Nunes 25 e 26 Junho Cb + Almoço +Cb.pdf", "kind": "proposal", "status": "issue", "issue": "no guests"}
+{"upload_id": "d606e185-437e-4092-ada2-ab4cdc4f6cbc", "name": "Orçamento 27 e  28 de Abril Gloria Pinto 15 pax..docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "af6e2cf4-2e57-4884-9431-132a9eb41b0f", "name": "Orçamento 13 de Junho 2026 Madalena Ferreira Pedido 1.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "f9aed788-0f44-4c54-9dc1-056c7aaed879", "name": "Orçamento 21 de Julho HomyCasa.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "36a76a04-5522-40b9-8853-ddfe3e58938b", "name": "Orçamento AIDA Susana Carvalho.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "244ab69e-e196-47b1-be53-b281075f37d9", "name": "Orçamento Vera Reis PCI  8 de Abril wc + cb.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "b178a689-6bbf-4c9a-8665-8b23440d3493", "name": "Orçamento 18 de Novembro Cb + Almoço Maria Paulo.pdf", "kind": "proposal", "status": "issue", "issue": "no total"}
+{"upload_id": "78b395d8-9269-4178-9019-0bf2e2ec1641", "name": "Orçamento Dra Elsa 28 de Outubro Almoço +Cb (Vasco).docx", "kind": "proposal", "status": "issue", "issue": "no guests"}
+{"upload_id": "6550cf0f-0b72-46d6-9873-82dac7389d89", "name": "Orçamento Marta Trindade Cb + Almoço +Cb.pdf", "kind": "proposal", "status": "issue", "issue": "no guests"}
+{"upload_id": "1513748e-2b15-4a78-9e37-98ea0a000232", "name": "Orçamento 17 Janeiro 2026 Manuela Marques.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "36c7a991-2b34-41e2-9a11-835a14ac2e47", "name": "Orçamento Rodrigo Cb e Almoço.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "d52939e3-7430-4a05-92d3-83a10db7bba1", "name": "Orçamento para AD Air Centre Lunch Box Completa.docx", "kind": "proposal", "status": "issue", "issue": "no date, no total"}
+{"upload_id": "917e082c-52db-4a99-9330-15af904157ea", "name": "Orçamento Patricia Lito 22 Abril 250 Pax 8.30€.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "98a22920-2c81-47c1-9caf-7d9255bee250", "name": "Orçamento 18 Janeiro 2026 Sofia Maroto.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "54b67e02-456f-4c91-a1c5-5cfa76274876", "name": "Orçamento Daniela Oliveira 5 de Julho 65.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "e1e46e4c-0cc6-4b9c-bc5f-def5ce4f3f7a", "name": "Orçamento Gonçalo Fonseca 4 de Setembro.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "36a19615-2da9-45b7-8d29-3466e27023cc", "name": "Orçamento 23 de Maio Municipio de Ilhavo, Biblioteca Municipal Isabel Machado Teixeira.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "c153d1e9-9ecf-4c0d-9aa8-43bb2a152fac", "name": "Orçamento 25 de Abril 2026 Madalena Ferreira 14.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "e19363c5-a977-4a46-8fc0-fff81e43f973", "name": "Orçamento 15 Outubro Pedro Oliveira Cb am + Cb pm.pdf", "kind": "proposal", "status": "issue", "issue": "no guests"}
+{"upload_id": "3cac61e3-f653-430e-968c-a73c32f41f31", "name": "Orçamento Paulo Barroca Santarem 500.docx", "kind": "proposal", "status": "issue", "issue": "no date"}
+{"upload_id": "c73fbe81-b9c1-462f-95fc-f95f04938f86", "name": "Orçamento CB 13 Outubro Mariana Rodrigues.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "f158130e-6f56-4763-9083-ffec4af23f68", "name": "Orçamento Fabridoce 12 de Maio (Porco, Cerveja e Sangria).pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "090bc05d-8e68-4d52-826e-74d3914dd6a7", "name": "Orçamento Maythe.docx", "kind": "proposal", "status": "issue", "issue": "no date, no total, no guests"}
+{"upload_id": "0dd3f55f-be54-4a25-a181-501d104a4e25", "name": "Orçamento Leonor Gonçalves 26 e 27 Junho Cb.pdf", "kind": "proposal", "status": "issue", "issue": "no guests"}
+{"upload_id": "76bd92ab-bde9-446b-86a0-7bb835f874f7", "name": "Orçamento Ines Costa SKY.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "f01ac36e-3ec6-4096-b0ba-5b22ed662bb7", "name": "Orçamento 17 de Março Mariana Gonçalves (Tondela).pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "4fdf2718-223b-4a0b-bed3-7cb8b1e16d25", "name": "Orçamento 4 de Setembro Gonçalo Fonseca.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "b1ea75ff-cf15-4749-b07e-d060e0f23482", "name": "Orçamento Ana Pereira 23 de Maio CB 7.5€.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "f23dc4cd-4a59-4222-85aa-f57a07dcecd6", "name": "Orçamento 28 de Fevereiro Medical Dra Claudia Cunha.pdf", "kind": "proposal", "status": "issue", "issue": "no total"}
+{"upload_id": "83be43c9-5d92-4ea2-94b7-7bc6eca96fe1", "name": "Orçamento 5 de Maio Pedro Oliveira Reduzido.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "0006d1ac-6e33-4357-a780-50bc8ee6510e", "name": "Orçamento 5 e 11 de Março Carolina.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "ff6dd04c-07f8-4956-905f-d997a50bf3c7", "name": "Orçamento Amara N Zero 29 Outubro.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "8a71c3e9-bcc4-49b5-8d89-bdeeff926fd4", "name": "Orçamento 13 de Junho 2026 Madalena Ferreira 1600.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "1cdc7f48-cf3b-437c-bb79-7ca16f5eed0c", "name": "Orçamento 23 de Maio Isabel Arribas.pdf", "kind": "proposal", "status": "issue", "issue": "no total, no guests"}
+{"upload_id": "115ca986-b14c-4dc7-8474-eabc6b837300", "name": "Orçamento Sofia Andrade Ajustado.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "3fbe780c-33e0-4da0-acb3-334d446e12d3", "name": "Orçamento 13 de Junho 2026 Madalena Ferreira Pedido 2.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "8abfcf88-a12f-45c4-ade8-e0789c8d831a", "name": "Orçamento 27 Outubrobro Cb + Almoço Daniela Pedro 1.docx", "kind": "proposal", "status": "issue", "issue": "no date, no total"}
+{"upload_id": "e2b94c79-a6bb-4a3b-8a44-ebb19102999c", "name": "Orçamento Catarina Mafalda Soares Batizado 17 de Maio.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "69e036ac-48c0-4d4f-9f8e-c082819b18f1", "name": "Orçamento Paulo Pereira  Almoço 8€.docx", "kind": "proposal", "status": "issue", "issue": "no date"}
+{"upload_id": "8e99fddf-7c1f-4f1e-8d26-55b1df5212e9", "name": "Orçamento Pedro Oliveira 22 Abril 30 Pax 7€.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "6c8ad713-71a2-4970-bd32-ee01ffaebe49", "name": "Orçamento 5 de Março Ines Costa Sky.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "1a857f6b-f066-4948-a2f3-45c07499cce2", "name": "Orçamento Daniela Oliveira 12€ Final.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "82d3003a-b0cc-4bd1-9752-3376ee7ab5d8", "name": "Orçamento 7 a 9 de Setembro Cb + Almoços Margarida Pereira Final.pdf", "kind": "proposal", "status": "issue", "issue": "no total, no guests"}
+{"upload_id": "d6680a20-9531-478b-912d-a8e021ff249a", "name": "Orçamento 5 de Maio Pedro Oliveira.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "f1c3e344-99cc-47f8-914a-9d332d4f14e4", "name": "Orçamento 23 de Maio Municipio de Ilhavo, Biblioteca Municipal Almoço.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "6331c4ad-7213-44a6-ad86-dfca22672844", "name": "Orçamento 5 e 11 de Março  Living Tours Carolina.docx", "kind": "proposal", "status": "issue", "issue": "no guests"}
+{"upload_id": "7a5ae10c-c08d-48e8-9174-2a91bb32cc1e", "name": "Orçamento Ana Pereira 23 de Maio CB 7.5€.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "fb41b28d-487c-4bbf-87f6-0454de18c0c4", "name": "Orçamento Catarina Mano 23M  5 de Fevereiro  Almoço 30 Pax.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "e108b64a-8469-4d71-b8da-a389267aef1e", "name": "Orçamento 21 de Julho HomyCasa.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "c8d4b292-ea35-425e-961b-406df6a168aa", "name": "Orçamento Catarina Mano 23M 5 de Fevereiro CB + Almoço.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "1a313e63-561d-4b9b-a5a1-a0ef7a753d2a", "name": "Orçamento Fabridoce.docx", "kind": "proposal", "status": "issue", "issue": "no date"}
+{"upload_id": "7cb228b3-c91b-44e0-b59f-cbd07b954072", "name": "Orçamento Gonçalo Fonseca 4 de Setembro.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "f9577a8a-4492-4f18-8715-46aa1c6ead77", "name": "Orçamento 31 de Março Carisa Martins InovaRia Almoço 20 pax.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "7167cd6a-0821-4233-8677-cd7d632d9c4b", "name": "Orçamento 19 de Março SKY Ines Costa Final.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "7fac93ff-ac82-4870-9aa0-f5463762ecaf", "name": "Orçamento 17 de Abril Ana Neves 22 pax.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "34c1f89f-5b90-4053-840f-fcfa23007e7b", "name": "Orçamento 13 de Junho 2026 Madalena Ferreira só espumante.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "868e07b8-7806-4982-a726-b18d96573f0b", "name": "Orçamento 23 de Maio Municipio de Ilhavo Cb+Almoço+Cb.pdf", "kind": "proposal", "status": "issue", "issue": "no guests"}
+{"upload_id": "cb9cf264-7f8e-40f7-b787-088ee69d4f73", "name": "Orçamento Catia Monteiro 24 de Outubro.docx", "kind": "proposal", "status": "issue", "issue": "no guests"}
+{"upload_id": "d6749296-e46b-4c22-8d26-a83add28b401", "name": "Orçamento Prazeres Maria 28 de Abril Jantar 45 Pax 60 anos.docx", "kind": "proposal", "status": "issue", "issue": "no total"}
+{"upload_id": "c0c9be26-1c25-43b9-82d0-7da66dd92c12", "name": "Mix menus ( a defenir).docx", "kind": "proposal", "status": "issue", "issue": "no date, no total, no guests"}
+{"upload_id": "fec15789-4116-4c56-9b7b-fe0aa8001e69", "name": "Orçamento 16 de Janeiro 26 Patricia Balacó.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "b083d648-8afc-4198-99f2-83f1c5b180f2", "name": "Orçamento Sofia Andrade.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "6fa7a47f-3db3-4c93-8c59-ad3decf939d2", "name": "Orçamento 7 a 9 de Setembro Cb + Almoços Margarida Pereira Final.docx", "kind": "proposal", "status": "issue", "issue": "no total, no guests"}
+{"upload_id": "8b798e82-4289-40df-b4fc-7f0834ea2022", "name": "Orçamento Diogo Dias.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "b8d980eb-86d0-46e9-b631-f638e6705bfc", "name": "Orçamento 25 de Abril 2026 Madalena Ferreira.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "560d8d06-0b72-4a5b-ad97-4fdb29a97e2d", "name": "Orçamento Amara N Zero 22 Outubro.pdf", "kind": "proposal", "status": "issue", "issue": "no total"}
+{"upload_id": "9e65fd4d-5389-41ff-9e6d-2472bddd9deb", "name": "Lunch Box 8€ Madalena Salema.docx", "kind": "proposal", "status": "issue", "issue": "no date"}
+{"upload_id": "a25a3774-d81f-4859-aecc-0672e40ceafb", "name": "Orçamento para AD Air Centre Lunch Box.docx", "kind": "proposal", "status": "issue", "issue": "no date, no total, no guests"}
+{"upload_id": "4afd9bc5-e63d-4b34-856e-2cbbc8fec16d", "name": "Orçamento 27 Março Ines Santos Palbit.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "78ae4d75-bf78-4872-9c22-af091dbbd867", "name": "Orçamento 13 de Junho Mike (sopa e bifanas).pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "b0d4735d-d86f-4f32-86ef-4bebe8297791", "name": "Orçamento 21 de Abril Enrikson 50 pax wc + cb  + almoço + cb.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "8024ed1c-1bfc-42be-b217-4eef8dd1afda", "name": "Orçamento Load Cb + Almoço 75 pax.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "5fa54b33-c38f-41fb-995d-7f2e1b336766", "name": "Orçamento 17 de Julho Lu Werneck.docx", "kind": "proposal", "status": "issue", "issue": "no guests"}
+{"upload_id": "f1be5508-61f0-429b-8eee-76e64b269e01", "name": "Orçamento Ines Costa SKY.docx", "kind": "proposal", "status": "issue", "issue": "no date, no guests"}
+{"upload_id": "aaa2373e-4822-4201-89ff-2f936979349d", "name": "Orçamento Marta Trindade Lunch Box 8.50€.pdf", "kind": "proposal", "status": "issue", "issue": "no total"}
+{"upload_id": "79171e6c-bd63-4264-843d-6eabf15857f0", "name": "Orçamento Daniela Oliveira 5 de Julho.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "5b57722f-94ec-4b03-8d59-9450e68d3006", "name": "Orçamento 31 de Março Carisa Martins InovaRia Almoço.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "c7634f96-2406-49e6-9df8-46f885442717", "name": "Orçamento Maria Judite Mendes 9 Agosto 60 pax a.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "65e0e37d-a0be-4bad-bfb8-4caa3e9797dc", "name": "Orçamento Fanny SEAC 14,15,16 Outubro.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "255f444d-140e-4d08-8e8c-35a2409e16ff", "name": "Orçamento 27 e  28 de Abril Gloria Pinto 15 pax.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "d4869685-a46f-4c49-813b-90a107704194", "name": "Orçamento Raquel Barroca.docx", "kind": "proposal", "status": "issue", "issue": "no date"}
+{"upload_id": "e3234f8b-36fd-41bf-9a64-77952bb71bba", "name": "Orçamento Daniela Oliveira F. 4 Julho.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "4360685a-8291-41a3-af74-7d1234dfc7dd", "name": "Orçamento 11 de Dezembro Carolina Batista.docx", "kind": "proposal", "status": "issue", "issue": "no guests"}
+{"upload_id": "644f7999-353b-45f9-bd9b-310a39b62f20", "name": "Orçamento Sonia Nunes 25 e 26 Junho Cb + Almoço +Cb.docx", "kind": "proposal", "status": "issue", "issue": "no guests"}
+{"upload_id": "dcb4522e-e324-4ed7-aa8e-6379316669e4", "name": "Orçamento Liliana Costa 4 de Março CB.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "cbd21ddd-e94c-4e18-965d-23b80002329e", "name": "Orçamento Bling Tânia Baptista 17 de Junho 70 pax.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "c56d5a6f-6983-4359-8644-4d9bf25b5c4e", "name": "Orçamento 17 de Março Mariana Gonçalves (Tondela).docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "4158b2a6-ed23-4170-b37c-e81c3494f8a3", "name": "Orçamento Eugenio Rocha  3 de Junho  Almoço.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "ab5325da-e3c7-404a-8655-c5ae76d10a67", "name": "Orçamento Inês Direito 19 Junho Cb am.pdf", "kind": "proposal", "status": "issue", "issue": "no guests"}
+{"upload_id": "13854a48-97b5-45af-a0c0-4f556f48ddba", "name": "Orçamento Menu de 25€ Ana Luisa Festas.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "9ebc285b-c20e-4bdd-8ce7-4020ab1a668f", "name": "Orçamento Inês Raquel 19 Julho Almoço.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "d9ba33dd-671c-43db-9d9d-ab4baa707675", "name": "Orçamento 21 de Maio João Pinto 80pax.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "cf0908ff-4f96-4cbe-ae00-10a54657cd71", "name": "Orçamento 21 de Maio João Pinto 90pax.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "fc4474ed-9e1b-4c8f-94d2-6cfd2aa522e1", "name": "Orçamento 30 de Outubro Aleksandra.docx", "kind": "proposal", "status": "issue", "issue": "no guests"}
+{"upload_id": "0f08f28b-0523-42e5-a7fc-5a913edc2129", "name": "Orçamento Inês Pinheiro  30 de Maio  Almoço+Cb 90 pax.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "4f72167e-1e46-4d58-9863-f55722b0adf2", "name": "Orçamento Jaqueline 15 de Janeiro CB + Almoço.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "7e73f27a-74bb-4cef-83f9-2cdf84e18f3d", "name": "Orçamento 23 de Maio Isabel Arribança.pdf", "kind": "proposal", "status": "issue", "issue": "no total"}
+{"upload_id": "63741fe1-8010-4dba-878d-1ec7045d25f6", "name": "Orçamento 13 de Junho 2026 Madalena Ferreira 14.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "cba97762-16fb-4a64-9444-965011623016", "name": "Orçamento Leonor Gonçalves 26 e 27 Junho Cb 500pax.pdf", "kind": "proposal", "status": "issue", "issue": "no guests"}
+{"upload_id": "f023275c-b204-4d2b-8b3c-3cfea413cce5", "name": "Orçamento Leonor Gonçalves 26 e 27 Junho Cb 500pax.docx", "kind": "proposal", "status": "issue", "issue": "no guests"}
+{"upload_id": "108c8b95-3e90-48a7-95a5-4999cf00a1bc", "name": "Orçamento Diogo Dias Reduzido.docx", "kind": "proposal", "status": "issue", "issue": "no date"}
+{"upload_id": "7961ba17-7e83-4e1b-90e8-3204bae9f334", "name": "Orçamento Prazeres Maria 28 de Abril Jantar.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "6ae66fa9-44d1-4d2b-80d5-06a24a173e6d", "name": "Orçamento para AD Air Centre Lunch Box 10 e 15€.docx", "kind": "proposal", "status": "issue", "issue": "no date, no total, no guests"}
+{"upload_id": "efb9b17b-d668-42bc-9e52-42a7966d6dc2", "name": "Orçamento Francisca Ferreira 28 de Fevereiro  Almoço+Cb.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "ad4c9260-e0be-4acd-b13a-fd76ad1d5e5c", "name": "Orçamento 12 Junho Madalena Gloria.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "956be97b-77a5-4f24-898c-0807e4465ef1", "name": "Orçamento 22 de Julho Ines Santos Palbit 50 pax 8€.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "6d0f6ca2-2d75-42f7-8075-7bc5e66c691e", "name": "Orçamento 25 de Abril 2026 Madalena Ferreira 15.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "4b889b18-0087-4c26-911f-65b031719380", "name": "Orçamento Bling Tânia Baptista 17 de Junho.docx", "kind": "proposal", "status": "issue", "issue": "no total"}
+{"upload_id": "273cfa83-2741-4e4e-9782-ac5189d95ff2", "name": "Orçamento Catarina Mafalda Soares Batizado 17 de Maio Final.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "73582ac8-778c-4c3b-914c-2075ef87ab12", "name": "Orçamento Vera Reis PCI  8 de Abril wc + cb 90 pax.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "f20f85e7-c04c-4f1d-a062-b284f8f2dc6d", "name": "Orçamento 22 de Julho Ines Santos Palbit 70 pax.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "6c0191f6-abb7-4218-ac11-771efaa2bb8a", "name": "Orçamento 27 Outubrobro Cb + Almoço Daniela Pedro.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "544dc19b-1be6-4e32-b9b9-5ae21e0b63b7", "name": "Orçamento 1 de Agosto Monica Santos Almoço 40 pax.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "301abf96-f915-4de8-a0b7-21dacfb7e5a1", "name": "Orçamento Eugenio Rocha  3 de Junho  Almoço.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "813364a0-f4ab-460c-a42a-fb6e7e1365b6", "name": "Orçamento 23 de Maio Municipio de Ilhavo Cb+Almoço+Cb base.docx", "kind": "proposal", "status": "issue", "issue": "no guests"}
+{"upload_id": "19c539c9-43f6-4f66-a571-87a12345eed8", "name": "Orçamento 29 de Abril 2026 CS Wind 23.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "25a6a826-079d-422c-90ff-fabd97c17e9f", "name": "Orçamento Cesar Setenis 21 de Novembro Almoço.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "0f319e34-0f87-4bad-b575-b209f4b20714", "name": "Orçamento Maythe.pdf", "kind": "proposal", "status": "issue", "issue": "no total, no guests"}
+{"upload_id": "5933b45a-b383-4005-886c-8d4a16b3cb23", "name": "Orçamento 15 de Outubro Catarina Sobral.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "72bb50fc-4eb9-4cf7-8728-73676c9f8feb", "name": "Orçamento Eugenio Rocha  3 de Junho  Almoço 15.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "d5a6e64d-23cf-4e78-87fa-dc849763be4a", "name": "Orçamento Vera Reis PCI  8 de Abril wc + cb.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "a46d21c8-14c2-44f3-88c3-4075b221e7d3", "name": "Orçamento 11 de Março  Living Tours Carolina Poças.docx", "kind": "proposal", "status": "issue", "issue": "no guests"}
+{"upload_id": "7970f3ed-5ef5-4cc4-9072-4ceeacb20e75", "name": "Orçamento Pedro Oliveira Cb am + Cb pm.docx", "kind": "proposal", "status": "issue", "issue": "no date, no guests"}
+{"upload_id": "209feb32-bc07-4819-85fb-eb7550310a88", "name": "Orçamento 3-4 e 7-8 de Setembro Cb am e pm Sonia Nunes Salt.pdf", "kind": "proposal", "status": "issue", "issue": "no total, no guests"}
+{"upload_id": "bcc01a8e-d148-48e6-b0cb-a79472951cad", "name": "Orçamento 13 de Junho Mike Almoço e Jantar 8€.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "14368a9a-1aa0-43c4-95b6-a1332f77d2a3", "name": "Orçamento 25 de Abril 2026 Madalena Ferreira 14.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "6a70f1ff-e04f-4a29-95f0-d2f7dc4934d6", "name": "Orçamento 23 de Maio Isabel Arribança.docx", "kind": "proposal", "status": "issue", "issue": "no total, no guests"}
+{"upload_id": "5d2f7d8c-4d54-4c60-9421-9d6e74dc2330", "name": "Orçamento Ines Costa SKY reduzido.docx", "kind": "proposal", "status": "issue", "issue": "no date, no total, no guests"}
+{"upload_id": "26294a9c-e206-404b-b182-16ba962cdefb", "name": "Orçamento 28 de Fevereiro Medical Dra Claudia Cunha.docx", "kind": "proposal", "status": "issue", "issue": "no total, no guests"}
+{"upload_id": "1fe47703-4bc4-4096-9bd4-cf4fe3ea0778", "name": "Orçamento Silvina 5 de Dezembro Lanche 15€.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "6fe544c5-3c3a-4952-84f5-1c8b5d59a3ae", "name": "Orçamento Francisca Ferreira 28 de Fevereiro  Almoço+Cb Reduzido.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "663782a7-d6f9-41ad-bb97-41a3f9e3c28b", "name": "Orçamento 17 de Julho Lu Werneck.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "c07228dc-d983-4fec-b03c-9dd76003b93b", "name": "Orçamento Jaqueline 15 de Janeiro CB + Almoço.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "ddc05dde-b079-4658-b0dd-79bcd22f6ab5", "name": "Orçamento 22 de Julho Ines Santos Palbit 50 pax 8€.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "3266b207-7671-4b20-93ce-dbc180ade76b", "name": "Orçamento 29 de Abril 2026 CS Wind.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "827d55bd-8e98-45c1-8cb8-d2f111b74df1", "name": "Orçamento Cesar Setenis 21 de Novembro Jantar.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "3a2e1cdc-2ef0-4051-a0d9-fe88ee32ad61", "name": "Orçamento Rodrigo Cb e Almoço.docx", "kind": "proposal", "status": "issue", "issue": "no date"}
+{"upload_id": "44e2edea-a293-4fdb-b5d5-b615c0b2d6bf", "name": "Lunch Box 5€ a 17€.pdf", "kind": "proposal", "status": "issue", "issue": "no total"}
+{"upload_id": "28863804-7348-4e8f-b2bb-74eb57bf241f", "name": "Orçamento Anabela Anjos 23 de Abril CB.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "50ac2cc7-4c09-4433-ba75-bdf083f71021", "name": "Orçamento 9 e 10 de Abril Joana Inês Carvalho 24 pax.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "d3d9b943-0776-49d2-8da2-a8b9c3877340", "name": "Orçamento 21 de Maio João Pinto 80pax NIF.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "916659a6-6df0-4893-b57a-891491e16b0b", "name": "Orçamento AIDA Susana Carvalho.docx", "kind": "proposal", "status": "issue", "issue": "no date"}
+{"upload_id": "6173989b-7a08-4d47-8ea3-5837324e41d1", "name": "Orçamento Bling Tânia Baptista 17 de Junho 65 pax.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "9d574d5c-8b4b-47da-96a6-60c677303e88", "name": "Orçamento Inês Pinheiro  30 de Maio  Almoço.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "88aa4d5d-a6bf-4424-b087-13d3b3431476", "name": "Orçamento para AD Air Centre Lunch Box 10 e 15€.pdf", "kind": "proposal", "status": "issue", "issue": "no total"}
+{"upload_id": "5475dce4-16a3-4a94-9d53-3ac4a47d19c0", "name": "Orçamento 27 e  28 de Abril Gloria Pinto 15 pax.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "507b3dc9-4649-4655-aa72-5c09e987e595", "name": "Orçamento 23 de Maio Municipio de Ilhavo, Biblioteca Municipal Almoço.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "6bcaa494-fa6c-4ef7-97e6-fa3ddd226b94", "name": "Orçamento 29 de Abril 2026 CS Wind 23.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "cab32b40-d03a-41ad-80d0-0892a89c27ba", "name": "Orçamento 31 de Março Carisa Martins InovaRia Almoço 20 pax.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "f090aa5a-9c0c-4379-b141-43acc8245b03", "name": "Orçamento Inês Direito 19 Junho Cb am.docx", "kind": "proposal", "status": "issue", "issue": "no guests"}
+{"upload_id": "a26c8014-5335-4bf4-b7ff-c178d56a646d", "name": "Orçamento CB 13 Outubro Mariana Rodrigues.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "5f9d3acb-537a-4518-86f8-45faba13787e", "name": "Orçamento Patricia Lito 22 Abril 250 Pax 7.50€.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "101de16c-7e5c-4b4d-867a-70a92fd86e0e", "name": "Orçamento Eliana Sofia 20 de Julho.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "7b1d03e4-9238-42ef-ab89-9b1aaa888936", "name": "Orçamento 18 de Abril Pedro Marto.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "f1296699-4242-4575-bc4e-0d4f6ba04ae5", "name": "Orçamento Junho Maria Santos.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "982bd242-723c-429f-bf1b-90dc7220ea5f", "name": "Orçamento Isabel Machado Teixeira.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "ca20d814-0272-4fe6-a142-ffdcd2705ec4", "name": "Orçamento Eugenia Pereira.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "c72e7372-afa8-4292-8024-808c04e6f9c0", "name": "Orçamento Paulo Pereira  CB 6.5€.docx", "kind": "proposal", "status": "issue", "issue": "no date"}
+{"upload_id": "0a350d7f-1693-4aa4-80dd-6951f953d82b", "name": "Orçamento 18 Janeiro 2026 Sofia Marto.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "a907b513-44c1-4188-bfe6-24866171ebb7", "name": "Orçamento 21 de maio Joâo Pinto.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "409dd629-d018-429d-aeaa-9bf6ed0716d0", "name": "Mix Menus.pdf", "kind": "proposal", "status": "issue", "issue": "no date, no total"}
+{"upload_id": "60501dd2-bd3c-4ad4-84a4-1cfd02706cef", "name": "Orçamento Anabela Anjos 23 de Abril CB Reduzido.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "c04bee78-8ebe-4700-9cd4-5d7a3f29b4ad", "name": "Orçamento 16 de Janeiro 26 Patricia Balacó.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "ef817fdb-d8b0-492a-8a6e-fc143354f8a7", "name": "Orçamento Fabridoce  (Bifanas).docx", "kind": "proposal", "status": "issue", "issue": "no date"}
+{"upload_id": "41cea06b-9796-4806-bbff-b2ae1187bdae", "name": "Orçamento 19 de Fevereiro 2026 CS Wind.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "39065f03-64d7-4b55-b570-6441735734c4", "name": "Orçamento 9 e 10 de Abril Inês Carvalho.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "33e5d8f3-e4f4-44a3-bd8c-ed5233812530", "name": "Orçamento Fabridoce  (Bifanas).pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "46f4fd9d-d27e-496e-82b0-afcba46b622a", "name": "Orçamento 19 de Março SKY Ines Costa Final.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "aeb57f46-13e4-4113-9bb8-7cdec485423a", "name": "Orçamento Fabridoce 12 de Maio (Porco, Cerveja e Sangria) corrigido.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "9cd8d38b-76de-4465-b309-d6365df0b1c6", "name": "Mix menus Ostraveiro.pdf", "kind": "proposal", "status": "issue", "issue": "no date, no total"}
+{"upload_id": "a0f3b636-b518-4cb4-a982-e150a83b398e", "name": "Orçamento Francisca Ferreira 28 de Fev  Almoço+Cb Reduzido.docx", "kind": "proposal", "status": "issue", "issue": "no date"}
+{"upload_id": "61d44e6b-95ac-4688-b6cf-138ddc1c5bdb", "name": "Orçamento Marta Trindade Cb + Almoço +Cb.docx", "kind": "proposal", "status": "issue", "issue": "no date, no guests"}
+{"upload_id": "03f99235-29d2-4693-a3a1-b02f57f251cf", "name": "Orçamento 21 de Fevereiro 2026 CS Wind.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "81797774-e97a-4329-93f3-5af9b13cb021", "name": "Lunch Box 8€ Madalena Salema.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "7868585f-ec38-4e5d-8b38-293bacb607ec", "name": "Orçamento 22 de Julho Ines Santos Palbit 70 pax 7€.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "6f25b30c-47fe-408b-844c-fee6472d50cc", "name": "Orçamento 21 de Maio João Pinto 80pax NIF.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "baa8a959-4f8e-46aa-9cfd-aba7a65310ea", "name": "Orçamento 5 de Março Ines Costa Sky.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "7214bfc9-565c-4aac-810a-cbeb98622b1a", "name": "Orçamento 17 de Março SKY Inês Costa.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "7c32d1c7-62ef-4159-8665-74ba69be3762", "name": "Orçamento Ana Pereira 23 de Maio.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "c2dbb088-5584-42ae-8643-96945f5c622d", "name": "Orçamento Isabel Machado Teixeira.docx", "kind": "proposal", "status": "issue", "issue": "no date"}
+{"upload_id": "d51b62f4-52a6-428b-834f-91afc25e83ed", "name": "Orçamento Fabridoce.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "70cb889c-e6e2-47db-b633-12a31880e901", "name": "Orçamento Catarina Mano 23M  5 de Fevereiro  Almoço 30 Pax.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "77ead8c0-0d1f-467a-a625-ffedb6899d8f", "name": "Orçamento 5 e 11 de Março  Living Tours Carolina Poças.docx", "kind": "proposal", "status": "issue", "issue": "no guests"}
+{"upload_id": "f24fea6b-4277-4b7f-aae9-355df473cd22", "name": "Orçamento Load Cb + Almoço 75 pax.docx", "kind": "proposal", "status": "issue", "issue": "no date"}
+{"upload_id": "d3ffb99d-7889-450f-af73-b43e1bddfdd6", "name": "Orçamento 20 de Abril Enrikson 50 pax wc + cb  + almoço + cb.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "b9c5f953-d94f-4fd0-846e-af2451ffc4cc", "name": "Orçamento 9 e 10 de Abril Joana Inês Carvalho 24 pax ..docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "be635ff7-6c3e-4396-ab2b-3c3d204e5599", "name": "Orçamento Daniela Oliveira 16€.docx", "kind": "proposal", "status": "issue", "issue": "no date"}
+{"upload_id": "f427c495-5455-4005-9c6d-ac13255ae1a8", "name": "Orçamento Menu de 25€ Ana Luisa Festas.docx", "kind": "proposal", "status": "issue", "issue": "no date"}
+{"upload_id": "0984f224-638d-48f1-97bd-b3ed873b7805", "name": "Orçamento 30 de Junho 2026 CS Wind.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "b5d45da1-8eae-446a-9054-e14fb1c2cd7a", "name": "Orçamento Inês Raquel 19 Julho Almoço.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "6718e20a-6570-4c94-a2a6-61421e44191e", "name": "Orçamento Marta Trindade Lunch Box.docx", "kind": "proposal", "status": "issue", "issue": "no date, no total"}
+{"upload_id": "1dbc2bd5-83e4-420d-856c-3057dc0e4933", "name": "Orçamento Inês F Fonseca- 2 cb + almoço.docx", "kind": "proposal", "status": "issue", "issue": "no date, no total, no guests"}
+{"upload_id": "11ce5695-4660-49fa-a6de-6af827a5eb34", "name": "Orçamento Eugenio Rocha  3 de Junho  Almoço 15.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "265b7fe3-ff11-4c8b-91bd-4cbf2e18178b", "name": "Orçamento Inês Direito 19 Junho Cb am 60 pax.pdf", "kind": "proposal", "status": "issue", "issue": "no guests"}
+{"upload_id": "14417be0-32f5-40f6-a921-cb2f6dcbc39d", "name": "Orçamento Daniela Oliveira 20€.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "4c74b520-c745-4f25-a39e-2e1e281d7e86", "name": "Orçamento Inês F Fonseca- 2 cb + almoço.pdf", "kind": "proposal", "status": "issue", "issue": "no date, no total, no guests"}
+{"upload_id": "61e621da-b5e3-4df9-83c1-d931b7bac9b8", "name": "Orçamento 21 de Fevereiro 2026 CS Wind final.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "6f8e3159-f24e-40cc-bc16-eaa7a7e07f89", "name": "Orçamento 27 Março Ines Santos Palbit - 2 cb.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "23c563ca-0846-4b1f-8a00-4ce2b89d3164", "name": "Orçamento 13 de Junho 2026 Madalena Ferreira Final.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "14a0762c-b298-4b1b-8795-eea1a52a578c", "name": "Orçamento 25 de Outubro Rita Lopes.pdf", "kind": "proposal", "status": "issue", "issue": "no total"}
+{"upload_id": "ef3332db-b9cd-4458-a523-78dc229a4758", "name": "Orçamento 18 de Novembro Cb + Almoço Maria Paulo.docx", "kind": "proposal", "status": "issue", "issue": "no total"}
+{"upload_id": "b8f951b3-260c-4488-b018-3c8a2afb87f1", "name": "Orçamento Daniela Oliveira F. 4 Julho.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "7e50364e-3a53-4909-8a8e-c53f44d89e29", "name": "Orçamento Catarina Mano 23M 5 de Fevereiro  Almoço.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "b83a0e10-0b71-4dc1-a78e-62dbc77ca8b0", "name": "Orçamento 21 de Maio João Pinto 80pax 6.50.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "3492bbdf-6a19-4503-b38a-f3ef5cf3b029", "name": "Orçamento 21 de Fevereiro 2026 CS Wind final.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "f81723d2-5710-4d7e-a21f-f0b83a91e58c", "name": "Orçamento 26 Março Isabel César Cb Médio.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "1eb54016-5d63-43ab-a9a4-7a5491776534", "name": "Orçamento 9 e 10 de Abril FFonseca Inês Vergas.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "6e85e589-09db-49a0-9cde-3abca4766ffe", "name": "Orçamento 19 de Março SKY Ines Costa.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "53df2f5a-5360-4f68-84fa-d5257fa0b569", "name": "Orçamento Patricia Lito 22 Abril 250 Pax 7.30€.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "108f7cbe-eafc-4c3b-9fdf-e653d389bfdc", "name": "Orçamento 19 e 20 de Março Rita S. Freitas CMA.docx", "kind": "proposal", "status": "issue", "issue": "no guests"}
+{"upload_id": "cd29441d-05fe-4c40-9286-7cc8ad4ccbfa", "name": "Orçamento 3-4 e 7-8 de Setembro Cb am e pm Sonia Nunes Salt.docx", "kind": "proposal", "status": "issue", "issue": "no total, no guests"}
+{"upload_id": "6d648f56-87aa-49b5-a361-c98c6cf37289", "name": "Orçamento 21 de Maio João Pinto 80pax.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "a9682be1-bf3a-4e90-9ee8-2a725f81e669", "name": "Orçamento 7 a 9 de Setembro Cb + Almoços Margarida Pereira.pdf", "kind": "proposal", "status": "issue", "issue": "no total, no guests"}
+{"upload_id": "aa8c3153-4b4a-4c5d-9eba-0a5d49217c24", "name": "Orçamento 23 de Maio Municipio de Ilhavo, Biblioteca Municipal Isabel Machado Teixeira.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "d218ec96-bc83-42b8-8f92-2739848565c5", "name": "Orçamento Inês Raquel 19 de Julho Almoço.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "f2a54c05-8928-4641-bf0e-d9e4cfab3af0", "name": "Orçamento Prazeres Maria 28 de Abril Jantar.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "760bb187-1554-4d0f-88bc-b289f4c1cd1f", "name": "Orçamento Leonor Gonçalves 26 e 27 Junho Cb 5.50€.pdf", "kind": "proposal", "status": "issue", "issue": "no guests"}
+{"upload_id": "b4aabace-c480-4e69-9c41-0f595fdee22c", "name": "Orçamento Paulo Barroca Santarem 500.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "b210a64e-811f-404c-9e0c-1ba12ef4acfe", "name": "Orçamento Francisca Ferreira 28 de Fevereiro  Almoço+Cb.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "0a502e16-f6ea-464a-92a6-43e7366dde1e", "name": "Orçamento Daniela Oliveira 4 Julho.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "f096b943-939c-4ef3-b5b5-a6892332f3ed", "name": "Orçamento Catarina Mafalda Soares Batizado 17 de Maio Final.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "fa6f413b-6ea1-4573-b3e8-d9f173315b02", "name": "Orçamento 13 de Junho 2026 Madalena Ferreira s alcool.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "020b0358-7960-4973-af55-7fdace3f140d", "name": "Orçamento Bling Tânia Baptista 17 de Junho.pdf", "kind": "proposal", "status": "issue", "issue": "no total"}
+{"upload_id": "8c13bbfc-3681-4619-b573-8115acb0401a", "name": "Orçamento 5 e 11 de Março  Living Tours Carolina Poças.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "c3dbb73d-5e53-40c9-9d34-d27130698e4c", "name": "Orçamento Eugenia Pereira.docx", "kind": "proposal", "status": "issue", "issue": "no date"}
+{"upload_id": "b50614f2-a491-45e9-8c5a-4c3bba5f89bb", "name": "Lunch Box 10 e 15€.docx", "kind": "proposal", "status": "issue", "issue": "no date, no total, no guests"}
+{"upload_id": "e4f8dddf-5891-457a-a656-ada08e2ed264", "name": "Orçamento 13 de Junho 2026 Madalena Ferreira s alcool.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "a08fac57-c016-4952-bcf9-8b75c850c607", "name": "Orçamento 13 de Junho 2026 Madalena Ferreira Final.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "a591bd05-8703-4673-82da-4cad743ad1a7", "name": "Orçamento Bling Tânia Baptista 17 de Junho reduzido.docx", "kind": "proposal", "status": "issue", "issue": "no total"}
+{"upload_id": "a53e2610-e886-4762-a9c2-65c503116805", "name": "Orçamento Silvina 5 de Dezembro Lanche 15€.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "0732a60e-71be-44ee-bf9b-f1ac400a0f52", "name": "Orçamento Bling Tânia Baptista 17 de Junho reduzido.pdf", "kind": "proposal", "status": "issue", "issue": "no total"}
+{"upload_id": "0274f97f-e185-4c5c-af5f-97f97a98d456", "name": "Orçamento 25 de Outubro Rita Lopes.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "f3ce88bb-3505-4f44-b3b5-174540ebca97", "name": "Orçamento Pedro Oliveira 22 Abril 30 Pax 7€.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "73302bb3-74b6-4f48-96bd-8f45d2afc658", "name": "Orçamento 13 de Junho Mike (sopa e bifanas).docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "19ba728a-e525-4347-b875-e5b61cdcf47b", "name": "Orçamento Daniela Oliveira 16€.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "b93cedd2-13b8-427e-827e-0ee42f60edbb", "name": "Orçamento Anabela Anjos 23 de Abril CB Reduzido.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "6c20c58f-682e-4d33-9d0b-fe1a3d0136d8", "name": "Orçamento Inês Pinheiro  30 de Maio  Almoço+Cb 90 pax.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "c2265f31-cccd-468a-b8c6-12e53e51e6b5", "name": "Orçamento Junho Maria Santos.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "34faee2d-87d4-47c6-a05c-5082e992c7a0", "name": "Orçamento 13 de Junho Mike Almoço e Jantar 8€ - 180 PAX.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "e151e93b-0471-432f-877c-35cf964435f2", "name": "Orçamento Diogo Dias.docx", "kind": "proposal", "status": "issue", "issue": "no date"}
+{"upload_id": "8344b87f-345b-4021-93b1-9bce4a67bee2", "name": "Orçamento 27 e  28 de Abril Gloria Pinto 15 pax. Am e Pm.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "4431589c-eaba-4250-8c22-147ac26a750b", "name": "Orçamento 20€ Aveiro com Paixão Sandra.pdf", "kind": "proposal", "status": "issue", "issue": "no date"}
+{"upload_id": "377fbb13-3cc2-4f12-bfd2-5ab8699b23bb", "name": "Orçamento Prazeres Maria 28 de Abril Jantar 45 Pax.pdf", "kind": "proposal", "status": "issue", "issue": "no total"}
+{"upload_id": "da479391-fb92-40f6-81f8-78e94063de4e", "name": "Orçamento Anabela Anjos 23 de Abril CB.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "316e318b-61f0-4466-80c8-5f0b8ddc48a0", "name": "Orçamento Prazeres Maria 28 de Abril Jantar 45 Pax 60 anos.pdf", "kind": "proposal", "status": "issue", "issue": "no total"}
+{"upload_id": "5a5e0127-8013-4de4-906e-d785d8a713b0", "name": "Orçamento Fabridoce 12 de Maio (Porco, Cerveja e Sangria) corrigido.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "63323ff5-1f4d-485e-899d-65e87d4d109b", "name": "Orçamento Raquel Barrocas.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "0892fbc5-1c46-42c4-b3d5-d98cc4c51665", "name": "Orçamento 30 de Outubro Aleksandra.pdf", "kind": "proposal", "status": "issue", "issue": "no guests"}
+{"upload_id": "96927372-d9d7-4fb4-83c0-540fb66b79b8", "name": "Orçamento Liliana Costa 4 de Março CB.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "e57ee6a1-67e4-4942-8892-ece571c2b7f8", "name": "Orçamento Ana Braga APECE 25 a 27 Fevereiro.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "fafb19bc-317d-4df2-8136-0a3af392af11", "name": "Orçamento 21 de Maio João Pinto 90pax.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "e474b124-58f6-4356-9a6a-1224bf6d35c9", "name": "Orçamento Inês Direito17 e 18 Junho Cb + Almoço +Cb.pdf", "kind": "proposal", "status": "issue", "issue": "no guests"}
+{"upload_id": "1f95743b-a45f-481a-a208-f69445de2a9f", "name": "Orçamento Inês Raquel 19 de Julho Almoço.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "2f3a6e3d-dc26-45aa-acef-d71a4e656a77", "name": "Orçamento 25 de Abril Madalena Ferreira 2026.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "2fb6c5ee-9976-468f-99d7-e70a5cc167fb", "name": "Orçamento Quinta das Azenhas 2 cb + almoço.docx", "kind": "proposal", "status": "issue", "issue": "no date, no total, no guests"}
+{"upload_id": "c7e9c55b-313a-4749-ba13-1ade02a464b6", "name": "Orçamento 30 de Outubro Rita Serrano.pdf", "kind": "proposal", "status": "issue", "issue": "no total"}
+{"upload_id": "c37469cb-7dcc-4c22-bfed-6ded434c3734", "name": "Orçamento Catarina Mano 23M 5 de Fevereiro CB + Almoço.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "c899e763-a2f4-4250-8ec1-15c6528c3978", "name": "Orçamento Patricia Lito 22 Abril 250 Pax 7.30€.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "e3643c96-e323-4b92-8f40-1a27a7f37897", "name": "Orçamento Maria Teresa Herdeiro 7 CB.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "69154dae-e9cf-44b0-87b2-d27ea5af6791", "name": "Orçamento 25 e 26 de Março  Arthur Araujo.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "a75eb224-da05-42d7-9a50-61dce4530157", "name": "Orçamento 11 de Março  Living Tours Carolina Poças.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "6c7cbef6-086b-4792-a2ef-07ea6ae0a3e2", "name": "Orçamento Estudio PT Pedro.pdf", "kind": "proposal", "status": "issue", "issue": "no total"}
+{"upload_id": "4fff3a1f-b177-409f-8a7a-2cd45a0fc621", "name": "Orçamento Maythe quantidades.pdf", "kind": "proposal", "status": "issue", "issue": "no total, no guests"}
+{"upload_id": "4a1e227c-563d-4a87-ae48-93d2017a890e", "name": "Orçamento 22 de Julho Ines Santos Palbit 70 pax.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "535c315a-3dc7-476c-8424-af244583a864", "name": "Orçamento Inês F Fonseca- 2 cb.docx", "kind": "proposal", "status": "issue", "issue": "no date"}
+{"upload_id": "5aa1d5e7-ed02-47a6-b04d-f331da36341b", "name": "Orçamento 31 de Outubro Tatiana Cb.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "27f73d06-b990-49f7-a22b-50583faa9df8", "name": "Lunch Box 5€ a 15€.docx", "kind": "proposal", "status": "issue", "issue": "no date, no total, no guests"}
+{"upload_id": "29d2f77a-6b41-42e3-898b-5d9b7274c33b", "name": "Orçamento Maria Judite Mendes 9 Agosto 60 pax.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "9e58b493-d359-418b-8cb5-7624ebd8e56f", "name": "Orçamento Mariana Rodrigues 23 e 24 de Outubro.docx", "kind": "proposal", "status": "issue", "issue": "no total, no guests"}
+{"upload_id": "dddd194a-b978-47cf-b02a-68c205a34107", "name": "Orçamento Ines Costa SKY reduzido.pdf", "kind": "proposal", "status": "issue", "issue": "no total"}
+{"upload_id": "e26246d1-57d8-496d-9e24-c56c6e9e7e4c", "name": "Mix menus aberto a negociação.pdf", "kind": "proposal", "status": "issue", "issue": "no date, no total"}
+{"upload_id": "50a69476-2816-459c-868e-be3fefdde94b", "name": "Orçamento 27 Março Ines Santos Palbit.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "f3a9ca89-e202-44a9-b8b7-c1b4641c6710", "name": "Orçamento 9 e 10 de Abril Inês Carvalho Final.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "c291403d-1801-428a-9f0b-3dc5bf91c035", "name": "Mix menus Ostraveiro.docx", "kind": "proposal", "status": "issue", "issue": "no date, no total, no guests"}
+{"upload_id": "f8577f73-bcdf-434e-a7bd-08330b2cf52f", "name": "Orçamento Sofia Andrade.docx", "kind": "proposal", "status": "issue", "issue": "no date"}
+{"upload_id": "ad3e76f5-0c17-40fb-901c-3d1dcb92e54a", "name": "Orçamento 5 de Março Eva Andrade.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "9d585128-b1f1-4d19-9a93-84e31a5bf856", "name": "Orçamento Pedro Pais 15 de Janeiro WC + Almoço.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "c87c5d42-5438-4d0a-a999-bb6ba2e26cd8", "name": "Orçamento 28 de Maio Ines Santos Palbit (Prata).docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "71959fe6-00f6-4139-9da7-c7147018e15f", "name": "Lunch Box 5€ a 17€.docx", "kind": "proposal", "status": "issue", "issue": "no date, no total, no guests"}
+{"upload_id": "94a475ad-c869-4f8d-b3bf-ceb004ba08d8", "name": "Orçamento Cesar Setenis 21 de Novembro Almoço.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "733d4803-00e9-402c-8c90-ecf903b82aef", "name": "Orçamento Inês Direito17 e 18 Junho Cb + Almoço +Cb final.pdf", "kind": "proposal", "status": "issue", "issue": "no guests"}
+{"upload_id": "36edb724-0621-4fe1-abe3-d82239be8536", "name": "Orçamento Pedro Pais 15 de Janeiro WC + Almoço.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "add8f72d-4379-4673-9777-6446b0aedc60", "name": "Orçamento Dra Elsa 28 de Outubro Almoço +Cb.pdf", "kind": "proposal", "status": "issue", "issue": "no guests"}
+{"upload_id": "0f0d2daf-7551-4796-a679-f4059e4189d2", "name": "Orçamento 19 e 20 de Março Rita S. Freitas CMA Valores discriminados.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "01d7afbe-b380-42a7-9a35-cc861887aed2", "name": "Orçamento Patricia Lito 22 Abril 250 Pax 7.50€.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "8c8c40b2-8629-4648-8446-e91937fe5db9", "name": "Orçamento Rosa Andias 19 Julho.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "5dd3b068-ee6f-4d24-8326-fa1a1f5e2237", "name": "Orçamento 22 de Julho Ines Santos Palbit 70 pax 7€.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "6cc27a45-b560-47c1-8678-0f4e71d9c57b", "name": "Mix Menus.docx", "kind": "proposal", "status": "issue", "issue": "no date, no total, no guests"}
+{"upload_id": "d0af9dd7-0c04-4415-84d0-0046191d812c", "name": "Orçamento Fevereiro 2026 Res Argentea.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "082b73a2-4359-4a06-a9fb-17ba55a73484", "name": "Orçamento Diogo Dias Reduzido.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "ccd80624-a4e6-4150-b728-a9fb6a1f9c5d", "name": "Orçamento Ana Braga APECE 25 a 27 Fevereiro.pdf", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "53f0d9ae-5d04-45b6-9ffe-e51e6bd748ae", "name": "Orçamento Humberto Remax Inauguração 10 de Julho.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "ece99e49-3658-4ecb-ae80-a5cba5e13c2f", "name": "Orçamento Marta Trindade Lunch Box 8.50€.docx", "kind": "proposal", "status": "issue", "issue": "no date, no total"}
+{"upload_id": "4e174c5c-5124-49e5-8516-eb92e602590d", "name": "Orçamento 28 de Maio Ines Santos Palbit.docx", "kind": "proposal", "status": "ok", "issue": null}
+{"upload_id": "110c1483-fc9b-4e29-b172-dfb8fa879de9", "name": "Orçamento Daniela Oliveira 12€.docx", "kind": "proposal", "status": "issue", "issue": "no date"}
+{"upload_id": "d1ae3761-b8bf-4bc5-8061-f37d1771e530", "name": "Orçamento 20€ Aveiro com Paixão Sandra.docx", "kind": "proposal", "status": "issue", "issue": "no date, no guests"}

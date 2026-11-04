@@ -1,0 +1,86 @@
+{
+  "quote_id": "q:d606e185-437e-4092-ada2-ab4cdc4f6cbc",
+  "client": "Gloria Pinto",
+  "client_source": "file_name",
+  "event_dates": [
+    {"day": 27, "month": null, "year": null, "source": "text"},
+    {"day": 28, "month": null, "year": null, "source": "text"}
+  ],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Dia 27 Coffee-Break – 14h??",
+      "service_type": "coffee_break",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Croissant c/ Queijo (veg.)", "quantity": null},
+          {"text": "Croissant c/ Fiambre", "quantity": null},
+          {"text": "Vol au vents de Guacamole c/ azeitona", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Bolhachinhas Bacalhaus do CASCI", "quantity": null},
+          {"text": "Bolo no Copo", "quantity": null},
+          {"text": "Folhado de Chocolate", "quantity": null}
+        ]},
+        {"segment": "other", "items": [
+          {"text": "Espetadas de fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Frutos vermelhos", "quantity": null},
+          {"text": "Maçã canela", "quantity": null},
+          {"text": "Café e descafeinado (cápsulas)", "quantity": null}
+        ]}
+      ],
+      "prices": [{"label": "Dia 27 Coffee breaks", "unit_price": 8.5, "quantity": 15, "line_total": 127.5, "vat_rate": 13}]
+    },
+    {
+      "name_as_written": "Dia 28 Coffee-Break – 14h??",
+      "service_type": "coffee_break",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Pão de Queijo", "quantity": null},
+          {"text": "Folhados Mistos", "quantity": null},
+          {"text": "Folhados Salsisha", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Palmiers", "quantity": null},
+          {"text": "Mil folhas", "quantity": null},
+          {"text": "Salame de chocolate", "quantity": null}
+        ]},
+        {"segment": "other", "items": [
+          {"text": "Espetadas de fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Frutos vermelhos", "quantity": null},
+          {"text": "Maçã canela", "quantity": null},
+          {"text": "Café e descafeinado (cápsulas)", "quantity": null}
+        ]}
+      ],
+      "prices": [{"label": "Dia 28 Coffee breaks", "unit_price": 8.5, "quantity": 15, "line_total": 127.5, "vat_rate": 13}]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 288.15,
+  "total_includes_vat": true,
+  "staff_mentioned": null,
+  "notes": [
+    "Sub Total 255€; estes valores acrescem IVA a taxa de 13%",
+    "Nas miniaturas doces temos um item muito especial: as bolachinhas do CASCI, Centro de Ação Social do Concelho de Ílhavo",
+    "Nos serviços apresentados não serão utilizados materiais plásticos"
+  ],
+  "uncertain": [
+    "Month is not written in the text; 'Abril' appears only in the file name, so event_dates carry no month",
+    "Times are written as 14h??, so they are uncertain",
+    "Headcount 15 appears only in the file name ('15 pax'); the text gives it only as the price quantity"
+  ]
+}

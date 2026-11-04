@@ -1,0 +1,32 @@
+{
+  "quote_id": "q:f1be5508-61f0-429b-8eee-76e64b269e01",
+  "client": "Ines Costa SKY",
+  "client_source": "file_name",
+  "event_dates": [],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Menu",
+      "service_type": "other",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "other", "items": [{"text": "Tábuas de Queijos", "quantity": null}, {"text": "Compotas de frutas variadas c/ frutos secos", "quantity": null}, {"text": "Espetadas de cherry c/ manjericão", "quantity": null}, {"text": "Tábuas de enchidos decoradas c/ azeitonas", "quantity": null}, {"text": "Acompanhadas c/ variedade de tostas e gressinos", "quantity": null}, {"text": "Mini Pizzas", "quantity": null}, {"text": "Focaccia com azeite e alecrim", "quantity": null}, {"text": "Mini Hambúrgueres c/ Cheddar", "quantity": null}]},
+        {"segment": "sweet_miniatures", "items": [{"text": "Cookies de chocolate", "quantity": null}, {"text": "Donuts variados", "quantity": null}, {"text": "Tiramissu", "quantity": null}]},
+        {"segment": "dessert", "items": [{"text": "Espetadas de fruta variada", "quantity": null}]}
+      ],
+      "prices": [{"label": null, "unit_price": null, "quantity": null, "line_total": 270, "vat_rate": 13}]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": null,
+  "total_includes_vat": null,
+  "staff_mentioned": null,
+  "notes": [],
+  "uncertain": [
+    "Cliente vem do nome do ficheiro; o texto não o indica.",
+    "Sem data, número de pessoas nem local.",
+    "O preço 270€ é indicado com '+ iva 13%' e não há total final escrito.",
+    "Sem cabeçalho de serviço; o momento foi criado como único (nome 'Menu' é o único escrito)."
+  ]
+}

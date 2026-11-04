@@ -1,0 +1,61 @@
+{
+  "quote_id": "q:c3302f66-ef2b-4af5-a22f-ae98cd6f787d",
+  "client": "Tânia Baptista",
+  "client_source": "file_name",
+  "event_dates": [{"day": 17, "month": 6, "year": null, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Entradas: (volante) – 16h-21h",
+      "service_type": "other",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "starter", "items": [
+          {"text": "Bolinhos de Bacalhau", "quantity": null},
+          {"text": "Croquetes de vitela", "quantity": null},
+          {"text": "Rolinhos de Pão c/ Chouriço", "quantity": null},
+          {"text": "Batatas fritas", "quantity": null},
+          {"text": "Amendoins, Tremoços, Azeitonas", "quantity": null}
+        ]},
+        {"segment": "main_dish", "items": [
+          {"text": "Caldo Verde c/ chouriça", "quantity": null},
+          {"text": "Bifanas estufadas desfiadas", "quantity": null},
+          {"text": "Cachorros c/ batata palha", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Bolinhas de Berlim", "quantity": null},
+          {"text": "Pasteis de Nata", "quantity": null},
+          {"text": "Bolo de Chocolate", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro, Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Sumo (Compal), Coca-cola, Sumol", "quantity": null},
+          {"text": "Cerveja Mini Sagres", "quantity": null},
+          {"text": "Café e descafeinado (cápsulas)", "quantity": null}
+        ]},
+        {"segment": "decoration", "items": [
+          {"text": "Relava 2 x 6 mts c/ marcas de áreas, 2 balizas, 5 bolas futebol, Bandeiras…", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Comidas", "unit_price": 20.5, "quantity": 65, "line_total": 1332.5, "vat_rate": 13},
+        {"label": "Bebidas não alcoólicas", "unit_price": 2.5, "quantity": 65, "line_total": 162.5, "vat_rate": 13},
+        {"label": "Cerveja", "unit_price": 0.6, "quantity": 180, "line_total": 108, "vat_rate": 23}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 1822.19,
+  "total_includes_vat": true,
+  "staff_mentioned": "3 funcionários que iram dispor as mesas em buffet para servir os pratos quentes e as bebidas",
+  "notes": [
+    "Sub Total 1495€ (comidas e bebidas não alcoólicas) acresce IVA 13%, sub-total 1689.35.",
+    "Sub-total da cerveja 132.84 com IVA 23%."
+  ],
+  "uncertain": [
+    "Client name is taken from the file name; the file name also has 'Bling' before the name, which is not used as the client.",
+    "No service name is written beyond the 16h-21h entradas header; the single moment is named after that header.",
+    "The file name says 65 pax; the text gives no people count, only the x 65 quantity on the Comidas and Bebidas lines."
+  ]
+}

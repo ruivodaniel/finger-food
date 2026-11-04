@@ -1,0 +1,56 @@
+{
+  "quote_id": "q:7b1d03e4-9238-42ef-ab89-9b1aaa888936",
+  "client": "Pedro Marto",
+  "client_source": "file_name",
+  "event_dates": [{"day": 18, "month": 4, "year": null, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": null,
+      "service_type": "other",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Mini Hambúrguer de Carne", "quantity": null},
+          {"text": "Espetada de Bolinhos de Bacalhau", "quantity": null},
+          {"text": "Rissois de Camarão em espeto de Camarão", "quantity": null},
+          {"text": "Chamuças c/ Ananás", "quantity": null},
+          {"text": "Croquetes c/ Azeitona", "quantity": null},
+          {"text": "Vol au vents de Guacamole", "quantity": null},
+          {"text": "Vol au vents de Frango", "quantity": null},
+          {"text": "Vol ao vents de Frutos do mar", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Ovos Moles", "quantity": null},
+          {"text": "Espetadas de Fruta", "quantity": null},
+          {"text": "Variedade de Brigadeiros", "quantity": null},
+          {"text": "Brownie c/ Nozes e Caramelo Salgado", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo de Laranja Natural (espremido na hora, servido em flutes)", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Café e descafeinado (cápsulas)", "quantity": null}
+        ]}
+      ],
+      "prices": [{"label": null, "unit_price": 13.5, "quantity": 40, "line_total": 540, "vat_rate": 13}]
+    }
+  ],
+  "prices_not_in_a_moment": [
+    {"label": "Leitão assado á bairrada", "unit_price": null, "quantity": null, "line_total": 130, "vat_rate": null},
+    {"label": "Cachorrinhos de Camarão c/ maionese de wasabi", "unit_price": null, "quantity": null, "line_total": 80, "vat_rate": null},
+    {"label": "Tabuas de Queijos e Enchidos", "unit_price": null, "quantity": null, "line_total": 80, "vat_rate": null},
+    {"label": "Tiramissu no copo c/ opção de Affogato", "unit_price": null, "quantity": null, "line_total": 120, "vat_rate": null}
+  ],
+  "total": 610.2,
+  "total_includes_vat": true,
+  "staff_mentioned": "dois funcionários para servir",
+  "notes": [
+    "Nos serviços apresentados não serão utilizados materiais plásticos, demonstrando assim a nossa consciência ambiental."
+  ],
+  "uncertain": [
+    "The total 610.20 covers only the 13.50€ x 40 line; the extras are listed under 'Extras' with no total and no VAT rate.",
+    "No service name is written, so the single moment is unnamed."
+  ]
+}

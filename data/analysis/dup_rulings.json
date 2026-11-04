@@ -1,0 +1,19 @@
+[
+ {
+  "members": [
+   "folhados mistos e folhados de salsicha",
+   "folhados mistos e de salchicha",
+   "folhados de salsicha e mistos"
+  ],
+  "why": "Your ruling: these three are the same item, mixed folhados with sausage written in three ways. They are not the plain folhados mistos."
+ },
+ {
+  "parent": "bolinhos de bacalhau em espeto de cherry c azeitona",
+  "members": [
+   "bolinhos de bacalhau em espeto de cherry c azeitona",
+   "bolinhos de bacalhau em espeto de cherry",
+   "bolinhos de bacalhau em espetada c cherry e azeitona"
+  ],
+  "why": "Your ruling: the cod fritters on a skewer are one item, and this is its name. The plain bolinhos de bacalhau stays apart."
+ }
+]

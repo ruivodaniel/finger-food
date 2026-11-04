@@ -1,0 +1,40 @@
+{
+  "quote_id": "q:3b3f4315-6bb9-4420-b588-cc889217a62a",
+  "client": "Bling Tânia Baptista",
+  "client_source": "file_name",
+  "event_dates": [{"day": 17, "month": 6, "year": null, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Comidas 16h-21h",
+      "service_type": "other",
+      "guests": 60,
+      "guests_raw": "60",
+      "menu_lines": [
+        {"segment": "starter", "items": [{"text": "Bolinhos de Bacalhau", "quantity": null}, {"text": "Croquetes de vitela", "quantity": null}, {"text": "Batatas fritas", "quantity": null}, {"text": "Amendoins, Tremoços, Azeitonas", "quantity": null}]},
+        {"segment": "main_dish", "items": [{"text": "Bifanas estufadas desfiadas", "quantity": null}, {"text": "Cachorros c/ batata palha", "quantity": null}]},
+        {"segment": "dessert", "items": [{"text": "Bolinhas de Berlim", "quantity": null}, {"text": "Pasteis de Nata", "quantity": null}, {"text": "Mini Mil Folhas", "quantity": null}]},
+        {"segment": "drink", "items": [{"text": "Água garrafas de vidro, Águas aromatizadas (Chá frio)", "quantity": null}, {"text": "Sumo (Compal), Coca-cola, Sumol", "quantity": null}, {"text": "Cerveja Mini Sagres ou Super?", "quantity": null}, {"text": "Café e descafeinado (cápsulas)", "quantity": null}]},
+        {"segment": "decoration", "items": [{"text": "Relava 2 x 6 mts c/ marcas de áreas, 2 balizas, 5 bolas futebol, Bandeiras…", "quantity": null}]}
+      ],
+      "prices": [
+        {"label": "Comidas", "unit_price": 18, "quantity": 60, "line_total": 1080, "vat_rate": 13},
+        {"label": "Bebidas não alcoólicas", "unit_price": 2.5, "quantity": 60, "line_total": 150, "vat_rate": 13},
+        {"label": "Cerveja", "unit_price": 0.6, "quantity": 180, "line_total": 108, "vat_rate": 23}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 1522.74,
+  "total_includes_vat": true,
+  "staff_mentioned": "3 funcionários que iram dispor as mesas em buffet para servir os pratos quentes e as bebidas",
+  "notes": [
+    "Sub Total = 1389.90€ (comidas e bebidas não alcoólicas, IVA 13%); Sub Total = 132.84€ (cerveja, IVA 23%)."
+  ],
+  "uncertain": [
+    "Cliente e data vêm do nome do ficheiro; o texto não os indica.",
+    "Ano do evento não está escrito no texto nem no nome do ficheiro.",
+    "O nome do ficheiro traz '25.379€', que não coincide com o total do texto (1522.74€); não foi usado.",
+    "A linha de cerveja está escrita como 'Sagres ou Super?' (opção não fechada no texto)."
+  ]
+}

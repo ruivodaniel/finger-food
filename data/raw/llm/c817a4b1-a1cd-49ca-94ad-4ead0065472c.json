@@ -1,0 +1,51 @@
+{
+  "quote_id": "q:c817a4b1-a1cd-49ca-94ad-4ead0065472c",
+  "client": "Inês Direito",
+  "client_source": "file_name",
+  "event_dates": [
+    {"day": 19, "month": 6, "year": null, "source": "file_name"}
+  ],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Coffee-Break 10h30 – 60 pax",
+      "service_type": "coffee_break",
+      "guests": 60,
+      "guests_raw": "60 pax",
+      "menu_lines": [
+        {"segment": "other", "items": [
+          {"text": "Pão de sementes c/ Queijo (veg.)", "quantity": null},
+          {"text": "Pão de sementes c/ Fiambre", "quantity": null},
+          {"text": "Bolachas de Arroz c/ Compotas", "quantity": null},
+          {"text": "Bolachinhas Bacalhaus do CASCI", "quantity": null},
+          {"text": "Tarte de amêndoa", "quantity": null},
+          {"text": "Brownie c/ nozes e caramelo salgado", "quantity": null},
+          {"text": "Peças de fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Café e descafeinado", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Coffee-Break 10h30", "unit_price": 5, "quantity": 60, "line_total": 300, "vat_rate": 13}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 339,
+  "total_includes_vat": true,
+  "staff_mentioned": "2 funcionários que iram dispor as mesas em buffet para servir os pratos quentes, assim como o café, equipados com 2 máquinas para evitar filas",
+  "notes": [
+    "Todo o serviço é realizado com loiças e toalhas de pano.",
+    "Nas miniaturas doces temos as bolachinhas do CASCI – O CASCI é o Centro de Ação Social do Concelho de Ílhavo.",
+    "Nos serviços apresentados não serão utilizados materiais plásticos."
+  ],
+  "uncertain": [
+    "The day 19 is written in the text; the month comes from the file name and no year is written.",
+    "The menu lines have no headings, so they are set to other; the drinks table is set to drink.",
+    "Pão lines are not under a heading in the text."
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "quote_id": "q:dd5442ad-12b4-4629-b0aa-41988acf335f",
+  "client": "Tatiana",
+  "client_source": "file_name",
+  "event_dates": [
+    {"day": 31, "month": 10, "year": null, "source": "file_name"}
+  ],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Coffee break am",
+      "service_type": "coffee_break",
+      "guests": 90,
+      "guests_raw": "90",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Croissant Fiambre", "quantity": null},
+          {"text": "Croquetes de Vitela", "quantity": null},
+          {"text": "Folhados c/ salsicha", "quantity": null},
+          {"text": "Bolinhos de Bacalhau", "quantity": null},
+          {"text": "Rissóis camarão", "quantity": null},
+          {"text": "Croissant Queijo", "quantity": null},
+          {"text": "Vol au vents de Guacamole", "quantity": null},
+          {"text": "Pizza de queijo cogumelos e azeitonas", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Brownie c/ nozes e caramelo salgado", "quantity": null},
+          {"text": "Tarte de amêndoa", "quantity": null},
+          {"text": "Pastéis nata", "quantity": null},
+          {"text": "Espetadas de frutas", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Coffee break am", "unit_price": 10, "quantity": 90, "line_total": 900, "vat_rate": 13}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 1017,
+  "total_includes_vat": true,
+  "staff_mentioned": null,
+  "notes": [
+    "Mesa de bebidas presente em todos os momentos: Água garrafas de vidro; Sumo (Compal) sabores variados; Águas aromatizadas (Chá frio); Frutos vermelhos; Maçã canela; Café e descafeinado (Se houver eletricidade).",
+    "Nas miniaturas doces: Brownie, Tarte de amêndoa, Pastéis nata e Espetadas de frutas (secção de sobremesas)."
+  ],
+  "uncertain": [
+    "Dia 31 de Outubro vem só do nome do ficheiro; o texto não tem data.",
+    "Horário não escrito."
+  ]
+}

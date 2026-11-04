@@ -1,0 +1,160 @@
+{
+  "quote_id": "q:10d7d024-d705-4e2f-9e04-54f18a0ceeba",
+  "client": "Inês Direito",
+  "client_source": "file_name",
+  "event_dates": [
+    {"day": 17, "month": null, "year": null, "source": "text"},
+    {"day": 18, "month": null, "year": null, "source": "text"}
+  ],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Dia 17 Coffee-Break 10",
+      "service_type": "coffee_break",
+      "guests": 90,
+      "guests_raw": "90 pax",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Croissant Brioche c/ Queijo (veg.)", "quantity": null},
+          {"text": "Croissant Brioche c/ Fiambre", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Bolachinhas Bacalhaus do CASCI", "quantity": null},
+          {"text": "Folhado de Chocolate", "quantity": null},
+          {"text": "Peças de fruta", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Coffee-Break 10", "unit_price": 5, "quantity": 90, "line_total": 450, "vat_rate": null}
+      ]
+    },
+    {
+      "name_as_written": "Almoço (volante) 12h30?? - 14h",
+      "service_type": "lunch",
+      "guests": 90,
+      "guests_raw": "90 pax",
+      "menu_lines": [
+        {"segment": "starter", "items": [
+          {"text": "Variedade de Saladas (alfaces, cenoura, milho, couve roxa…)", "quantity": null}
+        ]},
+        {"segment": "main_dish", "items": [
+          {"text": "Bacalhau c/ Natas", "quantity": null},
+          {"text": "Arroz a Valenciana", "quantity": null},
+          {"text": "Feijão Frade c/ Quinoa de Legumes", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Variedade de Brigadeiros, Espetadas de Fruta", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Almoço", "unit_price": 17, "quantity": 90, "line_total": 1530, "vat_rate": null}
+      ]
+    },
+    {
+      "name_as_written": "Coffee-Break 16 (Dia 17)",
+      "service_type": "coffee_break",
+      "guests": 80,
+      "guests_raw": "80 pax",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Folhados mistos", "quantity": null},
+          {"text": "Folhados de Salsicha", "quantity": null},
+          {"text": "Bolinhas de Berlim", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Palmiers", "quantity": null},
+          {"text": "Peças de Fruta", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Coffee-Break 16", "unit_price": 5, "quantity": 80, "line_total": 400, "vat_rate": null}
+      ]
+    },
+    {
+      "name_as_written": "Dia 18 Coffee-Break 10h",
+      "service_type": "coffee_break",
+      "guests": 60,
+      "guests_raw": "60 pax",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Croissant folhado c/ Queijo (veg.)", "quantity": null},
+          {"text": "Croissant folhado c/ Fiambre", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Bolachinhas Bacalhaus do CASCI", "quantity": null},
+          {"text": "Folhado de Chocolate", "quantity": null},
+          {"text": "Peças de fruta", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Coffee-Break 10", "unit_price": 5, "quantity": 60, "line_total": 300, "vat_rate": null}
+      ]
+    },
+    {
+      "name_as_written": "Almoço (volante) 12h30?? - 14h (Dia 18)",
+      "service_type": "lunch",
+      "guests": 60,
+      "guests_raw": "60 pax",
+      "menu_lines": [
+        {"segment": "starter", "items": [
+          {"text": "Variedade de Saladas (alfaces, cenoura, milho, couve roxa…)", "quantity": null}
+        ]},
+        {"segment": "main_dish", "items": [
+          {"text": "Bacalhau c/ grão de bico", "quantity": null},
+          {"text": "Arroz de Pato", "quantity": null},
+          {"text": "Cuscuz c/ legumes salteados", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Variedade de Macarrons, Espetadas de Fruta", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Almoço", "unit_price": 16, "quantity": 60, "line_total": 960, "vat_rate": null}
+      ]
+    },
+    {
+      "name_as_written": "Coffee-Break 10 (Dia 18, segundo)",
+      "service_type": "coffee_break",
+      "guests": 60,
+      "guests_raw": "60 pax",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Pão sementes c/ Queijo (veg.)", "quantity": null},
+          {"text": "Pão sementes c/ Fiambre", "quantity": null},
+          {"text": "Bolachas de arroz c/ compotas", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Bolachinhas Bacalhaus do CASCI", "quantity": null},
+          {"text": "Tarte de amêndoa", "quantity": null},
+          {"text": "Brownie c/ nozes e caramelo salgado", "quantity": null},
+          {"text": "Peças de fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Mesa de bebidas presente em todos os momentos", "quantity": null},
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Café e descafeinado", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Coffee-Break 10", "unit_price": 5, "quantity": 60, "line_total": 300, "vat_rate": null}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 4452.2,
+  "total_includes_vat": true,
+  "staff_mentioned": "3 funcionários que iram dispor as mesas em buffet para servir os pratos quentes, assim como o café",
+  "notes": [
+    "Sub-total 3940€.",
+    "Todo o serviço é realizado com loiças e toalhas de pano.",
+    "Nas miniaturas doces, bolachinhas do CASCI: apoio à inclusão social."
+  ],
+  "uncertain": [
+    "The month (Junho) is only in the file name; the text gives days 17 and 18 without a month.",
+    "Client name taken from the file name; the text gives none.",
+    "Two coffee breaks on Dia 18 are both written as 'Coffee-Break 10h'; kept as two moments.",
+    "Dia 17 'Coffee-Break 16' has no VAT note of its own; the VAT note applies to the total."
+  ]
+}

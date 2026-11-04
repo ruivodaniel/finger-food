@@ -1,0 +1,37 @@
+{
+  "quote_id": "q:5b57722f-94ec-4b03-8d59-9450e68d3006",
+  "client": "Carisa Martins InovaRia",
+  "client_source": "file_name",
+  "event_dates": [{"day": 31, "month": 3, "year": null, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Almoço (volante) 12h-14h",
+      "service_type": "lunch",
+      "guests": 20,
+      "guests_raw": "20 pax",
+      "menu_lines": [
+        {"segment": "starter", "items": [{"text": "Creme de Cenoura (quente no copo) (veg.)", "quantity": null}, {"text": "Variedade de Saladas (alfaces, cenoura, milho, couve roxa…)", "quantity": null}, {"text": "Espetada de Bolinhos de bacalhau", "quantity": null}, {"text": "Croquetes c/ Azeitona", "quantity": null}]},
+        {"segment": "main_dish", "items": [{"text": "Bacalhau c/ Natas ou Bacalhau C/ Grão", "quantity": null}, {"text": "Arroz de Pato ou Arroz de Frango caldoso", "quantity": null}]},
+        {"segment": "dessert", "items": [{"text": "Variedade de brigadeiros", "quantity": null}, {"text": "Brownie c/ nozes e caramelo salgado", "quantity": null}, {"text": "Espetadas de Fruta", "quantity": null}]},
+        {"segment": "drink", "items": [{"text": "Água garrafas de vidro", "quantity": null}, {"text": "Sumo (Compal) sabores variados", "quantity": null}, {"text": "Sumo de laranja natural (Servido em flutes)", "quantity": null}, {"text": "Águas aromatizadas (Chá frio)", "quantity": null}, {"text": "Café e descafeinado (cápsulas)", "quantity": null}]}
+      ],
+      "prices": [{"label": null, "unit_price": 27.5, "quantity": 20, "line_total": 550, "vat_rate": 13}]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 676.50,
+  "total_includes_vat": true,
+  "staff_mentioned": "2 funcionários para servir",
+  "notes": [
+    "Prato Principal: (escolher 2)",
+    "Mesa de bebidas (heading)",
+    "Nos serviços apresentados não serão utilizados materiais plásticos, apenas pratos de papel e garfos de madeira demonstrando assim a nossa consciência ambiental.",
+    "2 máquinas de café"
+  ],
+  "uncertain": [
+    "Cliente e data vêm do nome do ficheiro; o texto não os indica.",
+    "Ano do evento não está escrito no texto nem no nome do ficheiro.",
+    "Linha de preço sem rótulo no texto."
+  ]
+}

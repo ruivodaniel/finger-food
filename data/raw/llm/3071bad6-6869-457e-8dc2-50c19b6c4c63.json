@@ -1,0 +1,44 @@
+{
+  "quote_id": "q:3071bad6-6869-457e-8dc2-50c19b6c4c63",
+  "client": "Pedro Oliveira",
+  "client_source": "file_name",
+  "event_dates": [{"day": 5, "month": 5, "year": null, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Coffee break 16.30h",
+      "service_type": "coffee_break",
+      "guests": 150,
+      "guests_raw": "6.50€ x 150 pax",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Croissants c/ Queijo", "quantity": null},
+          {"text": "Croissants c/ Fiambre", "quantity": null},
+          {"text": "Bolinhos de Bacalhau", "quantity": null},
+          {"text": "Croquetes de Vitela", "quantity": null},
+          {"text": "Vol au vents de Frango", "quantity": null},
+          {"text": "Vol au vents de Guacamole", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água engarrafada", "quantity": null},
+          {"text": "Sumo Compal", "quantity": null},
+          {"text": "Espumante (Ermelinda Freitas)", "quantity": null}
+        ]}
+      ],
+      "prices": [{"label": "Coffee break", "unit_price": 6.5, "quantity": 150, "line_total": 975, "vat_rate": 13}]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 1101.75,
+  "total_includes_vat": true,
+  "staff_mentioned": "dois funcionários para montar, servir e desmontar",
+  "notes": [
+    "Disponibilizamos serviço para o Bolo",
+    "Disponibiliza todos os materiais necessários"
+  ],
+  "uncertain": [
+    "Client name comes from the file name only",
+    "The service name is written as 'Coffee break 16.30h'; the price line is labelled 'Coffee break'",
+    "Espumante is listed in the drinks section and has no own price line"
+  ]
+}

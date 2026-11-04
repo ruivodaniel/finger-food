@@ -1,0 +1,84 @@
+{
+  "quote_id": "q:11492e21-b958-444e-8011-d9ebfa679e2b",
+  "client": "Anabela Anjos",
+  "client_source": "file_name",
+  "event_dates": [{"day": 15, "month": 5, "year": null, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Coffee-Break – 11h30",
+      "service_type": "coffee_break",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "other", "items": [
+          {"text": "Croissant c/ Queijo (veg.)", "quantity": null},
+          {"text": "Croissant c/ Fiambre", "quantity": null},
+          {"text": "Pão sementes c/ Queijo(veg.)", "quantity": null},
+          {"text": "Pão de sementes c/ Fiambre", "quantity": null},
+          {"text": "Vol au vents de Guacamole c/ azeitona (veg)", "quantity": null},
+          {"text": "Copinhos de iogurte c/ granola", "quantity": null},
+          {"text": "Bolachinhas Bacalhaus do CASCI", "quantity": null},
+          {"text": "Pasteis de Nata", "quantity": null},
+          {"text": "Brownie c/ nozes e caramelo salgado", "quantity": null},
+          {"text": "Ovos moles de Aveiro", "quantity": null},
+          {"text": "Espetadas de fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Frutos vermelhos", "quantity": null},
+          {"text": "Maçã canela", "quantity": null},
+          {"text": "Café e descafeinado (cápsulas)", "quantity": null}
+        ]}
+      ],
+      "prices": [{"label": "Coffee breaks am", "unit_price": 6.5, "quantity": 140, "line_total": 910, "vat_rate": 13}]
+    },
+    {
+      "name_as_written": "Coffee-Break – 15h30",
+      "service_type": "coffee_break",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "other", "items": [
+          {"text": "Pão de Queijo (veg.)", "quantity": null},
+          {"text": "Folhados Mistos", "quantity": null},
+          {"text": "Folhados Salsicha", "quantity": null},
+          {"text": "Bolinhos de Bacalahau", "quantity": null},
+          {"text": "Croquetes de Vitela", "quantity": null},
+          {"text": "Chamuças (veg.)", "quantity": null},
+          {"text": "Bolachinhas Bacalhaus do CASCI", "quantity": null},
+          {"text": "Mil folhas", "quantity": null},
+          {"text": "Salame de chocolate", "quantity": null},
+          {"text": "Bolinhas de Berlim", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Frutos vermelhos", "quantity": null},
+          {"text": "Maçã canela", "quantity": null},
+          {"text": "Café e descafeinado (cápsulas)x", "quantity": null}
+        ]}
+      ],
+      "prices": [{"label": "Coffee breaks pm", "unit_price": 6.5, "quantity": 140, "line_total": 910, "vat_rate": 13}]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 2056.6,
+  "total_includes_vat": true,
+  "staff_mentioned": "3 funcionários para servirem",
+  "notes": [
+    "Nos serviços apresentados não serão utilizados materiais plásticos, demonstrando assim a nossa consciência ambiental.",
+    "Disponibilizo 6 máquinas de café, assim como 3 funcionários para servirem, evitando filas.",
+    "Bolachinhas do CASCI: O CASCI é o Centro de Ação Social do Concelho de Ílhavo e habilita para a inclusão social pessoas com deficiência, pessoas idosas, crianças e públicos de risco; ao comprarmos estes produtos estamos a ajudar.",
+    "Sub Total 1820€; estes valores acrescem IVA à taxa de 13%."
+  ],
+  "uncertain": [
+    "Client name is not in the text; taken from the file name.",
+    "Event date has no year in the text or the file name.",
+    "Guests are not written; the price lines show x 140.",
+    "Menu items under each Coffee-Break header have no segment labels, so they are marked other."
+  ]
+}

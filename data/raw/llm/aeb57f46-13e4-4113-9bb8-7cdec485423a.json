@@ -1,0 +1,60 @@
+{
+  "quote_id": "q:aeb57f46-13e4-4113-9bb8-7cdec485423a",
+  "client": null,
+  "client_source": null,
+  "event_dates": [{"day": 12, "month": 5, "year": null, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Almoço",
+      "service_type": "lunch",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "starter", "items": [
+          {"text": "Bolinhos de Bacalhau", "quantity": null},
+          {"text": "Rissóis de Camarão", "quantity": null},
+          {"text": "Croquetes de novilho", "quantity": null},
+          {"text": "Espetada de mozarela c/ cherry e manjericão (veg)", "quantity": null},
+          {"text": "Vol au vents de Guacamole (veg)", "quantity": null},
+          {"text": "Batatas fritas", "quantity": null},
+          {"text": "Variedade de Saladas (alfaces, cenoura, milho, couve roxa…) (veg)", "quantity": null}
+        ]},
+        {"segment": "main_dish", "items": [
+          {"text": "Porco no espeto (Sandes)", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Espetadas de Fruta", "quantity": null},
+          {"text": "Bownie c/ Nozes e Caramelo salgado", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Coca-cola, Sumol, Ice tea", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Café e descafeinado (cápsulas)", "quantity": null},
+          {"text": "Cerveja minis 300 uni", "quantity": 300}
+        ]}
+      ],
+      "prices": [
+        {"label": "Almoço", "unit_price": 18, "quantity": 119, "line_total": 2142, "vat_rate": 13},
+        {"label": "Cerveja", "unit_price": 0.5, "quantity": 300, "line_total": 150, "vat_rate": 23}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 2604.96,
+  "total_includes_vat": true,
+  "staff_mentioned": "3 funcionários",
+  "notes": [
+    "Sub-Total 2420.46€ (IVA 13%)",
+    "Sub-total 184.50€ (IVA 23%)",
+    "Nos serviços apresentados não serão utilizados materiais plásticos",
+    "Todo o serviço é realizado com loiças e toalhas de pano"
+  ],
+  "uncertain": [
+    "No client name in the text or the file name",
+    "Year of the event is not written",
+    "Headcount is not written; 119 is the price quantity on the Almoço line"
+  ]
+}

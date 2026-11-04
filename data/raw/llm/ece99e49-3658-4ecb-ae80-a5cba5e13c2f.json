@@ -1,0 +1,38 @@
+{
+  "quote_id": "q:ece99e49-3658-4ecb-ae80-a5cba5e13c2f",
+  "client": "Marta Trindade",
+  "client_source": "file_name",
+  "event_dates": [],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Lunch Box Carne e Peixe / Lunch Box Vegan",
+      "service_type": "lunch",
+      "guests": 60,
+      "guests_raw": "60",
+      "menu_lines": [
+        {"segment": "other", "items": [
+          {"text": "Sandes de Panado de Frango Alfece e Queijo", "quantity": 30},
+          {"text": "Wrap de Patê de Atum Alface e Cenoura", "quantity": 30},
+          {"text": "Barra de Cereais", "quantity": 1},
+          {"text": "Mini KitKat ou similar", "quantity": 1},
+          {"text": "Maçã", "quantity": 1},
+          {"text": "Sandes de Cogumelos de cebolada", "quantity": 30},
+          {"text": "Wrap de Guacamole Queijo vegan e azeitonas", "quantity": 30}
+        ]}
+      ],
+      "prices": [
+        {"label": "Valor final Lunch box", "unit_price": 8.5, "quantity": 60, "line_total": 510, "vat_rate": 13}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 576.30,
+  "total_includes_vat": true,
+  "staff_mentioned": null,
+  "notes": [],
+  "uncertain": [
+    "The file name gives the client; the text has no date and no client name.",
+    "The carne and peixe lunch box and the vegan lunch box are kept as one moment, with the item quantities as written."
+  ]
+}

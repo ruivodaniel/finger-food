@@ -1,0 +1,219 @@
+{
+  "quote_id": "q:70ce900a-4541-467c-a57e-8d91208454d9",
+  "client": "Maria Teresa Herdeiro",
+  "client_source": "file_name",
+  "event_dates": [
+    {"day": 15, "month": 4, "year": null, "source": "text"},
+    {"day": 24, "month": 4, "year": null, "source": "text"},
+    {"day": 24, "month": 6, "year": null, "source": "text"},
+    {"day": 26, "month": 6, "year": null, "source": "text"},
+    {"day": 21, "month": 10, "year": null, "source": "text"},
+    {"day": 30, "month": 10, "year": null, "source": "text"}
+  ],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Dia 15 Abril Coffee-Break – 15h30 Fórum Maior de Idade Gafanha da Nazaré",
+      "service_type": "coffee_break",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Pão sementes c/ Fiambre", "quantity": null},
+          {"text": "Croquetes de vitela (frito)", "quantity": null},
+          {"text": "Pão de sementes c/ Queijo", "quantity": null},
+          {"text": "Bolinhas de Grão de Bico (frito)", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Espetadas de fruta", "quantity": null},
+          {"text": "Pasteis de Nata", "quantity": null},
+          {"text": "Brownie c/ Nozes e Caramelo Salgado", "quantity": null},
+          {"text": "Bolachinhas Bacalhaus do CASCI", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Café", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "Dia 24 de Abril Coffee-Break – 15h30 Biblioteca Municipal Oliveira do Bairro",
+      "service_type": "coffee_break",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Vol au vents de Frango (forno)", "quantity": null},
+          {"text": "Folhados de Salsicha (forno)", "quantity": null},
+          {"text": "Rolinhos Primavera (frito)", "quantity": null},
+          {"text": "Bolinhas de Grão de Bico (frito)", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Espetadas de fruta", "quantity": null},
+          {"text": "Tarte de Amêndoa", "quantity": null},
+          {"text": "Bolachinhas Bacalhaus do CASCI", "quantity": null},
+          {"text": "Húngaros", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Café", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "Dia 24 de Junho Coffee-Break – 15h30 Fórum Maior de Idade Gafanha da Nazaré",
+      "service_type": "coffee_break",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Croissant c/ fiambre", "quantity": null},
+          {"text": "Vol au vents de Atum (forno)", "quantity": null},
+          {"text": "Croissant simples", "quantity": null},
+          {"text": "Croissant c/ queijo", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Espetadas de fruta", "quantity": null},
+          {"text": "Folhados de chocolate", "quantity": null},
+          {"text": "Pasteis de Nata", "quantity": null},
+          {"text": "Bolachinhas Bacalhaus do CASCI", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Café", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "Dia 26 de Junho Coffee-Break – 15h30 Auditório de Oiã",
+      "service_type": "coffee_break",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Pão de Leite c/ Fiambre", "quantity": null},
+          {"text": "Rissóis de Camarão (frito)", "quantity": null},
+          {"text": "Pão de Leite c/ Queijo", "quantity": null},
+          {"text": "Rolinhos Primavera (frito)", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Espetadas de fruta", "quantity": null},
+          {"text": "Iogurte c/ granola", "quantity": null},
+          {"text": "Rosquinhas de Chocolate preto", "quantity": null},
+          {"text": "Bolachinhas Bacalhaus do CASCI", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Café", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "Dia 21 de Outubro Coffee-Break – 15h30 Fórum Maior de Idade Gafanha da Nazaré",
+      "service_type": "coffee_break",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Bolos de Bacalhau (frito)", "quantity": null},
+          {"text": "Croquetes de vitela (frito)", "quantity": null},
+          {"text": "Vol au vents de Patê de Azeitona (forno)", "quantity": null},
+          {"text": "Pão de Queijo", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Espetadas de fruta", "quantity": null},
+          {"text": "Torta de ovos c/ fios de ovos", "quantity": null},
+          {"text": "Bolachinhas Bacalhaus do CASCI", "quantity": null},
+          {"text": "Salame de chocolate", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Café", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "Dia 30 de Outubro Coffee-Break – 15h30 Campus da Idade Maior Silvério",
+      "service_type": "coffee_break",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Vol au vents de Frutos do mar (forno)", "quantity": null},
+          {"text": "Chamuças de frango (frito)", "quantity": null},
+          {"text": "Vol au vents de bolonhesa de soja (forno)", "quantity": null},
+          {"text": "Rolinhos Primavera (frito)", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Espetadas de fruta", "quantity": null},
+          {"text": "Brownie c/ Nozes e Caramelo Salgado", "quantity": null},
+          {"text": "Palmiers", "quantity": null},
+          {"text": "Bolachinhas Bacalhaus do CASCI", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Café", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "Data e Local a defenir",
+      "service_type": "coffee_break",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Pão sementes c/ Fiambre", "quantity": null},
+          {"text": "Chamuças de frango (frito)", "quantity": null},
+          {"text": "Pão de sementes c/ Queijo", "quantity": null},
+          {"text": "Bolinhas de Grão de Bico (frito)", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Espetadas de fruta", "quantity": null},
+          {"text": "Pasteis de Nata", "quantity": null},
+          {"text": "Tarte de Amêndoa", "quantity": null},
+          {"text": "Bolachinhas Bacalhaus do CASCI", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Café", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    }
+  ],
+  "prices_not_in_a_moment": [
+    {"label": "Coffee breaks pm 8€ x 25 = 200€ x 7", "unit_price": 8, "quantity": 25, "line_total": 1400, "vat_rate": 13}
+  ],
+  "total": 1582,
+  "total_includes_vat": true,
+  "staff_mentioned": "2 funcionários",
+  "notes": [
+    "Todas as deslocações, mão de obra e materiais estão incluídas no orçamento.",
+    "Nos serviços apresentados não serão utilizados materiais plásticos, demonstrando assim a nossa consciência ambiental.",
+    "Nas miniaturas doces temos um item muito especial que começamos a introduzir nos nossos menus, as bolachinhas do CASCI – O CASCI é o Centro de Ação Social do Concelho de Ílhavo e habilita para a inclusão social pessoas com deficiência, pessoas idosas, crianças e públicos de risco, ao comprarmos estes produtos estamos a ajudar."
+  ],
+  "uncertain": [
+    "A quantidade 25 por coffee break é uma leitura do preço '8€ x 25'; o texto não diz o número de pessoas."
+  ]
+}

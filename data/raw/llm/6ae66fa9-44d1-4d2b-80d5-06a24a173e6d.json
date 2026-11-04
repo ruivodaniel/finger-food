@@ -1,0 +1,62 @@
+{
+  "quote_id": "q:6ae66fa9-44d1-4d2b-80d5-06a24a173e6d",
+  "client": "AD AIR Center",
+  "client_source": "text",
+  "event_dates": [],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Lunch Box - Completa",
+      "service_type": "lunch",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "other", "items": [
+          {"text": "Salada composta embalada (tempero, talher de madeira)", "quantity": null},
+          {"text": "Sandes de Panado de frango ou Omelete c/ Alfece e queijo", "quantity": null},
+          {"text": "Maçã Ou Banana", "quantity": null},
+          {"text": "Mini KitKat ou similar", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água 0.50cl", "quantity": null},
+          {"text": "Sumo Bongo 0.20cl", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Valor final Lunch box (Completa)", "unit_price": 15, "quantity": null, "line_total": null, "vat_rate": 13}
+      ]
+    },
+    {
+      "name_as_written": "Lunch Box – Base",
+      "service_type": "lunch",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "other", "items": [
+          {"text": "Sandes de Panado de frango ou Omelete c/ Alfece e queijo", "quantity": null},
+          {"text": "Maçã Ou Banana", "quantity": null},
+          {"text": "Mini KitKat ou similar", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água 0.50cl", "quantity": null},
+          {"text": "Sumo Bongo 0.20cl", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Valor final Lunch box (Base)", "unit_price": 10, "quantity": null, "line_total": null, "vat_rate": 13}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": null,
+  "total_includes_vat": null,
+  "staff_mentioned": null,
+  "notes": [
+    "Serviço a ser adjudicado por: AD AIR Center - Associação para o Desenvolvimento do Atlântico Centro Internacional de Investigação; TERINOV – Parque de Ciência e Tecnologia da Ilha Terceira."
+  ],
+  "uncertain": [
+    "No guest count and no event date are written.",
+    "No total is written; only the unit value of each lunch box.",
+    "The two lunch boxes are kept as two moments, Completa and Base."
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "quote_id": "q:b6144dd2-a6ba-4f3b-ba57-2d63bfa1f7a6",
+  "client": "Joao Amorim",
+  "client_source": "file_name",
+  "event_dates": [],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Coffee-Break 10h",
+      "service_type": "coffee_break",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "other", "items": [
+          {"text": "Croissant Brioche c/ Queijo (veg.)", "quantity": null},
+          {"text": "Croissant Brioche c/ Fiambre", "quantity": null},
+          {"text": "Vol au vents de Guacamole (veg.)", "quantity": null},
+          {"text": "Bolachinhas Bacalhaus do CASCI (veg.)", "quantity": null},
+          {"text": "Iogurte de Soja c/ granola (veg.)", "quantity": null},
+          {"text": "Folhado de Chocolate (veg.)", "quantity": null},
+          {"text": "Espetadas de fruta (veg.)", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo de Laranja Natural (exprimido na hora servido em flutes)", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Chás variados", "quantity": null},
+          {"text": "Café e descafeinado", "quantity": null}
+        ]}
+      ],
+      "prices": [{"label": "Cb am", "unit_price": 8, "quantity": 20, "line_total": 160, "vat_rate": 13}]
+    },
+    {
+      "name_as_written": "Coffee-Break 16h",
+      "service_type": "coffee_break",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "other", "items": [
+          {"text": "Folhados mistos e Folhados de Salsicha", "quantity": null},
+          {"text": "Vol au vents de Guacamole (veg)", "quantity": null},
+          {"text": "Pasteis de Nata (veg.)", "quantity": null},
+          {"text": "Bolinhas de Berlim (veg.)", "quantity": null},
+          {"text": "Espetadas de Fruta (veg.)", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo de Laranja Natural (exprimido na hora servido em flutes)", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Chás variados", "quantity": null},
+          {"text": "Café e descafeinado", "quantity": null}
+        ]}
+      ],
+      "prices": [{"label": "Cb pm", "unit_price": 8, "quantity": 20, "line_total": 160, "vat_rate": 13}]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 361.6,
+  "total_includes_vat": true,
+  "staff_mentioned": "2 funcionários",
+  "notes": [
+    "Sub-total 320€; acresce IVA a taxa legal em vigor 13%",
+    "Nos serviços apresentados não serão utilizados materiais plásticos",
+    "Todo o serviço é realizado com loiças e toalhas de pano",
+    "Bolachinhas do CASCI: Centro de Ação Social do Concelho de Ílhavo"
+  ],
+  "uncertain": [
+    "Client name comes from the file name only",
+    "The Miniaturas heading reads 'Salgadas e Doces', so the items are not split into savory and sweet",
+    "The drink list is written once for all moments ('presente em todos os momentos'); it is attached to both"
+  ]
+}

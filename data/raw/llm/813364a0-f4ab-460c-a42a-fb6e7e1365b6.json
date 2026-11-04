@@ -1,0 +1,89 @@
+{
+  "quote_id": "q:813364a0-f4ab-460c-a42a-fb6e7e1365b6",
+  "client": "Municipio de Ilhavo",
+  "client_source": "file_name",
+  "event_dates": [
+    {"day": 23, "month": 5, "year": null, "source": "file_name"}
+  ],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Coffee-Break -150pax – 11h",
+      "service_type": "coffee_break",
+      "guests": 150,
+      "guests_raw": "150pax",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Pão c/ Queijo (veg.)", "quantity": null},
+          {"text": "Pão c/ Fiambre", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Bolachinhas Bacalhaus do CASCI", "quantity": null},
+          {"text": "Pasteis de Nata", "quantity": null},
+          {"text": "Argolas de Chocolate", "quantity": null},
+          {"text": "Peças de fruta", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "Almoço (volante) – 100pax – 12h30",
+      "service_type": "lunch",
+      "guests": 100,
+      "guests_raw": "100pax",
+      "menu_lines": [
+        {"segment": "starter", "items": [
+          {"text": "Variedade de Saladas em Bufett (variado de alfaces, cenoura ralada, milho, couve roxa, beterraba)", "quantity": null},
+          {"text": "Salada de feijão frade com cebola e salsa", "quantity": null},
+          {"text": "Ovos cozidos", "quantity": null}
+        ]},
+        {"segment": "main_dish", "items": [
+          {"text": "Bacalhau c/ Natas", "quantity": null},
+          {"text": "Arroz de Pato", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Bolachinhas Bacalhaus do CASCI", "quantity": null},
+          {"text": "Brownie c/ nozes e caramelo salgado", "quantity": null},
+          {"text": "Variedade de Brigadeiros", "quantity": null},
+          {"text": "Espetadas de Fruta", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "Coffee-Break - 150pax – 16h?",
+      "service_type": "coffee_break",
+      "guests": 150,
+      "guests_raw": "150pax",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Pão c/ Queijo (veg.)", "quantity": null},
+          {"text": "Pão c/ Fiambre", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Palmiers", "quantity": null},
+          {"text": "Mil Folhas Glacê", "quantity": null},
+          {"text": "Salame de Chocolate", "quantity": null},
+          {"text": "Peças de fruta", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    }
+  ],
+  "prices_not_in_a_moment": [
+    {"label": "Coffee breaks am + Almoço + Coffee breaks pm", "unit_price": null, "quantity": null, "line_total": 2850, "vat_rate": 13}
+  ],
+  "total": 3220.50,
+  "total_includes_vat": true,
+  "staff_mentioned": "4 funcionários",
+  "notes": [
+    "Mesa de bebidas presente em todos os momentos: Água garrafas de vidro; Sumo (Compal) sabores variados; Águas aromatizadas (Chá frio); Café e descafeinado (cápsulas).",
+    "Almoço com opção de prato vegan nas entradas.",
+    "Nas miniaturas doces temos as bolachinhas do CASCI.",
+    "4 máquinas de café."
+  ],
+  "uncertain": [
+    "Data 23 de Maio só no nome do ficheiro; o texto não tem data.",
+    "Sub Total 2850€ sem divisão por momento."
+  ]
+}

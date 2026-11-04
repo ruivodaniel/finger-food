@@ -1,0 +1,92 @@
+{
+  "quote_id": "q:61d44e6b-95ac-4688-b6cf-138ddc1c5bdb",
+  "client": "Marta Trindade",
+  "client_source": "file_name",
+  "event_dates": [],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Coffee-Break 10h",
+      "service_type": "coffee_break",
+      "guests": 55,
+      "guests_raw": "55 pax",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Croissant Brioche c/ Queijo (veg.) e Croissant Brioche c/ Fiambre", "quantity": null},
+          {"text": "Vol au vents de Guacamole (veg.)", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Bolachinhas Bacalhaus do CASCI", "quantity": null},
+          {"text": "Iogurte de Soja c/ granola", "quantity": null},
+          {"text": "Folhado de Chocolate", "quantity": null},
+          {"text": "Espetadas de fruta", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Coffee-Break 10h", "unit_price": 8, "quantity": 55, "line_total": 440, "vat_rate": null}
+      ]
+    },
+    {
+      "name_as_written": "Almoço (volante) 13h - 14h",
+      "service_type": "lunch",
+      "guests": 55,
+      "guests_raw": "55 pax",
+      "menu_lines": [
+        {"segment": "starter", "items": [
+          {"text": "Bolinhos de bacalhau", "quantity": null},
+          {"text": "Rissóis de Camarão", "quantity": null},
+          {"text": "Croquetes de Vitela", "quantity": null},
+          {"text": "Variedade de Saladas (alfaces, cenoura, milho, couve roxa…)", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Variedade de Brigadeiros", "quantity": null},
+          {"text": "Ovos Moles", "quantity": null},
+          {"text": "Espetadas de Fruta", "quantity": null}
+        ]},
+        {"segment": "other", "items": [
+          {"text": "Wraps de frango, atum e guacamole c/ queijo e rúcula", "quantity": null},
+          {"text": "Rodízio de Pizzas", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Almoço", "unit_price": 18, "quantity": 55, "line_total": 990, "vat_rate": null}
+      ]
+    },
+    {
+      "name_as_written": "Coffee-Break 15h30",
+      "service_type": "coffee_break",
+      "guests": 55,
+      "guests_raw": "55 pax",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Folhados mistos e Folhados de Salsicha", "quantity": null},
+          {"text": "Vol au vents de Guacamole", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Pasteis de Nata", "quantity": null},
+          {"text": "Bolinhas de Berlim", "quantity": null},
+          {"text": "Espetadas de Fruta", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Coffee-Break 15h30", "unit_price": 8, "quantity": 55, "line_total": 440, "vat_rate": null}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 2113.10,
+  "total_includes_vat": true,
+  "staff_mentioned": "3 funcionários",
+  "notes": [
+    "Sub-total 1870€; acresce IVA à taxa legal em vigor (13%).",
+    "Mesa de bebidas presente em todos os momentos: Água garrafas de vidro; Sumo de Laranja Natural (exprimido na hora, servido em flutes); Sumo (Compal) sabores variados; Águas aromatizadas (Chá frio); Chás variados; Café e descafeinado.",
+    "Nos serviços apresentados não serão utilizados materiais plásticos.",
+    "Todo o serviço é realizado com loiças e toalhas de pano.",
+    "Bolachinhas do CASCI incluídas nas miniaturas doces."
+  ],
+  "uncertain": [
+    "Sem data no texto nem no nome do ficheiro.",
+    "Cabeçalho 'Miniaturas Saldadas' escrito assim no original.",
+    "Linha 'Almoço 13h - 14h' com 55 pax no preço, mas o texto não diz a taxa de IVA por linha."
+  ]
+}

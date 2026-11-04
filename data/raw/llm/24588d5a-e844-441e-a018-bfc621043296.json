@@ -1,0 +1,36 @@
+{
+  "quote_id": "q:24588d5a-e844-441e-a018-bfc621043296",
+  "client": "Madalena Ferreira",
+  "client_source": "file_name",
+  "event_dates": [{"day": 13, "month": 6, "year": 2026, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": null,
+      "service_type": "other",
+      "guests": 100,
+      "guests_raw": "100",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [{"text": "Tábuas de Queijos decoradas c/ frutos secos (veg.)", "quantity": null}, {"text": "Tábuas de enchidos decoradas c/ azeitonas", "quantity": null}, {"text": "Acompanhadas c/ variedade de tostas e broa", "quantity": null}, {"text": "Rissóis de camarão", "quantity": null}, {"text": "Espetada de Bolinhos de Bacalhau", "quantity": null}, {"text": "Croissants c/ Queijo (Veg.)", "quantity": null}, {"text": "Croissants c/ Fiambre", "quantity": null}, {"text": "Vol au vents de Guacamole (veg.)", "quantity": null}, {"text": "Espetada de mozarela c/ azeitona, cherry e manjericão (veg.)", "quantity": null}]},
+        {"segment": "sweet_miniatures", "items": [{"text": "Bolachinhas Bacalhaus Salgados do CASCI", "quantity": null}, {"text": "Mil folhas glacê", "quantity": null}, {"text": "Pasteis de Nata", "quantity": null}, {"text": "Variedade de Brigadeiros", "quantity": null}, {"text": "Brownie c/ Nozes e caramelo salgado", "quantity": null}]},
+        {"segment": "drink", "items": [{"text": "Água engarrafada", "quantity": null}, {"text": "Sumo Compal", "quantity": null}, {"text": "Sumo de Laranja natural (exprimido na hora, servido em flutes)", "quantity": null}, {"text": "Espumante (Fraga da Pena ou similar até 10€ por garrafa)", "quantity": 25}]}
+      ],
+      "prices": [{"label": "Comidas", "unit_price": 14, "quantity": 100, "line_total": 1400, "vat_rate": 13}, {"label": "Bebidas", "unit_price": 2.5, "quantity": 100, "line_total": 250, "vat_rate": 23}]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 1864.50,
+  "total_includes_vat": true,
+  "staff_mentioned": "três funcionários",
+  "notes": [
+    "Nos orçamento apresentado, estão incluídos todos os materiais necessários a elaboração deste serviço.",
+    "O orçamento contempla 9h, considerando 2h de montagem, 5h de serviço e 2h para desmontar iniciando-se os trabalhos nas vossas instalações ás 13h.",
+    "(Qualquer atraso terá um custo extra de 8.50€/hora por funcionário.)",
+    "Nas miniaturas doces temos um item muito especial ... as bolachinhas do CASCI – O CASCI é o Centro de Ação Social do Concelho de Ílhavo"
+  ],
+  "uncertain": [
+    "Cliente e data vêm do nome do ficheiro; o texto não os indica.",
+    "A linha de bebidas diz 23% de IVA, mas o sub-total escrito (282.50€) corresponde a 13% sobre 250€.",
+    "O texto não tem cabeçalho de serviço; o momento foi criado como único (sem nome escrito)."
+  ]
+}

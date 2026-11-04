@@ -1,0 +1,545 @@
+{
+ "out": "/Users/danieldedecastroruivo/DEV/finger-food/data/analysis/dup/3.json",
+ "neighbourhoods": [
+  [
+   {
+    "item": "feijao frade com quinoa de legumes",
+    "count": 6,
+    "example": "Feijao Frade com Quinoa de Legumes (vegan)"
+   },
+   {
+    "item": "feijoada de cogumelos",
+    "count": 1,
+    "example": "Feijoada de cogumelos"
+   },
+   {
+    "item": "folhadinhos de salsicha",
+    "count": 1,
+    "example": "Folhadinhos de salsicha"
+   },
+   {
+    "item": "folhado de chocolate",
+    "count": 53,
+    "example": "Folhado de Chocolate"
+   },
+   {
+    "item": "folhado salsicha",
+    "count": 1,
+    "example": "Folhado Salsicha"
+   },
+   {
+    "item": "folhados c salsicha",
+    "count": 3,
+    "example": "Folhados c/ salsicha"
+   },
+   {
+    "item": "folhados de chocolate",
+    "count": 32,
+    "example": "Folhados de chocolate"
+   },
+   {
+    "item": "folhados de salchicha",
+    "count": 5,
+    "example": "Folhados de salchicha"
+   },
+   {
+    "item": "folhados de salsicha",
+    "count": 38,
+    "example": "Folhados de Salsicha"
+   },
+   {
+    "item": "folhados de salsicha e mistos",
+    "count": 2,
+    "example": "Folhados de Salsicha e Mistos"
+   },
+   {
+    "item": "folhados de salsisha",
+    "count": 1,
+    "example": "Folhados de Salsisha"
+   },
+   {
+    "item": "folhados mistos",
+    "count": 68,
+    "example": "Folhados Mistos"
+   },
+   {
+    "item": "folhados mistos e de salchicha",
+    "count": 2,
+    "example": "Folhados mistos e de salchicha"
+   },
+   {
+    "item": "folhados mistos e folhados de salsicha",
+    "count": 4,
+    "example": "Folhados mistos e Folhados de Salsicha"
+   },
+   {
+    "item": "folhados salcicha",
+    "count": 2,
+    "example": "Folhados Salcicha"
+   },
+   {
+    "item": "folhados salcisha",
+    "count": 6,
+    "example": "Folhados Salcisha"
+   },
+   {
+    "item": "folhados salsicha",
+    "count": 15,
+    "example": "Folhados Salsicha"
+   },
+   {
+    "item": "folhados salsisha",
+    "count": 8,
+    "example": "Folhados Salsisha"
+   },
+   {
+    "item": "frutos vermelhos",
+    "count": 31,
+    "example": "Frutos vermelhos"
+   },
+   {
+    "item": "frutos vermelhos 16h",
+    "count": 1,
+    "example": "Frutos vermelhos 16h"
+   },
+   {
+    "item": "frutos vermelhos maca canela",
+    "count": 1,
+    "example": "Frutos vermelhos /Maçã canela"
+   },
+   {
+    "item": "grao de bico com quinoa de legumes",
+    "count": 2,
+    "example": "Grão de bico com Quinoa de Legumes (vegan)"
+   },
+   {
+    "item": "jardineira de cogumelos salteados",
+    "count": 2,
+    "example": "Jardineira de Cogumelos Salteados (vegan)"
+   },
+   {
+    "item": "maca",
+    "count": 8,
+    "example": "Maçã"
+   },
+   {
+    "item": "maca canela",
+    "count": 27,
+    "example": "Maçã canela"
+   },
+   {
+    "item": "maca canela 19h",
+    "count": 1,
+    "example": "Maçã canela 19h"
+   },
+   {
+    "item": "maca ou banana",
+    "count": 6,
+    "example": "Maçã Ou Banana"
+   },
+   {
+    "item": "macarrons",
+    "count": 1,
+    "example": "Macarrons"
+   },
+   {
+    "item": "mini bifanas a moda do porto",
+    "count": 3,
+    "example": "Mini bifanas á moda do Porto"
+   },
+   {
+    "item": "mini pao c fiambre",
+    "count": 1,
+    "example": "Mini Pão c/ Fiambre"
+   },
+   {
+    "item": "mini pao c queijo",
+    "count": 1,
+    "example": "Mini Pão c/ Queijo"
+   },
+   {
+    "item": "mini pao de sementes c fiambre",
+    "count": 2,
+    "example": "Mini pão de sementes c/ fiambre"
+   },
+   {
+    "item": "mini pao de sementes c queijo",
+    "count": 2,
+    "example": "Mini pão de sementes c/ queijo"
+   },
+   {
+    "item": "mini pao integral c fiambre",
+    "count": 2,
+    "example": "Mini Pão integral c/ fiambre"
+   },
+   {
+    "item": "mini pao integral c queijo",
+    "count": 2,
+    "example": "Mini Pão integral c/ queijo"
+   },
+   {
+    "item": "moelas estufadas",
+    "count": 1,
+    "example": "Moelas estufadas"
+   },
+   {
+    "item": "mouse de chocolate",
+    "count": 1,
+    "example": "Mouse de Chocolate"
+   },
+   {
+    "item": "mouse de chocolate no copo",
+    "count": 2,
+    "example": "Mouse de Chocolate no copo"
+   },
+   {
+    "item": "pao c fiambre",
+    "count": 36,
+    "example": "Pão c/ Fiambre"
+   },
+   {
+    "item": "pao c queijo",
+    "count": 33,
+    "example": "Pão c/ Queijo (veg.)"
+   }
+  ],
+  [
+   {
+    "item": "pao c queijo e pao c fiambre",
+    "count": 2,
+    "example": "Pão c/ Queijo (veg.) e Pão c/ Fiambre"
+   },
+   {
+    "item": "pao de centeio c fiambre",
+    "count": 1,
+    "example": "Pão de centeio c/ Fiambre"
+   },
+   {
+    "item": "pao de centeio c queijo",
+    "count": 1,
+    "example": "Pão de centeio c/ Queijo (veg.)"
+   },
+   {
+    "item": "pao de leite c fiambre",
+    "count": 5,
+    "example": "Pão de Leite c/ Fiambre"
+   },
+   {
+    "item": "pao de leite c queijo",
+    "count": 5,
+    "example": "Pão de Leite c/ Queijo"
+   },
+   {
+    "item": "pao de queijo",
+    "count": 20,
+    "example": "Pão de Queijo"
+   },
+   {
+    "item": "pao de sementes c fiambre",
+    "count": 20,
+    "example": "Pão de sementes c/ Fiambre"
+   },
+   {
+    "item": "pao de sementes c queijo",
+    "count": 30,
+    "example": "Pão de sementes c/ Queijo"
+   },
+   {
+    "item": "pao de sementes c queijo e c fiambre",
+    "count": 2,
+    "example": "Pão de sementes c/ Queijo (veg.) e c/ Fiambre"
+   },
+   {
+    "item": "pao de sementes c queijo e pao de sementes c fiambre",
+    "count": 1,
+    "example": "Pão de Sementes c/ Queijo(veg.) e Pão de Sementes c/ Fiambre"
+   },
+   {
+    "item": "pao de sementes croissants c fiambre",
+    "count": 1,
+    "example": "Pão de sementes / Croissants c/ Fiambre"
+   },
+   {
+    "item": "pao de sementes croissants c queijo",
+    "count": 1,
+    "example": "Pão de sementes / Croissants c/ Queijo (veg.)"
+   },
+   {
+    "item": "pao integral c fiambre",
+    "count": 4,
+    "example": "Pão integral c/ Fiambre"
+   },
+   {
+    "item": "pao integral c queijo",
+    "count": 4,
+    "example": "Pão integral c/ Queijo (veg.)"
+   },
+   {
+    "item": "pao sementes c fiambre",
+    "count": 10,
+    "example": "Pão sementes c/ Fiambre"
+   },
+   {
+    "item": "pao sementes c queijo",
+    "count": 3,
+    "example": "Pão sementes c/ Queijo (veg.)"
+   },
+   {
+    "item": "pao sementes c queijo e pao sementes c fiambre",
+    "count": 2,
+    "example": "Pão sementes c/ Queijo (veg.) e Pão sementes c/ Fiambre"
+   },
+   {
+    "item": "pecas de fruta",
+    "count": 66,
+    "example": "Peças de fruta"
+   },
+   {
+    "item": "pecas de fruta macas peras bananas",
+    "count": 3,
+    "example": "Peças de fruta Maçãs, Peras, Bananas"
+   },
+   {
+    "item": "pecas de fruta variadas",
+    "count": 4,
+    "example": "Peças de Fruta variadas"
+   },
+   {
+    "item": "peixe bacalhau com natas",
+    "count": 1,
+    "example": "Peixe: Bacalhau com Natas"
+   },
+   {
+    "item": "queques aveia chocolate laranja",
+    "count": 1,
+    "example": "Queques, Aveia, Chocolate, Laranja"
+   },
+   {
+    "item": "queques de ananas",
+    "count": 1,
+    "example": "Queques de Ananas"
+   },
+   {
+    "item": "queques de aveia",
+    "count": 2,
+    "example": "Queques de Aveia"
+   },
+   {
+    "item": "queques de caramelo",
+    "count": 2,
+    "example": "Queques de Caramelo"
+   },
+   {
+    "item": "queques de cenoura",
+    "count": 2,
+    "example": "Queques de Cenoura"
+   },
+   {
+    "item": "queques de chocolate",
+    "count": 1,
+    "example": "Queques de Chocolate"
+   },
+   {
+    "item": "queques de iogurte",
+    "count": 2,
+    "example": "Queques de Iogurte"
+   },
+   {
+    "item": "queques de laranja",
+    "count": 7,
+    "example": "Queques de Laranja"
+   },
+   {
+    "item": "queques de maca",
+    "count": 2,
+    "example": "Queques de Maçã"
+   },
+   {
+    "item": "queques de noz",
+    "count": 1,
+    "example": "Queques de Noz"
+   },
+   {
+    "item": "queques frutos vermelhos chocolate ananas",
+    "count": 1,
+    "example": "Queques Frutos vermelhos, Chocolate, Ananás"
+   },
+   {
+    "item": "queques laranja",
+    "count": 1,
+    "example": "Queques Laranja"
+   },
+   {
+    "item": "queques laranja chocolate iogurte",
+    "count": 1,
+    "example": "Queques Laranja, Chocolate, Iogurte"
+   },
+   {
+    "item": "quinoa c legumes salteados",
+    "count": 21,
+    "example": "Quinoa c/ Legumes salteados"
+   },
+   {
+    "item": "quinoa com legumes salteados",
+    "count": 1,
+    "example": "Quinoa com legumes Salteados"
+   },
+   {
+    "item": "quinoa de legumes",
+    "count": 10,
+    "example": "Quinoa de Legumes (Vegan)"
+   },
+   {
+    "item": "rissois",
+    "count": 1,
+    "example": "Rissóis"
+   },
+   {
+    "item": "rissois camarao",
+    "count": 3,
+    "example": "Rissóis camarão"
+   },
+   {
+    "item": "rissois croquetes bolos de bacalhau",
+    "count": 1,
+    "example": "Rissóis, croquetes, bolos de bacalhau"
+   }
+  ],
+  [
+   {
+    "item": "buffet de saladas",
+    "count": 24,
+    "example": "Buffet de Saladas"
+   },
+   {
+    "item": "bufet de saladas",
+    "count": 1,
+    "example": "Bufet de Saladas (alface, tomate, cenoura, couve roxa e milho)"
+   }
+  ],
+  [
+   {
+    "item": "saladas variadas alface tomate cenoura milho couve roxa",
+    "count": 12,
+    "example": "Saladas Variadas Alface, tomate, cenoura, milho, couve roxa"
+   },
+   {
+    "item": "saladas variadas alface tomate cherry cortado cenoura milho couve roxa",
+    "count": 2,
+    "example": "Saladas Variadas Alface, tomate cherry cortado, cenoura, milho, couve roxa…"
+   },
+   {
+    "item": "buffet de saladas alface cherry cenoura milho couve rocha e feta",
+    "count": 1,
+    "example": "Buffet de Saladas: alface, cherry, cenoura, milho, couve rocha e feta"
+   },
+   {
+    "item": "buffet de saladas alface tomate cenoura milho",
+    "count": 1,
+    "example": "Buffet de Saladas, alface, tomate, cenoura, milho"
+   },
+   {
+    "item": "buffet de saladas alface tomate cenoura milho couve roxa e",
+    "count": 1,
+    "example": "Buffet de saladas, alface, tomate, cenoura, milho, couve roxa… e"
+   }
+  ],
+  [
+   {
+    "item": "cogumelos de cebolada",
+    "count": 9,
+    "example": "Cogumelos de cebolada (Sandes- veg)"
+   },
+   {
+    "item": "sandes de cogumelos de cebolada",
+    "count": 2,
+    "example": "Sandes de Cogumelos de cebolada"
+   },
+   {
+    "item": "cogumelos de cebolada veg",
+    "count": 1,
+    "example": "Cogumelos de cebolada Veg."
+   }
+  ],
+  [
+   {
+    "item": "bolo brigadeiro",
+    "count": 6,
+    "example": "Bolo brigadeiro"
+   },
+   {
+    "item": "bolo de aniversario creme de ovos ou brigadeiro",
+    "count": 1,
+    "example": "Bolo de Aniversário Creme de Ovos ou Brigadeiro"
+   }
+  ],
+  [
+   {
+    "item": "rosquinhas de chocolate preto",
+    "count": 5,
+    "example": "Rosquinhas de Chocolate preto"
+   },
+   {
+    "item": "rosquinhas de chocolate leite",
+    "count": 1,
+    "example": "Rosquinhas de Chocolate leite"
+   }
+  ],
+  [
+   {
+    "item": "relava 2 x 6 mts c marcas de areas 2 balizas 5 bolas futebol bandeiras",
+    "count": 2,
+    "example": "Relava 2 x 6 mts c/ marcas de áreas, 2 balizas, 5 bolas futebol, Bandeiras…"
+   },
+   {
+    "item": "relava 2 x 6 mts c marcas de areas 2 balizas 5 bolas futebol bandeiras toalhas e guardanapos ao tema",
+    "count": 1,
+    "example": "Relava 2 x 6 mts c/ marcas de áreas, 2 balizas, 5 bolas futebol, Bandeiras, Toalhas e guardanapos ao tema"
+   },
+   {
+    "item": "relva 2 x 6 mts c marcas de areas 2 balizas 5 bolas futebol bandeiras",
+    "count": 1,
+    "example": "Relva 2 x 6 mts c/ marcas de áreas, 2 balizas, 5 bolas futebol, Bandeiras…"
+   },
+   {
+    "item": "relava 2 x 6 mts c marcas de areas 1 baliza 3 bolas futebol bandeiras",
+    "count": 1,
+    "example": "Relava 2 x 6 mts c/ marcas de áreas, 1 baliza, 3 bolas futebol, Bandeiras…"
+   }
+  ],
+  [
+   {
+    "item": "peixe jardineira de lulas",
+    "count": 1,
+    "example": "Peixe: Jardineira de Lulas"
+   },
+   {
+    "item": "vegan jardineira de soja",
+    "count": 1,
+    "example": "Vegan: Jardineira de Soja"
+   },
+   {
+    "item": "jardineira de lulas",
+    "count": 1,
+    "example": "Jardineira de Lulas"
+   },
+   {
+    "item": "jardineira de soja",
+    "count": 1,
+    "example": "Jardineira de Soja"
+   }
+  ],
+  [
+   {
+    "item": "jardineira de frango e gao de bico c maca beterraba",
+    "count": 1,
+    "example": "Jardineira de Frango e Gão de bico c/ maçã, beterraba…"
+   },
+   {
+    "item": "arroz a valenciana e gao de bico c maca beterraba",
+    "count": 1,
+    "example": "Arroz á Valenciana e Gão de bico c/ maçã, beterraba…"
+   }
+  ]
+ ]
+}

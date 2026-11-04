@@ -1,0 +1,126 @@
+{
+  "quote_id": "q:c8b0035c-68c4-4eb5-8c0a-0fc11639558b",
+  "client": null,
+  "event_dates": [{"day": null, "month": null, "year": 2026}],
+  "place": "Aveiro",
+  "moments": [
+    {
+      "name_as_written": "Serviço: Coffee Break e almoço",
+      "service_type": "other",
+      "guests": null,
+      "guests_raw": "mínimo 20",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Croissant brioche ou mini pão c/ Queijo (veg.)", "quantity": null},
+          {"text": "Croissant brioche ou mini pão c/ Fiambre", "quantity": null},
+          {"text": "Rolinhos de Pão c/ Chouriço", "quantity": null},
+          {"text": "Folhados mistos", "quantity": null},
+          {"text": "Folhados Salsicha", "quantity": null},
+          {"text": "Mini Pizzas", "quantity": null},
+          {"text": "Vol Au vents de Guacamole", "quantity": null},
+          {"text": "Vol au vents de Frango", "quantity": null},
+          {"text": "Vol au vents de Delícias", "quantity": null},
+          {"text": "Wraps queijo creme, salmão e rúcula", "quantity": null},
+          {"text": "Mini pada c/ queijo da serra, presunto", "quantity": null},
+          {"text": "Empadas de Frango c/ cogumelos", "quantity": null},
+          {"text": "Croquetes de Vitela", "quantity": null},
+          {"text": "Rissóis de camarão", "quantity": null},
+          {"text": "Folhados de salchicha", "quantity": null},
+          {"text": "Bolinhos de bacalhau em espeto de Cherry", "quantity": null},
+          {"text": "Vol au vents de Guacamole c/ azeitona", "quantity": null},
+          {"text": "Espetada de mozarela c/ cherry, mangericão e azeitona", "quantity": null},
+          {"text": "Pack fritos: Rissóis de Camarão ou (em espeto de camarão)", "quantity": null},
+          {"text": "Pack fritos: Bolinhos de Bacalhau ou (em espetada c/ cherry e azeitona)", "quantity": null},
+          {"text": "Pack fritos: Croquetes de vitela ou (c/ azeitona recheada)", "quantity": null},
+          {"text": "Pack fritos: Chamuças de frango ou (c/ Ananás assado)", "quantity": null},
+          {"text": "Pack fritos: Bolinhas de grão", "quantity": null},
+          {"text": "Pack Folhadinhos: Folhados Mistos, Folhados Salsicha, Vol au vents de Frango, Vol au vents de Delícias do Mar, Vol au vents de Guacamole", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Bolhachinhas Bacalhaus do CASCI", "quantity": null},
+          {"text": "Variedade de Bolachas manteiga", "quantity": null},
+          {"text": "Palmiers", "quantity": null},
+          {"text": "Folhados de chocolate", "quantity": null},
+          {"text": "Salame de Chocolate", "quantity": null},
+          {"text": "4 Variedades de Brigadeiros", "quantity": null},
+          {"text": "Pasteis de Nata", "quantity": null},
+          {"text": "Iogurte c/ Granola", "quantity": null},
+          {"text": "Espetadas de fruta", "quantity": null},
+          {"text": "Brownie c/ Nozes e Caramelo Salgado", "quantity": null},
+          {"text": "Variedade de Macarrons", "quantity": null},
+          {"text": "Torta de ovos c/ fios de ovos", "quantity": null},
+          {"text": "Ovos moles de Aveiro", "quantity": null},
+          {"text": "Panquecas c/ iogurte e mirtilo", "quantity": null},
+          {"text": "Bolo no copo (sempre diferente)", "quantity": null}
+        ]},
+        {"segment": "starter", "items": [
+          {"text": "Sopas/ Creme servido em copo: Couve flor, Cenoura, Legumes", "quantity": null},
+          {"text": "Buffet de Saladas: Variado de Alfaces, Tomate cherry, Cenoura ralada, Couve Roxa, Milho", "quantity": null}
+        ]},
+        {"segment": "main_dish", "items": [
+          {"text": "Bacalhau com Natas ou Bacalhau lascado c/ Grão de bico", "quantity": null},
+          {"text": "Bacalhau desfiado á Portuguesa (c/ broa)", "quantity": null},
+          {"text": "Lombo de Bacalhau assado com batatas á murro ou Zé do Pipo", "quantity": null},
+          {"text": "Arroz de Pato ou Arroz á Valenciana", "quantity": null},
+          {"text": "Lombo de Porco c/ batatas assadas e puré de maçã", "quantity": null},
+          {"text": "Magret de Pato c/purê de ervilhas, vinho do porto e laranja", "quantity": null},
+          {"text": "Quinoa c/ legumes salteados", "quantity": null},
+          {"text": "Feijoada de cogumelos", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Bolo no Copo: Tiramissu, Brigadeiro, Bolo Bolacha Café ou 3 Leches, Mousse chocolate, Natas do Ceu, Cheesecake frutos vermelhos ou caramelo salgado…", "quantity": null},
+          {"text": "Espetadas de Fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água engarrafada", "quantity": null},
+          {"text": "Água aromatizada", "quantity": null},
+          {"text": "Sumos Compal", "quantity": null},
+          {"text": "Café e Descafeinado", "quantity": null},
+          {"text": "Extra: Sumo de laranja natural (espremido na hora e servido em flutes)", "quantity": null}
+        ]},
+        {"segment": "other", "items": [
+          {"text": "Tábuas de Queijos decoradas c/ frutos secos", "quantity": null},
+          {"text": "Tábuas de Enchidos c/ variado de azeitonas", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Coffee Break 6€", "unit_price": 6, "quantity": null, "line_total": null, "vat_rate": 13},
+        {"label": "Coffee Break 8€", "unit_price": 8, "quantity": null, "line_total": null, "vat_rate": 13},
+        {"label": "Pack fritos", "unit_price": 3, "quantity": null, "line_total": null, "vat_rate": 13},
+        {"label": "Pack Folhadinhos", "unit_price": 2, "quantity": null, "line_total": null, "vat_rate": 13},
+        {"label": "Buffet de Saladas", "unit_price": 3, "quantity": null, "line_total": null, "vat_rate": 13},
+        {"label": "Tábuas de Queijos decoradas c/ frutos secos", "unit_price": 5, "quantity": null, "line_total": null, "vat_rate": 13},
+        {"label": "Tábuas de Enchidos c/ variado de azeitonas", "unit_price": 5, "quantity": null, "line_total": null, "vat_rate": 13},
+        {"label": "Sopas/ Creme servido em copo", "unit_price": 3, "quantity": null, "line_total": null, "vat_rate": 13},
+        {"label": "Bacalhau com Natas ou Bacalhau lascado c/ Grão de bico", "unit_price": 15, "quantity": null, "line_total": null, "vat_rate": 13},
+        {"label": "Bacalhau desfiado á Portuguesa (c/ broa)", "unit_price": 17, "quantity": null, "line_total": null, "vat_rate": 13},
+        {"label": "Lombo de Bacalhau assado com batatas á murro ou Zé do Pipo", "unit_price": 20, "quantity": null, "line_total": null, "vat_rate": 13},
+        {"label": "Arroz de Pato ou Arroz á Valenciana", "unit_price": 15, "quantity": null, "line_total": null, "vat_rate": 13},
+        {"label": "Lombo de Porco c/ batatas assadas e puré de maçã", "unit_price": 17, "quantity": null, "line_total": null, "vat_rate": 13},
+        {"label": "Magret de Pato c/purê de ervilhas, vinho do porto e laranja", "unit_price": 20, "quantity": null, "line_total": null, "vat_rate": 13},
+        {"label": "Quinoa c/ legumes salteados", "unit_price": 10, "quantity": null, "line_total": null, "vat_rate": 13},
+        {"label": "Feijoada de cogumelos", "unit_price": 15, "quantity": null, "line_total": null, "vat_rate": 13},
+        {"label": "Variedade de sobremesas", "unit_price": 3, "quantity": null, "line_total": null, "vat_rate": 13},
+        {"label": "Espetadas de Fruta", "unit_price": 1, "quantity": null, "line_total": null, "vat_rate": 13},
+        {"label": "Serviço de bebidas", "unit_price": 2, "quantity": null, "line_total": null, "vat_rate": 13},
+        {"label": "Sumo de laranja natural (espremido na hora e servido em flutes)", "unit_price": 1, "quantity": null, "line_total": null, "vat_rate": 13}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": null,
+  "total_includes_vat": null,
+  "staff_mentioned": "dois ou mais funcionários dependendo do número de convidados",
+  "notes": [
+    "Nos menus de coffee break podem escolher 4 variedades de cada.",
+    "Asseguramos todos os materiais necessários á preparação dos menus escolhidos, assim como dois ou mais funcionários dependendo do número de convidados, estes vão preparar, servir em sistema de buffet volante e desmontar, deixando o espaço limpo e arrumado.",
+    "Nos serviços apresentados não serão utilizados materiais plásticos, apenas vidro e porcelana dando assim um melhor serviço e demonstrando a nossa consciência ambiental.",
+    "As datas para os serviços devem ser reservadas com a maior brevidade possível, a confirmação do número de participantes pode ser dada na semana anterior á data do evento."
+  ],
+  "uncertain": [
+    "Client and day/month are not written ('A defenir').",
+    "This is a menu catalogue with no single quote; all items are held in one moment as no clear moments are given.",
+    "Pack fritos is priced 3€ or 5€ with topping; only 3 is recorded as unit_price.",
+    "Coffee Break 6€ and 8€ are tiers whose items are not separated in the text; all items are listed together."
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "quote_id": "q:f427c495-5455-4005-9c6d-ac13255ae1a8",
+  "client": "Ana Luisa Festas",
+  "client_source": "file_name",
+  "event_dates": [],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Entrega de Comidas",
+      "service_type": "delivery",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Bolinhos de bacalhau", "quantity": null},
+          {"text": "Rissois de camarão", "quantity": null},
+          {"text": "Hamburgers de Atum", "quantity": null},
+          {"text": "Croquetes de novilho", "quantity": null},
+          {"text": "Croissants c/ fiambre", "quantity": null},
+          {"text": "Folhados mistos", "quantity": null},
+          {"text": "Espetada de mozarela c/ cherry e manjericão", "quantity": null},
+          {"text": "Vol au vents de guacamole c/ azeitona", "quantity": null},
+          {"text": "Croissants c/ Queijo", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Folhados de Chocolate", "quantity": null},
+          {"text": "Variedade de brigadeiros", "quantity": null},
+          {"text": "Espetadas de Fruta", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Entrega de Comidas", "unit_price": 22.5, "quantity": 20, "line_total": 450, "vat_rate": 13}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 508.5,
+  "total_includes_vat": true,
+  "staff_mentioned": null,
+  "notes": [],
+  "uncertain": [
+    "The file name says 'Menu de 25€'; the text prices the delivery at 22.50€ per unit.",
+    "Client comes from the file name; the text has no client name."
+  ]
+}

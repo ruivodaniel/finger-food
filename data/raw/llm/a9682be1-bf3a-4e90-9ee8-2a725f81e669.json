@@ -1,0 +1,241 @@
+{
+  "quote_id": "q:a9682be1-bf3a-4e90-9ee8-2a725f81e669",
+  "client": "Margarida Pereira",
+  "event_dates": [
+    {"day": 7, "month": 9, "year": 2026},
+    {"day": 8, "month": 9, "year": 2026},
+    {"day": 9, "month": 9, "year": 2026}
+  ],
+  "place": "Universidade De Aveiro",
+  "moments": [
+    {
+      "name_as_written": "Dia 7 Coffee-Break 10h",
+      "service_type": "coffee_break",
+      "guests": 25,
+      "guests_raw": "25 pax",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Croissant Brioche c/ Queijo (veg.) e Croissant Brioche c/ Fiambre", "quantity": null},
+          {"text": "Vol au vents de Guacamole (veg.)", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Bolachinhas Bacalhaus do CASCI", "quantity": null},
+          {"text": "Iogurte de Soja c/ granola", "quantity": null},
+          {"text": "Folhado de Chocolate", "quantity": null},
+          {"text": "Espetadas de fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Mesa de bebidas presente em todos os momentos", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Coffee-Break 10h", "unit_price": 8, "quantity": 25, "line_total": 200, "vat_rate": 13}
+      ]
+    },
+    {
+      "name_as_written": "Dia 7 Almoço (volante) 12h - 14h",
+      "service_type": "lunch",
+      "guests": 25,
+      "guests_raw": "25 pax",
+      "menu_lines": [
+        {"segment": "starter", "items": [
+          {"text": "Creme de Couve Flor (copo)", "quantity": null},
+          {"text": "Variedade de Saladas (alfaces, cenoura, milho, couve roxa…)", "quantity": null}
+        ]},
+        {"segment": "main_dish", "items": [
+          {"text": "Arroz de Pato e Quinoa c/ Legumes salteados (vegi.)", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Variedade de Brigadeiros, Ovos Moles, Espetadas de Fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Mesa de bebidas presente em todos os momentos", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Almoço", "unit_price": 26, "quantity": 25, "line_total": 650, "vat_rate": 13}
+      ]
+    },
+    {
+      "name_as_written": "Dia 7 Coffee-Break 15h30",
+      "service_type": "coffee_break",
+      "guests": 25,
+      "guests_raw": "25 pax",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Espetada de Bolinhos de Bacalhau c/cherry", "quantity": null},
+          {"text": "Croquetes de Vitela c/ Azeitona", "quantity": null},
+          {"text": "Bolinhas vegi", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Mil Folhas Glacê", "quantity": null},
+          {"text": "Bolinhas de Berlim", "quantity": null},
+          {"text": "Espetadas de Fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Mesa de bebidas presente em todos os momentos", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Coffee-Break 15h30", "unit_price": 8, "quantity": 25, "line_total": 200, "vat_rate": 13}
+      ]
+    },
+    {
+      "name_as_written": "Dia 8 Coffee-Break 10h",
+      "service_type": "coffee_break",
+      "guests": 25,
+      "guests_raw": "25 pax",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Pão c/ Queijo (veg.) e Pão c/ Fiambre", "quantity": null},
+          {"text": "Húmus c/ palitos de cenoura", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Palmiers", "quantity": null},
+          {"text": "Iogurte de Soja c/ granola", "quantity": null},
+          {"text": "Salame de Chocolate", "quantity": null},
+          {"text": "Espetadas de fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Mesa de bebidas presente em todos os momentos", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Coffee-Break 10h", "unit_price": 8, "quantity": 25, "line_total": 200, "vat_rate": 13}
+      ]
+    },
+    {
+      "name_as_written": "Dia 8 Almoço (volante) 12h - 14h",
+      "service_type": "lunch",
+      "guests": 25,
+      "guests_raw": "25 pax",
+      "menu_lines": [
+        {"segment": "starter", "items": [
+          {"text": "Creme de Cenoura (copo)", "quantity": null},
+          {"text": "Variedade de Saladas (alfaces, cenoura, milho, couve roxa…)", "quantity": null}
+        ]},
+        {"segment": "main_dish", "items": [
+          {"text": "Bacalhau c/ Natas e Couscous c/ cogumelos (Vegi.)", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Brownie c/ Nozes, Ovos Moles, Espetadas de Fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Mesa de bebidas presente em todos os momentos", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Almoço", "unit_price": 26, "quantity": 25, "line_total": 650, "vat_rate": 13}
+      ]
+    },
+    {
+      "name_as_written": "Dia 8 Coffee-Break 15h30",
+      "service_type": "coffee_break",
+      "guests": 25,
+      "guests_raw": "25 pax",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Rissóis de Camarão", "quantity": null},
+          {"text": "Folhados de Salsicha", "quantity": null},
+          {"text": "Espetada de mozarela (vegi.)", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Bolinhos de feijão", "quantity": null},
+          {"text": "Pasteis de Nata", "quantity": null},
+          {"text": "Espetadas de Fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Mesa de bebidas presente em todos os momentos", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Coffee-Break 15h30", "unit_price": 8, "quantity": 25, "line_total": 200, "vat_rate": 13}
+      ]
+    },
+    {
+      "name_as_written": "Dia 9 Coffee-Break 10h",
+      "service_type": "coffee_break",
+      "guests": 40,
+      "guests_raw": "40 pax",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Croissant Folhado c/ Queijo (veg.) e Croissant Folhado c/ Fiambre", "quantity": null},
+          {"text": "Vol au vents de Guacamole (veg.)", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Bolachinhas Bacalhaus do CASCI", "quantity": null},
+          {"text": "Iogurte de Soja c/ granola", "quantity": null},
+          {"text": "Folhado de Chocolate", "quantity": null},
+          {"text": "Espetadas de fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Mesa de bebidas presente em todos os momentos", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Coffee-Break 10h", "unit_price": 8, "quantity": 40, "line_total": 320, "vat_rate": 13}
+      ]
+    },
+    {
+      "name_as_written": "Dia 9 Almoço (volante) 12h – 14h",
+      "service_type": "lunch",
+      "guests": 30,
+      "guests_raw": "30 pax",
+      "menu_lines": [
+        {"segment": "starter", "items": [
+          {"text": "Creme de Legumes (copo)", "quantity": null},
+          {"text": "Variedade de Saladas (alfaces, cenoura, milho, couve roxa…)", "quantity": null}
+        ]},
+        {"segment": "main_dish", "items": [
+          {"text": "Arroz á Valenciana e Gão de bico c/ maçã, beterraba…", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Variedade de Macarrons, Ovos Moles, Espetadas de Fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Mesa de bebidas presente em todos os momentos", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Almoço", "unit_price": 26, "quantity": 30, "line_total": 780, "vat_rate": 13}
+      ]
+    },
+    {
+      "name_as_written": "Dia 9 Coffee-Break 15h30",
+      "service_type": "coffee_break",
+      "guests": 25,
+      "guests_raw": "25 pax",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Vol au vents de delícias", "quantity": null},
+          {"text": "Folhados mistos", "quantity": null},
+          {"text": "Pão de Queijo", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Bolinhos de Côco", "quantity": null},
+          {"text": "Pasteis de Nata", "quantity": null},
+          {"text": "Espetadas de Fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Mesa de bebidas presente em todos os momentos", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Coffee-Break 15h30", "unit_price": 8, "quantity": 25, "line_total": 200, "vat_rate": 13}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 3400,
+  "total_includes_vat": true,
+  "staff_mentioned": "2 funcionários que iram dispor as mesas em buffet para servir os pratos quentes, assim como o café, equipados com 2 máquinas para evitar filas",
+  "notes": [
+    "Dia 7 = 1050€ + Dia 8 = 1050€ + Dia 9 = 1300€.",
+    "Todo o serviço é realizado com loiças e toalhas de pano.",
+    "Nos serviços apresentados não serão utilizados materiais plásticos, demonstrando assim a nossa consciência ambiental.",
+    "Mesa de bebidas (todos os momentos): Sumo de Laranja Natural (exprimido na hora servido em flutes), Sumo (Compal) sabores variados, Águas aromatizadas (Chá frio), Chás variados, Café e descafeinado."
+  ],
+  "uncertain": [
+    "The drinks list is one block for all moments; it is repeated in each moment here."
+  ]
+}

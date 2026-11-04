@@ -1,0 +1,28 @@
+{"groups": [
+  {"members": ["variedades de bolo no copo", "variedades no copo"], "confidence": "probably", "why": "same assorted cake in a cup, the flavours are only listed in one name"},
+  {"members": ["vol ao vents de frutos do mar", "vol au vents de frutos do mar"], "confidence": "same", "why": "spelling of vol au vent"},
+  {"members": ["vol au vebts de cogumelos", "vol au vents de cogumelos"], "confidence": "same", "why": "typo in vol au vents"},
+  {"members": ["vol au vens frango", "vol au vents de frango"], "confidence": "same", "why": "typo, same chicken vol au vent"},
+  {"members": ["vol au vent de atum", "vol au vents de atum"], "confidence": "same", "why": "singular/plural, same tuna vol au vent"},
+  {"members": ["vol au vent de guacamole", "vol au vents c guacamole", "vol au vents de guacamole", "vol au vents guacamole"], "confidence": "same", "why": "same guacamole vol au vent, only wording and abbreviation differ"},
+  {"members": ["vol au vents de guacamole c azeitona", "vol au vents de guacamole c azeitonas"], "confidence": "same", "why": "singular/plural of olives, same item"},
+  {"members": ["vol au vents de frango", "vol au vents de frango c cogumelos"], "confidence": "maybe", "why": "same chicken vol au vent, one adds mushrooms"},
+
+  {"members": ["bacalhau com natas", "bacalhau c natas ou bacalhau c grao", "bacalhau com natas ou bacalhau lascado c grao de bico", "bacalhau com natas ou bacalhau lascado c grao de bico e", "bacalhau lascado c grao de bico"], "confidence": "probably", "why": "same codfish dish written as an alternative (natas or lascado with grao de bico), trailing e looks like a truncation"},
+  {"members": ["bifanas", "bifanas estufadas", "bifanas a moda do porto", "bifanas estufadas a moda do porto"], "confidence": "probably", "why": "same stewed pork sandwich, the Porto style is a small detail"},
+  {"members": ["bifanas desfiadas", "bifanas estufadas desfiadas", "bifanas desfiadas ou moelas estufadas"], "confidence": "probably", "why": "same shredded bifana, the moelas alternative is a small detail"},
+  {"members": ["bolachas manteiga", "bolachinhas manteiga"], "confidence": "same", "why": "diminutive of the same butter biscuit"},
+  {"members": ["bolinhos de bacalhau", "bolinhos de bacalahau", "bolos de bacalhau", "bolinhos de bacalhau em espeto de cherry", "bolinhos de bacalhau em espetada c cherry e azeitona", "bolinhos de bacalhau em espeto de cherry c azeitona"], "confidence": "probably", "why": "same codfish fritter, typo, bolos is the same fritter, skewer with cherry and olive are presentation variants"},
+  {"members": ["bolo de bolacha", "bolo de bolacha do ceu"], "confidence": "probably", "why": "same biscuit cake, do ceu is a name variant"},
+  {"members": ["bolo no copo", "bolo no copo variados", "bolo no copo c iogurte e amendoa", "bolo no copo com frutos vermelhos", "bolo no copo e espetadas de fruta na sobremesa"], "confidence": "probably", "why": "same cake in a cup, the toppings and fruit are small details"},
+
+  {"members": ["wraps de salmao fumado c queijo e rucula", "wraps queijo creme salmao e rucula"], "confidence": "maybe", "why": "salmon wrap with rocket and cheese, cream cheese vs smoked salmon wording"},
+  {"members": ["wraps de salmao c rucula e tangerina", "wraps de salmao fumado c queijo rucula e tangerina"], "confidence": "maybe", "why": "salmon wrap with rocket and tangerine, one adds smoked salmon and cheese"},
+
+  {"members": ["porco no espeto", "sandes de porco no espeto", "sandes de pernil de porco no espeto", "pernil no espeto sandes"], "confidence": "probably", "why": "same spit-roast pork sandwich, pernil vs porco is a small wording difference"},
+
+  {"members": ["frango c batatas", "carne frango c batatas", "frango assado c batatas assadas"], "confidence": "probably", "why": "same chicken with potatoes, the assado wording differs"},
+  {"members": ["salmao c batatas", "peixe salmao c batatas"], "confidence": "same", "why": "same salmon with potatoes, only the peixe label differs"},
+
+  {"members": ["tabule marroquin", "vegan tabule marroquin"], "confidence": "probably", "why": "same tabbouleh, the vegan label is the only difference"}
+]}

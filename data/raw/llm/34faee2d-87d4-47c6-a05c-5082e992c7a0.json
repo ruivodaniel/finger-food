@@ -1,0 +1,49 @@
+{
+  "quote_id": "q:34faee2d-87d4-47c6-a05c-5082e992c7a0",
+  "client": "Mike",
+  "client_source": "file_name",
+  "event_dates": [{"day": 13, "month": 6, "year": null, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Almoço 13h30 – 14h30",
+      "service_type": "lunch",
+      "guests": 90,
+      "guests_raw": "90 pax",
+      "menu_lines": [
+        {"segment": "other", "items": [
+          {"text": "Rodízio de Pizzas", "quantity": null},
+          {"text": "Wraps de frango, delícias c/ salada", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Almoço", "unit_price": 8, "quantity": 90, "line_total": 720, "vat_rate": null},
+        {"label": "Deslocação", "unit_price": 140, "quantity": null, "line_total": 140, "vat_rate": null}
+      ]
+    },
+    {
+      "name_as_written": "Jantar 19h-21h",
+      "service_type": "dinner",
+      "guests": 90,
+      "guests_raw": "90 pax",
+      "menu_lines": [
+        {"segment": "other", "items": [
+          {"text": "Caldo verde", "quantity": 70},
+          {"text": "Bifanas estufadas", "quantity": 140}
+        ]}
+      ],
+      "prices": [
+        {"label": "Jantar", "unit_price": 8, "quantity": 90, "line_total": 720, "vat_rate": null},
+        {"label": "Deslocação", "unit_price": 140, "quantity": null, "line_total": 140, "vat_rate": null}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 1943.6,
+  "total_includes_vat": true,
+  "staff_mentioned": "dois funcionários",
+  "notes": [],
+  "uncertain": [
+    "Jantar: 70 caldos verdes e 140 bifanas, quantidades diferentes dos 90 pax do preço."
+  ]
+}

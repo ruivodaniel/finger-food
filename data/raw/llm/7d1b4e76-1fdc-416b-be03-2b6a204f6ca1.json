@@ -1,0 +1,46 @@
+{
+  "quote_id": "q:7d1b4e76-1fdc-416b-be03-2b6a204f6ca1",
+  "client": "CS Wind",
+  "client_source": "file_name",
+  "event_dates": [{"day": 29, "month": 4, "year": 2026, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Menu de Almoço",
+      "service_type": "lunch",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "other", "items": [
+          {"text": "Sopa Creme de Cenoura (copo)", "quantity": null},
+          {"text": "Buffet de Saladas (Alface, Tomate, Cherry, Cenoura, Milho, Couve Roxa)", "quantity": null},
+          {"text": "Salada de Quinoa c/ legumes salteados", "quantity": null},
+          {"text": "Bacalhau com Natas", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Brownie c/ Nozes e caramelo salgado", "quantity": null},
+          {"text": "Espetadas de fruta variada", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água engarrafada", "quantity": null},
+          {"text": "Sumo Compal", "quantity": null}
+        ]}
+      ],
+      "prices": [{"label": "Comidas", "unit_price": 20, "quantity": 12, "line_total": 240, "vat_rate": 13}]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 271.2,
+  "total_includes_vat": true,
+  "staff_mentioned": "dois funcionários, um para servir as bebidas e outro para manter a mesa das comidas organizada",
+  "notes": [
+    "Levar só chávenas de café.",
+    "Para os serviços apresentados disponibilizo atoalhados e todo o material necessário ao serviço.",
+    "Nos serviços apresentados não serão utilizados materiais plásticos, demonstrando assim a nossa consciência ambiental."
+  ],
+  "uncertain": [
+    "The Brownie and Espetadas lines sit under the 'Miniaturas Doces (veg.)' heading in the text, so they are marked sweet_miniatures.",
+    "The price is for 12 units of 'Comidas' with no people count written; the 12 is the quantity on the price line.",
+    "Total 271.20 is written after '+ iva 13%'."
+  ]
+}

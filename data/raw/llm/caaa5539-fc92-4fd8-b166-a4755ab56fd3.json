@@ -1,0 +1,59 @@
+{
+  "quote_id": "q:caaa5539-fc92-4fd8-b166-a4755ab56fd3",
+  "client": "Rita Marques",
+  "client_source": "file_name",
+  "event_dates": [{"day": 27, "month": 7, "year": 2026, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": null,
+      "service_type": "other",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Bolinhos de Bacalhau", "quantity": null},
+          {"text": "Rissóis de Camarão", "quantity": null},
+          {"text": "Croquetes de novilho", "quantity": null},
+          {"text": "Espetada de mozarela c/ cherry e manjericão (veg)", "quantity": null},
+          {"text": "Vol au vents de Guacamole (veg)", "quantity": null},
+          {"text": "Croissants c/ queijo", "quantity": null},
+          {"text": "Croissants c/ fiambre", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Espetadas de Fruta", "quantity": null},
+          {"text": "Brownie c/ Nozes e Caramelo salgado", "quantity": null},
+          {"text": "Variedade de brigadeiros", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Coca-cola, Sumol, Ice tea", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Café e descafeinado (cápsulas)", "quantity": null},
+          {"text": "Cerveja minis 60 uni", "quantity": 60},
+          {"text": "Espumante (Fraga da Pena ou similar) 5 uni", "quantity": 5}
+        ]}
+      ],
+      "prices": [
+        {"label": "Comidas (200 miniaturas)", "unit_price": null, "quantity": 200, "line_total": 400, "vat_rate": 13},
+        {"label": "Bebidas não alcoólicas", "unit_price": null, "quantity": null, "line_total": 60, "vat_rate": 13},
+        {"label": "Bebidas c/ Álcool", "unit_price": null, "quantity": null, "line_total": 135, "vat_rate": 23},
+        {"label": "Mão de obra (2 funcionários)", "unit_price": null, "quantity": null, "line_total": 160, "vat_rate": null}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 845.85,
+  "total_includes_vat": true,
+  "staff_mentioned": "2 funcionários que iram chegar ao local 2h antes da hora do evento, dispor as mesas em buffet para servir e manter o serviço limpo e organizado",
+  "notes": [
+    "Nos serviços apresentados não serão utilizados materiais plásticos, demonstrando assim a nossa consciência ambiental.",
+    "No caso de contratar o serviço com a mão de obra incluída, todo o serviço é realizado com loiças e toalhas de pano e todos os materiais inerentes a este menu são da nossa responsabilidade.",
+    "Todo o serviço é realizado com loiças e toalhas de pano."
+  ],
+  "uncertain": [
+    "The file name says 'c serviço e s serviço'; the text prices the version with labour (160€) and the note on materials.",
+    "Sub-totals are 519.80€ (comidas and non-alcoholic drinks, 13%) and 166.05€ (alcoholic drinks, 23%); the total 845.85€ adds the 160€ labour."
+  ]
+}

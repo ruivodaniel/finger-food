@@ -1,0 +1,48 @@
+{
+  "quote_id": "q:9e65fd4d-5389-41ff-9e6d-2472bddd9deb",
+  "client": "Madalena Salema",
+  "client_source": "file_name",
+  "event_dates": [
+    {"day": 13, "month": null, "year": null, "source": "text"},
+    {"day": 14, "month": null, "year": null, "source": "text"},
+    {"day": 15, "month": null, "year": null, "source": "text"},
+    {"day": 16, "month": null, "year": null, "source": "text"},
+    {"day": 17, "month": null, "year": null, "source": "text"},
+    {"day": 20, "month": null, "year": null, "source": "text"},
+    {"day": 21, "month": null, "year": null, "source": "text"},
+    {"day": 22, "month": null, "year": null, "source": "text"},
+    {"day": 23, "month": null, "year": null, "source": "text"},
+    {"day": 24, "month": null, "year": null, "source": "text"}
+  ],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Lunch Box",
+      "service_type": "lunch",
+      "guests": 15,
+      "guests_raw": "15",
+      "menu_lines": [
+        {"segment": "other", "items": [
+          {"text": "Dia 13 e 20: Wraps c/ alface: patê de frango, delícias; Maçã, Água, Sumo Compal, mini kitkat (ou similar)", "quantity": null},
+          {"text": "Dia 14 e 21: Sandes c/ alface: panado de porco, filete de peixe; Pêra, Água, Sumo Compal, mini kitkat (ou similar)", "quantity": null},
+          {"text": "Dia 15 e 22: Variedade de Pizzas; Banana, Água, Sumo Compal, mini kitkat (ou similar)", "quantity": null},
+          {"text": "Dia 16 e 23: Quiche de Fiambre e de Atum; Tangerina, Água, Sumo Compal, mini kitkat (ou similar)", "quantity": null},
+          {"text": "Dia 17 e 24: Empada de Frango e 2 croquetes; Maçã, Água, Sumo Compal, mini kitkat (ou similar)", "quantity": null}
+        ]}
+      ],
+      "prices": [{"label": "Lunch box 8€ x 15 = 120€ x 10 dias = 1200€", "unit_price": 8, "quantity": 15, "line_total": 1200, "vat_rate": 13}]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 1356,
+  "total_includes_vat": true,
+  "staff_mentioned": null,
+  "notes": [
+    "Total 1356€ (Estes valores acrescem IVA á taxa de 13%)."
+  ],
+  "uncertain": [
+    "Cliente vem do nome do ficheiro; o texto não o indica.",
+    "Os dias estão escritos sem mês nem ano no texto.",
+    "O texto diz 120€ por dia (x 10 dias); a quantidade 15 é a escrita junto ao preço unitário."
+  ]
+}

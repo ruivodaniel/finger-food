@@ -1,0 +1,131 @@
+{
+  "quote_id": "q:c291403d-1801-428a-9f0b-3dc5bf91c035",
+  "client": "Ostraveiro",
+  "client_source": "file_name",
+  "event_dates": [],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Mix menus (coffee breaks, packs, buffets, principais, extras)",
+      "service_type": "other",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Croissant brioche ou mini pão c/ Queijo (veg.)", "quantity": null},
+          {"text": "Croissant brioche ou mini pão c/ Fiambre", "quantity": null},
+          {"text": "Rolinhos de Pão c/ Chouriço", "quantity": null},
+          {"text": "Folhados mistos", "quantity": null},
+          {"text": "Folhados Salsicha", "quantity": null},
+          {"text": "Mini Pizzas", "quantity": null},
+          {"text": "Vol Au vents de Guacamole", "quantity": null},
+          {"text": "Vol au vents de Frango", "quantity": null},
+          {"text": "Vol au vents de Delícias", "quantity": null},
+          {"text": "Wraps queijo creme, salmão e rúcula", "quantity": null},
+          {"text": "Mini pada c/ queijo da serra, presunto", "quantity": null},
+          {"text": "Empadas de Frango c/ cogumelos", "quantity": null},
+          {"text": "Croquetes de Vitela", "quantity": null},
+          {"text": "Rissóis de camarão", "quantity": null},
+          {"text": "Folhados de salchicha", "quantity": null},
+          {"text": "Bolinhos de bacalhau em espeto de Cherry", "quantity": null},
+          {"text": "Vol au vents de Guacamole c/ azeitona", "quantity": null},
+          {"text": "Espetada de mozarela c/ cherry, mangericão e azeitona", "quantity": null},
+          {"text": "Bolinhos de Bacalhau em espetada c/ cherry e azeitona", "quantity": null},
+          {"text": "Croquetes de vitela ou c/ azeitona recheada", "quantity": null},
+          {"text": "Chamuças de frango c/ Ananás", "quantity": null},
+          {"text": "Bolinhas de grão c/ cherry", "quantity": null},
+          {"text": "Vol au vents de Delícias do Mar", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Miniaturas Doces (veg.)", "quantity": null},
+          {"text": "Bolhachinhas Bacalhaus do CASCI", "quantity": null},
+          {"text": "Variedade de Bolachas manteiga", "quantity": null},
+          {"text": "Palmiers", "quantity": null},
+          {"text": "Folhados de chocolate", "quantity": null},
+          {"text": "Salame de Chocolate", "quantity": null},
+          {"text": "4 Variedades de Brigadeiros", "quantity": null},
+          {"text": "Pasteis de Nata", "quantity": null},
+          {"text": "Iogurte c/ Granola", "quantity": null},
+          {"text": "Espetadas de fruta", "quantity": null},
+          {"text": "Brownie c/ Nozes e Caramelo Salgado", "quantity": null},
+          {"text": "Pastel de Nata", "quantity": null},
+          {"text": "Torta de ovos c/ fios de ovos", "quantity": null},
+          {"text": "Ovos moles de Aveiro", "quantity": null},
+          {"text": "Panquecas c/ iogurte e mirtilo", "quantity": null},
+          {"text": "Bolo no copo (sempre diferente)", "quantity": null}
+        ]},
+        {"segment": "starter", "items": [
+          {"text": "Variado de Alfaces", "quantity": null},
+          {"text": "Tomate cherry", "quantity": null},
+          {"text": "Beterraba c/ maçã", "quantity": null},
+          {"text": "Cenoura ralada", "quantity": null},
+          {"text": "Couve Roxa", "quantity": null},
+          {"text": "Milho", "quantity": null}
+        ]},
+        {"segment": "main_dish", "items": [
+          {"text": "Bacalhau com Natas ou Bacalhau lascado c/ Grão de bico", "quantity": null},
+          {"text": "Bacalhau desfiado á Portuguesa (c/ broa) (Mesa)", "quantity": null},
+          {"text": "Lombo de Bacalhau assado com batatas á murro (Mesa)", "quantity": null},
+          {"text": "Arroz de Pato ou Arroz á Valenciana", "quantity": null},
+          {"text": "Lombo de Porco c/ batatas assadas e puré de maçã (Mesa)", "quantity": null},
+          {"text": "Magret de Pato c/purê de ervilhas, vinho do porto e laranja (Mesa)", "quantity": null},
+          {"text": "Quinoa c/ legumes salteados", "quantity": null},
+          {"text": "Feijoada de cogumelos", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Variedade de sobremesas", "quantity": null},
+          {"text": "Bolo no Copo: Tiramissu, Brigadeiro, Bolo Bolacha, Mousse chocolate, Natas do Ceu, Cheesecake frutos vermelhos", "quantity": null}
+        ]},
+        {"segment": "other", "items": [
+          {"text": "Charcutaria e grazing: Tábuas de Queijos decoradas c/ frutos secos", "quantity": null},
+          {"text": "Charcutaria e grazing: Tábuas de Enchidos c/ variado de azeitonas", "quantity": null},
+          {"text": "Sushi (show cooking)", "quantity": null},
+          {"text": "Leitão", "quantity": null},
+          {"text": "Pernil no espeto sandes (mínimo 50pessoas)", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Sumo de laranja natural (espremido na hora e servido em flutes)", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    }
+  ],
+  "prices_not_in_a_moment": [
+    {"label": "Coffee Break 6€", "unit_price": 6, "quantity": null, "line_total": null, "vat_rate": 13},
+    {"label": "Coffee Break 8€", "unit_price": 8, "quantity": null, "line_total": null, "vat_rate": 13},
+    {"label": "Pack fritos", "unit_price": 5, "quantity": null, "line_total": null, "vat_rate": 13},
+    {"label": "Pack Folhadinhos", "unit_price": 2, "quantity": null, "line_total": null, "vat_rate": 13},
+    {"label": "Buffet de Saladas", "unit_price": 5, "quantity": null, "line_total": null, "vat_rate": 13},
+    {"label": "Tábuas de Queijos decoradas c/ frutos secos", "unit_price": 5, "quantity": null, "line_total": null, "vat_rate": 13},
+    {"label": "Tábuas de Enchidos c/ variado de azeitonas", "unit_price": 5, "quantity": null, "line_total": null, "vat_rate": 13},
+    {"label": "Bacalhau com Natas ou Bacalhau lascado c/ Grão de bico", "unit_price": 10, "quantity": null, "line_total": null, "vat_rate": 13},
+    {"label": "Bacalhau desfiado á Portuguesa (c/ broa) (Mesa)", "unit_price": 15, "quantity": null, "line_total": null, "vat_rate": 13},
+    {"label": "Lombo de Bacalhau assado com batatas á murro (Mesa)", "unit_price": 18, "quantity": null, "line_total": null, "vat_rate": 13},
+    {"label": "Arroz de Pato ou Arroz á Valenciana", "unit_price": 15, "quantity": null, "line_total": null, "vat_rate": 13},
+    {"label": "Lombo de Porco c/ batatas assadas e puré de maçã (Mesa)", "unit_price": 17, "quantity": null, "line_total": null, "vat_rate": 13},
+    {"label": "Magret de Pato c/purê de ervilhas, vinho do porto e laranja (Mesa)", "unit_price": 17, "quantity": null, "line_total": null, "vat_rate": 13},
+    {"label": "Quinoa c/ legumes salteados", "unit_price": 10, "quantity": null, "line_total": null, "vat_rate": 13},
+    {"label": "Feijoada de cogumelos", "unit_price": 15, "quantity": null, "line_total": null, "vat_rate": 13},
+    {"label": "Variedade de sobremesas", "unit_price": 3, "quantity": null, "line_total": null, "vat_rate": 13},
+    {"label": "Espetadas de Fruta", "unit_price": 1, "quantity": null, "line_total": null, "vat_rate": 13},
+    {"label": "Leitão", "unit_price": 150, "quantity": null, "line_total": null, "vat_rate": 13},
+    {"label": "Pernil no espeto sandes (mínimo 50 pessoas)", "unit_price": 3, "quantity": null, "line_total": null, "vat_rate": 13},
+    {"label": "Sushi (show cooking), por peças acima de 500 peças", "unit_price": 1, "quantity": null, "line_total": null, "vat_rate": 13},
+    {"label": "Sumo de laranja natural (espremido na hora, em flutes)", "unit_price": 1, "quantity": null, "line_total": null, "vat_rate": 13}
+  ],
+  "total": null,
+  "total_includes_vat": false,
+  "staff_mentioned": "dois ou mais funcionários dependendo do número de convidados",
+  "notes": [
+    "Nos menus de coffee break podem escolher 4 variedades de cada.",
+    "Nos serviços apresentados não serão utilizados materiais plásticos, apenas vidro e porcelana.",
+    "Nas miniaturas doces: bolachinhas bacalhaus do CASCI, ao comprarmos estes produtos estamos a ajudar.",
+    "As datas para os serviços devem ser reservadas com a maior brevidade possível; confirmação do número de participantes na semana anterior à data do evento."
+  ],
+  "uncertain": [
+    "Client name taken from the file name; the text gives no client.",
+    "Document is a price list of several menus, not a single event: no guests, dates or total.",
+    "Item-to-price mapping across the menu tiers was not fully explicit, so price lines are kept outside any moment.",
+    "Espetadas de fruta appears in both the sweet miniatures and the price list; kept in both as written."
+  ]
+}

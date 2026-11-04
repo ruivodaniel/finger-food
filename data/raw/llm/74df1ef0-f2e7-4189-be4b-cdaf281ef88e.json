@@ -1,0 +1,65 @@
+{
+  "quote_id": "q:74df1ef0-f2e7-4189-be4b-cdaf281ef88e",
+  "client": "Sofia Anfrade",
+  "client_source": "file_name",
+  "event_dates": [],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Entradas (volante), Prato Principal e Sobremesa",
+      "service_type": "other",
+      "guests": 30,
+      "guests_raw": "x 30",
+      "menu_lines": [
+        {"segment": "starter", "items": [
+          {"text": "Bolinhos de Bacalhau", "quantity": null},
+          {"text": "Rissóis de Camarão", "quantity": null},
+          {"text": "Croquetes de novilho", "quantity": null},
+          {"text": "Espetada de mozarela c/ cherry e manjericão (veg)", "quantity": null},
+          {"text": "Vol au vents de Guacamole (veg)", "quantity": null},
+          {"text": "Tabuas de Queijos e decoradas c/ frutos secos", "quantity": null},
+          {"text": "Tabuas de Enchidos decoradas c/ azeitonas", "quantity": null}
+        ]},
+        {"segment": "main_dish", "items": [
+          {"text": "Bifanas à moda do Porto (Sandes)", "quantity": null},
+          {"text": "Caldo Verde", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Espetadas de Fruta", "quantity": null},
+          {"text": "Bownie c/ Nozes e Caramelo salgado", "quantity": null},
+          {"text": "Variedade de brigadeiros", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Coca-cola, Sumol, Ice tea", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Café e descafeinado (cápsulas)", "quantity": null},
+          {"text": "Cerveja minis", "quantity": 90},
+          {"text": "Sangria vinho branca c/ frutas", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Comidas e Bebidas não alcoólicas 18€ x 30 = 540€", "unit_price": 18, "quantity": 30, "line_total": 540, "vat_rate": 13},
+        {"label": "Bebidas c/ Álcool – Cerveja 90 uni", "unit_price": null, "quantity": 90, "line_total": 72, "vat_rate": 23},
+        {"label": "Bebidas c/ Álcool – Sangria 10lts", "unit_price": null, "quantity": 10, "line_total": 70, "vat_rate": 23}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [
+    {"label": "Deslocação 120km", "unit_price": null, "quantity": 120, "line_total": 120, "vat_rate": null},
+    {"label": "Mão de obra", "unit_price": null, "quantity": null, "line_total": 160, "vat_rate": null}
+  ],
+  "total": 1064.86,
+  "total_includes_vat": null,
+  "staff_mentioned": "2 funcionários que iram dispor as mesas em buffet para servir as sandes e a sopa, assim como as bebidas",
+  "notes": [
+    "Sub-total de comidas 610.20€ (com IVA 13%) e sub-total de bebidas alcoólicas 174.66€ (com IVA 23%) tal como escritos.",
+    "Todo o serviço é realizado com loiças e toalhas de pano."
+  ],
+  "uncertain": [
+    "O texto não tem data nem local; o nome do ficheiro não traz data.",
+    "Não está escrito se o total 1064.86€ inclui IVA em deslocação e mão de obra.",
+    "Não há indicação se o serviço é almoço ou jantar; registado como 'other'."
+  ]
+}

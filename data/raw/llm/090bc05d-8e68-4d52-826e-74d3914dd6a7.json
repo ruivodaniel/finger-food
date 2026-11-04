@@ -1,0 +1,42 @@
+{
+  "quote_id": "q:090bc05d-8e68-4d52-826e-74d3914dd6a7",
+  "client": "Maythe",
+  "client_source": "file_name",
+  "event_dates": [],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Entradas: (volante)",
+      "service_type": "other",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "starter", "items": [
+          {"text": "Bolinhos de Bacalhau em espeto de Cherry c/ Azeitona", "quantity": null},
+          {"text": "Tabuas de Queijos e decoradas c/ frutos secos", "quantity": null},
+          {"text": "Tabuas de Enchidos decoradas c/ azeitonas", "quantity": null},
+          {"text": "Mini Hambúrgueres", "quantity": null},
+          {"text": "Folhados Mistos", "quantity": null},
+          {"text": "Folhados de Salsicha", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Espetadas de Fruta", "quantity": null},
+          {"text": "Bolinhas de Berlim", "quantity": null},
+          {"text": "Variedade de brigadeiros", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Comidas c/ entrega", "unit_price": null, "quantity": null, "line_total": 400, "vat_rate": null}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": null,
+  "total_includes_vat": null,
+  "staff_mentioned": null,
+  "notes": [],
+  "uncertain": [
+    "O texto não tem data, local, número de convidados nem total escrito; só o preço 'Comidas c/ entrega 400€'.",
+    "O texto não diz se o IVA está incluído."
+  ]
+}

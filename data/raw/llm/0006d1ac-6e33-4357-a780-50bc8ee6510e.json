@@ -1,0 +1,156 @@
+{
+  "quote_id": "q:0006d1ac-6e33-4357-a780-50bc8ee6510e",
+  "client": "Carolina",
+  "client_source": "file_name",
+  "event_dates": [
+    {"day": 5, "month": 3, "year": null, "source": "file_name"},
+    {"day": 9, "month": 3, "year": null, "source": "file_name"},
+    {"day": 10, "month": 3, "year": null, "source": "file_name"}
+  ],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Welcome Coffee - Horário?",
+      "service_type": "coffee_break",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "other", "items": [
+          {"text": "Café e Descafeinado", "quantity": null},
+          {"text": "Águas Engarrafada", "quantity": null},
+          {"text": "Pastel de Nata", "quantity": null},
+          {"text": "Palmiers", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "Coffee-Break – Horário?",
+      "service_type": "coffee_break",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Croissant c/ Queijo (veg.)", "quantity": null},
+          {"text": "Croissant c/ Fiambre", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Bolhachinhas Bacalhaus do CASCI", "quantity": null},
+          {"text": "Croissant simples", "quantity": null},
+          {"text": "Mil Folhas Creme Brulê", "quantity": null},
+          {"text": "Folhado de Chocolate", "quantity": null},
+          {"text": "Espetadas de fruta", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "Almoço (volante) 12h30",
+      "service_type": "lunch",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "starter", "items": [
+          {"text": "Creme de Cenoura (quente no copo) (veg.)", "quantity": null},
+          {"text": "Variedade de miniaturas Rissóis, Chamuças, Croquetes…", "quantity": null},
+          {"text": "Tostas c/ patês de Guacamole e Húmus (veg.)", "quantity": null},
+          {"text": "Variedade de Saladas (alfaces, cenoura, milho, couve roxa…)", "quantity": null}
+        ]},
+        {"segment": "main_dish", "items": [
+          {"text": "Bacalhau c/ Natas", "quantity": null},
+          {"text": "Arroz de Pato", "quantity": null},
+          {"text": "Quinoa c/ Legumes salteados", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Brownie c/ nozes e caramelo salgado", "quantity": null},
+          {"text": "Espetadas de Fruta", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "Dia 9 Coffee-Break – 15h30 ??",
+      "service_type": "coffee_break",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Pão de Queijo", "quantity": null},
+          {"text": "Folhados Mistos", "quantity": null},
+          {"text": "Folhados Salsisha", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Palmiers", "quantity": null},
+          {"text": "Mil folhas", "quantity": null},
+          {"text": "Salame de chocolate", "quantity": null},
+          {"text": "Peças de fruta", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "Dia 10 Coffee-Break – 10h30 ??",
+      "service_type": "coffee_break",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Pão c/ Queijo", "quantity": null},
+          {"text": "Pão c/ Fiambre", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Variado de Bolachas", "quantity": null},
+          {"text": "Pasteis de Nata", "quantity": null},
+          {"text": "Folhados de chocolate", "quantity": null},
+          {"text": "Peças de fruta", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "Almoço (volante) 12h45",
+      "service_type": "lunch",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "starter", "items": [
+          {"text": "Creme de Legumes (quente no copo) (veg.)", "quantity": null},
+          {"text": "Variedade de miniaturas Rissóis, Chamuças, Croquetes…", "quantity": null},
+          {"text": "Tostas c/ patês de Guacamole e Húmus (veg.)", "quantity": null},
+          {"text": "Variedade de Saladas (alfaces, cenoura, milho, couve roxa…)", "quantity": null}
+        ]},
+        {"segment": "main_dish", "items": [
+          {"text": "Bacalhau c/ Batatas a Murro e Broa", "quantity": null},
+          {"text": "Lombo Assado c/ Batatas a Murro", "quantity": null},
+          {"text": "Feijão frade c/ cogumelos salteados", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Tarte de Amêndoa", "quantity": null},
+          {"text": "Espetadas de Fruta", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    }
+  ],
+  "prices_not_in_a_moment": [
+    {"label": "Dia 5 coffee breaks (como escrito: 6€ x 23 + 23)", "unit_price": 6, "quantity": null, "line_total": 276, "vat_rate": 13},
+    {"label": "Dia 5 almoço", "unit_price": 27, "quantity": 23, "line_total": 621, "vat_rate": 13},
+    {"label": "Dia 6 coffee breaks", "unit_price": 6, "quantity": 23, "line_total": 138, "vat_rate": 13},
+    {"label": "Dia 6 almoço", "unit_price": 27, "quantity": 23, "line_total": 621, "vat_rate": 13}
+  ],
+  "total": 1871.28,
+  "total_includes_vat": true,
+  "staff_mentioned": "funcionários para servir",
+  "notes": [
+    "Sub Total 1656 € (IVA 13% acresce).",
+    "Duas máquinas de café para evitar filas.",
+    "Nos serviços apresentados não serão utilizados materiais plásticos.",
+    "Todo o serviço é realizado com loiças e toalhas de pano.",
+    "Bolachinhas do CASCI incluídas nas miniaturas doces."
+  ],
+  "uncertain": [
+    "O ficheiro diz 5 e 11 de Março; o texto menciona Dia 5, 9 e 10 (Dia 6 só nos preços). Dias tirados do texto, mês do ficheiro.",
+    "Horários ficaram por preencher ('Horário?', '??').",
+    "Os preços do Dia 5 e Dia 6 não se ligam a um momento específico."
+  ]
+}

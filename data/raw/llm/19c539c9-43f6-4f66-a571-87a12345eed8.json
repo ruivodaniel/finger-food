@@ -1,0 +1,48 @@
+{
+  "quote_id": "q:19c539c9-43f6-4f66-a571-87a12345eed8",
+  "client": "CS Wind",
+  "client_source": "file_name",
+  "event_dates": [{"day": 29, "month": 4, "year": 2026, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Menu de Almoço",
+      "service_type": "lunch",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "other", "items": [
+          {"text": "Sopa Creme de Cenoura (copo)", "quantity": null},
+          {"text": "Variado de miniaturas fritas: Bolinhos de Bacalhau, Croquetes…", "quantity": null},
+          {"text": "Buffet de Saladas (Alface, Tomate, Cherry, Cenoura, Milho, Couve Roxa)", "quantity": null},
+          {"text": "Salada de Quinoa c/ legumes salteados", "quantity": null},
+          {"text": "Bacalhau com Natas", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Brownie c/ Nozes e caramelo salgado", "quantity": null},
+          {"text": "Espetadas de fruta variada", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água engarrafada", "quantity": null},
+          {"text": "Sumo Compal", "quantity": null},
+          {"text": "(levar só chávenas de café)", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Comidas", "unit_price": 23, "quantity": 15, "line_total": 345, "vat_rate": 13}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 389.95,
+  "total_includes_vat": true,
+  "staff_mentioned": "dois funcionários, um para servir as bebidas e outro para manter a mesa das comidas organizada",
+  "notes": [
+    "Todo o serviço é realizado com toalhas de pano e todo o material necessário ao serviço."
+  ],
+  "uncertain": [
+    "Client and event date come from the file name; the text has no client name or date.",
+    "The file name ends with '23'; the text prices comidas at 23€ per unit, so the file name number is not used separately.",
+    "345 + 13% is 389.85, not the written total 389.95."
+  ]
+}

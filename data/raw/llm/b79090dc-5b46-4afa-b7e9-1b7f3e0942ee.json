@@ -1,0 +1,49 @@
+{
+  "quote_id": "q:b79090dc-5b46-4afa-b7e9-1b7f3e0942ee",
+  "client": "Isabel César",
+  "client_source": "file_name",
+  "event_dates": [{"day": 26, "month": 3, "year": null, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Coffee Break pm",
+      "service_type": "coffee_break",
+      "guests": 50,
+      "guests_raw": "x 50",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Croissant c/ Queijo (veg.)", "quantity": null},
+          {"text": "Croissant c/ Fiambre", "quantity": null},
+          {"text": "Folhados Salcisha", "quantity": null},
+          {"text": "Vol au vents de Guacamole (veg.)", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Bolhachinhas Bacalhaus do CASCI", "quantity": null},
+          {"text": "Brownie c/ Nozes e Caramelo Salgado", "quantity": null},
+          {"text": "Croissant simples", "quantity": null},
+          {"text": "Pasteis de Nata", "quantity": null},
+          {"text": "Espetadas de Fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Sumo de laranja natural (espremido na hora e servido em flutes)", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio): Frutos vermelhos", "quantity": null},
+          {"text": "Café e descafeinado (cápsulas)", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Coffee break pm", "unit_price": 8.6, "quantity": 50, "line_total": 430, "vat_rate": 13}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 485.9,
+  "total_includes_vat": true,
+  "staff_mentioned": "dois funcionários",
+  "notes": [
+    "Nos serviços apresentados não serão utilizados materiais plásticos, demonstrando assim a nossa consciência ambiental.",
+    "Nas miniaturas doces temos um item muito especial que começamos a introduzir nos nossos menus, as bolachinhas do CASCI – O CASCI é o Centro de Ação Social do Concelho de Ílhavo e habilita para a inclusão social pessoas com deficiência, pessoas idosas, crianças e públicos de risco, ao comprarmos estes produtos estamos a ajudar."
+  ],
+  "uncertain": []
+}

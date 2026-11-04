@@ -1,0 +1,60 @@
+{
+  "quote_id": "q:e108b64a-8469-4d71-b8da-a389267aef1e",
+  "client": "HomyCasa",
+  "client_source": "file_name",
+  "event_dates": [
+    {"day": 21, "month": 7, "year": null, "source": "file_name"}
+  ],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Coffee Break 16h",
+      "service_type": "coffee_break",
+      "guests": 50,
+      "guests_raw": "50",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Pão de sementes c/ Queijo (veg.)", "quantity": null},
+          {"text": "Pão de sementes c/ Fiambre", "quantity": null},
+          {"text": "Croissants c/ Queijo", "quantity": null},
+          {"text": "Croissants c/ Fiambre", "quantity": null},
+          {"text": "Vol au vents de Guacamole c/ azeitona (veg.)", "quantity": null},
+          {"text": "Bolinhos de Bacalhau", "quantity": null},
+          {"text": "Croquetes de Novilho", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Bolhachinhas Bacalhaus do CASCI", "quantity": null},
+          {"text": "Bolas de Berlim", "quantity": null},
+          {"text": "Variedade de mini muffins", "quantity": null},
+          {"text": "Pasteis de Nata", "quantity": null},
+          {"text": "Espetadas de Fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Frutos vermelhos", "quantity": null},
+          {"text": "Maçã canela", "quantity": null},
+          {"text": "Café e descafeinado (cápsulas)", "quantity": null},
+          {"text": "Espumante (Ermelinda Freitas)", "quantity": 10}
+        ]}
+      ],
+      "prices": [
+        {"label": "Coffee break pm", "unit_price": 8.5, "quantity": 50, "line_total": 425, "vat_rate": 13},
+        {"label": "Espumante", "unit_price": 1.5, "quantity": 50, "line_total": 75, "vat_rate": 23}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 572.50,
+  "total_includes_vat": true,
+  "staff_mentioned": "dois funcionários para servir, assim como 2 máquinas de café afim de evitar filas",
+  "notes": [
+    "Nas miniaturas doces temos as bolachinhas do CASCI – O CASCI é o Centro de Ação Social do Concelho de Ílhavo.",
+    "Nos serviços apresentados não serão utilizados materiais plásticos."
+  ],
+  "uncertain": [
+    "The day 21 and month 7 come from the file name; the text has no date and no year is written.",
+    "The price lines and the Espumante item are written with no day heading."
+  ]
+}

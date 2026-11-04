@@ -1,0 +1,69 @@
+{
+  "quote_id": "q:d9ba33dd-671c-43db-9d9d-ab4baa707675",
+  "client": "João Pinto",
+  "client_source": "file_name",
+  "event_dates": [
+    {"day": 21, "month": 5, "year": null, "source": "file_name"}
+  ],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Coffee-Break – am",
+      "service_type": "coffee_break",
+      "guests": 80,
+      "guests_raw": "80",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Croissant c/ Queijo (veg.)", "quantity": null},
+          {"text": "Croissant c/ Fiambre", "quantity": null},
+          {"text": "Vol au vents de Guacamole c/ azeitona", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Bolachinhas Bacalhaus do CASCI", "quantity": null},
+          {"text": "Pasteis de Nata", "quantity": null},
+          {"text": "Folhado de Chocolate", "quantity": null},
+          {"text": "Espetadas de fruta", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Coffee breaks am", "unit_price": 6.5, "quantity": 80, "line_total": 520, "vat_rate": null}
+      ]
+    },
+    {
+      "name_as_written": "Coffee-Break – pm",
+      "service_type": "coffee_break",
+      "guests": 80,
+      "guests_raw": "80",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Pão de Queijo", "quantity": null},
+          {"text": "Folhados Mistos", "quantity": null},
+          {"text": "Folhados Salsicha", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Palmiers", "quantity": null},
+          {"text": "Mil folhas", "quantity": null},
+          {"text": "Salame de chocolate", "quantity": null},
+          {"text": "Espetadas de fruta", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Coffee breaks pm", "unit_price": 6.5, "quantity": 80, "line_total": 520, "vat_rate": null}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 1175.20,
+  "total_includes_vat": true,
+  "staff_mentioned": null,
+  "notes": [
+    "Sub Total 1040€; acresce IVA 13%.",
+    "Mesa de bebidas presente: Água garrafas de vidro; Sumo (Compal) sabores variados; Águas aromatizadas (Chá frio); Frutos vermelhos; Maçã canela; Café e descafeinado (cápsulas).",
+    "Nas miniaturas doces temos as bolachinhas do CASCI.",
+    "Nos serviços apresentados não serão utilizados materiais plásticos."
+  ],
+  "uncertain": [
+    "O texto fala em 'Dia 21'; o mês vem do nome do ficheiro.",
+    "Este orçamento é igual ao de João Pinto 80pax NIF (mesmos valores e itens)."
+  ]
+}

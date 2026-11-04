@@ -1,0 +1,35 @@
+{
+  "quote_id": "q:c87c5d42-5438-4d0a-a999-bb6ba2e26cd8",
+  "client": "Ines Santos Palbit",
+  "client_source": "file_name",
+  "event_dates": [{"day": 28, "month": 5, "year": null, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Coffee Break 16h30",
+      "service_type": "coffee_break",
+      "guests": 60,
+      "guests_raw": "60",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [{"text": "Tábuas de queijos c/ frutos secos", "quantity": null}, {"text": "Tábuas de enchidos c/ azeitonas", "quantity": null}, {"text": "Mini pães c/ Queijo da Serra e Presunto (8 meses)", "quantity": null}, {"text": "Wraps c/ Queijo creme Salmão fumado e alcaparras", "quantity": null}, {"text": "Vol au vents de frango c/ cogumelos", "quantity": null}, {"text": "Vol au vents de Guacamole c/ azeitonas", "quantity": null}]},
+        {"segment": "sweet_miniatures", "items": [{"text": "Bolhachinhas Bacalhaus do CASCI", "quantity": null}, {"text": "Brownie c/ Nozes e Caramelo Salgado", "quantity": null}, {"text": "Torta de ovos c/ fios de ovos", "quantity": null}, {"text": "Ovos Moles de Aveiro", "quantity": null}]},
+        {"segment": "dessert", "items": [{"text": "Espetadas de Fruta", "quantity": null}]},
+        {"segment": "drink", "items": [{"text": "Água garrafas de vidro", "quantity": null}, {"text": "Sumo (Compal) sabores variados", "quantity": null}, {"text": "Sumo de laranja natural (espremido na hora e servido em flutes)", "quantity": null}, {"text": "Águas aromatizadas (Chá frio)", "quantity": null}, {"text": "Frutos vermelhos /Maçã canela", "quantity": null}, {"text": "Café e descafeinado (cápsulas)", "quantity": null}]}
+      ],
+      "prices": [{"label": "Coffee break pm", "unit_price": 13.5, "quantity": 60, "line_total": 810, "vat_rate": 13}]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 915.30,
+  "total_includes_vat": true,
+  "staff_mentioned": "dois funcionários para servir",
+  "notes": [
+    "Nos serviços apresentados não serão utilizados materiais plásticos, demonstrando assim a nossa consciência ambiental.",
+    "2 máquinas de café afim de evitar filas"
+  ],
+  "uncertain": [
+    "Cliente e data vêm do nome do ficheiro; o texto não os indica.",
+    "Ano do evento não está escrito no texto nem no nome do ficheiro.",
+    "Nome do ficheiro diz '(Prata)' e não foi interpretado."
+  ]
+}

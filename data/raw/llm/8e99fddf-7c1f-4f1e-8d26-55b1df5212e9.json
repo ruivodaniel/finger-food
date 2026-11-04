@@ -1,0 +1,49 @@
+{
+  "quote_id": "q:8e99fddf-7c1f-4f1e-8d26-55b1df5212e9",
+  "client": "Pedro Oliveira",
+  "client_source": "file_name",
+  "event_dates": [{"day": 22, "month": 4, "year": null, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Coffee Break 17h",
+      "service_type": "coffee_break",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Vol au vents de Frango", "quantity": null},
+          {"text": "Folhados Mistos", "quantity": null},
+          {"text": "Bolinhos de Bacalhau", "quantity": null},
+          {"text": "Croquetes de Vitela", "quantity": null},
+          {"text": "Vol au vents de Guacamole (Veg)", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Brownie c/ nozes e caramelo salgado", "quantity": null},
+          {"text": "Mil Folhas Glacê", "quantity": null},
+          {"text": "Bolachinhas Bacalhaus do CASCI", "quantity": null}
+        ]},
+        {"segment": "other", "items": [{"text": "Espetadas de fruta", "quantity": null}]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Café e descafeinado (cápsulas)", "quantity": null}
+        ]}
+      ],
+      "prices": [{"label": "Serviço de Coffee break", "unit_price": 7, "quantity": 30, "line_total": 210, "vat_rate": 13}]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 237.3,
+  "total_includes_vat": true,
+  "staff_mentioned": null,
+  "notes": [
+    "Nos serviços apresentados não serão utilizados materiais plásticos, demonstrando assim a nossa consciência ambiental.",
+    "Bolachinhas do CASCI: o Centro de Ação Social do Concelho de Ílhavo, que habilita para a inclusão social pessoas com deficiência, pessoas idosas, crianças e públicos de risco."
+  ],
+  "uncertain": [
+    "The text gives no people count; the 'x 30' is the quantity on the price line only, and the file name says 30 pax.",
+    "The total 237.30 includes VAT at 13%, as written in the 'Acresce IVA' line."
+  ]
+}

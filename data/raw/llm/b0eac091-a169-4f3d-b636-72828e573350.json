@@ -1,0 +1,109 @@
+{
+  "quote_id": "q:b0eac091-a169-4f3d-b636-72828e573350",
+  "client": "Conceição carvalho",
+  "client_source": "file_name",
+  "event_dates": [
+    {"day": 3, "month": 6, "year": null, "source": "text"},
+    {"day": 2, "month": 7, "year": null, "source": "text"},
+    {"day": 18, "month": 6, "year": null, "source": "text"},
+    {"day": 22, "month": 6, "year": null, "source": "text"},
+    {"day": 24, "month": 6, "year": null, "source": "text"},
+    {"day": 30, "month": 6, "year": null, "source": "text"}
+  ],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Coffee break 3 de Junho 14h-17h",
+      "service_type": "coffee_break",
+      "guests": 25,
+      "guests_raw": "7.50€ x 25 pessoas x 2 serviços",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Croissant c/ Queijo (vegetariano)", "quantity": null},
+          {"text": "Croissant c/ Fiambre", "quantity": null},
+          {"text": "Rolinhos de Pão c/ Chouriço", "quantity": null},
+          {"text": "Vol au Vents de Guacamole (vegan)", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Bolhachinhas Bacalhaus do CASCI", "quantity": null},
+          {"text": "Variedade de Brigadeiros", "quantity": null},
+          {"text": "Brownie com nozes e caramelo salgado", "quantity": null}
+        ]},
+        {"segment": "other", "items": [
+          {"text": "Espetadas de fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água Garrafas de Vidro", "quantity": null},
+          {"text": "Água aromatizada", "quantity": null},
+          {"text": "Sumo (Compal) Sabores Variados", "quantity": null},
+          {"text": "Café e Descafeinado (Cápsulas)", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "2 de Julho 14h-17h",
+      "service_type": "coffee_break",
+      "guests": 25,
+      "guests_raw": "7.50€ x 25 pessoas x 2 serviços",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Pão de sementes c/ Queijo (vegetariano)", "quantity": null},
+          {"text": "Pão de sementes c/ Fiambre", "quantity": null},
+          {"text": "Folhados Mistos", "quantity": null},
+          {"text": "Vol au Vents de Guacamole (vegan)", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Bolhachinhas Bacalhaus do CASCI", "quantity": null},
+          {"text": "Bolinhas de Berlim", "quantity": null},
+          {"text": "Salame de chocolate", "quantity": null}
+        ]},
+        {"segment": "other", "items": [
+          {"text": "Espetadas de fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água Garrafas de Vidro", "quantity": null},
+          {"text": "Água aromatizada", "quantity": null},
+          {"text": "Sumo (Compal) Sabores Variados", "quantity": null},
+          {"text": "Café e Descafeinado (Cápsulas)", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "Wellcome coffee 18/22/24/30 de Junho 14h- 16h30",
+      "service_type": "coffee_break",
+      "guests": 25,
+      "guests_raw": "3€ x 25 pessoas x 4 serviços",
+      "menu_lines": [
+        {"segment": "other", "items": [
+          {"text": "Bolachas Bacalhaus (CASCI)", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água Garrafas de Vidro", "quantity": null},
+          {"text": "Chá frio", "quantity": null},
+          {"text": "Café e Descafeinado", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    }
+  ],
+  "prices_not_in_a_moment": [
+    {"label": "Coffee break 2 serviços (7.50€ x 25 pessoas x 2 serviços)", "unit_price": 7.5, "quantity": 25, "line_total": 375, "vat_rate": 13},
+    {"label": "Wellcome coffee 4 serviços (3€ x 25 pessoas x 4 serviços)", "unit_price": 3, "quantity": 25, "line_total": 300, "vat_rate": 13}
+  ],
+  "total": 762.75,
+  "total_includes_vat": true,
+  "staff_mentioned": null,
+  "notes": [
+    "Sub Total 423.75€ (coffee breaks, IVA 13%); sub-total 339€ (wellcome coffee)",
+    "Nos serviços apresentados não serão utilizados materiais plásticos, apenas materiais reutilizáveis",
+    "Bolachas CASCI: se forem as mesmas pessoas em todos os serviços, apresentará oferta diferente nas bolachas"
+  ],
+  "uncertain": [
+    "Client name comes from the file name only",
+    "Year is not written",
+    "Guests 25 is written in the price lines; applied to each moment",
+    "Wellcome coffee is written as one moment covering four dates"
+  ]
+}

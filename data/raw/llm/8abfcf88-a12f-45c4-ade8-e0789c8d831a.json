@@ -1,0 +1,80 @@
+{
+  "quote_id": "q:8abfcf88-a12f-45c4-ade8-e0789c8d831a",
+  "client": "Daniela Pedro",
+  "client_source": "file_name",
+  "event_dates": [{"day": 27, "month": 10, "year": null, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Coffee-Break 10h30 – 9€ x 60 = 540€",
+      "service_type": "coffee_break",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Croissant Brioche c/ Queijo (veg.) e c/ Fiambre", "quantity": null},
+          {"text": "Pão de sementes c/ Queijo (veg.) e c/ Fiambre", "quantity": null},
+          {"text": "Folhados de Salsicha e Mistos", "quantity": null},
+          {"text": "Vol au vents de Guacamole (veg.)", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Bolachinhas Bacalhaus do CASCI", "quantity": null},
+          {"text": "Pasteis de Nata", "quantity": null},
+          {"text": "Salame de Chocolate", "quantity": null},
+          {"text": "Mil Folhas", "quantity": null},
+          {"text": "Espetadas de fruta", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Coffee-Break", "unit_price": 9, "quantity": 60, "line_total": 540, "vat_rate": null}
+      ]
+    },
+    {
+      "name_as_written": "Almoço (volante) 13h – 25€ x 60 = 1500€",
+      "service_type": "lunch",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "other", "items": [
+          {"text": "Variedade de Saladas (alfaces, cenoura, milho, couve roxa…)", "quantity": null},
+          {"text": "Wraps de Salmão fumado c/ queijo e rúcula", "quantity": null},
+          {"text": "Wraps de Frango c/ queijo e rucula", "quantity": null},
+          {"text": "Wraps de Guacamole c/ queijo e rucula", "quantity": null},
+          {"text": "Bacalhau c/ Natas", "quantity": null},
+          {"text": "Arroz de Pato", "quantity": null},
+          {"text": "Quinoa c/ Legumes salteados (vegi.)", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Brownie c/ Nozes e Caramelo Salgado", "quantity": null},
+          {"text": "Smi- frio de Bolacha", "quantity": null},
+          {"text": "Espetadas de Fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Mesa de bebidas presente em todos os momentos", "quantity": null},
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Chás variados", "quantity": null},
+          {"text": "Café e descafeinado", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Almoço", "unit_price": 25, "quantity": 60, "line_total": 1500, "vat_rate": null}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 2305.2,
+  "total_includes_vat": true,
+  "staff_mentioned": "3 funcionários que iram dispor as mesas em buffet para servir os pratos quentes, assim como o café",
+  "notes": [
+    "Nos serviços apresentados não serão utilizados materiais plásticos, demonstrando assim a nossa consciência ambiental.",
+    "Todo o serviço é realizado com loiças e toalhas de pano.",
+    "2 máquinas para evitar filas.",
+    "Nas miniaturas doces temos um item muito especial: as bolachinhas do CASCI, Centro de Ação Social do Concelho de Ílhavo."
+  ],
+  "uncertain": [
+    "Client comes from the file name; the text has no client name.",
+    "The text gives 2040€ as the sub total (540 + 1500) and 2305.20€ with 13% VAT; the 13% rate is written as 'taxa legal em vigor' on the subtotal and as 13% on the total."
+  ]
+}

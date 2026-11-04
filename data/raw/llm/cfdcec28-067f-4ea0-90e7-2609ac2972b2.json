@@ -1,0 +1,47 @@
+{
+  "quote_id": "q:cfdcec28-067f-4ea0-90e7-2609ac2972b2",
+  "client": "Eva Andrade",
+  "client_source": "file_name",
+  "event_dates": [
+    {"day": 5, "month": null, "year": null, "source": "text"}
+  ],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Coffee Break Horário?",
+      "service_type": "coffee_break",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Pão de Sementes c/ Queijo", "quantity": null},
+          {"text": "Pão de Sementes c/ Fiambre", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Bolachinhas Bacalhaus Salgados do CASCI", "quantity": null},
+          {"text": "Pasteis de Nata", "quantity": null},
+          {"text": "Folhados de chocolate", "quantity": null}
+        ]},
+        {"segment": "other", "items": [
+          {"text": "Espetadas de fruta", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Coffee breaks", "unit_price": 7, "quantity": 22, "line_total": 154, "vat_rate": 13}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 174.02,
+  "total_includes_vat": true,
+  "staff_mentioned": "um funcionário para servir e manter as mesas limpas e organizadas",
+  "notes": [
+    "Nos serviços apresentados não serão utilizados materiais plásticos, demonstrando assim a nossa consciência ambiental.",
+    "Bolachinhas do CASCI: o CASCI é o Centro de Ação Social do Concelho de Ílhavo e habilita para a inclusão social pessoas com deficiência, pessoas idosas, crianças e públicos de risco."
+  ],
+  "uncertain": [
+    "O horário do coffee break está escrito como 'Horário?' e não foi definido.",
+    "O número 22 está ligado a 'Coffee breaks 7€ x 22' sem se saber se são pessoas ou coffee breaks; não foi tratado como convidados.",
+    "O mês não consta do texto; apenas o dia 5."
+  ]
+}

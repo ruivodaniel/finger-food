@@ -1,0 +1,43 @@
+{
+  "quote_id": "q:0317f634-89c0-4e6e-a041-0eb3b6187615",
+  "client": "Ines Costa Sky",
+  "client_source": "file_name",
+  "event_dates": [{"day": 27, "month": 3, "year": null, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": null,
+      "service_type": "other",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Rolinhos de pão c/ chouriço", "quantity": null},
+          {"text": "Empadas de Frango c/ cogumelos", "quantity": null},
+          {"text": "Folhados Mistos", "quantity": null},
+          {"text": "Folhados Salsicha", "quantity": null},
+          {"text": "Mini Pizzas", "quantity": null},
+          {"text": "Vol au vents de Guacamole", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Miniaturas Doces (veg.)", "quantity": null},
+          {"text": "Brownie c/ Nozes e caramelo salgado", "quantity": null},
+          {"text": "Pasteis de nata", "quantity": null},
+          {"text": "Espetadas de fruta variada", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": null, "unit_price": 8, "quantity": 20, "line_total": 160, "vat_rate": 13}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 180.8,
+  "total_includes_vat": true,
+  "staff_mentioned": null,
+  "notes": [],
+  "uncertain": [
+    "Client and event date come from the file name; the text has neither.",
+    "The price line uses 20 units; the text does not write a guest count."
+  ]
+}

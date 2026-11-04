@@ -1,0 +1,53 @@
+{
+  "quote_id": "q:6a70f1ff-e04f-4a29-95f0-d2f7dc4934d6",
+  "client": "Isabel Arribança",
+  "client_source": "file_name",
+  "event_dates": [{"day": 23, "month": 5, "year": null, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Miniaturas Salgadas",
+      "service_type": "other",
+      "guests": 30,
+      "guests_raw": "12€ por pessoa x 30",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Espetada de bolinhos de bacalhau", "quantity": null},
+          {"text": "Chamuças de vegetais", "quantity": null},
+          {"text": "Croquetes de vitela c/ azeitona", "quantity": null},
+          {"text": "Croissants c/ Queijo", "quantity": null},
+          {"text": "Croissant c/ Fiambre", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Variedade de Brigadeiros", "quantity": null},
+          {"text": "Bolo no copo c/ iogurte e amêndoa", "quantity": null},
+          {"text": "Brownie c/ Nozes e Caramelo salgado", "quantity": null},
+          {"text": "Bolachinhas Bacalhaus Salgados do C.A.S.C.I.", "quantity": null}
+        ]},
+        {"segment": "other", "items": [
+          {"text": "Espetadas de fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Sumo de Laranja Natural (espremido na hora)", "quantity": null},
+          {"text": "Sumo Compal vários sabores", "quantity": null},
+          {"text": "Água aromatizada de frutos vermelhos", "quantity": null},
+          {"text": "Café e descafeinado", "quantity": null}
+        ]}
+      ],
+      "prices": [{"label": "Sub total – 12€ por pessoa x 30", "unit_price": 12, "quantity": 30, "line_total": 360, "vat_rate": 13}]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 406.8,
+  "total_includes_vat": true,
+  "staff_mentioned": "dois funcionários para servir",
+  "notes": [
+    "Nos serviços apresentados não serão utilizados materiais plásticos",
+    "Nas miniaturas doces: bolachinhas do CASCI, Centro de Ação Social do Concelho de Ílhavo"
+  ],
+  "uncertain": [
+    "Client name comes from the file name only",
+    "The text has no service name; set as Miniaturas Salgadas with service_type other",
+    "The sub-total 360€ with 13% VAT gives the total 406.80€ as written"
+  ]
+}

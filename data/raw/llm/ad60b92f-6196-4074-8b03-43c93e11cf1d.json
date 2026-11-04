@@ -1,0 +1,62 @@
+{
+  "quote_id": "q:ad60b92f-6196-4074-8b03-43c93e11cf1d",
+  "client": "Fanny SEAC",
+  "client_source": "file_name",
+  "event_dates": [
+    {"day": 14, "month": 10, "year": null, "source": "file_name"},
+    {"day": 15, "month": 10, "year": null, "source": "file_name"},
+    {"day": 16, "month": 10, "year": null, "source": "file_name"}
+  ],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Almoço (comidas e bebidas não alcoólicas)",
+      "service_type": "lunch",
+      "guests": 200,
+      "guests_raw": "200",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Rissóis de Camarão", "quantity": null},
+          {"text": "Bolinhos de Bacalhau", "quantity": null},
+          {"text": "Croquetes de Vitela", "quantity": null},
+          {"text": "Rolinhos de Pão c/ chouriço", "quantity": null},
+          {"text": "Vol au vents de Guacamole", "quantity": null},
+          {"text": "Vol au vents de Delícias", "quantity": null},
+          {"text": "Sandes de Pernil de Porco no espeto", "quantity": null},
+          {"text": "Tacinhas de salada de Atum c/ feijão frade cebola e salsa", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Pasteis de Nata", "quantity": null},
+          {"text": "Tarte de Amêndoa", "quantity": null},
+          {"text": "Brownie c/ Nozes e caramelo salgado", "quantity": null},
+          {"text": "Variedade de Brigadeiros", "quantity": null},
+          {"text": "Espetadas de Fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Cerveja Minis (400uni)", "quantity": 400},
+          {"text": "Café e descafeinado (cápsulas)", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Almoço (comidas e bebidas não alcoólicas)", "unit_price": 15, "quantity": 200, "line_total": 3000, "vat_rate": 13},
+        {"label": "Cerveja", "unit_price": 2, "quantity": 200, "line_total": 400, "vat_rate": 23}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 3882,
+  "total_includes_vat": true,
+  "staff_mentioned": "três funcionários para dispor as mesas em sistema de Buffet volante e servir os cafés",
+  "notes": [
+    "Asseguramos todos os materiais necessários ao serviço deste menu.",
+    "Nos serviços apresentados não serão utilizados materiais plásticos."
+  ],
+  "uncertain": [
+    "Days 14, 15 and 16 come from the file name; the text has no date and gives one price block for one service.",
+    "The text has no service heading; the single moment is named after the price line and set to lunch.",
+    "The Cerveja Minis are listed under the drinks table with 400 units, and the price block uses 200 for the beer line."
+  ]
+}

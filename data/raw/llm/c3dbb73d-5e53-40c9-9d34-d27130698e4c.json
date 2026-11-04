@@ -1,0 +1,125 @@
+{
+  "quote_id": "q:c3dbb73d-5e53-40c9-9d34-d27130698e4c",
+  "client": "Eugenia Pereira",
+  "client_source": "file_name",
+  "event_dates": [
+    {"day": 19, "month": null, "year": null, "source": "text"},
+    {"day": 20, "month": null, "year": null, "source": "text"}
+  ],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Dia 19 Coffee-Break 10h",
+      "service_type": "coffee_break",
+      "guests": 20,
+      "guests_raw": "20 pax",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Croissant Brioche c/ Queijo (veg.)", "quantity": null},
+          {"text": "Croissant Brioche c/ Fiambre", "quantity": null},
+          {"text": "Vol au vents de Guacamole (veg.)", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Queques de Laranja", "quantity": null},
+          {"text": "Iogurte de Soja c/ granola", "quantity": null},
+          {"text": "Folhado de Chocolate", "quantity": null}
+        ]},
+        {"segment": "other", "items": [
+          {"text": "Espetadas de fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Chás variados", "quantity": null},
+          {"text": "Café e descafeinado (cápsulas)", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Dia 19 Coffee-Break 10h", "unit_price": 7.5, "quantity": 20, "line_total": 150, "vat_rate": 13}
+      ]
+    },
+    {
+      "name_as_written": "Dia 19 Coffee-Break 16h",
+      "service_type": "coffee_break",
+      "guests": 20,
+      "guests_raw": "20 pax",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Espetada de Bolinhos de Bacalhau c/cherry", "quantity": null},
+          {"text": "Croquetes de Vitela c/ Azeitona", "quantity": null},
+          {"text": "Bolinhas vegi", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Mil Folhas Glacê", "quantity": null},
+          {"text": "Bolinhas de Berlim", "quantity": null}
+        ]},
+        {"segment": "other", "items": [
+          {"text": "Espetadas de Fruta", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Dia 19 Coffee-Break 16h", "unit_price": 7.5, "quantity": 20, "line_total": 150, "vat_rate": 13}
+      ]
+    },
+    {
+      "name_as_written": "Dia 20 Coffee-Break 9h",
+      "service_type": "coffee_break",
+      "guests": 20,
+      "guests_raw": "20 pax",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Pão c/ Queijo (veg.)", "quantity": null},
+          {"text": "Pão c/ Fiambre", "quantity": null},
+          {"text": "Empadas de Cogumelos", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Iogurte de Soja c/ Granola", "quantity": null},
+          {"text": "Salame de Chocolate", "quantity": null}
+        ]},
+        {"segment": "other", "items": [
+          {"text": "Espetadas de fruta", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Dia 20 Coffee-Break 9h", "unit_price": 7.5, "quantity": 20, "line_total": 150, "vat_rate": 13}
+      ]
+    },
+    {
+      "name_as_written": "Dia 20 Coffee-Break 16h",
+      "service_type": "coffee_break",
+      "guests": 20,
+      "guests_raw": "20 pax",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Rissóis de Camarão", "quantity": null},
+          {"text": "Folhados de Salsicha", "quantity": null},
+          {"text": "Espetada de mozarela (vegi.)", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Bolinhos de feijão", "quantity": null},
+          {"text": "Pasteis de Nata", "quantity": null}
+        ]},
+        {"segment": "other", "items": [
+          {"text": "Espetadas de Fruta", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Dia 20 Coffee-Break 16h", "unit_price": 7.5, "quantity": 20, "line_total": 150, "vat_rate": 13}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 678,
+  "total_includes_vat": true,
+  "staff_mentioned": null,
+  "notes": [
+    "Sub-total de 600€ por dias (Dia 19 = 300€; Dia 20 = 300€).",
+    "Nos serviços apresentados não serão utilizados materiais plásticos, demonstrando assim a nossa consciência ambiental.",
+    "Todo o serviço é realizado com loiças e toalhas de pano."
+  ],
+  "uncertain": [
+    "O mês dos eventos não consta do texto; apenas os dias 19 e 20.",
+    "A mesa de bebidas está indicada como presente em todos os momentos e foi registada só no primeiro momento."
+  ]
+}

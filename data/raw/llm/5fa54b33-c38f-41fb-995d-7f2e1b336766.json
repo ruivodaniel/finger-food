@@ -1,0 +1,51 @@
+{
+  "quote_id": "q:5fa54b33-c38f-41fb-995d-7f2e1b336766",
+  "client": "Lu Werneck",
+  "client_source": "file_name",
+  "event_dates": [{"day": 17, "month": 7, "year": null, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": null,
+      "service_type": "other",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Variedades pães coloridos c/ Fiambre e c/ Queijo", "quantity": null},
+          {"text": "Croissants c/ Queijo e Croissants c/ Fiambre", "quantity": null},
+          {"text": "Vol au vents de Guacamole c/ azeitona (veg.)", "quantity": null},
+          {"text": "Vol au vents de Delícias", "quantity": null},
+          {"text": "Vol au vens Frango", "quantity": null},
+          {"text": "Folhados de Salsicha", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Mil Folhas", "quantity": null},
+          {"text": "Bolas de Berlim", "quantity": null},
+          {"text": "Pasteis de Nata", "quantity": null},
+          {"text": "Brownie c/ Nozes e caramelo Salgado", "quantity": null},
+          {"text": "Espetadas de Fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Espumante (Ermelinda Freitas)", "quantity": null}
+        ]}
+      ],
+      "prices": [{"label": "PREÇO", "unit_price": null, "quantity": null, "line_total": 550, "vat_rate": null}]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 550,
+  "total_includes_vat": null,
+  "staff_mentioned": "um funcionário para execução da montagem",
+  "notes": [
+    "Nos serviços apresentados não serão utilizados materiais plásticos, demonstrando assim a nossa consciência ambiental."
+  ],
+  "uncertain": [
+    "The 550€ price is not split by item and no VAT rate or VAT status is written.",
+    "No service name or guest count is written.",
+    "Water and chilled water are listed twice in the drinks section, as written."
+  ]
+}

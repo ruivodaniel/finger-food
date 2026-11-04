@@ -1,0 +1,54 @@
+{
+  "quote_id": "q:47a412b4-9a95-4326-9bcc-3b5d2b2e8a46",
+  "client": "Mike",
+  "client_source": "file_name",
+  "event_dates": [
+    {"day": 13, "month": 6, "year": null, "source": "file_name"}
+  ],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Almoço 13h30 – 14h30",
+      "service_type": "lunch",
+      "guests": 70,
+      "guests_raw": "70 pax",
+      "menu_lines": [
+        {"segment": "other", "items": [
+          {"text": "Rodízio de Pizzas", "quantity": null},
+          {"text": "Wraps de frango, delícias c/ salada", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "8€ x 70 pax", "unit_price": 8, "quantity": 70, "line_total": 560, "vat_rate": 13},
+        {"label": "Deslocação", "unit_price": null, "quantity": null, "line_total": 140, "vat_rate": 13}
+      ]
+    },
+    {
+      "name_as_written": "Jantar 19h-21h",
+      "service_type": "dinner",
+      "guests": 70,
+      "guests_raw": "70 pax",
+      "menu_lines": [
+        {"segment": "starter", "items": [
+          {"text": "Caldo verde", "quantity": 70}
+        ]},
+        {"segment": "main_dish", "items": [
+          {"text": "Bifanas estufadas", "quantity": 140}
+        ]}
+      ],
+      "prices": [
+        {"label": "8€ x 70 pax", "unit_price": 8, "quantity": 70, "line_total": 560, "vat_rate": 13},
+        {"label": "Deslocação", "unit_price": null, "quantity": null, "line_total": 140, "vat_rate": 13}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 1582,
+  "total_includes_vat": true,
+  "staff_mentioned": "dois funcionários para montar, servir e desmontar",
+  "notes": [],
+  "uncertain": [
+    "O local do evento não consta do texto.",
+    "A data consta apenas do nome do ficheiro (13 de Junho); o texto não tem data nem ano."
+  ]
+}

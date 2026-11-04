@@ -1,0 +1,43 @@
+{
+  "quote_id": "q:d1b4e47f-fca4-4541-8b86-2ad073b30693",
+  "client": "Ana Neves",
+  "client_source": "file_name",
+  "event_dates": [{"day": 17, "month": 4, "year": null, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Almoço (volante) 12h30",
+      "service_type": "lunch",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "starter", "items": [
+          {"text": "Creme de legumes (quente no copo) (veg.)", "quantity": null},
+          {"text": "Salada de Feijao frade c/ Atum", "quantity": null},
+          {"text": "Salada de Quinoa c/ legumes", "quantity": null},
+          {"text": "Wraps de Frango, Atum e Guacamole c/ queijo e rúcula", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Brownie c/ nozes e caramelo salgado", "quantity": null},
+          {"text": "Espetadas de Fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Frutos vermelhos", "quantity": null},
+          {"text": "Café e descafeinado (cápsulas)", "quantity": null}
+        ]}
+      ],
+      "prices": [{"label": "Almoço", "unit_price": 16, "quantity": 22, "line_total": 352, "vat_rate": 13}]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 397.76,
+  "total_includes_vat": true,
+  "staff_mentioned": null,
+  "notes": ["Mesa de bebidas presente em todos os momentos"],
+  "uncertain": [
+    "The headcount 22 appears in the file name ('22 pax'); the text gives it only as the price quantity"
+  ]
+}

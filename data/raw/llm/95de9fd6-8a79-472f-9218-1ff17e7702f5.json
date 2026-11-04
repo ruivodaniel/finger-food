@@ -1,0 +1,55 @@
+{
+  "quote_id": "q:95de9fd6-8a79-472f-9218-1ff17e7702f5",
+  "client": "Fabridoce",
+  "client_source": "file_name",
+  "event_dates": [],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Almoço",
+      "service_type": "lunch",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "starter", "items": [
+          {"text": "Espetada de mozarela c/ cherry e manjericão (veg)", "quantity": null},
+          {"text": "Vol au vents de Guacamole (veg)", "quantity": null},
+          {"text": "Variedade de Saladas (alfaces, cenoura, milho, couve roxa…) (veg)", "quantity": null},
+          {"text": "Bolinhos de Bacalhau", "quantity": null},
+          {"text": "Rissóis de Camarão", "quantity": null},
+          {"text": "Croquetes de novilho", "quantity": null}
+        ]},
+        {"segment": "main_dish", "items": [
+          {"text": "Bifanas Estufadas á moda do Porto (Sandes)", "quantity": null},
+          {"text": "Cogumelos de cebolada (Sandes- veg)", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Espetadas de Fruta", "quantity": null},
+          {"text": "Bownie c/ Nozes e Caramelo salgado", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Café e descafeinado (cápsulas)", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Almoço", "unit_price": 15.5, "quantity": 140, "line_total": 2170, "vat_rate": 13}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 2452.1,
+  "total_includes_vat": true,
+  "staff_mentioned": "3 funcionários que iram dispor as mesas em buffet para servir os pratos quentes, assim como as bebidas",
+  "notes": [
+    "Nos serviços apresentados não serão utilizados materiais plásticos, demonstrando assim a nossa consciência ambiental.",
+    "Todo o serviço é realizado com loiças e toalhas de pano.",
+    "Levamos pratos e talheres para as vossas sobremesas."
+  ],
+  "uncertain": [
+    "Client comes from the file name; the text has no client name and no date.",
+    "The file name says 'Porco Espeto'; the text is a lunch menu, not a dedicated pork item."
+  ]
+}

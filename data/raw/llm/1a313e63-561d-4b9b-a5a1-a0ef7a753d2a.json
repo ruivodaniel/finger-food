@@ -1,0 +1,60 @@
+{
+  "quote_id": "q:1a313e63-561d-4b9b-a5a1-a0ef7a753d2a",
+  "client": "Fabridoce",
+  "client_source": "file_name",
+  "event_dates": [],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Almoço",
+      "service_type": "lunch",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "starter", "items": [
+          {"text": "Espetada de Bolinhos de Bacalhau c/ cherry e azeitona", "quantity": null},
+          {"text": "Rissóis de Camarão", "quantity": null},
+          {"text": "Croquetes de novilho", "quantity": null},
+          {"text": "Tábuas de Enchidos decorados c/ azeitonas", "quantity": null},
+          {"text": "Tábuas de Queijos decoradas c/ frutos secos (veg)", "quantity": null},
+          {"text": "Espetada de mozarela c/ cherry e manjericão (veg)", "quantity": null},
+          {"text": "Vol au vents de Guacamole (veg)", "quantity": null},
+          {"text": "Vol au vents de Frango", "quantity": null},
+          {"text": "Vol au vents de Delícias", "quantity": null},
+          {"text": "Variedade de Saladas (alfaces, cenoura, milho, couve roxa…) (veg)", "quantity": null}
+        ]},
+        {"segment": "main_dish", "items": [
+          {"text": "Porco no Espeto (Sandes)", "quantity": null},
+          {"text": "Cogumelos de cebolada (Sandes- veg)", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Espetadas de Fruta", "quantity": null},
+          {"text": "Bownie c/ Nozes e Caramelo salgado", "quantity": null},
+          {"text": "Variedades no copo (Chocolate, Creme Brulê, Mascarpone)", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo de Laranja Natural (exprimido na hora servido em flutes)", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Café e descafeinado (cápsulas)", "quantity": null}
+        ]}
+      ],
+      "prices": [{"label": "Almoço", "unit_price": 22, "quantity": 140, "line_total": 3080, "vat_rate": 13}]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 3480.04,
+  "total_includes_vat": true,
+  "staff_mentioned": "3 funcionários que iram dispor as mesas em buffet para servir os pratos quentes, assim como as bebidas",
+  "notes": [
+    "Nos serviços apresentados não serão utilizados materiais plásticos, demonstrando assim a nossa consciência ambiental.",
+    "Todo o serviço é realizado com loiças e toalhas de pano.",
+    "Levamos pratos e talheres para as vossas sobremesas."
+  ],
+  "uncertain": [
+    "Client name is taken from the file name; the file name may name the caterer rather than the client.",
+    "No event date is written in the text or the file name.",
+    "The written total 3480.04 does not match 3080 plus 13% VAT (3480.40); kept as written."
+  ]
+}

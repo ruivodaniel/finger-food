@@ -1,0 +1,51 @@
+{
+  "quote_id": "q:d1ae3761-b8bf-4bc5-8061-f37d1771e530",
+  "client": "Aveiro com Paixão Sandra",
+  "client_source": "file_name",
+  "event_dates": [],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Menu",
+      "service_type": "other",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "other", "items": [
+          {"text": "Sopa Creme de cenoura (copo)", "quantity": null},
+          {"text": "Bolinhos de bacalhau", "quantity": null},
+          {"text": "Rissois de camarão", "quantity": null},
+          {"text": "Croquetes de vitela", "quantity": null},
+          {"text": "Chamuças de legumes", "quantity": null},
+          {"text": "Bacalhau c/ Natas", "quantity": null},
+          {"text": "Arroz de Pato", "quantity": null},
+          {"text": "Quinoa c/ Legumes salteados", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Bolo no copo", "quantity": null},
+          {"text": "Variedade de Brigadeiros", "quantity": null},
+          {"text": "Brownie c/ Nozes e caramelo salgado", "quantity": null},
+          {"text": "Espetadas de fruta variada", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água engarrafada", "quantity": null},
+          {"text": "Sumo de laranja natural", "quantity": null},
+          {"text": "Café e descafeinado", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Menu", "unit_price": 20, "quantity": null, "line_total": null, "vat_rate": 13}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": null,
+  "total_includes_vat": false,
+  "staff_mentioned": "dois funcionários",
+  "notes": [
+    "Nos serviços apresentados não serão utilizados materiais plásticos, demonstrando assim a nossa consciência ambiental.",
+    "(A cada 15 convidados acrescento mais um funcionário.)",
+    "Este orçamento apenas contempla serviços em dias de semana em horário laboral, ao final de semana e depois das 18h tem um acréscimo de 2.50€."
+  ],
+  "uncertain": []
+}

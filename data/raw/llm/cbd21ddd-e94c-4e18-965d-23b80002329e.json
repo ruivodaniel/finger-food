@@ -1,0 +1,55 @@
+{
+  "quote_id": "q:cbd21ddd-e94c-4e18-965d-23b80002329e",
+  "client": "Bling Tânia Baptista",
+  "client_source": "file_name",
+  "event_dates": [{"day": 17, "month": 6, "year": null, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Entradas: (volante) – 17h-21h30",
+      "service_type": "other",
+      "guests": 70,
+      "guests_raw": "x 70",
+      "menu_lines": [
+        {"segment": "starter", "items": [
+          {"text": "Bolinhos de Bacalhau", "quantity": null},
+          {"text": "Croquetes de vitela", "quantity": null},
+          {"text": "Rolinhos de Pão c/ Chouriço", "quantity": null},
+          {"text": "Batatas fritas", "quantity": null},
+          {"text": "Amendoins, Tremoços, Azeitonas", "quantity": null}
+        ]},
+        {"segment": "main_dish", "items": [
+          {"text": "Caldo Verde c/ chouriça", "quantity": null},
+          {"text": "Bifanas estufadas desfiadas", "quantity": null},
+          {"text": "Cachorros c/ batata palha", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Bolinhas de Berlim", "quantity": null},
+          {"text": "Pasteis de Nata", "quantity": null},
+          {"text": "Bolo de Chocolate", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Sumo (Compal), Coca-cola, Sumol", "quantity": null},
+          {"text": "Cerveja Mini Sagres", "quantity": null},
+          {"text": "Café e descafeinado (cápsulas)", "quantity": null}
+        ]},
+        {"segment": "decoration", "items": [
+          {"text": "Relava 2 x 6 mts c/ marcas de áreas, 1 baliza, 3 bolas futebol, Bandeiras…", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Comidas", "unit_price": 21.5, "quantity": 70, "line_total": 1505, "vat_rate": 13},
+        {"label": "Bebidas não alcoólicas", "unit_price": 2.5, "quantity": 70, "line_total": 175, "vat_rate": 13},
+        {"label": "Cerveja", "unit_price": 0.6, "quantity": 210, "line_total": 126, "vat_rate": 23}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 2053.38,
+  "total_includes_vat": true,
+  "staff_mentioned": "3 funcionários",
+  "notes": [],
+  "uncertain": []
+}

@@ -1,0 +1,36 @@
+{
+  "quote_id": "q:f9577a8a-4492-4f18-8715-46aa1c6ead77",
+  "client": "Carisa Martins InovaRia",
+  "client_source": "file_name",
+  "event_dates": [{"day": 31, "month": 3, "year": null, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Almoço (volante) 12h-14h",
+      "service_type": "lunch",
+      "guests": 20,
+      "guests_raw": "20 pax",
+      "menu_lines": [
+        {"segment": "starter", "items": [{"text": "Creme de Cenoura (copo)", "quantity": null}, {"text": "Variedade de Saladas (alfaces, cenoura, milho, couve roxa…)", "quantity": null}]},
+        {"segment": "main_dish", "items": [{"text": "Arroz de Pato", "quantity": null}]},
+        {"segment": "dessert", "items": [{"text": "Variedade de Brigadeiros", "quantity": null}, {"text": "Espetadas de Fruta", "quantity": null}]},
+        {"segment": "drink", "items": [{"text": "Água garrafas de vidro", "quantity": null}, {"text": "Sumo (Compal) sabores variados", "quantity": null}, {"text": "Águas aromatizadas (Chá frio)", "quantity": null}, {"text": "Café e descafeinado (cápsulas)", "quantity": null}]}
+      ],
+      "prices": [{"label": null, "unit_price": 20, "quantity": 20, "line_total": 400, "vat_rate": 13}]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 452,
+  "total_includes_vat": true,
+  "staff_mentioned": "2 funcionários para servir",
+  "notes": [
+    "Orçamento para o número mínimo de 20 pessoas.",
+    "Nos serviços apresentados não serão utilizados materiais plásticos, demonstrando assim a nossa consciência ambiental.",
+    "2 máquinas de café"
+  ],
+  "uncertain": [
+    "Cliente e data vêm do nome do ficheiro; o texto não os indica.",
+    "Ano do evento não está escrito no texto nem no nome do ficheiro.",
+    "Linha de preço sem rótulo no texto."
+  ]
+}

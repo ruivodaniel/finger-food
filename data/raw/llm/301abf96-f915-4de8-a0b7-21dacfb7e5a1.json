@@ -1,0 +1,58 @@
+{
+  "quote_id": "q:301abf96-f915-4de8-a0b7-21dacfb7e5a1",
+  "client": "Eugenio Rocha",
+  "client_source": "file_name",
+  "event_dates": [
+    {"day": 3, "month": 6, "year": null, "source": "file_name"}
+  ],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Almoço (volante) 12h30",
+      "service_type": "lunch",
+      "guests": 90,
+      "guests_raw": "90",
+      "menu_lines": [
+        {"segment": "starter", "items": [
+          {"text": "Croquetes", "quantity": null},
+          {"text": "Bolinhos de Bacalhau", "quantity": null},
+          {"text": "Vol au vents de Guacamole (vegi)", "quantity": null},
+          {"text": "Saladas Variadas Alface, tomate, cenoura, milho, couve roxa (vegi)", "quantity": null}
+        ]},
+        {"segment": "main_dish", "items": [
+          {"text": "Bacalhau c/ Natas", "quantity": null},
+          {"text": "Arroz de Pato c/ enchidos", "quantity": null},
+          {"text": "Grão de bico com Quinoa de Legumes (vegan)", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Brownie c/ nozes e caramelo salgado", "quantity": null},
+          {"text": "Variedade de Brigadeiros", "quantity": null},
+          {"text": "Espetadas de Fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Café e descafeinado (cápsulas)", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Almoço", "unit_price": 18, "quantity": 90, "line_total": 1620, "vat_rate": 13}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 1830.60,
+  "total_includes_vat": true,
+  "staff_mentioned": "3 funcionários",
+  "notes": [
+    "Mesa de bebidas presente em todos os momentos.",
+    "Nos serviços apresentados não serão utilizados materiais plásticos.",
+    "Todo o serviço é realizado com loiças e toalhas de pano.",
+    "Duas máquinas de café para evitar filas."
+  ],
+  "uncertain": [
+    "Mês vem do nome do ficheiro; o texto não tem data.",
+    "Número de pessoas (90) só aparece na linha de preço."
+  ]
+}

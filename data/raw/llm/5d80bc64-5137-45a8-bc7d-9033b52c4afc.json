@@ -1,0 +1,140 @@
+{
+  "quote_id": "q:5d80bc64-5137-45a8-bc7d-9033b52c4afc",
+  "client": "Dra. Sofia Moreira",
+  "client_source": "file_name",
+  "event_dates": [
+    {"day": 5, "month": null, "year": null, "source": "text"},
+    {"day": 6, "month": null, "year": null, "source": "text"},
+    {"day": 7, "month": null, "year": null, "source": "text"}
+  ],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Dia 5 Coffee-Break – 15h45",
+      "service_type": "coffee_break",
+      "guests": 70,
+      "guests_raw": "de 70 pessoas",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Pão c/ Queijo (veg.)", "quantity": null},
+          {"text": "Pão c/ Fiambre", "quantity": null},
+          {"text": "Vol au vents de cogumelos (veg.)", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Palmiers", "quantity": null},
+          {"text": "Salame de Chocolate", "quantity": null}
+        ]},
+        {"segment": "other", "items": [
+          {"text": "Peças de fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Chás variados", "quantity": null},
+          {"text": "Café e descafeinado (cápsulas)", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "Dia 6 Coffee-Break - 10h45",
+      "service_type": "coffee_break",
+      "guests": 70,
+      "guests_raw": "de 70 pessoas",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Croissant c/ Queijo (veg.)", "quantity": null},
+          {"text": "Croissant c/ Fiambre", "quantity": null},
+          {"text": "Vol au vents de Guacamole (veg.)", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Bolachinhas Bacalhaus do CASCI", "quantity": null},
+          {"text": "Pasteis de Nata", "quantity": null}
+        ]},
+        {"segment": "other", "items": [
+          {"text": "Peças de fruta", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "Dia 6 Coffee-Break – 15h45",
+      "service_type": "coffee_break",
+      "guests": 70,
+      "guests_raw": "de 70 pessoas",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Pão c/ Queijo (veg.)", "quantity": null},
+          {"text": "Pão c/ Fiambre", "quantity": null},
+          {"text": "Vol au vents de cogumelos (veg.)", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Palmiers", "quantity": null},
+          {"text": "Brigadeiros", "quantity": null}
+        ]},
+        {"segment": "other", "items": [
+          {"text": "Peças de fruta", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "Dia 7 Coffee-Break - 10h45",
+      "service_type": "coffee_break",
+      "guests": 70,
+      "guests_raw": "de 70 pessoas",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Croissant c/ Queijo (veg.)", "quantity": null},
+          {"text": "Croissant c/ Fiambre", "quantity": null},
+          {"text": "Vol au vents de Humus (veg.)", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Bolachinhas de Aveia", "quantity": null},
+          {"text": "Bolinhos de Côco", "quantity": null}
+        ]},
+        {"segment": "other", "items": [
+          {"text": "Peças de fruta", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "Dia 7 Coffee-Break – 15h45",
+      "service_type": "coffee_break",
+      "guests": 70,
+      "guests_raw": "de 70 pessoas",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Pão c/ Queijo (veg.)", "quantity": null},
+          {"text": "Pão c/ Fiambre", "quantity": null},
+          {"text": "Vol au vents de Guacamole (veg.)", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Bolachinhas Bacalhaus do CASCI", "quantity": null},
+          {"text": "Brownie c/ nozes e caramelo salgado", "quantity": null}
+        ]},
+        {"segment": "other", "items": [
+          {"text": "Peças de fruta", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    }
+  ],
+  "prices_not_in_a_moment": [
+    {"label": "5 coffee breaks de 70 pessoas (média de 4 miniaturas por pessoa)", "unit_price": null, "quantity": 5, "line_total": 1750, "vat_rate": 13}
+  ],
+  "total": 1977.50,
+  "total_includes_vat": true,
+  "staff_mentioned": "2 funcionários",
+  "notes": [
+    "Nos serviços apresentados não serão utilizados materiais plásticos, demonstrando assim a nossa consciência ambiental.",
+    "Todo o serviço é realizado com loiças e toalhas de pano.",
+    "Bolachinhas do CASCI: o CASCI é o Centro de Ação Social do Concelho de Ílhavo e habilita para a inclusão social pessoas com deficiência, pessoas idosas, crianças e públicos de risco."
+  ],
+  "uncertain": [
+    "O mês do evento não consta do texto; apenas os dias 5, 6 e 7 (Março aparece só no nome do ficheiro).",
+    "A mesa de bebidas está indicada como presente em todos os momentos e foi registada só no primeiro momento."
+  ]
+}

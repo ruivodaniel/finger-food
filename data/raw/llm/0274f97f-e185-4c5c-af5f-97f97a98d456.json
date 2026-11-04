@@ -1,0 +1,54 @@
+{
+  "quote_id": "q:0274f97f-e185-4c5c-af5f-97f97a98d456",
+  "client": "Rita Lopes",
+  "client_source": "file_name",
+  "event_dates": [{"day": 25, "month": 10, "year": null, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Coffee Break 15h – 18h",
+      "service_type": "coffee_break",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Croissants c/ Queijo", "quantity": null},
+          {"text": "Croissants c/ Fiambre", "quantity": null},
+          {"text": "Vol au vents de Guacamole c/ azeitona (veg.)", "quantity": null},
+          {"text": "Empadas de Cogumelos", "quantity": null},
+          {"text": "Bolinhos de Bacalhau", "quantity": null},
+          {"text": "Croquetes de Novilho", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Brownie c/ Nozes e Caramelo Salgado", "quantity": null},
+          {"text": "Bolas de Berlim", "quantity": null},
+          {"text": "Variedade de mini muffins ( Laranja/ Cenoura/ Pistacho)", "quantity": null},
+          {"text": "Pasteis de Nata", "quantity": null},
+          {"text": "Espetadas de Fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Frutos vermelhos", "quantity": null},
+          {"text": "Maçã canela", "quantity": null},
+          {"text": "Café e descafeinado (cápsulas)", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Coffee break pm", "unit_price": null, "quantity": null, "line_total": 400, "vat_rate": 13},
+        {"label": "Espumante", "unit_price": 1.5, "quantity": 50, "line_total": 75, "vat_rate": 23}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 572.5,
+  "total_includes_vat": true,
+  "staff_mentioned": "dois funcionários",
+  "notes": [
+    "Nos serviços apresentados não serão utilizados materiais plásticos, demonstrando assim a nossa consciência ambiental."
+  ],
+  "uncertain": [
+    "O coffee break pm aparece só com o total de 400€, sem preço unitário."
+  ]
+}

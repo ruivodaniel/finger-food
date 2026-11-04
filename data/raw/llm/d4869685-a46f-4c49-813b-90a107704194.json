@@ -1,0 +1,49 @@
+{
+  "quote_id": "q:d4869685-a46f-4c49-813b-90a107704194",
+  "client": "Raquel Barroca",
+  "client_source": "file_name",
+  "event_dates": [],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": null,
+      "service_type": "other",
+      "guests": 20,
+      "guests_raw": "20 pessoas",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Croissant c/ Queijo (vegetariano)", "quantity": null},
+          {"text": "Croissant c/ Fiambre", "quantity": null},
+          {"text": "Rolinhos de Pão c/ Chouriço", "quantity": null},
+          {"text": "Vol au Vents de Guacamole (vegan)", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Bolhachinhas Bacalhaus do CASCI", "quantity": null},
+          {"text": "Variedade de Brigadeiros", "quantity": null},
+          {"text": "Pasteis de Nata", "quantity": null},
+          {"text": "Brownie com nozes e caramelo salgado", "quantity": null},
+          {"text": "Espetadas de fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água Garrafas de Vidro", "quantity": null},
+          {"text": "Sumo (Compal) Sabores Variados", "quantity": null},
+          {"text": "Sumo de Laranja Natural (exprimido ao momento servido no copo)", "quantity": null},
+          {"text": "Chás variados", "quantity": null},
+          {"text": "Café e Descafeinado (Cápsulas)", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "8.50€ x 20 pessoas", "unit_price": 8.5, "quantity": 20, "line_total": 170, "vat_rate": 13}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 192.1,
+  "total_includes_vat": true,
+  "staff_mentioned": "dois funcionários",
+  "notes": [
+    "Nos serviços apresentados não serão utilizados materiais plásticos, apenas materiais reutilizáveis, demonstrando assim a nossa consciência ambiental.",
+    "A comida será disposta em ilhas com serviço de buffet por temas."
+  ],
+  "uncertain": []
+}

@@ -1,0 +1,118 @@
+{
+  "quote_id": "q:f8050de5-2e78-4833-b094-11b615ff3562",
+  "client": "Rita Serrano",
+  "client_source": "file_name",
+  "event_dates": [{"day": 30, "month": 10, "year": null, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Wellcome Coffee 9h - 3€/pp",
+      "service_type": "coffee_break",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "drink", "items": [
+          {"text": "Café", "quantity": null},
+          {"text": "Àgua", "quantity": null}
+        ]},
+        {"segment": "other", "items": [
+          {"text": "Variado de Bolachas", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Wellcome Coffee 9h", "unit_price": 3, "quantity": null, "line_total": null, "vat_rate": null}
+      ]
+    },
+    {
+      "name_as_written": "Coffee Break 10h30 – 7€/pp",
+      "service_type": "coffee_break",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Pão de sementes c/ Queijo (veg.)", "quantity": null},
+          {"text": "Pão de sementes c/ Fiambre", "quantity": null},
+          {"text": "Pão de centeio c/ Queijo (veg.)", "quantity": null},
+          {"text": "Pão de centeio c/ Fiambre", "quantity": null},
+          {"text": "Croissants c/ Queijo (veg)", "quantity": null},
+          {"text": "Croissants c/ Fiambre", "quantity": null},
+          {"text": "Folhados de Salsicha", "quantity": null},
+          {"text": "Vol au vents de Guacamole c/ azeitona (veg.)", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Muffins de Laranja, Iogurte, Aveia, Pistacho", "quantity": null},
+          {"text": "Folhados de Chocolate", "quantity": null},
+          {"text": "Pasteis de Nata", "quantity": null},
+          {"text": "Palmiers", "quantity": null},
+          {"text": "Peças de Fruta", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Coffee Break 10h30", "unit_price": 7, "quantity": null, "line_total": null, "vat_rate": null}
+      ]
+    },
+    {
+      "name_as_written": "Almoço 13h – 10€/pp",
+      "service_type": "lunch",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "starter", "items": [
+          {"text": "Saladas compostas, frango, atum e vegetarianas (Vitacress/Fleurett)", "quantity": null}
+        ]},
+        {"segment": "other", "items": [
+          {"text": "Sandes de porco no espeto", "quantity": null},
+          {"text": "Sandes de filete de pescada c/ alface", "quantity": null},
+          {"text": "Sandes de cogumelos de cebolada (veg.)", "quantity": null},
+          {"text": "Wraps de patê de frango, delícias e guacamole (veg.) c/ queijo e rúcula", "quantity": null},
+          {"text": "Rodízio de Pizzas carne, peixe e veg.", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Bolo brigadeiro", "quantity": null},
+          {"text": "Bolo de bolacha", "quantity": null},
+          {"text": "Tarte de amêndoa", "quantity": null},
+          {"text": "Peças de fruta", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Almoço 13h", "unit_price": 10, "quantity": null, "line_total": null, "vat_rate": null}
+      ]
+    },
+    {
+      "name_as_written": "Aveiro D’Honrra 16h – 3€",
+      "service_type": "other",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Bacalhaus salgados do C.A.S.C.I.", "quantity": null},
+          {"text": "Ovos moles", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Espumante da Bairrada – Oferta", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Aveiro D’Honrra 16h", "unit_price": 3, "quantity": null, "line_total": null, "vat_rate": null}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [
+    {"label": "Quote with 150 pessoas", "unit_price": 23, "quantity": 150, "line_total": 3450, "vat_rate": 13},
+    {"label": "Quote with 200 pessoas", "unit_price": 22, "quantity": 200, "line_total": 4400, "vat_rate": 13},
+    {"label": "Quote with 300 pessoas", "unit_price": 20, "quantity": 300, "line_total": 6000, "vat_rate": 13}
+  ],
+  "total": null,
+  "total_includes_vat": null,
+  "staff_mentioned": "quatro a seis funcionários para servir",
+  "notes": [
+    "Nos serviços apresentados não serão utilizados materiais plásticos, demonstrando assim a nossa consciência ambiental.",
+    "Seis a oito máquinas de café afim de evitar filas.",
+    "Nas miniaturas doces temos um item muito especial: as bolachinhas do CASCI, Centro de Ação Social do Concelho de Ílhavo."
+  ],
+  "uncertain": [
+    "The text gives three headcount options (150, 200, 300) with different prices and no single total; none is marked as chosen.",
+    "Client and event date come from the file name; the text has neither.",
+    "The Rita Serrano quote has a 'Mesa de bebidas presente em todos os momentos' drinks list that is written once for all moments; it is not repeated in each moment."
+  ]
+}

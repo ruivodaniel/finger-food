@@ -1,0 +1,137 @@
+{
+  "quote_id": "q:108f7cbe-eafc-4c3b-9fdf-e653d389bfdc",
+  "client": "Rita S. Freitas CMA",
+  "client_source": "file_name",
+  "event_dates": [
+    {"day": 19, "month": 3, "year": null, "source": "file_name"},
+    {"day": 20, "month": 3, "year": null, "source": "file_name"}
+  ],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Dia 19 Coffee-Break – 40 pax 10h30?",
+      "service_type": "coffee_break",
+      "guests": 40,
+      "guests_raw": "40 pax",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Croissant c/ Queijo (veg.)", "quantity": null},
+          {"text": "Croissant c/ Fiambre", "quantity": null},
+          {"text": "Vol au vents de Guacamole (veg.)", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Bolachinhas Bacalhaus do CASCI", "quantity": null},
+          {"text": "Croissant simples", "quantity": null},
+          {"text": "Folhado de Chocolate", "quantity": null},
+          {"text": "Peças de fruta", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "Almoço (volante) – 40 pax 12h-14h ?",
+      "service_type": "lunch",
+      "guests": 40,
+      "guests_raw": "40 pax",
+      "menu_lines": [
+        {"segment": "starter", "items": [
+          {"text": "Creme de Couve Flor (quente no copo) (veg.)", "quantity": null},
+          {"text": "Variedade de Saladas (alfaces, cenoura, milho, couve roxa…)", "quantity": null}
+        ]},
+        {"segment": "main_dish", "items": [
+          {"text": "Bacalhau c/ Natas", "quantity": null},
+          {"text": "Arroz de Pato", "quantity": null},
+          {"text": "Quinoa c/ Legumes salteados", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Variedade de Brigadeiros", "quantity": null},
+          {"text": "Ovos Moles", "quantity": null},
+          {"text": "Espetadas de Fruta", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "Dia 20 Coffee-Break – 40 pax 10h30?",
+      "service_type": "coffee_break",
+      "guests": 40,
+      "guests_raw": "40 pax",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Pão c/ Queijo (veg.)", "quantity": null},
+          {"text": "Pão c/ Fiambre", "quantity": null},
+          {"text": "Vol au vents de cogumelos (veg.)", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Palmiers", "quantity": null},
+          {"text": "Iogurte c/ Granola", "quantity": null},
+          {"text": "Salame de Chocolate", "quantity": null},
+          {"text": "Peças de fruta", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "Almoço (volante) – 30 pax 12h-14h ?",
+      "service_type": "lunch",
+      "guests": 30,
+      "guests_raw": "30 pax",
+      "menu_lines": [
+        {"segment": "starter", "items": [
+          {"text": "Creme de Cenoura (quente no copo) (veg.)", "quantity": null},
+          {"text": "Variedade de Saladas (alfaces, cenoura, milho, couve roxa…)", "quantity": null}
+        ]},
+        {"segment": "main_dish", "items": [
+          {"text": "Bacalhau c/ grão de bico", "quantity": null},
+          {"text": "Arroz á Valenciana", "quantity": null},
+          {"text": "Couscous c/ cogumelos", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Ovos Moles", "quantity": null},
+          {"text": "Leite creme queimado", "quantity": null},
+          {"text": "Espetadas de Fruta", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "Dia 20 Coffee-Break – 20 pax 16h?",
+      "service_type": "coffee_break",
+      "guests": 20,
+      "guests_raw": "20 pax",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Bolinhos de Bacalhau", "quantity": null},
+          {"text": "Croquetes de Vitela", "quantity": null},
+          {"text": "Chamuças vegi", "quantity": null},
+          {"text": "Folhados mistos", "quantity": null},
+          {"text": "Folhados de Salsicha", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Brownie c/ nozes e caramelo salgado", "quantity": null},
+          {"text": "Pasteis de Nata", "quantity": null},
+          {"text": "Peças de Fruta", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    }
+  ],
+  "prices_not_in_a_moment": [
+    {"label": "Subtotal", "unit_price": null, "quantity": null, "line_total": 2595, "vat_rate": 13}
+  ],
+  "total": 2932.35,
+  "total_includes_vat": true,
+  "staff_mentioned": "2 funcionários",
+  "notes": [
+    "Mesa de bebidas presente em todos os momentos: Água garrafas de vidro; Sumo de Laranja Natural (exprimido na hora servido em flutes); Sumo (Compal) sabores variados; Águas aromatizadas (Chá frio); Chás variados; Café e descafeinado (cápsulas).",
+    "Sacos de papel e águas de 0.50L incluídos para todos os serviços.",
+    "Todo o serviço é realizado com loiças e toalhas de pano.",
+    "Nos serviços apresentados não serão utilizados materiais plásticos.",
+    "Bolachinhas do CASCI incluídas nas miniaturas doces."
+  ],
+  "uncertain": [
+    "Mês e ano vêm do nome do ficheiro; o texto só dá os dias 19 e 20.",
+    "Horários marcados com '?' no texto.",
+    "Subtotal 2595€ sem preço por momento."
+  ]
+}

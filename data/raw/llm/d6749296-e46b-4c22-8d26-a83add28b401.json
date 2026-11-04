@@ -1,0 +1,60 @@
+{
+  "quote_id": "q:d6749296-e46b-4c22-8d26-a83add28b401",
+  "client": "Prazeres Maria",
+  "client_source": "file_name",
+  "event_dates": [
+    {"day": 28, "month": 4, "year": null, "source": "file_name"}
+  ],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Jantar",
+      "service_type": "dinner",
+      "guests": 45,
+      "guests_raw": "x 45",
+      "menu_lines": [
+        {"segment": "starter", "items": [
+          {"text": "Espetada de Bolinhos de Bacalhau", "quantity": null},
+          {"text": "Rissóis de Camarão", "quantity": null},
+          {"text": "Tábuas de Queijos decoradas c/ frutos secos", "quantity": null},
+          {"text": "Tábuas de Enchidos decorados c/ azeitonas", "quantity": null},
+          {"text": "Vol au vents de Guacamole", "quantity": null},
+          {"text": "Variedade de Saladas (alfaces, cenoura, milho, couve roxa…)", "quantity": null}
+        ]},
+        {"segment": "main_dish", "items": [
+          {"text": "Bacalhau c/ Natas", "quantity": null},
+          {"text": "Arroz de Pato", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Espetadas de Fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo de Laranja Natural (exprimido na hora servido em flutes) Cliente fornece laranjas.", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Agua das Pedras", "quantity": null},
+          {"text": "Café e descafeinado (cápsulas)", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Jantar", "unit_price": 37, "quantity": 45, "line_total": 1665, "vat_rate": null}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": null,
+  "total_includes_vat": null,
+  "staff_mentioned": "2 funcionários que iram dispor as mesas em buffet para servir os pratos quentes, assim como as bebidas",
+  "notes": [
+    "Levamos pratos e talheres para o Bolo de aniversário.",
+    "Levamos copos de vinho para as suas bebidas.",
+    "Nos serviços apresentados não serão utilizados materiais plásticos, demonstrando assim a nossa consciência ambiental.",
+    "Todo o serviço é realizado com loiças e toalhas de pano."
+  ],
+  "uncertain": [
+    "A linha 'Entradas: (volante) – 40 pax 13h-14h' indica 40 pax às 13h-14h, enquanto o preço indica Jantar com 45; o momento foi registado como Jantar com 45.",
+    "Sem total escrito no texto.",
+    "O mês vem só do nome do ficheiro (28 de Abril); o texto não tem data nem ano."
+  ]
+}

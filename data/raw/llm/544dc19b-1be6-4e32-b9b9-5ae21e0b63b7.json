@@ -1,0 +1,54 @@
+{
+  "quote_id": "q:544dc19b-1be6-4e32-b9b9-5ae21e0b63b7",
+  "client": "Monica Santos",
+  "client_source": "file_name",
+  "event_dates": [{"day": 1, "month": 8, "year": null, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Almoço (volante) 12h-14h",
+      "service_type": "lunch",
+      "guests": 40,
+      "guests_raw": "40 pax",
+      "menu_lines": [
+        {"segment": "starter", "items": [
+          {"text": "Creme de Cenoura (quente no copo) (veg.)", "quantity": null},
+          {"text": "Variedade de Saladas (alfaces, cenoura, milho, couve roxa…)", "quantity": null},
+          {"text": "Espetada de Bolinhos de bacalhau", "quantity": null},
+          {"text": "Croquetes c/ Azeitona", "quantity": null}
+        ]},
+        {"segment": "main_dish", "items": [
+          {"text": "Bacalhau c/ Natas ou Bacalhau C/ Grão", "quantity": null},
+          {"text": "Arroz de Pato ou Arroz de Frango caldoso c/ moelas", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Variedade de brigadeiros", "quantity": null},
+          {"text": "Brownie c/ nozes e caramelo salgado", "quantity": null},
+          {"text": "Espetadas de Fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Sumo de laranja natural (Servido em flutes)", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Café e descafeinado (cápsulas)", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Almoço", "unit_price": 35, "quantity": 40, "line_total": 1400, "vat_rate": 13}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 1582,
+  "total_includes_vat": true,
+  "staff_mentioned": "2 funcionários para servir",
+  "notes": [
+    "Nos serviços apresentados não serão utilizados materiais plásticos, apenas pratos de papel e garfos de madeira.",
+    "2 máquinas de café."
+  ],
+  "uncertain": [
+    "Client name taken from the file name; the text gives no client.",
+    "Event date (1 de Agosto) taken from the file name; the text gives no date."
+  ]
+}

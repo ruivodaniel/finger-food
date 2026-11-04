@@ -1,0 +1,200 @@
+{
+  "quote_id": "q:4f72167e-1e46-4d58-9863-f55722b0adf2",
+  "client": "Jaqueline",
+  "client_source": "file_name",
+  "event_dates": [
+    {"day": 15, "month": 4, "year": null, "source": "text"},
+    {"day": 24, "month": 4, "year": null, "source": "text"},
+    {"day": 24, "month": 6, "year": null, "source": "text"},
+    {"day": 26, "month": 6, "year": null, "source": "text"},
+    {"day": 21, "month": 10, "year": null, "source": "text"},
+    {"day": 30, "month": 10, "year": null, "source": "text"}
+  ],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Dia 15 Abril Coffee-Break – 15h30 Fórum Maior de Idade Gafanha da Nazaré",
+      "service_type": "coffee_break",
+      "guests": 25,
+      "guests_raw": "x 25",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Pão sementes c/ Fiambre", "quantity": null},
+          {"text": "Croquetes de vitela (frito)", "quantity": null},
+          {"text": "Pão de sementes c/ Queijo", "quantity": null},
+          {"text": "Bolinhas de Grão de Bico (frito)", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Pasteis de Nata", "quantity": null},
+          {"text": "Brownie c/ Nozes e Caramelo Salgado", "quantity": null},
+          {"text": "Palmiers", "quantity": null}
+        ]},
+        {"segment": "other", "items": [
+          {"text": "Espetadas de fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Café e descafeinado (cápsulas)", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "Dia 24 de Abril Coffee-Break – 15h30 Biblioteca Municipal Oliveira do Bairro",
+      "service_type": "coffee_break",
+      "guests": 25,
+      "guests_raw": "x 25",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Vol au vents de Frango (forno)", "quantity": null},
+          {"text": "Folhados de Salsicha (forno)", "quantity": null},
+          {"text": "Rolinhos Primavera (frito)", "quantity": null},
+          {"text": "Bolinhas de Grão de Bico (frito)", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Tarte de Amêndoa", "quantity": null},
+          {"text": "Ovos moles", "quantity": null},
+          {"text": "Húngaros", "quantity": null}
+        ]},
+        {"segment": "other", "items": [
+          {"text": "Espetadas de fruta", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "Dia 24 de Junho Coffee-Break – 15h30 Fórum Maior de Idade Gafanha da Nazaré",
+      "service_type": "coffee_break",
+      "guests": 25,
+      "guests_raw": "x 25",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Croissant c/ fiambre", "quantity": null},
+          {"text": "Vol au vents de Atum (forno)", "quantity": null},
+          {"text": "Croissant simples", "quantity": null},
+          {"text": "Croissant c/ queijo", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Folhados de chocolate", "quantity": null},
+          {"text": "Pasteis de Nata", "quantity": null},
+          {"text": "Bolachas manteiga", "quantity": null}
+        ]},
+        {"segment": "other", "items": [
+          {"text": "Espetadas de fruta", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "Dia 26 de Junho Coffee-Break – 15h30 Auditório de Oiã",
+      "service_type": "coffee_break",
+      "guests": 25,
+      "guests_raw": "x 25",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Pão de Leite c/ Fiambre", "quantity": null},
+          {"text": "Rissóis de Camarão (frito)", "quantity": null},
+          {"text": "Pão de Leite c/ Queijo", "quantity": null},
+          {"text": "Rolinhos Primavera (frito)", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Iogurte c/ granola", "quantity": null},
+          {"text": "Rosquinhas de Chocolate preto", "quantity": null},
+          {"text": "Bolachas manteiga", "quantity": null}
+        ]},
+        {"segment": "other", "items": [
+          {"text": "Espetadas de fruta", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "Dia 21 de Outubro Coffee-Break – 15h30 Fórum Maior de Idade Gafanha da Nazaré",
+      "service_type": "coffee_break",
+      "guests": 25,
+      "guests_raw": "x 25",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Bolos de Bacalhau (frito)", "quantity": null},
+          {"text": "Croquetes de vitela (frito)", "quantity": null},
+          {"text": "Vol au vents de Patê de Azeitona (forno)", "quantity": null},
+          {"text": "Pão de Queijo", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Torta de ovos c/ fios de ovos", "quantity": null},
+          {"text": "Ovos moles", "quantity": null},
+          {"text": "Salame de chocolate", "quantity": null}
+        ]},
+        {"segment": "other", "items": [
+          {"text": "Espetadas de fruta", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "Dia 30 de Outubro Coffee-Break – 15h30 Campus da Idade Maior Silvério",
+      "service_type": "coffee_break",
+      "guests": 25,
+      "guests_raw": "x 25",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Vol au vents de Frutos do mar (forno)", "quantity": null},
+          {"text": "Chamuças de frango (frito)", "quantity": null},
+          {"text": "Vol au vents de bolonhesa de soja (forno)", "quantity": null},
+          {"text": "Rolinhos Primavera (frito)", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Brownie c/ Nozes e Caramelo Salgado", "quantity": null},
+          {"text": "Palmiers", "quantity": null},
+          {"text": "Rosquinhas de Chocolate leite", "quantity": null}
+        ]},
+        {"segment": "other", "items": [
+          {"text": "Espetadas de fruta", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "Data e Local a defenir (Coffee-Break)",
+      "service_type": "coffee_break",
+      "guests": 25,
+      "guests_raw": "x 25",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Pão sementes c/ Fiambre", "quantity": null},
+          {"text": "Chamuças de frango (frito)", "quantity": null},
+          {"text": "Pão de sementes c/ Queijo", "quantity": null},
+          {"text": "Bolinhas de Grão de Bico (frito)", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Pasteis de Nata", "quantity": null},
+          {"text": "Tarte de Amêndoa", "quantity": null},
+          {"text": "Bolo no copo", "quantity": null}
+        ]},
+        {"segment": "other", "items": [
+          {"text": "Espetadas de fruta", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    }
+  ],
+  "prices_not_in_a_moment": [
+    {"label": "Coffee breaks pm 8€ x 25 = 200€ x 7= 1400€", "unit_price": 8, "quantity": 25, "line_total": 1400, "vat_rate": 13}
+  ],
+  "total": 1582,
+  "total_includes_vat": true,
+  "staff_mentioned": "2 funcionários para servir, assim como 2 máquinas de café",
+  "notes": [
+    "Locais escritos por momento: Fórum Maior de Idade Gafanha da Nazaré (15 Abril, 24 Junho, 21 Outubro); Biblioteca Municipal Oliveira do Bairro (24 Abril); Auditório de Oiã (26 Junho); Campus da Idade Maior Silvério (30 Outubro).",
+    "Mesa de bebidas presente em todos os momentos (registada só no primeiro momento).",
+    "Nos serviços apresentados não serão utilizados materiais plásticos, demonstrando assim a nossa consciência ambiental.",
+    "Bolachinhas do CASCI não aparecem neste texto; o texto menciona CASCI em parágrafo de apresentação."
+  ],
+  "uncertain": [
+    "O nome do ficheiro diz 15 de Janeiro, mas o texto tem datas de Abril, Junho e Outubro; registadas as datas do texto.",
+    "Sétimo coffee break sem data nem local ('Data e Local a defenir').",
+    "O texto diz 'Coffee breaks pm' em vez de momentos am/pm por dia; os momentos foram separados por data."
+  ]
+}

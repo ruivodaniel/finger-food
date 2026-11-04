@@ -1,0 +1,58 @@
+{
+  "quote_id": "q:82e0a731-7eb3-42c1-8129-d29db71a2597",
+  "client": "Sandra",
+  "client_source": "file_name",
+  "event_dates": [],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Menu",
+      "service_type": "other",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "starter", "items": [
+          {"text": "Sopa Creme de cenoura (copo)", "quantity": null}
+        ]},
+        {"segment": "other", "items": [
+          {"text": "Tábuas de Queijos", "quantity": null},
+          {"text": "Compotas de frutas variadas c/ frutos secos", "quantity": null},
+          {"text": "Espetadas de cherry c/ manjericão", "quantity": null},
+          {"text": "Tábuas de enchidos decoradas c/ azeitonas, acompanhadas c/ variedade de tostas e gressinos", "quantity": null},
+          {"text": "Patê de Húmus e Guacamole", "quantity": null},
+          {"text": "Tacos de Salmão Fumado c/ queijo creme, rúcula e tangerina", "quantity": null},
+          {"text": "Wraps de frango c/ maionese de trufa, cheddar e rúcula", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Bolo no copo", "quantity": null},
+          {"text": "Variedade de Brigadeiros", "quantity": null},
+          {"text": "Brownie c/ Nozes e caramelo salgado", "quantity": null},
+          {"text": "Espetadas de fruta variada", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água engarrafada", "quantity": null},
+          {"text": "Sumo de laranja natural", "quantity": null},
+          {"text": "Café e descafeinado", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "30€ + iva 13%", "unit_price": 30, "quantity": null, "line_total": null, "vat_rate": 13}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": null,
+  "total_includes_vat": null,
+  "staff_mentioned": "dois funcionários, um para servir as bebidas e outro para manter a mesa das comidas organizada",
+  "notes": [
+    "A cada 15 convidados acrescento mais um funcionário.",
+    "Este orçamento apenas contempla serviços em dias de semana em horário laboral; ao fim de semana e depois das 18h tem um acréscimo de 2.50€.",
+    "Nos serviços apresentados não serão utilizados materiais plásticos, demonstrando assim a nossa consciência ambiental.",
+    "Atoalhados e todo o material necessário ao serviço."
+  ],
+  "uncertain": [
+    "O preço de 30€ não diz por pessoa ou por serviço.",
+    "Não há data, número de convidados nem total escritos.",
+    "O local 'Aveiro' aparece só no nome do ficheiro; não foi usado."
+  ]
+}

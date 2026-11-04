@@ -23,16 +23,16 @@ def main():
     for u in reg.uploads("goncalo/Or"):
         if u["name"].startswith("~$") or u.get("ext", "").lower() not in (".pdf", ".docx"): continue
         text = reg.text(u)
-        if text is None: docs.append(dict(upload_id=u["id"], name=u["name"], kind="quote", status="no text", issue="no converted text")); continue
+        if text is None: docs.append(dict(upload_id=u["id"], name=u["name"], kind="proposal", status="no text", issue="no converted text")); continue
         q, pl, mi = quotes.parse(u, text)
-        docs.append(dict(upload_id=u["id"], name=u["name"], kind="quote", status="ok" if not q["issues"] else "issue", issue=", ".join(q["issues"]) or None))
+        docs.append(dict(upload_id=u["id"], name=u["name"], kind="proposal", status="ok" if not q["issues"] else "issue", issue=", ".join(q["issues"]) or None))
         q_rows.append(q); ql_rows.extend(pl); qm_rows.extend(mi)
     for u in reg.uploads("goncalo/Faturas Emitidas"):
         if u["name"].lower().startswith("lista faturas emitidas") and u.get("ext") == ".xlsx" and not u["name"].startswith("~$"): pay_rows.extend(payments.parse(u))
-    out = {"documents": docs, "invoices": inv_rows, "invoice_lines": line_rows, "quotes": q_rows, "quote_lines": ql_rows, "quote_menu_items": qm_rows, "payments": pay_rows}
+    out = {"documents": docs, "invoices": inv_rows, "invoice_lines": line_rows, "proposals": q_rows, "proposal_price_lines": ql_rows, "proposal_menu_items": qm_rows, "payments": pay_rows}
     for name, rows in out.items(): print(f"{name:18} {write_table(name, rows):>6} rows")
     st = collections.Counter((d["kind"], d["status"].split(" of ")[0]) for d in docs)
     print("documents by status:", dict(st))
-    print("quote issues:", collections.Counter(i for q in q_rows for i in q["issues"]))
+    print("proposal issues:", collections.Counter(i for q in q_rows for i in q["issues"]))
 
 if __name__ == "__main__": main()

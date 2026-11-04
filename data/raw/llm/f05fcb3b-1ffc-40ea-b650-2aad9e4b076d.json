@@ -1,0 +1,62 @@
+{
+  "quote_id": "q:f05fcb3b-1ffc-40ea-b650-2aad9e4b076d",
+  "client": "Humberto Remax",
+  "client_source": "file_name",
+  "event_dates": [],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Miniaturas Salgadas e Grazing",
+      "service_type": "other",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Espetada de bolinhos de bacalhau c/ cherry", "quantity": null},
+          {"text": "Rissóis de camarão", "quantity": null},
+          {"text": "Vol au vents de camarão", "quantity": null},
+          {"text": "Croquetes de novilho c/ azeitona", "quantity": null},
+          {"text": "Croissants c/ fiambre", "quantity": null},
+          {"text": "Folhados de salsicha", "quantity": null},
+          {"text": "Folhados mistos", "quantity": null},
+          {"text": "Vol au vents de Frango", "quantity": null},
+          {"text": "Espetada de mozarela c/ cherry e manjericão", "quantity": null},
+          {"text": "Vol au vents de guacamole c/ azeitona", "quantity": null},
+          {"text": "Croissants c/ Queijo", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Bownie c/ Nozes e Caramelo salgado", "quantity": null},
+          {"text": "Variedade de brigadeiros", "quantity": null},
+          {"text": "Variedade de macarrons", "quantity": null},
+          {"text": "Pasteis de nata", "quantity": null}
+        ]},
+        {"segment": "other", "items": [{"text": "Espetadas de Fruta", "quantity": null}]},
+        {"segment": "drink", "items": [
+          {"text": "Espumante Bruto Fraga da Pena ou similar", "quantity": null},
+          {"text": "Sumo de laranja natural (espremido na hora, servido em flutes)", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio) Hortelã, Frutos vermelhos…", "quantity": null},
+          {"text": "Água garrafas de vidro 1Lt", "quantity": null},
+          {"text": "Café e descafeinado (cápsulas)", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Comidas e Bebidas não alcoólicas", "unit_price": 18, "quantity": 60, "line_total": 1080, "vat_rate": 13},
+        {"label": "Espumante", "unit_price": 2, "quantity": 60, "line_total": 120, "vat_rate": 23}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 1368,
+  "total_includes_vat": true,
+  "staff_mentioned": "2 funcionários que iram dispor as mesas em buffet para servir",
+  "notes": [
+    "Sub-Total 1220.40€ (IVA 13%); sub-total 147.60€ (espumante, IVA 23%).",
+    "Todo o serviço é realizado com loiças e toalhas de pano."
+  ],
+  "uncertain": [
+    "Client name is taken from the file name; 'Inauguração' in the file name is the event type, not written in the text.",
+    "No event date is written in the text or the file name.",
+    "The 'Miniaturas Salgadas e Grazing' moment is named after the header; no service type is written."
+  ]
+}

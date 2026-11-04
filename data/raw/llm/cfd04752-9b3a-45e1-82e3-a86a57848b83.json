@@ -1,0 +1,80 @@
+{
+  "quote_id": "q:cfd04752-9b3a-45e1-82e3-a86a57848b83",
+  "client": "Daniela Pedro",
+  "client_source": "file_name",
+  "event_dates": [{"day": 27, "month": 10, "year": null, "source": "text"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Dia 27 Coffee-Break 10h30",
+      "service_type": "coffee_break",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Croissant Brioche c/ Queijo (veg.)", "quantity": null},
+          {"text": "Croissant Brioche c/ Fiambre", "quantity": null},
+          {"text": "Folhados de Salsicha", "quantity": null},
+          {"text": "Vol au vents de Guacamole (veg.)", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Bolachinhas Bacalhaus do CASCI", "quantity": null},
+          {"text": "Pasteis de Nata", "quantity": null},
+          {"text": "Salame de Chocolate", "quantity": null},
+          {"text": "Mil Folhas", "quantity": null},
+          {"text": "Espetadas de fruta", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "Almoço (volante) 12h30",
+      "service_type": "lunch",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "starter", "items": [
+          {"text": "Sopa de Legumes (copo)", "quantity": null},
+          {"text": "Variedade de Saladas (alfaces, cenoura, milho, couve roxa…)", "quantity": null}
+        ]},
+        {"segment": "main_dish", "items": [
+          {"text": "Bacalhau c/ Natas", "quantity": null},
+          {"text": "Arroz de Pato", "quantity": null},
+          {"text": "Quinoa c/ Legumes salteados (vegi.)", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Brownie c/ Nozes e Caramelo Salgado", "quantity": null},
+          {"text": "Smi- frio de Bolacha", "quantity": null},
+          {"text": "Espetadas de Fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Mesa de bebidas presente em todos os momentos", "quantity": null},
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo de Laranja Natural (exprimido na hora servido em flutes)", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Chás variados", "quantity": null},
+          {"text": "Café e descafeinado (cápsulas)", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    }
+  ],
+  "prices_not_in_a_moment": [
+    {"label": "Coffee-Break e Almoço (preço por pessoa)", "unit_price": 34, "quantity": 60, "line_total": 2040, "vat_rate": 13}
+  ],
+  "total": 2305.2,
+  "total_includes_vat": true,
+  "staff_mentioned": "3 funcionários que iram dispor as mesas em buffet para servir os pratos quentes, assim como o café",
+  "notes": [
+    "Nos serviços apresentados não serão utilizados materiais plásticos.",
+    "Todo o serviço é realizado com loiças e toalhas de pano.",
+    "Nas miniaturas doces, bolachinhas do CASCI: apoio à inclusão social."
+  ],
+  "uncertain": [
+    "The month (October) is taken from the file name ('27 Outubro'); the text gives only 'Dia 27'.",
+    "Client name taken from the file name; the text gives none.",
+    "The single price line 34€ x 60 is not tied to one moment; it is unclear whether it covers the coffee break and the lunch together.",
+    "Guest count 60 is only in the price line."
+  ]
+}

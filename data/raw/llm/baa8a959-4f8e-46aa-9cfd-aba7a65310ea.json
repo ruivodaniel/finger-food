@@ -1,0 +1,52 @@
+{
+  "quote_id": "q:baa8a959-4f8e-46aa-9cfd-aba7a65310ea",
+  "client": "Ines Costa Sky",
+  "client_source": "file_name",
+  "event_dates": [{"day": 5, "month": 3, "year": null, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Menu de Almoço",
+      "service_type": "lunch",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "starter", "items": [
+          {"text": "Vol au vents de Frango", "quantity": null},
+          {"text": "Vol au vents de Delícias do mar", "quantity": null},
+          {"text": "Vol au vents de Guacamole", "quantity": null},
+          {"text": "Buffet de Saladas (Alface, tomate, cenoura, milho, couve roxa)", "quantity": null}
+        ]},
+        {"segment": "main_dish", "items": [
+          {"text": "Mini bifanas á moda do Porto", "quantity": null},
+          {"text": "Arroz de Pato c/ enchidos", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Variedade de Brigadeiros", "quantity": null}
+        ]},
+        {"segment": "other", "items": [
+          {"text": "Espetadas de fruta variada", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água engarrafada", "quantity": null},
+          {"text": "Sumo Compal", "quantity": null},
+          {"text": "Café e Descafeinado", "quantity": null}
+        ]}
+      ],
+      "prices": [{"label": "Menu de Almoço", "unit_price": 26, "quantity": 20, "line_total": 520, "vat_rate": 13}]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 587.6,
+  "total_includes_vat": true,
+  "staff_mentioned": "dois funcionários",
+  "notes": [
+    "Nos serviços apresentados não serão utilizados materiais plásticos",
+    "Disponibiliza atoalhados e todo o material necessário ao serviço"
+  ],
+  "uncertain": [
+    "Client name 'Ines Costa Sky' comes from the file name only",
+    "Headcount is not written; 20 is the price quantity",
+    "The Miniaturas Doces (veg.) heading is used for the Brigadeiros; the Espetadas are placed under other"
+  ]
+}

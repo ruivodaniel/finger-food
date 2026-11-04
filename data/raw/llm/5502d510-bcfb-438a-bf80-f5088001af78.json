@@ -1,0 +1,59 @@
+{
+  "quote_id": "q:5502d510-bcfb-438a-bf80-f5088001af78",
+  "client": "Silvina",
+  "client_source": "file_name",
+  "event_dates": [{"day": 5, "month": 12, "year": null, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Jantar (volante) 19h30?",
+      "service_type": "dinner",
+      "guests": 150,
+      "guests_raw": "150 pessoas",
+      "menu_lines": [
+        {"segment": "starter", "items": [
+          {"text": "Buffet de Saladas (alfaces, cenoura, milho, couve roxa…) (Vegan)", "quantity": null},
+          {"text": "Rissóis, Croquetes de Vitela, Bolos de bacalhau", "quantity": null},
+          {"text": "Vol au vents de Delícias do mar, Frango, Guacamole", "quantity": null}
+        ]},
+        {"segment": "main_dish", "items": [
+          {"text": "Bacalhau c/ Natas", "quantity": null},
+          {"text": "Arroz de Pato", "quantity": null},
+          {"text": "Quinoa de Legumes (Vegan)", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Bolo de Bolacha", "quantity": null},
+          {"text": "Brownie c/ Nozes e caramelo Salgado", "quantity": null},
+          {"text": "Espetadas de Fruta (Vegan)", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Vinho branco e tinto", "quantity": null},
+          {"text": "Cerveja Mini", "quantity": null},
+          {"text": "Espumante (1 Copo) para as sobremesas", "quantity": null},
+          {"text": "Café e descafeinado", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Comidas e bebidas não alcoólicas", "unit_price": 25, "quantity": 150, "line_total": 3750, "vat_rate": 13},
+        {"label": "Bebidas alcoólicas", "unit_price": 2.5, "quantity": 150, "line_total": 375, "vat_rate": 23}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [
+    {"label": "Tabuas de queijos e enchidos (extra, 5€ p/p)", "unit_price": 5, "quantity": null, "line_total": null, "vat_rate": 13},
+    {"label": "Sobremesas de Natal (extra, 2€ p/p)", "unit_price": 2, "quantity": null, "line_total": null, "vat_rate": 13}
+  ],
+  "total": 4698.75,
+  "total_includes_vat": true,
+  "staff_mentioned": "4 funcionários que iram montar, desmontar e dispor as mesas em buffet para servir os pratos quentes",
+  "notes": [
+    "Nos serviços apresentados não serão utilizados materiais plásticos, demonstrando assim a nossa consciência ambiental.",
+    "Todo o serviço é realizado com loiças e toalhas de pano."
+  ],
+  "uncertain": [
+    "The Extras are priced per person in the text but no extra quantity is written; they are not included in the total.",
+    "Client and event date come from the file name; the text has neither."
+  ]
+}

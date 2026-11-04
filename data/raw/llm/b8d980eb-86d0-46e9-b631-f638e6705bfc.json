@@ -1,0 +1,61 @@
+{
+  "quote_id": "q:b8d980eb-86d0-46e9-b631-f638e6705bfc",
+  "client": "Madalena Ferreira",
+  "client_source": "file_name",
+  "event_dates": [
+    {"day": 25, "month": 4, "year": 2026, "source": "file_name"}
+  ],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Miniaturas Salgadas",
+      "service_type": "other",
+      "guests": 100,
+      "guests_raw": "Comidas – 16.50€ x 100 = 1650€",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Rissóis de camarão em espeto de camarão", "quantity": null},
+          {"text": "Espetada de Bolinhos de Bacalhau", "quantity": null},
+          {"text": "Croquetes de Vitela c/ azeitona", "quantity": null},
+          {"text": "Croissants c/ Queijo (Veg.)", "quantity": null},
+          {"text": "Croissants c/ Fiambre", "quantity": null},
+          {"text": "Vol au vents de Guacamole (veg.)", "quantity": null},
+          {"text": "Espetada de mozarela c/ azeitona, cherry e manjericão (veg.)", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Bolachinhas Bacalhaus Salgados do CASCI", "quantity": null},
+          {"text": "Variedade de Macarrons", "quantity": null},
+          {"text": "Variedade de Brigadeiros", "quantity": null},
+          {"text": "Brownie c/ Nozes e caramelo salgado", "quantity": null},
+          {"text": "Triologia no copo", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água engarrafada", "quantity": null},
+          {"text": "Sumo Compal", "quantity": null},
+          {"text": "Sumo de Laranja natural (exprimido na hora, servido em flutes)", "quantity": null},
+          {"text": "Cerveja Mini (Sagres ou Super Book)", "quantity": 100},
+          {"text": "Espumante (Fraga da Pena ou similar até 10€ por garrafa)", "quantity": 20}
+        ]}
+      ],
+      "prices": [
+        {"label": "Comidas", "unit_price": 16.5, "quantity": 100, "line_total": 1650, "vat_rate": 13},
+        {"label": "Bebidas", "unit_price": 2.5, "quantity": 100, "line_total": 250, "vat_rate": 23}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 2147,
+  "total_includes_vat": true,
+  "staff_mentioned": "três funcionários",
+  "notes": [
+    "Sub-total 1864.50€ (comidas, IVA 13%); sub-total 282.50€ (bebidas, IVA 23%).",
+    "O orçamento contempla 9h: 2h de montagem, 5h de serviço e 2h para desmontar, com início nas instalações às 13h.",
+    "Qualquer atraso tem custo extra de 8.50€/hora por funcionário.",
+    "Todos os materiais necessários incluídos e atoalhados.",
+    "Bolachinhas do CASCI incluídas nas miniaturas doces."
+  ],
+  "uncertain": [
+    "Data 25 de Abril 2026 só no nome do ficheiro.",
+    "Espumante com preço máximo de 10€ por garrafa; sem preço unitário escrito."
+  ]
+}

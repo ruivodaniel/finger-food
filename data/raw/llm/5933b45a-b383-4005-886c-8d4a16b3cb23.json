@@ -1,0 +1,39 @@
+{
+  "quote_id": "q:5933b45a-b383-4005-886c-8d4a16b3cb23",
+  "client": "Catarina Sobral",
+  "client_source": "text",
+  "event_dates": [
+    {"day": 15, "month": 10, "year": 2026, "source": "text"}
+  ],
+  "place": "Glicínias Aveiro",
+  "moments": [
+    {
+      "name_as_written": "Serviço: BAR, Horário: 16h-19h",
+      "service_type": "other",
+      "guests": 50,
+      "guests_raw": "50",
+      "menu_lines": [
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio): Hortelã e Tangerina", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio): Maçã e Canela", "quantity": null},
+          {"text": "Espumante (Ermelinda Freitas)", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "PREÇO", "unit_price": null, "quantity": null, "line_total": 221, "vat_rate": 23}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 271.83,
+  "total_includes_vat": true,
+  "staff_mentioned": "1 funcionários para servir",
+  "notes": [
+    "Está incluído todo o material necessário ao serviço deste menu, assim como atoalhados e guardanapos.",
+    "Nos serviços apresentados não serão utilizados materiais plásticos."
+  ],
+  "uncertain": [
+    "The moment is labelled BAR in the text; the service type is read as other."
+  ]
+}

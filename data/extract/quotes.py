@@ -24,18 +24,30 @@ def _date(text, name):
                 return m.group(0).strip(), int(m.group(1)) if m.group(1) else None, mon, int(m.group(3)) if m.group(3) else None
     return None, None, None, None
 
+NAME_NOISE = re.compile(r"(?i)\b(cb|coffee ?-?break|almo[çc]o|jantar|lanche|pax|am|pm|e|\+|mix|menus?|load|lunch ?box|welcome|drink|buffet|volante)\b|\d+(?:[.,]\d+)?\s*(?:€|pax)|€|\(.*?\)")
+def _client_from_name(name):
+    n = re.sub(r"\.(docx|pdf)$", "", name)
+    n = re.sub(r"(?i)^or[çc]amento\s*(de\s*)?", "", n)
+    n = DATE_RX.sub(" ", n)
+    n = re.sub(r"\b\d{1,2}\s*(?:,|e|a|-|\+)\s*\d{1,2}\b|\b20\d\d\b|\b\d+\b", " ", n)
+    n = NAME_NOISE.sub(" ", n)
+    return re.sub(r"[\s\-–+,.]+", " ", n).strip()
+
+SUBHEAD = re.compile(r"^(peixe|carne|veg(etariano|an)?|op[çc][ãa]o( \d)?|vegetarianas?|snacks?|quentes?|frios?)\s*:?$", re.I)
+QTY_SUFFIX = re.compile(r"^(?P<name>.+?)\s*[-–]\s*(?P<qty>\d{1,4})\s*(?:un\.?|uni\.?|unid\.?|unidades|p[çc]s?)?\s*$", re.I)
+
 def parse(upload, text):
     name, t = nfc(upload["name"]), text
     head = lambda label: (re.search(r"^" + label + r"\s*:\s*(.+)$", t, re.M | re.I) or [None, None])[1]
     client = head("Cliente")
-    if not client:
-        client = re.sub(r"(?i)^or[çc]amento\s*(de\s*)?", "", re.sub(r"\.(docx|pdf)$", "", name)).strip()
+    if not client: client = _client_from_name(name)
+    client = re.sub(r"\s+", " ", client).strip()
     date_raw, d, mo, y = _date(head("Data") or "", name) if head("Data") else _date(t, name)
     if mo and not y: y = (re.search(r"20\d\d", name) or re.search(r"20\d\d", t[:600]) or [None])[0]; y = int(y) if y else None
     service = head("Serviço") or head("Servico")
     guests_raw = head("Convidados") or head("N. pessoas") or head("N pessoas") or head("Pax")
     place = head("Local")
-    lines, items, section, order = [], [], None, 0
+    lines, items, section, sub_section, order = [], [], None, None, 0
     for raw in t.split("\n"):
         ln = raw.strip(" \t*•-–")
         if not ln or ln.startswith("## Page"): continue
@@ -44,11 +56,13 @@ def parse(upload, text):
             lines.append(dict(label=pm.group("label").strip(" -–:"), unit_price=num(pm.group("unit")), quantity=num(pm.group("qty")), total=num(pm.group("total")) if pm.group("total") else None, raw=ln)); continue
         hit = next(((s, rx) for rx, s in SECTIONS if re.search(rx, ln, re.I)), None)
         if hit and hit[1] and len(ln) < 60:
-            section = hit[0]
+            section = hit[0]; sub_section = None
             if section is None: pass
             else: continue
         if SKIP.search(ln) or section in ("prices", None): continue
-        items.append(dict(section=section, position=order, text=ln)); order += 1
+        if SUBHEAD.match(ln) or (ln.endswith(":") and len(ln) < 40): sub_section = ln.strip(": ").lower(); continue
+        qm = QTY_SUFFIX.match(ln)
+        items.append(dict(section=section, sub_section=sub_section, position=order, text=qm.group("name").strip() if qm else ln, quantity=int(qm.group("qty")) if qm else None, raw=ln)); order += 1
     total = re.findall(r"^total\s*[:=]?\s*(\d[\d.,]*)\s*€", t, re.M | re.I)
     flat = re.search(r"pre[çc]os?\s*:?\s*\n?\s*(\d[\d.,]*)\s*€", t, re.I)
     vat_rates = sorted({int(x) for x in re.findall(r"iva\s*(\d+)\s*%", t, re.I)})
@@ -58,9 +72,10 @@ def parse(upload, text):
         if nums: gmin, gmax = min(nums), max(nums)
     elif lines:
         gmin = gmax = int(max(l["quantity"] for l in lines if l["quantity"] >= 5) or 0) or None if any(l["quantity"] >= 5 for l in lines) else None
+    moments = [m.strip() for m in re.split(r",|\+|\be\b|/", service) if m.strip()] if service else []
     qid = "q:" + upload["id"]
     issues = [k for k, v in (("no date", mo), ("no total", (total or flat)), ("no guests", gmin)) if not v]
-    q = dict(id=qid, file_name=name, client_name=client, event_date_raw=date_raw, event_day=d, event_month=mo, event_year=y, service_raw=service, guests_raw=guests_raw, guests_min=gmin, guests_max=gmax,
+    q = dict(id=qid, file_name=name, client_name=client, event_date_raw=date_raw, event_day=d, event_month=mo, event_year=y, service_raw=service, moments_raw=moments, guests_raw=guests_raw, guests_min=gmin, guests_max=gmax,
              place=place, total=num(total[-1]) if total else (num(flat.group(1)) if flat else None), vat_rates=vat_rates, price_lines=len(lines), menu_items=len(items), issues=issues,
              source={"upload_id": upload["id"], "name": name, "ext": upload.get("ext")})
     return q, [dict(id=f"{qid}:p{i + 1}", quote_id=qid, line_no=i + 1, **l) for i, l in enumerate(lines)], [dict(id=f"{qid}:m{i['position'] + 1}", quote_id=qid, **i) for i in items]

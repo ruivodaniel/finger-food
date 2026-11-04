@@ -1,0 +1,110 @@
+{
+  "quote_id": "q:e57ee6a1-67e4-4942-8892-ece571c2b7f8",
+  "client": "Ana Braga",
+  "client_source": "file_name",
+  "event_dates": [
+    {"day": 25, "month": null, "year": null, "source": "text"},
+    {"day": 26, "month": null, "year": null, "source": "text"},
+    {"day": 27, "month": null, "year": null, "source": "text"}
+  ],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Dia 25 pm",
+      "service_type": "coffee_break",
+      "guests": 55,
+      "guests_raw": "55 pax",
+      "menu_lines": [
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Biscoitos e Bolachas", "quantity": null},
+          {"text": "Queques Laranja, Chocolate, Iogurte", "quantity": null}
+        ]},
+        {"segment": "other", "items": [
+          {"text": "Peças de Fruta variadas", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Chás variados", "quantity": null},
+          {"text": "Café e descafeinado", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Dia 25 pm", "unit_price": 4.5, "quantity": 55, "line_total": 247.5, "vat_rate": 13}
+      ]
+    },
+    {
+      "name_as_written": "Dia 26 am",
+      "service_type": "coffee_break",
+      "guests": 370,
+      "guests_raw": "370 pax",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Pão de sementes / Croissants c/ Queijo (veg.)", "quantity": null},
+          {"text": "Pão de sementes / Croissants c/ Fiambre", "quantity": null},
+          {"text": "Vol au vents de Guacamole (veg.)", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Pasteis de Nata", "quantity": null},
+          {"text": "Bolinhos de Côco", "quantity": null},
+          {"text": "Salame de Chocolate", "quantity": null}
+        ]},
+        {"segment": "other", "items": [
+          {"text": "Peças de Fruta variadas", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Dia 26 am", "unit_price": 6.2, "quantity": 370, "line_total": 2294, "vat_rate": 13}
+      ]
+    },
+    {
+      "name_as_written": "Dia 26 pm",
+      "service_type": "coffee_break",
+      "guests": 350,
+      "guests_raw": "350 pax",
+      "menu_lines": [
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Biscoitos e Bolachas", "quantity": null},
+          {"text": "Queques Frutos vermelhos, Chocolate, Ananás", "quantity": null}
+        ]},
+        {"segment": "other", "items": [
+          {"text": "Peças de Fruta variadas", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Dia 26 pm", "unit_price": 4, "quantity": 350, "line_total": 1400, "vat_rate": 13}
+      ]
+    },
+    {
+      "name_as_written": "Dia 27 am",
+      "service_type": "coffee_break",
+      "guests": 350,
+      "guests_raw": "350 pax",
+      "menu_lines": [
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Biscoitos e Bolachas", "quantity": null},
+          {"text": "Queques, Aveia, Chocolate, Laranja", "quantity": null}
+        ]},
+        {"segment": "other", "items": [
+          {"text": "Peças de Fruta variadas", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Dia 27 am", "unit_price": 5, "quantity": 350, "line_total": 1750, "vat_rate": 13}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 6431.40,
+  "total_includes_vat": true,
+  "staff_mentioned": "4 funcionários para servir o café, equipados com 6 máquinas para evitar filas",
+  "notes": [
+    "Nos serviços apresentados não serão utilizados materiais plásticos, apenas papel e reciclados demonstrando assim a nossa consciência ambiental.",
+    "Mesa de bebidas presente em todos os momentos (registada só no primeiro momento)."
+  ],
+  "uncertain": [
+    "O mês do evento não consta do texto; apenas os dias 25, 26 e 27 (Fevereiro aparece só no nome do ficheiro).",
+    "Sub-total de 5691.50€ e total de 6431.40€ com IVA a 13% indicado no texto."
+  ]
+}

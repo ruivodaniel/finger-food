@@ -1,0 +1,55 @@
+{
+  "quote_id": "q:f1c3e344-99cc-47f8-914a-9d332d4f14e4",
+  "client": "Município de Ílhavo, Biblioteca Municipal",
+  "client_source": "file_name",
+  "event_dates": [{"day": 23, "month": 5, "year": null, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Almoço (volante) 12h30",
+      "service_type": "lunch",
+      "guests": 100,
+      "guests_raw": "100",
+      "menu_lines": [
+        {"segment": "starter", "items": [
+          {"text": "Creme de Cenoura (quente no copo) (veg.)", "quantity": null},
+          {"text": "Variedade de Saladas (alfaces, cenoura, milho, couve roxa…)", "quantity": null}
+        ]},
+        {"segment": "main_dish", "items": [
+          {"text": "Bacalhau c/ Natas", "quantity": null},
+          {"text": "Arroz de Pato", "quantity": null},
+          {"text": "Quinoa c/ Legumes salteados", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Bolachinhas Bacalhaus do CASCI", "quantity": null},
+          {"text": "Brownie c/ nozes e caramelo salgado", "quantity": null},
+          {"text": "Variedade de Brigadeiros", "quantity": null},
+          {"text": "Espetadas de Fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Mesa de bebidas presente em todos os momentos", "quantity": null},
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Café e descafeinado (cápsulas)", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Almoço", "unit_price": 15, "quantity": 100, "line_total": 1500, "vat_rate": 13}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 1864.5,
+  "total_includes_vat": null,
+  "staff_mentioned": "4 funcionários para servir, assim como 4 máquinas de café",
+  "notes": [
+    "Nos serviços apresentados não serão utilizados materiais plásticos.",
+    "Nas miniaturas doces, bolachinhas do CASCI: apoio à inclusão social."
+  ],
+  "uncertain": [
+    "Client name taken from the file name; the text gives none. Date (23 de Maio) also from the file name, year not written.",
+    "The total 1864.50 does not match 1500 with 13% VAT (that would be 1695); the written total is kept as written and VAT inclusion is left null.",
+    "The text does not say which VAT applies to the total."
+  ]
+}

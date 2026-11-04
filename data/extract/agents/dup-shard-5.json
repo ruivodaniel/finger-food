@@ -1,0 +1,529 @@
+{
+ "out": "/Users/danieldedecastroruivo/DEV/finger-food/data/analysis/dup/5.json",
+ "neighbourhoods": [
+  [
+   {
+    "item": "variedades de bolo no copo",
+    "count": 1,
+    "example": "Variedades de Bolo no copo"
+   },
+   {
+    "item": "variedades no copo",
+    "count": 1,
+    "example": "Variedades no copo (Chocolate, Creme Brulê, Mascarpone)"
+   },
+   {
+    "item": "vegan couscous com legumes salteados",
+    "count": 1,
+    "example": "Vegan: Couscous com legumes Salteados"
+   },
+   {
+    "item": "vegan quinoa com legumes salteados",
+    "count": 1,
+    "example": "Vegan: Quinoa com legumes Salteados"
+   },
+   {
+    "item": "vol ao vents de frutos do mar",
+    "count": 1,
+    "example": "Vol ao vents de Frutos do mar"
+   },
+   {
+    "item": "vol au vebts de cogumelos",
+    "count": 1,
+    "example": "Vol au vebts de cogumelos"
+   },
+   {
+    "item": "vol au vens frango",
+    "count": 1,
+    "example": "Vol au vens Frango"
+   },
+   {
+    "item": "vol au vent de atum",
+    "count": 1,
+    "example": "Vol au vent de Atum"
+   },
+   {
+    "item": "vol au vent de guacamole",
+    "count": 2,
+    "example": "Vol au vent de Guacamole (vegetarianos)"
+   },
+   {
+    "item": "vol au vents c guacamole",
+    "count": 1,
+    "example": "Vol au vents c/ Guacamole"
+   },
+   {
+    "item": "vol au vents de atum",
+    "count": 7,
+    "example": "Vol au vents de Atum"
+   },
+   {
+    "item": "vol au vents de bolonhesa de soja",
+    "count": 3,
+    "example": "Vol au vents de bolonhesa de soja (forno)"
+   },
+   {
+    "item": "vol au vents de camarao",
+    "count": 2,
+    "example": "Vol au vents de camarão"
+   },
+   {
+    "item": "vol au vents de cogumelos",
+    "count": 8,
+    "example": "Vol au vents de cogumelos (veg.)"
+   },
+   {
+    "item": "vol au vents de delicias",
+    "count": 12,
+    "example": "Vol au vents de Delícias"
+   },
+   {
+    "item": "vol au vents de delicias do mar",
+    "count": 3,
+    "example": "Vol au vents de Delícias do Mar"
+   },
+   {
+    "item": "vol au vents de delicias do mar frango guacamole",
+    "count": 3,
+    "example": "Vol au vents de Delicias do mar, Frango, Guacamole"
+   },
+   {
+    "item": "vol au vents de frango",
+    "count": 23,
+    "example": "Vol au vents de Frango"
+   },
+   {
+    "item": "vol au vents de frango c cogumelos",
+    "count": 1,
+    "example": "Vol au vents de frango c/ cogumelos"
+   },
+   {
+    "item": "vol au vents de frutos do mar",
+    "count": 5,
+    "example": "Vol au vents de Frutos do mar (forno)"
+   },
+   {
+    "item": "vol au vents de guacamole",
+    "count": 119,
+    "example": "Vol au vents de Guacamole (veg.)"
+   },
+   {
+    "item": "vol au vents de guacamole c azeitona",
+    "count": 36,
+    "example": "Vol au vents de Guacamole c/ azeitona"
+   },
+   {
+    "item": "vol au vents de guacamole c azeitonas",
+    "count": 2,
+    "example": "Vol au vents de Guacamole c/ azeitonas"
+   },
+   {
+    "item": "vol au vents de humus",
+    "count": 4,
+    "example": "Vol au vents de Húmus"
+   },
+   {
+    "item": "vol au vents de pate de azeitona",
+    "count": 3,
+    "example": "Vol au vents de Patê de Azeitona (forno)"
+   },
+   {
+    "item": "vol au vents de pate do mar",
+    "count": 2,
+    "example": "Vol au vents de Patê do mar"
+   },
+   {
+    "item": "vol au vents guacamole",
+    "count": 1,
+    "example": "Vol au vents Guacamole."
+   },
+   {
+    "item": "wraps c queijo creme salmao fumado e alcaparras",
+    "count": 1,
+    "example": "Wraps c/ Queijo creme Salmão fumado e alcaparras"
+   },
+   {
+    "item": "wraps de atum",
+    "count": 2,
+    "example": "Wraps de Atum"
+   },
+   {
+    "item": "wraps de delicias c rucula e tangerina",
+    "count": 1,
+    "example": "Wraps de Delícias c/ rúcula e tangerina"
+   },
+   {
+    "item": "wraps de delicias do mar c queijo e rucula",
+    "count": 1,
+    "example": "Wraps de Delícias do mar c/ queijo e rúcula"
+   },
+   {
+    "item": "wraps de frango",
+    "count": 3,
+    "example": "Wraps de Frango"
+   },
+   {
+    "item": "wraps de frango atum e guacamole c queijo e rucula",
+    "count": 6,
+    "example": "Wraps de Frango, Atum e Guacamole c/ queijo e rúcula"
+   },
+   {
+    "item": "wraps de frango c cheddar e rucula em espeto de cherry",
+    "count": 1,
+    "example": "Wraps de frango c/ cheddar e rúcula em espeto de cherry"
+   },
+   {
+    "item": "wraps de frango c maionese de trufa cheddar e rucula",
+    "count": 2,
+    "example": "Wraps de frango c/ maionese de trufa, cheddar e rúcula"
+   },
+   {
+    "item": "wraps de frango c queijo e rucula",
+    "count": 6,
+    "example": "Wraps de frango c/ queijo e rúcula"
+   },
+   {
+    "item": "wraps de frango delicias c salada",
+    "count": 2,
+    "example": "Wraps de frango, delícias c/ salada"
+   },
+   {
+    "item": "wraps de frango delicias e guacamole c queijo e rucula",
+    "count": 1,
+    "example": "Wraps de Frango, Delícias e Guacamole c/ queijo e rúcula"
+   },
+   {
+    "item": "wraps de guacamole c cenoura e rucula",
+    "count": 1,
+    "example": "Wraps de Guacamole c/ cenoura e rúcula"
+   },
+   {
+    "item": "wraps de guacamole c queijo e cherry",
+    "count": 1,
+    "example": "Wraps de Guacamole c/ queijo e cherry (veg.)"
+   }
+  ],
+  [
+   {
+    "item": "bacalhau c natas ou bacalhau c grao",
+    "count": 2,
+    "example": "Bacalhau c/ Natas ou Bacalhau C/ Grão"
+   },
+   {
+    "item": "bacalhau com natas",
+    "count": 4,
+    "example": "Bacalhau com Natas"
+   },
+   {
+    "item": "bacalhau com natas ou bacalhau lascado c grao de bico",
+    "count": 1,
+    "example": "Bacalhau com Natas ou Bacalhau lascado c/ Grão de bico"
+   },
+   {
+    "item": "bacalhau com natas ou bacalhau lascado c grao de bico e",
+    "count": 1,
+    "example": "Bacalhau com Natas ou Bacalhau lascado c/ Grão de bico e"
+   },
+   {
+    "item": "bacalhau lascado c grao de bico",
+    "count": 1,
+    "example": "Bacalhau lascado c/ Grao de bico"
+   },
+   {
+    "item": "banana",
+    "count": 2,
+    "example": "Banana"
+   },
+   {
+    "item": "bananas e macas",
+    "count": 1,
+    "example": "Bananas e Maçãs"
+   },
+   {
+    "item": "beterraba c maca",
+    "count": 1,
+    "example": "Beterraba c/ maçã"
+   },
+   {
+    "item": "bifanas",
+    "count": 1,
+    "example": "Bifanas (Estufadas)"
+   },
+   {
+    "item": "bifanas a moda do porto",
+    "count": 5,
+    "example": "Bifanas à moda do Porto (Sandes)"
+   },
+   {
+    "item": "bifanas de frango",
+    "count": 1,
+    "example": "Bifanas de Frango"
+   },
+   {
+    "item": "bifanas desfiadas",
+    "count": 1,
+    "example": "Bifanas desfiadas"
+   },
+   {
+    "item": "bifanas desfiadas ou moelas estufadas",
+    "count": 1,
+    "example": "Bifanas desfiadas ou Moelas estufadas"
+   },
+   {
+    "item": "bifanas estufadas",
+    "count": 5,
+    "example": "Bifanas estufadas"
+   },
+   {
+    "item": "bifanas estufadas a moda do porto",
+    "count": 2,
+    "example": "Bifanas Estufadas á moda do Porto (Sandes)"
+   },
+   {
+    "item": "bifanas estufadas desfiadas",
+    "count": 5,
+    "example": "Bifanas estufadas desfiadas"
+   },
+   {
+    "item": "bolachas manteiga",
+    "count": 2,
+    "example": "Bolachas manteiga"
+   },
+   {
+    "item": "bolachinhas de aveia",
+    "count": 1,
+    "example": "Bolachinhas de Aveia"
+   },
+   {
+    "item": "bolachinhas manteiga",
+    "count": 2,
+    "example": "Bolachinhas Manteiga"
+   },
+   {
+    "item": "bolinhas de grao c cherry",
+    "count": 1,
+    "example": "Bolinhas de grão c/ cherry"
+   },
+   {
+    "item": "bolinhas de grao de bico",
+    "count": 11,
+    "example": "Bolinhas de Grão de Bico (frito)"
+   },
+   {
+    "item": "bolinhas de pao de queijo",
+    "count": 2,
+    "example": "Bolinhas de Pão de Queijo (vegetarianos)"
+   },
+   {
+    "item": "bolinhos de bacalahau",
+    "count": 1,
+    "example": "Bolinhos de Bacalahau"
+   },
+   {
+    "item": "bolinhos de bacalhau",
+    "count": 57,
+    "example": "Bolinhos de Bacalhau"
+   },
+   {
+    "item": "bolinhos de bacalhau em espetada c cherry e azeitona",
+    "count": 1,
+    "example": "Bolinhos de Bacalhau em espetada c/ cherry e azeitona"
+   },
+   {
+    "item": "bolinhos de bacalhau em espeto de cherry",
+    "count": 7,
+    "example": "Bolinhos de bacalhau em espeto de Cherry"
+   },
+   {
+    "item": "bolinhos de bacalhau em espeto de cherry c azeitona",
+    "count": 2,
+    "example": "Bolinhos de Bacalhau em espeto de Cherry c/ Azeitona"
+   },
+   {
+    "item": "bolinhos de bacalhau rissois croquetes bolinhas de legumes",
+    "count": 2,
+    "example": "Bolinhos de bacalhau, Rissóis, Croquetes, Bolinhas de Legumes-(vegi)"
+   },
+   {
+    "item": "bolinhos de coco",
+    "count": 5,
+    "example": "Bolinhos de Côco"
+   },
+   {
+    "item": "bolinhos de feijao",
+    "count": 5,
+    "example": "Bolinhos de feijão"
+   },
+   {
+    "item": "bolo de bolacha",
+    "count": 11,
+    "example": "Bolo de Bolacha"
+   },
+   {
+    "item": "bolo de bolacha do ceu",
+    "count": 1,
+    "example": "Bolo de bolacha do Céu"
+   },
+   {
+    "item": "bolo de bolacha no copo",
+    "count": 2,
+    "example": "Bolo de Bolacha no copo"
+   },
+   {
+    "item": "bolo de chocolate",
+    "count": 2,
+    "example": "Bolo de Chocolate"
+   },
+   {
+    "item": "bolo no copo",
+    "count": 20,
+    "example": "Bolo no copo"
+   },
+   {
+    "item": "bolo no copo c iogurte e amendoa",
+    "count": 3,
+    "example": "Bolo no copo c/ iogurte e amêndoa"
+   },
+   {
+    "item": "bolo no copo com frutos vermelhos",
+    "count": 1,
+    "example": "Bolo no copo com frutos vermelhos"
+   },
+   {
+    "item": "bolo no copo e espetadas de fruta na sobremesa",
+    "count": 1,
+    "example": "Bolo no Copo e Espetadas de Fruta na sobremesa"
+   },
+   {
+    "item": "bolo no copo variados",
+    "count": 1,
+    "example": "Bolo no copo variados"
+   },
+   {
+    "item": "bolos de bacalhau",
+    "count": 4,
+    "example": "Bolos de Bacalhau (frito)"
+   }
+  ],
+  [
+   {
+    "item": "wraps de guacamole c queijo e rucula",
+    "count": 2,
+    "example": "Wraps de Guacamole c/ queijo e rucula"
+   },
+   {
+    "item": "wraps de milho c atum rucula e cenoura",
+    "count": 1,
+    "example": "Wraps de milho c/ Atum, rúcula e cenoura"
+   },
+   {
+    "item": "wraps de milho c frango rucula e cenoura",
+    "count": 1,
+    "example": "Wraps de milho c/ Frango, rúcula e cenoura"
+   },
+   {
+    "item": "wraps de pate de frango delicias e guacamole c queijo e rucula",
+    "count": 1,
+    "example": "Wraps de patê de frango, delícias e guacamole (veg.) c/ queijo e rúcula"
+   },
+   {
+    "item": "wraps de salmao c rucula e tangerina",
+    "count": 3,
+    "example": "Wraps de Salmão c/ rúcula e tangerina"
+   },
+   {
+    "item": "wraps de salmao fumado c queijo e rucula",
+    "count": 2,
+    "example": "Wraps de Salmão fumado c/ queijo e rúcula"
+   },
+   {
+    "item": "wraps de salmao fumado c queijo rucula e tangerina",
+    "count": 1,
+    "example": "Wraps de Salmão fumado c/ queijo rúcula e tangerina"
+   },
+   {
+    "item": "wraps queijo creme salmao e rucula",
+    "count": 7,
+    "example": "Wraps queijo creme, salmão e rúcula"
+   }
+  ],
+  [
+   {
+    "item": "porco no espeto",
+    "count": 6,
+    "example": "Porco no espeto (Sandes)"
+   },
+   {
+    "item": "sandes de pernil de porco no espeto",
+    "count": 2,
+    "example": "Sandes de Pernil de Porco no espeto"
+   },
+   {
+    "item": "pernil no espeto sandes",
+    "count": 1,
+    "example": "Pernil no espeto sandes (mínimo 50pessoas)"
+   },
+   {
+    "item": "sandes de porco no espeto",
+    "count": 1,
+    "example": "Sandes de porco no espeto"
+   }
+  ],
+  [
+   {
+    "item": "bolachas de milho c guacamole",
+    "count": 2,
+    "example": "Bolachas de milho c/ Guacamole"
+   },
+   {
+    "item": "tortilhas de milho c humus",
+    "count": 2,
+    "example": "Tortilhas de milho c/ Humus"
+   },
+   {
+    "item": "tortilhas de milho c guacamole",
+    "count": 2,
+    "example": "Tortilhas de milho c/ Guacamole"
+   }
+  ],
+  [
+   {
+    "item": "carne frango c batatas",
+    "count": 1,
+    "example": "Carne: Frango (cubinhos) c/ Batatas (assado)"
+   },
+   {
+    "item": "peixe salmao c batatas",
+    "count": 1,
+    "example": "Peixe: Salmão c/ Batatas (assado)"
+   },
+   {
+    "item": "frango assado c batatas assadas",
+    "count": 1,
+    "example": "Frango assado c/ batatas assadas"
+   },
+   {
+    "item": "frango c batatas",
+    "count": 1,
+    "example": "Frango (cubinhos) c/ Batatas (assado)"
+   },
+   {
+    "item": "salmao c batatas",
+    "count": 1,
+    "example": "Salmão c/ Batatas (assado)"
+   }
+  ],
+  [
+   {
+    "item": "vegan tabule marroquin",
+    "count": 1,
+    "example": "Vegan: Tabulê Marroquin"
+   },
+   {
+    "item": "tabule marroquin",
+    "count": 1,
+    "example": "Tabulê Marroquin"
+   }
+  ]
+ ]
+}

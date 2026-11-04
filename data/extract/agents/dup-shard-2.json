@@ -1,0 +1,550 @@
+{
+ "out": "/Users/danieldedecastroruivo/DEV/finger-food/data/analysis/dup/2.json",
+ "neighbourhoods": [
+  [
+   {
+    "item": "croissants c fiambre",
+    "count": 47,
+    "example": "Croissants c/ Fiambre"
+   },
+   {
+    "item": "croissants c queijo",
+    "count": 50,
+    "example": "Croissants c/ Queijo"
+   },
+   {
+    "item": "croissants c queijo e croissants c fiambre",
+    "count": 1,
+    "example": "Croissants c/ Queijo e Croissants c/ Fiambre"
+   },
+   {
+    "item": "croissants folhados c fiambre",
+    "count": 2,
+    "example": "Croissants Folhados c/ Fiambre"
+   },
+   {
+    "item": "croissants folhados c queijo",
+    "count": 2,
+    "example": "Croissants Folhados c/ Queijo (veg.)"
+   },
+   {
+    "item": "croissants folhados mistos",
+    "count": 2,
+    "example": "Croissants Folhados Mistos"
+   },
+   {
+    "item": "croissants simples",
+    "count": 3,
+    "example": "Croissants Simples"
+   },
+   {
+    "item": "croquetes",
+    "count": 1,
+    "example": "Croquetes"
+   },
+   {
+    "item": "croquetes c azeitona",
+    "count": 3,
+    "example": "Croquetes c/ Azeitona"
+   },
+   {
+    "item": "croquetes de novilho",
+    "count": 19,
+    "example": "Croquetes de novilho"
+   },
+   {
+    "item": "croquetes de novilho c azeitona",
+    "count": 8,
+    "example": "Croquetes de novilho c/ azeitona"
+   },
+   {
+    "item": "croquetes de vitela",
+    "count": 52,
+    "example": "Croquetes de Vitela"
+   },
+   {
+    "item": "croquetes de vitela c azeitona",
+    "count": 11,
+    "example": "Croquetes de Vitela c/ Azeitona"
+   },
+   {
+    "item": "croquetes de vitela e bolos de bacalhau",
+    "count": 1,
+    "example": "Croquetes de vitela e bolos de bacalhau"
+   },
+   {
+    "item": "croquetes de vitela e rissois de camarao ou",
+    "count": 2,
+    "example": "Croquetes de Vitela e Rissóis de camarão ou"
+   },
+   {
+    "item": "croquetes de vitela em espeto de azeitona",
+    "count": 4,
+    "example": "Croquetes de Vitela em espeto de azeitona"
+   },
+   {
+    "item": "croquetes de vitela ou c azeitona recheada",
+    "count": 1,
+    "example": "Croquetes de vitela ou c/ azeitona recheada"
+   },
+   {
+    "item": "cuscuz c legumes salteados",
+    "count": 2,
+    "example": "Cuscuz c/ legumes salteados"
+   },
+   {
+    "item": "empadas de alheira",
+    "count": 4,
+    "example": "Empadas de Alheira"
+   },
+   {
+    "item": "empadas de cogumelos",
+    "count": 5,
+    "example": "Empadas de Cogumelos"
+   },
+   {
+    "item": "empadas de frango c cogumelos",
+    "count": 6,
+    "example": "Empadas de Frango c/ cogumelos"
+   },
+   {
+    "item": "empadas de legumes",
+    "count": 2,
+    "example": "Empadas de Legumes"
+   },
+   {
+    "item": "espetada de bolinhos de bacalhau",
+    "count": 29,
+    "example": "Espetada de Bolinhos de Bacalhau"
+   },
+   {
+    "item": "espetada de bolinhos de bacalhau c cherry",
+    "count": 17,
+    "example": "Espetada de bolinhos de bacalhau c/ cherry"
+   },
+   {
+    "item": "espetada de bolinhos de bacalhau c cherry e azeitona",
+    "count": 2,
+    "example": "Espetada de bolinhos de bacalhau c/ cherry e azeitona"
+   },
+   {
+    "item": "espetada de cherry c mozarela e manjericao",
+    "count": 1,
+    "example": "Espetada de Cherry c/ Mozarela e Manjericão"
+   },
+   {
+    "item": "espetada de cherry c mozzarella e mangericao",
+    "count": 4,
+    "example": "Espetada de Cherry c/ Mozzarella e Mangericão"
+   },
+   {
+    "item": "espetada de mozarela",
+    "count": 5,
+    "example": "Espetada de mozarela (vegi.)"
+   },
+   {
+    "item": "espetada de mozarela c azeitona cherry e manjericao",
+    "count": 13,
+    "example": "Espetada de mozarela c/ azeitona, cherry e manjericão (veg.)"
+   },
+   {
+    "item": "espetada de mozarela c cherry e manjericao",
+    "count": 25,
+    "example": "Espetada de mozarela c/ cherry e manjericão"
+   },
+   {
+    "item": "espetada de mozarela c cherry mangericao e azeitona",
+    "count": 5,
+    "example": "Espetada de mozarela c/ cherry, mangericão e azeitona"
+   },
+   {
+    "item": "espetadas de cherry c manjericao",
+    "count": 4,
+    "example": "Espetadas de cherry c/ manjericão"
+   },
+   {
+    "item": "espetadas de cherry c manjericao e azeitona",
+    "count": 2,
+    "example": "Espetadas de cherry c/ manjericão e azeitona"
+   },
+   {
+    "item": "espetadas de fruta",
+    "count": 285,
+    "example": "Espetadas de Fruta"
+   },
+   {
+    "item": "espetadas de fruta variada",
+    "count": 20,
+    "example": "Espetadas de fruta variada"
+   },
+   {
+    "item": "espetadas de frutas",
+    "count": 3,
+    "example": "Espetadas de frutas"
+   },
+   {
+    "item": "espetadas de frutas variadas",
+    "count": 1,
+    "example": "Espetadas de Frutas variadas"
+   },
+   {
+    "item": "feijao frade c atum",
+    "count": 3,
+    "example": "Feijão frade c/ atum"
+   },
+   {
+    "item": "feijao frade c cogumelos salteados",
+    "count": 4,
+    "example": "Feijão frade c/ cogumelos salteados"
+   },
+   {
+    "item": "feijao frade c quinoa de legumes",
+    "count": 5,
+    "example": "Feijão Frade c/ Quinoa de Legumes"
+   }
+  ],
+  [
+   {
+    "item": "sumo sabores variados",
+    "count": 207,
+    "example": "Sumo (Compal) sabores variados"
+   },
+   {
+    "item": "sumo compal",
+    "count": 40,
+    "example": "Sumo Compal"
+   },
+   {
+    "item": "sumos compal",
+    "count": 11,
+    "example": "Sumos Compal"
+   },
+   {
+    "item": "sumo compal varios sabores",
+    "count": 3,
+    "example": "Sumo Compal vários sabores"
+   },
+   {
+    "item": "sumo",
+    "count": 1,
+    "example": "Sumo (Compal)"
+   }
+  ],
+  [
+   {
+    "item": "bolachinhas bacalhaus do casci",
+    "count": 91,
+    "example": "Bolachinhas Bacalhaus do CASCI"
+   },
+   {
+    "item": "bolhachinhas bacalhaus do casci",
+    "count": 54,
+    "example": "Bolhachinhas Bacalhaus do CASCI"
+   },
+   {
+    "item": "bolachinhas bacalhaus salgados do casci",
+    "count": 15,
+    "example": "Bolachinhas Bacalhaus Salgados do CASCI"
+   },
+   {
+    "item": "bolachinhas bacalhaus salgados de casci",
+    "count": 5,
+    "example": "Bolachinhas Bacalhaus Salgados de CASCI"
+   },
+   {
+    "item": "bolachinhas bacalhaus salgados do c a s c i",
+    "count": 3,
+    "example": "Bolachinhas Bacalhaus Salgados do C.A.S.C.I."
+   },
+   {
+    "item": "bolachas bacalhaus",
+    "count": 2,
+    "example": "Bolachas Bacalhaus (CASCI)"
+   },
+   {
+    "item": "bolachinhas bacalhaus salgados casci",
+    "count": 2,
+    "example": "Bolachinhas Bacalhaus salgados CASCI"
+   },
+   {
+    "item": "bolachas bacalhaus do casci",
+    "count": 1,
+    "example": "Bolachas bacalhaus do CASCI"
+   },
+   {
+    "item": "bacalhaus salgados do c a s c i",
+    "count": 1,
+    "example": "Bacalhaus salgados do C.A.S.C.I."
+   }
+  ],
+  [
+   {
+    "item": "sumo de laranja natural",
+    "count": 56,
+    "example": "Sumo de Laranja natural (exprimido na hora, servido em flutes)"
+   },
+   {
+    "item": "sumo de laranja natural cliente fornece laranjas",
+    "count": 1,
+    "example": "Sumo de Laranja Natural (exprimido na hora servido em flutes) Cliente fornece laranjas."
+   },
+   {
+    "item": "sumos de laranja natural",
+    "count": 1,
+    "example": "Sumos de Laranja natural (exprimido na hora, servido em flutes)"
+   }
+  ],
+  [
+   {
+    "item": "mil folhas glace",
+    "count": 24,
+    "example": "Mil Folhas Glacê"
+   },
+   {
+    "item": "mil folhas",
+    "count": 20,
+    "example": "Mil folhas"
+   },
+   {
+    "item": "mil folhas creme brule",
+    "count": 5,
+    "example": "Mil Folhas Creme Brulê"
+   },
+   {
+    "item": "mini mil folhas",
+    "count": 2,
+    "example": "Mini Mil Folhas"
+   },
+   {
+    "item": "mil folhas creme blule",
+    "count": 2,
+    "example": "Mil Folhas Creme Blulê"
+   },
+   {
+    "item": "mil folhas de creme brule",
+    "count": 1,
+    "example": "Mil Folhas de Creme Brulê"
+   }
+  ],
+  [
+   {
+    "item": "ovos moles",
+    "count": 37,
+    "example": "Ovos Moles"
+   },
+   {
+    "item": "ovos moles de aveiro",
+    "count": 9,
+    "example": "Ovos moles de Aveiro"
+   },
+   {
+    "item": "vinho do porto",
+    "count": 5,
+    "example": "Vinho do Porto (Servido em flutes)"
+   },
+   {
+    "item": "rabanadas c ovos moles ou vinho do porto",
+    "count": 1,
+    "example": "Rabanadas c/ ovos moles ou vinho do porto"
+   }
+  ],
+  [
+   {
+    "item": "iogurte c granola",
+    "count": 34,
+    "example": "Iogurte c/ granola"
+   },
+   {
+    "item": "iogurte de soja c granola",
+    "count": 17,
+    "example": "Iogurte de Soja c/ granola"
+   },
+   {
+    "item": "copinhos de iogurte c granola",
+    "count": 1,
+    "example": "Copinhos de iogurte c/ granola"
+   }
+  ],
+  [
+   {
+    "item": "espumante",
+    "count": 22,
+    "example": "Espumante (Fraga da Pena ou similar até 10€ por garrafa)"
+   },
+   {
+    "item": "espumante para as sobremesas",
+    "count": 4,
+    "example": "Espumante (1 Copo) para as sobremesas"
+   },
+   {
+    "item": "espumante baga primavera",
+    "count": 3,
+    "example": "Espumante Baga Primavera"
+   },
+   {
+    "item": "oferta de espumante",
+    "count": 1,
+    "example": "Oferta de Espumante (a servir ao jantar)"
+   },
+   {
+    "item": "espumante para brindar",
+    "count": 1,
+    "example": "Espumante para Brindar"
+   },
+   {
+    "item": "espumante 5 uni",
+    "count": 1,
+    "example": "Espumante (Fraga da Pena ou similar) 5 uni"
+   },
+   {
+    "item": "espumante da bairrada oferta",
+    "count": 1,
+    "example": "Espumante da Bairrada – Oferta"
+   }
+  ],
+  [
+   {
+    "item": "cerveja mini",
+    "count": 13,
+    "example": "Cerveja Mini (Sagres ou Super Book)"
+   },
+   {
+    "item": "cerveja minis",
+    "count": 4,
+    "example": "Cerveja minis"
+   },
+   {
+    "item": "cerveja minis 300 uni",
+    "count": 4,
+    "example": "Cerveja minis 300 uni"
+   },
+   {
+    "item": "cerveja mini sagres ou super",
+    "count": 3,
+    "example": "Cerveja Mini Sagres ou Super?"
+   },
+   {
+    "item": "cerveja mini 120uni",
+    "count": 2,
+    "example": "Cerveja Mini 120uni"
+   },
+   {
+    "item": "cerveja mini sagres",
+    "count": 2,
+    "example": "Cerveja Mini Sagres"
+   },
+   {
+    "item": "cerveja mini 40",
+    "count": 1,
+    "example": "Cerveja Mini +/- 40 (2 cx)"
+   },
+   {
+    "item": "cerveja guinness",
+    "count": 1,
+    "example": "Cerveja Guinness"
+   },
+   {
+    "item": "cerveja minis 60 uni",
+    "count": 1,
+    "example": "Cerveja minis 60 uni"
+   },
+   {
+    "item": "cerveja minis 90 uni",
+    "count": 1,
+    "example": "Cerveja minis 90 uni"
+   }
+  ],
+  [
+   {
+    "item": "variedade de miniaturas rissois chamucas croquetes",
+    "count": 11,
+    "example": "Variedade de miniaturas Rissóis, Chamuças, Croquetes…"
+   },
+   {
+    "item": "variedades de miniaturas fritas e",
+    "count": 1,
+    "example": "Variedades de miniaturas fritas e"
+   }
+  ],
+  [
+   {
+    "item": "mini pada c queijo da serra presunto",
+    "count": 7,
+    "example": "Mini pada c/ queijo da serra, presunto"
+   },
+   {
+    "item": "mini paes c queijo da serra e presunto",
+    "count": 1,
+    "example": "Mini pães c/ Queijo da Serra e Presunto (8 meses)"
+   }
+  ],
+  [
+   {
+    "item": "bacalhau c batatas a murro e broa",
+    "count": 3,
+    "example": "Bacalhau c/ Batatas a Murro e Broa"
+   },
+   {
+    "item": "lombo assado c batatas a murro",
+    "count": 3,
+    "example": "Lombo Assado c/ Batatas a Murro"
+   },
+   {
+    "item": "lombo de bacalhau assado com batatas a murro",
+    "count": 1,
+    "example": "Lombo de Bacalhau assado com batatas á murro (Mesa)"
+   }
+  ],
+  [
+   {
+    "item": "pizza de queijo cogumelos e azeitonas",
+    "count": 2,
+    "example": "Pizza de queijo cogumelos e azeitonas"
+   },
+   {
+    "item": "pizza de cogumelos e azeitonas",
+    "count": 2,
+    "example": "Pizza de Cogumelos e Azeitonas"
+   },
+   {
+    "item": "pizzas de cogumelos e azeitona preta",
+    "count": 1,
+    "example": "Pizzas de cogumelos e azeitona preta"
+   }
+  ],
+  [
+   {
+    "item": "rodizio de pizzas",
+    "count": 3,
+    "example": "Rodízio de Pizzas"
+   },
+   {
+    "item": "rodizio de pizzas carne peixe e veg",
+    "count": 1,
+    "example": "Rodízio de Pizzas carne, peixe e veg."
+   }
+  ],
+  [
+   {
+    "item": "dia 13 e 20 wraps c alface pate de frango delicias maca agua sumo compal mini kitkat",
+    "count": 1,
+    "example": "Dia 13 e 20: Wraps c/ alface: patê de frango, delícias; Maçã, Água, Sumo Compal, mini kitkat (ou similar)"
+   },
+   {
+    "item": "dia 15 e 22 variedade de pizzas banana agua sumo compal mini kitkat",
+    "count": 1,
+    "example": "Dia 15 e 22: Variedade de Pizzas; Banana, Água, Sumo Compal, mini kitkat (ou similar)"
+   },
+   {
+    "item": "dia 16 e 23 quiche de fiambre e de atum tangerina agua sumo compal mini kitkat",
+    "count": 1,
+    "example": "Dia 16 e 23: Quiche de Fiambre e de Atum; Tangerina, Água, Sumo Compal, mini kitkat (ou similar)"
+   },
+   {
+    "item": "dia 17 e 24 empada de frango e 2 croquetes maca agua sumo compal mini kitkat",
+    "count": 1,
+    "example": "Dia 17 e 24: Empada de Frango e 2 croquetes; Maçã, Água, Sumo Compal, mini kitkat (ou similar)"
+   }
+  ]
+ ]
+}

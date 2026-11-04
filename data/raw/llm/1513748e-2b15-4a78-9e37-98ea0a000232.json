@@ -1,0 +1,52 @@
+{
+  "quote_id": "q:1513748e-2b15-4a78-9e37-98ea0a000232",
+  "client": "Manuela Marques",
+  "client_source": "file_name",
+  "event_dates": [{"day": 17, "month": 1, "year": 2026, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Comidas e bebidas",
+      "service_type": "other",
+      "guests": 20,
+      "guests_raw": "20",
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Tábuas de Queijos decoradas c/ frutos secos", "quantity": 2},
+          {"text": "Tábuas de enchidos decoradas c/ azeitonas", "quantity": 1},
+          {"text": "Acompanhadas c/ variedade de tostas e broa", "quantity": null},
+          {"text": "Folhados Mistos", "quantity": 10},
+          {"text": "Folhados de Salsicha", "quantity": 10},
+          {"text": "Bolinhos de Bacalhau", "quantity": 20},
+          {"text": "Croquetes de Vitela", "quantity": 20},
+          {"text": "Croissants c/ Queijo", "quantity": 20},
+          {"text": "Croissants c/ Fiambre", "quantity": 20}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Variedade de Brigadeiros", "quantity": 40},
+          {"text": "Brownie c/ Nozes e caramelo salgado (48 Quadrados)", "quantity": 1},
+          {"text": "Mouse de Chocolate no copo", "quantity": 20}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Sumo Compal", "quantity": 4},
+          {"text": "Cerveja Mini +/- 40 (2 cx)", "quantity": null},
+          {"text": "Espumante (1 cx)", "quantity": 6}
+        ]}
+      ],
+      "prices": [
+        {"label": "Comidas", "unit_price": 17, "quantity": 20, "line_total": 340, "vat_rate": null},
+        {"label": "Bebidas", "unit_price": 3, "quantity": 20, "line_total": 60, "vat_rate": null}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 400,
+  "total_includes_vat": null,
+  "staff_mentioned": null,
+  "notes": [],
+  "uncertain": [
+    "Date (17 Janeiro 2026) and client name taken from the file name; the text gives neither.",
+    "The text does not say whether VAT applies.",
+    "Quantities such as '+/- 40' for beer are approximate as written."
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "quote_id": "q:4360685a-8291-41a3-af74-7d1234dfc7dd",
+  "client": "Carolina Batista",
+  "client_source": "file_name",
+  "event_dates": [
+    {"day": 11, "month": 12, "year": null, "source": "file_name"}
+  ],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Coffee break pm",
+      "service_type": "coffee_break",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Tabuas de Queijos", "quantity": null},
+          {"text": "Tabuas de Enchidos", "quantity": null},
+          {"text": "Vol au vents de Guacamole c/ azeitona (veg.)", "quantity": null},
+          {"text": "Bolinhos de Bacalhau", "quantity": null},
+          {"text": "Croquetes de Novilho", "quantity": null}
+        ]},
+        {"segment": "main_dish", "items": [
+          {"text": "Bacalhau c/ Natas", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Brownie c/ Nozes e Caramelo Salgado", "quantity": null},
+          {"text": "Pasteis de Nata", "quantity": null},
+          {"text": "Espetadas de Fruta", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Coffee break pm", "unit_price": null, "quantity": null, "line_total": 400, "vat_rate": 13}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 452,
+  "total_includes_vat": true,
+  "staff_mentioned": null,
+  "notes": [],
+  "uncertain": [
+    "The day 11 and month 12 come from the file name; the text has no date and no year is written.",
+    "The text has a main dish (Bacalhau c/ Natas) inside a coffee break, kept as written.",
+    "No guest count is written."
+  ]
+}

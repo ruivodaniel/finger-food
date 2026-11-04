@@ -1,0 +1,64 @@
+{
+  "quote_id": "q:c7634f96-2406-49e6-9df8-46f885442717",
+  "client": "Maria Judite Mendes",
+  "client_source": "file_name",
+  "event_dates": [
+    {"day": 9, "month": 8, "year": null, "source": "file_name"}
+  ],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Entradas: (volante)",
+      "service_type": "lunch",
+      "guests": 60,
+      "guests_raw": "60",
+      "menu_lines": [
+        {"segment": "starter", "items": [
+          {"text": "Bolinhos de Bacalhau", "quantity": null},
+          {"text": "Rissóis de Camarão", "quantity": null},
+          {"text": "Croquetes de novilho", "quantity": null},
+          {"text": "Espetada de mozarela c/ cherry e manjericão (veg)", "quantity": null},
+          {"text": "Vol au vents de Guacamole (veg)", "quantity": null},
+          {"text": "Batatas fritas", "quantity": null},
+          {"text": "Variedade de Saladas (alfaces, cenoura, milho, couve roxa…) (veg)", "quantity": null}
+        ]},
+        {"segment": "main_dish", "items": [
+          {"text": "Porco no espeto (Sandes)", "quantity": null},
+          {"text": "Cogumelos de cebolada (Sandes- veg)", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Espetadas de Fruta", "quantity": null},
+          {"text": "Bownie c/ Nozes e Caramelo salgado", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Coca-cola, Sumol, Ice tea", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio)", "quantity": null},
+          {"text": "Café e descafeinado (cápsulas)", "quantity": null},
+          {"text": "Cerveja minis", "quantity": 300},
+          {"text": "Sangria vinho Tinto c/ laranja e canela Jarro", "quantity": 15}
+        ]}
+      ],
+      "prices": [
+        {"label": "Comidas e Bebidas não alcoólicas", "unit_price": 22, "quantity": 60, "line_total": 1320, "vat_rate": 13},
+        {"label": "Cerveja", "unit_price": null, "quantity": 120, "line_total": 96, "vat_rate": 23},
+        {"label": "Sangria", "unit_price": null, "quantity": 15, "line_total": 120, "vat_rate": 23}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 1757.28,
+  "total_includes_vat": true,
+  "staff_mentioned": "3 funcionários que iram dispor as mesas em buffet para servir as sandes quentes, assim como as bebidas",
+  "notes": [
+    "Nos serviços apresentados não serão utilizados materiais plásticos.",
+    "Todo o serviço é realizado com loiças e toalhas de pano."
+  ],
+  "uncertain": [
+    "Client and the day and month come from the file name; the text has no date.",
+    "Menu lines are split by the headings Entradas, Prato Principal and Sobremesa; the sandwich items are set as main dish.",
+    "The Sobremesa line 'Levamos pratos e talheres para as vossas sobremesas' is not kept as a note.",
+    "The sub-total 265.68 at 23% on beer and sangria is written and not repeated."
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "quote_id": "q:2ea1ec3d-12c5-4401-9d74-84061032f96d",
+  "client": "Aveiro com Paixão",
+  "client_source": "file_name",
+  "event_dates": [],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Menu",
+      "service_type": "other",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "other", "items": [
+          {"text": "Sopa Creme de cenoura (copo)", "quantity": null},
+          {"text": "Tábuas de Queijos", "quantity": null},
+          {"text": "Compotas de frutas variadas c/ frutos secos", "quantity": null},
+          {"text": "Espetadas de cherry c/ manjericão", "quantity": null},
+          {"text": "Tábuas de enchidos decoradas c/ azeitonas", "quantity": null},
+          {"text": "Acompanhadas c/ variedade de tostas e gressinos", "quantity": null},
+          {"text": "Patê de Húmus e Guacamole", "quantity": null},
+          {"text": "Tacos de Salmão Fumado c/ queijo creme, rúcula e tangerina", "quantity": null},
+          {"text": "Wraps de frango c/ maionese de trufa, cheddar e rúcula", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Bolo no copo", "quantity": null},
+          {"text": "Variedade de Brigadeiros", "quantity": null},
+          {"text": "Brownie c/ Nozes e caramelo salgado", "quantity": null},
+          {"text": "Espetadas de fruta variada", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água engarrafada", "quantity": null},
+          {"text": "Sumo de laranja natural", "quantity": null},
+          {"text": "Café e descafeinado", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "PREÇOS", "unit_price": null, "quantity": null, "line_total": 30, "vat_rate": 13}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": null,
+  "total_includes_vat": null,
+  "staff_mentioned": "dois funcionários, um para servir as bebidas e outro para manter a mesa das comidas organizada. (A cada 15 convidados acrescento mais um funcionário.)",
+  "notes": [
+    "Este orçamento apenas contempla serviços em dias de semana em horário laboral; ao fim de semana e depois das 18h tem um acréscimo de 2.50€.",
+    "Para os serviços apresentados disponibilizo atoalhados e todo o material necessário ao serviço.",
+    "Nos serviços apresentados não serão utilizados materiais plásticos."
+  ],
+  "uncertain": [
+    "The client comes from the file name; the text gives no client name.",
+    "The price '30€ + iva 13%' is not said to be per guest or in total; it is kept as line_total 30.",
+    "The menu has no service type or guest count written; the single moment holds everything.",
+    "The menu lines have no headings except Miniaturas Doces and Bebidas; the rest are set to other."
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "quote_id": "q:396154e3-0154-4b62-8c5a-a0c0ee94bd98",
+  "client": "Mike",
+  "client_source": "file_name",
+  "event_dates": [{"day": 13, "month": 6, "year": null, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Jantar 19h-21h",
+      "service_type": "dinner",
+      "guests": 100,
+      "guests_raw": "100 pax",
+      "menu_lines": [
+        {"segment": "other", "items": [
+          {"text": "Sopa de Legumes", "quantity": 100},
+          {"text": "Bifanas estufadas", "quantity": 200}
+        ]}
+      ],
+      "prices": [
+        {"label": null, "unit_price": 8, "quantity": 100, "line_total": 800, "vat_rate": 13},
+        {"label": "Deslocação", "unit_price": 140, "quantity": null, "line_total": 140, "vat_rate": 13}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 1040,
+  "total_includes_vat": false,
+  "staff_mentioned": "dois funcionários para montar, servir e desmontar",
+  "notes": [
+    "Deslocação – 140€ is listed as a separate price line."
+  ],
+  "uncertain": [
+    "The sub total 1040 does not equal 800 + 140 = 940 as written.",
+    "Only a sub total is written, with VAT added on top; it is kept as the total with total_includes_vat false.",
+    "Client and event date come from the file name; the text has neither."
+  ]
+}

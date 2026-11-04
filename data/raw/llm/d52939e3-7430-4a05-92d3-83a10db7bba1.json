@@ -1,0 +1,46 @@
+{
+  "quote_id": "q:d52939e3-7430-4a05-92d3-83a10db7bba1",
+  "client": "AD AIR Center - Associação para o Desenvolvimento do Atlântico Centro Internacional de Investigação",
+  "client_source": "text",
+  "event_dates": [],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Lunch Box - Completa",
+      "service_type": "lunch",
+      "guests": null,
+      "guests_raw": "15€ x 50€ = 750€",
+      "menu_lines": [
+        {"segment": "starter", "items": [
+          {"text": "Salada composta embalada (tempero, talher de madeira)", "quantity": null}
+        ]},
+        {"segment": "main_dish", "items": [
+          {"text": "Sandes de Panado de frango ou Omelete c/ Alface e queijo", "quantity": null}
+        ]},
+        {"segment": "dessert", "items": [
+          {"text": "Maçã Ou Banana", "quantity": null},
+          {"text": "Mini KitKat ou similar", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água 0.50cl", "quantity": null},
+          {"text": "Sumo Bongo 0.20cl", "quantity": null}
+        ]}
+      ],
+      "prices": [
+        {"label": "Lunch box Completa", "unit_price": 15, "quantity": 50, "line_total": 750, "vat_rate": 13}
+      ]
+    }
+  ],
+  "prices_not_in_a_moment": [],
+  "total": 847.50,
+  "total_includes_vat": true,
+  "staff_mentioned": null,
+  "notes": [
+    "Exemplo de salada composta (Vitacress/Florett) citado no texto.",
+    "Serviço a ser adjudicado também por TERINOV – Parque de Ciência e Tecnologia da Ilha Terceira."
+  ],
+  "uncertain": [
+    "Sem data nem local do evento no texto; a morada impressa é do cliente e não foi tomada como local.",
+    "O número 50 aparece só na linha de preço; não foi tratado como número de pessoas."
+  ]
+}

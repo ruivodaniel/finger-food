@@ -1,0 +1,44 @@
+{
+  "quote_id": "q:e2b94c79-a6bb-4a3b-8a44-ebb19102999c",
+  "client": "Catarina Mafalda Soares",
+  "client_source": "file_name",
+  "event_dates": [{"day": 17, "month": 5, "year": null, "source": "file_name"}],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Menu Almoço 12h – 15h",
+      "service_type": "lunch",
+      "guests": 40,
+      "guests_raw": "40 pessoas",
+      "menu_lines": [
+        {"segment": "starter", "items": [{"text": "Rissóis de camarão", "quantity": null}, {"text": "Espetada de bolinhos de bacalhau c/ cherry", "quantity": null}, {"text": "Chamuças de vegetais c/ azeitona", "quantity": null}, {"text": "Croquetes de vitela", "quantity": null}, {"text": "Variado de saladas (Alfaces, tomate, milho, cenoura, c. roxa…)", "quantity": null}, {"text": "Sopa Creme de cenoura (copo)", "quantity": null}]},
+        {"segment": "main_dish", "items": [{"text": "Bacalhau c/ Natas gratinado", "quantity": null}, {"text": "Arroz de Pato c/ enchidos", "quantity": null}]},
+        {"segment": "dessert", "items": [{"text": "Variedade de Brigadeiros", "quantity": null}, {"text": "Brownie c/ Nozes e caramelo salgado", "quantity": null}, {"text": "Espetadas de fruta variada", "quantity": null}]},
+        {"segment": "drink", "items": [{"text": "Oferta de serviço de Café e descafeinado.", "quantity": null}]}
+      ],
+      "prices": [{"label": null, "unit_price": 25, "quantity": 40, "line_total": 1000, "vat_rate": 13}]
+    }
+  ],
+  "prices_not_in_a_moment": [
+    {"label": "Camarão cozido 30/40 kg", "unit_price": 20, "quantity": null, "line_total": null, "vat_rate": null},
+    {"label": "Tábuas de Queijos", "unit_price": 45, "quantity": null, "line_total": null, "vat_rate": null},
+    {"label": "Tábuas de Enchidos", "unit_price": 40, "quantity": null, "line_total": null, "vat_rate": null},
+    {"label": "Espetadas de mozarela, cherry c/ manjericão e azeitona", "unit_price": 2, "quantity": null, "line_total": null, "vat_rate": null},
+    {"label": "Tiramissu no copo c/ opção de Affogato", "unit_price": 5, "quantity": null, "line_total": null, "vat_rate": null},
+    {"label": "Bolo Brigadeiro no copo c/ Chantily", "unit_price": 3, "quantity": null, "line_total": null, "vat_rate": null}
+  ],
+  "total": 1130,
+  "total_includes_vat": true,
+  "staff_mentioned": "três funcionários, para servirem as comidas e bebidas e manterem as mesas sempre impecáveis",
+  "notes": [
+    "Nos serviços apresentados não serão utilizados materiais plásticos, demonstrando assim a nossa consciência ambiental.",
+    "Empréstimo de copos de tubo, de vinho e de shot grande.",
+    "As horas que coloquei são meramente indicativas; a partir das 10h gostaríamos de aceder ao espaço e ficamos em serviço contínuo até às 15h para começarmos a desmontar e a arrumar até às 16h.",
+    "Para pagamento 50% na adjudicação e 50% no dia do evento."
+  ],
+  "uncertain": [
+    "Cliente e data vêm do nome do ficheiro; o texto não os indica.",
+    "Ano do evento não está escrito no texto nem no nome do ficheiro.",
+    "Os extras têm preço unitário sem quantidade escrita."
+  ]
+}

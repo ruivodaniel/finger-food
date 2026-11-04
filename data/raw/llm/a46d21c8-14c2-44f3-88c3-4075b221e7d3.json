@@ -1,0 +1,76 @@
+{
+  "quote_id": "q:a46d21c8-14c2-44f3-88c3-4075b221e7d3",
+  "client": "Carolina Poças",
+  "client_source": "file_name",
+  "event_dates": [
+    {"day": 11, "month": null, "year": null, "source": "text"}
+  ],
+  "place": null,
+  "moments": [
+    {
+      "name_as_written": "Dia 11 Coffee – Break Montagem 8h15m – Serviço 10h15m",
+      "service_type": "coffee_break",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Pão de sementes c/ Queijo", "quantity": null},
+          {"text": "Pão de sementes c/ Fiambre", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Iogurte c/ granola (copo)", "quantity": null},
+          {"text": "Salame de Chocolate", "quantity": null},
+          {"text": "Pasteis de Nata", "quantity": null},
+          {"text": "Bolhachinhas Bacalhaus do CASCI", "quantity": null}
+        ]},
+        {"segment": "other", "items": [
+          {"text": "Espetadas de fruta", "quantity": null}
+        ]},
+        {"segment": "drink", "items": [
+          {"text": "Água garrafas de vidro", "quantity": null},
+          {"text": "Sumo (Compal) sabores variados", "quantity": null},
+          {"text": "Águas aromatizadas (Chá frio): Frutos vermelhos", "quantity": null},
+          {"text": "Café e descafeinado (cápsulas)", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    },
+    {
+      "name_as_written": "Coffee Break – 15h30 – desmontagem 16h30m",
+      "service_type": "coffee_break",
+      "guests": null,
+      "guests_raw": null,
+      "menu_lines": [
+        {"segment": "savory_miniatures", "items": [
+          {"text": "Pão de Queijo", "quantity": null},
+          {"text": "Folhados Mistos", "quantity": null},
+          {"text": "Folhados Salsicha", "quantity": null},
+          {"text": "Vol Au vents de Guacamole", "quantity": null}
+        ]},
+        {"segment": "sweet_miniatures", "items": [
+          {"text": "Bolachas bacalhaus do CASCI", "quantity": null},
+          {"text": "Variedade de brigadeiros", "quantity": null},
+          {"text": "Brownie c/ Nozes e Caramelo Salgado", "quantity": null}
+        ]},
+        {"segment": "other", "items": [
+          {"text": "Espetadas de fruta", "quantity": null}
+        ]}
+      ],
+      "prices": []
+    }
+  ],
+  "prices_not_in_a_moment": [
+    {"label": "Dia 11 – Coffee breaks am e pm", "unit_price": null, "quantity": null, "line_total": 420, "vat_rate": 13}
+  ],
+  "total": 429.40,
+  "total_includes_vat": null,
+  "staff_mentioned": "um funcionário para servir, os cafés e manter a mesa organizada",
+  "notes": [
+    "Nos serviços apresentados não serão utilizados materiais plásticos, demonstrando assim a nossa consciência ambiental.",
+    "Nas miniaturas doces: as bolachinhas do CASCI, Centro de Ação Social do Concelho de Ílhavo, que habilita para a inclusão social pessoas com deficiência, pessoas idosas, crianças e públicos de risco."
+  ],
+  "uncertain": [
+    "Total escrito de 429.40€ não corresponde a 420€ com IVA 13%; registado o valor escrito e não se sabe se inclui IVA.",
+    "O texto diz 'Dia 11' sem mês nem ano; o mês de Março vem só do nome do ficheiro e não foi usado."
+  ]
+}

@@ -1,0 +1,537 @@
+{
+ "out": "/Users/danieldedecastroruivo/DEV/finger-food/data/analysis/dup/1.json",
+ "neighbourhoods": [
+  [
+   {
+    "item": "3 variedades de brigadeiros",
+    "count": 1,
+    "example": "3 Variedades de Brigadeiros"
+   },
+   {
+    "item": "4 variedades de brigadeiros",
+    "count": 6,
+    "example": "4 Variedades de Brigadeiros"
+   },
+   {
+    "item": "agua",
+    "count": 9,
+    "example": "Água"
+   },
+   {
+    "item": "agua 0 50cl",
+    "count": 6,
+    "example": "Água 0.50cl"
+   },
+   {
+    "item": "agua aromatizada",
+    "count": 13,
+    "example": "Água aromatizada"
+   },
+   {
+    "item": "agua aromatizada 1 jarro",
+    "count": 1,
+    "example": "Água aromatizada – 1 jarro"
+   },
+   {
+    "item": "agua aromatizada de frutos vermelhos",
+    "count": 3,
+    "example": "Água aromatizada de frutos vermelhos"
+   },
+   {
+    "item": "agua das pedras",
+    "count": 2,
+    "example": "Agua das Pedras"
+   },
+   {
+    "item": "agua de",
+    "count": 2,
+    "example": "Água de"
+   },
+   {
+    "item": "agua engarrafada",
+    "count": 42,
+    "example": "Água engarrafada"
+   },
+   {
+    "item": "agua garrafas de vidro",
+    "count": 199,
+    "example": "Água garrafas de vidro"
+   },
+   {
+    "item": "agua garrafas de vidro 1lt",
+    "count": 17,
+    "example": "Água garrafas de vidro 1Lt"
+   },
+   {
+    "item": "agua garrafas de vidro aguas aromatizadas",
+    "count": 2,
+    "example": "Água garrafas de vidro, Águas aromatizadas (Chá frio)"
+   },
+   {
+    "item": "aguas aromatizadas",
+    "count": 178,
+    "example": "Águas aromatizadas (Chá frio)"
+   },
+   {
+    "item": "aguas aromatizadas frutos vermelhos",
+    "count": 9,
+    "example": "Águas aromatizadas (Chá frio): Frutos vermelhos"
+   },
+   {
+    "item": "aguas aromatizadas frutos vermelhos laranja e gengibre",
+    "count": 2,
+    "example": "Águas aromatizadas Frutos vermelhos, Laranja e gengibre"
+   },
+   {
+    "item": "aguas aromatizadas frutos vermelhos maca canela hortela",
+    "count": 2,
+    "example": "Águas aromatizadas (Chá frio): Frutos vermelhos, Maçã canela, Hortelã"
+   },
+   {
+    "item": "aguas aromatizadas hortela e tangerina",
+    "count": 1,
+    "example": "Águas aromatizadas (Chá frio): Hortelã e Tangerina"
+   },
+   {
+    "item": "aguas aromatizadas hortela frutos vermelhos",
+    "count": 9,
+    "example": "Águas aromatizadas (Chá frio) Hortelã, Frutos vermelhos…"
+   },
+   {
+    "item": "aguas aromatizadas hortela frutos vermelhos e maca canela",
+    "count": 1,
+    "example": "Águas aromatizadas (Chá frio) Hortelã, Frutos vermelhos e Maçã Canela"
+   },
+   {
+    "item": "aguas aromatizadas hortela frutos vermelhos laranja e gengibre",
+    "count": 4,
+    "example": "Águas aromatizadas Hortelã, Frutos vermelhos, Laranja e gengibre"
+   },
+   {
+    "item": "aguas aromatizadas laranja canela e frutos vermelhos",
+    "count": 1,
+    "example": "Águas aromatizadas, laranja & canela e frutos vermelhos"
+   },
+   {
+    "item": "aguas aromatizadas maca canela",
+    "count": 6,
+    "example": "Águas aromatizadas (Chá frio): Maçã canela"
+   },
+   {
+    "item": "aguas aromatizadas maca e canela",
+    "count": 1,
+    "example": "Águas aromatizadas (Chá frio): Maçã e Canela"
+   },
+   {
+    "item": "aguas das pedras",
+    "count": 1,
+    "example": "Águas das Pedras"
+   },
+   {
+    "item": "aguas engarrafada",
+    "count": 3,
+    "example": "Águas Engarrafada"
+   },
+   {
+    "item": "aguas engarrafadas",
+    "count": 3,
+    "example": "Águas engarrafadas"
+   },
+   {
+    "item": "argolas de chocolate",
+    "count": 2,
+    "example": "Argolas de Chocolate"
+   },
+   {
+    "item": "arroz a valenciana",
+    "count": 10,
+    "example": "Arroz á Valenciana"
+   },
+   {
+    "item": "arroz de pato",
+    "count": 40,
+    "example": "Arroz de Pato"
+   },
+   {
+    "item": "arroz de pato c enchidos",
+    "count": 16,
+    "example": "Arroz de Pato c/ enchidos"
+   },
+   {
+    "item": "arroz de pato e quinoa c legumes salteados",
+    "count": 2,
+    "example": "Arroz de Pato e Quinoa c/ Legumes salteados (vegi.)"
+   },
+   {
+    "item": "arroz de pato ou arroz a valenciana",
+    "count": 1,
+    "example": "Arroz de Pato ou Arroz á Valenciana"
+   },
+   {
+    "item": "arroz de pato ou arroz a valenciana e",
+    "count": 1,
+    "example": "Arroz de Pato ou Arroz á Valenciana e"
+   },
+   {
+    "item": "arroz de pato ou arroz de frango caldoso",
+    "count": 1,
+    "example": "Arroz de Pato ou Arroz de Frango caldoso"
+   },
+   {
+    "item": "arroz de pato ou arroz de frango caldoso c moelas",
+    "count": 1,
+    "example": "Arroz de Pato ou Arroz de Frango caldoso c/ moelas"
+   },
+   {
+    "item": "bacalhau c grao de bico",
+    "count": 8,
+    "example": "Bacalhau c/ grão de bico"
+   },
+   {
+    "item": "bacalhau c natas",
+    "count": 49,
+    "example": "Bacalhau c/ Natas"
+   },
+   {
+    "item": "bacalhau c natas e couscous c cogumelos",
+    "count": 2,
+    "example": "Bacalhau c/ Natas e Couscous c/ cogumelos (Vegi.)"
+   },
+   {
+    "item": "bacalhau c natas gratinado",
+    "count": 6,
+    "example": "Bacalhau c/ Natas gratinado"
+   }
+  ],
+  [
+   {
+    "item": "brigadeiros",
+    "count": 4,
+    "example": "Brigadeiros"
+   },
+   {
+    "item": "brownie c nozes ovos moles espetadas de fruta",
+    "count": 2,
+    "example": "Brownie c/ Nozes, Ovos Moles, Espetadas de Fruta"
+   },
+   {
+    "item": "carne arroz a valenciana",
+    "count": 1,
+    "example": "Carne: Arroz á Valenciana"
+   },
+   {
+    "item": "carne arroz de pato",
+    "count": 1,
+    "example": "Carne: Arroz de Pato"
+   },
+   {
+    "item": "carne carne de porco estufada c arroz",
+    "count": 1,
+    "example": "Carne: Carne de Porco Estufada c/ Arroz"
+   },
+   {
+    "item": "carne de porco estufada c arroz",
+    "count": 1,
+    "example": "Carne de Porco Estufada c/ Arroz"
+   },
+   {
+    "item": "chamucas",
+    "count": 2,
+    "example": "Chamuças"
+   },
+   {
+    "item": "chamucas c ananas",
+    "count": 1,
+    "example": "Chamuças c/ Ananás"
+   },
+   {
+    "item": "chamucas de frango",
+    "count": 6,
+    "example": "Chamuças de frango (frito)"
+   },
+   {
+    "item": "chamucas de frango c ananas",
+    "count": 1,
+    "example": "Chamuças de frango c/ Ananás"
+   },
+   {
+    "item": "chamucas de legumes",
+    "count": 1,
+    "example": "Chamuças de legumes"
+   },
+   {
+    "item": "chamucas de vegetais",
+    "count": 4,
+    "example": "Chamuças de vegetais"
+   },
+   {
+    "item": "chamucas de vegetais c ananas grelhado",
+    "count": 1,
+    "example": "Chamuças de vegetais c/ ananás grelhado"
+   },
+   {
+    "item": "chamucas de vegetais c azeitona",
+    "count": 4,
+    "example": "Chamuças de vegetais c/ azeitona"
+   },
+   {
+    "item": "chamucas vegi",
+    "count": 4,
+    "example": "Chamuças vegi"
+   },
+   {
+    "item": "cheesecake de frutos vermelhos limao",
+    "count": 1,
+    "example": "Cheesecake de frutos vermelhos / Limão (copo)"
+   },
+   {
+    "item": "cookies de chocolate",
+    "count": 1,
+    "example": "Cookies de chocolate"
+   },
+   {
+    "item": "couscous c cogumelos",
+    "count": 4,
+    "example": "Couscous c/ cogumelos"
+   },
+   {
+    "item": "couscous com legumes salteados",
+    "count": 1,
+    "example": "Couscous com legumes Salteados"
+   },
+   {
+    "item": "creme de cenoura",
+    "count": 23,
+    "example": "Creme de Cenoura (quente no copo) (veg.)"
+   },
+   {
+    "item": "creme de couve flor",
+    "count": 7,
+    "example": "Creme de Couve Flor (quente no copo) (veg.)"
+   },
+   {
+    "item": "creme de couve flor ou creme de cenoura ou creme de legumes e",
+    "count": 1,
+    "example": "Creme de Couve flor ou Creme de Cenoura ou Creme de Legumes e"
+   },
+   {
+    "item": "creme de legumes",
+    "count": 10,
+    "example": "Creme de Legumes (quente no copo) (veg.)"
+   },
+   {
+    "item": "creme de legumes c toque de hortela",
+    "count": 2,
+    "example": "Creme de Legumes c/ toque de hortelã (servido em copo) (Vegan)"
+   },
+   {
+    "item": "croissant brioche c fiambre",
+    "count": 14,
+    "example": "Croissant Brioche c/ Fiambre"
+   },
+   {
+    "item": "croissant brioche c queijo",
+    "count": 14,
+    "example": "Croissant Brioche c/ Queijo (veg.)"
+   },
+   {
+    "item": "croissant brioche c queijo e c fiambre",
+    "count": 2,
+    "example": "Croissant Brioche c/ Queijo (veg.) e c/ Fiambre"
+   },
+   {
+    "item": "croissant brioche c queijo e croissant brioche c fiambre",
+    "count": 7,
+    "example": "Croissant Brioche c/ Queijo (veg.) e Croissant Brioche c/ Fiambre"
+   },
+   {
+    "item": "croissant brioche ou mini pao c fiambre",
+    "count": 7,
+    "example": "Croissant brioche ou mini pão c/ Fiambre"
+   },
+   {
+    "item": "croissant brioche ou mini pao c queijo",
+    "count": 7,
+    "example": "Croissant brioche ou mini pão c/ Queijo (veg.)"
+   },
+   {
+    "item": "croissant c fiambre",
+    "count": 49,
+    "example": "Croissant c/ Fiambre"
+   },
+   {
+    "item": "croissant c queijo",
+    "count": 46,
+    "example": "Croissant c/ Queijo (veg.)"
+   },
+   {
+    "item": "croissant fiambre",
+    "count": 3,
+    "example": "Croissant Fiambre"
+   },
+   {
+    "item": "croissant folhado c fiambre",
+    "count": 2,
+    "example": "Croissant folhado c/ Fiambre"
+   },
+   {
+    "item": "croissant folhado c queijo",
+    "count": 2,
+    "example": "Croissant folhado c/ Queijo (veg.)"
+   },
+   {
+    "item": "croissant folhado c queijo e croissant folhado c fiambre",
+    "count": 4,
+    "example": "Croissant folhado c/ Queijo (veg.) e Croissant folhado c/ Fiambre"
+   },
+   {
+    "item": "croissant ou mini pao de sementes c fiambre",
+    "count": 1,
+    "example": "Croissant ou mini pão de sementes c/ Fiambre"
+   },
+   {
+    "item": "croissant ou mini pao de sementes c queijo",
+    "count": 1,
+    "example": "Croissant ou mini pão de sementes c/ Queijo (veg.)"
+   },
+   {
+    "item": "croissant queijo",
+    "count": 3,
+    "example": "Croissant Queijo"
+   },
+   {
+    "item": "croissant simples",
+    "count": 25,
+    "example": "Croissant simples"
+   }
+  ],
+  [
+   {
+    "item": "sandes de panado de frango ou omelete c alfece e queijo",
+    "count": 5,
+    "example": "Sandes de Panado de frango ou Omelete c/ Alfece e queijo"
+   },
+   {
+    "item": "sandes c alface pate de frango de atum ou humus c azeitona",
+    "count": 5,
+    "example": "Sandes c/ alface: patê de frango, de atum ou húmus c/ azeitona"
+   },
+   {
+    "item": "sandes de panado de frango alfece e queijo",
+    "count": 2,
+    "example": "Sandes de Panado de Frango Alfece e Queijo"
+   },
+   {
+    "item": "wrap de pate de atum alface e cenoura",
+    "count": 1,
+    "example": "Wrap de Patê de Atum Alface e Cenoura"
+   },
+   {
+    "item": "sandes c alface pate de frango delicias",
+    "count": 1,
+    "example": "Sandes c/ alface: patê de frango, delícias"
+   },
+   {
+    "item": "sandes c alface panado de porco filete de peixe",
+    "count": 1,
+    "example": "Sandes c/ alface: panado de porco, filete de peixe"
+   },
+   {
+    "item": "sandes c alface omelete c fiambre ou queijo e simples",
+    "count": 1,
+    "example": "Sandes c/ alface: Omelete c/ fiambre ou queijo e simples"
+   },
+   {
+    "item": "sandes c alface panado de frango filete de peixe",
+    "count": 1,
+    "example": "Sandes c/ alface: panado de frango, filete de peixe"
+   },
+   {
+    "item": "sandes de pate de atum alface e cenoura",
+    "count": 1,
+    "example": "Sandes de Patê de Atum Alface e Cenoura"
+   },
+   {
+    "item": "sandes de guacamole c cenoura queijo e alface",
+    "count": 1,
+    "example": "Sandes de Guacamole c/ cenoura, queijo e alface"
+   },
+   {
+    "item": "sandes de panado de frango ou omelete c alface e queijo",
+    "count": 1,
+    "example": "Sandes de Panado de frango ou Omelete c/ Alface e queijo"
+   },
+   {
+    "item": "sandes de filete de pescada c alface",
+    "count": 1,
+    "example": "Sandes de filete de pescada c/ alface"
+   },
+   {
+    "item": "dia 14 e 21 sandes c alface panado de porco filete de peixe pera agua sumo compal mini kitkat",
+    "count": 1,
+    "example": "Dia 14 e 21: Sandes c/ alface: panado de porco, filete de peixe; Pêra, Água, Sumo Compal, mini kitkat (ou similar)"
+   },
+   {
+    "item": "lunch box 5 saco reutilizavel 1 salada composta embalada sandes c alface pate de frango de atum ou humus c azeitona brownie c nozes maca banana agua sumo compal",
+    "count": 1,
+    "example": "Lunch Box 5*: Saco reutilizável 1; Salada composta embalada (tempero, talher de madeira); Sandes c/ alface: patê de frango, de atum ou húmus c/ azeitona; Brownie c/ nozes; Maçã; Banana; Água; Sumo Compal"
+   },
+   {
+    "item": "lunch box 4 saco reutilizavel salada composta embalada sandes c alface pate de frango de atum ou humus c azeitona brownie c nozes maca agua de sumo compal",
+    "count": 1,
+    "example": "Lunch Box 4*: Saco reutilizável; Salada composta embalada (tempero, talher de madeira); Sandes c/ alface: patê de frango, de atum ou húmus c/ azeitona; Brownie c/ nozes; Maçã; Água de; Sumo Compal"
+   },
+   {
+    "item": "lunch box 3 saco reutilizavel sandes c alface pate de frango de atum ou humus c azeitona brownie c nozes maca agua de sumo compal",
+    "count": 1,
+    "example": "Lunch Box 3*: Saco reutilizável; Sandes c/ alface: patê de frango, de atum ou húmus c/ azeitona; Brownie c/ nozes; Maçã; Água de; Sumo Compal"
+   },
+   {
+    "item": "lunch box 2 saco reutilizavel sandes c alface pate de frango de atum ou humus c azeitona maca agua sumo compal",
+    "count": 1,
+    "example": "Lunch Box 2*: Saco reutilizável; Sandes c/ alface: patê de frango, de atum ou húmus c/ azeitona; Maçã; Água; Sumo Compal"
+   },
+   {
+    "item": "lunch box 1 saco reutilizavel sandes c alface pate de frango de atum ou humus c azeitona maca agua",
+    "count": 1,
+    "example": "Lunch Box 1*: Saco reutilizável; Sandes c/ alface: patê de frango, de atum ou húmus c/ azeitona; Maçã; Água"
+   }
+  ],
+  [
+   {
+    "item": "sangria vinho tinto c laranja e canela jarro 15 lts",
+    "count": 3,
+    "example": "Sangria vinho Tinto c/ laranja e canela Jarro 15 lts"
+   },
+   {
+    "item": "sangria vinho tinto c laranja e canela jarro",
+    "count": 1,
+    "example": "Sangria vinho Tinto c/ laranja e canela Jarro"
+   }
+  ],
+  [
+   {
+    "item": "peixe pescada primavera",
+    "count": 1,
+    "example": "Peixe: Pescada Primavera"
+   },
+   {
+    "item": "pescada primavera",
+    "count": 1,
+    "example": "Pescada Primavera"
+   }
+  ],
+  [
+   {
+    "item": "lasanha de frango ou vitela",
+    "count": 1,
+    "example": "Lasanha de Frango ou Vitela"
+   },
+   {
+    "item": "jardineira de frango ou vitela",
+    "count": 1,
+    "example": "Jardineira de Frango ou Vitela"
+   }
+  ]
+ ]
+}
