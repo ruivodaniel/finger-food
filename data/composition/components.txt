@@ -1,0 +1,305 @@
+# What each component is made of, read by hand from its name. One line per component:
+#   name = ingredient; ingredient; ...
+# A leading "!" marks the list as the whole composition (a raw single thing). Without it the list is partial:
+# what the name tells, not what a label would. Names are terms of the ingredients tree (data/ontology-v04, English).
+# Lines under [materials] name terms of the materials tree.
+
+# bread and bakery
+pão = White wheat flour; Water; Baker yeast; Salt
+pão de leite = White wheat flour; Cow milk; Butter; Sugar; Baker yeast; Chicken egg
+pão de centeio = Rye flour; White wheat flour; Water; Baker yeast; Salt
+pão de sementes = White wheat flour; Sesame seed; Sunflower seed; Flaxseed; Water; Baker yeast; Salt
+pão integral = Whole wheat flour; Water; Baker yeast; Salt
+pão colorido = White wheat flour; Water; Baker yeast; Salt; Beetroot; Spinach
+pão de queijo = Cassava flour; Cow milk; Chicken egg; Salt
+croissant = White wheat flour; Butter; Cow milk; Sugar; Baker yeast; Chicken egg; Salt
+croissant brioche = White wheat flour; Butter; Cow milk; Sugar; Baker yeast; Chicken egg; Salt
+croissant folhado = White wheat flour; Butter; Sugar; Baker yeast; Salt
+pão de cachorro = White wheat flour; Water; Baker yeast; Sugar; Salt
+pão de hambúrguer = White wheat flour; Water; Baker yeast; Sugar; Salt; Sesame seed
+pão de sandes = White wheat flour; Water; Baker yeast; Salt
+wrap (tortilha de trigo) = White wheat flour; Water; Sunflower oil; Salt
+tortilha de milho = Corn flour; Water; Salt
+taco = Corn flour; Water; Sunflower oil; Salt
+focaccia = White wheat flour; Olive oil; Water; Baker yeast; Salt; Rosemary
+tosta = White wheat flour; Water; Baker yeast; Salt
+gressino = White wheat flour; Olive oil; Water; Baker yeast; Salt
+broa = Corn flour; Rye flour; Water; Baker yeast; Salt
+pão de rio maior = White wheat flour; Water; Baker yeast; Salt
+pão sem glúten = Rice flour; Corn starch; Water; Baker yeast; Salt
+bolacha de arroz = Rice; Salt
+bolacha de milho = Maize; Salt
+panqueca = White wheat flour; Cow milk; Chicken egg; Sugar; Butter
+panqueca de centeio = Rye flour; Cow milk; Chicken egg; Sugar; Butter
+
+# meat
+fiambre = Pork meat; Salt; Sodium nitrite
+bacon = Pork belly; Salt; Sodium nitrite
+chouriço = Pork meat; Pork fat; Paprika; Garlic; Salt; Wine
+salsicha = Pork meat; Salt; Sodium nitrite
+enchidos para tábua (sortido) = Pork meat; Pork fat; Paprika; Garlic; Salt
+frango (peito) = !Chicken meat
+panado de frango = Chicken meat; White wheat flour; Chicken egg; Salt; Sunflower oil
+panado de porco = Pork meat; White wheat flour; Chicken egg; Salt; Sunflower oil
+pernil de porco = !Pork leg
+hambúrguer de carne = Beef; Salt; Onion
+vitela = !Veal
+lombo de porco = !Pork meat
+leitão = !Pork meat
+moelas = !Chicken gizzard
+
+# dairy and eggs
+queijo = Cow milk; Salt
+queijo creme = Cow milk; Cream; Salt
+queijo mozarela = Cow milk; Salt
+queijo camembert = Cow milk; Salt
+queijo chévre = Goat milk; Salt
+queijos para tábua (sortido) = Cow milk; Goat milk; Sheep milk; Salt
+ovo = !Chicken egg
+iogurte = Cow milk
+natas = !Cream
+
+# spreads and sauces
+patê de frango = Chicken meat; Cream; Butter; Onion; Salt
+patê de atum = Tuna; Chicken egg; Sunflower oil; Onion; Salt
+guacamole = Avocado; Onion; Tomato; Lemon; Coriander leaf; Salt
+húmus = Chickpea; Sesame seed; Olive oil; Lemon; Garlic; Salt
+patê de azeitona = Olive; Olive oil; Garlic
+maionese de wasabi = Chicken egg; Sunflower oil; Wasabi; Vinegar; Salt
+molho pesto = Basil; Pine nut; Olive oil; Cow milk; Garlic; Salt
+compota = Sugar; Strawberry
+caramelo salgado = Sugar; Cream; Butter; Salt
+
+# fish and seafood
+hambúrguer de salmão = Salmon; White wheat flour; Salt
+hambúrguer de atum = Tuna; White wheat flour; Salt
+atum = Tuna; Olive oil; Salt
+salmão fumado = Salmon; Salt
+salmão (lombo) = !Salmon
+bacalhau = Cod; Salt
+pescada (filete) = !Hake
+camarão = !Shrimp
+delícias do mar = Hake; Wheat starch; Chicken egg white; Sugar; Salt; Crab
+lulas = !Squid
+sushi (peças) = Rice; Salmon; Tuna; Seaweed; Rice wine vinegar; Sugar; Soybean; White wheat flour
+
+# vegetables and herbs
+hambúrguer de cogumelos = Mushroom; Chickpea; Onion; White wheat flour; Salt
+alface = !Lettuce
+rúcula = !Rocket
+cenoura = !Carrot
+tomate cherry = !Cherry tomato
+tomate = !Tomato
+azeitona = Olive; Salt; Water
+cogumelos = !Mushroom
+cebola = !Onion
+salsa = !Parsley
+cebolinho = !Chive
+manjericão = !Basil
+hortelã = !Mint
+alecrim = !Rosemary
+milho = Sweet corn; Water; Salt
+couve roxa = !Red cabbage
+couve flor = !Cauliflower
+couve (caldo verde) = !Kale
+beterraba = !Beetroot
+legumes (mistura) = Carrot; Pea; Green bean; Cauliflower
+ervilhas = !Pea
+batata = !Potato
+gengibre = !Ginger
+
+# grocery
+batata palha = Potato; Sunflower oil; Salt
+feijão frade = !Cowpea
+grão de bico = !Chickpea
+quinoa = !Quinoa
+couscous = !Durum wheat
+arroz = !Rice
+massa = Durum wheat; Water
+soja (bolonhesa / jardineira) = !Soybean
+amendoins = Peanut; Salt
+tremoços = Lupin; Salt; Water
+frutos secos (mistura) = Almond; Walnut; Hazelnut; Cashew nut; Raisin
+granola = Whole oats; Honey; Almond; Sunflower oil; Raisin
+azeite = !Olive oil
+alcaparras = Caper; Salt; Vinegar
+canela = !Cinnamon
+
+# fruit
+mirtilos = !Blueberry
+frutos vermelhos = Strawberry; Raspberry; Blueberry; Blackberry
+banana = !Banana
+maçã = !Apple
+pêra = !Pear
+tangerina = !Tangerine
+laranja = !Orange
+limão = !Lemon
+frutas para sangria = Orange; Apple; Lemon; Peach
+morango = !Strawberry
+uva = !Grape
+melão = !Melon
+ananás = !Pineapple
+kiwi = !Kiwi fruit
+
+# desserts
+ovos moles = Chicken egg yolk; Sugar; Water
+fios de ovos = Chicken egg yolk; Sugar; Water
+mousse de chocolate = Cocoa mass; Sugar; Chicken egg; Butter; Cream
+cheesecake de frutos vermelhos = Cow milk; Cream; Sugar; White wheat flour; Butter; Chicken egg; Strawberry; Raspberry; Gelatin
+cheesecake de limão = Cow milk; Cream; Sugar; White wheat flour; Butter; Chicken egg; Lemon; Gelatin
+tiramisu = Cow milk; Cream; Chicken egg; Sugar; White wheat flour; Coffee bean; Cocoa powder; Wine
+natas do céu = Cream; Chicken egg; Sugar; White wheat flour; Butter
+leite creme = Cow milk; Chicken egg yolk; Sugar; Corn starch; Lemon; Cinnamon
+semifrio de bolacha = Cream; Cow milk; Sugar; White wheat flour; Butter; Gelatin
+
+# fried
+croquete de vitela = Veal; White wheat flour; Cow milk; Butter; Chicken egg; Onion; Sunflower oil; Salt
+rissol de camarão = Shrimp; White wheat flour; Cow milk; Butter; Chicken egg; Onion; Sunflower oil; Salt
+bolinho de bacalhau = Cod; Potato; Chicken egg; Onion; Parsley; Sunflower oil; Salt
+chamuça de frango = Chicken meat; White wheat flour; Onion; Sunflower oil; Coriander leaf; Salt
+chamuça de vegetais = White wheat flour; Potato; Pea; Carrot; Onion; Sunflower oil; Salt
+falafel = Chickpea; Onion; Garlic; Parsley; Coriander leaf; Sunflower oil; Salt
+rolinho primavera = White wheat flour; Cabbage; Carrot; Soybean; Sunflower oil; Salt
+bolinha de grão de bico = Chickpea; Onion; Garlic; Sunflower oil; Salt
+
+# savoury pastry
+empada de frango = White wheat flour; Butter; Chicken meat; Chicken egg; Onion; Salt
+empada de alheira = White wheat flour; Butter; Pork meat; Chicken meat; Garlic; Chicken egg; Salt
+empada de cogumelos = White wheat flour; Butter; Mushroom; Cream; Onion; Chicken egg; Salt
+empada de legumes = White wheat flour; Butter; Carrot; Pea; Onion; Chicken egg; Salt
+vol-au-vent (cesto) = White wheat flour; Butter; Water; Salt
+folhado misto = White wheat flour; Butter; Pork meat; Cow milk; Chicken egg; Salt
+folhado de salsicha = White wheat flour; Butter; Pork meat; Chicken egg; Salt
+quiche de fiambre = White wheat flour; Butter; Chicken egg; Cream; Cow milk; Pork meat; Salt
+quiche de cogumelos = White wheat flour; Butter; Chicken egg; Cream; Cow milk; Mushroom; Salt
+tarte de atum = White wheat flour; Butter; Tuna; Chicken egg; Cream; Onion; Salt
+tarte de camembert = White wheat flour; Butter; Cow milk; Chicken egg; Cream; Salt
+tarte de chévre = White wheat flour; Butter; Goat milk; Chicken egg; Cream; Salt
+pizza (mini) = White wheat flour; Tomato; Cow milk; Olive oil; Baker yeast; Salt
+
+# cakes and sweets
+brownie c/ nozes = Cocoa mass; Sugar; Butter; Chicken egg; White wheat flour; Walnut
+salame de chocolate = Cocoa powder; Sugar; Butter; Chicken egg; White wheat flour
+tarte de amêndoa = Almond; Sugar; Butter; Cow milk; White wheat flour; Chicken egg
+tarte basca de frutos vermelhos = Cow milk; Cream; Sugar; Chicken egg; White wheat flour; Strawberry; Raspberry
+torta de laranja = Chicken egg; Sugar; Orange; Corn starch
+torta de ovos = Chicken egg; Sugar; White wheat flour
+bolo de bolacha = White wheat flour; Butter; Sugar; Chicken egg; Coffee bean
+bolo brigadeiro = Cocoa powder; Cow milk; Sugar; Butter; Chicken egg; White wheat flour
+bolo de chocolate = Cocoa powder; Sugar; Butter; Chicken egg; White wheat flour; Cow milk
+bolo rei = White wheat flour; Butter; Sugar; Chicken egg; Baker yeast; Almond; Walnut; Pine nut; Raisin; Wine
+pastel de nata = White wheat flour; Butter; Cow milk; Chicken egg yolk; Sugar; Cinnamon; Lemon
+bola de berlim = White wheat flour; Chicken egg; Sugar; Butter; Cow milk; Baker yeast; Sunflower oil
+palmier = White wheat flour; Butter; Sugar
+mil folhas = White wheat flour; Butter; Cow milk; Chicken egg; Sugar
+húngaro = White wheat flour; Butter; Sugar; Chicken egg; Cocoa mass
+raiva = White wheat flour; Butter; Sugar; Chicken egg; Cinnamon
+bolachinha bacalhau = White wheat flour; Butter; Sugar; Chicken egg
+bolacha de manteiga = White wheat flour; Butter; Sugar; Chicken egg
+bolachinha de aveia = Whole oats; White wheat flour; Butter; Sugar; Chicken egg
+cookie de chocolate = White wheat flour; Butter; Sugar; Chicken egg; Cocoa mass
+donut = White wheat flour; Sugar; Chicken egg; Cow milk; Butter; Baker yeast; Sunflower oil
+argola de chocolate = White wheat flour; Sugar; Chicken egg; Cow milk; Butter; Baker yeast; Sunflower oil; Cocoa mass
+rosquinha de chocolate de leite = White wheat flour; Sugar; Butter; Chicken egg; Cocoa mass; Cow milk
+rosquinha de chocolate preto = White wheat flour; Sugar; Butter; Chicken egg; Cocoa mass
+folhado de chocolate = White wheat flour; Butter; Sugar; Cocoa mass
+bolinho de coco = Coconut; Sugar; Chicken egg
+bolinho de feijão = Bean; Sugar; Chicken egg; Almond; White wheat flour
+brigadeiro = Cow milk; Sugar; Cocoa powder; Butter
+macaron = Almond; Sugar; Chicken egg white
+rabanada = White wheat flour; Cow milk; Chicken egg; Sugar; Cinnamon; Sunflower oil
+queque de laranja = White wheat flour; Sugar; Chicken egg; Butter; Orange
+queque de chocolate = White wheat flour; Sugar; Chicken egg; Butter; Cocoa powder
+queque de aveia = Whole oats; White wheat flour; Sugar; Chicken egg; Butter
+queque de iogurte = White wheat flour; Sugar; Chicken egg; Cow milk; Sunflower oil
+queque de cenoura = White wheat flour; Sugar; Chicken egg; Carrot; Sunflower oil
+queque de caramelo = White wheat flour; Sugar; Chicken egg; Butter; Cream
+queque de ananás = White wheat flour; Sugar; Chicken egg; Butter; Pineapple
+queque de maçã = White wheat flour; Sugar; Chicken egg; Butter; Apple
+queque de noz = White wheat flour; Sugar; Chicken egg; Butter; Walnut
+queque de frutos vermelhos = White wheat flour; Sugar; Chicken egg; Butter; Strawberry; Raspberry
+queque de pistacho = White wheat flour; Sugar; Chicken egg; Butter; Pistachio
+
+# main dishes
+arroz de pato = Rice; Duck meat; Pork meat; Onion; Garlic; Olive oil; Salt
+arroz á valenciana = Rice; Chicken meat; Pork meat; Shrimp; Pea; Capsicum pepper; Onion; Olive oil; Salt
+bacalhau c/ natas = Cod; Potato; Cream; Cow milk; Onion; White wheat flour; Butter; Olive oil; Salt
+bacalhau c/ grão de bico = Cod; Chickpea; Onion; Garlic; Olive oil; Chicken egg; Parsley; Salt
+bacalhau desfiado á portuguesa = Cod; Potato; Onion; Garlic; Olive oil; Chicken egg; Olive; Parsley; Salt
+lombo de bacalhau assado = Cod; Olive oil; Garlic; Onion; Salt
+bifanas estufadas = Pork meat; Garlic; Wine; Olive oil; Paprika; Salt
+bifanas de frango = Chicken meat; Garlic; Wine; Olive oil; Paprika; Salt
+camarão cozido = Shrimp; Salt; Water
+couscous c/ cogumelos = Durum wheat; Mushroom; Onion; Olive oil; Salt
+couscous c/ legumes salteados = Durum wheat; Carrot; Courgette; Capsicum pepper; Onion; Olive oil; Salt
+feijoada de cogumelos = Bean; Mushroom; Onion; Garlic; Tomato; Carrot; Olive oil; Salt
+feijão frade c/ atum = Cowpea; Tuna; Onion; Parsley; Olive oil; Vinegar; Chicken egg; Salt
+feijão frade c/ cogumelos salteados = Cowpea; Mushroom; Onion; Garlic; Olive oil; Parsley; Salt
+feijão frade c/ quinoa de legumes = Cowpea; Quinoa; Carrot; Courgette; Onion; Olive oil; Salt
+frango assado = Chicken meat; Garlic; Paprika; Olive oil; Salt
+grão de bico c/ quinoa de legumes = Chickpea; Quinoa; Carrot; Courgette; Onion; Olive oil; Salt
+jardineira de cogumelos = Mushroom; Potato; Carrot; Pea; Onion; Tomato; Olive oil; Salt
+jardineira de frango = Chicken meat; Potato; Carrot; Pea; Onion; Tomato; Olive oil; Salt
+jardineira de grão de bico = Chickpea; Potato; Carrot; Pea; Onion; Tomato; Olive oil; Salt
+jardineira de lulas = Squid; Potato; Carrot; Pea; Onion; Tomato; Olive oil; Wine; Salt
+jardineira de soja = Soybean; Potato; Carrot; Pea; Onion; Tomato; Olive oil; Salt
+jardineira de vitela = Veal; Potato; Carrot; Pea; Onion; Tomato; Olive oil; Wine; Salt
+lasanha de frango = Durum wheat; Chicken egg; Chicken meat; Cow milk; Butter; White wheat flour; Tomato; Onion; Salt
+lasanha de vitela = Durum wheat; Chicken egg; Veal; Cow milk; Butter; White wheat flour; Tomato; Onion; Salt
+leitão assado á bairrada = Pork meat; Garlic; Black pepper; Pork fat; Salt; Wine
+lombo de porco assado = Pork meat; Garlic; Wine; Olive oil; Paprika; Salt
+lombo de salmão = Salmon; Olive oil; Lemon; Salt
+salmão assado = Salmon; Olive oil; Lemon; Salt
+magret de pato = Duck meat; Salt; Black pepper
+moelas estufadas = Chicken gizzard; Onion; Garlic; Tomato; Wine; Olive oil; Salt
+pescada primavera = Hake; Carrot; Pea; Potato; Chicken egg; Olive oil; Salt
+quinoa c/ legumes salteados = Quinoa; Carrot; Courgette; Capsicum pepper; Onion; Olive oil; Salt
+tabulê marroquino = Durum wheat; Tomato; Cucumber; Parsley; Mint; Lemon; Olive oil; Salt
+batatas assadas = Potato; Olive oil; Garlic; Salt
+batatas a murro = Potato; Olive oil; Garlic; Salt
+batatas fritas = Potato; Sunflower oil; Salt
+puré de ervilhas = Pea; Butter; Cow milk; Salt
+puré de maçã = Apple; Sugar; Lemon
+legumes salteados = Carrot; Courgette; Capsicum pepper; Onion; Olive oil; Garlic; Salt
+cogumelos salteados = Mushroom; Garlic; Olive oil; Parsley; Salt
+omelete = Chicken egg; Olive oil; Salt
+cogumelos de cebolada = Mushroom; Onion; Garlic; Olive oil; Wine; Salt
+
+# soups and salads
+creme de cenoura = Carrot; Potato; Onion; Olive oil; Water; Salt
+creme de couve flor = Cauliflower; Potato; Onion; Olive oil; Water; Salt
+creme de legumes = Carrot; Potato; Courgette; Onion; Olive oil; Water; Salt
+sopa de legumes = Carrot; Potato; Cabbage; Onion; Olive oil; Water; Salt
+caldo verde = Kale; Potato; Onion; Garlic; Olive oil; Pork meat; Water; Salt
+salada composta de atum = Tuna; Lettuce; Tomato; Chicken egg; Sweet corn; Carrot; Olive oil; Salt
+salada composta de frango = Chicken meat; Lettuce; Tomato; Sweet corn; Carrot; Olive oil; Salt
+salada composta vegetariana = Lettuce; Tomato; Sweet corn; Carrot; Chickpea; Olive oil; Salt
+
+# drinks
+água (garrafa 0.5 l) = !Mineral water
+água (garrafa de vidro) = !Mineral water
+água das pedras = !Mineral water; Carbon dioxide
+sumo compal = Water; Sugar; Orange; Peach; Pear
+sumo bongo = Water; Sugar; Apple; Orange; Banana; Pineapple; Mango
+refrigerante = Water; Sugar; Carbon dioxide; Citric acid
+café (cápsula) = !Coffee bean
+descafeinado (cápsula) = !Coffee bean
+chá (saqueta) = !Tea leaf
+cerveja sagres = !Beer
+cerveja super bock = !Beer
+espumante = Wine; Carbon dioxide; Sulphites
+vinho branco = Wine; Sulphites
+vinho tinto = Wine; Sulphites
+vinho do porto = Wine; Ethanol; Sulphites
+
+[materials]
+pau de espetada = !Bamboo
+palito (espeto curto) = !Wood
+copo (bolo no copo / sopa) = !Plastic
+flute de acrílico = !Acrylic
+tacinha = !Plastic
+chávena de café = !Ceramic
+jarro = !Glass
+tábua = !Wood
+saco reutilizável = !Fabric
+talher de madeira = !Wood

@@ -15,7 +15,9 @@
     "prettier": "prettier --write . --ignore-path ../../../.prettierignore",
     "docker:up:main": "docker compose -f docker-compose.yml up -d",
     "docker:down:main": "docker compose -f docker-compose.yml down",
-    "smsdev": "npx @relay-works/sms-dev start"
+    "smsdev": "npx @relay-works/sms-dev start",
+    "ff:load": "tsx scripts/finger-food/load-catalogue.ts && tsx scripts/finger-food/load-templates.ts && tsx scripts/finger-food/load-history.ts",
+    "ff:check": "tsx scripts/finger-food/check.ts"
   },
   "dependencies": {
     "@configs/access-control": "workspace:*",

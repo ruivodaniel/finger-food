@@ -1,0 +1,5098 @@
+{
+ "menuItems": [
+  {
+   "base": "espetadas de fruta",
+   "filling": null,
+   "name": "espetadas de fruta",
+   "uses": 311,
+   "components": [
+    {
+     "name": "morango",
+     "quantity": 20,
+     "for_every": 1
+    },
+    {
+     "name": "uva",
+     "quantity": 20,
+     "for_every": 1
+    },
+    {
+     "name": "melão",
+     "quantity": 20,
+     "for_every": 1
+    },
+    {
+     "name": "ananás",
+     "quantity": 20,
+     "for_every": 1
+    },
+    {
+     "name": "kiwi",
+     "quantity": 20,
+     "for_every": 1
+    },
+    {
+     "name": "pau de espetada",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "fruta",
+   "filling": null,
+   "name": "fruta",
+   "uses": 73,
+   "components": [
+    {
+     "name": "banana",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "maçã",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "pêra",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "tangerina",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "fruta",
+   "filling": "banana",
+   "name": "fruta · banana",
+   "uses": 9,
+   "components": [
+    {
+     "name": "banana",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "fruta",
+   "filling": "maçã",
+   "name": "fruta · maçã",
+   "uses": 15,
+   "components": [
+    {
+     "name": "maçã",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "fruta",
+   "filling": "pêra",
+   "name": "fruta · pêra",
+   "uses": 1,
+   "components": [
+    {
+     "name": "pêra",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "fruta",
+   "filling": "tangerina",
+   "name": "fruta · tangerina",
+   "uses": 0,
+   "components": [
+    {
+     "name": "tangerina",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "café",
+   "filling": null,
+   "name": "café",
+   "uses": 10,
+   "components": [
+    {
+     "name": "café (cápsula)",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "chávena de café",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 0.6,
+   "vat_rate": 13
+  },
+  {
+   "base": "café",
+   "filling": "café",
+   "name": "café café",
+   "uses": 230,
+   "components": [
+    {
+     "name": "café (cápsula)",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "chávena de café",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 0.6,
+   "vat_rate": 13
+  },
+  {
+   "base": "café",
+   "filling": "descafeinado",
+   "name": "café descafeinado",
+   "uses": 230,
+   "components": [
+    {
+     "name": "descafeinado (cápsula)",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "chávena de café",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 0.6,
+   "vat_rate": 13
+  },
+  {
+   "base": "cerveja",
+   "filling": "sagres",
+   "name": "cerveja sagres",
+   "uses": 31,
+   "components": [
+    {
+     "name": "cerveja sagres",
+     "quantity": 1,
+     "for_every": 0.33
+    }
+   ],
+   "unit": "l",
+   "price": 6.0,
+   "vat_rate": 23
+  },
+  {
+   "base": "cerveja",
+   "filling": "super bock",
+   "name": "cerveja super bock",
+   "uses": 31,
+   "components": [
+    {
+     "name": "cerveja super bock",
+     "quantity": 1,
+     "for_every": 0.33
+    }
+   ],
+   "unit": "l",
+   "price": 6.0,
+   "vat_rate": 23
+  },
+  {
+   "base": "chá",
+   "filling": null,
+   "name": "chá",
+   "uses": 41,
+   "components": [
+    {
+     "name": "chá (saqueta)",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "chávena de café",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 0.6,
+   "vat_rate": 13
+  },
+  {
+   "base": "espumante",
+   "filling": null,
+   "name": "espumante",
+   "uses": 33,
+   "components": [
+    {
+     "name": "espumante",
+     "quantity": 1,
+     "for_every": 0.75
+    },
+    {
+     "name": "flute de acrílico",
+     "quantity": 1,
+     "for_every": 0.1
+    }
+   ],
+   "unit": "l",
+   "price": 33.0,
+   "vat_rate": 23
+  },
+  {
+   "base": "limonada",
+   "filling": "hortelã",
+   "name": "limonada hortelã",
+   "uses": 3,
+   "components": [
+    {
+     "name": "limão",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "hortelã",
+     "quantity": 3,
+     "for_every": 1
+    },
+    {
+     "name": "jarro",
+     "quantity": 1,
+     "for_every": 1.5
+    }
+   ],
+   "unit": "l",
+   "price": 10.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "limonada",
+   "filling": "simples",
+   "name": "limonada simples",
+   "uses": 0,
+   "components": [
+    {
+     "name": "limão",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "jarro",
+     "quantity": 1,
+     "for_every": 1.5
+    }
+   ],
+   "unit": "l",
+   "price": 10.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "refrigerantes",
+   "filling": null,
+   "name": "refrigerantes",
+   "uses": 20,
+   "components": [
+    {
+     "name": "refrigerante",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "l",
+   "price": 10.0,
+   "vat_rate": 23
+  },
+  {
+   "base": "sangria",
+   "filling": "branca c/ frutas",
+   "name": "sangria branca c/ frutas",
+   "uses": 3,
+   "components": [
+    {
+     "name": "vinho branco",
+     "quantity": 1,
+     "for_every": 0.75
+    },
+    {
+     "name": "frutas para sangria",
+     "quantity": 150,
+     "for_every": 1
+    },
+    {
+     "name": "jarro",
+     "quantity": 1,
+     "for_every": 1.5
+    }
+   ],
+   "unit": "l",
+   "price": 8.0,
+   "vat_rate": 23
+  },
+  {
+   "base": "sangria",
+   "filling": "tinta c/ laranja e canela",
+   "name": "sangria tinta c/ laranja e canela",
+   "uses": 4,
+   "components": [
+    {
+     "name": "vinho tinto",
+     "quantity": 1,
+     "for_every": 0.75
+    },
+    {
+     "name": "laranja",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "canela",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "jarro",
+     "quantity": 1,
+     "for_every": 1.5
+    }
+   ],
+   "unit": "l",
+   "price": 8.0,
+   "vat_rate": 23
+  },
+  {
+   "base": "sumo",
+   "filling": "bongo",
+   "name": "sumo de bongo",
+   "uses": 6,
+   "components": [
+    {
+     "name": "sumo bongo",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "l",
+   "price": 10.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "sumo",
+   "filling": "compal",
+   "name": "sumo de compal",
+   "uses": 262,
+   "components": [
+    {
+     "name": "sumo compal",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "l",
+   "price": 10.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "sumo",
+   "filling": "laranja natural",
+   "name": "sumo de laranja natural",
+   "uses": 58,
+   "components": [
+    {
+     "name": "laranja",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "flute de acrílico",
+     "quantity": 1,
+     "for_every": 0.1
+    }
+   ],
+   "unit": "l",
+   "price": 10.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "vinho",
+   "filling": "branco",
+   "name": "vinho branco",
+   "uses": 4,
+   "components": [
+    {
+     "name": "vinho branco",
+     "quantity": 1,
+     "for_every": 0.75
+    }
+   ],
+   "unit": "l",
+   "price": 12.0,
+   "vat_rate": 23
+  },
+  {
+   "base": "vinho",
+   "filling": "porto",
+   "name": "vinho porto",
+   "uses": 5,
+   "components": [
+    {
+     "name": "vinho do porto",
+     "quantity": 1,
+     "for_every": 0.75
+    },
+    {
+     "name": "flute de acrílico",
+     "quantity": 1,
+     "for_every": 0.1
+    }
+   ],
+   "unit": "l",
+   "price": 12.0,
+   "vat_rate": 23
+  },
+  {
+   "base": "vinho",
+   "filling": "tinto",
+   "name": "vinho tinto",
+   "uses": 4,
+   "components": [
+    {
+     "name": "vinho tinto",
+     "quantity": 1,
+     "for_every": 0.75
+    }
+   ],
+   "unit": "l",
+   "price": 12.0,
+   "vat_rate": 23
+  },
+  {
+   "base": "água",
+   "filling": null,
+   "name": "água",
+   "uses": 281,
+   "components": [
+    {
+     "name": "água (garrafa 0.5 l)",
+     "quantity": 1,
+     "for_every": 0.5
+    }
+   ],
+   "unit": "l",
+   "price": 10.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "água aromatizada",
+   "filling": null,
+   "name": "água aromatizada",
+   "uses": 195,
+   "components": [
+    {
+     "name": "jarro",
+     "quantity": 1,
+     "for_every": 1.5
+    }
+   ],
+   "unit": "l",
+   "price": 10.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "água aromatizada",
+   "filling": "frutos vermelhos",
+   "name": "água aromatizada de frutos vermelhos",
+   "uses": 64,
+   "components": [
+    {
+     "name": "frutos vermelhos",
+     "quantity": 15,
+     "for_every": 1
+    },
+    {
+     "name": "jarro",
+     "quantity": 1,
+     "for_every": 1.5
+    }
+   ],
+   "unit": "l",
+   "price": 10.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "água aromatizada",
+   "filling": "hortelã",
+   "name": "água aromatizada de hortelã",
+   "uses": 18,
+   "components": [
+    {
+     "name": "hortelã",
+     "quantity": 3,
+     "for_every": 1
+    },
+    {
+     "name": "jarro",
+     "quantity": 1,
+     "for_every": 1.5
+    }
+   ],
+   "unit": "l",
+   "price": 10.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "água aromatizada",
+   "filling": "hortelã e tangerina",
+   "name": "água aromatizada de hortelã e tangerina",
+   "uses": 1,
+   "components": [
+    {
+     "name": "hortelã",
+     "quantity": 3,
+     "for_every": 1
+    },
+    {
+     "name": "tangerina",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "jarro",
+     "quantity": 1,
+     "for_every": 1.5
+    }
+   ],
+   "unit": "l",
+   "price": 10.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "água aromatizada",
+   "filling": "laranja e canela",
+   "name": "água aromatizada de laranja e canela",
+   "uses": 1,
+   "components": [
+    {
+     "name": "laranja",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "canela",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "jarro",
+     "quantity": 1,
+     "for_every": 1.5
+    }
+   ],
+   "unit": "l",
+   "price": 10.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "água aromatizada",
+   "filling": "laranja e gengibre",
+   "name": "água aromatizada de laranja e gengibre",
+   "uses": 6,
+   "components": [
+    {
+     "name": "laranja",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "gengibre",
+     "quantity": 3,
+     "for_every": 1
+    },
+    {
+     "name": "jarro",
+     "quantity": 1,
+     "for_every": 1.5
+    }
+   ],
+   "unit": "l",
+   "price": 10.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "água aromatizada",
+   "filling": "maçã e canela",
+   "name": "água aromatizada de maçã e canela",
+   "uses": 39,
+   "components": [
+    {
+     "name": "maçã",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "canela",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "jarro",
+     "quantity": 1,
+     "for_every": 1.5
+    }
+   ],
+   "unit": "l",
+   "price": 10.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "água das pedras",
+   "filling": null,
+   "name": "água das pedras",
+   "uses": 3,
+   "components": [
+    {
+     "name": "água das pedras",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "l",
+   "price": 10.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "argolas",
+   "filling": "chocolate",
+   "name": "argolas de chocolate",
+   "uses": 2,
+   "components": [
+    {
+     "name": "argola de chocolate",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "bolachas",
+   "filling": null,
+   "name": "bolachas",
+   "uses": 20,
+   "components": [
+    {
+     "name": "bolacha de manteiga",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "bolachas",
+   "filling": "manteiga",
+   "name": "bolachas c/ manteiga",
+   "uses": 4,
+   "components": [
+    {
+     "name": "bolacha de manteiga",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "bolachas de milho",
+   "filling": "guacamole",
+   "name": "bolachas de milho c/ guacamole",
+   "uses": 2,
+   "components": [
+    {
+     "name": "bolacha de milho",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "guacamole",
+     "quantity": 20,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "bolachinhas",
+   "filling": "aveia",
+   "name": "bolachinhas de aveia",
+   "uses": 1,
+   "components": [
+    {
+     "name": "bolachinha de aveia",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "bolachinhas bacalhaus",
+   "filling": null,
+   "name": "bolachinhas bacalhaus",
+   "uses": 174,
+   "components": [
+    {
+     "name": "bolachinha bacalhau",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "bolas de berlim",
+   "filling": null,
+   "name": "bolas de berlim",
+   "uses": 29,
+   "components": [
+    {
+     "name": "bola de berlim",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "bolinhos",
+   "filling": "coco",
+   "name": "bolinhos de coco",
+   "uses": 5,
+   "components": [
+    {
+     "name": "bolinho de coco",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "bolinhos",
+   "filling": "feijão",
+   "name": "bolinhos de feijão",
+   "uses": 5,
+   "components": [
+    {
+     "name": "bolinho de feijão",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "bolo",
+   "filling": "bolacha",
+   "name": "bolo de bolacha",
+   "uses": 14,
+   "components": [
+    {
+     "name": "bolo de bolacha",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "bolo",
+   "filling": "brigadeiro",
+   "name": "bolo de brigadeiro",
+   "uses": 7,
+   "components": [
+    {
+     "name": "bolo brigadeiro",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "bolo",
+   "filling": "chocolate",
+   "name": "bolo de chocolate",
+   "uses": 2,
+   "components": [
+    {
+     "name": "bolo de chocolate",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "bolo no copo",
+   "filling": null,
+   "name": "bolo no copo",
+   "uses": 33,
+   "components": [
+    {
+     "name": "copo (bolo no copo / sopa)",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.5,
+   "vat_rate": 13
+  },
+  {
+   "base": "bolo no copo",
+   "filling": "bolo de bolacha",
+   "name": "bolo no copo · bolo de bolacha",
+   "uses": 1,
+   "components": [
+    {
+     "name": "bolo de bolacha",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "copo (bolo no copo / sopa)",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.5,
+   "vat_rate": 13
+  },
+  {
+   "base": "bolo no copo",
+   "filling": "brigadeiro",
+   "name": "bolo no copo · brigadeiro",
+   "uses": 1,
+   "components": [
+    {
+     "name": "brigadeiro",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "copo (bolo no copo / sopa)",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.5,
+   "vat_rate": 13
+  },
+  {
+   "base": "bolo no copo",
+   "filling": "cheesecake de frutos vermelhos",
+   "name": "bolo no copo · cheesecake de frutos vermelhos",
+   "uses": 1,
+   "components": [
+    {
+     "name": "cheesecake de frutos vermelhos",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "copo (bolo no copo / sopa)",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.5,
+   "vat_rate": 13
+  },
+  {
+   "base": "bolo no copo",
+   "filling": "mousse de chocolate",
+   "name": "bolo no copo · mousse de chocolate",
+   "uses": 1,
+   "components": [
+    {
+     "name": "mousse de chocolate",
+     "quantity": 80,
+     "for_every": 1
+    },
+    {
+     "name": "copo (bolo no copo / sopa)",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.5,
+   "vat_rate": 13
+  },
+  {
+   "base": "bolo no copo",
+   "filling": "natas do céu",
+   "name": "bolo no copo · natas do céu",
+   "uses": 1,
+   "components": [
+    {
+     "name": "natas do céu",
+     "quantity": 80,
+     "for_every": 1
+    },
+    {
+     "name": "copo (bolo no copo / sopa)",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.5,
+   "vat_rate": 13
+  },
+  {
+   "base": "bolo no copo",
+   "filling": "tiramisu",
+   "name": "bolo no copo · tiramisu",
+   "uses": 1,
+   "components": [
+    {
+     "name": "tiramisu",
+     "quantity": 80,
+     "for_every": 1
+    },
+    {
+     "name": "copo (bolo no copo / sopa)",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.5,
+   "vat_rate": 13
+  },
+  {
+   "base": "bolo rei",
+   "filling": null,
+   "name": "bolo rei",
+   "uses": 1,
+   "components": [
+    {
+     "name": "bolo rei",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "brigadeiros",
+   "filling": null,
+   "name": "brigadeiros",
+   "uses": 105,
+   "components": [
+    {
+     "name": "brigadeiro",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "brownie",
+   "filling": "nozes e caramelo salgado",
+   "name": "brownie c/ nozes e caramelo salgado",
+   "uses": 172,
+   "components": [
+    {
+     "name": "brownie c/ nozes",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "caramelo salgado",
+     "quantity": 8,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "cheesecake",
+   "filling": "frutos vermelhos",
+   "name": "cheesecake de frutos vermelhos",
+   "uses": 1,
+   "components": [
+    {
+     "name": "cheesecake de frutos vermelhos",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.5,
+   "vat_rate": 13
+  },
+  {
+   "base": "cheesecake",
+   "filling": "limão",
+   "name": "cheesecake de limão",
+   "uses": 1,
+   "components": [
+    {
+     "name": "cheesecake de limão",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.5,
+   "vat_rate": 13
+  },
+  {
+   "base": "cookies",
+   "filling": "chocolate",
+   "name": "cookies de chocolate",
+   "uses": 1,
+   "components": [
+    {
+     "name": "cookie de chocolate",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "donuts",
+   "filling": null,
+   "name": "donuts",
+   "uses": 2,
+   "components": [
+    {
+     "name": "donut",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "húngaros",
+   "filling": null,
+   "name": "húngaros",
+   "uses": 7,
+   "components": [
+    {
+     "name": "húngaro",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "iogurte",
+   "filling": "granola",
+   "name": "iogurte c/ granola",
+   "uses": 52,
+   "components": [
+    {
+     "name": "iogurte",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "granola",
+     "quantity": 20,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.5,
+   "vat_rate": 13
+  },
+  {
+   "base": "leite creme",
+   "filling": null,
+   "name": "leite creme",
+   "uses": 2,
+   "components": [
+    {
+     "name": "leite creme",
+     "quantity": 100,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.5,
+   "vat_rate": 13
+  },
+  {
+   "base": "mil folhas",
+   "filling": null,
+   "name": "mil folhas",
+   "uses": 54,
+   "components": [
+    {
+     "name": "mil folhas",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "mousse",
+   "filling": "chocolate",
+   "name": "mousse de chocolate",
+   "uses": 3,
+   "components": [
+    {
+     "name": "mousse de chocolate",
+     "quantity": 80,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.5,
+   "vat_rate": 13
+  },
+  {
+   "base": "muffins",
+   "filling": null,
+   "name": "muffins",
+   "uses": 2,
+   "components": [
+    {
+     "name": "queque de laranja",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "queque de cenoura",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "muffins",
+   "filling": "aveia",
+   "name": "muffins de aveia",
+   "uses": 1,
+   "components": [
+    {
+     "name": "queque de aveia",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "muffins",
+   "filling": "cenoura",
+   "name": "muffins de cenoura",
+   "uses": 1,
+   "components": [
+    {
+     "name": "queque de cenoura",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "muffins",
+   "filling": "iogurte",
+   "name": "muffins de iogurte",
+   "uses": 1,
+   "components": [
+    {
+     "name": "queque de iogurte",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "muffins",
+   "filling": "laranja",
+   "name": "muffins de laranja",
+   "uses": 2,
+   "components": [
+    {
+     "name": "queque de laranja",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "muffins",
+   "filling": "pistacho",
+   "name": "muffins de pistacho",
+   "uses": 1,
+   "components": [
+    {
+     "name": "queque de pistacho",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "ovos moles",
+   "filling": null,
+   "name": "ovos moles",
+   "uses": 46,
+   "components": [
+    {
+     "name": "ovos moles",
+     "quantity": 15,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "palmiers",
+   "filling": null,
+   "name": "palmiers",
+   "uses": 64,
+   "components": [
+    {
+     "name": "palmier",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "panquecas",
+   "filling": "iogurte e mirtilo",
+   "name": "panquecas c/ iogurte e mirtilo",
+   "uses": 7,
+   "components": [
+    {
+     "name": "panqueca",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "iogurte",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "mirtilos",
+     "quantity": 10,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.5,
+   "vat_rate": 13
+  },
+  {
+   "base": "pastéis de nata",
+   "filling": null,
+   "name": "pastéis de nata",
+   "uses": 153,
+   "components": [
+    {
+     "name": "pastel de nata",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "queques",
+   "filling": null,
+   "name": "queques",
+   "uses": 2,
+   "components": [
+    {
+     "name": "queque de laranja",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "queque de chocolate",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "queques",
+   "filling": "ananás",
+   "name": "queques de ananás",
+   "uses": 2,
+   "components": [
+    {
+     "name": "queque de ananás",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "queques",
+   "filling": "aveia",
+   "name": "queques de aveia",
+   "uses": 3,
+   "components": [
+    {
+     "name": "queque de aveia",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "queques",
+   "filling": "caramelo",
+   "name": "queques de caramelo",
+   "uses": 2,
+   "components": [
+    {
+     "name": "queque de caramelo",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "queques",
+   "filling": "cenoura",
+   "name": "queques de cenoura",
+   "uses": 2,
+   "components": [
+    {
+     "name": "queque de cenoura",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "queques",
+   "filling": "chocolate",
+   "name": "queques de chocolate",
+   "uses": 4,
+   "components": [
+    {
+     "name": "queque de chocolate",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "queques",
+   "filling": "frutos vermelhos",
+   "name": "queques de frutos vermelhos",
+   "uses": 1,
+   "components": [
+    {
+     "name": "queque de frutos vermelhos",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "queques",
+   "filling": "iogurte",
+   "name": "queques de iogurte",
+   "uses": 3,
+   "components": [
+    {
+     "name": "queque de iogurte",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "queques",
+   "filling": "laranja",
+   "name": "queques de laranja",
+   "uses": 10,
+   "components": [
+    {
+     "name": "queque de laranja",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "queques",
+   "filling": "maçã",
+   "name": "queques de maçã",
+   "uses": 2,
+   "components": [
+    {
+     "name": "queque de maçã",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "queques",
+   "filling": "noz",
+   "name": "queques de noz",
+   "uses": 1,
+   "components": [
+    {
+     "name": "queque de noz",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "rabanadas",
+   "filling": "ovos moles",
+   "name": "rabanadas c/ ovos moles",
+   "uses": 1,
+   "components": [
+    {
+     "name": "rabanada",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "ovos moles",
+     "quantity": 15,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "rabanadas",
+   "filling": "vinho do porto",
+   "name": "rabanadas c/ vinho do porto",
+   "uses": 1,
+   "components": [
+    {
+     "name": "rabanada",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "vinho do porto",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "raivas",
+   "filling": null,
+   "name": "raivas",
+   "uses": 2,
+   "components": [
+    {
+     "name": "raiva",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "rosquinhas",
+   "filling": "chocolate de leite",
+   "name": "rosquinhas de chocolate de leite",
+   "uses": 1,
+   "components": [
+    {
+     "name": "rosquinha de chocolate de leite",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "rosquinhas",
+   "filling": "chocolate preto",
+   "name": "rosquinhas de chocolate preto",
+   "uses": 5,
+   "components": [
+    {
+     "name": "rosquinha de chocolate preto",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "salame",
+   "filling": "chocolate",
+   "name": "salame de chocolate",
+   "uses": 69,
+   "components": [
+    {
+     "name": "salame de chocolate",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "semifrio",
+   "filling": "bolacha",
+   "name": "semifrio de bolacha",
+   "uses": 3,
+   "components": [
+    {
+     "name": "semifrio de bolacha",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.5,
+   "vat_rate": 13
+  },
+  {
+   "base": "tarte",
+   "filling": "amêndoa",
+   "name": "tarte de amêndoa",
+   "uses": 23,
+   "components": [
+    {
+     "name": "tarte de amêndoa",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "tarte basca",
+   "filling": "frutos vermelhos",
+   "name": "tarte basca c/ frutos vermelhos",
+   "uses": 2,
+   "components": [
+    {
+     "name": "tarte basca de frutos vermelhos",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "tarte de atum",
+   "filling": "cebolinho",
+   "name": "tarte de atum c/ cebolinho",
+   "uses": 1,
+   "components": [
+    {
+     "name": "tarte de atum",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "cebolinho",
+     "quantity": 2,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "tarte de camembert",
+   "filling": "compota e frutos secos",
+   "name": "tarte de camembert c/ compota e frutos secos",
+   "uses": 3,
+   "components": [
+    {
+     "name": "tarte de camembert",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "compota",
+     "quantity": 10,
+     "for_every": 1
+    },
+    {
+     "name": "frutos secos (mistura)",
+     "quantity": 10,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "tarte de chévre",
+   "filling": "molho pesto",
+   "name": "tarte de chévre c/ molho pesto",
+   "uses": 1,
+   "components": [
+    {
+     "name": "tarte de chévre",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "molho pesto",
+     "quantity": 8,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "tiramisu",
+   "filling": null,
+   "name": "tiramisu",
+   "uses": 5,
+   "components": [
+    {
+     "name": "tiramisu",
+     "quantity": 80,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.5,
+   "vat_rate": 13
+  },
+  {
+   "base": "torta",
+   "filling": "laranja",
+   "name": "torta de laranja",
+   "uses": 2,
+   "components": [
+    {
+     "name": "torta de laranja",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "torta de ovos",
+   "filling": "fios de ovos",
+   "name": "torta de ovos c/ fios de ovos",
+   "uses": 9,
+   "components": [
+    {
+     "name": "torta de ovos",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "fios de ovos",
+     "quantity": 10,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "bolinhos de bacalhau",
+   "filling": null,
+   "name": "bolinhos de bacalhau",
+   "uses": 62,
+   "components": [
+    {
+     "name": "bolinho de bacalhau",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "bolinhos de bacalhau",
+   "filling": "espeto de cherry c/ azeitona",
+   "name": "bolinhos de bacalhau c/ espeto de cherry c/ azeitona",
+   "uses": 58,
+   "components": [
+    {
+     "name": "bolinho de bacalhau",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "tomate cherry",
+     "quantity": 15,
+     "for_every": 1
+    },
+    {
+     "name": "azeitona",
+     "quantity": 8,
+     "for_every": 1
+    },
+    {
+     "name": "palito (espeto curto)",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "chamuças",
+   "filling": "frango",
+   "name": "chamuças de frango",
+   "uses": 10,
+   "components": [
+    {
+     "name": "chamuça de frango",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "chamuças",
+   "filling": "vegetais",
+   "name": "chamuças de vegetais",
+   "uses": 9,
+   "components": [
+    {
+     "name": "chamuça de vegetais",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "chamuças",
+   "filling": "vegetais c/ azeitona",
+   "name": "chamuças de vegetais c/ azeitona",
+   "uses": 4,
+   "components": [
+    {
+     "name": "chamuça de vegetais",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "azeitona",
+     "quantity": 8,
+     "for_every": 1
+    },
+    {
+     "name": "palito (espeto curto)",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "croquetes",
+   "filling": "vitela",
+   "name": "croquetes de vitela",
+   "uses": 71,
+   "components": [
+    {
+     "name": "croquete de vitela",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "croquetes",
+   "filling": "vitela c/ azeitona",
+   "name": "croquetes de vitela c/ azeitona",
+   "uses": 28,
+   "components": [
+    {
+     "name": "croquete de vitela",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "azeitona",
+     "quantity": 8,
+     "for_every": 1
+    },
+    {
+     "name": "palito (espeto curto)",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "falafel",
+   "filling": null,
+   "name": "falafel",
+   "uses": 20,
+   "components": [
+    {
+     "name": "falafel",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "miniaturas fritas",
+   "filling": "bolinhos de bacalhau",
+   "name": "miniaturas fritas · bolinhos de bacalhau",
+   "uses": 31,
+   "components": [
+    {
+     "name": "bolinho de bacalhau",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "miniaturas fritas",
+   "filling": "chamuças",
+   "name": "miniaturas fritas · chamuças",
+   "uses": 31,
+   "components": [
+    {
+     "name": "chamuça de frango",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "chamuça de vegetais",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "miniaturas fritas",
+   "filling": "croquetes de vitela",
+   "name": "miniaturas fritas · croquetes de vitela",
+   "uses": 31,
+   "components": [
+    {
+     "name": "croquete de vitela",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "miniaturas fritas",
+   "filling": "rissóis de camarão",
+   "name": "miniaturas fritas · rissóis de camarão",
+   "uses": 31,
+   "components": [
+    {
+     "name": "rissol de camarão",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "rissóis",
+   "filling": "camarão",
+   "name": "rissóis de camarão",
+   "uses": 63,
+   "components": [
+    {
+     "name": "rissol de camarão",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "rissóis",
+   "filling": "camarão em espeto de camarão",
+   "name": "rissóis de camarão em espeto de camarão",
+   "uses": 4,
+   "components": [
+    {
+     "name": "rissol de camarão",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "camarão",
+     "quantity": 25,
+     "for_every": 1
+    },
+    {
+     "name": "palito (espeto curto)",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "rolinhos primavera",
+   "filling": null,
+   "name": "rolinhos primavera",
+   "uses": 9,
+   "components": [
+    {
+     "name": "rolinho primavera",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "arroz",
+   "filling": "pato",
+   "name": "arroz de pato",
+   "uses": 63,
+   "components": [
+    {
+     "name": "arroz de pato",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "g",
+   "price": 0.03,
+   "vat_rate": 13
+  },
+  {
+   "base": "arroz",
+   "filling": "valenciana",
+   "name": "arroz de valenciana",
+   "uses": 13,
+   "components": [
+    {
+     "name": "arroz á valenciana",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "g",
+   "price": 0.03,
+   "vat_rate": 13
+  },
+  {
+   "base": "bacalhau",
+   "filling": "grão de bico",
+   "name": "bacalhau c/ grão de bico",
+   "uses": 13,
+   "components": [
+    {
+     "name": "bacalhau c/ grão de bico",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "g",
+   "price": 0.03,
+   "vat_rate": 13
+  },
+  {
+   "base": "bacalhau",
+   "filling": "natas",
+   "name": "bacalhau c/ natas",
+   "uses": 62,
+   "components": [
+    {
+     "name": "bacalhau c/ natas",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "g",
+   "price": 0.03,
+   "vat_rate": 13
+  },
+  {
+   "base": "bacalhau desfiado á portuguesa",
+   "filling": "broa",
+   "name": "bacalhau desfiado á portuguesa c/ broa",
+   "uses": 1,
+   "components": [
+    {
+     "name": "bacalhau desfiado á portuguesa",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "broa",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "g",
+   "price": 0.03,
+   "vat_rate": 13
+  },
+  {
+   "base": "bifanas",
+   "filling": "porco estufadas á moda do porto",
+   "name": "bifanas de porco estufadas á moda do porto",
+   "uses": 23,
+   "components": [
+    {
+     "name": "bifanas estufadas",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "pão de sandes",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "g",
+   "price": 0.03,
+   "vat_rate": 13
+  },
+  {
+   "base": "bifanas",
+   "filling": "frango estufadas á moda do porto",
+   "name": "bifanas de frango estufadas á moda do porto",
+   "uses": 1,
+   "components": [
+    {
+     "name": "bifanas de frango",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "pão de sandes",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "g",
+   "price": 0.03,
+   "vat_rate": 13
+  },
+  {
+   "base": "camarão cozido",
+   "filling": null,
+   "name": "camarão cozido",
+   "uses": 2,
+   "components": [
+    {
+     "name": "camarão cozido",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "g",
+   "price": 0.03,
+   "vat_rate": 13
+  },
+  {
+   "base": "couscous",
+   "filling": "cogumelos",
+   "name": "couscous c/ cogumelos",
+   "uses": 4,
+   "components": [
+    {
+     "name": "couscous c/ cogumelos",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "g",
+   "price": 0.03,
+   "vat_rate": 13
+  },
+  {
+   "base": "couscous",
+   "filling": "legumes salteados",
+   "name": "couscous c/ legumes salteados",
+   "uses": 4,
+   "components": [
+    {
+     "name": "couscous c/ legumes salteados",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "g",
+   "price": 0.03,
+   "vat_rate": 13
+  },
+  {
+   "base": "feijoada",
+   "filling": "cogumelos",
+   "name": "feijoada de cogumelos",
+   "uses": 1,
+   "components": [
+    {
+     "name": "feijoada de cogumelos",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "g",
+   "price": 0.03,
+   "vat_rate": 13
+  },
+  {
+   "base": "feijão frade",
+   "filling": "atum",
+   "name": "feijão frade c/ atum",
+   "uses": 3,
+   "components": [
+    {
+     "name": "feijão frade c/ atum",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "g",
+   "price": 0.03,
+   "vat_rate": 13
+  },
+  {
+   "base": "feijão frade",
+   "filling": "cogumelos salteados",
+   "name": "feijão frade c/ cogumelos salteados",
+   "uses": 4,
+   "components": [
+    {
+     "name": "feijão frade c/ cogumelos salteados",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "g",
+   "price": 0.03,
+   "vat_rate": 13
+  },
+  {
+   "base": "feijão frade",
+   "filling": "quinoa de legumes",
+   "name": "feijão frade c/ quinoa de legumes",
+   "uses": 11,
+   "components": [
+    {
+     "name": "feijão frade c/ quinoa de legumes",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "g",
+   "price": 0.03,
+   "vat_rate": 13
+  },
+  {
+   "base": "frango assado",
+   "filling": "batatas assadas",
+   "name": "frango assado c/ batatas assadas",
+   "uses": 3,
+   "components": [
+    {
+     "name": "frango assado",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "batatas assadas",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "g",
+   "price": 0.03,
+   "vat_rate": 13
+  },
+  {
+   "base": "grão de bico",
+   "filling": "quinoa de legumes",
+   "name": "grão de bico c/ quinoa de legumes",
+   "uses": 2,
+   "components": [
+    {
+     "name": "grão de bico c/ quinoa de legumes",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "g",
+   "price": 0.03,
+   "vat_rate": 13
+  },
+  {
+   "base": "jardineira",
+   "filling": "cogumelos salteados",
+   "name": "jardineira de cogumelos salteados",
+   "uses": 2,
+   "components": [
+    {
+     "name": "jardineira de cogumelos",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "g",
+   "price": 0.03,
+   "vat_rate": 13
+  },
+  {
+   "base": "jardineira",
+   "filling": "frango",
+   "name": "jardineira de frango",
+   "uses": 2,
+   "components": [
+    {
+     "name": "jardineira de frango",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "g",
+   "price": 0.03,
+   "vat_rate": 13
+  },
+  {
+   "base": "jardineira",
+   "filling": "grão de bico",
+   "name": "jardineira de grão de bico",
+   "uses": 1,
+   "components": [
+    {
+     "name": "jardineira de grão de bico",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "g",
+   "price": 0.03,
+   "vat_rate": 13
+  },
+  {
+   "base": "jardineira",
+   "filling": "lulas",
+   "name": "jardineira de lulas",
+   "uses": 2,
+   "components": [
+    {
+     "name": "jardineira de lulas",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "g",
+   "price": 0.03,
+   "vat_rate": 13
+  },
+  {
+   "base": "jardineira",
+   "filling": "soja",
+   "name": "jardineira de soja",
+   "uses": 2,
+   "components": [
+    {
+     "name": "jardineira de soja",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "g",
+   "price": 0.03,
+   "vat_rate": 13
+  },
+  {
+   "base": "jardineira",
+   "filling": "vitela",
+   "name": "jardineira de vitela",
+   "uses": 1,
+   "components": [
+    {
+     "name": "jardineira de vitela",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "g",
+   "price": 0.03,
+   "vat_rate": 13
+  },
+  {
+   "base": "lasanha",
+   "filling": "frango",
+   "name": "lasanha de frango",
+   "uses": 1,
+   "components": [
+    {
+     "name": "lasanha de frango",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "g",
+   "price": 0.03,
+   "vat_rate": 13
+  },
+  {
+   "base": "lasanha",
+   "filling": "vitela",
+   "name": "lasanha de vitela",
+   "uses": 1,
+   "components": [
+    {
+     "name": "lasanha de vitela",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "g",
+   "price": 0.03,
+   "vat_rate": 13
+  },
+  {
+   "base": "leitão assado á bairrada",
+   "filling": null,
+   "name": "leitão assado á bairrada",
+   "uses": 1,
+   "components": [
+    {
+     "name": "leitão assado á bairrada",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "g",
+   "price": 0.03,
+   "vat_rate": 13
+  },
+  {
+   "base": "leitão assado á bairrada",
+   "filling": "laranja e batata frita",
+   "name": "leitão assado á bairrada c/ laranja e batata frita",
+   "uses": 1,
+   "components": [
+    {
+     "name": "leitão assado á bairrada",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "laranja",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "batatas fritas",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "g",
+   "price": 0.03,
+   "vat_rate": 13
+  },
+  {
+   "base": "lombo de bacalhau assado",
+   "filling": "batatas á murro",
+   "name": "lombo de bacalhau assado c/ batatas á murro",
+   "uses": 4,
+   "components": [
+    {
+     "name": "lombo de bacalhau assado",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "batatas a murro",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "g",
+   "price": 0.03,
+   "vat_rate": 13
+  },
+  {
+   "base": "lombo de porco",
+   "filling": "batatas a murro",
+   "name": "lombo de porco c/ batatas a murro",
+   "uses": 3,
+   "components": [
+    {
+     "name": "lombo de porco assado",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "batatas a murro",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "g",
+   "price": 0.03,
+   "vat_rate": 13
+  },
+  {
+   "base": "lombo de porco",
+   "filling": "batatas assadas e puré de maçã",
+   "name": "lombo de porco c/ batatas assadas e puré de maçã",
+   "uses": 1,
+   "components": [
+    {
+     "name": "lombo de porco assado",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "batatas assadas",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "puré de maçã",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "g",
+   "price": 0.03,
+   "vat_rate": 13
+  },
+  {
+   "base": "lombo de salmão",
+   "filling": "puré de ervilhas",
+   "name": "lombo de salmão c/ puré de ervilhas",
+   "uses": 1,
+   "components": [
+    {
+     "name": "lombo de salmão",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "puré de ervilhas",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "g",
+   "price": 0.03,
+   "vat_rate": 13
+  },
+  {
+   "base": "magret de pato",
+   "filling": "purê de ervilhas, vinho do porto e laranja",
+   "name": "magret de pato c/ purê de ervilhas, vinho do porto e laranja",
+   "uses": 1,
+   "components": [
+    {
+     "name": "magret de pato",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "puré de ervilhas",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "vinho do porto",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "laranja",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "g",
+   "price": 0.03,
+   "vat_rate": 13
+  },
+  {
+   "base": "moelas estufadas",
+   "filling": null,
+   "name": "moelas estufadas",
+   "uses": 1,
+   "components": [
+    {
+     "name": "moelas estufadas",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "g",
+   "price": 0.03,
+   "vat_rate": 13
+  },
+  {
+   "base": "pescada primavera",
+   "filling": null,
+   "name": "pescada primavera",
+   "uses": 2,
+   "components": [
+    {
+     "name": "pescada primavera",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "g",
+   "price": 0.03,
+   "vat_rate": 13
+  },
+  {
+   "base": "quinoa",
+   "filling": "legumes salteados",
+   "name": "quinoa c/ legumes salteados",
+   "uses": 33,
+   "components": [
+    {
+     "name": "quinoa c/ legumes salteados",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "g",
+   "price": 0.03,
+   "vat_rate": 13
+  },
+  {
+   "base": "sushi",
+   "filling": null,
+   "name": "sushi",
+   "uses": 2,
+   "components": [
+    {
+     "name": "sushi (peças)",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "g",
+   "price": 0.03,
+   "vat_rate": 13
+  },
+  {
+   "base": "tabulê marroquino",
+   "filling": null,
+   "name": "tabulê marroquino",
+   "uses": 2,
+   "components": [
+    {
+     "name": "tabulê marroquino",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "g",
+   "price": 0.03,
+   "vat_rate": 13
+  },
+  {
+   "base": "espetada",
+   "filling": "mozarela, cherry, manjericão e azeitona",
+   "name": "espetada de mozarela, cherry, manjericão e azeitona",
+   "uses": 59,
+   "components": [
+    {
+     "name": "queijo mozarela",
+     "quantity": 2,
+     "for_every": 1
+    },
+    {
+     "name": "tomate cherry",
+     "quantity": 2,
+     "for_every": 1
+    },
+    {
+     "name": "manjericão",
+     "quantity": 2,
+     "for_every": 1
+    },
+    {
+     "name": "azeitona",
+     "quantity": 2,
+     "for_every": 1
+    },
+    {
+     "name": "pau de espetada",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.5,
+   "vat_rate": 13
+  },
+  {
+   "base": "cachorro",
+   "filling": "camarão, maionese de wasabi e batata palha",
+   "name": "cachorro de camarão, maionese de wasabi e batata palha",
+   "uses": 2,
+   "components": [
+    {
+     "name": "pão de cachorro",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "camarão",
+     "quantity": 25,
+     "for_every": 1
+    },
+    {
+     "name": "maionese de wasabi",
+     "quantity": 8,
+     "for_every": 1
+    },
+    {
+     "name": "batata palha",
+     "quantity": 10,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.5,
+   "vat_rate": 13
+  },
+  {
+   "base": "cachorro",
+   "filling": "salsicha e batata palha",
+   "name": "cachorro de salsicha e batata palha",
+   "uses": 4,
+   "components": [
+    {
+     "name": "pão de cachorro",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "salsicha",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "batata palha",
+     "quantity": 10,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.5,
+   "vat_rate": 13
+  },
+  {
+   "base": "croissant",
+   "filling": null,
+   "name": "croissant",
+   "uses": 28,
+   "components": [
+    {
+     "name": "croissant",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "croissant brioche",
+   "filling": "fiambre",
+   "name": "croissant brioche c/ fiambre",
+   "uses": 120,
+   "components": [
+    {
+     "name": "croissant brioche",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "fiambre",
+     "quantity": 20,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "croissant brioche",
+   "filling": "queijo",
+   "name": "croissant brioche c/ queijo",
+   "uses": 134,
+   "components": [
+    {
+     "name": "croissant brioche",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "queijo",
+     "quantity": 15,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "hambúrguer",
+   "filling": null,
+   "name": "hambúrguer",
+   "uses": 4,
+   "components": [
+    {
+     "name": "pão de hambúrguer",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "hambúrguer de carne",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.5,
+   "vat_rate": 13
+  },
+  {
+   "base": "hambúrguer",
+   "filling": "atum",
+   "name": "hambúrguer de atum",
+   "uses": 1,
+   "components": [
+    {
+     "name": "pão de hambúrguer",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "hambúrguer de atum",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.5,
+   "vat_rate": 13
+  },
+  {
+   "base": "hambúrguer",
+   "filling": "carne",
+   "name": "hambúrguer de carne",
+   "uses": 1,
+   "components": [
+    {
+     "name": "pão de hambúrguer",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "hambúrguer de carne",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.5,
+   "vat_rate": 13
+  },
+  {
+   "base": "hambúrguer",
+   "filling": "cogumelos",
+   "name": "hambúrguer de cogumelos",
+   "uses": 1,
+   "components": [
+    {
+     "name": "pão de hambúrguer",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "hambúrguer de cogumelos",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.5,
+   "vat_rate": 13
+  },
+  {
+   "base": "hambúrguer",
+   "filling": "queijo e bacon",
+   "name": "hambúrguer de queijo e bacon",
+   "uses": 1,
+   "components": [
+    {
+     "name": "pão de hambúrguer",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "hambúrguer de carne",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "queijo",
+     "quantity": 15,
+     "for_every": 1
+    },
+    {
+     "name": "bacon",
+     "quantity": 10,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.5,
+   "vat_rate": 13
+  },
+  {
+   "base": "hambúrguer",
+   "filling": "salmão",
+   "name": "hambúrguer de salmão",
+   "uses": 1,
+   "components": [
+    {
+     "name": "pão de hambúrguer",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "hambúrguer de salmão",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.5,
+   "vat_rate": 13
+  },
+  {
+   "base": "húmus",
+   "filling": "palitos de cenoura",
+   "name": "húmus c/ palitos de cenoura",
+   "uses": 2,
+   "components": [
+    {
+     "name": "húmus",
+     "quantity": 20,
+     "for_every": 1
+    },
+    {
+     "name": "cenoura",
+     "quantity": 10,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "pizza",
+   "filling": null,
+   "name": "pizza",
+   "uses": 14,
+   "components": [
+    {
+     "name": "pizza (mini)",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.5,
+   "vat_rate": 13
+  },
+  {
+   "base": "pizza",
+   "filling": "queijo, cogumelos e azeitonas",
+   "name": "pizza c/ queijo, cogumelos e azeitonas",
+   "uses": 5,
+   "components": [
+    {
+     "name": "pizza (mini)",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.5,
+   "vat_rate": 13
+  },
+  {
+   "base": "pães coloridos",
+   "filling": "fiambre",
+   "name": "pães coloridos c/ fiambre",
+   "uses": 1,
+   "components": [
+    {
+     "name": "pão colorido",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "fiambre",
+     "quantity": 20,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "pães coloridos",
+   "filling": "queijo",
+   "name": "pães coloridos c/ queijo",
+   "uses": 1,
+   "components": [
+    {
+     "name": "pão colorido",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "queijo",
+     "quantity": 15,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "pão",
+   "filling": "fiambre",
+   "name": "pão c/ fiambre",
+   "uses": 37,
+   "components": [
+    {
+     "name": "pão",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "fiambre",
+     "quantity": 20,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "pão",
+   "filling": "queijo",
+   "name": "pão c/ queijo",
+   "uses": 36,
+   "components": [
+    {
+     "name": "pão",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "queijo",
+     "quantity": 15,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "pão de centeio",
+   "filling": "fiambre",
+   "name": "pão de centeio c/ fiambre",
+   "uses": 1,
+   "components": [
+    {
+     "name": "pão de centeio",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "fiambre",
+     "quantity": 20,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "pão de centeio",
+   "filling": "queijo",
+   "name": "pão de centeio c/ queijo",
+   "uses": 1,
+   "components": [
+    {
+     "name": "pão de centeio",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "queijo",
+     "quantity": 15,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "pão de leite",
+   "filling": "fiambre",
+   "name": "pão de leite c/ fiambre",
+   "uses": 5,
+   "components": [
+    {
+     "name": "pão de leite",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "fiambre",
+     "quantity": 20,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "pão de leite",
+   "filling": "queijo",
+   "name": "pão de leite c/ queijo",
+   "uses": 5,
+   "components": [
+    {
+     "name": "pão de leite",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "queijo",
+     "quantity": 15,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "pão de queijo",
+   "filling": null,
+   "name": "pão de queijo",
+   "uses": 22,
+   "components": [
+    {
+     "name": "pão de queijo",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "pão de sementes",
+   "filling": "fiambre",
+   "name": "pão de sementes c/ fiambre",
+   "uses": 32,
+   "components": [
+    {
+     "name": "pão de sementes",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "fiambre",
+     "quantity": 20,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "pão de sementes",
+   "filling": "queijo",
+   "name": "pão de sementes c/ queijo",
+   "uses": 40,
+   "components": [
+    {
+     "name": "pão de sementes",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "queijo",
+     "quantity": 15,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "pão integral",
+   "filling": "fiambre",
+   "name": "pão integral c/ fiambre",
+   "uses": 6,
+   "components": [
+    {
+     "name": "pão integral",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "fiambre",
+     "quantity": 20,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "pão integral",
+   "filling": "queijo",
+   "name": "pão integral c/ queijo",
+   "uses": 6,
+   "components": [
+    {
+     "name": "pão integral",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "queijo",
+     "quantity": 15,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "rolinhos de pão",
+   "filling": "chouriço",
+   "name": "rolinhos de pão c/ chouriço",
+   "uses": 17,
+   "components": [
+    {
+     "name": "pão",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "chouriço",
+     "quantity": 15,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "sandes",
+   "filling": "cogumelos de cebolada",
+   "name": "sandes de cogumelos de cebolada",
+   "uses": 12,
+   "components": [
+    {
+     "name": "pão de sandes",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "cogumelos de cebolada",
+     "quantity": 30,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.5,
+   "vat_rate": 13
+  },
+  {
+   "base": "sandes",
+   "filling": "delícias",
+   "name": "sandes de delícias",
+   "uses": 1,
+   "components": [
+    {
+     "name": "pão de sandes",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "alface",
+     "quantity": 10,
+     "for_every": 1
+    },
+    {
+     "name": "delícias do mar",
+     "quantity": 25,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.5,
+   "vat_rate": 13
+  },
+  {
+   "base": "sandes",
+   "filling": "filete de pescada c/ alface",
+   "name": "sandes de filete de pescada c/ alface",
+   "uses": 4,
+   "components": [
+    {
+     "name": "pão de sandes",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "pescada (filete)",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "alface",
+     "quantity": 10,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.5,
+   "vat_rate": 13
+  },
+  {
+   "base": "sandes",
+   "filling": "guacamole c/ cenoura, queijo e alface",
+   "name": "sandes de guacamole c/ cenoura, queijo e alface",
+   "uses": 1,
+   "components": [
+    {
+     "name": "pão de sandes",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "guacamole",
+     "quantity": 20,
+     "for_every": 1
+    },
+    {
+     "name": "cenoura",
+     "quantity": 10,
+     "for_every": 1
+    },
+    {
+     "name": "queijo",
+     "quantity": 15,
+     "for_every": 1
+    },
+    {
+     "name": "alface",
+     "quantity": 10,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.5,
+   "vat_rate": 13
+  },
+  {
+   "base": "sandes",
+   "filling": "húmus c/ azeitona",
+   "name": "sandes de húmus c/ azeitona",
+   "uses": 5,
+   "components": [
+    {
+     "name": "pão de sandes",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "alface",
+     "quantity": 10,
+     "for_every": 1
+    },
+    {
+     "name": "húmus",
+     "quantity": 20,
+     "for_every": 1
+    },
+    {
+     "name": "azeitona",
+     "quantity": 8,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.5,
+   "vat_rate": 13
+  },
+  {
+   "base": "sandes",
+   "filling": "omelete c/ alface e queijo",
+   "name": "sandes de omelete c/ alface e queijo",
+   "uses": 8,
+   "components": [
+    {
+     "name": "pão de sandes",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "omelete",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "alface",
+     "quantity": 10,
+     "for_every": 1
+    },
+    {
+     "name": "queijo",
+     "quantity": 15,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.5,
+   "vat_rate": 13
+  },
+  {
+   "base": "sandes",
+   "filling": "panado de frango",
+   "name": "sandes de panado de frango",
+   "uses": 9,
+   "components": [
+    {
+     "name": "pão de sandes",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "alface",
+     "quantity": 10,
+     "for_every": 1
+    },
+    {
+     "name": "panado de frango",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.5,
+   "vat_rate": 13
+  },
+  {
+   "base": "sandes",
+   "filling": "panado de porco",
+   "name": "sandes de panado de porco",
+   "uses": 2,
+   "components": [
+    {
+     "name": "pão de sandes",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "alface",
+     "quantity": 10,
+     "for_every": 1
+    },
+    {
+     "name": "panado de porco",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.5,
+   "vat_rate": 13
+  },
+  {
+   "base": "sandes",
+   "filling": "patê de atum",
+   "name": "sandes de patê de atum",
+   "uses": 5,
+   "components": [
+    {
+     "name": "pão de sandes",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "alface",
+     "quantity": 10,
+     "for_every": 1
+    },
+    {
+     "name": "patê de atum",
+     "quantity": 20,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.5,
+   "vat_rate": 13
+  },
+  {
+   "base": "sandes",
+   "filling": "patê de frango",
+   "name": "sandes de patê de frango",
+   "uses": 6,
+   "components": [
+    {
+     "name": "pão de sandes",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "alface",
+     "quantity": 10,
+     "for_every": 1
+    },
+    {
+     "name": "patê de frango",
+     "quantity": 20,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.5,
+   "vat_rate": 13
+  },
+  {
+   "base": "sandes",
+   "filling": "pernil de porco no espeto",
+   "name": "sandes de pernil de porco no espeto",
+   "uses": 10,
+   "components": [
+    {
+     "name": "pão de sandes",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "pernil de porco",
+     "quantity": 30,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.5,
+   "vat_rate": 13
+  },
+  {
+   "base": "tacos",
+   "filling": "salmão fumado c/ queijo creme, rúcula e tangerina",
+   "name": "tacos c/ salmão fumado c/ queijo creme, rúcula e tangerina",
+   "uses": 4,
+   "components": [
+    {
+     "name": "taco",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "salmão fumado",
+     "quantity": 20,
+     "for_every": 1
+    },
+    {
+     "name": "queijo creme",
+     "quantity": 15,
+     "for_every": 1
+    },
+    {
+     "name": "rúcula",
+     "quantity": 5,
+     "for_every": 1
+    },
+    {
+     "name": "tangerina",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.5,
+   "vat_rate": 13
+  },
+  {
+   "base": "tortilha de milho",
+   "filling": "guacamole",
+   "name": "tortilha de milho c/ guacamole",
+   "uses": 2,
+   "components": [
+    {
+     "name": "tortilha de milho",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "guacamole",
+     "quantity": 20,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "tortilha de milho",
+   "filling": "húmus",
+   "name": "tortilha de milho c/ húmus",
+   "uses": 2,
+   "components": [
+    {
+     "name": "tortilha de milho",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "húmus",
+     "quantity": 20,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "tostas, gressinos e pão",
+   "filling": null,
+   "name": "tostas, gressinos e pão",
+   "uses": 1,
+   "components": [
+    {
+     "name": "tosta",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "gressino",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "pão de rio maior",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 0.6,
+   "vat_rate": 13
+  },
+  {
+   "base": "wrap",
+   "filling": "delícias do mar c/ queijo e rúcula",
+   "name": "wrap de delícias do mar c/ queijo e rúcula",
+   "uses": 5,
+   "components": [
+    {
+     "name": "wrap (tortilha de trigo)",
+     "quantity": 1,
+     "for_every": 4
+    },
+    {
+     "name": "delícias do mar",
+     "quantity": 25,
+     "for_every": 1
+    },
+    {
+     "name": "queijo",
+     "quantity": 15,
+     "for_every": 1
+    },
+    {
+     "name": "rúcula",
+     "quantity": 5,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.5,
+   "vat_rate": 13
+  },
+  {
+   "base": "wrap",
+   "filling": "frango c/ queijo e rúcula",
+   "name": "wrap de frango c/ queijo e rúcula",
+   "uses": 19,
+   "components": [
+    {
+     "name": "wrap (tortilha de trigo)",
+     "quantity": 1,
+     "for_every": 4
+    },
+    {
+     "name": "frango (peito)",
+     "quantity": 25,
+     "for_every": 1
+    },
+    {
+     "name": "queijo",
+     "quantity": 15,
+     "for_every": 1
+    },
+    {
+     "name": "rúcula",
+     "quantity": 5,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.5,
+   "vat_rate": 13
+  },
+  {
+   "base": "wrap",
+   "filling": "guacamole c/ cenoura e rúcula",
+   "name": "wrap de guacamole c/ cenoura e rúcula",
+   "uses": 13,
+   "components": [
+    {
+     "name": "wrap (tortilha de trigo)",
+     "quantity": 1,
+     "for_every": 4
+    },
+    {
+     "name": "guacamole",
+     "quantity": 20,
+     "for_every": 1
+    },
+    {
+     "name": "cenoura",
+     "quantity": 10,
+     "for_every": 1
+    },
+    {
+     "name": "rúcula",
+     "quantity": 5,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.5,
+   "vat_rate": 13
+  },
+  {
+   "base": "wrap",
+   "filling": "patê de atum, alface e cenoura",
+   "name": "wrap de patê de atum, alface e cenoura",
+   "uses": 10,
+   "components": [
+    {
+     "name": "wrap (tortilha de trigo)",
+     "quantity": 1,
+     "for_every": 4
+    },
+    {
+     "name": "patê de atum",
+     "quantity": 20,
+     "for_every": 1
+    },
+    {
+     "name": "alface",
+     "quantity": 10,
+     "for_every": 1
+    },
+    {
+     "name": "cenoura",
+     "quantity": 10,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.5,
+   "vat_rate": 13
+  },
+  {
+   "base": "wrap",
+   "filling": "queijo creme, salmão e rúcula",
+   "name": "wrap de queijo creme, salmão e rúcula",
+   "uses": 10,
+   "components": [
+    {
+     "name": "wrap (tortilha de trigo)",
+     "quantity": 1,
+     "for_every": 4
+    },
+    {
+     "name": "queijo creme",
+     "quantity": 15,
+     "for_every": 1
+    },
+    {
+     "name": "salmão fumado",
+     "quantity": 20,
+     "for_every": 1
+    },
+    {
+     "name": "rúcula",
+     "quantity": 5,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.5,
+   "vat_rate": 13
+  },
+  {
+   "base": "wrap",
+   "filling": "salmão c/ rúcula e tangerina",
+   "name": "wrap de salmão c/ rúcula e tangerina",
+   "uses": 4,
+   "components": [
+    {
+     "name": "wrap (tortilha de trigo)",
+     "quantity": 1,
+     "for_every": 4
+    },
+    {
+     "name": "salmão fumado",
+     "quantity": 20,
+     "for_every": 1
+    },
+    {
+     "name": "rúcula",
+     "quantity": 5,
+     "for_every": 1
+    },
+    {
+     "name": "tangerina",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.5,
+   "vat_rate": 13
+  },
+  {
+   "base": "aperitivos",
+   "filling": null,
+   "name": "aperitivos",
+   "uses": 12,
+   "components": [
+    {
+     "name": "amendoins",
+     "quantity": 100,
+     "for_every": 1
+    },
+    {
+     "name": "tremoços",
+     "quantity": 100,
+     "for_every": 1
+    },
+    {
+     "name": "azeitona",
+     "quantity": 8,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 0.6,
+   "vat_rate": 13
+  },
+  {
+   "base": "aperitivos",
+   "filling": "amendoins",
+   "name": "aperitivos · amendoins",
+   "uses": 5,
+   "components": [
+    {
+     "name": "amendoins",
+     "quantity": 100,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 0.6,
+   "vat_rate": 13
+  },
+  {
+   "base": "aperitivos",
+   "filling": "azeitonas",
+   "name": "aperitivos · azeitonas",
+   "uses": 5,
+   "components": [
+    {
+     "name": "azeitona",
+     "quantity": 8,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 0.6,
+   "vat_rate": 13
+  },
+  {
+   "base": "aperitivos",
+   "filling": "tremoços",
+   "name": "aperitivos · tremoços",
+   "uses": 5,
+   "components": [
+    {
+     "name": "tremoços",
+     "quantity": 100,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 0.6,
+   "vat_rate": 13
+  },
+  {
+   "base": "bolachas de arroz",
+   "filling": "compotas",
+   "name": "bolachas de arroz c/ compotas",
+   "uses": 5,
+   "components": [
+    {
+     "name": "bolacha de arroz",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "compota",
+     "quantity": 10,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 0.6,
+   "vat_rate": 13
+  },
+  {
+   "base": "compotas",
+   "filling": "de frutos variados c/ frutos secos",
+   "name": "compotas frutos variados c/ frutos secos",
+   "uses": 5,
+   "components": [
+    {
+     "name": "compota",
+     "quantity": 10,
+     "for_every": 1
+    },
+    {
+     "name": "frutos secos (mistura)",
+     "quantity": 10,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 0.6,
+   "vat_rate": 13
+  },
+  {
+   "base": "focaccia",
+   "filling": "azeite e alecrim",
+   "name": "focaccia c/ azeite e alecrim",
+   "uses": 2,
+   "components": [
+    {
+     "name": "focaccia",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "azeite",
+     "quantity": 5,
+     "for_every": 1
+    },
+    {
+     "name": "alecrim",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.5,
+   "vat_rate": 13
+  },
+  {
+   "base": "patês",
+   "filling": "guacamole",
+   "name": "patês de guacamole",
+   "uses": 3,
+   "components": [
+    {
+     "name": "guacamole",
+     "quantity": 20,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 0.6,
+   "vat_rate": 13
+  },
+  {
+   "base": "patês",
+   "filling": "húmus",
+   "name": "patês de húmus",
+   "uses": 3,
+   "components": [
+    {
+     "name": "húmus",
+     "quantity": 20,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 0.6,
+   "vat_rate": 13
+  },
+  {
+   "base": "tostas",
+   "filling": "broa",
+   "name": "tostas c/ broa",
+   "uses": 19,
+   "components": [
+    {
+     "name": "tosta",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "broa",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 0.6,
+   "vat_rate": 13
+  },
+  {
+   "base": "tostas",
+   "filling": "gressinos",
+   "name": "tostas c/ gressinos",
+   "uses": 3,
+   "components": [
+    {
+     "name": "tosta",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "gressino",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 0.6,
+   "vat_rate": 13
+  },
+  {
+   "base": "tábua de enchidos",
+   "filling": "azeitonas",
+   "name": "tábua de enchidos c/ azeitonas",
+   "uses": 49,
+   "components": [
+    {
+     "name": "enchidos para tábua (sortido)",
+     "quantity": 400,
+     "for_every": 1
+    },
+    {
+     "name": "azeitona",
+     "quantity": 100,
+     "for_every": 1
+    },
+    {
+     "name": "tábua",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 25.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "tábua de queijos",
+   "filling": "frutos secos",
+   "name": "tábua de queijos c/ frutos secos",
+   "uses": 52,
+   "components": [
+    {
+     "name": "queijos para tábua (sortido)",
+     "quantity": 400,
+     "for_every": 1
+    },
+    {
+     "name": "frutos secos (mistura)",
+     "quantity": 10,
+     "for_every": 1
+    },
+    {
+     "name": "tábua",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 30.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "empada",
+   "filling": "alheira",
+   "name": "empada de alheira",
+   "uses": 4,
+   "components": [
+    {
+     "name": "empada de alheira",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "empada",
+   "filling": "cogumelos",
+   "name": "empada de cogumelos",
+   "uses": 5,
+   "components": [
+    {
+     "name": "empada de cogumelos",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "empada",
+   "filling": "frango c/ cogumelos",
+   "name": "empada de frango c/ cogumelos",
+   "uses": 6,
+   "components": [
+    {
+     "name": "empada de frango",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "empada",
+   "filling": "legumes",
+   "name": "empada de legumes",
+   "uses": 2,
+   "components": [
+    {
+     "name": "empada de legumes",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "vol-au-vent",
+   "filling": "atum",
+   "name": "vol-au-vent de atum",
+   "uses": 8,
+   "components": [
+    {
+     "name": "vol-au-vent (cesto)",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "atum",
+     "quantity": 25,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "vol-au-vent",
+   "filling": "bolonhesa de soja",
+   "name": "vol-au-vent de bolonhesa de soja",
+   "uses": 3,
+   "components": [
+    {
+     "name": "vol-au-vent (cesto)",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "soja (bolonhesa / jardineira)",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "vol-au-vent",
+   "filling": "camarão",
+   "name": "vol-au-vent de camarão",
+   "uses": 2,
+   "components": [
+    {
+     "name": "vol-au-vent (cesto)",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "camarão",
+     "quantity": 25,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "vol-au-vent",
+   "filling": "cogumelos",
+   "name": "vol-au-vent de cogumelos",
+   "uses": 9,
+   "components": [
+    {
+     "name": "vol-au-vent (cesto)",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "cogumelos",
+     "quantity": 15,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "vol-au-vent",
+   "filling": "delícias",
+   "name": "vol-au-vent de delícias",
+   "uses": 26,
+   "components": [
+    {
+     "name": "vol-au-vent (cesto)",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "delícias do mar",
+     "quantity": 25,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "vol-au-vent",
+   "filling": "frango",
+   "name": "vol-au-vent de frango",
+   "uses": 25,
+   "components": [
+    {
+     "name": "vol-au-vent (cesto)",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "frango (peito)",
+     "quantity": 25,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "vol-au-vent",
+   "filling": "guacamole c/ azeitona",
+   "name": "vol-au-vent de guacamole c/ azeitona",
+   "uses": 161,
+   "components": [
+    {
+     "name": "vol-au-vent (cesto)",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "guacamole",
+     "quantity": 20,
+     "for_every": 1
+    },
+    {
+     "name": "azeitona",
+     "quantity": 8,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "vol-au-vent",
+   "filling": "húmus",
+   "name": "vol-au-vent de húmus",
+   "uses": 4,
+   "components": [
+    {
+     "name": "vol-au-vent (cesto)",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "húmus",
+     "quantity": 20,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "vol-au-vent",
+   "filling": "patê de azeitona",
+   "name": "vol-au-vent de patê de azeitona",
+   "uses": 3,
+   "components": [
+    {
+     "name": "vol-au-vent (cesto)",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "patê de azeitona",
+     "quantity": 15,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "alfaces",
+   "filling": null,
+   "name": "alfaces",
+   "uses": 1,
+   "components": [
+    {
+     "name": "alface",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "g",
+   "price": 0.01,
+   "vat_rate": 13
+  },
+  {
+   "base": "caldo verde",
+   "filling": null,
+   "name": "caldo verde",
+   "uses": 7,
+   "components": [
+    {
+     "name": "caldo verde",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "copo (bolo no copo / sopa)",
+     "quantity": 1,
+     "for_every": 100
+    }
+   ],
+   "unit": "ml",
+   "price": 0.02,
+   "vat_rate": 13
+  },
+  {
+   "base": "cenoura ralada",
+   "filling": null,
+   "name": "cenoura ralada",
+   "uses": 1,
+   "components": [
+    {
+     "name": "cenoura",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "g",
+   "price": 0.01,
+   "vat_rate": 13
+  },
+  {
+   "base": "couve roxa",
+   "filling": null,
+   "name": "couve roxa",
+   "uses": 1,
+   "components": [
+    {
+     "name": "couve roxa",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "g",
+   "price": 0.01,
+   "vat_rate": 13
+  },
+  {
+   "base": "creme",
+   "filling": "cenoura",
+   "name": "creme de cenoura",
+   "uses": 34,
+   "components": [
+    {
+     "name": "creme de cenoura",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "copo (bolo no copo / sopa)",
+     "quantity": 1,
+     "for_every": 100
+    }
+   ],
+   "unit": "ml",
+   "price": 0.02,
+   "vat_rate": 13
+  },
+  {
+   "base": "creme",
+   "filling": "couve flor",
+   "name": "creme de couve flor",
+   "uses": 8,
+   "components": [
+    {
+     "name": "creme de couve flor",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "copo (bolo no copo / sopa)",
+     "quantity": 1,
+     "for_every": 100
+    }
+   ],
+   "unit": "ml",
+   "price": 0.02,
+   "vat_rate": 13
+  },
+  {
+   "base": "creme",
+   "filling": "legumes",
+   "name": "creme de legumes",
+   "uses": 17,
+   "components": [
+    {
+     "name": "creme de legumes",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "copo (bolo no copo / sopa)",
+     "quantity": 1,
+     "for_every": 100
+    }
+   ],
+   "unit": "ml",
+   "price": 0.02,
+   "vat_rate": 13
+  },
+  {
+   "base": "milho",
+   "filling": null,
+   "name": "milho",
+   "uses": 1,
+   "components": [
+    {
+     "name": "milho",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "g",
+   "price": 0.01,
+   "vat_rate": 13
+  },
+  {
+   "base": "ovos cozidos",
+   "filling": null,
+   "name": "ovos cozidos",
+   "uses": 2,
+   "components": [
+    {
+     "name": "ovo",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "g",
+   "price": 0.01,
+   "vat_rate": 13
+  },
+  {
+   "base": "salada",
+   "filling": "salmão fumado",
+   "name": "salada de salmão fumado",
+   "uses": 1,
+   "components": [
+    {
+     "name": "salmão fumado",
+     "quantity": 20,
+     "for_every": 1
+    },
+    {
+     "name": "alface",
+     "quantity": 10,
+     "for_every": 1
+    },
+    {
+     "name": "copo (bolo no copo / sopa)",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 2.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "salada composta",
+   "filling": null,
+   "name": "salada composta",
+   "uses": 7,
+   "components": [
+    {
+     "name": "salada composta de atum",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "salada composta de frango",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "salada composta vegetariana",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "talher de madeira",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 2.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "salada composta",
+   "filling": "atum",
+   "name": "salada composta de atum",
+   "uses": 1,
+   "components": [
+    {
+     "name": "salada composta de atum",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "talher de madeira",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 2.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "salada composta",
+   "filling": "frango",
+   "name": "salada composta de frango",
+   "uses": 1,
+   "components": [
+    {
+     "name": "salada composta de frango",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "talher de madeira",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 2.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "salada composta",
+   "filling": "vegetariana",
+   "name": "salada composta de vegetariana",
+   "uses": 1,
+   "components": [
+    {
+     "name": "salada composta vegetariana",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "talher de madeira",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 2.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "salada de bacalhau",
+   "filling": "grão e salicórnia",
+   "name": "salada de bacalhau c/ grão e salicórnia",
+   "uses": 2,
+   "components": [
+    {
+     "name": "bacalhau",
+     "quantity": 25,
+     "for_every": 1
+    },
+    {
+     "name": "grão de bico",
+     "quantity": 20,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 2.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "salada de feijão frade",
+   "filling": "atum",
+   "name": "salada de feijão frade c/ atum",
+   "uses": 2,
+   "components": [
+    {
+     "name": "feijão frade",
+     "quantity": 20,
+     "for_every": 1
+    },
+    {
+     "name": "atum",
+     "quantity": 25,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 2.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "salada de feijão frade",
+   "filling": "cebola e salsa",
+   "name": "salada de feijão frade c/ cebola e salsa",
+   "uses": 2,
+   "components": [
+    {
+     "name": "feijão frade",
+     "quantity": 20,
+     "for_every": 1
+    },
+    {
+     "name": "cebola",
+     "quantity": 5,
+     "for_every": 1
+    },
+    {
+     "name": "salsa",
+     "quantity": 2,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 2.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "salada de feijão frade",
+   "filling": "quinoa de legumes",
+   "name": "salada de feijão frade c/ quinoa de legumes",
+   "uses": 1,
+   "components": [
+    {
+     "name": "feijão frade",
+     "quantity": 20,
+     "for_every": 1
+    },
+    {
+     "name": "quinoa",
+     "quantity": 20,
+     "for_every": 1
+    },
+    {
+     "name": "legumes (mistura)",
+     "quantity": 20,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 2.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "salada de grão de bico",
+   "filling": "maçã e beterraba",
+   "name": "salada de grão de bico c/ maçã e beterraba",
+   "uses": 1,
+   "components": [
+    {
+     "name": "grão de bico",
+     "quantity": 20,
+     "for_every": 1
+    },
+    {
+     "name": "maçã",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "beterraba",
+     "quantity": 15,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 2.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "salada de massa",
+   "filling": "fiambre e queijo mozarela",
+   "name": "salada de massa c/ fiambre e queijo mozarela",
+   "uses": 1,
+   "components": [
+    {
+     "name": "massa",
+     "quantity": 25,
+     "for_every": 1
+    },
+    {
+     "name": "fiambre",
+     "quantity": 20,
+     "for_every": 1
+    },
+    {
+     "name": "queijo mozarela",
+     "quantity": 20,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 2.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "salada de quinoa",
+   "filling": "legumes",
+   "name": "salada de quinoa c/ legumes",
+   "uses": 6,
+   "components": [
+    {
+     "name": "quinoa",
+     "quantity": 20,
+     "for_every": 1
+    },
+    {
+     "name": "legumes (mistura)",
+     "quantity": 20,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 2.0,
+   "vat_rate": 13
+  },
+  {
+   "base": "sopa",
+   "filling": "legumes",
+   "name": "sopa de legumes",
+   "uses": 2,
+   "components": [
+    {
+     "name": "sopa de legumes",
+     "quantity": 1,
+     "for_every": 1
+    },
+    {
+     "name": "copo (bolo no copo / sopa)",
+     "quantity": 1,
+     "for_every": 100
+    }
+   ],
+   "unit": "ml",
+   "price": 0.02,
+   "vat_rate": 13
+  },
+  {
+   "base": "tomate cherry",
+   "filling": null,
+   "name": "tomate cherry",
+   "uses": 1,
+   "components": [
+    {
+     "name": "tomate cherry",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "g",
+   "price": 0.01,
+   "vat_rate": 13
+  },
+  {
+   "base": "folhado",
+   "filling": "misto",
+   "name": "folhado de misto",
+   "uses": 0,
+   "components": [
+    {
+     "name": "folhado misto",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "folhado",
+   "filling": "salsicha",
+   "name": "folhado de salsicha",
+   "uses": 0,
+   "components": [
+    {
+     "name": "folhado de salsicha",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "folhado",
+   "filling": "chocolate",
+   "name": "folhado de chocolate",
+   "uses": 0,
+   "components": [
+    {
+     "name": "folhado de chocolate",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.25,
+   "vat_rate": 13
+  },
+  {
+   "base": "macarons",
+   "filling": null,
+   "name": "macarons",
+   "uses": 0,
+   "components": [
+    {
+     "name": "macaron",
+     "quantity": 1,
+     "for_every": 1
+    }
+   ],
+   "unit": "piece",
+   "price": 1.0,
+   "vat_rate": 13
+  }
+ ]
+}

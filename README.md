@@ -1,128 +1,84 @@
-# Seed
+# Finger Food
 
-Monorepo seed for building multi-tenant SaaS products: authentication (Ory Kratos),
-users & organizations, scoped access control, notifications, file storage and a
-durable job queue — pre-wired. You configure **what** your product is in `configs/`;
-the seed handles **how** it runs.
+The operating system of a catering business: the catalogue and what it is made of, the proposals, the events, the stock and the invoices.
 
-| Layer | Technology |
-|-------|-----------|
-| Monorepo | pnpm workspaces |
-| API | [Hono](https://hono.dev) + [Drizzle ORM](https://orm.drizzle.team) + PostgreSQL |
-| Identity | [Ory Kratos](https://www.ory.sh/kratos) (runs in Docker, fully automated — see below) |
-| Frontend | [React](https://react.dev) + [TanStack Router](https://tanstack.com/router) + [shadcn/ui](https://ui.shadcn.com) |
-| Access control | `shared/libs/gated-scoped-ac` — DSL-configured, compile-time-gated DB access |
-| Jobs | Durable outbox (`workflow_intent`) + BullMQ/Redis (`apps/workers`) |
+This repository starts from the seed (the `main` app and the shared libraries and configs, as they are in the seed). The first version of the project is on the branch `1st-version`.
+
+## What is here
+
+| Folder | Holds |
+|---|---|
+| `apps/main/core/api` | The API (Hono, Drizzle, PostgreSQL) |
+| `apps/main/core/web` | The web app of the seed. No Finger Food screen exists yet |
+| `apps/main/slices/seed` | The seed's slices. Users, organizations and sign-in are `user-organization-mgmt` |
+| `apps/main/slices/product/finger-food` | The Finger Food slice: its ERD and its database models. No API and no screens yet |
+| `shared` | The seed's libraries and configs |
+| `data` | The source data of the business, and what the loaders read |
+| `scripts/finger-food` | The generator of the models |
+
+## Differences from the seed
+
+- **Sign-in has no Kratos.** The local identity provider sits behind the seed's identity port, on the app's own Postgres: a code sent by email, sessions kept by the app. No password, no TOTP, no SMS. The module still builds the Kratos adapter when the app gives none (`apps/main/core/api/src/mounts.ts`).
+- **Only the `main` app.** No orchestrator, open-api, workers, trigger-dev, helm or terraform.
+- **Local services have their own names and ports**, so they run beside the seed's.
+
+| Service | Where |
+|---|---|
+| API | http://localhost:3011 |
+| Postgres | localhost:5437, database `finger_food` |
+| Mail catcher (the sign-in codes arrive here) | http://localhost:1082 |
 
 ## Setup
 
-Prerequisites: [Node.js](https://nodejs.org) ≥ 22.16 · [pnpm](https://pnpm.io) ≥ 10.11 · [Docker](https://www.docker.com/products/docker-desktop).
+Needs Node 22.16 or later, pnpm 10.11 or later, and Docker.
 
 ```bash
-# 1. Install dependencies
 pnpm install
-
-# 2. Environment — local defaults work as-is, no editing needed
 cp apps/main/core/api/.env.example apps/main/core/api/.env
+cp apps/main/core/api/.env.secrets.example apps/main/core/api/.env.secrets
 cp apps/main/core/web/.env.example apps/main/core/web/.env
-
-# 3. Infrastructure + database (Docker services, migrations, seed)
-pnpm run setup
+docker compose -f apps/main/core/api/docker-compose.yml up -d postgres maildev
+pnpm --filter @apps/api run db:seed -y
+pnpm ff:load
+pnpm ff:check
 ```
 
-`pnpm run setup` starts every local service via Docker — including **Kratos**
-(its own container and database; created, migrated and served automatically —
-there is nothing to install or configure) — then runs the app migrations and
-seeds an admin account.
+`db:seed` empties the database, runs the migrations and creates the system admin. `ff:load` then loads the Finger Food data. Both can be run again.
 
-### Seeded system admin
+## The model
 
-Local dev credentials (defined in `apps/main/core/api/scripts/seed-db.ts`):
+The ERD is canon: `apps/main/slices/product/finger-food/erd/design.dbml`. The Drizzle models are generated from it.
 
-| | |
+```bash
+pnpm ff:model
+pnpm --filter @apps/api run db:generate
+pnpm db:migrate
+```
+
+The ERD's table `purchase` is `article_purchase` in the database, because the seed's payment slice already has a table called `purchase`.
+
+## The data
+
+| Folder | Holds |
 |---|---|
-| Email | `danielcastroruivo@gmail.com` |
-| Password | `Altario2026!` |
-| Org / role | PROWD System Admin · `system_admin_owner` |
+| `data/ontology-v04` | The ingredients tree: 2 258 ingredients and their branches, in English, with aliases. See its `ATTRIBUTION.md` |
+| `data/catalogue` | The components, the menu items, the segments, the event types and the distribution rules, as reviewed |
+| `data/composition` | What each component is made of (`components.txt`) and the food rules (`food-rules.json`) |
+| `data/raw` | The proposals, invoices and payments extracted from the documents of the business |
 
-TOTP cannot be seeded, so the first login is gated (HTTP 428): you land in the
-`/resolve` wizard, which walks you through enrolling an authenticator.
+Three loaders, in this order, in `apps/main/core/api/scripts/finger-food`:
 
-### Ollama (the assistant's model)
+| Loader | Writes |
+|---|---|
+| `load-catalogue.ts` | The catering company, the ontology, the substances, the food rules, the components and their composition, the menu items, the distribution rules |
+| `load-templates.ts` | The proposal templates |
+| `load-history.ts` | The clients, events, proposals with their moments and lines, invoices, credit notes and payments |
 
-The assistant answers with a local model, served by [Ollama](https://ollama.com):
+`check.ts` prints the rows per table, compares the invoiced totals per year with the invoice files, and prints what the food rules answer for every menu item.
 
-```bash
-# 1. Install
-brew install ollama
+### What the data is not
 
-# 2. Start the server (keep it running)
-ollama serve
-
-# 3. In a new terminal, pull the chat model
-ollama pull qwen3:8b
-```
-
-`apps/orchestrator/setup.sh` pulls the same model, plus `qwen2.5vl:3b`, which
-transcribes scanned pages.
-
-### Run
-
-In separate terminals:
-
-```bash
-pnpm run dev:api        # API       → http://localhost:3000
-pnpm run dev:web-main   # Frontend  → http://localhost:5173
-```
-
-Optional processes:
-
-```bash
-pnpm run dev:workers    # queue consumers — only needed when QUEUE_MODE=redis (local default is inline)
-pnpm run dev:trigger    # Trigger.dev tasks (optional)
-pnpm run dev:mobile     # Expo (custom dev client — see apps/main/core/mobile/README.md)
-pnpm --dir apps/api run smsdev   # local SMS inbox for OTP flows
-```
-
-### Doker / Local services
-
-Manage Docker separately, one command per server: `pnpm docker:up:main`, `pnpm docker:up:orchestrator`, `pnpm docker:up:open-api`, or all three with `pnpm docker:up:all`. The same with `docker:down:`. What a slice needs (Kratos, the Stripe listener) lives in that slice and is included by the server's compose file.
-
-| Service | Where | Purpose |
-|---------|-------|---------|
-| Postgres | `localhost:5433` | App database (+ Kratos' own db on the same instance) |
-| Kratos | http://localhost:4433 (public) · :4434 (admin) | Identity provider |
-| Maildev | http://localhost:1080 | Local email inbox — all outgoing mail lands here |
-| Redis | `localhost:16379` | Queue backend (used when `QUEUE_MODE=redis`) |
-| LocalStack | http://localhost:4566 | S3 emulator for file uploads |
-
-
-## Project structure
-
-```
-├── apps/
-│   ├── api/           Hono backend — mounts modules & features (src/mounts.ts)
-│   ├── web-main/      React frontend
-│   ├── workers/       Queue consumers for the durable outbox (see its README)
-│   ├── trigger-dev/   Trigger.dev tasks (optional)
-│   └── mobile/        Expo app
-├── configs/           Product configuration (access control DSL, auth, brand, …)
-├── shared/
-│   ├── libs/          Generic engines — gated-scoped-ac, realtime, queue, storage, ui, …
-│   └── modules/       Self-contained domains — user-organization-mgmt, notifications
-├── team-cockpit/      Internal dev cockpit + e2e engine
-├── scripts/           Setup & project scripts
-├── terraform/ helm/   Infrastructure & deployment
-```
-
-## Documentation
-
-| Area | Location |
-|------|----------|
-| Architecture rules & standards | [docs/](docs/) — see [docs/README.md](docs/README.md) to run the viewer |
-| Documentation index | [INDEX.md](INDEX.md) |
-| Shared layer | [shared/README.md](shared/README.md) |
-| API | [apps/main/core/api/README.md](apps/main/core/api/README.md) |
-| Frontend | [apps/main/core/web/README.md](apps/main/core/web/README.md) |
-| Workers & job queue | [apps/workers/README.md](apps/workers/README.md) |
-| Product configs | [configs/README.md](configs/README.md) |
+- **The composition was read from the names, by hand.** No label was read. A component is marked complete only when it is one raw thing (a carrot, a banana). Every other composition is partial: the rules warn on what is listed and answer unknown for the rest.
+- **The food rules are a first pass.** Their node lists were chosen by name from the ingredients tree, and the limit numbers are placeholders.
+- **No values** (carbohydrates, sugars, salt) are loaded, so the rules with a limit answer unknown.
+- **No articles, vendors, prices or stock.** No data exists for them yet.

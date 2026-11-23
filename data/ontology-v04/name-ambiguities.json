@@ -1,0 +1,18 @@
+[
+  {
+    "ingredient_ids": [
+      "540df914-1561-51bc-b5dc-9cfdcb9137fe",
+      "3352a374-35b1-5917-b269-45b654e82d18"
+    ],
+    "reason": "English common name shared by Allium schoenoprasum and Allium vineale; select the intended identity.",
+    "term": "Onion grass"
+  },
+  {
+    "ingredient_ids": [
+      "3f9a6619-f747-5ac5-a45b-51321e026fc2",
+      "3352a374-35b1-5917-b269-45b654e82d18"
+    ],
+    "reason": "English common name shared across Allium species; Ramsons and Crow garlic stay distinct.",
+    "term": "Wild garlic"
+  }
+]

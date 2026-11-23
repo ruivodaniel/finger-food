@@ -1,0 +1,1612 @@
+{
+ "components": [
+  {
+   "name": "pão",
+   "unit": "piece",
+   "reusable": false,
+   "for": "pão c/ fiambre, pão c/ queijo"
+  },
+  {
+   "name": "pão de leite",
+   "unit": "piece",
+   "reusable": false,
+   "for": "pão de leite"
+  },
+  {
+   "name": "pão de centeio",
+   "unit": "piece",
+   "reusable": false,
+   "for": "pão de centeio"
+  },
+  {
+   "name": "pão de sementes",
+   "unit": "piece",
+   "reusable": false,
+   "for": "pão de sementes"
+  },
+  {
+   "name": "pão integral",
+   "unit": "piece",
+   "reusable": false,
+   "for": "pão integral"
+  },
+  {
+   "name": "pão colorido",
+   "unit": "piece",
+   "reusable": false,
+   "for": "pães coloridos"
+  },
+  {
+   "name": "pão de queijo",
+   "unit": "piece",
+   "reusable": false,
+   "for": "pão de queijo (served as is)"
+  },
+  {
+   "name": "croissant",
+   "unit": "piece",
+   "reusable": false,
+   "for": "croissant simples"
+  },
+  {
+   "name": "croissant brioche",
+   "unit": "piece",
+   "reusable": false,
+   "for": "croissant brioche c/ fiambre, c/ queijo"
+  },
+  {
+   "name": "croissant folhado",
+   "unit": "piece",
+   "reusable": false,
+   "for": "croissant folhado c/ fiambre, c/ queijo, misto"
+  },
+  {
+   "name": "pão de cachorro",
+   "unit": "piece",
+   "reusable": false,
+   "for": "cachorro"
+  },
+  {
+   "name": "pão de hambúrguer",
+   "unit": "piece",
+   "reusable": false,
+   "for": "hambúrguer"
+  },
+  {
+   "name": "pão de sandes",
+   "unit": "piece",
+   "reusable": false,
+   "for": "sandes (all)"
+  },
+  {
+   "name": "wrap (tortilha de trigo)",
+   "unit": "piece",
+   "reusable": false,
+   "for": "wrap (all); one sheet is cut into pieces"
+  },
+  {
+   "name": "tortilha de milho",
+   "unit": "piece",
+   "reusable": false,
+   "for": "tortilha de milho c/ guacamole, c/ húmus"
+  },
+  {
+   "name": "taco",
+   "unit": "piece",
+   "reusable": false,
+   "for": "tacos de salmão fumado"
+  },
+  {
+   "name": "focaccia",
+   "unit": "piece",
+   "reusable": false,
+   "for": "focaccia c/ azeite e alecrim"
+  },
+  {
+   "name": "tosta",
+   "unit": "piece",
+   "reusable": false,
+   "for": "tostas (tábuas, patês)"
+  },
+  {
+   "name": "gressino",
+   "unit": "piece",
+   "reusable": false,
+   "for": "tostas c/ gressinos"
+  },
+  {
+   "name": "broa",
+   "unit": "piece",
+   "reusable": false,
+   "for": "tábuas c/ broa, bacalhau c/ broa"
+  },
+  {
+   "name": "pão de rio maior",
+   "unit": "piece",
+   "reusable": false,
+   "for": "tostas, gressinos e pão"
+  },
+  {
+   "name": "pão sem glúten",
+   "unit": "piece",
+   "reusable": false,
+   "for": "pães e tostas sem glúten"
+  },
+  {
+   "name": "bolacha de arroz",
+   "unit": "piece",
+   "reusable": false,
+   "for": "bolachas de arroz c/ compotas"
+  },
+  {
+   "name": "bolacha de milho",
+   "unit": "piece",
+   "reusable": false,
+   "for": "bolachas de milho c/ guacamole"
+  },
+  {
+   "name": "panqueca",
+   "unit": "piece",
+   "reusable": false,
+   "for": "panqueca de húmus"
+  },
+  {
+   "name": "panqueca de centeio",
+   "unit": "piece",
+   "reusable": false,
+   "for": "panqueca de centeio c/ guacamole"
+  },
+  {
+   "name": "fiambre",
+   "unit": "g",
+   "reusable": false,
+   "for": "c/ fiambre (breads, croissants), omelete c/ fiambre, quiche, salada de massa"
+  },
+  {
+   "name": "queijo",
+   "unit": "g",
+   "reusable": false,
+   "for": "c/ queijo (breads, croissants, wraps, hambúrguer)"
+  },
+  {
+   "name": "queijo creme",
+   "unit": "g",
+   "reusable": false,
+   "for": "wraps queijo creme e salmão, tacos"
+  },
+  {
+   "name": "queijo mozarela",
+   "unit": "g",
+   "reusable": false,
+   "for": "espetada, salada de massa"
+  },
+  {
+   "name": "queijo camembert",
+   "unit": "g",
+   "reusable": false,
+   "for": "tarte de camembert"
+  },
+  {
+   "name": "queijo chévre",
+   "unit": "g",
+   "reusable": false,
+   "for": "tarte de chévre"
+  },
+  {
+   "name": "queijos para tábua (sortido)",
+   "unit": "g",
+   "reusable": false,
+   "for": "tábua de queijos"
+  },
+  {
+   "name": "ovo",
+   "unit": "piece",
+   "reusable": false,
+   "for": "omelete, ovos cozidos, torta de ovos"
+  },
+  {
+   "name": "iogurte",
+   "unit": "piece",
+   "reusable": false,
+   "for": "iogurte c/ granola, panquecas c/ iogurte"
+  },
+  {
+   "name": "natas",
+   "unit": "ml",
+   "reusable": false,
+   "for": "bacalhau c/ natas, natas do céu"
+  },
+  {
+   "name": "bacon",
+   "unit": "g",
+   "reusable": false,
+   "for": "hambúrguer c/ queijo e bacon"
+  },
+  {
+   "name": "chouriço",
+   "unit": "g",
+   "reusable": false,
+   "for": "rolinhos de pão c/ chouriço"
+  },
+  {
+   "name": "salsicha",
+   "unit": "piece",
+   "reusable": false,
+   "for": "cachorro, folhado de salsicha"
+  },
+  {
+   "name": "enchidos para tábua (sortido)",
+   "unit": "g",
+   "reusable": false,
+   "for": "tábua de enchidos"
+  },
+  {
+   "name": "frango (peito)",
+   "unit": "g",
+   "reusable": false,
+   "for": "wraps de frango, sandes de panado de frango, jardineira, lasanha, bifanas de frango, chamuças?"
+  },
+  {
+   "name": "patê de frango",
+   "unit": "g",
+   "reusable": false,
+   "for": "sandes c/ patê de frango, wraps de patê de frango"
+  },
+  {
+   "name": "panado de frango",
+   "unit": "piece",
+   "reusable": false,
+   "for": "sandes de panado de frango"
+  },
+  {
+   "name": "panado de porco",
+   "unit": "piece",
+   "reusable": false,
+   "for": "sandes de panado de porco"
+  },
+  {
+   "name": "pernil de porco",
+   "unit": "g",
+   "reusable": false,
+   "for": "sandes de pernil no espeto"
+  },
+  {
+   "name": "hambúrguer de carne",
+   "unit": "piece",
+   "reusable": false,
+   "for": "hambúrguer de carne"
+  },
+  {
+   "name": "hambúrguer de salmão",
+   "unit": "piece",
+   "reusable": false,
+   "for": "hambúrguer de salmão"
+  },
+  {
+   "name": "hambúrguer de atum",
+   "unit": "piece",
+   "reusable": false,
+   "for": "hambúrguer de atum"
+  },
+  {
+   "name": "hambúrguer de cogumelos",
+   "unit": "piece",
+   "reusable": false,
+   "for": "hambúrguer de cogumelos"
+  },
+  {
+   "name": "vitela",
+   "unit": "g",
+   "reusable": false,
+   "for": "jardineira de vitela, lasanha de vitela"
+  },
+  {
+   "name": "lombo de porco",
+   "unit": "g",
+   "reusable": false,
+   "for": "lombo de porco / lombo assado"
+  },
+  {
+   "name": "leitão",
+   "unit": "g",
+   "reusable": false,
+   "for": "leitão assado á bairrada (bought roasted)"
+  },
+  {
+   "name": "moelas",
+   "unit": "g",
+   "reusable": false,
+   "for": "moelas estufadas"
+  },
+  {
+   "name": "atum",
+   "unit": "g",
+   "reusable": false,
+   "for": "wraps de atum, patê de atum?, salada de feijão frade c/ atum, feijão frade c/ atum, quiche de atum, tarte de atum, vol-au-vent de atum"
+  },
+  {
+   "name": "patê de atum",
+   "unit": "g",
+   "reusable": false,
+   "for": "sandes c/ patê de atum, wrap de patê de atum"
+  },
+  {
+   "name": "salmão fumado",
+   "unit": "g",
+   "reusable": false,
+   "for": "wraps de salmão, tacos, salada de salmão fumado"
+  },
+  {
+   "name": "salmão (lombo)",
+   "unit": "g",
+   "reusable": false,
+   "for": "lombo de salmão, salmão assado"
+  },
+  {
+   "name": "bacalhau",
+   "unit": "g",
+   "reusable": false,
+   "for": "bacalhau c/ natas, c/ grão, desfiado, lombo de bacalhau, salada de bacalhau"
+  },
+  {
+   "name": "pescada (filete)",
+   "unit": "piece",
+   "reusable": false,
+   "for": "sandes de filete de pescada, pescada primavera"
+  },
+  {
+   "name": "camarão",
+   "unit": "g",
+   "reusable": false,
+   "for": "cachorrinho de camarão, camarão cozido, rissóis em espeto de camarão, vol-au-vent de camarão"
+  },
+  {
+   "name": "delícias do mar",
+   "unit": "g",
+   "reusable": false,
+   "for": "wraps de delícias, sandes c/ delícias, vol-au-vent de delícias"
+  },
+  {
+   "name": "lulas",
+   "unit": "g",
+   "reusable": false,
+   "for": "jardineira de lulas"
+  },
+  {
+   "name": "sushi (peças)",
+   "unit": "piece",
+   "reusable": false,
+   "for": "sushi (bought by the piece)"
+  },
+  {
+   "name": "alface",
+   "unit": "g",
+   "reusable": false,
+   "for": "sandes c/ alface, wraps, saladas, variado de alfaces"
+  },
+  {
+   "name": "rúcula",
+   "unit": "g",
+   "reusable": false,
+   "for": "wraps, tacos"
+  },
+  {
+   "name": "cenoura",
+   "unit": "g",
+   "reusable": false,
+   "for": "wraps c/ cenoura, cenoura ralada, palitos de cenoura, creme de cenoura, saladas, muffins/queques de cenoura?"
+  },
+  {
+   "name": "tomate cherry",
+   "unit": "g",
+   "reusable": false,
+   "for": "espetada, wraps c/ cherry, espeto de cherry, tomate cherry"
+  },
+  {
+   "name": "tomate",
+   "unit": "g",
+   "reusable": false,
+   "for": "panqueca c/ tomate, saladas variadas"
+  },
+  {
+   "name": "azeitona",
+   "unit": "g",
+   "reusable": false,
+   "for": "espetada, croquetes c/ azeitona, chamuças c/ azeitona, bolinhos em espeto c/ azeitona, tábuas, aperitivos, pizza, wrap c/ azeitonas, húmus c/ azeitona"
+  },
+  {
+   "name": "cogumelos",
+   "unit": "g",
+   "reusable": false,
+   "for": "sandes de cogumelos de cebolada, couscous c/ cogumelos, feijão frade c/ cogumelos, jardineira, feijoada, empada, vol-au-vent, quiche, pizza"
+  },
+  {
+   "name": "cebola",
+   "unit": "g",
+   "reusable": false,
+   "for": "cogumelos de cebolada, salada de feijão frade c/ cebola"
+  },
+  {
+   "name": "salsa",
+   "unit": "g",
+   "reusable": false,
+   "for": "salada de feijão frade c/ cebola e salsa"
+  },
+  {
+   "name": "cebolinho",
+   "unit": "g",
+   "reusable": false,
+   "for": "tarte de atum c/ cebolinho"
+  },
+  {
+   "name": "manjericão",
+   "unit": "g",
+   "reusable": false,
+   "for": "espetada"
+  },
+  {
+   "name": "hortelã",
+   "unit": "g",
+   "reusable": false,
+   "for": "limonada c/ hortelã, água aromatizada hortelã"
+  },
+  {
+   "name": "alecrim",
+   "unit": "g",
+   "reusable": false,
+   "for": "focaccia"
+  },
+  {
+   "name": "milho",
+   "unit": "g",
+   "reusable": false,
+   "for": "milho, saladas variadas"
+  },
+  {
+   "name": "couve roxa",
+   "unit": "g",
+   "reusable": false,
+   "for": "couve roxa, saladas variadas"
+  },
+  {
+   "name": "couve flor",
+   "unit": "g",
+   "reusable": false,
+   "for": "creme de couve flor"
+  },
+  {
+   "name": "couve (caldo verde)",
+   "unit": "g",
+   "reusable": false,
+   "for": "caldo verde"
+  },
+  {
+   "name": "beterraba",
+   "unit": "g",
+   "reusable": false,
+   "for": "salada de grão de bico c/ maçã e beterraba, saladas variadas"
+  },
+  {
+   "name": "legumes (mistura)",
+   "unit": "g",
+   "reusable": false,
+   "for": "legumes salteados, creme de legumes, sopa de legumes, quinoa de legumes, empada de legumes, chamuças de vegetais, salada de quinoa c/ legumes"
+  },
+  {
+   "name": "ervilhas",
+   "unit": "g",
+   "reusable": false,
+   "for": "puré de ervilhas"
+  },
+  {
+   "name": "batata",
+   "unit": "kg",
+   "reusable": false,
+   "for": "batatas assadas, batatas a murro, batatas fritas, caldo verde"
+  },
+  {
+   "name": "batata palha",
+   "unit": "g",
+   "reusable": false,
+   "for": "cachorro"
+  },
+  {
+   "name": "feijão frade",
+   "unit": "g",
+   "reusable": false,
+   "for": "feijão frade (dishes and salads)"
+  },
+  {
+   "name": "grão de bico",
+   "unit": "g",
+   "reusable": false,
+   "for": "bacalhau c/ grão, grão de bico c/ quinoa, saladas, jardineira c/ grão"
+  },
+  {
+   "name": "quinoa",
+   "unit": "g",
+   "reusable": false,
+   "for": "quinoa, quinoa de legumes, saladas de quinoa"
+  },
+  {
+   "name": "couscous",
+   "unit": "g",
+   "reusable": false,
+   "for": "couscous, tabulê"
+  },
+  {
+   "name": "arroz",
+   "unit": "g",
+   "reusable": false,
+   "for": "arroz de pato, arroz á valenciana, carne de porco c/ arroz, salada c/ arroz"
+  },
+  {
+   "name": "massa",
+   "unit": "g",
+   "reusable": false,
+   "for": "salada de massa"
+  },
+  {
+   "name": "soja (bolonhesa / jardineira)",
+   "unit": "g",
+   "reusable": false,
+   "for": "jardineira de soja, vol-au-vent de bolonhesa de soja"
+  },
+  {
+   "name": "amendoins",
+   "unit": "g",
+   "reusable": false,
+   "for": "aperitivos"
+  },
+  {
+   "name": "tremoços",
+   "unit": "g",
+   "reusable": false,
+   "for": "aperitivos"
+  },
+  {
+   "name": "frutos secos (mistura)",
+   "unit": "g",
+   "reusable": false,
+   "for": "tábua de queijos, tarte de camembert, compotas c/ frutos secos"
+  },
+  {
+   "name": "granola",
+   "unit": "g",
+   "reusable": false,
+   "for": "iogurte c/ granola"
+  },
+  {
+   "name": "mirtilos",
+   "unit": "g",
+   "reusable": false,
+   "for": "panquecas c/ iogurte e mirtilo"
+  },
+  {
+   "name": "frutos vermelhos",
+   "unit": "g",
+   "reusable": false,
+   "for": "água aromatizada, cheesecake?, tarte basca?"
+  },
+  {
+   "name": "guacamole",
+   "unit": "g",
+   "reusable": false,
+   "for": "wraps, sandes, vol-au-vent, tortilhas, bolachas de milho, patês, tostas"
+  },
+  {
+   "name": "húmus",
+   "unit": "g",
+   "reusable": false,
+   "for": "sandes, vol-au-vent, tortilhas, patês, tostas, panqueca, húmus c/ palitos"
+  },
+  {
+   "name": "patê de azeitona",
+   "unit": "g",
+   "reusable": false,
+   "for": "vol-au-vent de patê de azeitona"
+  },
+  {
+   "name": "maionese de wasabi",
+   "unit": "g",
+   "reusable": false,
+   "for": "cachorrinho de camarão"
+  },
+  {
+   "name": "molho pesto",
+   "unit": "g",
+   "reusable": false,
+   "for": "tarte de chévre c/ pesto"
+  },
+  {
+   "name": "compota",
+   "unit": "g",
+   "reusable": false,
+   "for": "tarte de camembert, bolachas de arroz c/ compotas, compotas c/ frutos secos"
+  },
+  {
+   "name": "azeite",
+   "unit": "ml",
+   "reusable": false,
+   "for": "focaccia"
+  },
+  {
+   "name": "alcaparras",
+   "unit": "g",
+   "reusable": false,
+   "for": "wraps c/ queijo creme, salmão e alcaparras"
+  },
+  {
+   "name": "canela",
+   "unit": "g",
+   "reusable": false,
+   "for": "água maçã e canela, sangria"
+  },
+  {
+   "name": "gengibre",
+   "unit": "g",
+   "reusable": false,
+   "for": "água laranja e gengibre"
+  },
+  {
+   "name": "ovos moles",
+   "unit": "g",
+   "reusable": false,
+   "for": "ovos moles de aveiro, rabanadas c/ ovos moles"
+  },
+  {
+   "name": "fios de ovos",
+   "unit": "g",
+   "reusable": false,
+   "for": "torta de ovos c/ fios de ovos"
+  },
+  {
+   "name": "banana",
+   "unit": "piece",
+   "reusable": false,
+   "for": "fruta"
+  },
+  {
+   "name": "maçã",
+   "unit": "piece",
+   "reusable": false,
+   "for": "fruta, beterraba c/ maçã, salada de grão de bico, água maçã e canela, puré de maçã"
+  },
+  {
+   "name": "pêra",
+   "unit": "piece",
+   "reusable": false,
+   "for": "fruta"
+  },
+  {
+   "name": "tangerina",
+   "unit": "piece",
+   "reusable": false,
+   "for": "fruta, wraps c/ tangerina, tacos, água hortelã e tangerina"
+  },
+  {
+   "name": "laranja",
+   "unit": "piece",
+   "reusable": false,
+   "for": "sumo de laranja natural, sangria, água laranja e canela, leitão c/ laranja, magret c/ laranja"
+  },
+  {
+   "name": "limão",
+   "unit": "piece",
+   "reusable": false,
+   "for": "limonada"
+  },
+  {
+   "name": "frutas para sangria",
+   "unit": "kg",
+   "reusable": false,
+   "for": "sangria c/ frutas"
+  },
+  {
+   "name": "croquete de vitela",
+   "unit": "piece",
+   "reusable": false,
+   "for": "croquetes, miniaturas fritas"
+  },
+  {
+   "name": "rissol de camarão",
+   "unit": "piece",
+   "reusable": false,
+   "for": "rissóis, miniaturas fritas"
+  },
+  {
+   "name": "bolinho de bacalhau",
+   "unit": "piece",
+   "reusable": false,
+   "for": "bolinhos de bacalhau, miniaturas fritas"
+  },
+  {
+   "name": "chamuça de frango",
+   "unit": "piece",
+   "reusable": false,
+   "for": "chamuças de frango, miniaturas fritas"
+  },
+  {
+   "name": "chamuça de vegetais",
+   "unit": "piece",
+   "reusable": false,
+   "for": "chamuças de vegetais"
+  },
+  {
+   "name": "falafel",
+   "unit": "piece",
+   "reusable": false,
+   "for": "falafel"
+  },
+  {
+   "name": "rolinho primavera",
+   "unit": "piece",
+   "reusable": false,
+   "for": "rolinhos primavera"
+  },
+  {
+   "name": "bolinha de grão de bico",
+   "unit": "piece",
+   "reusable": false,
+   "for": "(fritos, reclassed earlier)"
+  },
+  {
+   "name": "empada de frango",
+   "unit": "piece",
+   "reusable": false,
+   "for": "empada de frango c/ cogumelos"
+  },
+  {
+   "name": "empada de alheira",
+   "unit": "piece",
+   "reusable": false,
+   "for": "empada de alheira"
+  },
+  {
+   "name": "empada de cogumelos",
+   "unit": "piece",
+   "reusable": false,
+   "for": "empada de cogumelos"
+  },
+  {
+   "name": "empada de legumes",
+   "unit": "piece",
+   "reusable": false,
+   "for": "empada de legumes"
+  },
+  {
+   "name": "vol-au-vent (cesto)",
+   "unit": "piece",
+   "reusable": false,
+   "for": "vol-au-vent (all fillings; the shell is bought, filled by you)"
+  },
+  {
+   "name": "folhado misto",
+   "unit": "piece",
+   "reusable": false,
+   "for": "folhado misto"
+  },
+  {
+   "name": "folhado de salsicha",
+   "unit": "piece",
+   "reusable": false,
+   "for": "folhado de salsicha"
+  },
+  {
+   "name": "quiche de fiambre",
+   "unit": "piece",
+   "reusable": false,
+   "for": "quiche"
+  },
+  {
+   "name": "quiche de cogumelos",
+   "unit": "piece",
+   "reusable": false,
+   "for": "quiche"
+  },
+  {
+   "name": "tarte de atum",
+   "unit": "piece",
+   "reusable": false,
+   "for": "tarte de atum c/ cebolinho"
+  },
+  {
+   "name": "tarte de camembert",
+   "unit": "piece",
+   "reusable": false,
+   "for": "tarte de camembert c/ compota e frutos secos"
+  },
+  {
+   "name": "tarte de chévre",
+   "unit": "piece",
+   "reusable": false,
+   "for": "tarte de chévre c/ pesto"
+  },
+  {
+   "name": "brownie c/ nozes",
+   "unit": "piece",
+   "reusable": false,
+   "for": "brownie c/ nozes e caramelo salgado"
+  },
+  {
+   "name": "caramelo salgado",
+   "unit": "g",
+   "reusable": false,
+   "for": "brownie c/ caramelo salgado (topping)"
+  },
+  {
+   "name": "salame de chocolate",
+   "unit": "piece",
+   "reusable": false,
+   "for": "salame de chocolate (sliced)"
+  },
+  {
+   "name": "tarte de amêndoa",
+   "unit": "piece",
+   "reusable": false,
+   "for": "tarte de amêndoa"
+  },
+  {
+   "name": "tarte basca de frutos vermelhos",
+   "unit": "piece",
+   "reusable": false,
+   "for": "tarte basca"
+  },
+  {
+   "name": "torta de laranja",
+   "unit": "piece",
+   "reusable": false,
+   "for": "torta de laranja"
+  },
+  {
+   "name": "torta de ovos",
+   "unit": "piece",
+   "reusable": false,
+   "for": "torta de ovos c/ fios de ovos"
+  },
+  {
+   "name": "bolo de bolacha",
+   "unit": "piece",
+   "reusable": false,
+   "for": "bolo de bolacha, bolo no copo"
+  },
+  {
+   "name": "bolo brigadeiro",
+   "unit": "piece",
+   "reusable": false,
+   "for": "bolo brigadeiro"
+  },
+  {
+   "name": "bolo de chocolate",
+   "unit": "piece",
+   "reusable": false,
+   "for": "bolo de chocolate"
+  },
+  {
+   "name": "bolo rei",
+   "unit": "piece",
+   "reusable": false,
+   "for": "bolo rei"
+  },
+  {
+   "name": "pastel de nata",
+   "unit": "piece",
+   "reusable": false,
+   "for": "pastéis de nata"
+  },
+  {
+   "name": "bola de berlim",
+   "unit": "piece",
+   "reusable": false,
+   "for": "bolas de berlim"
+  },
+  {
+   "name": "palmier",
+   "unit": "piece",
+   "reusable": false,
+   "for": "palmiers"
+  },
+  {
+   "name": "mil folhas",
+   "unit": "piece",
+   "reusable": false,
+   "for": "mil folhas (glacê, creme brulê)"
+  },
+  {
+   "name": "húngaro",
+   "unit": "piece",
+   "reusable": false,
+   "for": "húngaros"
+  },
+  {
+   "name": "raiva",
+   "unit": "piece",
+   "reusable": false,
+   "for": "raivas"
+  },
+  {
+   "name": "bolachinha bacalhau",
+   "unit": "piece",
+   "reusable": false,
+   "for": "bolachinhas bacalhaus"
+  },
+  {
+   "name": "bolacha de manteiga",
+   "unit": "piece",
+   "reusable": false,
+   "for": "bolachas manteiga, bolachas / biscoitos variados"
+  },
+  {
+   "name": "bolachinha de aveia",
+   "unit": "piece",
+   "reusable": false,
+   "for": "bolachinhas de aveia"
+  },
+  {
+   "name": "cookie de chocolate",
+   "unit": "piece",
+   "reusable": false,
+   "for": "cookies"
+  },
+  {
+   "name": "donut",
+   "unit": "piece",
+   "reusable": false,
+   "for": "donuts"
+  },
+  {
+   "name": "argola de chocolate",
+   "unit": "piece",
+   "reusable": false,
+   "for": "argolas"
+  },
+  {
+   "name": "rosquinha de chocolate de leite",
+   "unit": "piece",
+   "reusable": false,
+   "for": "rosquinhas"
+  },
+  {
+   "name": "rosquinha de chocolate preto",
+   "unit": "piece",
+   "reusable": false,
+   "for": "rosquinhas"
+  },
+  {
+   "name": "folhado de chocolate",
+   "unit": "piece",
+   "reusable": false,
+   "for": "folhado de chocolate"
+  },
+  {
+   "name": "bolinho de coco",
+   "unit": "piece",
+   "reusable": false,
+   "for": "bolinhos de coco"
+  },
+  {
+   "name": "bolinho de feijão",
+   "unit": "piece",
+   "reusable": false,
+   "for": "bolinhos de feijão"
+  },
+  {
+   "name": "brigadeiro",
+   "unit": "piece",
+   "reusable": false,
+   "for": "brigadeiros, bolo no copo brigadeiro"
+  },
+  {
+   "name": "macaron",
+   "unit": "piece",
+   "reusable": false,
+   "for": "macarons"
+  },
+  {
+   "name": "rabanada",
+   "unit": "piece",
+   "reusable": false,
+   "for": "rabanadas (topped with ovos moles or vinho do porto)"
+  },
+  {
+   "name": "mousse de chocolate",
+   "unit": "g",
+   "reusable": false,
+   "for": "mousse de chocolate, bolo no copo"
+  },
+  {
+   "name": "cheesecake de frutos vermelhos",
+   "unit": "piece",
+   "reusable": false,
+   "for": "cheesecake, bolo no copo"
+  },
+  {
+   "name": "cheesecake de limão",
+   "unit": "piece",
+   "reusable": false,
+   "for": "cheesecake"
+  },
+  {
+   "name": "tiramisu",
+   "unit": "g",
+   "reusable": false,
+   "for": "tiramisu, bolo no copo"
+  },
+  {
+   "name": "natas do céu",
+   "unit": "g",
+   "reusable": false,
+   "for": "bolo no copo"
+  },
+  {
+   "name": "leite creme",
+   "unit": "g",
+   "reusable": false,
+   "for": "leite creme queimado"
+  },
+  {
+   "name": "semifrio de bolacha",
+   "unit": "piece",
+   "reusable": false,
+   "for": "semifrio"
+  },
+  {
+   "name": "arroz de pato",
+   "unit": "kg",
+   "reusable": false,
+   "for": "arroz de pato"
+  },
+  {
+   "name": "arroz á valenciana",
+   "unit": "kg",
+   "reusable": false,
+   "for": "arroz á valenciana"
+  },
+  {
+   "name": "bacalhau c/ natas",
+   "unit": "kg",
+   "reusable": false,
+   "for": "bacalhau c/ natas"
+  },
+  {
+   "name": "bacalhau c/ grão de bico",
+   "unit": "kg",
+   "reusable": false,
+   "for": "bacalhau c/ grão"
+  },
+  {
+   "name": "bacalhau desfiado á portuguesa",
+   "unit": "kg",
+   "reusable": false,
+   "for": ""
+  },
+  {
+   "name": "lombo de bacalhau assado",
+   "unit": "kg",
+   "reusable": false,
+   "for": ""
+  },
+  {
+   "name": "bifanas estufadas",
+   "unit": "kg",
+   "reusable": false,
+   "for": "bifanas"
+  },
+  {
+   "name": "bifanas de frango",
+   "unit": "kg",
+   "reusable": false,
+   "for": ""
+  },
+  {
+   "name": "camarão cozido",
+   "unit": "kg",
+   "reusable": false,
+   "for": ""
+  },
+  {
+   "name": "couscous c/ cogumelos",
+   "unit": "kg",
+   "reusable": false,
+   "for": ""
+  },
+  {
+   "name": "couscous c/ legumes salteados",
+   "unit": "kg",
+   "reusable": false,
+   "for": ""
+  },
+  {
+   "name": "feijoada de cogumelos",
+   "unit": "kg",
+   "reusable": false,
+   "for": ""
+  },
+  {
+   "name": "feijão frade c/ atum",
+   "unit": "kg",
+   "reusable": false,
+   "for": ""
+  },
+  {
+   "name": "feijão frade c/ cogumelos salteados",
+   "unit": "kg",
+   "reusable": false,
+   "for": ""
+  },
+  {
+   "name": "feijão frade c/ quinoa de legumes",
+   "unit": "kg",
+   "reusable": false,
+   "for": ""
+  },
+  {
+   "name": "frango assado",
+   "unit": "kg",
+   "reusable": false,
+   "for": ""
+  },
+  {
+   "name": "grão de bico c/ quinoa de legumes",
+   "unit": "kg",
+   "reusable": false,
+   "for": ""
+  },
+  {
+   "name": "jardineira de cogumelos",
+   "unit": "kg",
+   "reusable": false,
+   "for": ""
+  },
+  {
+   "name": "jardineira de frango",
+   "unit": "kg",
+   "reusable": false,
+   "for": ""
+  },
+  {
+   "name": "jardineira de grão de bico",
+   "unit": "kg",
+   "reusable": false,
+   "for": ""
+  },
+  {
+   "name": "jardineira de lulas",
+   "unit": "kg",
+   "reusable": false,
+   "for": ""
+  },
+  {
+   "name": "jardineira de soja",
+   "unit": "kg",
+   "reusable": false,
+   "for": ""
+  },
+  {
+   "name": "jardineira de vitela",
+   "unit": "kg",
+   "reusable": false,
+   "for": ""
+  },
+  {
+   "name": "lasanha de frango",
+   "unit": "kg",
+   "reusable": false,
+   "for": ""
+  },
+  {
+   "name": "lasanha de vitela",
+   "unit": "kg",
+   "reusable": false,
+   "for": ""
+  },
+  {
+   "name": "leitão assado á bairrada",
+   "unit": "kg",
+   "reusable": false,
+   "for": ""
+  },
+  {
+   "name": "lombo de porco assado",
+   "unit": "kg",
+   "reusable": false,
+   "for": "lombo de porco, lombo assado"
+  },
+  {
+   "name": "lombo de salmão",
+   "unit": "kg",
+   "reusable": false,
+   "for": ""
+  },
+  {
+   "name": "salmão assado",
+   "unit": "kg",
+   "reusable": false,
+   "for": ""
+  },
+  {
+   "name": "magret de pato",
+   "unit": "kg",
+   "reusable": false,
+   "for": ""
+  },
+  {
+   "name": "moelas estufadas",
+   "unit": "kg",
+   "reusable": false,
+   "for": ""
+  },
+  {
+   "name": "pescada primavera",
+   "unit": "kg",
+   "reusable": false,
+   "for": ""
+  },
+  {
+   "name": "quinoa c/ legumes salteados",
+   "unit": "kg",
+   "reusable": false,
+   "for": ""
+  },
+  {
+   "name": "tabulê marroquino",
+   "unit": "kg",
+   "reusable": false,
+   "for": ""
+  },
+  {
+   "name": "batatas assadas",
+   "unit": "kg",
+   "reusable": false,
+   "for": "sides"
+  },
+  {
+   "name": "batatas a murro",
+   "unit": "kg",
+   "reusable": false,
+   "for": "sides"
+  },
+  {
+   "name": "batatas fritas",
+   "unit": "kg",
+   "reusable": false,
+   "for": "batatas fritas, leitão c/ batata frita"
+  },
+  {
+   "name": "puré de ervilhas",
+   "unit": "kg",
+   "reusable": false,
+   "for": "sides"
+  },
+  {
+   "name": "puré de maçã",
+   "unit": "kg",
+   "reusable": false,
+   "for": "sides"
+  },
+  {
+   "name": "legumes salteados",
+   "unit": "kg",
+   "reusable": false,
+   "for": "sides"
+  },
+  {
+   "name": "cogumelos salteados",
+   "unit": "kg",
+   "reusable": false,
+   "for": "sides"
+  },
+  {
+   "name": "omelete",
+   "unit": "piece",
+   "reusable": false,
+   "for": "sandes de omelete"
+  },
+  {
+   "name": "cogumelos de cebolada",
+   "unit": "kg",
+   "reusable": false,
+   "for": "sandes de cogumelos de cebolada"
+  },
+  {
+   "name": "creme de cenoura",
+   "unit": "l",
+   "reusable": false,
+   "for": ""
+  },
+  {
+   "name": "creme de couve flor",
+   "unit": "l",
+   "reusable": false,
+   "for": ""
+  },
+  {
+   "name": "creme de legumes",
+   "unit": "l",
+   "reusable": false,
+   "for": ""
+  },
+  {
+   "name": "sopa de legumes",
+   "unit": "l",
+   "reusable": false,
+   "for": ""
+  },
+  {
+   "name": "caldo verde",
+   "unit": "l",
+   "reusable": false,
+   "for": ""
+  },
+  {
+   "name": "água (garrafa 0.5 l)",
+   "unit": "piece",
+   "reusable": false,
+   "for": "água engarrafada"
+  },
+  {
+   "name": "água (garrafa de vidro)",
+   "unit": "piece",
+   "reusable": false,
+   "for": "água garrafas de vidro"
+  },
+  {
+   "name": "água das pedras",
+   "unit": "piece",
+   "reusable": false,
+   "for": ""
+  },
+  {
+   "name": "sumo compal",
+   "unit": "piece",
+   "reusable": false,
+   "for": "sumo compal sabores variados (bottle/brick)"
+  },
+  {
+   "name": "sumo bongo",
+   "unit": "piece",
+   "reusable": false,
+   "for": ""
+  },
+  {
+   "name": "refrigerante",
+   "unit": "piece",
+   "reusable": false,
+   "for": "refrigerantes"
+  },
+  {
+   "name": "café (cápsula)",
+   "unit": "piece",
+   "reusable": false,
+   "for": "café"
+  },
+  {
+   "name": "descafeinado (cápsula)",
+   "unit": "piece",
+   "reusable": false,
+   "for": ""
+  },
+  {
+   "name": "chá (saqueta)",
+   "unit": "piece",
+   "reusable": false,
+   "for": "chás variados"
+  },
+  {
+   "name": "cerveja sagres",
+   "unit": "piece",
+   "reusable": false,
+   "for": "cerveja mini"
+  },
+  {
+   "name": "cerveja super bock",
+   "unit": "piece",
+   "reusable": false,
+   "for": "cerveja mini"
+  },
+  {
+   "name": "espumante",
+   "unit": "piece",
+   "reusable": false,
+   "for": "espumante (bottle)"
+  },
+  {
+   "name": "vinho branco",
+   "unit": "piece",
+   "reusable": false,
+   "for": "bottle"
+  },
+  {
+   "name": "vinho tinto",
+   "unit": "piece",
+   "reusable": false,
+   "for": "bottle; sangria tinta"
+  },
+  {
+   "name": "vinho do porto",
+   "unit": "piece",
+   "reusable": false,
+   "for": "bottle; served in flutes; rabanadas; magret"
+  },
+  {
+   "name": "pau de espetada",
+   "unit": "piece",
+   "reusable": false,
+   "for": "espetada, espetadas de fruta, pernil no espeto, wraps em espeto"
+  },
+  {
+   "name": "palito (espeto curto)",
+   "unit": "piece",
+   "reusable": false,
+   "for": "bolinhos em espeto de cherry, rissóis em espeto de camarão, croquetes c/ azeitona"
+  },
+  {
+   "name": "copo (bolo no copo / sopa)",
+   "unit": "piece",
+   "reusable": false,
+   "for": "bolo no copo, cheesecake no copo, tiramisu no copo, creme no copo, salada no copo"
+  },
+  {
+   "name": "flute de acrílico",
+   "unit": "piece",
+   "reusable": false,
+   "for": "sumo de laranja, vinho do porto, espumante"
+  },
+  {
+   "name": "tacinha",
+   "unit": "piece",
+   "reusable": false,
+   "for": "tacinhas c/ salada"
+  },
+  {
+   "name": "chávena de café",
+   "unit": "piece",
+   "reusable": true,
+   "for": "café"
+  },
+  {
+   "name": "jarro",
+   "unit": "piece",
+   "reusable": true,
+   "for": "sangria, águas aromatizadas, limonada"
+  },
+  {
+   "name": "tábua",
+   "unit": "piece",
+   "reusable": true,
+   "for": "tábua de enchidos, tábua de queijos"
+  },
+  {
+   "name": "saco reutilizável",
+   "unit": "piece",
+   "reusable": false,
+   "for": "lunch box"
+  },
+  {
+   "name": "talher de madeira",
+   "unit": "piece",
+   "reusable": false,
+   "for": "salada composta embalada"
+  },
+  {
+   "name": "queque de laranja",
+   "unit": "piece",
+   "reusable": false,
+   "for": "queques / muffins (bought per flavour)"
+  },
+  {
+   "name": "queque de chocolate",
+   "unit": "piece",
+   "reusable": false,
+   "for": "queques / muffins (bought per flavour)"
+  },
+  {
+   "name": "queque de aveia",
+   "unit": "piece",
+   "reusable": false,
+   "for": "queques / muffins (bought per flavour)"
+  },
+  {
+   "name": "queque de iogurte",
+   "unit": "piece",
+   "reusable": false,
+   "for": "queques / muffins (bought per flavour)"
+  },
+  {
+   "name": "queque de cenoura",
+   "unit": "piece",
+   "reusable": false,
+   "for": "queques / muffins (bought per flavour)"
+  },
+  {
+   "name": "queque de caramelo",
+   "unit": "piece",
+   "reusable": false,
+   "for": "queques / muffins (bought per flavour)"
+  },
+  {
+   "name": "queque de ananás",
+   "unit": "piece",
+   "reusable": false,
+   "for": "queques / muffins (bought per flavour)"
+  },
+  {
+   "name": "queque de maçã",
+   "unit": "piece",
+   "reusable": false,
+   "for": "queques / muffins (bought per flavour)"
+  },
+  {
+   "name": "queque de noz",
+   "unit": "piece",
+   "reusable": false,
+   "for": "queques / muffins (bought per flavour)"
+  },
+  {
+   "name": "queque de frutos vermelhos",
+   "unit": "piece",
+   "reusable": false,
+   "for": "queques / muffins (bought per flavour)"
+  },
+  {
+   "name": "queque de pistacho",
+   "unit": "piece",
+   "reusable": false,
+   "for": "queques / muffins (bought per flavour)"
+  },
+  {
+   "name": "salada composta de atum",
+   "unit": "piece",
+   "reusable": false,
+   "for": "salada composta embalada (vitacress/fleurett)"
+  },
+  {
+   "name": "salada composta de frango",
+   "unit": "piece",
+   "reusable": false,
+   "for": "salada composta embalada (vitacress/fleurett)"
+  },
+  {
+   "name": "salada composta vegetariana",
+   "unit": "piece",
+   "reusable": false,
+   "for": "salada composta embalada (vitacress/fleurett)"
+  },
+  {
+   "name": "morango",
+   "unit": "kg",
+   "reusable": false,
+   "for": "espetadas de fruta (assembled on the stick)"
+  },
+  {
+   "name": "uva",
+   "unit": "kg",
+   "reusable": false,
+   "for": "espetadas de fruta (assembled on the stick)"
+  },
+  {
+   "name": "melão",
+   "unit": "kg",
+   "reusable": false,
+   "for": "espetadas de fruta (assembled on the stick)"
+  },
+  {
+   "name": "ananás",
+   "unit": "kg",
+   "reusable": false,
+   "for": "espetadas de fruta (assembled on the stick)"
+  },
+  {
+   "name": "kiwi",
+   "unit": "kg",
+   "reusable": false,
+   "for": "espetadas de fruta (assembled on the stick)"
+  },
+  {
+   "name": "pizza (mini)",
+   "unit": "piece",
+   "reusable": false,
+   "for": "pizza, mini pizzas (bought ready)"
+  }
+ ]
+}

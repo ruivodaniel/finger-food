@@ -1,0 +1,1438 @@
+{
+ "note": "The food rules, written with the names of the terms of the ingredients tree. A node stands for everything under it; an except names nodes inside its node. excludes: the food type holds when no ingredient is under those nodes. includes: the allergen is present when an ingredient is under those nodes. limits: a substance summed over what is served. The node lists were chosen by name from the tree and are a first pass, to be reviewed. The limit numbers are placeholders.",
+ "rules": {
+  "vegan": {
+   "excludes": [
+    {
+     "node": "Animal foods"
+    },
+    {
+     "node": "Gelatin"
+    },
+    {
+     "node": "Casein"
+    },
+    {
+     "node": "Lactose"
+    },
+    {
+     "node": "Aloe honey"
+    },
+    {
+     "node": "Citrus honey"
+    },
+    {
+     "node": "Clover honey"
+    },
+    {
+     "node": "Comb honey"
+    },
+    {
+     "node": "Herbal honey"
+    },
+    {
+     "node": "Honey"
+    },
+    {
+     "node": "Tualag honey"
+    },
+    {
+     "node": "Wild honey"
+    },
+    {
+     "node": "Bearded seal oil"
+    },
+    {
+     "node": "Beef external fat"
+    },
+    {
+     "node": "Beef fat"
+    },
+    {
+     "node": "Beef seam fat"
+    },
+    {
+     "node": "Beef suet"
+    },
+    {
+     "node": "Beef tallow"
+    },
+    {
+     "node": "Beluga oil"
+    },
+    {
+     "node": "Bowhead whale oil"
+    },
+    {
+     "node": "Butter oil"
+    },
+    {
+     "node": "Chicken fat"
+    },
+    {
+     "node": "Duck fat"
+    },
+    {
+     "node": "Fish oil"
+    },
+    {
+     "node": "Goose fat"
+    },
+    {
+     "node": "Lamb external fat"
+    },
+    {
+     "node": "Lamb fat"
+    },
+    {
+     "node": "Lamb seam fat"
+    },
+    {
+     "node": "Lard"
+    },
+    {
+     "node": "Menhaden oil"
+    },
+    {
+     "node": "Pork fat"
+    },
+    {
+     "node": "Spotted seal oil"
+    },
+    {
+     "node": "Suet"
+    },
+    {
+     "node": "Turkey fat"
+    },
+    {
+     "node": "Veal external fat"
+    },
+    {
+     "node": "Veal fat"
+    },
+    {
+     "node": "Veal seam fat"
+    },
+    {
+     "node": "Walrus fat"
+    },
+    {
+     "node": "Walrus oil"
+    }
+   ]
+  },
+  "vegetarian": {
+   "excludes": [
+    {
+     "node": "Meat and poultry"
+    },
+    {
+     "node": "Seal meat"
+    },
+    {
+     "node": "Alaskan sea lion meat"
+    },
+    {
+     "node": "Armadillo meat"
+    },
+    {
+     "node": "Bullfrog"
+    },
+    {
+     "node": "Chinchilla meat"
+    },
+    {
+     "node": "Crabmeat"
+    },
+    {
+     "node": "Elephant meat"
+    },
+    {
+     "node": "Fowl ova"
+    },
+    {
+     "node": "Game bird meat"
+    },
+    {
+     "node": "Game meat"
+    },
+    {
+     "node": "Grasshopper"
+    },
+    {
+     "node": "Hippopotamus meat"
+    },
+    {
+     "node": "Kosher meat"
+    },
+    {
+     "node": "Langostino"
+    },
+    {
+     "node": "Lobsterette"
+    },
+    {
+     "node": "Mule meat"
+    },
+    {
+     "node": "Muttonbird"
+    },
+    {
+     "node": "Ptarmigan"
+    },
+    {
+     "node": "Rattlesnake meat"
+    },
+    {
+     "node": "Red meat"
+    },
+    {
+     "node": "Rock cornish game bird"
+    },
+    {
+     "node": "Tua tua"
+    },
+    {
+     "node": "Woodcock meat"
+    },
+    {
+     "node": "Fish"
+    },
+    {
+     "node": "Shellfish"
+    },
+    {
+     "node": "Gelatin"
+    },
+    {
+     "node": "Bearded seal oil"
+    },
+    {
+     "node": "Beef external fat"
+    },
+    {
+     "node": "Beef fat"
+    },
+    {
+     "node": "Beef seam fat"
+    },
+    {
+     "node": "Beef suet"
+    },
+    {
+     "node": "Beef tallow"
+    },
+    {
+     "node": "Beluga oil"
+    },
+    {
+     "node": "Bowhead whale oil"
+    },
+    {
+     "node": "Chicken fat"
+    },
+    {
+     "node": "Duck fat"
+    },
+    {
+     "node": "Fish oil"
+    },
+    {
+     "node": "Goose fat"
+    },
+    {
+     "node": "Lamb external fat"
+    },
+    {
+     "node": "Lamb fat"
+    },
+    {
+     "node": "Lamb seam fat"
+    },
+    {
+     "node": "Lard"
+    },
+    {
+     "node": "Menhaden oil"
+    },
+    {
+     "node": "Pork fat"
+    },
+    {
+     "node": "Spotted seal oil"
+    },
+    {
+     "node": "Suet"
+    },
+    {
+     "node": "Turkey fat"
+    },
+    {
+     "node": "Veal external fat"
+    },
+    {
+     "node": "Veal fat"
+    },
+    {
+     "node": "Veal seam fat"
+    },
+    {
+     "node": "Walrus fat"
+    },
+    {
+     "node": "Walrus oil"
+    }
+   ]
+  },
+  "pescetarian": {
+   "excludes": [
+    {
+     "node": "Meat and poultry"
+    },
+    {
+     "node": "Seal meat"
+    },
+    {
+     "node": "Alaskan sea lion meat"
+    },
+    {
+     "node": "Armadillo meat"
+    },
+    {
+     "node": "Bullfrog"
+    },
+    {
+     "node": "Chinchilla meat"
+    },
+    {
+     "node": "Crabmeat"
+    },
+    {
+     "node": "Elephant meat"
+    },
+    {
+     "node": "Fowl ova"
+    },
+    {
+     "node": "Game bird meat"
+    },
+    {
+     "node": "Game meat"
+    },
+    {
+     "node": "Grasshopper"
+    },
+    {
+     "node": "Hippopotamus meat"
+    },
+    {
+     "node": "Kosher meat"
+    },
+    {
+     "node": "Langostino"
+    },
+    {
+     "node": "Lobsterette"
+    },
+    {
+     "node": "Mule meat"
+    },
+    {
+     "node": "Muttonbird"
+    },
+    {
+     "node": "Ptarmigan"
+    },
+    {
+     "node": "Rattlesnake meat"
+    },
+    {
+     "node": "Red meat"
+    },
+    {
+     "node": "Rock cornish game bird"
+    },
+    {
+     "node": "Tua tua"
+    },
+    {
+     "node": "Woodcock meat"
+    },
+    {
+     "node": "Gelatin"
+    }
+   ]
+  },
+  "no seafood": {
+   "excludes": [
+    {
+     "node": "Shellfish"
+    }
+   ]
+  },
+  "no fish or seafood": {
+   "excludes": [
+    {
+     "node": "Fish"
+    },
+    {
+     "node": "Shellfish"
+    },
+    {
+     "node": "Cod liver oil"
+    },
+    {
+     "node": "Fish oil"
+    },
+    {
+     "node": "Herring oil"
+    },
+    {
+     "node": "Menhaden oil"
+    },
+    {
+     "node": "Salmon oil"
+    },
+    {
+     "node": "Sardine oil"
+    }
+   ]
+  },
+  "no pork": {
+   "excludes": [
+    {
+     "node": "Pork"
+    },
+    {
+     "node": "Pork backfat"
+    },
+    {
+     "node": "Pork belly"
+    },
+    {
+     "node": "Pork fat"
+    },
+    {
+     "node": "Pork kidney"
+    },
+    {
+     "node": "Pork leg"
+    },
+    {
+     "node": "Pork leg center slice"
+    },
+    {
+     "node": "Pork liver"
+    },
+    {
+     "node": "Pork meat"
+    },
+    {
+     "node": "Pork organ"
+    },
+    {
+     "node": "Pork petite tender"
+    },
+    {
+     "node": "Pork picnic"
+    },
+    {
+     "node": "Pork tongue"
+    },
+    {
+     "node": "Wild boar"
+    },
+    {
+     "node": "Wild boar meat"
+    }
+   ]
+  },
+  "no red meat": {
+   "excludes": [
+    {
+     "node": "Meat and poultry",
+     "except": [
+      "Canada goose",
+      "Chicken blood",
+      "Chicken liver",
+      "Chicken meat",
+      "Cornish cross chicken",
+      "Duck liver",
+      "Duck meat",
+      "Emu",
+      "Emu inside drum",
+      "Emu outside drum",
+      "Goose meat",
+      "Grouse meat",
+      "Guinea fowl",
+      "Guinea fowl meat",
+      "Ostrich meat",
+      "Pheasant meat",
+      "Pigeon meat",
+      "Quail meat",
+      "Rock cornish cross chicken",
+      "Ruffed grouse",
+      "Turkey blood",
+      "Turkey meat",
+      "Turkey white meat"
+     ]
+    }
+   ]
+  },
+  "no alcohol": {
+   "excludes": [
+    {
+     "node": "Alcoholic"
+    },
+    {
+     "node": "Ethanol"
+    }
+   ]
+  },
+  "no gluten": {
+   "excludes": [
+    {
+     "node": "Artdedo soft white winter wheat kernel"
+    },
+    {
+     "node": "Barley"
+    },
+    {
+     "node": "Barley flour"
+    },
+    {
+     "node": "Barley malt flour"
+    },
+    {
+     "node": "Barley seed"
+    },
+    {
+     "node": "Breck hard white winter wheat kernel"
+    },
+    {
+     "node": "Bulgur"
+    },
+    {
+     "node": "Cracked wheat flour"
+    },
+    {
+     "node": "Crescent hard red winter wheat kernel"
+    },
+    {
+     "node": "Durum wheat"
+    },
+    {
+     "node": "Durum wheat kernel"
+    },
+    {
+     "node": "Egan hard red spring wheat kernel"
+    },
+    {
+     "node": "Farro kernel"
+    },
+    {
+     "node": "Flour"
+    },
+    {
+     "node": "Gluten flour"
+    },
+    {
+     "node": "Hailey soft white winter wheat kernel"
+    },
+    {
+     "node": "Keldin hard red winter wheat kernel"
+    },
+    {
+     "node": "Khorasan wheat kernel"
+    },
+    {
+     "node": "Longmeier hard red spring wheat kernel"
+    },
+    {
+     "node": "Malt"
+    },
+    {
+     "node": "Mela soft white winter wheat kernel"
+    },
+    {
+     "node": "Oat"
+    },
+    {
+     "node": "Oat bran"
+    },
+    {
+     "node": "Oat flour"
+    },
+    {
+     "node": "Piranha soft white winter wheat kernel"
+    },
+    {
+     "node": "Rouge De Bordeaux hard red winter wheat kernel"
+    },
+    {
+     "node": "Rye"
+    },
+    {
+     "node": "Rye flour"
+    },
+    {
+     "node": "Rye kernel"
+    },
+    {
+     "node": "Scorpio hard red winter wheat kernel"
+    },
+    {
+     "node": "Semolina"
+    },
+    {
+     "node": "Shine soft white winter wheat kernel"
+    },
+    {
+     "node": "Snowmass hard white winter wheat kernel"
+    },
+    {
+     "node": "Soft wheat kernel"
+    },
+    {
+     "node": "Soft white club wheat kernel"
+    },
+    {
+     "node": "Soft winter wheat"
+    },
+    {
+     "node": "Spelt flour"
+    },
+    {
+     "node": "Spelt kernel"
+    },
+    {
+     "node": "Stingray soft white winter wheat kernel"
+    },
+    {
+     "node": "Sy McCloud hard red spring wheat kernel"
+    },
+    {
+     "node": "Sy ingmar hard red spring wheat kernel"
+    },
+    {
+     "node": "Tandem soft white winter wheat kernel"
+    },
+    {
+     "node": "Trident soft white wheat kernel"
+    },
+    {
+     "node": "Triticale flour"
+    },
+    {
+     "node": "Turkey hard red winter wheat kernel"
+    },
+    {
+     "node": "Warhorse hard red winter wheat kernel"
+    },
+    {
+     "node": "Wheat"
+    },
+    {
+     "node": "Wheat bran"
+    },
+    {
+     "node": "Wheat germ"
+    },
+    {
+     "node": "Wheat gluten"
+    },
+    {
+     "node": "Wheat sprout"
+    },
+    {
+     "node": "Wheat starch"
+    },
+    {
+     "node": "White wheat flour"
+    },
+    {
+     "node": "Whole oats"
+    },
+    {
+     "node": "Whole wheat flour"
+    },
+    {
+     "node": "Whole wheat kernel"
+    },
+    {
+     "node": "Winter wheat kernel"
+    }
+   ]
+  },
+  "no milk": {
+   "excludes": [
+    {
+     "node": "Dairy and eggs",
+     "except": [
+      "Brown chicken egg",
+      "Chicken egg white",
+      "Chicken egg yolk",
+      "Duck egg white",
+      "Duck egg yolk",
+      "Egg",
+      "Egg white",
+      "Egg yolk",
+      "Goose egg white",
+      "Goose egg yolk",
+      "Iguana egg",
+      "Ostrich egg",
+      "Ostrich egg white",
+      "Ostrich egg yolk",
+      "Quail egg white",
+      "Quail egg yolk",
+      "Turkey egg",
+      "Turkey egg white",
+      "Turkey egg yolk",
+      "Turtle egg",
+      "White chicken egg"
+     ]
+    },
+    {
+     "node": "Casein"
+    },
+    {
+     "node": "Lactose"
+    },
+    {
+     "node": "Butter oil"
+    }
+   ]
+  },
+  "no egg": {
+   "excludes": [
+    {
+     "node": "Brown chicken egg"
+    },
+    {
+     "node": "Chicken egg white"
+    },
+    {
+     "node": "Chicken egg yolk"
+    },
+    {
+     "node": "Duck egg white"
+    },
+    {
+     "node": "Duck egg yolk"
+    },
+    {
+     "node": "Egg"
+    },
+    {
+     "node": "Egg white"
+    },
+    {
+     "node": "Egg yolk"
+    },
+    {
+     "node": "Goose egg white"
+    },
+    {
+     "node": "Goose egg yolk"
+    },
+    {
+     "node": "Iguana egg"
+    },
+    {
+     "node": "Ostrich egg"
+    },
+    {
+     "node": "Ostrich egg white"
+    },
+    {
+     "node": "Ostrich egg yolk"
+    },
+    {
+     "node": "Quail egg white"
+    },
+    {
+     "node": "Quail egg yolk"
+    },
+    {
+     "node": "Turkey egg"
+    },
+    {
+     "node": "Turkey egg white"
+    },
+    {
+     "node": "Turkey egg yolk"
+    },
+    {
+     "node": "Turtle egg"
+    },
+    {
+     "node": "White chicken egg"
+    },
+    {
+     "node": "Fowl ova"
+    }
+   ]
+  },
+  "no nuts": {
+   "excludes": [
+    {
+     "node": "Almond"
+    },
+    {
+     "node": "Almond flour"
+    },
+    {
+     "node": "Almond kernel"
+    },
+    {
+     "node": "Almond oil"
+    },
+    {
+     "node": "Black walnut"
+    },
+    {
+     "node": "Brazil nut"
+    },
+    {
+     "node": "Brazilnut"
+    },
+    {
+     "node": "Cashew"
+    },
+    {
+     "node": "Cashew nut"
+    },
+    {
+     "node": "Desirable pecan"
+    },
+    {
+     "node": "Hazelnut"
+    },
+    {
+     "node": "Hazelnut oil"
+    },
+    {
+     "node": "Macadamia nut"
+    },
+    {
+     "node": "Nonpareil almond"
+    },
+    {
+     "node": "Pecan"
+    },
+    {
+     "node": "Pecan nut"
+    },
+    {
+     "node": "Pistachio"
+    },
+    {
+     "node": "Pistachio nut"
+    },
+    {
+     "node": "Walnut"
+    },
+    {
+     "node": "Walnut oil"
+    },
+    {
+     "node": "Peanut"
+    },
+    {
+     "node": "Peanut flour"
+    },
+    {
+     "node": "Peanut oil"
+    },
+    {
+     "node": "Virginia peanut pod"
+    }
+   ]
+  },
+  "allergen: cereals containing gluten": {
+   "includes": [
+    {
+     "node": "Artdedo soft white winter wheat kernel"
+    },
+    {
+     "node": "Barley"
+    },
+    {
+     "node": "Barley flour"
+    },
+    {
+     "node": "Barley malt flour"
+    },
+    {
+     "node": "Barley seed"
+    },
+    {
+     "node": "Breck hard white winter wheat kernel"
+    },
+    {
+     "node": "Bulgur"
+    },
+    {
+     "node": "Cracked wheat flour"
+    },
+    {
+     "node": "Crescent hard red winter wheat kernel"
+    },
+    {
+     "node": "Durum wheat"
+    },
+    {
+     "node": "Durum wheat kernel"
+    },
+    {
+     "node": "Egan hard red spring wheat kernel"
+    },
+    {
+     "node": "Farro kernel"
+    },
+    {
+     "node": "Flour"
+    },
+    {
+     "node": "Gluten flour"
+    },
+    {
+     "node": "Hailey soft white winter wheat kernel"
+    },
+    {
+     "node": "Keldin hard red winter wheat kernel"
+    },
+    {
+     "node": "Khorasan wheat kernel"
+    },
+    {
+     "node": "Longmeier hard red spring wheat kernel"
+    },
+    {
+     "node": "Malt"
+    },
+    {
+     "node": "Mela soft white winter wheat kernel"
+    },
+    {
+     "node": "Oat"
+    },
+    {
+     "node": "Oat bran"
+    },
+    {
+     "node": "Oat flour"
+    },
+    {
+     "node": "Piranha soft white winter wheat kernel"
+    },
+    {
+     "node": "Rouge De Bordeaux hard red winter wheat kernel"
+    },
+    {
+     "node": "Rye"
+    },
+    {
+     "node": "Rye flour"
+    },
+    {
+     "node": "Rye kernel"
+    },
+    {
+     "node": "Scorpio hard red winter wheat kernel"
+    },
+    {
+     "node": "Semolina"
+    },
+    {
+     "node": "Shine soft white winter wheat kernel"
+    },
+    {
+     "node": "Snowmass hard white winter wheat kernel"
+    },
+    {
+     "node": "Soft wheat kernel"
+    },
+    {
+     "node": "Soft white club wheat kernel"
+    },
+    {
+     "node": "Soft winter wheat"
+    },
+    {
+     "node": "Spelt flour"
+    },
+    {
+     "node": "Spelt kernel"
+    },
+    {
+     "node": "Stingray soft white winter wheat kernel"
+    },
+    {
+     "node": "Sy McCloud hard red spring wheat kernel"
+    },
+    {
+     "node": "Sy ingmar hard red spring wheat kernel"
+    },
+    {
+     "node": "Tandem soft white winter wheat kernel"
+    },
+    {
+     "node": "Trident soft white wheat kernel"
+    },
+    {
+     "node": "Triticale flour"
+    },
+    {
+     "node": "Turkey hard red winter wheat kernel"
+    },
+    {
+     "node": "Warhorse hard red winter wheat kernel"
+    },
+    {
+     "node": "Wheat"
+    },
+    {
+     "node": "Wheat bran"
+    },
+    {
+     "node": "Wheat germ"
+    },
+    {
+     "node": "Wheat gluten"
+    },
+    {
+     "node": "Wheat sprout"
+    },
+    {
+     "node": "Wheat starch"
+    },
+    {
+     "node": "White wheat flour"
+    },
+    {
+     "node": "Whole oats"
+    },
+    {
+     "node": "Whole wheat flour"
+    },
+    {
+     "node": "Whole wheat kernel"
+    },
+    {
+     "node": "Winter wheat kernel"
+    }
+   ]
+  },
+  "allergen: crustaceans": {
+   "includes": [
+    {
+     "node": "Crustaceans"
+    }
+   ]
+  },
+  "allergen: molluscs": {
+   "includes": [
+    {
+     "node": "Molluscs"
+    }
+   ]
+  },
+  "allergen: fish": {
+   "includes": [
+    {
+     "node": "Fish"
+    },
+    {
+     "node": "Cod liver oil"
+    },
+    {
+     "node": "Fish oil"
+    },
+    {
+     "node": "Herring oil"
+    },
+    {
+     "node": "Menhaden oil"
+    },
+    {
+     "node": "Salmon oil"
+    },
+    {
+     "node": "Sardine oil"
+    }
+   ]
+  },
+  "allergen: eggs": {
+   "includes": [
+    {
+     "node": "Brown chicken egg"
+    },
+    {
+     "node": "Chicken egg white"
+    },
+    {
+     "node": "Chicken egg yolk"
+    },
+    {
+     "node": "Duck egg white"
+    },
+    {
+     "node": "Duck egg yolk"
+    },
+    {
+     "node": "Egg"
+    },
+    {
+     "node": "Egg white"
+    },
+    {
+     "node": "Egg yolk"
+    },
+    {
+     "node": "Goose egg white"
+    },
+    {
+     "node": "Goose egg yolk"
+    },
+    {
+     "node": "Iguana egg"
+    },
+    {
+     "node": "Ostrich egg"
+    },
+    {
+     "node": "Ostrich egg white"
+    },
+    {
+     "node": "Ostrich egg yolk"
+    },
+    {
+     "node": "Quail egg white"
+    },
+    {
+     "node": "Quail egg yolk"
+    },
+    {
+     "node": "Turkey egg"
+    },
+    {
+     "node": "Turkey egg white"
+    },
+    {
+     "node": "Turkey egg yolk"
+    },
+    {
+     "node": "Turtle egg"
+    },
+    {
+     "node": "White chicken egg"
+    },
+    {
+     "node": "Fowl ova"
+    }
+   ]
+  },
+  "allergen: milk": {
+   "includes": [
+    {
+     "node": "Dairy and eggs",
+     "except": [
+      "Brown chicken egg",
+      "Chicken egg white",
+      "Chicken egg yolk",
+      "Duck egg white",
+      "Duck egg yolk",
+      "Egg",
+      "Egg white",
+      "Egg yolk",
+      "Goose egg white",
+      "Goose egg yolk",
+      "Iguana egg",
+      "Ostrich egg",
+      "Ostrich egg white",
+      "Ostrich egg yolk",
+      "Quail egg white",
+      "Quail egg yolk",
+      "Turkey egg",
+      "Turkey egg white",
+      "Turkey egg yolk",
+      "Turtle egg",
+      "White chicken egg"
+     ]
+    },
+    {
+     "node": "Casein"
+    },
+    {
+     "node": "Lactose"
+    },
+    {
+     "node": "Butter oil"
+    }
+   ]
+  },
+  "allergen: peanuts": {
+   "includes": [
+    {
+     "node": "Peanut"
+    },
+    {
+     "node": "Peanut flour"
+    },
+    {
+     "node": "Peanut oil"
+    },
+    {
+     "node": "Virginia peanut pod"
+    }
+   ]
+  },
+  "allergen: tree nuts": {
+   "includes": [
+    {
+     "node": "Almond"
+    },
+    {
+     "node": "Almond flour"
+    },
+    {
+     "node": "Almond kernel"
+    },
+    {
+     "node": "Almond oil"
+    },
+    {
+     "node": "Black walnut"
+    },
+    {
+     "node": "Brazil nut"
+    },
+    {
+     "node": "Brazilnut"
+    },
+    {
+     "node": "Cashew"
+    },
+    {
+     "node": "Cashew nut"
+    },
+    {
+     "node": "Desirable pecan"
+    },
+    {
+     "node": "Hazelnut"
+    },
+    {
+     "node": "Hazelnut oil"
+    },
+    {
+     "node": "Macadamia nut"
+    },
+    {
+     "node": "Nonpareil almond"
+    },
+    {
+     "node": "Pecan"
+    },
+    {
+     "node": "Pecan nut"
+    },
+    {
+     "node": "Pistachio"
+    },
+    {
+     "node": "Pistachio nut"
+    },
+    {
+     "node": "Walnut"
+    },
+    {
+     "node": "Walnut oil"
+    }
+   ]
+  },
+  "allergen: soybeans": {
+   "includes": [
+    {
+     "node": "Soy flour"
+    },
+    {
+     "node": "Soybean"
+    },
+    {
+     "node": "Soybean flour"
+    },
+    {
+     "node": "Soybean oil"
+    }
+   ]
+  },
+  "allergen: celery": {
+   "includes": [
+    {
+     "node": "Celeriac"
+    },
+    {
+     "node": "Celeriac stalk"
+    },
+    {
+     "node": "Celery"
+    },
+    {
+     "node": "Celery heart"
+    },
+    {
+     "node": "Celery leaf"
+    },
+    {
+     "node": "Celery seed"
+    },
+    {
+     "node": "Celery stalk"
+    },
+    {
+     "node": "Leaf celery stalk"
+    }
+   ]
+  },
+  "allergen: mustard": {
+   "includes": [
+    {
+     "node": "Mustard greens"
+    },
+    {
+     "node": "Mustard oil"
+    },
+    {
+     "node": "Mustard seed"
+    },
+    {
+     "node": "Mustard spinach leaf"
+    }
+   ]
+  },
+  "allergen: sesame": {
+   "includes": [
+    {
+     "node": "Sesame flour"
+    },
+    {
+     "node": "Sesame oil"
+    },
+    {
+     "node": "Sesame seed"
+    }
+   ]
+  },
+  "allergen: lupin": {
+   "includes": [
+    {
+     "node": "Lupin"
+    },
+    {
+     "node": "Lupine bean"
+    },
+    {
+     "node": "White lupine"
+    }
+   ]
+  },
+  "allergen: sulphites": {
+   "includes": [
+    {
+     "node": "Sulphites"
+    }
+   ],
+   "limits": [
+    {
+     "substance": "Sulphites",
+     "min": {
+      "quantity": 10,
+      "unit": "mg"
+     },
+     "for_every": {
+      "quantity": 1,
+      "unit": "kg"
+     }
+    }
+   ]
+  },
+  "keto": {
+   "limits": [
+    {
+     "substance": "Carbohydrates",
+     "max": {
+      "quantity": 10,
+      "unit": "g"
+     },
+     "for_every": {
+      "quantity": 1,
+      "unit": "guest"
+     }
+    }
+   ]
+  },
+  "low sugar": {
+   "limits": [
+    {
+     "substance": "Sugars",
+     "max": {
+      "quantity": 5,
+      "unit": "g"
+     },
+     "for_every": {
+      "quantity": 100,
+      "unit": "g"
+     }
+    }
+   ]
+  },
+  "low fat": {
+   "limits": [
+    {
+     "substance": "Fat",
+     "max": {
+      "quantity": 3,
+      "unit": "g"
+     },
+     "for_every": {
+      "quantity": 100,
+      "unit": "g"
+     }
+    }
+   ]
+  },
+  "low salt": {
+   "limits": [
+    {
+     "substance": "Salt",
+     "max": {
+      "quantity": 0.3,
+      "unit": "g"
+     },
+     "for_every": {
+      "quantity": 100,
+      "unit": "g"
+     }
+    }
+   ]
+  },
+  "high protein": {
+   "limits": [
+    {
+     "substance": "Protein",
+     "min": {
+      "quantity": 20,
+      "unit": "g"
+     },
+     "for_every": {
+      "quantity": 1,
+      "unit": "guest"
+     }
+    }
+   ]
+  }
+ }
+}

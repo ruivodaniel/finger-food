@@ -1,0 +1,277 @@
+{
+ "sets": [
+  {
+   "event_type": "coffee_break",
+   "rules": [
+    {
+     "selector": [
+      "miniaturas"
+     ],
+     "unit": "piece",
+     "quantity": 4,
+     "for_every": 1,
+     "splits": [
+      {
+       "selector": [
+        "min_salgadas"
+       ],
+       "percent": 50,
+       "splits": []
+      },
+      {
+       "selector": [
+        "min_doces"
+       ],
+       "percent": 50,
+       "splits": []
+      }
+     ]
+    },
+    {
+     "selector": [
+      "cafe"
+     ],
+     "unit": "piece",
+     "quantity": 1,
+     "for_every": 1,
+     "splits": []
+    },
+    {
+     "selector": [
+      "cha"
+     ],
+     "unit": "piece",
+     "quantity": 1,
+     "for_every": 5,
+     "splits": []
+    },
+    {
+     "selector": [
+      "bebidas"
+     ],
+     "unit": "l",
+     "quantity": 0.2,
+     "for_every": 1,
+     "splits": [
+      {
+       "selector": [
+        "aguas"
+       ],
+       "percent": 50,
+       "splits": []
+      },
+      {
+       "selector": [
+        "sumos"
+       ],
+       "percent": 50,
+       "splits": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event_type": "cocktail",
+   "rules": [
+    {
+     "selector": [
+      "miniaturas"
+     ],
+     "unit": "piece",
+     "quantity": 4,
+     "for_every": 1,
+     "splits": [
+      {
+       "selector": [
+        "min_salgadas"
+       ],
+       "percent": 50,
+       "splits": []
+      },
+      {
+       "selector": [
+        "min_doces"
+       ],
+       "percent": 50,
+       "splits": []
+      }
+     ]
+    },
+    {
+     "selector": [
+      "bebidas"
+     ],
+     "unit": "l",
+     "quantity": 0.2,
+     "for_every": 1,
+     "splits": [
+      {
+       "selector": [
+        "beb_nao_alcoolicas"
+       ],
+       "percent": 50,
+       "splits": [
+        {
+         "selector": [
+          "aguas"
+         ],
+         "percent": 50,
+         "splits": []
+        },
+        {
+         "selector": [
+          "sumos"
+         ],
+         "percent": 50,
+         "splits": []
+        }
+       ]
+      },
+      {
+       "selector": [
+        "beb_alcoolicas"
+       ],
+       "percent": 50,
+       "splits": [
+        {
+         "selector": [
+          "vinho"
+         ],
+         "percent": 80,
+         "splits": []
+        },
+        {
+         "selector": [
+          "cerveja"
+         ],
+         "percent": 20,
+         "splits": []
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "event_type": "catering",
+   "rules": [
+    {
+     "selector": [
+      "miniaturas"
+     ],
+     "unit": "piece",
+     "quantity": 4,
+     "for_every": 1,
+     "splits": [
+      {
+       "selector": [
+        "min_salgadas"
+       ],
+       "percent": 50,
+       "splits": []
+      },
+      {
+       "selector": [
+        "min_doces"
+       ],
+       "percent": 50,
+       "splits": []
+      }
+     ]
+    },
+    {
+     "selector": [
+      "pratos"
+     ],
+     "unit": "g",
+     "quantity": 300,
+     "for_every": 1,
+     "splits": []
+    },
+    {
+     "selector": [
+      "sopas"
+     ],
+     "unit": "ml",
+     "quantity": 100,
+     "for_every": 1,
+     "splits": []
+    },
+    {
+     "selector": [
+      "cafe"
+     ],
+     "unit": "piece",
+     "quantity": 1,
+     "for_every": 1,
+     "splits": []
+    },
+    {
+     "selector": [
+      "cha"
+     ],
+     "unit": "piece",
+     "quantity": 1,
+     "for_every": 5,
+     "splits": []
+    },
+    {
+     "selector": [
+      "bebidas"
+     ],
+     "unit": "l",
+     "quantity": 0.2,
+     "for_every": 1,
+     "splits": [
+      {
+       "selector": [
+        "beb_nao_alcoolicas"
+       ],
+       "percent": 50,
+       "splits": [
+        {
+         "selector": [
+          "aguas"
+         ],
+         "percent": 50,
+         "splits": []
+        },
+        {
+         "selector": [
+          "sumos"
+         ],
+         "percent": 50,
+         "splits": []
+        }
+       ]
+      },
+      {
+       "selector": [
+        "beb_alcoolicas"
+       ],
+       "percent": 50,
+       "splits": [
+        {
+         "selector": [
+          "vinho"
+         ],
+         "percent": 80,
+         "splits": []
+        },
+        {
+         "selector": [
+          "cerveja"
+         ],
+         "percent": 20,
+         "splits": []
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

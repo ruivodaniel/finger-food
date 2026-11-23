@@ -1,0 +1,5549 @@
+{
+ "mappings": [
+  {
+   "ontology_term_id": "ing_pao",
+   "entity_type": "component",
+   "entity_id": "pão"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "pão"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "pão"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "pão"
+  },
+  {
+   "ontology_term_id": "ing_pao",
+   "entity_type": "component",
+   "entity_id": "pão de leite"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "pão de leite"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "pão de leite"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "pão de leite"
+  },
+  {
+   "ontology_term_id": "ing_pao",
+   "entity_type": "component",
+   "entity_id": "pão de centeio"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "pão de centeio"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "pão de centeio"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "pão de centeio"
+  },
+  {
+   "ontology_term_id": "ing_pao",
+   "entity_type": "component",
+   "entity_id": "pão de sementes"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "pão de sementes"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "pão de sementes"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "pão de sementes"
+  },
+  {
+   "ontology_term_id": "ing_pao",
+   "entity_type": "component",
+   "entity_id": "pão integral"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "pão integral"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "pão integral"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "pão integral"
+  },
+  {
+   "ontology_term_id": "ing_pao",
+   "entity_type": "component",
+   "entity_id": "pão colorido"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "pão colorido"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "pão colorido"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "pão colorido"
+  },
+  {
+   "ontology_term_id": "ing_pao",
+   "entity_type": "component",
+   "entity_id": "pão de queijo"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "pão de queijo"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "pão de queijo"
+  },
+  {
+   "ontology_term_id": "ing_pao",
+   "entity_type": "component",
+   "entity_id": "croissant"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "croissant"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "croissant"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "croissant"
+  },
+  {
+   "ontology_term_id": "ing_pao",
+   "entity_type": "component",
+   "entity_id": "croissant brioche"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "croissant brioche"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "croissant brioche"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "croissant brioche"
+  },
+  {
+   "ontology_term_id": "ing_pao",
+   "entity_type": "component",
+   "entity_id": "croissant folhado"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "croissant folhado"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "croissant folhado"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "croissant folhado"
+  },
+  {
+   "ontology_term_id": "ing_pao",
+   "entity_type": "component",
+   "entity_id": "pão de cachorro"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "pão de cachorro"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "pão de cachorro"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "pão de cachorro"
+  },
+  {
+   "ontology_term_id": "ing_pao",
+   "entity_type": "component",
+   "entity_id": "pão de hambúrguer"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "pão de hambúrguer"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "pão de hambúrguer"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "pão de hambúrguer"
+  },
+  {
+   "ontology_term_id": "ing_pao",
+   "entity_type": "component",
+   "entity_id": "pão de sandes"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "pão de sandes"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "pão de sandes"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "pão de sandes"
+  },
+  {
+   "ontology_term_id": "ing_pao",
+   "entity_type": "component",
+   "entity_id": "wrap (tortilha de trigo)"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "wrap (tortilha de trigo)"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "wrap (tortilha de trigo)"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "wrap (tortilha de trigo)"
+  },
+  {
+   "ontology_term_id": "ing_pao",
+   "entity_type": "component",
+   "entity_id": "tortilha de milho"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "tortilha de milho"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "tortilha de milho"
+  },
+  {
+   "ontology_term_id": "ing_pao",
+   "entity_type": "component",
+   "entity_id": "taco"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "taco"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "taco"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "taco"
+  },
+  {
+   "ontology_term_id": "ing_pao",
+   "entity_type": "component",
+   "entity_id": "focaccia"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "focaccia"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "focaccia"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "focaccia"
+  },
+  {
+   "ontology_term_id": "ing_pao",
+   "entity_type": "component",
+   "entity_id": "tosta"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "tosta"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "tosta"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "tosta"
+  },
+  {
+   "ontology_term_id": "ing_pao",
+   "entity_type": "component",
+   "entity_id": "gressino"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "gressino"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "gressino"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "gressino"
+  },
+  {
+   "ontology_term_id": "ing_pao",
+   "entity_type": "component",
+   "entity_id": "broa"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "broa"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "broa"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "broa"
+  },
+  {
+   "ontology_term_id": "ing_pao",
+   "entity_type": "component",
+   "entity_id": "pão de rio maior"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "pão de rio maior"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "pão de rio maior"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "pão de rio maior"
+  },
+  {
+   "ontology_term_id": "ing_pao",
+   "entity_type": "component",
+   "entity_id": "pão sem glúten"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "pão sem glúten"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "pão sem glúten"
+  },
+  {
+   "ontology_term_id": "ing_pao",
+   "entity_type": "component",
+   "entity_id": "bolacha de arroz"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "bolacha de arroz"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "bolacha de arroz"
+  },
+  {
+   "ontology_term_id": "ing_pao",
+   "entity_type": "component",
+   "entity_id": "bolacha de milho"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "bolacha de milho"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "bolacha de milho"
+  },
+  {
+   "ontology_term_id": "ing_pao",
+   "entity_type": "component",
+   "entity_id": "panqueca"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "panqueca"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "panqueca"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "panqueca"
+  },
+  {
+   "ontology_term_id": "ing_pao",
+   "entity_type": "component",
+   "entity_id": "panqueca de centeio"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "panqueca de centeio"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "panqueca de centeio"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "panqueca de centeio"
+  },
+  {
+   "ontology_term_id": "ing_carne",
+   "entity_type": "component",
+   "entity_id": "fiambre"
+  },
+  {
+   "ontology_term_id": "carne",
+   "entity_type": "component",
+   "entity_id": "fiambre"
+  },
+  {
+   "ontology_term_id": "ing_lacticinios",
+   "entity_type": "component",
+   "entity_id": "queijo"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "queijo"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "queijo"
+  },
+  {
+   "ontology_term_id": "ing_lacticinios",
+   "entity_type": "component",
+   "entity_id": "queijo creme"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "queijo creme"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "queijo creme"
+  },
+  {
+   "ontology_term_id": "ing_lacticinios",
+   "entity_type": "component",
+   "entity_id": "queijo mozarela"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "queijo mozarela"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "queijo mozarela"
+  },
+  {
+   "ontology_term_id": "ing_lacticinios",
+   "entity_type": "component",
+   "entity_id": "queijo camembert"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "queijo camembert"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "queijo camembert"
+  },
+  {
+   "ontology_term_id": "ing_lacticinios",
+   "entity_type": "component",
+   "entity_id": "queijo chévre"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "queijo chévre"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "queijo chévre"
+  },
+  {
+   "ontology_term_id": "ing_lacticinios",
+   "entity_type": "component",
+   "entity_id": "queijos para tábua (sortido)"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "queijos para tábua (sortido)"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "queijos para tábua (sortido)"
+  },
+  {
+   "ontology_term_id": "ing_lacticinios",
+   "entity_type": "component",
+   "entity_id": "ovo"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "ovo"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "ovo"
+  },
+  {
+   "ontology_term_id": "ing_lacticinios",
+   "entity_type": "component",
+   "entity_id": "iogurte"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "iogurte"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "iogurte"
+  },
+  {
+   "ontology_term_id": "ing_lacticinios",
+   "entity_type": "component",
+   "entity_id": "natas"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "natas"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "natas"
+  },
+  {
+   "ontology_term_id": "ing_carne",
+   "entity_type": "component",
+   "entity_id": "bacon"
+  },
+  {
+   "ontology_term_id": "carne",
+   "entity_type": "component",
+   "entity_id": "bacon"
+  },
+  {
+   "ontology_term_id": "ing_carne",
+   "entity_type": "component",
+   "entity_id": "chouriço"
+  },
+  {
+   "ontology_term_id": "carne",
+   "entity_type": "component",
+   "entity_id": "chouriço"
+  },
+  {
+   "ontology_term_id": "ing_carne",
+   "entity_type": "component",
+   "entity_id": "salsicha"
+  },
+  {
+   "ontology_term_id": "carne",
+   "entity_type": "component",
+   "entity_id": "salsicha"
+  },
+  {
+   "ontology_term_id": "ing_carne",
+   "entity_type": "component",
+   "entity_id": "enchidos para tábua (sortido)"
+  },
+  {
+   "ontology_term_id": "carne",
+   "entity_type": "component",
+   "entity_id": "enchidos para tábua (sortido)"
+  },
+  {
+   "ontology_term_id": "ing_carne",
+   "entity_type": "component",
+   "entity_id": "frango (peito)"
+  },
+  {
+   "ontology_term_id": "carne",
+   "entity_type": "component",
+   "entity_id": "frango (peito)"
+  },
+  {
+   "ontology_term_id": "ing_molhos",
+   "entity_type": "component",
+   "entity_id": "patê de frango"
+  },
+  {
+   "ontology_term_id": "carne",
+   "entity_type": "component",
+   "entity_id": "patê de frango"
+  },
+  {
+   "ontology_term_id": "ing_carne",
+   "entity_type": "component",
+   "entity_id": "panado de frango"
+  },
+  {
+   "ontology_term_id": "carne",
+   "entity_type": "component",
+   "entity_id": "panado de frango"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "panado de frango"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "panado de frango"
+  },
+  {
+   "ontology_term_id": "ing_carne",
+   "entity_type": "component",
+   "entity_id": "panado de porco"
+  },
+  {
+   "ontology_term_id": "carne",
+   "entity_type": "component",
+   "entity_id": "panado de porco"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "panado de porco"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "panado de porco"
+  },
+  {
+   "ontology_term_id": "ing_carne",
+   "entity_type": "component",
+   "entity_id": "pernil de porco"
+  },
+  {
+   "ontology_term_id": "carne",
+   "entity_type": "component",
+   "entity_id": "pernil de porco"
+  },
+  {
+   "ontology_term_id": "ing_carne",
+   "entity_type": "component",
+   "entity_id": "hambúrguer de carne"
+  },
+  {
+   "ontology_term_id": "carne",
+   "entity_type": "component",
+   "entity_id": "hambúrguer de carne"
+  },
+  {
+   "ontology_term_id": "ing_peixe",
+   "entity_type": "component",
+   "entity_id": "hambúrguer de salmão"
+  },
+  {
+   "ontology_term_id": "peixe",
+   "entity_type": "component",
+   "entity_id": "hambúrguer de salmão"
+  },
+  {
+   "ontology_term_id": "ing_peixe",
+   "entity_type": "component",
+   "entity_id": "hambúrguer de atum"
+  },
+  {
+   "ontology_term_id": "peixe",
+   "entity_type": "component",
+   "entity_id": "hambúrguer de atum"
+  },
+  {
+   "ontology_term_id": "ing_vegetais",
+   "entity_type": "component",
+   "entity_id": "hambúrguer de cogumelos"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "hambúrguer de cogumelos"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "hambúrguer de cogumelos"
+  },
+  {
+   "ontology_term_id": "ing_carne",
+   "entity_type": "component",
+   "entity_id": "vitela"
+  },
+  {
+   "ontology_term_id": "carne",
+   "entity_type": "component",
+   "entity_id": "vitela"
+  },
+  {
+   "ontology_term_id": "ing_carne",
+   "entity_type": "component",
+   "entity_id": "lombo de porco"
+  },
+  {
+   "ontology_term_id": "carne",
+   "entity_type": "component",
+   "entity_id": "lombo de porco"
+  },
+  {
+   "ontology_term_id": "ing_carne",
+   "entity_type": "component",
+   "entity_id": "leitão"
+  },
+  {
+   "ontology_term_id": "carne",
+   "entity_type": "component",
+   "entity_id": "leitão"
+  },
+  {
+   "ontology_term_id": "ing_carne",
+   "entity_type": "component",
+   "entity_id": "moelas"
+  },
+  {
+   "ontology_term_id": "carne",
+   "entity_type": "component",
+   "entity_id": "moelas"
+  },
+  {
+   "ontology_term_id": "ing_peixe",
+   "entity_type": "component",
+   "entity_id": "atum"
+  },
+  {
+   "ontology_term_id": "peixe",
+   "entity_type": "component",
+   "entity_id": "atum"
+  },
+  {
+   "ontology_term_id": "ing_molhos",
+   "entity_type": "component",
+   "entity_id": "patê de atum"
+  },
+  {
+   "ontology_term_id": "peixe",
+   "entity_type": "component",
+   "entity_id": "patê de atum"
+  },
+  {
+   "ontology_term_id": "ing_peixe",
+   "entity_type": "component",
+   "entity_id": "salmão fumado"
+  },
+  {
+   "ontology_term_id": "peixe",
+   "entity_type": "component",
+   "entity_id": "salmão fumado"
+  },
+  {
+   "ontology_term_id": "ing_peixe",
+   "entity_type": "component",
+   "entity_id": "salmão (lombo)"
+  },
+  {
+   "ontology_term_id": "peixe",
+   "entity_type": "component",
+   "entity_id": "salmão (lombo)"
+  },
+  {
+   "ontology_term_id": "ing_peixe",
+   "entity_type": "component",
+   "entity_id": "bacalhau"
+  },
+  {
+   "ontology_term_id": "peixe",
+   "entity_type": "component",
+   "entity_id": "bacalhau"
+  },
+  {
+   "ontology_term_id": "ing_peixe",
+   "entity_type": "component",
+   "entity_id": "pescada (filete)"
+  },
+  {
+   "ontology_term_id": "peixe",
+   "entity_type": "component",
+   "entity_id": "pescada (filete)"
+  },
+  {
+   "ontology_term_id": "ing_peixe",
+   "entity_type": "component",
+   "entity_id": "camarão"
+  },
+  {
+   "ontology_term_id": "peixe",
+   "entity_type": "component",
+   "entity_id": "camarão"
+  },
+  {
+   "ontology_term_id": "ing_peixe",
+   "entity_type": "component",
+   "entity_id": "delícias do mar"
+  },
+  {
+   "ontology_term_id": "peixe",
+   "entity_type": "component",
+   "entity_id": "delícias do mar"
+  },
+  {
+   "ontology_term_id": "ing_peixe",
+   "entity_type": "component",
+   "entity_id": "lulas"
+  },
+  {
+   "ontology_term_id": "peixe",
+   "entity_type": "component",
+   "entity_id": "lulas"
+  },
+  {
+   "ontology_term_id": "ing_peixe",
+   "entity_type": "component",
+   "entity_id": "sushi (peças)"
+  },
+  {
+   "ontology_term_id": "peixe",
+   "entity_type": "component",
+   "entity_id": "sushi (peças)"
+  },
+  {
+   "ontology_term_id": "ing_vegetais",
+   "entity_type": "component",
+   "entity_id": "alface"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "alface"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "alface"
+  },
+  {
+   "ontology_term_id": "ing_vegetais",
+   "entity_type": "component",
+   "entity_id": "rúcula"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "rúcula"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "rúcula"
+  },
+  {
+   "ontology_term_id": "ing_vegetais",
+   "entity_type": "component",
+   "entity_id": "cenoura"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "cenoura"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "cenoura"
+  },
+  {
+   "ontology_term_id": "ing_vegetais",
+   "entity_type": "component",
+   "entity_id": "tomate cherry"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "tomate cherry"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "tomate cherry"
+  },
+  {
+   "ontology_term_id": "ing_vegetais",
+   "entity_type": "component",
+   "entity_id": "tomate"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "tomate"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "tomate"
+  },
+  {
+   "ontology_term_id": "ing_vegetais",
+   "entity_type": "component",
+   "entity_id": "azeitona"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "azeitona"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "azeitona"
+  },
+  {
+   "ontology_term_id": "ing_vegetais",
+   "entity_type": "component",
+   "entity_id": "cogumelos"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "cogumelos"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "cogumelos"
+  },
+  {
+   "ontology_term_id": "ing_vegetais",
+   "entity_type": "component",
+   "entity_id": "cebola"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "cebola"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "cebola"
+  },
+  {
+   "ontology_term_id": "ing_vegetais",
+   "entity_type": "component",
+   "entity_id": "salsa"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "salsa"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "salsa"
+  },
+  {
+   "ontology_term_id": "ing_vegetais",
+   "entity_type": "component",
+   "entity_id": "cebolinho"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "cebolinho"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "cebolinho"
+  },
+  {
+   "ontology_term_id": "ing_vegetais",
+   "entity_type": "component",
+   "entity_id": "manjericão"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "manjericão"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "manjericão"
+  },
+  {
+   "ontology_term_id": "ing_vegetais",
+   "entity_type": "component",
+   "entity_id": "hortelã"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "hortelã"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "hortelã"
+  },
+  {
+   "ontology_term_id": "ing_vegetais",
+   "entity_type": "component",
+   "entity_id": "alecrim"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "alecrim"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "alecrim"
+  },
+  {
+   "ontology_term_id": "ing_vegetais",
+   "entity_type": "component",
+   "entity_id": "milho"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "milho"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "milho"
+  },
+  {
+   "ontology_term_id": "ing_vegetais",
+   "entity_type": "component",
+   "entity_id": "couve roxa"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "couve roxa"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "couve roxa"
+  },
+  {
+   "ontology_term_id": "ing_vegetais",
+   "entity_type": "component",
+   "entity_id": "couve flor"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "couve flor"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "couve flor"
+  },
+  {
+   "ontology_term_id": "ing_vegetais",
+   "entity_type": "component",
+   "entity_id": "couve (caldo verde)"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "couve (caldo verde)"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "couve (caldo verde)"
+  },
+  {
+   "ontology_term_id": "ing_vegetais",
+   "entity_type": "component",
+   "entity_id": "beterraba"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "beterraba"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "beterraba"
+  },
+  {
+   "ontology_term_id": "ing_vegetais",
+   "entity_type": "component",
+   "entity_id": "legumes (mistura)"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "legumes (mistura)"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "legumes (mistura)"
+  },
+  {
+   "ontology_term_id": "ing_vegetais",
+   "entity_type": "component",
+   "entity_id": "ervilhas"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "ervilhas"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "ervilhas"
+  },
+  {
+   "ontology_term_id": "ing_vegetais",
+   "entity_type": "component",
+   "entity_id": "batata"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "batata"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "batata"
+  },
+  {
+   "ontology_term_id": "ing_mercearia",
+   "entity_type": "component",
+   "entity_id": "batata palha"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "batata palha"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "batata palha"
+  },
+  {
+   "ontology_term_id": "ing_mercearia",
+   "entity_type": "component",
+   "entity_id": "feijão frade"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "feijão frade"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "feijão frade"
+  },
+  {
+   "ontology_term_id": "ing_mercearia",
+   "entity_type": "component",
+   "entity_id": "grão de bico"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "grão de bico"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "grão de bico"
+  },
+  {
+   "ontology_term_id": "ing_mercearia",
+   "entity_type": "component",
+   "entity_id": "quinoa"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "quinoa"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "quinoa"
+  },
+  {
+   "ontology_term_id": "ing_mercearia",
+   "entity_type": "component",
+   "entity_id": "couscous"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "couscous"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "couscous"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "couscous"
+  },
+  {
+   "ontology_term_id": "ing_mercearia",
+   "entity_type": "component",
+   "entity_id": "arroz"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "arroz"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "arroz"
+  },
+  {
+   "ontology_term_id": "ing_mercearia",
+   "entity_type": "component",
+   "entity_id": "massa"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "massa"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "massa"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "massa"
+  },
+  {
+   "ontology_term_id": "ing_mercearia",
+   "entity_type": "component",
+   "entity_id": "soja (bolonhesa / jardineira)"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "soja (bolonhesa / jardineira)"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "soja (bolonhesa / jardineira)"
+  },
+  {
+   "ontology_term_id": "ing_mercearia",
+   "entity_type": "component",
+   "entity_id": "amendoins"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "amendoins"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "amendoins"
+  },
+  {
+   "ontology_term_id": "ing_mercearia",
+   "entity_type": "component",
+   "entity_id": "tremoços"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "tremoços"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "tremoços"
+  },
+  {
+   "ontology_term_id": "ing_mercearia",
+   "entity_type": "component",
+   "entity_id": "frutos secos (mistura)"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "frutos secos (mistura)"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "frutos secos (mistura)"
+  },
+  {
+   "ontology_term_id": "ing_mercearia",
+   "entity_type": "component",
+   "entity_id": "granola"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "granola"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "granola"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "granola"
+  },
+  {
+   "ontology_term_id": "ing_fruta",
+   "entity_type": "component",
+   "entity_id": "mirtilos"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "mirtilos"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "mirtilos"
+  },
+  {
+   "ontology_term_id": "ing_fruta",
+   "entity_type": "component",
+   "entity_id": "frutos vermelhos"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "frutos vermelhos"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "frutos vermelhos"
+  },
+  {
+   "ontology_term_id": "ing_molhos",
+   "entity_type": "component",
+   "entity_id": "guacamole"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "guacamole"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "guacamole"
+  },
+  {
+   "ontology_term_id": "ing_molhos",
+   "entity_type": "component",
+   "entity_id": "húmus"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "húmus"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "húmus"
+  },
+  {
+   "ontology_term_id": "ing_molhos",
+   "entity_type": "component",
+   "entity_id": "patê de azeitona"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "patê de azeitona"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "patê de azeitona"
+  },
+  {
+   "ontology_term_id": "ing_molhos",
+   "entity_type": "component",
+   "entity_id": "maionese de wasabi"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "maionese de wasabi"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "maionese de wasabi"
+  },
+  {
+   "ontology_term_id": "ing_molhos",
+   "entity_type": "component",
+   "entity_id": "molho pesto"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "molho pesto"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "molho pesto"
+  },
+  {
+   "ontology_term_id": "ing_molhos",
+   "entity_type": "component",
+   "entity_id": "compota"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "compota"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "compota"
+  },
+  {
+   "ontology_term_id": "ing_mercearia",
+   "entity_type": "component",
+   "entity_id": "azeite"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "azeite"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "azeite"
+  },
+  {
+   "ontology_term_id": "ing_mercearia",
+   "entity_type": "component",
+   "entity_id": "alcaparras"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "alcaparras"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "alcaparras"
+  },
+  {
+   "ontology_term_id": "ing_mercearia",
+   "entity_type": "component",
+   "entity_id": "canela"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "canela"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "canela"
+  },
+  {
+   "ontology_term_id": "ing_vegetais",
+   "entity_type": "component",
+   "entity_id": "gengibre"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "gengibre"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "gengibre"
+  },
+  {
+   "ontology_term_id": "prep_sobremesas",
+   "entity_type": "component",
+   "entity_id": "ovos moles"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "ovos moles"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "ovos moles"
+  },
+  {
+   "ontology_term_id": "prep_sobremesas",
+   "entity_type": "component",
+   "entity_id": "fios de ovos"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "fios de ovos"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "fios de ovos"
+  },
+  {
+   "ontology_term_id": "ing_fruta",
+   "entity_type": "component",
+   "entity_id": "banana"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "banana"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "banana"
+  },
+  {
+   "ontology_term_id": "ing_fruta",
+   "entity_type": "component",
+   "entity_id": "maçã"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "maçã"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "maçã"
+  },
+  {
+   "ontology_term_id": "ing_fruta",
+   "entity_type": "component",
+   "entity_id": "pêra"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "pêra"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "pêra"
+  },
+  {
+   "ontology_term_id": "ing_fruta",
+   "entity_type": "component",
+   "entity_id": "tangerina"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "tangerina"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "tangerina"
+  },
+  {
+   "ontology_term_id": "ing_fruta",
+   "entity_type": "component",
+   "entity_id": "laranja"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "laranja"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "laranja"
+  },
+  {
+   "ontology_term_id": "ing_fruta",
+   "entity_type": "component",
+   "entity_id": "limão"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "limão"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "limão"
+  },
+  {
+   "ontology_term_id": "ing_fruta",
+   "entity_type": "component",
+   "entity_id": "frutas para sangria"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "frutas para sangria"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "frutas para sangria"
+  },
+  {
+   "ontology_term_id": "prep_fritos",
+   "entity_type": "component",
+   "entity_id": "croquete de vitela"
+  },
+  {
+   "ontology_term_id": "carne",
+   "entity_type": "component",
+   "entity_id": "croquete de vitela"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "croquete de vitela"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "croquete de vitela"
+  },
+  {
+   "ontology_term_id": "prep_fritos",
+   "entity_type": "component",
+   "entity_id": "rissol de camarão"
+  },
+  {
+   "ontology_term_id": "peixe",
+   "entity_type": "component",
+   "entity_id": "rissol de camarão"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "rissol de camarão"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "rissol de camarão"
+  },
+  {
+   "ontology_term_id": "prep_fritos",
+   "entity_type": "component",
+   "entity_id": "bolinho de bacalhau"
+  },
+  {
+   "ontology_term_id": "peixe",
+   "entity_type": "component",
+   "entity_id": "bolinho de bacalhau"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "bolinho de bacalhau"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "bolinho de bacalhau"
+  },
+  {
+   "ontology_term_id": "prep_fritos",
+   "entity_type": "component",
+   "entity_id": "chamuça de frango"
+  },
+  {
+   "ontology_term_id": "carne",
+   "entity_type": "component",
+   "entity_id": "chamuça de frango"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "chamuça de frango"
+  },
+  {
+   "ontology_term_id": "prep_fritos",
+   "entity_type": "component",
+   "entity_id": "chamuça de vegetais"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "chamuça de vegetais"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "chamuça de vegetais"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "chamuça de vegetais"
+  },
+  {
+   "ontology_term_id": "prep_fritos",
+   "entity_type": "component",
+   "entity_id": "falafel"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "falafel"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "falafel"
+  },
+  {
+   "ontology_term_id": "prep_fritos",
+   "entity_type": "component",
+   "entity_id": "rolinho primavera"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "rolinho primavera"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "rolinho primavera"
+  },
+  {
+   "ontology_term_id": "prep_fritos",
+   "entity_type": "component",
+   "entity_id": "bolinha de grão de bico"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "bolinha de grão de bico"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "bolinha de grão de bico"
+  },
+  {
+   "ontology_term_id": "prep_salgados",
+   "entity_type": "component",
+   "entity_id": "empada de frango"
+  },
+  {
+   "ontology_term_id": "carne",
+   "entity_type": "component",
+   "entity_id": "empada de frango"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "empada de frango"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "empada de frango"
+  },
+  {
+   "ontology_term_id": "prep_salgados",
+   "entity_type": "component",
+   "entity_id": "empada de alheira"
+  },
+  {
+   "ontology_term_id": "carne",
+   "entity_type": "component",
+   "entity_id": "empada de alheira"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "empada de alheira"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "empada de alheira"
+  },
+  {
+   "ontology_term_id": "prep_salgados",
+   "entity_type": "component",
+   "entity_id": "empada de cogumelos"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "empada de cogumelos"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "empada de cogumelos"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "empada de cogumelos"
+  },
+  {
+   "ontology_term_id": "prep_salgados",
+   "entity_type": "component",
+   "entity_id": "empada de legumes"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "empada de legumes"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "empada de legumes"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "empada de legumes"
+  },
+  {
+   "ontology_term_id": "prep_salgados",
+   "entity_type": "component",
+   "entity_id": "vol-au-vent (cesto)"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "vol-au-vent (cesto)"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "vol-au-vent (cesto)"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "vol-au-vent (cesto)"
+  },
+  {
+   "ontology_term_id": "prep_salgados",
+   "entity_type": "component",
+   "entity_id": "folhado misto"
+  },
+  {
+   "ontology_term_id": "carne",
+   "entity_type": "component",
+   "entity_id": "folhado misto"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "folhado misto"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "folhado misto"
+  },
+  {
+   "ontology_term_id": "prep_salgados",
+   "entity_type": "component",
+   "entity_id": "folhado de salsicha"
+  },
+  {
+   "ontology_term_id": "carne",
+   "entity_type": "component",
+   "entity_id": "folhado de salsicha"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "folhado de salsicha"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "folhado de salsicha"
+  },
+  {
+   "ontology_term_id": "prep_salgados",
+   "entity_type": "component",
+   "entity_id": "quiche de fiambre"
+  },
+  {
+   "ontology_term_id": "carne",
+   "entity_type": "component",
+   "entity_id": "quiche de fiambre"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "quiche de fiambre"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "quiche de fiambre"
+  },
+  {
+   "ontology_term_id": "prep_salgados",
+   "entity_type": "component",
+   "entity_id": "quiche de cogumelos"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "quiche de cogumelos"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "quiche de cogumelos"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "quiche de cogumelos"
+  },
+  {
+   "ontology_term_id": "prep_salgados",
+   "entity_type": "component",
+   "entity_id": "tarte de atum"
+  },
+  {
+   "ontology_term_id": "peixe",
+   "entity_type": "component",
+   "entity_id": "tarte de atum"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "tarte de atum"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "tarte de atum"
+  },
+  {
+   "ontology_term_id": "prep_salgados",
+   "entity_type": "component",
+   "entity_id": "tarte de camembert"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "tarte de camembert"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "tarte de camembert"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "tarte de camembert"
+  },
+  {
+   "ontology_term_id": "prep_salgados",
+   "entity_type": "component",
+   "entity_id": "tarte de chévre"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "tarte de chévre"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "tarte de chévre"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "tarte de chévre"
+  },
+  {
+   "ontology_term_id": "prep_doces",
+   "entity_type": "component",
+   "entity_id": "brownie c/ nozes"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "brownie c/ nozes"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "brownie c/ nozes"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "brownie c/ nozes"
+  },
+  {
+   "ontology_term_id": "ing_molhos",
+   "entity_type": "component",
+   "entity_id": "caramelo salgado"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "caramelo salgado"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "caramelo salgado"
+  },
+  {
+   "ontology_term_id": "prep_doces",
+   "entity_type": "component",
+   "entity_id": "salame de chocolate"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "salame de chocolate"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "salame de chocolate"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "salame de chocolate"
+  },
+  {
+   "ontology_term_id": "prep_doces",
+   "entity_type": "component",
+   "entity_id": "tarte de amêndoa"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "tarte de amêndoa"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "tarte de amêndoa"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "tarte de amêndoa"
+  },
+  {
+   "ontology_term_id": "prep_doces",
+   "entity_type": "component",
+   "entity_id": "tarte basca de frutos vermelhos"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "tarte basca de frutos vermelhos"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "tarte basca de frutos vermelhos"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "tarte basca de frutos vermelhos"
+  },
+  {
+   "ontology_term_id": "prep_doces",
+   "entity_type": "component",
+   "entity_id": "torta de laranja"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "torta de laranja"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "torta de laranja"
+  },
+  {
+   "ontology_term_id": "prep_doces",
+   "entity_type": "component",
+   "entity_id": "torta de ovos"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "torta de ovos"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "torta de ovos"
+  },
+  {
+   "ontology_term_id": "prep_doces",
+   "entity_type": "component",
+   "entity_id": "bolo de bolacha"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "bolo de bolacha"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "bolo de bolacha"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "bolo de bolacha"
+  },
+  {
+   "ontology_term_id": "prep_doces",
+   "entity_type": "component",
+   "entity_id": "bolo brigadeiro"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "bolo brigadeiro"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "bolo brigadeiro"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "bolo brigadeiro"
+  },
+  {
+   "ontology_term_id": "prep_doces",
+   "entity_type": "component",
+   "entity_id": "bolo de chocolate"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "bolo de chocolate"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "bolo de chocolate"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "bolo de chocolate"
+  },
+  {
+   "ontology_term_id": "prep_doces",
+   "entity_type": "component",
+   "entity_id": "bolo rei"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "bolo rei"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "bolo rei"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "bolo rei"
+  },
+  {
+   "ontology_term_id": "prep_doces",
+   "entity_type": "component",
+   "entity_id": "pastel de nata"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "pastel de nata"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "pastel de nata"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "pastel de nata"
+  },
+  {
+   "ontology_term_id": "prep_doces",
+   "entity_type": "component",
+   "entity_id": "bola de berlim"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "bola de berlim"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "bola de berlim"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "bola de berlim"
+  },
+  {
+   "ontology_term_id": "prep_doces",
+   "entity_type": "component",
+   "entity_id": "palmier"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "palmier"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "palmier"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "palmier"
+  },
+  {
+   "ontology_term_id": "prep_doces",
+   "entity_type": "component",
+   "entity_id": "mil folhas"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "mil folhas"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "mil folhas"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "mil folhas"
+  },
+  {
+   "ontology_term_id": "prep_doces",
+   "entity_type": "component",
+   "entity_id": "húngaro"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "húngaro"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "húngaro"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "húngaro"
+  },
+  {
+   "ontology_term_id": "prep_doces",
+   "entity_type": "component",
+   "entity_id": "raiva"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "raiva"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "raiva"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "raiva"
+  },
+  {
+   "ontology_term_id": "prep_doces",
+   "entity_type": "component",
+   "entity_id": "bolachinha bacalhau"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "bolachinha bacalhau"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "bolachinha bacalhau"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "bolachinha bacalhau"
+  },
+  {
+   "ontology_term_id": "prep_doces",
+   "entity_type": "component",
+   "entity_id": "bolacha de manteiga"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "bolacha de manteiga"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "bolacha de manteiga"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "bolacha de manteiga"
+  },
+  {
+   "ontology_term_id": "prep_doces",
+   "entity_type": "component",
+   "entity_id": "bolachinha de aveia"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "bolachinha de aveia"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "bolachinha de aveia"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "bolachinha de aveia"
+  },
+  {
+   "ontology_term_id": "prep_doces",
+   "entity_type": "component",
+   "entity_id": "cookie de chocolate"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "cookie de chocolate"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "cookie de chocolate"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "cookie de chocolate"
+  },
+  {
+   "ontology_term_id": "prep_doces",
+   "entity_type": "component",
+   "entity_id": "donut"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "donut"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "donut"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "donut"
+  },
+  {
+   "ontology_term_id": "prep_doces",
+   "entity_type": "component",
+   "entity_id": "argola de chocolate"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "argola de chocolate"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "argola de chocolate"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "argola de chocolate"
+  },
+  {
+   "ontology_term_id": "prep_doces",
+   "entity_type": "component",
+   "entity_id": "rosquinha de chocolate de leite"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "rosquinha de chocolate de leite"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "rosquinha de chocolate de leite"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "rosquinha de chocolate de leite"
+  },
+  {
+   "ontology_term_id": "prep_doces",
+   "entity_type": "component",
+   "entity_id": "rosquinha de chocolate preto"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "rosquinha de chocolate preto"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "rosquinha de chocolate preto"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "rosquinha de chocolate preto"
+  },
+  {
+   "ontology_term_id": "prep_doces",
+   "entity_type": "component",
+   "entity_id": "folhado de chocolate"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "folhado de chocolate"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "folhado de chocolate"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "folhado de chocolate"
+  },
+  {
+   "ontology_term_id": "prep_doces",
+   "entity_type": "component",
+   "entity_id": "bolinho de coco"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "bolinho de coco"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "bolinho de coco"
+  },
+  {
+   "ontology_term_id": "prep_doces",
+   "entity_type": "component",
+   "entity_id": "bolinho de feijão"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "bolinho de feijão"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "bolinho de feijão"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "bolinho de feijão"
+  },
+  {
+   "ontology_term_id": "prep_doces",
+   "entity_type": "component",
+   "entity_id": "brigadeiro"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "brigadeiro"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "brigadeiro"
+  },
+  {
+   "ontology_term_id": "prep_doces",
+   "entity_type": "component",
+   "entity_id": "macaron"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "macaron"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "macaron"
+  },
+  {
+   "ontology_term_id": "prep_doces",
+   "entity_type": "component",
+   "entity_id": "rabanada"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "rabanada"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "rabanada"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "rabanada"
+  },
+  {
+   "ontology_term_id": "prep_sobremesas",
+   "entity_type": "component",
+   "entity_id": "mousse de chocolate"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "mousse de chocolate"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "mousse de chocolate"
+  },
+  {
+   "ontology_term_id": "prep_sobremesas",
+   "entity_type": "component",
+   "entity_id": "cheesecake de frutos vermelhos"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "cheesecake de frutos vermelhos"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "cheesecake de frutos vermelhos"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "cheesecake de frutos vermelhos"
+  },
+  {
+   "ontology_term_id": "prep_sobremesas",
+   "entity_type": "component",
+   "entity_id": "cheesecake de limão"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "cheesecake de limão"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "cheesecake de limão"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "cheesecake de limão"
+  },
+  {
+   "ontology_term_id": "prep_sobremesas",
+   "entity_type": "component",
+   "entity_id": "tiramisu"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "tiramisu"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "tiramisu"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "tiramisu"
+  },
+  {
+   "ontology_term_id": "prep_sobremesas",
+   "entity_type": "component",
+   "entity_id": "natas do céu"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "natas do céu"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "natas do céu"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "natas do céu"
+  },
+  {
+   "ontology_term_id": "prep_sobremesas",
+   "entity_type": "component",
+   "entity_id": "leite creme"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "leite creme"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "leite creme"
+  },
+  {
+   "ontology_term_id": "prep_sobremesas",
+   "entity_type": "component",
+   "entity_id": "semifrio de bolacha"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "semifrio de bolacha"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "semifrio de bolacha"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "semifrio de bolacha"
+  },
+  {
+   "ontology_term_id": "prep_pratos",
+   "entity_type": "component",
+   "entity_id": "arroz de pato"
+  },
+  {
+   "ontology_term_id": "carne",
+   "entity_type": "component",
+   "entity_id": "arroz de pato"
+  },
+  {
+   "ontology_term_id": "prep_pratos",
+   "entity_type": "component",
+   "entity_id": "arroz á valenciana"
+  },
+  {
+   "ontology_term_id": "carne",
+   "entity_type": "component",
+   "entity_id": "arroz á valenciana"
+  },
+  {
+   "ontology_term_id": "peixe",
+   "entity_type": "component",
+   "entity_id": "arroz á valenciana"
+  },
+  {
+   "ontology_term_id": "prep_pratos",
+   "entity_type": "component",
+   "entity_id": "bacalhau c/ natas"
+  },
+  {
+   "ontology_term_id": "peixe",
+   "entity_type": "component",
+   "entity_id": "bacalhau c/ natas"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "bacalhau c/ natas"
+  },
+  {
+   "ontology_term_id": "prep_pratos",
+   "entity_type": "component",
+   "entity_id": "bacalhau c/ grão de bico"
+  },
+  {
+   "ontology_term_id": "peixe",
+   "entity_type": "component",
+   "entity_id": "bacalhau c/ grão de bico"
+  },
+  {
+   "ontology_term_id": "prep_pratos",
+   "entity_type": "component",
+   "entity_id": "bacalhau desfiado á portuguesa"
+  },
+  {
+   "ontology_term_id": "peixe",
+   "entity_type": "component",
+   "entity_id": "bacalhau desfiado á portuguesa"
+  },
+  {
+   "ontology_term_id": "prep_pratos",
+   "entity_type": "component",
+   "entity_id": "lombo de bacalhau assado"
+  },
+  {
+   "ontology_term_id": "peixe",
+   "entity_type": "component",
+   "entity_id": "lombo de bacalhau assado"
+  },
+  {
+   "ontology_term_id": "prep_pratos",
+   "entity_type": "component",
+   "entity_id": "bifanas estufadas"
+  },
+  {
+   "ontology_term_id": "carne",
+   "entity_type": "component",
+   "entity_id": "bifanas estufadas"
+  },
+  {
+   "ontology_term_id": "prep_pratos",
+   "entity_type": "component",
+   "entity_id": "bifanas de frango"
+  },
+  {
+   "ontology_term_id": "carne",
+   "entity_type": "component",
+   "entity_id": "bifanas de frango"
+  },
+  {
+   "ontology_term_id": "prep_pratos",
+   "entity_type": "component",
+   "entity_id": "camarão cozido"
+  },
+  {
+   "ontology_term_id": "peixe",
+   "entity_type": "component",
+   "entity_id": "camarão cozido"
+  },
+  {
+   "ontology_term_id": "prep_pratos",
+   "entity_type": "component",
+   "entity_id": "couscous c/ cogumelos"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "couscous c/ cogumelos"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "couscous c/ cogumelos"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "couscous c/ cogumelos"
+  },
+  {
+   "ontology_term_id": "prep_pratos",
+   "entity_type": "component",
+   "entity_id": "couscous c/ legumes salteados"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "couscous c/ legumes salteados"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "couscous c/ legumes salteados"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "couscous c/ legumes salteados"
+  },
+  {
+   "ontology_term_id": "prep_pratos",
+   "entity_type": "component",
+   "entity_id": "feijoada de cogumelos"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "feijoada de cogumelos"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "feijoada de cogumelos"
+  },
+  {
+   "ontology_term_id": "prep_pratos",
+   "entity_type": "component",
+   "entity_id": "feijão frade c/ atum"
+  },
+  {
+   "ontology_term_id": "peixe",
+   "entity_type": "component",
+   "entity_id": "feijão frade c/ atum"
+  },
+  {
+   "ontology_term_id": "prep_pratos",
+   "entity_type": "component",
+   "entity_id": "feijão frade c/ cogumelos salteados"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "feijão frade c/ cogumelos salteados"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "feijão frade c/ cogumelos salteados"
+  },
+  {
+   "ontology_term_id": "prep_pratos",
+   "entity_type": "component",
+   "entity_id": "feijão frade c/ quinoa de legumes"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "feijão frade c/ quinoa de legumes"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "feijão frade c/ quinoa de legumes"
+  },
+  {
+   "ontology_term_id": "prep_pratos",
+   "entity_type": "component",
+   "entity_id": "frango assado"
+  },
+  {
+   "ontology_term_id": "carne",
+   "entity_type": "component",
+   "entity_id": "frango assado"
+  },
+  {
+   "ontology_term_id": "prep_pratos",
+   "entity_type": "component",
+   "entity_id": "grão de bico c/ quinoa de legumes"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "grão de bico c/ quinoa de legumes"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "grão de bico c/ quinoa de legumes"
+  },
+  {
+   "ontology_term_id": "prep_pratos",
+   "entity_type": "component",
+   "entity_id": "jardineira de cogumelos"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "jardineira de cogumelos"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "jardineira de cogumelos"
+  },
+  {
+   "ontology_term_id": "prep_pratos",
+   "entity_type": "component",
+   "entity_id": "jardineira de frango"
+  },
+  {
+   "ontology_term_id": "carne",
+   "entity_type": "component",
+   "entity_id": "jardineira de frango"
+  },
+  {
+   "ontology_term_id": "prep_pratos",
+   "entity_type": "component",
+   "entity_id": "jardineira de grão de bico"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "jardineira de grão de bico"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "jardineira de grão de bico"
+  },
+  {
+   "ontology_term_id": "prep_pratos",
+   "entity_type": "component",
+   "entity_id": "jardineira de lulas"
+  },
+  {
+   "ontology_term_id": "peixe",
+   "entity_type": "component",
+   "entity_id": "jardineira de lulas"
+  },
+  {
+   "ontology_term_id": "prep_pratos",
+   "entity_type": "component",
+   "entity_id": "jardineira de soja"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "jardineira de soja"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "jardineira de soja"
+  },
+  {
+   "ontology_term_id": "prep_pratos",
+   "entity_type": "component",
+   "entity_id": "jardineira de vitela"
+  },
+  {
+   "ontology_term_id": "carne",
+   "entity_type": "component",
+   "entity_id": "jardineira de vitela"
+  },
+  {
+   "ontology_term_id": "prep_pratos",
+   "entity_type": "component",
+   "entity_id": "lasanha de frango"
+  },
+  {
+   "ontology_term_id": "carne",
+   "entity_type": "component",
+   "entity_id": "lasanha de frango"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "lasanha de frango"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "lasanha de frango"
+  },
+  {
+   "ontology_term_id": "prep_pratos",
+   "entity_type": "component",
+   "entity_id": "lasanha de vitela"
+  },
+  {
+   "ontology_term_id": "carne",
+   "entity_type": "component",
+   "entity_id": "lasanha de vitela"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "lasanha de vitela"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "lasanha de vitela"
+  },
+  {
+   "ontology_term_id": "prep_pratos",
+   "entity_type": "component",
+   "entity_id": "leitão assado á bairrada"
+  },
+  {
+   "ontology_term_id": "carne",
+   "entity_type": "component",
+   "entity_id": "leitão assado á bairrada"
+  },
+  {
+   "ontology_term_id": "prep_pratos",
+   "entity_type": "component",
+   "entity_id": "lombo de porco assado"
+  },
+  {
+   "ontology_term_id": "carne",
+   "entity_type": "component",
+   "entity_id": "lombo de porco assado"
+  },
+  {
+   "ontology_term_id": "prep_pratos",
+   "entity_type": "component",
+   "entity_id": "lombo de salmão"
+  },
+  {
+   "ontology_term_id": "peixe",
+   "entity_type": "component",
+   "entity_id": "lombo de salmão"
+  },
+  {
+   "ontology_term_id": "prep_pratos",
+   "entity_type": "component",
+   "entity_id": "salmão assado"
+  },
+  {
+   "ontology_term_id": "peixe",
+   "entity_type": "component",
+   "entity_id": "salmão assado"
+  },
+  {
+   "ontology_term_id": "prep_pratos",
+   "entity_type": "component",
+   "entity_id": "magret de pato"
+  },
+  {
+   "ontology_term_id": "carne",
+   "entity_type": "component",
+   "entity_id": "magret de pato"
+  },
+  {
+   "ontology_term_id": "prep_pratos",
+   "entity_type": "component",
+   "entity_id": "moelas estufadas"
+  },
+  {
+   "ontology_term_id": "carne",
+   "entity_type": "component",
+   "entity_id": "moelas estufadas"
+  },
+  {
+   "ontology_term_id": "prep_pratos",
+   "entity_type": "component",
+   "entity_id": "pescada primavera"
+  },
+  {
+   "ontology_term_id": "peixe",
+   "entity_type": "component",
+   "entity_id": "pescada primavera"
+  },
+  {
+   "ontology_term_id": "prep_pratos",
+   "entity_type": "component",
+   "entity_id": "quinoa c/ legumes salteados"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "quinoa c/ legumes salteados"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "quinoa c/ legumes salteados"
+  },
+  {
+   "ontology_term_id": "prep_pratos",
+   "entity_type": "component",
+   "entity_id": "tabulê marroquino"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "tabulê marroquino"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "tabulê marroquino"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "tabulê marroquino"
+  },
+  {
+   "ontology_term_id": "prep_pratos",
+   "entity_type": "component",
+   "entity_id": "batatas assadas"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "batatas assadas"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "batatas assadas"
+  },
+  {
+   "ontology_term_id": "prep_pratos",
+   "entity_type": "component",
+   "entity_id": "batatas a murro"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "batatas a murro"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "batatas a murro"
+  },
+  {
+   "ontology_term_id": "prep_pratos",
+   "entity_type": "component",
+   "entity_id": "batatas fritas"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "batatas fritas"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "batatas fritas"
+  },
+  {
+   "ontology_term_id": "prep_pratos",
+   "entity_type": "component",
+   "entity_id": "puré de ervilhas"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "puré de ervilhas"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "puré de ervilhas"
+  },
+  {
+   "ontology_term_id": "prep_pratos",
+   "entity_type": "component",
+   "entity_id": "puré de maçã"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "puré de maçã"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "puré de maçã"
+  },
+  {
+   "ontology_term_id": "prep_pratos",
+   "entity_type": "component",
+   "entity_id": "legumes salteados"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "legumes salteados"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "legumes salteados"
+  },
+  {
+   "ontology_term_id": "prep_pratos",
+   "entity_type": "component",
+   "entity_id": "cogumelos salteados"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "cogumelos salteados"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "cogumelos salteados"
+  },
+  {
+   "ontology_term_id": "prep_pratos",
+   "entity_type": "component",
+   "entity_id": "omelete"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "omelete"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "omelete"
+  },
+  {
+   "ontology_term_id": "prep_pratos",
+   "entity_type": "component",
+   "entity_id": "cogumelos de cebolada"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "cogumelos de cebolada"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "cogumelos de cebolada"
+  },
+  {
+   "ontology_term_id": "prep_saladas",
+   "entity_type": "component",
+   "entity_id": "creme de cenoura"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "creme de cenoura"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "creme de cenoura"
+  },
+  {
+   "ontology_term_id": "prep_saladas",
+   "entity_type": "component",
+   "entity_id": "creme de couve flor"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "creme de couve flor"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "creme de couve flor"
+  },
+  {
+   "ontology_term_id": "prep_saladas",
+   "entity_type": "component",
+   "entity_id": "creme de legumes"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "creme de legumes"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "creme de legumes"
+  },
+  {
+   "ontology_term_id": "prep_saladas",
+   "entity_type": "component",
+   "entity_id": "sopa de legumes"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "sopa de legumes"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "sopa de legumes"
+  },
+  {
+   "ontology_term_id": "prep_saladas",
+   "entity_type": "component",
+   "entity_id": "caldo verde"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "caldo verde"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "caldo verde"
+  },
+  {
+   "ontology_term_id": "beb_agua",
+   "entity_type": "component",
+   "entity_id": "água (garrafa 0.5 l)"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "água (garrafa 0.5 l)"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "água (garrafa 0.5 l)"
+  },
+  {
+   "ontology_term_id": "beb_agua",
+   "entity_type": "component",
+   "entity_id": "água (garrafa de vidro)"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "água (garrafa de vidro)"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "água (garrafa de vidro)"
+  },
+  {
+   "ontology_term_id": "beb_agua",
+   "entity_type": "component",
+   "entity_id": "água das pedras"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "água das pedras"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "água das pedras"
+  },
+  {
+   "ontology_term_id": "beb_refrig",
+   "entity_type": "component",
+   "entity_id": "sumo compal"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "sumo compal"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "sumo compal"
+  },
+  {
+   "ontology_term_id": "beb_refrig",
+   "entity_type": "component",
+   "entity_id": "sumo bongo"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "sumo bongo"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "sumo bongo"
+  },
+  {
+   "ontology_term_id": "beb_refrig",
+   "entity_type": "component",
+   "entity_id": "refrigerante"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "refrigerante"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "refrigerante"
+  },
+  {
+   "ontology_term_id": "beb_cafe",
+   "entity_type": "component",
+   "entity_id": "café (cápsula)"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "café (cápsula)"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "café (cápsula)"
+  },
+  {
+   "ontology_term_id": "beb_cafe",
+   "entity_type": "component",
+   "entity_id": "descafeinado (cápsula)"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "descafeinado (cápsula)"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "descafeinado (cápsula)"
+  },
+  {
+   "ontology_term_id": "beb_cafe",
+   "entity_type": "component",
+   "entity_id": "chá (saqueta)"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "chá (saqueta)"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "chá (saqueta)"
+  },
+  {
+   "ontology_term_id": "beb_alcool",
+   "entity_type": "component",
+   "entity_id": "cerveja sagres"
+  },
+  {
+   "ontology_term_id": "alcool",
+   "entity_type": "component",
+   "entity_id": "cerveja sagres"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "cerveja sagres"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "cerveja sagres"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "cerveja sagres"
+  },
+  {
+   "ontology_term_id": "beb_alcool",
+   "entity_type": "component",
+   "entity_id": "cerveja super bock"
+  },
+  {
+   "ontology_term_id": "alcool",
+   "entity_type": "component",
+   "entity_id": "cerveja super bock"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "cerveja super bock"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "cerveja super bock"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "cerveja super bock"
+  },
+  {
+   "ontology_term_id": "beb_alcool",
+   "entity_type": "component",
+   "entity_id": "espumante"
+  },
+  {
+   "ontology_term_id": "alcool",
+   "entity_type": "component",
+   "entity_id": "espumante"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "espumante"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "espumante"
+  },
+  {
+   "ontology_term_id": "beb_alcool",
+   "entity_type": "component",
+   "entity_id": "vinho branco"
+  },
+  {
+   "ontology_term_id": "alcool",
+   "entity_type": "component",
+   "entity_id": "vinho branco"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "vinho branco"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "vinho branco"
+  },
+  {
+   "ontology_term_id": "beb_alcool",
+   "entity_type": "component",
+   "entity_id": "vinho tinto"
+  },
+  {
+   "ontology_term_id": "alcool",
+   "entity_type": "component",
+   "entity_id": "vinho tinto"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "vinho tinto"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "vinho tinto"
+  },
+  {
+   "ontology_term_id": "beb_alcool",
+   "entity_type": "component",
+   "entity_id": "vinho do porto"
+  },
+  {
+   "ontology_term_id": "alcool",
+   "entity_type": "component",
+   "entity_id": "vinho do porto"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "vinho do porto"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "vinho do porto"
+  },
+  {
+   "ontology_term_id": "espetos",
+   "entity_type": "component",
+   "entity_id": "pau de espetada"
+  },
+  {
+   "ontology_term_id": "madeira",
+   "entity_type": "component",
+   "entity_id": "pau de espetada"
+  },
+  {
+   "ontology_term_id": "descartavel",
+   "entity_type": "component",
+   "entity_id": "pau de espetada"
+  },
+  {
+   "ontology_term_id": "espetos",
+   "entity_type": "component",
+   "entity_id": "palito (espeto curto)"
+  },
+  {
+   "ontology_term_id": "madeira",
+   "entity_type": "component",
+   "entity_id": "palito (espeto curto)"
+  },
+  {
+   "ontology_term_id": "descartavel",
+   "entity_type": "component",
+   "entity_id": "palito (espeto curto)"
+  },
+  {
+   "ontology_term_id": "copos",
+   "entity_type": "component",
+   "entity_id": "copo (bolo no copo / sopa)"
+  },
+  {
+   "ontology_term_id": "plastico",
+   "entity_type": "component",
+   "entity_id": "copo (bolo no copo / sopa)"
+  },
+  {
+   "ontology_term_id": "descartavel",
+   "entity_type": "component",
+   "entity_id": "copo (bolo no copo / sopa)"
+  },
+  {
+   "ontology_term_id": "copos",
+   "entity_type": "component",
+   "entity_id": "flute de acrílico"
+  },
+  {
+   "ontology_term_id": "plastico",
+   "entity_type": "component",
+   "entity_id": "flute de acrílico"
+  },
+  {
+   "ontology_term_id": "reutilizavel",
+   "entity_type": "component",
+   "entity_id": "flute de acrílico"
+  },
+  {
+   "ontology_term_id": "copos",
+   "entity_type": "component",
+   "entity_id": "tacinha"
+  },
+  {
+   "ontology_term_id": "plastico",
+   "entity_type": "component",
+   "entity_id": "tacinha"
+  },
+  {
+   "ontology_term_id": "descartavel",
+   "entity_type": "component",
+   "entity_id": "tacinha"
+  },
+  {
+   "ontology_term_id": "copos",
+   "entity_type": "component",
+   "entity_id": "chávena de café"
+  },
+  {
+   "ontology_term_id": "vidro",
+   "entity_type": "component",
+   "entity_id": "chávena de café"
+  },
+  {
+   "ontology_term_id": "reutilizavel",
+   "entity_type": "component",
+   "entity_id": "chávena de café"
+  },
+  {
+   "ontology_term_id": "copos",
+   "entity_type": "component",
+   "entity_id": "jarro"
+  },
+  {
+   "ontology_term_id": "vidro",
+   "entity_type": "component",
+   "entity_id": "jarro"
+  },
+  {
+   "ontology_term_id": "reutilizavel",
+   "entity_type": "component",
+   "entity_id": "jarro"
+  },
+  {
+   "ontology_term_id": "tabuas_pratos",
+   "entity_type": "component",
+   "entity_id": "tábua"
+  },
+  {
+   "ontology_term_id": "madeira",
+   "entity_type": "component",
+   "entity_id": "tábua"
+  },
+  {
+   "ontology_term_id": "reutilizavel",
+   "entity_type": "component",
+   "entity_id": "tábua"
+  },
+  {
+   "ontology_term_id": "embalagem",
+   "entity_type": "component",
+   "entity_id": "saco reutilizável"
+  },
+  {
+   "ontology_term_id": "papel_cartao",
+   "entity_type": "component",
+   "entity_id": "saco reutilizável"
+  },
+  {
+   "ontology_term_id": "reutilizavel",
+   "entity_type": "component",
+   "entity_id": "saco reutilizável"
+  },
+  {
+   "ontology_term_id": "embalagem",
+   "entity_type": "component",
+   "entity_id": "talher de madeira"
+  },
+  {
+   "ontology_term_id": "madeira",
+   "entity_type": "component",
+   "entity_id": "talher de madeira"
+  },
+  {
+   "ontology_term_id": "descartavel",
+   "entity_type": "component",
+   "entity_id": "talher de madeira"
+  },
+  {
+   "ontology_term_id": "prep_doces",
+   "entity_type": "component",
+   "entity_id": "queque de laranja"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "queque de laranja"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "queque de laranja"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "queque de laranja"
+  },
+  {
+   "ontology_term_id": "prep_doces",
+   "entity_type": "component",
+   "entity_id": "queque de chocolate"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "queque de chocolate"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "queque de chocolate"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "queque de chocolate"
+  },
+  {
+   "ontology_term_id": "prep_doces",
+   "entity_type": "component",
+   "entity_id": "queque de aveia"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "queque de aveia"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "queque de aveia"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "queque de aveia"
+  },
+  {
+   "ontology_term_id": "prep_doces",
+   "entity_type": "component",
+   "entity_id": "queque de iogurte"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "queque de iogurte"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "queque de iogurte"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "queque de iogurte"
+  },
+  {
+   "ontology_term_id": "prep_doces",
+   "entity_type": "component",
+   "entity_id": "queque de cenoura"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "queque de cenoura"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "queque de cenoura"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "queque de cenoura"
+  },
+  {
+   "ontology_term_id": "prep_doces",
+   "entity_type": "component",
+   "entity_id": "queque de caramelo"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "queque de caramelo"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "queque de caramelo"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "queque de caramelo"
+  },
+  {
+   "ontology_term_id": "prep_doces",
+   "entity_type": "component",
+   "entity_id": "queque de ananás"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "queque de ananás"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "queque de ananás"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "queque de ananás"
+  },
+  {
+   "ontology_term_id": "prep_doces",
+   "entity_type": "component",
+   "entity_id": "queque de maçã"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "queque de maçã"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "queque de maçã"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "queque de maçã"
+  },
+  {
+   "ontology_term_id": "prep_doces",
+   "entity_type": "component",
+   "entity_id": "queque de noz"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "queque de noz"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "queque de noz"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "queque de noz"
+  },
+  {
+   "ontology_term_id": "prep_doces",
+   "entity_type": "component",
+   "entity_id": "queque de frutos vermelhos"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "queque de frutos vermelhos"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "queque de frutos vermelhos"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "queque de frutos vermelhos"
+  },
+  {
+   "ontology_term_id": "prep_doces",
+   "entity_type": "component",
+   "entity_id": "queque de pistacho"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "queque de pistacho"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "queque de pistacho"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "queque de pistacho"
+  },
+  {
+   "ontology_term_id": "prep_saladas",
+   "entity_type": "component",
+   "entity_id": "salada composta de atum"
+  },
+  {
+   "ontology_term_id": "peixe",
+   "entity_type": "component",
+   "entity_id": "salada composta de atum"
+  },
+  {
+   "ontology_term_id": "prep_saladas",
+   "entity_type": "component",
+   "entity_id": "salada composta de frango"
+  },
+  {
+   "ontology_term_id": "carne",
+   "entity_type": "component",
+   "entity_id": "salada composta de frango"
+  },
+  {
+   "ontology_term_id": "prep_saladas",
+   "entity_type": "component",
+   "entity_id": "salada composta vegetariana"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "salada composta vegetariana"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "salada composta vegetariana"
+  },
+  {
+   "ontology_term_id": "fruta_pecas",
+   "entity_type": "menu_line_template",
+   "entity_id": "espetadas de fruta"
+  },
+  {
+   "ontology_term_id": "fruta_pecas",
+   "entity_type": "menu_line_template",
+   "entity_id": "fruta"
+  },
+  {
+   "ontology_term_id": "fruta_pecas",
+   "entity_type": "menu_line_template",
+   "entity_id": "fruta · banana"
+  },
+  {
+   "ontology_term_id": "fruta_pecas",
+   "entity_type": "menu_line_template",
+   "entity_id": "fruta · maçã"
+  },
+  {
+   "ontology_term_id": "fruta_pecas",
+   "entity_type": "menu_line_template",
+   "entity_id": "fruta · pêra"
+  },
+  {
+   "ontology_term_id": "fruta_pecas",
+   "entity_type": "menu_line_template",
+   "entity_id": "fruta · tangerina"
+  },
+  {
+   "ontology_term_id": "cafe_cha",
+   "entity_type": "menu_line_template",
+   "entity_id": "café"
+  },
+  {
+   "ontology_term_id": "cafe_cha",
+   "entity_type": "menu_line_template",
+   "entity_id": "café café"
+  },
+  {
+   "ontology_term_id": "cafe_cha",
+   "entity_type": "menu_line_template",
+   "entity_id": "café descafeinado"
+  },
+  {
+   "ontology_term_id": "cerveja",
+   "entity_type": "menu_line_template",
+   "entity_id": "cerveja sagres"
+  },
+  {
+   "ontology_term_id": "cerveja",
+   "entity_type": "menu_line_template",
+   "entity_id": "cerveja super bock"
+  },
+  {
+   "ontology_term_id": "cafe_cha",
+   "entity_type": "menu_line_template",
+   "entity_id": "chá"
+  },
+  {
+   "ontology_term_id": "vinho",
+   "entity_type": "menu_line_template",
+   "entity_id": "espumante"
+  },
+  {
+   "ontology_term_id": "sumos",
+   "entity_type": "menu_line_template",
+   "entity_id": "limonada hortelã"
+  },
+  {
+   "ontology_term_id": "sumos",
+   "entity_type": "menu_line_template",
+   "entity_id": "limonada simples"
+  },
+  {
+   "ontology_term_id": "refrigerantes",
+   "entity_type": "menu_line_template",
+   "entity_id": "refrigerantes"
+  },
+  {
+   "ontology_term_id": "vinho",
+   "entity_type": "menu_line_template",
+   "entity_id": "sangria branca c/ frutas"
+  },
+  {
+   "ontology_term_id": "vinho",
+   "entity_type": "menu_line_template",
+   "entity_id": "sangria tinta c/ laranja e canela"
+  },
+  {
+   "ontology_term_id": "sumos",
+   "entity_type": "menu_line_template",
+   "entity_id": "sumo de bongo"
+  },
+  {
+   "ontology_term_id": "sumos",
+   "entity_type": "menu_line_template",
+   "entity_id": "sumo de compal"
+  },
+  {
+   "ontology_term_id": "sumos",
+   "entity_type": "menu_line_template",
+   "entity_id": "sumo de laranja natural"
+  },
+  {
+   "ontology_term_id": "vinho",
+   "entity_type": "menu_line_template",
+   "entity_id": "vinho branco"
+  },
+  {
+   "ontology_term_id": "vinho",
+   "entity_type": "menu_line_template",
+   "entity_id": "vinho porto"
+  },
+  {
+   "ontology_term_id": "vinho",
+   "entity_type": "menu_line_template",
+   "entity_id": "vinho tinto"
+  },
+  {
+   "ontology_term_id": "aguas",
+   "entity_type": "menu_line_template",
+   "entity_id": "água"
+  },
+  {
+   "ontology_term_id": "aguas",
+   "entity_type": "menu_line_template",
+   "entity_id": "água aromatizada"
+  },
+  {
+   "ontology_term_id": "aguas",
+   "entity_type": "menu_line_template",
+   "entity_id": "água aromatizada de frutos vermelhos"
+  },
+  {
+   "ontology_term_id": "aguas",
+   "entity_type": "menu_line_template",
+   "entity_id": "água aromatizada de hortelã"
+  },
+  {
+   "ontology_term_id": "aguas",
+   "entity_type": "menu_line_template",
+   "entity_id": "água aromatizada de hortelã e tangerina"
+  },
+  {
+   "ontology_term_id": "aguas",
+   "entity_type": "menu_line_template",
+   "entity_id": "água aromatizada de laranja e canela"
+  },
+  {
+   "ontology_term_id": "aguas",
+   "entity_type": "menu_line_template",
+   "entity_id": "água aromatizada de laranja e gengibre"
+  },
+  {
+   "ontology_term_id": "aguas",
+   "entity_type": "menu_line_template",
+   "entity_id": "água aromatizada de maçã e canela"
+  },
+  {
+   "ontology_term_id": "aguas",
+   "entity_type": "menu_line_template",
+   "entity_id": "água das pedras"
+  },
+  {
+   "ontology_term_id": "brigadeiros",
+   "entity_type": "menu_line_template",
+   "entity_id": "argolas de chocolate"
+  },
+  {
+   "ontology_term_id": "bolachas",
+   "entity_type": "menu_line_template",
+   "entity_id": "bolachas"
+  },
+  {
+   "ontology_term_id": "bolachas",
+   "entity_type": "menu_line_template",
+   "entity_id": "bolachas c/ manteiga"
+  },
+  {
+   "ontology_term_id": "bolachas",
+   "entity_type": "menu_line_template",
+   "entity_id": "bolachas de milho c/ guacamole"
+  },
+  {
+   "ontology_term_id": "bolachas",
+   "entity_type": "menu_line_template",
+   "entity_id": "bolachinhas de aveia"
+  },
+  {
+   "ontology_term_id": "bolachas",
+   "entity_type": "menu_line_template",
+   "entity_id": "bolachinhas bacalhaus"
+  },
+  {
+   "ontology_term_id": "pasteis",
+   "entity_type": "menu_line_template",
+   "entity_id": "bolas de berlim"
+  },
+  {
+   "ontology_term_id": "bolos",
+   "entity_type": "menu_line_template",
+   "entity_id": "bolinhos de coco"
+  },
+  {
+   "ontology_term_id": "bolos",
+   "entity_type": "menu_line_template",
+   "entity_id": "bolinhos de feijão"
+  },
+  {
+   "ontology_term_id": "bolos",
+   "entity_type": "menu_line_template",
+   "entity_id": "bolo de bolacha"
+  },
+  {
+   "ontology_term_id": "bolos",
+   "entity_type": "menu_line_template",
+   "entity_id": "bolo de brigadeiro"
+  },
+  {
+   "ontology_term_id": "bolos",
+   "entity_type": "menu_line_template",
+   "entity_id": "bolo de chocolate"
+  },
+  {
+   "ontology_term_id": "bolos",
+   "entity_type": "menu_line_template",
+   "entity_id": "bolo no copo"
+  },
+  {
+   "ontology_term_id": "bolos",
+   "entity_type": "menu_line_template",
+   "entity_id": "bolo no copo · bolo de bolacha"
+  },
+  {
+   "ontology_term_id": "bolos",
+   "entity_type": "menu_line_template",
+   "entity_id": "bolo no copo · brigadeiro"
+  },
+  {
+   "ontology_term_id": "bolos",
+   "entity_type": "menu_line_template",
+   "entity_id": "bolo no copo · cheesecake de frutos vermelhos"
+  },
+  {
+   "ontology_term_id": "bolos",
+   "entity_type": "menu_line_template",
+   "entity_id": "bolo no copo · mousse de chocolate"
+  },
+  {
+   "ontology_term_id": "bolos",
+   "entity_type": "menu_line_template",
+   "entity_id": "bolo no copo · natas do céu"
+  },
+  {
+   "ontology_term_id": "bolos",
+   "entity_type": "menu_line_template",
+   "entity_id": "bolo no copo · tiramisu"
+  },
+  {
+   "ontology_term_id": "bolos",
+   "entity_type": "menu_line_template",
+   "entity_id": "bolo rei"
+  },
+  {
+   "ontology_term_id": "brigadeiros",
+   "entity_type": "menu_line_template",
+   "entity_id": "brigadeiros"
+  },
+  {
+   "ontology_term_id": "bolos",
+   "entity_type": "menu_line_template",
+   "entity_id": "brownie c/ nozes e caramelo salgado"
+  },
+  {
+   "ontology_term_id": "bolos",
+   "entity_type": "menu_line_template",
+   "entity_id": "cheesecake de frutos vermelhos"
+  },
+  {
+   "ontology_term_id": "bolos",
+   "entity_type": "menu_line_template",
+   "entity_id": "cheesecake de limão"
+  },
+  {
+   "ontology_term_id": "brigadeiros",
+   "entity_type": "menu_line_template",
+   "entity_id": "cookies de chocolate"
+  },
+  {
+   "ontology_term_id": "bolos",
+   "entity_type": "menu_line_template",
+   "entity_id": "donuts"
+  },
+  {
+   "ontology_term_id": "pasteis",
+   "entity_type": "menu_line_template",
+   "entity_id": "húngaros"
+  },
+  {
+   "ontology_term_id": "bolos",
+   "entity_type": "menu_line_template",
+   "entity_id": "iogurte c/ granola"
+  },
+  {
+   "ontology_term_id": "bolos",
+   "entity_type": "menu_line_template",
+   "entity_id": "leite creme"
+  },
+  {
+   "ontology_term_id": "pasteis",
+   "entity_type": "menu_line_template",
+   "entity_id": "mil folhas"
+  },
+  {
+   "ontology_term_id": "brigadeiros",
+   "entity_type": "menu_line_template",
+   "entity_id": "mousse de chocolate"
+  },
+  {
+   "ontology_term_id": "bolos",
+   "entity_type": "menu_line_template",
+   "entity_id": "muffins"
+  },
+  {
+   "ontology_term_id": "bolos",
+   "entity_type": "menu_line_template",
+   "entity_id": "muffins de aveia"
+  },
+  {
+   "ontology_term_id": "bolos",
+   "entity_type": "menu_line_template",
+   "entity_id": "muffins de cenoura"
+  },
+  {
+   "ontology_term_id": "bolos",
+   "entity_type": "menu_line_template",
+   "entity_id": "muffins de iogurte"
+  },
+  {
+   "ontology_term_id": "bolos",
+   "entity_type": "menu_line_template",
+   "entity_id": "muffins de laranja"
+  },
+  {
+   "ontology_term_id": "bolos",
+   "entity_type": "menu_line_template",
+   "entity_id": "muffins de pistacho"
+  },
+  {
+   "ontology_term_id": "pasteis",
+   "entity_type": "menu_line_template",
+   "entity_id": "ovos moles"
+  },
+  {
+   "ontology_term_id": "pasteis",
+   "entity_type": "menu_line_template",
+   "entity_id": "palmiers"
+  },
+  {
+   "ontology_term_id": "bolos",
+   "entity_type": "menu_line_template",
+   "entity_id": "panquecas c/ iogurte e mirtilo"
+  },
+  {
+   "ontology_term_id": "pasteis",
+   "entity_type": "menu_line_template",
+   "entity_id": "pastéis de nata"
+  },
+  {
+   "ontology_term_id": "bolos",
+   "entity_type": "menu_line_template",
+   "entity_id": "queques"
+  },
+  {
+   "ontology_term_id": "bolos",
+   "entity_type": "menu_line_template",
+   "entity_id": "queques de ananás"
+  },
+  {
+   "ontology_term_id": "bolos",
+   "entity_type": "menu_line_template",
+   "entity_id": "queques de aveia"
+  },
+  {
+   "ontology_term_id": "bolos",
+   "entity_type": "menu_line_template",
+   "entity_id": "queques de caramelo"
+  },
+  {
+   "ontology_term_id": "bolos",
+   "entity_type": "menu_line_template",
+   "entity_id": "queques de cenoura"
+  },
+  {
+   "ontology_term_id": "bolos",
+   "entity_type": "menu_line_template",
+   "entity_id": "queques de chocolate"
+  },
+  {
+   "ontology_term_id": "bolos",
+   "entity_type": "menu_line_template",
+   "entity_id": "queques de frutos vermelhos"
+  },
+  {
+   "ontology_term_id": "bolos",
+   "entity_type": "menu_line_template",
+   "entity_id": "queques de iogurte"
+  },
+  {
+   "ontology_term_id": "bolos",
+   "entity_type": "menu_line_template",
+   "entity_id": "queques de laranja"
+  },
+  {
+   "ontology_term_id": "bolos",
+   "entity_type": "menu_line_template",
+   "entity_id": "queques de maçã"
+  },
+  {
+   "ontology_term_id": "bolos",
+   "entity_type": "menu_line_template",
+   "entity_id": "queques de noz"
+  },
+  {
+   "ontology_term_id": "pasteis",
+   "entity_type": "menu_line_template",
+   "entity_id": "rabanadas c/ ovos moles"
+  },
+  {
+   "ontology_term_id": "pasteis",
+   "entity_type": "menu_line_template",
+   "entity_id": "rabanadas c/ vinho do porto"
+  },
+  {
+   "ontology_term_id": "bolachas",
+   "entity_type": "menu_line_template",
+   "entity_id": "raivas"
+  },
+  {
+   "ontology_term_id": "brigadeiros",
+   "entity_type": "menu_line_template",
+   "entity_id": "rosquinhas de chocolate de leite"
+  },
+  {
+   "ontology_term_id": "brigadeiros",
+   "entity_type": "menu_line_template",
+   "entity_id": "rosquinhas de chocolate preto"
+  },
+  {
+   "ontology_term_id": "brigadeiros",
+   "entity_type": "menu_line_template",
+   "entity_id": "salame de chocolate"
+  },
+  {
+   "ontology_term_id": "bolachas",
+   "entity_type": "menu_line_template",
+   "entity_id": "semifrio de bolacha"
+  },
+  {
+   "ontology_term_id": "pasteis",
+   "entity_type": "menu_line_template",
+   "entity_id": "tarte de amêndoa"
+  },
+  {
+   "ontology_term_id": "pasteis",
+   "entity_type": "menu_line_template",
+   "entity_id": "tarte basca c/ frutos vermelhos"
+  },
+  {
+   "ontology_term_id": "pasteis",
+   "entity_type": "menu_line_template",
+   "entity_id": "tarte de atum c/ cebolinho"
+  },
+  {
+   "ontology_term_id": "pasteis",
+   "entity_type": "menu_line_template",
+   "entity_id": "tarte de camembert c/ compota e frutos secos"
+  },
+  {
+   "ontology_term_id": "pasteis",
+   "entity_type": "menu_line_template",
+   "entity_id": "tarte de chévre c/ molho pesto"
+  },
+  {
+   "ontology_term_id": "bolos",
+   "entity_type": "menu_line_template",
+   "entity_id": "tiramisu"
+  },
+  {
+   "ontology_term_id": "pasteis",
+   "entity_type": "menu_line_template",
+   "entity_id": "torta de laranja"
+  },
+  {
+   "ontology_term_id": "pasteis",
+   "entity_type": "menu_line_template",
+   "entity_id": "torta de ovos c/ fios de ovos"
+  },
+  {
+   "ontology_term_id": "bolinhos_bacalhau",
+   "entity_type": "menu_line_template",
+   "entity_id": "bolinhos de bacalhau"
+  },
+  {
+   "ontology_term_id": "bolinhos_bacalhau",
+   "entity_type": "menu_line_template",
+   "entity_id": "bolinhos de bacalhau c/ espeto de cherry c/ azeitona"
+  },
+  {
+   "ontology_term_id": "fritos_veg",
+   "entity_type": "menu_line_template",
+   "entity_id": "chamuças de frango"
+  },
+  {
+   "ontology_term_id": "fritos_veg",
+   "entity_type": "menu_line_template",
+   "entity_id": "chamuças de vegetais"
+  },
+  {
+   "ontology_term_id": "fritos_veg",
+   "entity_type": "menu_line_template",
+   "entity_id": "chamuças de vegetais c/ azeitona"
+  },
+  {
+   "ontology_term_id": "croquetes",
+   "entity_type": "menu_line_template",
+   "entity_id": "croquetes de vitela"
+  },
+  {
+   "ontology_term_id": "croquetes",
+   "entity_type": "menu_line_template",
+   "entity_id": "croquetes de vitela c/ azeitona"
+  },
+  {
+   "ontology_term_id": "fritos_veg",
+   "entity_type": "menu_line_template",
+   "entity_id": "falafel"
+  },
+  {
+   "ontology_term_id": "fritos_variados",
+   "entity_type": "menu_line_template",
+   "entity_id": "miniaturas fritas · bolinhos de bacalhau"
+  },
+  {
+   "ontology_term_id": "fritos_variados",
+   "entity_type": "menu_line_template",
+   "entity_id": "miniaturas fritas · chamuças"
+  },
+  {
+   "ontology_term_id": "fritos_variados",
+   "entity_type": "menu_line_template",
+   "entity_id": "miniaturas fritas · croquetes de vitela"
+  },
+  {
+   "ontology_term_id": "fritos_variados",
+   "entity_type": "menu_line_template",
+   "entity_id": "miniaturas fritas · rissóis de camarão"
+  },
+  {
+   "ontology_term_id": "rissois",
+   "entity_type": "menu_line_template",
+   "entity_id": "rissóis de camarão"
+  },
+  {
+   "ontology_term_id": "rissois",
+   "entity_type": "menu_line_template",
+   "entity_id": "rissóis de camarão em espeto de camarão"
+  },
+  {
+   "ontology_term_id": "croquetes",
+   "entity_type": "menu_line_template",
+   "entity_id": "rolinhos primavera"
+  },
+  {
+   "ontology_term_id": "arroz",
+   "entity_type": "menu_line_template",
+   "entity_id": "arroz de pato"
+  },
+  {
+   "ontology_term_id": "arroz",
+   "entity_type": "menu_line_template",
+   "entity_id": "arroz de valenciana"
+  },
+  {
+   "ontology_term_id": "bacalhau",
+   "entity_type": "menu_line_template",
+   "entity_id": "bacalhau c/ grão de bico"
+  },
+  {
+   "ontology_term_id": "bacalhau",
+   "entity_type": "menu_line_template",
+   "entity_id": "bacalhau c/ natas"
+  },
+  {
+   "ontology_term_id": "bacalhau",
+   "entity_type": "menu_line_template",
+   "entity_id": "bacalhau desfiado á portuguesa c/ broa"
+  },
+  {
+   "ontology_term_id": "carnes",
+   "entity_type": "menu_line_template",
+   "entity_id": "bifanas de porco estufadas á moda do porto"
+  },
+  {
+   "ontology_term_id": "carnes",
+   "entity_type": "menu_line_template",
+   "entity_id": "bifanas de frango estufadas á moda do porto"
+  },
+  {
+   "ontology_term_id": "peixes",
+   "entity_type": "menu_line_template",
+   "entity_id": "camarão cozido"
+  },
+  {
+   "ontology_term_id": "quinoa_cuscuz",
+   "entity_type": "menu_line_template",
+   "entity_id": "couscous c/ cogumelos"
+  },
+  {
+   "ontology_term_id": "quinoa_cuscuz",
+   "entity_type": "menu_line_template",
+   "entity_id": "couscous c/ legumes salteados"
+  },
+  {
+   "ontology_term_id": "quinoa_cuscuz",
+   "entity_type": "menu_line_template",
+   "entity_id": "feijoada de cogumelos"
+  },
+  {
+   "ontology_term_id": "quinoa_cuscuz",
+   "entity_type": "menu_line_template",
+   "entity_id": "feijão frade c/ atum"
+  },
+  {
+   "ontology_term_id": "quinoa_cuscuz",
+   "entity_type": "menu_line_template",
+   "entity_id": "feijão frade c/ cogumelos salteados"
+  },
+  {
+   "ontology_term_id": "quinoa_cuscuz",
+   "entity_type": "menu_line_template",
+   "entity_id": "feijão frade c/ quinoa de legumes"
+  },
+  {
+   "ontology_term_id": "carnes",
+   "entity_type": "menu_line_template",
+   "entity_id": "frango assado c/ batatas assadas"
+  },
+  {
+   "ontology_term_id": "quinoa_cuscuz",
+   "entity_type": "menu_line_template",
+   "entity_id": "grão de bico c/ quinoa de legumes"
+  },
+  {
+   "ontology_term_id": "quinoa_cuscuz",
+   "entity_type": "menu_line_template",
+   "entity_id": "jardineira de cogumelos salteados"
+  },
+  {
+   "ontology_term_id": "quinoa_cuscuz",
+   "entity_type": "menu_line_template",
+   "entity_id": "jardineira de frango"
+  },
+  {
+   "ontology_term_id": "quinoa_cuscuz",
+   "entity_type": "menu_line_template",
+   "entity_id": "jardineira de grão de bico"
+  },
+  {
+   "ontology_term_id": "quinoa_cuscuz",
+   "entity_type": "menu_line_template",
+   "entity_id": "jardineira de lulas"
+  },
+  {
+   "ontology_term_id": "quinoa_cuscuz",
+   "entity_type": "menu_line_template",
+   "entity_id": "jardineira de soja"
+  },
+  {
+   "ontology_term_id": "quinoa_cuscuz",
+   "entity_type": "menu_line_template",
+   "entity_id": "jardineira de vitela"
+  },
+  {
+   "ontology_term_id": "carnes",
+   "entity_type": "menu_line_template",
+   "entity_id": "lasanha de frango"
+  },
+  {
+   "ontology_term_id": "carnes",
+   "entity_type": "menu_line_template",
+   "entity_id": "lasanha de vitela"
+  },
+  {
+   "ontology_term_id": "carnes",
+   "entity_type": "menu_line_template",
+   "entity_id": "leitão assado á bairrada"
+  },
+  {
+   "ontology_term_id": "carnes",
+   "entity_type": "menu_line_template",
+   "entity_id": "leitão assado á bairrada c/ laranja e batata frita"
+  },
+  {
+   "ontology_term_id": "bacalhau",
+   "entity_type": "menu_line_template",
+   "entity_id": "lombo de bacalhau assado c/ batatas á murro"
+  },
+  {
+   "ontology_term_id": "carnes",
+   "entity_type": "menu_line_template",
+   "entity_id": "lombo de porco c/ batatas a murro"
+  },
+  {
+   "ontology_term_id": "carnes",
+   "entity_type": "menu_line_template",
+   "entity_id": "lombo de porco c/ batatas assadas e puré de maçã"
+  },
+  {
+   "ontology_term_id": "carnes",
+   "entity_type": "menu_line_template",
+   "entity_id": "lombo de salmão c/ puré de ervilhas"
+  },
+  {
+   "ontology_term_id": "carnes",
+   "entity_type": "menu_line_template",
+   "entity_id": "magret de pato c/ purê de ervilhas, vinho do porto e laranja"
+  },
+  {
+   "ontology_term_id": "carnes",
+   "entity_type": "menu_line_template",
+   "entity_id": "moelas estufadas"
+  },
+  {
+   "ontology_term_id": "peixes",
+   "entity_type": "menu_line_template",
+   "entity_id": "pescada primavera"
+  },
+  {
+   "ontology_term_id": "quinoa_cuscuz",
+   "entity_type": "menu_line_template",
+   "entity_id": "quinoa c/ legumes salteados"
+  },
+  {
+   "ontology_term_id": "peixes",
+   "entity_type": "menu_line_template",
+   "entity_id": "sushi"
+  },
+  {
+   "ontology_term_id": "quinoa_cuscuz",
+   "entity_type": "menu_line_template",
+   "entity_id": "tabulê marroquino"
+  },
+  {
+   "ontology_term_id": "espetadas_salgadas",
+   "entity_type": "menu_line_template",
+   "entity_id": "espetada de mozarela, cherry, manjericão e azeitona"
+  },
+  {
+   "ontology_term_id": "sandes",
+   "entity_type": "menu_line_template",
+   "entity_id": "cachorro de camarão, maionese de wasabi e batata palha"
+  },
+  {
+   "ontology_term_id": "sandes",
+   "entity_type": "menu_line_template",
+   "entity_id": "cachorro de salsicha e batata palha"
+  },
+  {
+   "ontology_term_id": "croissants",
+   "entity_type": "menu_line_template",
+   "entity_id": "croissant"
+  },
+  {
+   "ontology_term_id": "croissants",
+   "entity_type": "menu_line_template",
+   "entity_id": "croissant brioche c/ fiambre"
+  },
+  {
+   "ontology_term_id": "croissants",
+   "entity_type": "menu_line_template",
+   "entity_id": "croissant brioche c/ queijo"
+  },
+  {
+   "ontology_term_id": "pizzas_hamb",
+   "entity_type": "menu_line_template",
+   "entity_id": "hambúrguer"
+  },
+  {
+   "ontology_term_id": "pizzas_hamb",
+   "entity_type": "menu_line_template",
+   "entity_id": "hambúrguer de atum"
+  },
+  {
+   "ontology_term_id": "pizzas_hamb",
+   "entity_type": "menu_line_template",
+   "entity_id": "hambúrguer de carne"
+  },
+  {
+   "ontology_term_id": "pizzas_hamb",
+   "entity_type": "menu_line_template",
+   "entity_id": "hambúrguer de cogumelos"
+  },
+  {
+   "ontology_term_id": "pizzas_hamb",
+   "entity_type": "menu_line_template",
+   "entity_id": "hambúrguer de queijo e bacon"
+  },
+  {
+   "ontology_term_id": "pizzas_hamb",
+   "entity_type": "menu_line_template",
+   "entity_id": "hambúrguer de salmão"
+  },
+  {
+   "ontology_term_id": "croissants",
+   "entity_type": "menu_line_template",
+   "entity_id": "húmus c/ palitos de cenoura"
+  },
+  {
+   "ontology_term_id": "pizzas_hamb",
+   "entity_type": "menu_line_template",
+   "entity_id": "pizza"
+  },
+  {
+   "ontology_term_id": "pizzas_hamb",
+   "entity_type": "menu_line_template",
+   "entity_id": "pizza c/ queijo, cogumelos e azeitonas"
+  },
+  {
+   "ontology_term_id": "croissants",
+   "entity_type": "menu_line_template",
+   "entity_id": "pães coloridos c/ fiambre"
+  },
+  {
+   "ontology_term_id": "croissants",
+   "entity_type": "menu_line_template",
+   "entity_id": "pães coloridos c/ queijo"
+  },
+  {
+   "ontology_term_id": "paes",
+   "entity_type": "menu_line_template",
+   "entity_id": "pão c/ fiambre"
+  },
+  {
+   "ontology_term_id": "paes",
+   "entity_type": "menu_line_template",
+   "entity_id": "pão c/ queijo"
+  },
+  {
+   "ontology_term_id": "paes",
+   "entity_type": "menu_line_template",
+   "entity_id": "pão de centeio c/ fiambre"
+  },
+  {
+   "ontology_term_id": "paes",
+   "entity_type": "menu_line_template",
+   "entity_id": "pão de centeio c/ queijo"
+  },
+  {
+   "ontology_term_id": "paes",
+   "entity_type": "menu_line_template",
+   "entity_id": "pão de leite c/ fiambre"
+  },
+  {
+   "ontology_term_id": "paes",
+   "entity_type": "menu_line_template",
+   "entity_id": "pão de leite c/ queijo"
+  },
+  {
+   "ontology_term_id": "paes",
+   "entity_type": "menu_line_template",
+   "entity_id": "pão de queijo"
+  },
+  {
+   "ontology_term_id": "paes",
+   "entity_type": "menu_line_template",
+   "entity_id": "pão de sementes c/ fiambre"
+  },
+  {
+   "ontology_term_id": "paes",
+   "entity_type": "menu_line_template",
+   "entity_id": "pão de sementes c/ queijo"
+  },
+  {
+   "ontology_term_id": "paes",
+   "entity_type": "menu_line_template",
+   "entity_id": "pão integral c/ fiambre"
+  },
+  {
+   "ontology_term_id": "paes",
+   "entity_type": "menu_line_template",
+   "entity_id": "pão integral c/ queijo"
+  },
+  {
+   "ontology_term_id": "paes",
+   "entity_type": "menu_line_template",
+   "entity_id": "rolinhos de pão c/ chouriço"
+  },
+  {
+   "ontology_term_id": "sandes",
+   "entity_type": "menu_line_template",
+   "entity_id": "sandes de cogumelos de cebolada"
+  },
+  {
+   "ontology_term_id": "sandes",
+   "entity_type": "menu_line_template",
+   "entity_id": "sandes de delícias"
+  },
+  {
+   "ontology_term_id": "sandes",
+   "entity_type": "menu_line_template",
+   "entity_id": "sandes de filete de pescada c/ alface"
+  },
+  {
+   "ontology_term_id": "sandes",
+   "entity_type": "menu_line_template",
+   "entity_id": "sandes de guacamole c/ cenoura, queijo e alface"
+  },
+  {
+   "ontology_term_id": "sandes",
+   "entity_type": "menu_line_template",
+   "entity_id": "sandes de húmus c/ azeitona"
+  },
+  {
+   "ontology_term_id": "sandes",
+   "entity_type": "menu_line_template",
+   "entity_id": "sandes de omelete c/ alface e queijo"
+  },
+  {
+   "ontology_term_id": "sandes",
+   "entity_type": "menu_line_template",
+   "entity_id": "sandes de panado de frango"
+  },
+  {
+   "ontology_term_id": "sandes",
+   "entity_type": "menu_line_template",
+   "entity_id": "sandes de panado de porco"
+  },
+  {
+   "ontology_term_id": "sandes",
+   "entity_type": "menu_line_template",
+   "entity_id": "sandes de patê de atum"
+  },
+  {
+   "ontology_term_id": "sandes",
+   "entity_type": "menu_line_template",
+   "entity_id": "sandes de patê de frango"
+  },
+  {
+   "ontology_term_id": "sandes",
+   "entity_type": "menu_line_template",
+   "entity_id": "sandes de pernil de porco no espeto"
+  },
+  {
+   "ontology_term_id": "sandes",
+   "entity_type": "menu_line_template",
+   "entity_id": "tacos c/ salmão fumado c/ queijo creme, rúcula e tangerina"
+  },
+  {
+   "ontology_term_id": "croissants",
+   "entity_type": "menu_line_template",
+   "entity_id": "tortilha de milho c/ guacamole"
+  },
+  {
+   "ontology_term_id": "croissants",
+   "entity_type": "menu_line_template",
+   "entity_id": "tortilha de milho c/ húmus"
+  },
+  {
+   "ontology_term_id": "paes",
+   "entity_type": "menu_line_template",
+   "entity_id": "tostas, gressinos e pão"
+  },
+  {
+   "ontology_term_id": "sandes",
+   "entity_type": "menu_line_template",
+   "entity_id": "wrap de delícias do mar c/ queijo e rúcula"
+  },
+  {
+   "ontology_term_id": "sandes",
+   "entity_type": "menu_line_template",
+   "entity_id": "wrap de frango c/ queijo e rúcula"
+  },
+  {
+   "ontology_term_id": "sandes",
+   "entity_type": "menu_line_template",
+   "entity_id": "wrap de guacamole c/ cenoura e rúcula"
+  },
+  {
+   "ontology_term_id": "sandes",
+   "entity_type": "menu_line_template",
+   "entity_id": "wrap de patê de atum, alface e cenoura"
+  },
+  {
+   "ontology_term_id": "sandes",
+   "entity_type": "menu_line_template",
+   "entity_id": "wrap de queijo creme, salmão e rúcula"
+  },
+  {
+   "ontology_term_id": "sandes",
+   "entity_type": "menu_line_template",
+   "entity_id": "wrap de salmão c/ rúcula e tangerina"
+  },
+  {
+   "ontology_term_id": "acompanhamentos",
+   "entity_type": "menu_line_template",
+   "entity_id": "aperitivos"
+  },
+  {
+   "ontology_term_id": "acompanhamentos",
+   "entity_type": "menu_line_template",
+   "entity_id": "aperitivos · amendoins"
+  },
+  {
+   "ontology_term_id": "acompanhamentos",
+   "entity_type": "menu_line_template",
+   "entity_id": "aperitivos · azeitonas"
+  },
+  {
+   "ontology_term_id": "acompanhamentos",
+   "entity_type": "menu_line_template",
+   "entity_id": "aperitivos · tremoços"
+  },
+  {
+   "ontology_term_id": "acompanhamentos",
+   "entity_type": "menu_line_template",
+   "entity_id": "bolachas de arroz c/ compotas"
+  },
+  {
+   "ontology_term_id": "acompanhamentos",
+   "entity_type": "menu_line_template",
+   "entity_id": "compotas frutos variados c/ frutos secos"
+  },
+  {
+   "ontology_term_id": "tabuas_queijos",
+   "entity_type": "menu_line_template",
+   "entity_id": "focaccia c/ azeite e alecrim"
+  },
+  {
+   "ontology_term_id": "acompanhamentos",
+   "entity_type": "menu_line_template",
+   "entity_id": "patês de guacamole"
+  },
+  {
+   "ontology_term_id": "acompanhamentos",
+   "entity_type": "menu_line_template",
+   "entity_id": "patês de húmus"
+  },
+  {
+   "ontology_term_id": "acompanhamentos",
+   "entity_type": "menu_line_template",
+   "entity_id": "tostas c/ broa"
+  },
+  {
+   "ontology_term_id": "acompanhamentos",
+   "entity_type": "menu_line_template",
+   "entity_id": "tostas c/ gressinos"
+  },
+  {
+   "ontology_term_id": "tabuas_enchidos",
+   "entity_type": "menu_line_template",
+   "entity_id": "tábua de enchidos c/ azeitonas"
+  },
+  {
+   "ontology_term_id": "tabuas_queijos",
+   "entity_type": "menu_line_template",
+   "entity_id": "tábua de queijos c/ frutos secos"
+  },
+  {
+   "ontology_term_id": "empadas",
+   "entity_type": "menu_line_template",
+   "entity_id": "empada de alheira"
+  },
+  {
+   "ontology_term_id": "empadas",
+   "entity_type": "menu_line_template",
+   "entity_id": "empada de cogumelos"
+  },
+  {
+   "ontology_term_id": "empadas",
+   "entity_type": "menu_line_template",
+   "entity_id": "empada de frango c/ cogumelos"
+  },
+  {
+   "ontology_term_id": "empadas",
+   "entity_type": "menu_line_template",
+   "entity_id": "empada de legumes"
+  },
+  {
+   "ontology_term_id": "vol_au_vent",
+   "entity_type": "menu_line_template",
+   "entity_id": "vol-au-vent de atum"
+  },
+  {
+   "ontology_term_id": "vol_au_vent",
+   "entity_type": "menu_line_template",
+   "entity_id": "vol-au-vent de bolonhesa de soja"
+  },
+  {
+   "ontology_term_id": "vol_au_vent",
+   "entity_type": "menu_line_template",
+   "entity_id": "vol-au-vent de camarão"
+  },
+  {
+   "ontology_term_id": "vol_au_vent",
+   "entity_type": "menu_line_template",
+   "entity_id": "vol-au-vent de cogumelos"
+  },
+  {
+   "ontology_term_id": "vol_au_vent",
+   "entity_type": "menu_line_template",
+   "entity_id": "vol-au-vent de delícias"
+  },
+  {
+   "ontology_term_id": "vol_au_vent",
+   "entity_type": "menu_line_template",
+   "entity_id": "vol-au-vent de frango"
+  },
+  {
+   "ontology_term_id": "vol_au_vent",
+   "entity_type": "menu_line_template",
+   "entity_id": "vol-au-vent de guacamole c/ azeitona"
+  },
+  {
+   "ontology_term_id": "vol_au_vent",
+   "entity_type": "menu_line_template",
+   "entity_id": "vol-au-vent de húmus"
+  },
+  {
+   "ontology_term_id": "vol_au_vent",
+   "entity_type": "menu_line_template",
+   "entity_id": "vol-au-vent de patê de azeitona"
+  },
+  {
+   "ontology_term_id": "saladas",
+   "entity_type": "menu_line_template",
+   "entity_id": "alfaces"
+  },
+  {
+   "ontology_term_id": "sopas",
+   "entity_type": "menu_line_template",
+   "entity_id": "caldo verde"
+  },
+  {
+   "ontology_term_id": "saladas",
+   "entity_type": "menu_line_template",
+   "entity_id": "cenoura ralada"
+  },
+  {
+   "ontology_term_id": "saladas",
+   "entity_type": "menu_line_template",
+   "entity_id": "couve roxa"
+  },
+  {
+   "ontology_term_id": "sopas",
+   "entity_type": "menu_line_template",
+   "entity_id": "creme de cenoura"
+  },
+  {
+   "ontology_term_id": "sopas",
+   "entity_type": "menu_line_template",
+   "entity_id": "creme de couve flor"
+  },
+  {
+   "ontology_term_id": "sopas",
+   "entity_type": "menu_line_template",
+   "entity_id": "creme de legumes"
+  },
+  {
+   "ontology_term_id": "saladas",
+   "entity_type": "menu_line_template",
+   "entity_id": "milho"
+  },
+  {
+   "ontology_term_id": "saladas",
+   "entity_type": "menu_line_template",
+   "entity_id": "ovos cozidos"
+  },
+  {
+   "ontology_term_id": "saladas",
+   "entity_type": "menu_line_template",
+   "entity_id": "salada de salmão fumado"
+  },
+  {
+   "ontology_term_id": "saladas",
+   "entity_type": "menu_line_template",
+   "entity_id": "salada composta"
+  },
+  {
+   "ontology_term_id": "saladas",
+   "entity_type": "menu_line_template",
+   "entity_id": "salada composta de atum"
+  },
+  {
+   "ontology_term_id": "saladas",
+   "entity_type": "menu_line_template",
+   "entity_id": "salada composta de frango"
+  },
+  {
+   "ontology_term_id": "saladas",
+   "entity_type": "menu_line_template",
+   "entity_id": "salada composta de vegetariana"
+  },
+  {
+   "ontology_term_id": "saladas",
+   "entity_type": "menu_line_template",
+   "entity_id": "salada de bacalhau c/ grão e salicórnia"
+  },
+  {
+   "ontology_term_id": "saladas",
+   "entity_type": "menu_line_template",
+   "entity_id": "salada de feijão frade c/ atum"
+  },
+  {
+   "ontology_term_id": "saladas",
+   "entity_type": "menu_line_template",
+   "entity_id": "salada de feijão frade c/ cebola e salsa"
+  },
+  {
+   "ontology_term_id": "saladas",
+   "entity_type": "menu_line_template",
+   "entity_id": "salada de feijão frade c/ quinoa de legumes"
+  },
+  {
+   "ontology_term_id": "saladas",
+   "entity_type": "menu_line_template",
+   "entity_id": "salada de grão de bico c/ maçã e beterraba"
+  },
+  {
+   "ontology_term_id": "saladas",
+   "entity_type": "menu_line_template",
+   "entity_id": "salada de massa c/ fiambre e queijo mozarela"
+  },
+  {
+   "ontology_term_id": "saladas",
+   "entity_type": "menu_line_template",
+   "entity_id": "salada de quinoa c/ legumes"
+  },
+  {
+   "ontology_term_id": "sopas",
+   "entity_type": "menu_line_template",
+   "entity_id": "sopa de legumes"
+  },
+  {
+   "ontology_term_id": "saladas",
+   "entity_type": "menu_line_template",
+   "entity_id": "tomate cherry"
+  },
+  {
+   "ontology_term_id": "ing_fruta",
+   "entity_type": "component",
+   "entity_id": "morango"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "morango"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "morango"
+  },
+  {
+   "ontology_term_id": "ing_fruta",
+   "entity_type": "component",
+   "entity_id": "uva"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "uva"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "uva"
+  },
+  {
+   "ontology_term_id": "ing_fruta",
+   "entity_type": "component",
+   "entity_id": "melão"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "melão"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "melão"
+  },
+  {
+   "ontology_term_id": "ing_fruta",
+   "entity_type": "component",
+   "entity_id": "ananás"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "ananás"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "ananás"
+  },
+  {
+   "ontology_term_id": "ing_fruta",
+   "entity_type": "component",
+   "entity_id": "kiwi"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "kiwi"
+  },
+  {
+   "ontology_term_id": "vegan",
+   "entity_type": "component",
+   "entity_id": "kiwi"
+  },
+  {
+   "ontology_term_id": "prep_salgados",
+   "entity_type": "component",
+   "entity_id": "pizza (mini)"
+  },
+  {
+   "ontology_term_id": "vegetariano",
+   "entity_type": "component",
+   "entity_id": "pizza (mini)"
+  },
+  {
+   "ontology_term_id": "lacticinios_ovos",
+   "entity_type": "component",
+   "entity_id": "pizza (mini)"
+  },
+  {
+   "ontology_term_id": "gluten",
+   "entity_type": "component",
+   "entity_id": "pizza (mini)"
+  },
+  {
+   "ontology_term_id": "folhados",
+   "entity_type": "menu_line_template",
+   "entity_id": "folhado de misto"
+  },
+  {
+   "ontology_term_id": "folhados",
+   "entity_type": "menu_line_template",
+   "entity_id": "folhado de salsicha"
+  },
+  {
+   "ontology_term_id": "pasteis",
+   "entity_type": "menu_line_template",
+   "entity_id": "folhado de chocolate"
+  },
+  {
+   "ontology_term_id": "bolos",
+   "entity_type": "menu_line_template",
+   "entity_id": "macarons"
+  }
+ ]
+}

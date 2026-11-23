@@ -1,0 +1,4219 @@
+{
+ "nodes": [
+  {
+   "id": "ontologia",
+   "label": "Ontologia",
+   "parent": null
+  },
+  {
+   "id": "fritos",
+   "label": "Fritos",
+   "parent": "min_salgadas"
+  },
+  {
+   "id": "croquetes",
+   "label": "Croquetes",
+   "parent": "fritos"
+  },
+  {
+   "id": "rissois",
+   "label": "Rissóis",
+   "parent": "fritos"
+  },
+  {
+   "id": "bolinhos_bacalhau",
+   "label": "Bolinhos de bacalhau",
+   "parent": "fritos"
+  },
+  {
+   "id": "chamucas",
+   "label": "Chamuças",
+   "parent": "fritos"
+  },
+  {
+   "id": "fritos_veg",
+   "label": "Fritos vegetarianos",
+   "parent": "fritos"
+  },
+  {
+   "id": "fritos_variados",
+   "label": "Variedades de fritos",
+   "parent": "fritos"
+  },
+  {
+   "id": "massas",
+   "label": "Folhados, empadas e vol-au-vents",
+   "parent": "min_salgadas"
+  },
+  {
+   "id": "folhados",
+   "label": "Folhados salgados",
+   "parent": "massas"
+  },
+  {
+   "id": "vol_au_vent",
+   "label": "Vol-au-vents",
+   "parent": "massas"
+  },
+  {
+   "id": "empadas",
+   "label": "Empadas",
+   "parent": "massas"
+  },
+  {
+   "id": "pao",
+   "label": "Pão, croissants e sandes",
+   "parent": "min_salgadas"
+  },
+  {
+   "id": "croissants",
+   "label": "Croissants",
+   "parent": "pao"
+  },
+  {
+   "id": "paes",
+   "label": "Pães com recheio",
+   "parent": "pao"
+  },
+  {
+   "id": "sandes",
+   "label": "Sandes e wraps",
+   "parent": "pao"
+  },
+  {
+   "id": "pizzas_hamb",
+   "label": "Pizzas e hambúrgueres",
+   "parent": "pao"
+  },
+  {
+   "id": "espetadas",
+   "label": "Espetadas",
+   "parent": "min_salgadas"
+  },
+  {
+   "id": "espetadas_salgadas",
+   "label": "Espetadas salgadas",
+   "parent": "espetadas"
+  },
+  {
+   "id": "tabuas",
+   "label": "Tábuas e charcutaria",
+   "parent": "segmentos"
+  },
+  {
+   "id": "tabuas_queijos",
+   "label": "Tábuas de queijos",
+   "parent": "tabuas"
+  },
+  {
+   "id": "tabuas_enchidos",
+   "label": "Tábuas de enchidos",
+   "parent": "tabuas"
+  },
+  {
+   "id": "acompanhamentos",
+   "label": "Tostas, patés e compotas",
+   "parent": "tabuas"
+  },
+  {
+   "id": "saladas",
+   "label": "Saladas",
+   "parent": "pratos"
+  },
+  {
+   "id": "sopas",
+   "label": "Sopas e cremes",
+   "parent": "segmentos"
+  },
+  {
+   "id": "pratos",
+   "label": "Pratos principais",
+   "parent": "segmentos"
+  },
+  {
+   "id": "bacalhau",
+   "label": "Bacalhau",
+   "parent": "pratos"
+  },
+  {
+   "id": "arroz",
+   "label": "Arroz",
+   "parent": "pratos"
+  },
+  {
+   "id": "quinoa_cuscuz",
+   "label": "Quinoa, cuscuz e legumes",
+   "parent": "pratos"
+  },
+  {
+   "id": "carnes",
+   "label": "Carnes",
+   "parent": "pratos"
+  },
+  {
+   "id": "peixes",
+   "label": "Peixes e marisco",
+   "parent": "pratos"
+  },
+  {
+   "id": "fruta",
+   "label": "Fruta",
+   "parent": "min_doces"
+  },
+  {
+   "id": "fruta_pecas",
+   "label": "Peças e espetadas de fruta",
+   "parent": "fruta"
+  },
+  {
+   "id": "doces",
+   "label": "Doces",
+   "parent": "min_doces"
+  },
+  {
+   "id": "brigadeiros",
+   "label": "Brigadeiros e chocolate",
+   "parent": "doces"
+  },
+  {
+   "id": "bolachas",
+   "label": "Bolachas e biscoitos",
+   "parent": "doces"
+  },
+  {
+   "id": "pasteis",
+   "label": "Pastéis e folhados doces",
+   "parent": "doces"
+  },
+  {
+   "id": "bolos",
+   "label": "Bolos, queques e copos",
+   "parent": "doces"
+  },
+  {
+   "id": "bebidas",
+   "label": "Bebidas",
+   "parent": "segmentos"
+  },
+  {
+   "id": "cafe_cha",
+   "label": "Café e chá",
+   "parent": "beb_nao_alcoolicas"
+  },
+  {
+   "id": "aguas",
+   "label": "Águas",
+   "parent": "beb_nao_alcoolicas"
+  },
+  {
+   "id": "sumos",
+   "label": "Sumos",
+   "parent": "beb_nao_alcoolicas"
+  },
+  {
+   "id": "cerveja",
+   "label": "Cerveja",
+   "parent": "beb_alcoolicas"
+  },
+  {
+   "id": "vinho",
+   "label": "Vinho, espumante e sangria",
+   "parent": "beb_alcoolicas"
+  },
+  {
+   "id": "servico",
+   "label": "Material",
+   "parent": "componentes"
+  },
+  {
+   "id": "utilitarios",
+   "label": "Utilitários e decoração",
+   "parent": "servico"
+  },
+  {
+   "id": "segmentos",
+   "label": "Segmentos",
+   "parent": "ontologia"
+  },
+  {
+   "id": "tags",
+   "label": "Tags",
+   "parent": "ontologia"
+  },
+  {
+   "id": "espetos",
+   "label": "Espetos e palitos",
+   "parent": "servico"
+  },
+  {
+   "id": "copos",
+   "label": "Copos e flutes",
+   "parent": "servico"
+  },
+  {
+   "id": "tabuas_pratos",
+   "label": "Tábuas, pratos e travessas",
+   "parent": "servico"
+  },
+  {
+   "id": "embalagem",
+   "label": "Embalagens e descartáveis",
+   "parent": "servico"
+  },
+  {
+   "id": "vegetariano",
+   "label": "Vegetariano",
+   "parent": "tags_comida"
+  },
+  {
+   "id": "vegan",
+   "label": "Vegan",
+   "parent": "tags_comida"
+  },
+  {
+   "id": "carne",
+   "label": "Carne",
+   "parent": "tags_comida"
+  },
+  {
+   "id": "peixe",
+   "label": "Peixe e marisco",
+   "parent": "tags_comida"
+  },
+  {
+   "id": "lacticinios_ovos",
+   "label": "Lacticínios e ovos",
+   "parent": "tags_comida"
+  },
+  {
+   "id": "gluten",
+   "label": "Glúten",
+   "parent": "tags_comida"
+  },
+  {
+   "id": "alcool",
+   "label": "Álcool",
+   "parent": "tags_comida"
+  },
+  {
+   "id": "tags_comida",
+   "label": "Componentes de comida",
+   "parent": "tags"
+  },
+  {
+   "id": "tags_material",
+   "label": "Material",
+   "parent": "tags"
+  },
+  {
+   "id": "tags_menu",
+   "label": "Menu items",
+   "parent": "tags"
+  },
+  {
+   "id": "madeira",
+   "label": "Madeira",
+   "parent": "tags_material"
+  },
+  {
+   "id": "metal",
+   "label": "Metal",
+   "parent": "tags_material"
+  },
+  {
+   "id": "vidro",
+   "label": "Vidro",
+   "parent": "tags_material"
+  },
+  {
+   "id": "plastico",
+   "label": "Plástico",
+   "parent": "tags_material"
+  },
+  {
+   "id": "papel_cartao",
+   "label": "Papel e cartão",
+   "parent": "tags_material"
+  },
+  {
+   "id": "descartavel",
+   "label": "Descartável",
+   "parent": "tags_material"
+  },
+  {
+   "id": "reutilizavel",
+   "label": "Reutilizável",
+   "parent": "tags_material"
+  },
+  {
+   "id": "tipo",
+   "label": "Comida",
+   "parent": "componentes"
+  },
+  {
+   "id": "ing_pao",
+   "label": "Pão e bases",
+   "parent": "tipo"
+  },
+  {
+   "id": "ing_lacticinios",
+   "label": "Lacticínios e ovos (ingrediente)",
+   "parent": "tipo"
+  },
+  {
+   "id": "ing_carne",
+   "label": "Carne e charcutaria",
+   "parent": "tipo"
+  },
+  {
+   "id": "ing_peixe",
+   "label": "Peixe e marisco",
+   "parent": "tipo"
+  },
+  {
+   "id": "ing_vegetais",
+   "label": "Vegetais e ervas",
+   "parent": "tipo"
+  },
+  {
+   "id": "ing_fruta",
+   "label": "Fruta",
+   "parent": "tipo"
+  },
+  {
+   "id": "ing_molhos",
+   "label": "Patês e molhos",
+   "parent": "tipo"
+  },
+  {
+   "id": "ing_mercearia",
+   "label": "Mercearia e condimentos",
+   "parent": "tipo"
+  },
+  {
+   "id": "prep_fritos",
+   "label": "Miniaturas fritas",
+   "parent": "tipo"
+  },
+  {
+   "id": "prep_salgados",
+   "label": "Folhados e salgados",
+   "parent": "tipo"
+  },
+  {
+   "id": "prep_doces",
+   "label": "Bolos e pastelaria",
+   "parent": "tipo"
+  },
+  {
+   "id": "prep_sobremesas",
+   "label": "Sobremesas",
+   "parent": "tipo"
+  },
+  {
+   "id": "prep_pratos",
+   "label": "Pratos cozinhados",
+   "parent": "tipo"
+  },
+  {
+   "id": "prep_saladas",
+   "label": "Saladas e sopas",
+   "parent": "tipo"
+  },
+  {
+   "id": "beb_agua",
+   "label": "Água",
+   "parent": "tipo"
+  },
+  {
+   "id": "beb_refrig",
+   "label": "Refrigerantes e sumos",
+   "parent": "tipo"
+  },
+  {
+   "id": "beb_cafe",
+   "label": "Café e chá",
+   "parent": "tipo"
+  },
+  {
+   "id": "beb_alcool",
+   "label": "Bebidas alcoólicas",
+   "parent": "tipo"
+  },
+  {
+   "id": "tipo_evento",
+   "label": "Tipo de evento",
+   "parent": "ontologia"
+  },
+  {
+   "id": "coffee_break",
+   "label": "Coffee break",
+   "parent": "tipo_evento"
+  },
+  {
+   "id": "cocktail",
+   "label": "Cocktail",
+   "parent": "tipo_evento"
+  },
+  {
+   "id": "catering",
+   "label": "Catering",
+   "parent": "tipo_evento"
+  },
+  {
+   "id": "cafe",
+   "label": "Café",
+   "parent": "cafe_cha"
+  },
+  {
+   "id": "cha",
+   "label": "Chá",
+   "parent": "cafe_cha"
+  },
+  {
+   "id": "miniaturas",
+   "label": "Miniaturas",
+   "parent": "segmentos"
+  },
+  {
+   "id": "min_salgadas",
+   "label": "Salgadas",
+   "parent": "miniaturas"
+  },
+  {
+   "id": "min_doces",
+   "label": "Doces",
+   "parent": "miniaturas"
+  },
+  {
+   "id": "beb_alcoolicas",
+   "label": "Alcoólicas",
+   "parent": "bebidas"
+  },
+  {
+   "id": "beb_nao_alcoolicas",
+   "label": "Não alcoólicas",
+   "parent": "bebidas"
+  },
+  {
+   "id": "refrigerantes",
+   "label": "Refrigerantes",
+   "parent": "beb_nao_alcoolicas"
+  },
+  {
+   "id": "componentes",
+   "label": "Componentes",
+   "parent": "ontologia"
+  }
+ ],
+ "tags": {
+  "fruta_pecas": [
+   {
+    "name": "Espetadas de Fruta",
+    "key": "espetadas de fruta",
+    "count": 285,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Peças de fruta",
+    "key": "pecas de fruta",
+    "count": 66,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Espetadas de fruta variada",
+    "key": "espetadas de fruta variada",
+    "count": 20,
+    "segment": "dessert"
+   },
+   {
+    "name": "Maçã",
+    "key": "maca",
+    "count": 8,
+    "segment": "other"
+   },
+   {
+    "name": "Maçã Ou Banana",
+    "key": "maca ou banana",
+    "count": 6,
+    "segment": "other"
+   },
+   {
+    "name": "Variedade de Brigadeiros, Ovos Moles, Espetadas de Fruta",
+    "key": "variedade de brigadeiros ovos moles espetadas de fruta",
+    "count": 4,
+    "segment": "dessert"
+   },
+   {
+    "name": "Peças de Fruta variadas",
+    "key": "pecas de fruta variadas",
+    "count": 4,
+    "segment": "other"
+   },
+   {
+    "name": "Peças de fruta Maçãs, Peras, Bananas",
+    "key": "pecas de fruta macas peras bananas",
+    "count": 3,
+    "segment": "other"
+   },
+   {
+    "name": "Espetadas de frutas",
+    "key": "espetadas de frutas",
+    "count": 3,
+    "segment": "dessert"
+   },
+   {
+    "name": "Variedade de Brigadeiros, Espetadas de Fruta",
+    "key": "variedade de brigadeiros espetadas de fruta",
+    "count": 2,
+    "segment": "dessert"
+   },
+   {
+    "name": "Variedade de Macarrons, Espetadas de Fruta",
+    "key": "variedade de macarrons espetadas de fruta",
+    "count": 2,
+    "segment": "dessert"
+   },
+   {
+    "name": "Banana",
+    "key": "banana",
+    "count": 2,
+    "segment": "other"
+   },
+   {
+    "name": "Brownie c/ Nozes, Ovos Moles, Espetadas de Fruta",
+    "key": "brownie c nozes ovos moles espetadas de fruta",
+    "count": 2,
+    "segment": "dessert"
+   },
+   {
+    "name": "Variedade de Macarrons, Ovos Moles, Espetadas de Fruta",
+    "key": "variedade de macarrons ovos moles espetadas de fruta",
+    "count": 2,
+    "segment": "dessert"
+   },
+   {
+    "name": "Macarrons",
+    "key": "macarrons",
+    "count": 1,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Espetadas de Frutas variadas",
+    "key": "espetadas de frutas variadas",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Bananas e Maçãs",
+    "key": "bananas e macas",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Bolo no Copo e Espetadas de Fruta na sobremesa",
+    "key": "bolo no copo e espetadas de fruta na sobremesa",
+    "count": 1,
+    "segment": "dessert"
+   },
+   {
+    "name": "Pêra",
+    "key": "pera",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Variedade de sobremesas no Copo e Espetadas de Fruta",
+    "key": "variedade de sobremesas no copo e espetadas de fruta",
+    "count": 1,
+    "segment": "dessert"
+   }
+  ],
+  "sumos": [
+   {
+    "name": "Sumo (Compal) sabores variados",
+    "key": "sumo sabores variados",
+    "count": 207,
+    "segment": "drink"
+   },
+   {
+    "name": "Sumo de Laranja natural (exprimido na hora, servido em flutes)",
+    "key": "sumo de laranja natural",
+    "count": 56,
+    "segment": "drink"
+   },
+   {
+    "name": "Sumo Compal",
+    "key": "sumo compal",
+    "count": 40,
+    "segment": "drink"
+   },
+   {
+    "name": "Frutos vermelhos",
+    "key": "frutos vermelhos",
+    "count": 31,
+    "segment": "drink"
+   },
+   {
+    "name": "Maçã canela",
+    "key": "maca canela",
+    "count": 27,
+    "segment": "drink"
+   },
+   {
+    "name": "Sumos Compal",
+    "key": "sumos compal",
+    "count": 11,
+    "segment": "drink"
+   },
+   {
+    "name": "Coca-cola, Sumol, Ice tea",
+    "key": "coca cola sumol ice tea",
+    "count": 8,
+    "segment": "drink"
+   },
+   {
+    "name": "Sumo Bongo 0.20cl",
+    "key": "sumo bongo 0 20cl",
+    "count": 6,
+    "segment": "drink"
+   },
+   {
+    "name": "Sumo (Compal), Coca-cola, Sumol",
+    "key": "sumo coca cola sumol",
+    "count": 4,
+    "segment": "drink"
+   },
+   {
+    "name": "Coca-cola",
+    "key": "coca cola",
+    "count": 3,
+    "segment": "drink"
+   },
+   {
+    "name": "Sumo Compal vários sabores",
+    "key": "sumo compal varios sabores",
+    "count": 3,
+    "segment": "drink"
+   },
+   {
+    "name": "Limonada c/ Hortelã",
+    "key": "limonada c hortela",
+    "count": 3,
+    "segment": "drink"
+   },
+   {
+    "name": "Refrigerantes",
+    "key": "refrigerantes",
+    "count": 2,
+    "segment": "drink"
+   },
+   {
+    "name": "Coca-cola Zero",
+    "key": "coca cola zero",
+    "count": 2,
+    "segment": "drink"
+   },
+   {
+    "name": "Maçã canela 19h",
+    "key": "maca canela 19h",
+    "count": 1,
+    "segment": "drink"
+   },
+   {
+    "name": "Sumo (Compal)",
+    "key": "sumo",
+    "count": 1,
+    "segment": "drink"
+   },
+   {
+    "name": "Sumol",
+    "key": "sumol",
+    "count": 1,
+    "segment": "drink"
+   },
+   {
+    "name": "Coca-cola, 7Up, Ice tea",
+    "key": "coca cola 7up ice tea",
+    "count": 1,
+    "segment": "drink"
+   },
+   {
+    "name": "Sumo de Laranja Natural (exprimido na hora servido em flutes) Cliente fornece laranjas.",
+    "key": "sumo de laranja natural cliente fornece laranjas",
+    "count": 1,
+    "segment": "drink"
+   },
+   {
+    "name": "Frutos vermelhos 16h",
+    "key": "frutos vermelhos 16h",
+    "count": 1,
+    "segment": "drink"
+   },
+   {
+    "name": "Sumos de Laranja natural (exprimido na hora, servido em flutes)",
+    "key": "sumos de laranja natural",
+    "count": 1,
+    "segment": "drink"
+   },
+   {
+    "name": "Frutos vermelhos /Maçã canela",
+    "key": "frutos vermelhos maca canela",
+    "count": 1,
+    "segment": "drink"
+   }
+  ],
+  "cafe_cha": [
+   {
+    "name": "Café e descafeinado (cápsulas)",
+    "key": "cafe e descafeinado",
+    "count": 227,
+    "segment": "drink"
+   },
+   {
+    "name": "Chás variados",
+    "key": "chas variados",
+    "count": 41,
+    "segment": "drink"
+   },
+   {
+    "name": "Café",
+    "key": "cafe",
+    "count": 10,
+    "segment": "drink"
+   },
+   {
+    "name": "Oferta de serviço de Café e descafeinado",
+    "key": "oferta de servico de cafe e descafeinado",
+    "count": 2,
+    "segment": "drink"
+   },
+   {
+    "name": "Chávenas de café (levar só)",
+    "key": "chavenas de cafe",
+    "count": 1,
+    "segment": "drink"
+   },
+   {
+    "name": "Chá frio",
+    "key": "cha frio",
+    "count": 1,
+    "segment": "drink"
+   },
+   {
+    "name": "Café e descafeinado (cápsulas)x",
+    "key": "cafe e descafeinado x",
+    "count": 1,
+    "segment": "drink"
+   }
+  ],
+  "aguas": [
+   {
+    "name": "Água garrafas de vidro",
+    "key": "agua garrafas de vidro",
+    "count": 199,
+    "segment": "drink"
+   },
+   {
+    "name": "Águas aromatizadas (Chá frio)",
+    "key": "aguas aromatizadas",
+    "count": 178,
+    "segment": "drink"
+   },
+   {
+    "name": "Água engarrafada",
+    "key": "agua engarrafada",
+    "count": 42,
+    "segment": "drink"
+   },
+   {
+    "name": "Água garrafas de vidro 1Lt",
+    "key": "agua garrafas de vidro 1lt",
+    "count": 17,
+    "segment": "drink"
+   },
+   {
+    "name": "Água aromatizada",
+    "key": "agua aromatizada",
+    "count": 13,
+    "segment": "drink"
+   },
+   {
+    "name": "Águas aromatizadas (Chá frio) Hortelã, Frutos vermelhos…",
+    "key": "aguas aromatizadas hortela frutos vermelhos",
+    "count": 9,
+    "segment": "drink"
+   },
+   {
+    "name": "Águas aromatizadas (Chá frio): Frutos vermelhos",
+    "key": "aguas aromatizadas frutos vermelhos",
+    "count": 9,
+    "segment": "drink"
+   },
+   {
+    "name": "Água",
+    "key": "agua",
+    "count": 9,
+    "segment": "other"
+   },
+   {
+    "name": "Águas aromatizadas (Chá frio): Maçã canela",
+    "key": "aguas aromatizadas maca canela",
+    "count": 6,
+    "segment": "drink"
+   },
+   {
+    "name": "Água 0.50cl",
+    "key": "agua 0 50cl",
+    "count": 6,
+    "segment": "drink"
+   },
+   {
+    "name": "Águas aromatizadas Hortelã, Frutos vermelhos, Laranja e gengibre",
+    "key": "aguas aromatizadas hortela frutos vermelhos laranja e gengibre",
+    "count": 4,
+    "segment": "drink"
+   },
+   {
+    "name": "Água aromatizada de frutos vermelhos",
+    "key": "agua aromatizada de frutos vermelhos",
+    "count": 3,
+    "segment": "drink"
+   },
+   {
+    "name": "Águas Engarrafada",
+    "key": "aguas engarrafada",
+    "count": 3,
+    "segment": "drink"
+   },
+   {
+    "name": "Águas engarrafadas",
+    "key": "aguas engarrafadas",
+    "count": 3,
+    "segment": "drink"
+   },
+   {
+    "name": "Águas aromatizadas (Chá frio): Frutos vermelhos, Maçã canela, Hortelã",
+    "key": "aguas aromatizadas frutos vermelhos maca canela hortela",
+    "count": 2,
+    "segment": "drink"
+   },
+   {
+    "name": "Agua das Pedras",
+    "key": "agua das pedras",
+    "count": 2,
+    "segment": "drink"
+   },
+   {
+    "name": "Águas aromatizadas Frutos vermelhos, Laranja e gengibre",
+    "key": "aguas aromatizadas frutos vermelhos laranja e gengibre",
+    "count": 2,
+    "segment": "drink"
+   },
+   {
+    "name": "Água de",
+    "key": "agua de",
+    "count": 2,
+    "segment": "drink"
+   },
+   {
+    "name": "Água garrafas de vidro, Águas aromatizadas (Chá frio)",
+    "key": "agua garrafas de vidro aguas aromatizadas",
+    "count": 2,
+    "segment": "drink"
+   },
+   {
+    "name": "Águas das Pedras",
+    "key": "aguas das pedras",
+    "count": 1,
+    "segment": "drink"
+   },
+   {
+    "name": "Águas aromatizadas (Chá frio): Hortelã e Tangerina",
+    "key": "aguas aromatizadas hortela e tangerina",
+    "count": 1,
+    "segment": "drink"
+   },
+   {
+    "name": "Águas aromatizadas (Chá frio): Maçã e Canela",
+    "key": "aguas aromatizadas maca e canela",
+    "count": 1,
+    "segment": "drink"
+   },
+   {
+    "name": "Águas aromatizadas, laranja & canela e frutos vermelhos",
+    "key": "aguas aromatizadas laranja canela e frutos vermelhos",
+    "count": 1,
+    "segment": "drink"
+   },
+   {
+    "name": "Águas aromatizadas (Chá frio) Hortelã, Frutos vermelhos e Maçã Canela",
+    "key": "aguas aromatizadas hortela frutos vermelhos e maca canela",
+    "count": 1,
+    "segment": "drink"
+   },
+   {
+    "name": "Água aromatizada – 1 jarro",
+    "key": "agua aromatizada 1 jarro",
+    "count": 1,
+    "segment": "drink"
+   }
+  ],
+  "pasteis": [
+   {
+    "name": "Pasteis de Nata",
+    "key": "pasteis de nata",
+    "count": 144,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Palmiers",
+    "key": "palmiers",
+    "count": 61,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Folhado de Chocolate",
+    "key": "folhado de chocolate",
+    "count": 53,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Ovos Moles",
+    "key": "ovos moles",
+    "count": 37,
+    "segment": "dessert"
+   },
+   {
+    "name": "Folhados de chocolate",
+    "key": "folhados de chocolate",
+    "count": 32,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Mil Folhas Glacê",
+    "key": "mil folhas glace",
+    "count": 24,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Bolinhas de Berlim",
+    "key": "bolinhas de berlim",
+    "count": 23,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Tarte de Amêndoa",
+    "key": "tarte de amendoa",
+    "count": 23,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Mil folhas",
+    "key": "mil folhas",
+    "count": 20,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Torta de ovos c/ fios de ovos",
+    "key": "torta de ovos c fios de ovos",
+    "count": 9,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Ovos moles de Aveiro",
+    "key": "ovos moles de aveiro",
+    "count": 9,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Húngaros",
+    "key": "hungaros",
+    "count": 7,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Bolas de Berlim",
+    "key": "bolas de berlim",
+    "count": 5,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Palmieres",
+    "key": "palmieres",
+    "count": 3,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Pastéis nata",
+    "key": "pasteis nata",
+    "count": 3,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Mini Mil Folhas",
+    "key": "mini mil folhas",
+    "count": 2,
+    "segment": "dessert"
+   },
+   {
+    "name": "Tarte basca c/ frutos vermelhos",
+    "key": "tarte basca c frutos vermelhos",
+    "count": 2,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Torta de Laranja",
+    "key": "torta de laranja",
+    "count": 2,
+    "segment": "dessert"
+   },
+   {
+    "name": "Tartes de atum c/ cebolinho",
+    "key": "tartes de atum c cebolinho",
+    "count": 1,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Tarte de Camembert c/ compota e frutos secos",
+    "key": "tarte de camembert c compota e frutos secos",
+    "count": 1,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Tarte de Camembert c/ molho Pesto",
+    "key": "tarte de camembert c molho pesto",
+    "count": 1,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Tarte de Camembert c/ molho Pesto c/ frutos secos",
+    "key": "tarte de camembert c molho pesto c frutos secos",
+    "count": 1,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Mini Pasteis de Nata",
+    "key": "mini pasteis de nata",
+    "count": 1,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Bolinha de berlim",
+    "key": "bolinha de berlim",
+    "count": 1,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Rabanadas c/ ovos moles ou vinho do porto",
+    "key": "rabanadas c ovos moles ou vinho do porto",
+    "count": 1,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Tarte de Chévre c/ molho Pesto",
+    "key": "tarte de chevre c molho pesto",
+    "count": 1,
+    "segment": "savory_miniatures"
+   }
+  ],
+  "bolos": [
+   {
+    "name": "Brownie c/ nozes e caramelo salgado",
+    "key": "brownie c nozes e caramelo salgado",
+    "count": 137,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Iogurte c/ granola",
+    "key": "iogurte c granola",
+    "count": 34,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Bolo no copo",
+    "key": "bolo no copo",
+    "count": 20,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Iogurte de Soja c/ granola",
+    "key": "iogurte de soja c granola",
+    "count": 17,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Variedade de Macarrons",
+    "key": "variedade de macarrons",
+    "count": 14,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Bolo de Bolacha",
+    "key": "bolo de bolacha",
+    "count": 11,
+    "segment": "dessert"
+   },
+   {
+    "name": "Brownie com nozes e caramelo salgado",
+    "key": "brownie com nozes e caramelo salgado",
+    "count": 8,
+    "segment": "dessert"
+   },
+   {
+    "name": "Panquecas c/ iogurte e mirtilo",
+    "key": "panquecas c iogurte e mirtilo",
+    "count": 7,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Queques de Laranja",
+    "key": "queques de laranja",
+    "count": 7,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Bolinhos de feijão",
+    "key": "bolinhos de feijao",
+    "count": 5,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Bolinhos de Côco",
+    "key": "bolinhos de coco",
+    "count": 5,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Bolo no copo c/ iogurte e amêndoa",
+    "key": "bolo no copo c iogurte e amendoa",
+    "count": 3,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Triologia no copo",
+    "key": "triologia no copo",
+    "count": 3,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Tiramissu",
+    "key": "tiramissu",
+    "count": 3,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Brownie c/ nozes",
+    "key": "brownie c nozes",
+    "count": 3,
+    "segment": "dessert"
+   },
+   {
+    "name": "Queques de Caramelo",
+    "key": "queques de caramelo",
+    "count": 2,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Queques de Iogurte",
+    "key": "queques de iogurte",
+    "count": 2,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Queques de Cenoura",
+    "key": "queques de cenoura",
+    "count": 2,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Queques de Aveia",
+    "key": "queques de aveia",
+    "count": 2,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Queques de Maçã",
+    "key": "queques de maca",
+    "count": 2,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Tiramisu (copo)",
+    "key": "tiramisu",
+    "count": 2,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Variedade de mini muffins",
+    "key": "variedade de mini muffins",
+    "count": 2,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Donuts variados",
+    "key": "donuts variados",
+    "count": 2,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Queques Variados",
+    "key": "queques variados",
+    "count": 2,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Bolo de Bolacha no copo",
+    "key": "bolo de bolacha no copo",
+    "count": 2,
+    "segment": "dessert"
+   },
+   {
+    "name": "Variedade de sobremesas",
+    "key": "variedade de sobremesas",
+    "count": 1,
+    "segment": "dessert"
+   },
+   {
+    "name": "Bolo no copo com frutos vermelhos",
+    "key": "bolo no copo com frutos vermelhos",
+    "count": 1,
+    "segment": "dessert"
+   },
+   {
+    "name": "Empréstimo de copos de tubo, de vinho e de shot grande",
+    "key": "emprestimo de copos de tubo de vinho e de shot grande",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Queques de Ananas",
+    "key": "queques de ananas",
+    "count": 1,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Queques de Noz",
+    "key": "queques de noz",
+    "count": 1,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Cheesecake de frutos vermelhos / Limão (copo)",
+    "key": "cheesecake de frutos vermelhos limao",
+    "count": 1,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Bolo no copo variados",
+    "key": "bolo no copo variados",
+    "count": 1,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Variedades de Bolo no copo",
+    "key": "variedades de bolo no copo",
+    "count": 1,
+    "segment": "dessert"
+   },
+   {
+    "name": "Cupcakes decorados",
+    "key": "cupcakes decorados",
+    "count": 1,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Queques Laranja, Chocolate, Iogurte",
+    "key": "queques laranja chocolate iogurte",
+    "count": 1,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Queques Frutos vermelhos, Chocolate, Ananás",
+    "key": "queques frutos vermelhos chocolate ananas",
+    "count": 1,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Queques, Aveia, Chocolate, Laranja",
+    "key": "queques aveia chocolate laranja",
+    "count": 1,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Muffins de Laranja e Muffins de Cenoura",
+    "key": "muffins de laranja e muffins de cenoura",
+    "count": 1,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Bolo Rei",
+    "key": "bolo rei",
+    "count": 1,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Queques Laranja",
+    "key": "queques laranja",
+    "count": 1,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Queques de Chocolate",
+    "key": "queques de chocolate",
+    "count": 1,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Trilogia no copo",
+    "key": "trilogia no copo",
+    "count": 1,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Muffins de Laranja, Iogurte, Aveia, Pistacho",
+    "key": "muffins de laranja iogurte aveia pistacho",
+    "count": 1,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Copinhos de iogurte c/ granola",
+    "key": "copinhos de iogurte c granola",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Variedades no copo (Chocolate, Creme Brulê, Mascarpone)",
+    "key": "variedades no copo",
+    "count": 1,
+    "segment": "dessert"
+   },
+   {
+    "name": "Bolo de bolacha do Céu",
+    "key": "bolo de bolacha do ceu",
+    "count": 1,
+    "segment": "sweet_miniatures"
+   }
+  ],
+  "vol_au_vent": [
+   {
+    "name": "Vol au vents de Guacamole (veg.)",
+    "key": "vol au vents de guacamole",
+    "count": 119,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Vol au vents de Guacamole c/ azeitona",
+    "key": "vol au vents de guacamole c azeitona",
+    "count": 36,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Vol au vents de Frango",
+    "key": "vol au vents de frango",
+    "count": 23,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Vol au vents de Delícias",
+    "key": "vol au vents de delicias",
+    "count": 12,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Vol au vents de cogumelos (veg.)",
+    "key": "vol au vents de cogumelos",
+    "count": 8,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Vol au vents de Atum",
+    "key": "vol au vents de atum",
+    "count": 7,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Vol au vents de Frutos do mar (forno)",
+    "key": "vol au vents de frutos do mar",
+    "count": 5,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Vol au vents de Húmus",
+    "key": "vol au vents de humus",
+    "count": 4,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Vol au vents de Delícias do Mar",
+    "key": "vol au vents de delicias do mar",
+    "count": 3,
+    "segment": "starter"
+   },
+   {
+    "name": "Vol au vents de Patê de Azeitona (forno)",
+    "key": "vol au vents de pate de azeitona",
+    "count": 3,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Vol au vents de bolonhesa de soja (forno)",
+    "key": "vol au vents de bolonhesa de soja",
+    "count": 3,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Vol au vents de Delicias do mar, Frango, Guacamole",
+    "key": "vol au vents de delicias do mar frango guacamole",
+    "count": 3,
+    "segment": "starter"
+   },
+   {
+    "name": "Vol au vent de Guacamole (vegetarianos)",
+    "key": "vol au vent de guacamole",
+    "count": 2,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Vol au vents de Guacamole c/ azeitonas",
+    "key": "vol au vents de guacamole c azeitonas",
+    "count": 2,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Vol au vents de Patê do mar",
+    "key": "vol au vents de pate do mar",
+    "count": 2,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Vol au vents de camarão",
+    "key": "vol au vents de camarao",
+    "count": 2,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Vol au vent de Atum",
+    "key": "vol au vent de atum",
+    "count": 1,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Vol au vents Guacamole.",
+    "key": "vol au vents guacamole",
+    "count": 1,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Vol au vents c/ Guacamole",
+    "key": "vol au vents c guacamole",
+    "count": 1,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Vol ao vents de Frutos do mar",
+    "key": "vol ao vents de frutos do mar",
+    "count": 1,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Vol au vents de frango c/ cogumelos",
+    "key": "vol au vents de frango c cogumelos",
+    "count": 1,
+    "segment": "savory_miniatures"
+   }
+  ],
+  "bolachas": [
+   {
+    "name": "Bolachinhas Bacalhaus do CASCI",
+    "key": "bolachinhas bacalhaus do casci",
+    "count": 91,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Bolhachinhas Bacalhaus do CASCI",
+    "key": "bolhachinhas bacalhaus do casci",
+    "count": 54,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Bolachinhas Bacalhaus Salgados do CASCI",
+    "key": "bolachinhas bacalhaus salgados do casci",
+    "count": 15,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Variado de Bolachas",
+    "key": "variado de bolachas",
+    "count": 8,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Bolachinhas Bacalhaus Salgados de CASCI",
+    "key": "bolachinhas bacalhaus salgados de casci",
+    "count": 5,
+    "segment": "dessert"
+   },
+   {
+    "name": "Variedade de Bolachas manteiga",
+    "key": "variedade de bolachas manteiga",
+    "count": 5,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Bolachinhas Bacalhaus Salgados do C.A.S.C.I.",
+    "key": "bolachinhas bacalhaus salgados do c a s c i",
+    "count": 3,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Smi- frio de Bolacha",
+    "key": "smi frio de bolacha",
+    "count": 3,
+    "segment": "dessert"
+   },
+   {
+    "name": "Biscoitos e Bolachas",
+    "key": "biscoitos e bolachas",
+    "count": 3,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Bolachas Bacalhaus (CASCI)",
+    "key": "bolachas bacalhaus",
+    "count": 2,
+    "segment": "other"
+   },
+   {
+    "name": "Bolachinhas Bacalhaus salgados CASCI",
+    "key": "bolachinhas bacalhaus salgados casci",
+    "count": 2,
+    "segment": "other"
+   },
+   {
+    "name": "Bolachinhas Manteiga",
+    "key": "bolachinhas manteiga",
+    "count": 2,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Raivas do C.A.S.C.I.",
+    "key": "raivas do c a s c i",
+    "count": 2,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Bolachas de milho c/ Guacamole",
+    "key": "bolachas de milho c guacamole",
+    "count": 2,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Variado de biscoitos",
+    "key": "variado de biscoitos",
+    "count": 2,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Bolachas manteiga",
+    "key": "bolachas manteiga",
+    "count": 2,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Bolachas bacalhaus do CASCI",
+    "key": "bolachas bacalhaus do casci",
+    "count": 1,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Bacalhaus salgados do C.A.S.C.I.",
+    "key": "bacalhaus salgados do c a s c i",
+    "count": 1,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Barra de Cereais",
+    "key": "barra de cereais",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Bolachinhas de Aveia",
+    "key": "bolachinhas de aveia",
+    "count": 1,
+    "segment": "sweet_miniatures"
+   }
+  ],
+  "bacalhau": [
+   {
+    "name": "Bacalhau c/ Natas",
+    "key": "bacalhau c natas",
+    "count": 49,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Bacalhau c/ grão de bico",
+    "key": "bacalhau c grao de bico",
+    "count": 8,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Bacalhau c/ Natas gratinado",
+    "key": "bacalhau c natas gratinado",
+    "count": 6,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Bacalhau com Natas",
+    "key": "bacalhau com natas",
+    "count": 4,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Bacalhau c/ Batatas a Murro e Broa",
+    "key": "bacalhau c batatas a murro e broa",
+    "count": 3,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Bacalhau c/ Natas ou Bacalhau C/ Grão",
+    "key": "bacalhau c natas ou bacalhau c grao",
+    "count": 2,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Bacalhau c/ Natas e Couscous c/ cogumelos (Vegi.)",
+    "key": "bacalhau c natas e couscous c cogumelos",
+    "count": 2,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Bacalhau com Natas ou Bacalhau lascado c/ Grão de bico",
+    "key": "bacalhau com natas ou bacalhau lascado c grao de bico",
+    "count": 1,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Bacalhau desfiado á Portuguesa (c/ broa) (Mesa)",
+    "key": "bacalhau desfiado a portuguesa",
+    "count": 1,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Lombo de Bacalhau assado com batatas á murro (Mesa)",
+    "key": "lombo de bacalhau assado com batatas a murro",
+    "count": 1,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Peixe: Bacalhau com Natas",
+    "key": "peixe bacalhau com natas",
+    "count": 1,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Bacalhau lascado c/ Grao de bico",
+    "key": "bacalhau lascado c grao de bico",
+    "count": 1,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Bacalhau com Natas ou Bacalhau lascado c/ Grão de bico e",
+    "key": "bacalhau com natas ou bacalhau lascado c grao de bico e",
+    "count": 1,
+    "segment": "main_dish"
+   }
+  ],
+  "brigadeiros": [
+   {
+    "name": "Variedade de Brigadeiros",
+    "key": "variedade de brigadeiros",
+    "count": 88,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Salame de Chocolate",
+    "key": "salame de chocolate",
+    "count": 69,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Mini KitKat ou similar",
+    "key": "mini kitkat ou similar",
+    "count": 8,
+    "segment": "other"
+   },
+   {
+    "name": "4 Variedades de Brigadeiros",
+    "key": "4 variedades de brigadeiros",
+    "count": 6,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Bolo brigadeiro",
+    "key": "bolo brigadeiro",
+    "count": 6,
+    "segment": "dessert"
+   },
+   {
+    "name": "Rosquinhas de Chocolate preto",
+    "key": "rosquinhas de chocolate preto",
+    "count": 5,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "mini kitkat (ou similar)",
+    "key": "mini kitkat",
+    "count": 5,
+    "segment": "other"
+   },
+   {
+    "name": "Brigadeiros",
+    "key": "brigadeiros",
+    "count": 4,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Mouse de Chocolate no copo",
+    "key": "mouse de chocolate no copo",
+    "count": 2,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Bolo de Chocolate",
+    "key": "bolo de chocolate",
+    "count": 2,
+    "segment": "dessert"
+   },
+   {
+    "name": "Argolas de Chocolate",
+    "key": "argolas de chocolate",
+    "count": 2,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Bolo no Copo: Tiramissu, Brigadeiro, Bolo Bolacha, Mousse chocolate, Natas do Ceu, Cheesecake frutos vermelhos",
+    "key": "bolo no copo tiramissu brigadeiro bolo bolacha mousse chocolate natas do ceu cheesecake frutos vermelhos",
+    "count": 1,
+    "segment": "dessert"
+   },
+   {
+    "name": "Mouse de Chocolate",
+    "key": "mouse de chocolate",
+    "count": 1,
+    "segment": "dessert"
+   },
+   {
+    "name": "3 Variedades de Brigadeiros",
+    "key": "3 variedades de brigadeiros",
+    "count": 1,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Rosquinhas de Chocolate leite",
+    "key": "rosquinhas de chocolate leite",
+    "count": 1,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Dia 16 e 23: Quiche de Fiambre e de Atum; Tangerina, Água, Sumo Compal, mini kitkat (ou similar)",
+    "key": "dia 16 e 23 quiche de fiambre e de atum tangerina agua sumo compal mini kitkat",
+    "count": 1,
+    "segment": "other"
+   }
+  ],
+  "folhados": [
+   {
+    "name": "Folhados Mistos",
+    "key": "folhados mistos",
+    "count": 68,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Folhados de Salsicha",
+    "key": "folhados de salsicha",
+    "count": 38,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Folhados Salsicha",
+    "key": "folhados salsicha",
+    "count": 15,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Folhados Salsisha",
+    "key": "folhados salsisha",
+    "count": 8,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Folhados Salcisha",
+    "key": "folhados salcisha",
+    "count": 6,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Folhados mistos e Folhados de Salsicha",
+    "key": "folhados mistos e folhados de salsicha",
+    "count": 4,
+    "segment": "other"
+   },
+   {
+    "name": "Folhados c/ salsicha",
+    "key": "folhados c salsicha",
+    "count": 3,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Croissants Folhados Mistos",
+    "key": "croissants folhados mistos",
+    "count": 2,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Folhados mistos e de salchicha",
+    "key": "folhados mistos e de salchicha",
+    "count": 2,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Folhados de Salsicha e Mistos",
+    "key": "folhados de salsicha e mistos",
+    "count": 2,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Folhado Salsicha",
+    "key": "folhado salsicha",
+    "count": 1,
+    "segment": "savory_miniatures"
+   }
+  ],
+  "rissois": [
+   {
+    "name": "Rissóis de camarão",
+    "key": "rissois de camarao",
+    "count": 63,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Rissóis de camarão em espeto de camarão",
+    "key": "rissois de camarao em espeto de camarao",
+    "count": 4,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Rissóis camarão",
+    "key": "rissois camarao",
+    "count": 3,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Rissóis de carne",
+    "key": "rissois de carne",
+    "count": 1,
+    "segment": "starter"
+   },
+   {
+    "name": "Rissóis",
+    "key": "rissois",
+    "count": 1,
+    "segment": "starter"
+   }
+  ],
+  "bolinhos_bacalhau": [
+   {
+    "name": "Bolinhos de Bacalhau",
+    "key": "bolinhos de bacalhau",
+    "count": 57,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Espetada de Bolinhos de Bacalhau",
+    "key": "espetada de bolinhos de bacalhau",
+    "count": 29,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Espetada de bolinhos de bacalhau c/ cherry",
+    "key": "espetada de bolinhos de bacalhau c cherry",
+    "count": 17,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Bolinhos de bacalhau em espeto de Cherry",
+    "key": "bolinhos de bacalhau em espeto de cherry",
+    "count": 7,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Bolos de Bacalhau (frito)",
+    "key": "bolos de bacalhau",
+    "count": 4,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Bolinhos de Bacalhau em espeto de Cherry c/ Azeitona",
+    "key": "bolinhos de bacalhau em espeto de cherry c azeitona",
+    "count": 2,
+    "segment": "starter"
+   },
+   {
+    "name": "Espetada de bolinhos de bacalhau c/ cherry e azeitona",
+    "key": "espetada de bolinhos de bacalhau c cherry e azeitona",
+    "count": 2,
+    "segment": "other"
+   },
+   {
+    "name": "Bolinhos de Bacalhau em espetada c/ cherry e azeitona",
+    "key": "bolinhos de bacalhau em espetada c cherry e azeitona",
+    "count": 1,
+    "segment": "savory_miniatures"
+   }
+  ],
+  "saladas": [
+   {
+    "name": "Variedade de Saladas (alfaces, cenoura, milho, couve roxa…)",
+    "key": "variedade de saladas",
+    "count": 55,
+    "segment": "starter"
+   },
+   {
+    "name": "Buffet de Saladas",
+    "key": "buffet de saladas",
+    "count": 24,
+    "segment": "starter"
+   },
+   {
+    "name": "Saladas Variadas Alface, tomate, cenoura, milho, couve roxa",
+    "key": "saladas variadas alface tomate cenoura milho couve roxa",
+    "count": 12,
+    "segment": "starter"
+   },
+   {
+    "name": "Salada composta embalada (tempero, talher de madeira)",
+    "key": "salada composta embalada",
+    "count": 7,
+    "segment": "other"
+   },
+   {
+    "name": "Variado de saladas (Alfaces, tomate, milho, cenoura, c. roxa…)",
+    "key": "variado de saladas",
+    "count": 6,
+    "segment": "starter"
+   },
+   {
+    "name": "Salada de Quinoa c/ legumes",
+    "key": "salada de quinoa c legumes",
+    "count": 4,
+    "segment": "starter"
+   },
+   {
+    "name": "Saladas Variadas Alface, tomate cherry cortado, cenoura, milho, couve roxa…",
+    "key": "saladas variadas alface tomate cherry cortado cenoura milho couve roxa",
+    "count": 2,
+    "segment": "starter"
+   },
+   {
+    "name": "Salada de Feijao frade c/ Atum",
+    "key": "salada de feijao frade c atum",
+    "count": 2,
+    "segment": "starter"
+   },
+   {
+    "name": "Variedade de Saladas em Bufett (variado de alfaces, cenoura ralada, milho, couve roxa, beterraba)",
+    "key": "variedade de saladas em bufett",
+    "count": 2,
+    "segment": "starter"
+   },
+   {
+    "name": "Salada de feijão frade com cebola e salsa",
+    "key": "salada de feijao frade com cebola e salsa",
+    "count": 2,
+    "segment": "starter"
+   },
+   {
+    "name": "Salada de Quinoa c/ legumes salteados",
+    "key": "salada de quinoa c legumes salteados",
+    "count": 2,
+    "segment": "other"
+   },
+   {
+    "name": "Variado de Alfaces",
+    "key": "variado de alfaces",
+    "count": 1,
+    "segment": "starter"
+   },
+   {
+    "name": "Tomate cherry",
+    "key": "tomate cherry",
+    "count": 1,
+    "segment": "starter"
+   },
+   {
+    "name": "Beterraba c/ maçã",
+    "key": "beterraba c maca",
+    "count": 1,
+    "segment": "starter"
+   },
+   {
+    "name": "Cenoura ralada",
+    "key": "cenoura ralada",
+    "count": 1,
+    "segment": "starter"
+   },
+   {
+    "name": "Couve Roxa",
+    "key": "couve roxa",
+    "count": 1,
+    "segment": "starter"
+   },
+   {
+    "name": "Milho",
+    "key": "milho",
+    "count": 1,
+    "segment": "starter"
+   },
+   {
+    "name": "Buffet de Saladas: alface, cherry, cenoura, milho, couve rocha e feta",
+    "key": "buffet de saladas alface cherry cenoura milho couve rocha e feta",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Tacinhas de salada de Atum c/ feijão frade cebola e salsa",
+    "key": "tacinhas de salada de atum c feijao frade cebola e salsa",
+    "count": 1,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Salada de Salmão fumado no copo",
+    "key": "salada de salmao fumado no copo",
+    "count": 1,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Buffet de Saladas, alface, tomate, cenoura, milho",
+    "key": "buffet de saladas alface tomate cenoura milho",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Salada de Bacalhau c/ grão e salicórnia",
+    "key": "salada de bacalhau c grao e salicornia",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Salada de massa com fiambre e queijo mozarela",
+    "key": "salada de massa com fiambre e queijo mozarela",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Salada vegetariana com arroz primavera",
+    "key": "salada vegetariana com arroz primavera",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Tacinhas c/ salada de fruta",
+    "key": "tacinhas c salada de fruta",
+    "count": 1,
+    "segment": "dessert"
+   },
+   {
+    "name": "Saladas Variadas",
+    "key": "saladas variadas",
+    "count": 1,
+    "segment": "starter"
+   },
+   {
+    "name": "Bufet de Saladas (alface, tomate, cenoura, couve roxa e milho)",
+    "key": "bufet de saladas",
+    "count": 1,
+    "segment": "starter"
+   },
+   {
+    "name": "Salada de Feijao Frade com Quinoa de Legumes (veg.)",
+    "key": "salada de feijao frade com quinoa de legumes",
+    "count": 1,
+    "segment": "starter"
+   },
+   {
+    "name": "Buffet de saladas, alface, tomate, cenoura, milho, couve roxa… e",
+    "key": "buffet de saladas alface tomate cenoura milho couve roxa e",
+    "count": 1,
+    "segment": "starter"
+   },
+   {
+    "name": "Salada de Bacalhau c/ grão de bico",
+    "key": "salada de bacalhau c grao de bico",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Jardineira de Frango e Gão de bico c/ maçã, beterraba…",
+    "key": "jardineira de frango e gao de bico c maca beterraba",
+    "count": 1,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Arroz á Valenciana e Gão de bico c/ maçã, beterraba…",
+    "key": "arroz a valenciana e gao de bico c maca beterraba",
+    "count": 1,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Saladas compostas, frango, atum e vegetarianas (Vitacress/Fleurett)",
+    "key": "saladas compostas frango atum e vegetarianas",
+    "count": 1,
+    "segment": "starter"
+   },
+   {
+    "name": "Variado de alfaces, cenoura ralada, milho, couve roxa, beterraba",
+    "key": "variado de alfaces cenoura ralada milho couve roxa beterraba",
+    "count": 1,
+    "segment": "starter"
+   }
+  ],
+  "croquetes": [
+   {
+    "name": "Croquetes de Vitela",
+    "key": "croquetes de vitela",
+    "count": 52,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Croquetes de novilho",
+    "key": "croquetes de novilho",
+    "count": 19,
+    "segment": "starter"
+   },
+   {
+    "name": "Croquetes de Vitela c/ Azeitona",
+    "key": "croquetes de vitela c azeitona",
+    "count": 11,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Variedade de miniaturas Rissóis, Chamuças, Croquetes…",
+    "key": "variedade de miniaturas rissois chamucas croquetes",
+    "count": 11,
+    "segment": "starter"
+   },
+   {
+    "name": "Croquetes de novilho c/ azeitona",
+    "key": "croquetes de novilho c azeitona",
+    "count": 8,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Croquetes de Vitela em espeto de azeitona",
+    "key": "croquetes de vitela em espeto de azeitona",
+    "count": 4,
+    "segment": "starter"
+   },
+   {
+    "name": "Croquetes c/ Azeitona",
+    "key": "croquetes c azeitona",
+    "count": 3,
+    "segment": "starter"
+   },
+   {
+    "name": "Rissóis, Croquetes de Vitela, Bolos de bacalhau",
+    "key": "rissois croquetes de vitela bolos de bacalhau",
+    "count": 3,
+    "segment": "starter"
+   },
+   {
+    "name": "Croquetes de Vitela e Rissóis de camarão ou",
+    "key": "croquetes de vitela e rissois de camarao ou",
+    "count": 2,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Bolinhos de bacalhau, Rissóis, Croquetes, Bolinhas de Legumes-(vegi)",
+    "key": "bolinhos de bacalhau rissois croquetes bolinhas de legumes",
+    "count": 2,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Croquetes de vitela ou c/ azeitona recheada",
+    "key": "croquetes de vitela ou c azeitona recheada",
+    "count": 1,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Croquetes de vitela e bolos de bacalhau",
+    "key": "croquetes de vitela e bolos de bacalhau",
+    "count": 1,
+    "segment": "starter"
+   },
+   {
+    "name": "Rissóis, croquetes, bolos de bacalhau",
+    "key": "rissois croquetes bolos de bacalhau",
+    "count": 1,
+    "segment": "starter"
+   },
+   {
+    "name": "Variedade de Fritinhos Bolinhos de Bacalhau, Croquetes…",
+    "key": "variedade de fritinhos bolinhos de bacalhau croquetes",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Croquetes",
+    "key": "croquetes",
+    "count": 1,
+    "segment": "starter"
+   },
+   {
+    "name": "Dia 17 e 24: Empada de Frango e 2 croquetes; Maçã, Água, Sumo Compal, mini kitkat (ou similar)",
+    "key": "dia 17 e 24 empada de frango e 2 croquetes maca agua sumo compal mini kitkat",
+    "count": 1,
+    "segment": "other"
+   }
+  ],
+  "croissants": [
+   {
+    "name": "Croissants c/ Queijo",
+    "key": "croissants c queijo",
+    "count": 50,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Croissant c/ Fiambre",
+    "key": "croissant c fiambre",
+    "count": 49,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Croissants c/ Fiambre",
+    "key": "croissants c fiambre",
+    "count": 47,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Croissant c/ Queijo (veg.)",
+    "key": "croissant c queijo",
+    "count": 46,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Croissant simples",
+    "key": "croissant simples",
+    "count": 25,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Croissant Brioche c/ Queijo (veg.)",
+    "key": "croissant brioche c queijo",
+    "count": 14,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Croissant Brioche c/ Fiambre",
+    "key": "croissant brioche c fiambre",
+    "count": 14,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Croissant brioche ou mini pão c/ Queijo (veg.)",
+    "key": "croissant brioche ou mini pao c queijo",
+    "count": 7,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Croissant brioche ou mini pão c/ Fiambre",
+    "key": "croissant brioche ou mini pao c fiambre",
+    "count": 7,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Croissant Brioche c/ Queijo (veg.) e Croissant Brioche c/ Fiambre",
+    "key": "croissant brioche c queijo e croissant brioche c fiambre",
+    "count": 7,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Croissant folhado c/ Queijo (veg.) e Croissant folhado c/ Fiambre",
+    "key": "croissant folhado c queijo e croissant folhado c fiambre",
+    "count": 4,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Croissants Simples",
+    "key": "croissants simples",
+    "count": 3,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Croissant Fiambre",
+    "key": "croissant fiambre",
+    "count": 3,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Croissant Queijo",
+    "key": "croissant queijo",
+    "count": 3,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Croissant folhado c/ Queijo (veg.)",
+    "key": "croissant folhado c queijo",
+    "count": 2,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Croissant folhado c/ Fiambre",
+    "key": "croissant folhado c fiambre",
+    "count": 2,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Croissants Folhados c/ Queijo (veg.)",
+    "key": "croissants folhados c queijo",
+    "count": 2,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Croissants Folhados c/ Fiambre",
+    "key": "croissants folhados c fiambre",
+    "count": 2,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Croissant Brioche c/ Queijo (veg.) e c/ Fiambre",
+    "key": "croissant brioche c queijo e c fiambre",
+    "count": 2,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Pão de sementes / Croissants c/ Queijo (veg.)",
+    "key": "pao de sementes croissants c queijo",
+    "count": 1,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Pão de sementes / Croissants c/ Fiambre",
+    "key": "pao de sementes croissants c fiambre",
+    "count": 1,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Croissant ou mini pão de sementes c/ Queijo (veg.)",
+    "key": "croissant ou mini pao de sementes c queijo",
+    "count": 1,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Croissant ou mini pão de sementes c/ Fiambre",
+    "key": "croissant ou mini pao de sementes c fiambre",
+    "count": 1,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Croissants c/ Queijo e Croissants c/ Fiambre",
+    "key": "croissants c queijo e croissants c fiambre",
+    "count": 1,
+    "segment": "savory_miniatures"
+   }
+  ],
+  "arroz": [
+   {
+    "name": "Arroz de Pato",
+    "key": "arroz de pato",
+    "count": 40,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Arroz de Pato c/ enchidos",
+    "key": "arroz de pato c enchidos",
+    "count": 16,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Arroz á Valenciana",
+    "key": "arroz a valenciana",
+    "count": 10,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Arroz de Pato e Quinoa c/ Legumes salteados (vegi.)",
+    "key": "arroz de pato e quinoa c legumes salteados",
+    "count": 2,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Arroz de Pato ou Arroz á Valenciana",
+    "key": "arroz de pato ou arroz a valenciana",
+    "count": 1,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Arroz de Pato ou Arroz de Frango caldoso c/ moelas",
+    "key": "arroz de pato ou arroz de frango caldoso c moelas",
+    "count": 1,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Carne: Arroz de Pato",
+    "key": "carne arroz de pato",
+    "count": 1,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Carne: Arroz á Valenciana",
+    "key": "carne arroz a valenciana",
+    "count": 1,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Carne: Carne de Porco Estufada c/ Arroz",
+    "key": "carne carne de porco estufada c arroz",
+    "count": 1,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Arroz de Pato ou Arroz á Valenciana e",
+    "key": "arroz de pato ou arroz a valenciana e",
+    "count": 1,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Carne de Porco Estufada c/ Arroz",
+    "key": "carne de porco estufada c arroz",
+    "count": 1,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Arroz de Pato ou Arroz de Frango caldoso",
+    "key": "arroz de pato ou arroz de frango caldoso",
+    "count": 1,
+    "segment": "main_dish"
+   }
+  ],
+  "paes": [
+   {
+    "name": "Pão c/ Fiambre",
+    "key": "pao c fiambre",
+    "count": 36,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Pão c/ Queijo (veg.)",
+    "key": "pao c queijo",
+    "count": 33,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Pão de sementes c/ Queijo",
+    "key": "pao de sementes c queijo",
+    "count": 30,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Pão de Queijo",
+    "key": "pao de queijo",
+    "count": 20,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Pão de sementes c/ Fiambre",
+    "key": "pao de sementes c fiambre",
+    "count": 20,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Rolinhos de Pão c/ Chouriço",
+    "key": "rolinhos de pao c chourico",
+    "count": 17,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Pão sementes c/ Fiambre",
+    "key": "pao sementes c fiambre",
+    "count": 10,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Mini pada c/ queijo da serra, presunto",
+    "key": "mini pada c queijo da serra presunto",
+    "count": 7,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Pão de Leite c/ Fiambre",
+    "key": "pao de leite c fiambre",
+    "count": 5,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Pão de Leite c/ Queijo",
+    "key": "pao de leite c queijo",
+    "count": 5,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Pão integral c/ Queijo (veg.)",
+    "key": "pao integral c queijo",
+    "count": 4,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Pão integral c/ Fiambre",
+    "key": "pao integral c fiambre",
+    "count": 4,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Pão sementes c/ Queijo (veg.)",
+    "key": "pao sementes c queijo",
+    "count": 3,
+    "segment": "other"
+   },
+   {
+    "name": "Mini pão de sementes c/ queijo",
+    "key": "mini pao de sementes c queijo",
+    "count": 2,
+    "segment": "starter"
+   },
+   {
+    "name": "Mini pão de sementes c/ fiambre",
+    "key": "mini pao de sementes c fiambre",
+    "count": 2,
+    "segment": "starter"
+   },
+   {
+    "name": "Bolinhas de Pão de Queijo (vegetarianos)",
+    "key": "bolinhas de pao de queijo",
+    "count": 2,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Pão sementes c/ Queijo (veg.) e Pão sementes c/ Fiambre",
+    "key": "pao sementes c queijo e pao sementes c fiambre",
+    "count": 2,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Mini Pão integral c/ fiambre",
+    "key": "mini pao integral c fiambre",
+    "count": 2,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Mini Pão integral c/ queijo",
+    "key": "mini pao integral c queijo",
+    "count": 2,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Pão de sementes c/ Queijo (veg.) e c/ Fiambre",
+    "key": "pao de sementes c queijo e c fiambre",
+    "count": 2,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Pão c/ Queijo (veg.) e Pão c/ Fiambre",
+    "key": "pao c queijo e pao c fiambre",
+    "count": 2,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Variado de tostas e gressinos e Pão de Rio Maior",
+    "key": "variado de tostas e gressinos e pao de rio maior",
+    "count": 1,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Mini Pão c/ Queijo",
+    "key": "mini pao c queijo",
+    "count": 1,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Mini Pão c/ Fiambre",
+    "key": "mini pao c fiambre",
+    "count": 1,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Pão de Sementes c/ Queijo(veg.) e Pão de Sementes c/ Fiambre",
+    "key": "pao de sementes c queijo e pao de sementes c fiambre",
+    "count": 1,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Pão de centeio c/ Queijo (veg.)",
+    "key": "pao de centeio c queijo",
+    "count": 1,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Pão de centeio c/ Fiambre",
+    "key": "pao de centeio c fiambre",
+    "count": 1,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Mini pães c/ Queijo da Serra e Presunto (8 meses)",
+    "key": "mini paes c queijo da serra e presunto",
+    "count": 1,
+    "segment": "savory_miniatures"
+   }
+  ],
+  "tabuas_enchidos": [
+   {
+    "name": "Tábuas de enchidos decoradas c/ azeitonas",
+    "key": "tabuas de enchidos decoradas c azeitonas",
+    "count": 35,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Tábuas de Enchidos decorados c/ azeitonas",
+    "key": "tabuas de enchidos decorados c azeitonas",
+    "count": 4,
+    "segment": "starter"
+   },
+   {
+    "name": "Tabua de Enchidos",
+    "key": "tabua de enchidos",
+    "count": 2,
+    "segment": "other"
+   },
+   {
+    "name": "Tábuas de enchidos decoradas",
+    "key": "tabuas de enchidos decoradas",
+    "count": 2,
+    "segment": "other"
+   },
+   {
+    "name": "Tábuas de Enchidos decoradas c/ azeitonas, acompanhadas c/ variedade de tostas e broa (veg.)",
+    "key": "tabuas de enchidos decoradas c azeitonas acompanhadas c variedade de tostas e broa",
+    "count": 2,
+    "segment": "other"
+   },
+   {
+    "name": "Charcutaria e grazing: Tábuas de Enchidos c/ variado de azeitonas",
+    "key": "charcutaria e grazing tabuas de enchidos c variado de azeitonas",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "2 Tabuas de Enchidos decoradas c/ azeitonas - 4 variedades",
+    "key": "2 tabuas de enchidos decoradas c azeitonas 4 variedades",
+    "count": 1,
+    "segment": "starter"
+   },
+   {
+    "name": "Tabuas de enchidos c/ azeitonas verdes recheadas e pretas (sem caroço)",
+    "key": "tabuas de enchidos c azeitonas verdes recheadas e pretas",
+    "count": 1,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Tabuas de Enchidos",
+    "key": "tabuas de enchidos",
+    "count": 1,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Tábua de Enchidos decoradas c/ azeitonas",
+    "key": "tabua de enchidos decoradas c azeitonas",
+    "count": 1,
+    "segment": "starter"
+   },
+   {
+    "name": "Tábuas de enchidos decoradas c/ azeitonas, acompanhadas c/ variedade de tostas e gressinos",
+    "key": "tabuas de enchidos decoradas c azeitonas acompanhadas c variedade de tostas e gressinos",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Tábuas de enchidos c/ azeitonas",
+    "key": "tabuas de enchidos c azeitonas",
+    "count": 1,
+    "segment": "savory_miniatures"
+   }
+  ],
+  "tabuas_queijos": [
+   {
+    "name": "Tábuas de Queijos decoradas c/ frutos secos",
+    "key": "tabuas de queijos decoradas c frutos secos",
+    "count": 28,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Tabuas de queijos e decoradas c/ frutos secos",
+    "key": "tabuas de queijos e decoradas c frutos secos",
+    "count": 12,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Tábuas de Queijos",
+    "key": "tabuas de queijos",
+    "count": 6,
+    "segment": "other"
+   },
+   {
+    "name": "Tabua de Queijos",
+    "key": "tabua de queijos",
+    "count": 2,
+    "segment": "other"
+   },
+   {
+    "name": "Charcutaria e grazing: Tábuas de Queijos decoradas c/ frutos secos",
+    "key": "charcutaria e grazing tabuas de queijos decoradas c frutos secos",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "2 Tabuas de Queijos e decoradas c/ frutos secos - 4 variedades",
+    "key": "2 tabuas de queijos e decoradas c frutos secos 4 variedades",
+    "count": 1,
+    "segment": "starter"
+   },
+   {
+    "name": "Tábua de Queijos decoradas c/ frutos secos",
+    "key": "tabua de queijos decoradas c frutos secos",
+    "count": 1,
+    "segment": "starter"
+   },
+   {
+    "name": "Tábuas de queijos c/ frutos secos",
+    "key": "tabuas de queijos c frutos secos",
+    "count": 1,
+    "segment": "savory_miniatures"
+   }
+  ],
+  "espetadas_salgadas": [
+   {
+    "name": "Espetada de mozarela c/ cherry e manjericão",
+    "key": "espetada de mozarela c cherry e manjericao",
+    "count": 25,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Espetada de mozarela c/ azeitona, cherry e manjericão (veg.)",
+    "key": "espetada de mozarela c azeitona cherry e manjericao",
+    "count": 13,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Porco no espeto (Sandes)",
+    "key": "porco no espeto",
+    "count": 6,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Espetada de mozarela c/ cherry, mangericão e azeitona",
+    "key": "espetada de mozarela c cherry mangericao e azeitona",
+    "count": 5,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Espetada de mozarela (vegi.)",
+    "key": "espetada de mozarela",
+    "count": 5,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Espetadas de cherry c/ manjericão",
+    "key": "espetadas de cherry c manjericao",
+    "count": 4,
+    "segment": "other"
+   },
+   {
+    "name": "Espetada de Cherry c/ Mozzarella e Mangericão",
+    "key": "espetada de cherry c mozzarella e mangericao",
+    "count": 4,
+    "segment": "starter"
+   },
+   {
+    "name": "Espetadas de cherry c/ manjericão e azeitona",
+    "key": "espetadas de cherry c manjericao e azeitona",
+    "count": 2,
+    "segment": "other"
+   },
+   {
+    "name": "Espetada de Cherry c/ Mozarela e Manjericão",
+    "key": "espetada de cherry c mozarela e manjericao",
+    "count": 1,
+    "segment": "other"
+   }
+  ],
+  "por_classificar": [
+   {
+    "name": "Bownie c/ Nozes e Caramelo salgado",
+    "key": "bownie c nozes e caramelo salgado",
+    "count": 24,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Batatas fritas",
+    "key": "batatas fritas",
+    "count": 12,
+    "segment": "starter"
+   },
+   {
+    "name": "Rolinhos Primavera (frito)",
+    "key": "rolinhos primavera",
+    "count": 9,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Folhados de salchicha",
+    "key": "folhados de salchicha",
+    "count": 5,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Pastel de Nata",
+    "key": "pastel de nata",
+    "count": 5,
+    "segment": "other"
+   },
+   {
+    "name": "(levar só chávenas de café)",
+    "key": "",
+    "count": 3,
+    "segment": "drink"
+   },
+   {
+    "name": "Miniaturas Doces (veg.)",
+    "key": "miniaturas doces",
+    "count": 2,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Folhados Salcicha",
+    "key": "folhados salcicha",
+    "count": 2,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Variado de Bolacchas",
+    "key": "variado de bolacchas",
+    "count": 2,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Focaccia com azeite e alecrim",
+    "key": "focaccia com azeite e alecrim",
+    "count": 2,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Ovos cozidos",
+    "key": "ovos cozidos",
+    "count": 2,
+    "segment": "starter"
+   },
+   {
+    "name": "Tortilhas de milho c/ Humus",
+    "key": "tortilhas de milho c humus",
+    "count": 2,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Tortilhas de milho c/ Guacamole",
+    "key": "tortilhas de milho c guacamole",
+    "count": 2,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Húmus c/ palitos de cenoura",
+    "key": "humus c palitos de cenoura",
+    "count": 2,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Vol au vebts de cogumelos",
+    "key": "vol au vebts de cogumelos",
+    "count": 1,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Panqueca de centeio c/guacamole queijo e tomate",
+    "key": "panqueca de centeio c guacamole queijo e tomate",
+    "count": 1,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Panqueca de Hummus c/ queijo e azeitonas",
+    "key": "panqueca de hummus c queijo e azeitonas",
+    "count": 1,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Folhados de Salsisha",
+    "key": "folhados de salsisha",
+    "count": 1,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "F",
+    "key": "f",
+    "count": 1,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Folhadinhos de salsicha",
+    "key": "folhadinhos de salsicha",
+    "count": 1,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Tangerina",
+    "key": "tangerina",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Quiches Fiambre e de Cogumelos",
+    "key": "quiches fiambre e de cogumelos",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Vegetariano s/ glúten",
+    "key": "vegetariano s gluten",
+    "count": 1,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "possibilidade de apresentar opções vegetarianas",
+    "key": "possibilidade de apresentar opcoes vegetarianas",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Hamburgers de Atum",
+    "key": "hamburgers de atum",
+    "count": 1,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Bolinhos de Bacalahau",
+    "key": "bolinhos de bacalahau",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Variedades pães coloridos c/ Fiambre e c/ Queijo",
+    "key": "variedades paes coloridos c fiambre e c queijo",
+    "count": 1,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Folhado Misto",
+    "key": "folhado misto",
+    "count": 1,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Cookies de chocolate",
+    "key": "cookies de chocolate",
+    "count": 1,
+    "segment": "sweet_miniatures"
+   }
+  ],
+  "sopas": [
+   {
+    "name": "Creme de Cenoura (quente no copo) (veg.)",
+    "key": "creme de cenoura",
+    "count": 23,
+    "segment": "starter"
+   },
+   {
+    "name": "Sopa Creme de cenoura (copo)",
+    "key": "sopa creme de cenoura",
+    "count": 10,
+    "segment": "other"
+   },
+   {
+    "name": "Creme de Legumes (quente no copo) (veg.)",
+    "key": "creme de legumes",
+    "count": 10,
+    "segment": "starter"
+   },
+   {
+    "name": "Creme de Couve Flor (quente no copo) (veg.)",
+    "key": "creme de couve flor",
+    "count": 7,
+    "segment": "starter"
+   },
+   {
+    "name": "Mil Folhas Creme Brulê",
+    "key": "mil folhas creme brule",
+    "count": 5,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Caldo Verde",
+    "key": "caldo verde",
+    "count": 5,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Sopa Creme de legumes (copo)",
+    "key": "sopa creme de legumes",
+    "count": 4,
+    "segment": "starter"
+   },
+   {
+    "name": "Leite creme queimado",
+    "key": "leite creme queimado",
+    "count": 2,
+    "segment": "dessert"
+   },
+   {
+    "name": "Sopa de Legumes (copo)",
+    "key": "sopa de legumes",
+    "count": 2,
+    "segment": "starter"
+   },
+   {
+    "name": "Caldo Verde c/ chouriça",
+    "key": "caldo verde c chourica",
+    "count": 2,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Mil Folhas Creme Blulê",
+    "key": "mil folhas creme blule",
+    "count": 2,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Creme de Legumes c/ toque de hortelã (servido em copo) (Vegan)",
+    "key": "creme de legumes c toque de hortela",
+    "count": 2,
+    "segment": "starter"
+   },
+   {
+    "name": "Mil Folhas de Creme Brulê",
+    "key": "mil folhas de creme brule",
+    "count": 1,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Bolacha no copo (receita Escocesa com bolachas de gengibre e canela e queijo creme.",
+    "key": "bolacha no copo receita escocesa com bolachas de gengibre e canela e queijo creme",
+    "count": 1,
+    "segment": "sweet_miniatures"
+   },
+   {
+    "name": "Creme de Couve flor ou Creme de Cenoura ou Creme de Legumes e",
+    "key": "creme de couve flor ou creme de cenoura ou creme de legumes e",
+    "count": 1,
+    "segment": "starter"
+   },
+   {
+    "name": "Bolo de Aniversário Creme de Ovos ou Brigadeiro",
+    "key": "bolo de aniversario creme de ovos ou brigadeiro",
+    "count": 1,
+    "segment": "sweet_miniatures"
+   }
+  ],
+  "vinho": [
+   {
+    "name": "Espumante (Fraga da Pena ou similar até 10€ por garrafa)",
+    "key": "espumante",
+    "count": 22,
+    "segment": "drink"
+   },
+   {
+    "name": "Vinho do Porto (Servido em flutes)",
+    "key": "vinho do porto",
+    "count": 5,
+    "segment": "drink"
+   },
+   {
+    "name": "Vinho branco e tinto",
+    "key": "vinho branco e tinto",
+    "count": 4,
+    "segment": "drink"
+   },
+   {
+    "name": "Sangria vinho branca c/ frutas",
+    "key": "sangria vinho branca c frutas",
+    "count": 3,
+    "segment": "drink"
+   },
+   {
+    "name": "Espumante Baga Primavera",
+    "key": "espumante baga primavera",
+    "count": 3,
+    "segment": "drink"
+   },
+   {
+    "name": "Sangria vinho Tinto c/ laranja e canela Jarro 15 lts",
+    "key": "sangria vinho tinto c laranja e canela jarro 15 lts",
+    "count": 3,
+    "segment": "drink"
+   },
+   {
+    "name": "Espumante Bruto Fraga da Pena ou similar",
+    "key": "espumante bruto fraga da pena ou similar",
+    "count": 2,
+    "segment": "drink"
+   },
+   {
+    "name": "Espumante Caves São Domingos",
+    "key": "espumante caves sao domingos",
+    "count": 2,
+    "segment": "drink"
+   },
+   {
+    "name": "Sangria tinta de frutas",
+    "key": "sangria tinta de frutas",
+    "count": 1,
+    "segment": "drink"
+   },
+   {
+    "name": "Sangria vinho Tinto c/ laranja e canela Jarro",
+    "key": "sangria vinho tinto c laranja e canela jarro",
+    "count": 1,
+    "segment": "drink"
+   },
+   {
+    "name": "Espumante (Ermelinda Freitas) 30 garrafas",
+    "key": "espumante 30 garrafas",
+    "count": 1,
+    "segment": "drink"
+   },
+   {
+    "name": "Oferta de Espumante (a servir ao jantar)",
+    "key": "oferta de espumante",
+    "count": 1,
+    "segment": "drink"
+   },
+   {
+    "name": "Espumante para Brindar",
+    "key": "espumante para brindar",
+    "count": 1,
+    "segment": "drink"
+   },
+   {
+    "name": "Espumante (Fraga da Pena ou similar) 5 uni",
+    "key": "espumante 5 uni",
+    "count": 1,
+    "segment": "drink"
+   },
+   {
+    "name": "Espumante da Bairrada – Oferta",
+    "key": "espumante da bairrada oferta",
+    "count": 1,
+    "segment": "drink"
+   },
+   {
+    "name": "Espumante (1 Copo) para as sobremesas",
+    "key": "espumante para as sobremesas",
+    "count": 4,
+    "segment": "drink"
+   }
+  ],
+  "quinoa_cuscuz": [
+   {
+    "name": "Quinoa c/ Legumes salteados",
+    "key": "quinoa c legumes salteados",
+    "count": 21,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Quinoa de Legumes (Vegan)",
+    "key": "quinoa de legumes",
+    "count": 10,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Cogumelos de cebolada (Sandes- veg)",
+    "key": "cogumelos de cebolada",
+    "count": 9,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Feijao Frade com Quinoa de Legumes (vegan)",
+    "key": "feijao frade com quinoa de legumes",
+    "count": 6,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Feijão Frade c/ Quinoa de Legumes",
+    "key": "feijao frade c quinoa de legumes",
+    "count": 5,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Couscous c/ cogumelos",
+    "key": "couscous c cogumelos",
+    "count": 4,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Feijão frade c/ cogumelos salteados",
+    "key": "feijao frade c cogumelos salteados",
+    "count": 4,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Feijão frade c/ atum",
+    "key": "feijao frade c atum",
+    "count": 3,
+    "segment": "other"
+   },
+   {
+    "name": "Cuscuz c/ legumes salteados",
+    "key": "cuscuz c legumes salteados",
+    "count": 2,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Jardineira de Cogumelos Salteados (vegan)",
+    "key": "jardineira de cogumelos salteados",
+    "count": 2,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Grão de bico com Quinoa de Legumes (vegan)",
+    "key": "grao de bico com quinoa de legumes",
+    "count": 2,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Feijoada de cogumelos",
+    "key": "feijoada de cogumelos",
+    "count": 1,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Cogumelos de cebolada Veg.",
+    "key": "cogumelos de cebolada veg",
+    "count": 1,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Vegan: Quinoa com legumes Salteados",
+    "key": "vegan quinoa com legumes salteados",
+    "count": 1,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Peixe: Jardineira de Lulas",
+    "key": "peixe jardineira de lulas",
+    "count": 1,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Vegan: Couscous com legumes Salteados",
+    "key": "vegan couscous com legumes salteados",
+    "count": 1,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Vegan: Jardineira de Soja",
+    "key": "vegan jardineira de soja",
+    "count": 1,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Vegan: Tabulê Marroquin",
+    "key": "vegan tabule marroquin",
+    "count": 1,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Jardineira de Frango ou Vitela",
+    "key": "jardineira de frango ou vitela",
+    "count": 1,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Quinoa com legumes Salteados",
+    "key": "quinoa com legumes salteados",
+    "count": 1,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Jardineira de Lulas",
+    "key": "jardineira de lulas",
+    "count": 1,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Couscous com legumes Salteados",
+    "key": "couscous com legumes salteados",
+    "count": 1,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Jardineira de Soja",
+    "key": "jardineira de soja",
+    "count": 1,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Tabulê Marroquin",
+    "key": "tabule marroquin",
+    "count": 1,
+    "segment": "main_dish"
+   }
+  ],
+  "acompanhamentos": [
+   {
+    "name": "Acompanhadas c/ variedade de tostas e broa",
+    "key": "acompanhadas c variedade de tostas e broa",
+    "count": 19,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Tostas c/ patês de Guacamole e Húmus (veg.)",
+    "key": "tostas c pates de guacamole e humus",
+    "count": 9,
+    "segment": "starter"
+   },
+   {
+    "name": "Amendoins, Tremoços, Azeitonas",
+    "key": "amendoins tremocos azeitonas",
+    "count": 5,
+    "segment": "starter"
+   },
+   {
+    "name": "Bolachas de arroz c/ compotas",
+    "key": "bolachas de arroz c compotas",
+    "count": 5,
+    "segment": "other"
+   },
+   {
+    "name": "Compotas de frutas variadas c/ frutos secos",
+    "key": "compotas de frutas variadas c frutos secos",
+    "count": 5,
+    "segment": "other"
+   },
+   {
+    "name": "Acompanhadas c/ variedade de tostas e gressinos",
+    "key": "acompanhadas c variedade de tostas e gressinos",
+    "count": 3,
+    "segment": "other"
+   },
+   {
+    "name": "Patê de Húmus e Guacamole",
+    "key": "pate de humus e guacamole",
+    "count": 3,
+    "segment": "other"
+   },
+   {
+    "name": "Variedade de pães e tostas sem gluten",
+    "key": "variedade de paes e tostas sem gluten",
+    "count": 1,
+    "segment": "savory_miniatures"
+   }
+  ],
+  "utilitarios": [
+   {
+    "name": "Mesa de bebidas presente em todos os momentos",
+    "key": "mesa de bebidas presente em todos os momentos",
+    "count": 19,
+    "segment": "drink"
+   },
+   {
+    "name": "Mesa de bebidas",
+    "key": "mesa de bebidas",
+    "count": 9,
+    "segment": "drink"
+   },
+   {
+    "name": "Saco reutilizável",
+    "key": "saco reutilizavel",
+    "count": 4,
+    "segment": "other"
+   },
+   {
+    "name": "Flutes de acrílico",
+    "key": "flutes de acrilico",
+    "count": 2,
+    "segment": "other"
+   },
+   {
+    "name": "Relava 2 x 6 mts c/ marcas de áreas, 2 balizas, 5 bolas futebol, Bandeiras…",
+    "key": "relava 2 x 6 mts c marcas de areas 2 balizas 5 bolas futebol bandeiras",
+    "count": 2,
+    "segment": "decoration"
+   },
+   {
+    "name": "Relava 2 x 6 mts c/ marcas de áreas, 2 balizas, 5 bolas futebol, Bandeiras, Toalhas e guardanapos ao tema",
+    "key": "relava 2 x 6 mts c marcas de areas 2 balizas 5 bolas futebol bandeiras toalhas e guardanapos ao tema",
+    "count": 1,
+    "segment": "decoration"
+   },
+   {
+    "name": "Relva 2 x 6 mts c/ marcas de áreas, 2 balizas, 5 bolas futebol, Bandeiras…",
+    "key": "relva 2 x 6 mts c marcas de areas 2 balizas 5 bolas futebol bandeiras",
+    "count": 1,
+    "segment": "decoration"
+   },
+   {
+    "name": "Relava 2 x 6 mts c/ marcas de áreas, 1 baliza, 3 bolas futebol, Bandeiras…",
+    "key": "relava 2 x 6 mts c marcas de areas 1 baliza 3 bolas futebol bandeiras",
+    "count": 1,
+    "segment": "decoration"
+   }
+  ],
+  "cerveja": [
+   {
+    "name": "Cerveja Mini (Sagres ou Super Book)",
+    "key": "cerveja mini",
+    "count": 13,
+    "segment": "drink"
+   },
+   {
+    "name": "Cerveja minis",
+    "key": "cerveja minis",
+    "count": 4,
+    "segment": "drink"
+   },
+   {
+    "name": "Cerveja minis 300 uni",
+    "key": "cerveja minis 300 uni",
+    "count": 4,
+    "segment": "drink"
+   },
+   {
+    "name": "Cerveja Mini Sagres ou Super?",
+    "key": "cerveja mini sagres ou super",
+    "count": 3,
+    "segment": "drink"
+   },
+   {
+    "name": "Cerveja Mini 120uni",
+    "key": "cerveja mini 120uni",
+    "count": 2,
+    "segment": "drink"
+   },
+   {
+    "name": "Cerveja Mini Sagres",
+    "key": "cerveja mini sagres",
+    "count": 2,
+    "segment": "drink"
+   },
+   {
+    "name": "Cerveja Mini +/- 40 (2 cx)",
+    "key": "cerveja mini 40",
+    "count": 1,
+    "segment": "drink"
+   },
+   {
+    "name": "Cerveja Guinness",
+    "key": "cerveja guinness",
+    "count": 1,
+    "segment": "drink"
+   },
+   {
+    "name": "Cerveja minis 60 uni",
+    "key": "cerveja minis 60 uni",
+    "count": 1,
+    "segment": "drink"
+   },
+   {
+    "name": "Cerveja minis 90 uni",
+    "key": "cerveja minis 90 uni",
+    "count": 1,
+    "segment": "drink"
+   }
+  ],
+  "pizzas_hamb": [
+   {
+    "name": "Mini Pizzas",
+    "key": "mini pizzas",
+    "count": 9,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Rodízio de Pizzas",
+    "key": "rodizio de pizzas",
+    "count": 3,
+    "segment": "other"
+   },
+   {
+    "name": "Mini Hambúrgueres",
+    "key": "mini hamburgueres",
+    "count": 2,
+    "segment": "starter"
+   },
+   {
+    "name": "Pizza de queijo cogumelos e azeitonas",
+    "key": "pizza de queijo cogumelos e azeitonas",
+    "count": 2,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Pizza de Cogumelos e Azeitonas",
+    "key": "pizza de cogumelos e azeitonas",
+    "count": 2,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Mini Hambúrgueres c/ Cheddar",
+    "key": "mini hamburgueres c cheddar",
+    "count": 2,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Hambúrgueres c/ queijo e bacon",
+    "key": "hamburgueres c queijo e bacon",
+    "count": 1,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Pizzas de cogumelos e azeitona preta",
+    "key": "pizzas de cogumelos e azeitona preta",
+    "count": 1,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Hambúrgueres de cogumelos",
+    "key": "hamburgueres de cogumelos",
+    "count": 1,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Variedade de Pizzas",
+    "key": "variedade de pizzas",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Mini Hambúrguer de Salmão",
+    "key": "mini hamburguer de salmao",
+    "count": 1,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Rodízio de Pizzas carne, peixe e veg.",
+    "key": "rodizio de pizzas carne peixe e veg",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Mini Hambúrguer de Carne",
+    "key": "mini hamburguer de carne",
+    "count": 1,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Dia 15 e 22: Variedade de Pizzas; Banana, Água, Sumo Compal, mini kitkat (ou similar)",
+    "key": "dia 15 e 22 variedade de pizzas banana agua sumo compal mini kitkat",
+    "count": 1,
+    "segment": "other"
+   }
+  ],
+  "sandes": [
+   {
+    "name": "Wraps queijo creme, salmão e rúcula",
+    "key": "wraps queijo creme salmao e rucula",
+    "count": 7,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Wraps de frango c/ queijo e rúcula",
+    "key": "wraps de frango c queijo e rucula",
+    "count": 6,
+    "segment": "other"
+   },
+   {
+    "name": "Wraps de Frango, Atum e Guacamole c/ queijo e rúcula",
+    "key": "wraps de frango atum e guacamole c queijo e rucula",
+    "count": 6,
+    "segment": "starter"
+   },
+   {
+    "name": "Sandes de Panado de frango ou Omelete c/ Alfece e queijo",
+    "key": "sandes de panado de frango ou omelete c alfece e queijo",
+    "count": 5,
+    "segment": "other"
+   },
+   {
+    "name": "Sandes c/ alface: patê de frango, de atum ou húmus c/ azeitona",
+    "key": "sandes c alface pate de frango de atum ou humus c azeitona",
+    "count": 5,
+    "segment": "other"
+   },
+   {
+    "name": "Cachorros c/ batata palha",
+    "key": "cachorros c batata palha",
+    "count": 4,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Wraps de Salmão c/ rúcula e tangerina",
+    "key": "wraps de salmao c rucula e tangerina",
+    "count": 3,
+    "segment": "other"
+   },
+   {
+    "name": "Wraps de Frango",
+    "key": "wraps de frango",
+    "count": 3,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Tacos de Salmão Fumado c/ queijo creme, rúcula e tangerina",
+    "key": "tacos de salmao fumado c queijo creme rucula e tangerina",
+    "count": 3,
+    "segment": "other"
+   },
+   {
+    "name": "Sandes de Panado de Frango Alfece e Queijo",
+    "key": "sandes de panado de frango alfece e queijo",
+    "count": 2,
+    "segment": "other"
+   },
+   {
+    "name": "Sandes de Cogumelos de cebolada",
+    "key": "sandes de cogumelos de cebolada",
+    "count": 2,
+    "segment": "other"
+   },
+   {
+    "name": "Wraps de frango c/ maionese de trufa, cheddar e rúcula",
+    "key": "wraps de frango c maionese de trufa cheddar e rucula",
+    "count": 2,
+    "segment": "other"
+   },
+   {
+    "name": "Sandes de Pernil de Porco no espeto",
+    "key": "sandes de pernil de porco no espeto",
+    "count": 2,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Cachorrinho de camarão c/ maionese de wasabi",
+    "key": "cachorrinho de camarao c maionese de wasabi",
+    "count": 2,
+    "segment": "other"
+   },
+   {
+    "name": "Wraps de Atum",
+    "key": "wraps de atum",
+    "count": 2,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Wraps de Salmão fumado c/ queijo e rúcula",
+    "key": "wraps de salmao fumado c queijo e rucula",
+    "count": 2,
+    "segment": "other"
+   },
+   {
+    "name": "Wraps de Guacamole c/ queijo e rucula",
+    "key": "wraps de guacamole c queijo e rucula",
+    "count": 2,
+    "segment": "other"
+   },
+   {
+    "name": "Wraps de frango, delícias c/ salada",
+    "key": "wraps de frango delicias c salada",
+    "count": 2,
+    "segment": "other"
+   },
+   {
+    "name": "Pernil no espeto sandes (mínimo 50pessoas)",
+    "key": "pernil no espeto sandes",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Wrap de Patê de Atum Alface e Cenoura",
+    "key": "wrap de pate de atum alface e cenoura",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Wrap de Guacamole Queijo vegan e azeitonas",
+    "key": "wrap de guacamole queijo vegan e azeitonas",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Wraps de Delícias do mar c/ queijo e rúcula",
+    "key": "wraps de delicias do mar c queijo e rucula",
+    "count": 1,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Wraps de frango c/ cheddar e rúcula em espeto de cherry",
+    "key": "wraps de frango c cheddar e rucula em espeto de cherry",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Sandes c/ alface: patê de frango, delícias",
+    "key": "sandes c alface pate de frango delicias",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Sandes c/ alface: panado de porco, filete de peixe",
+    "key": "sandes c alface panado de porco filete de peixe",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Sandes c/ alface: Omelete c/ fiambre ou queijo e simples",
+    "key": "sandes c alface omelete c fiambre ou queijo e simples",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Sandes c/ alface: panado de frango, filete de peixe",
+    "key": "sandes c alface panado de frango filete de peixe",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Sandes de Patê de Atum Alface e Cenoura",
+    "key": "sandes de pate de atum alface e cenoura",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Sandes de Guacamole c/ cenoura, queijo e alface",
+    "key": "sandes de guacamole c cenoura queijo e alface",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Wraps de Delícias c/ rúcula e tangerina",
+    "key": "wraps de delicias c rucula e tangerina",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Wraps de Guacamole c/ queijo e cherry (veg.)",
+    "key": "wraps de guacamole c queijo e cherry",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Wraps de milho c/ Frango, rúcula e cenoura",
+    "key": "wraps de milho c frango rucula e cenoura",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Wraps de milho c/ Atum, rúcula e cenoura",
+    "key": "wraps de milho c atum rucula e cenoura",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Wraps de Guacamole c/ cenoura e rúcula",
+    "key": "wraps de guacamole c cenoura e rucula",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Sandes de Panado de frango ou Omelete c/ Alface e queijo",
+    "key": "sandes de panado de frango ou omelete c alface e queijo",
+    "count": 1,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Wraps de Frango, Delícias e Guacamole c/ queijo e rúcula",
+    "key": "wraps de frango delicias e guacamole c queijo e rucula",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Wraps de Salmão fumado c/ queijo rúcula e tangerina",
+    "key": "wraps de salmao fumado c queijo rucula e tangerina",
+    "count": 1,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Sandes de porco no espeto",
+    "key": "sandes de porco no espeto",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Sandes de filete de pescada c/ alface",
+    "key": "sandes de filete de pescada c alface",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Wraps de patê de frango, delícias e guacamole (veg.) c/ queijo e rúcula",
+    "key": "wraps de pate de frango delicias e guacamole c queijo e rucula",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Tacos de Salmão e abacate c/ rúcula e tangerina",
+    "key": "tacos de salmao e abacate c rucula e tangerina",
+    "count": 1,
+    "segment": "starter"
+   },
+   {
+    "name": "Wraps c/ Queijo creme Salmão fumado e alcaparras",
+    "key": "wraps c queijo creme salmao fumado e alcaparras",
+    "count": 1,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Dia 13 e 20: Wraps c/ alface: patê de frango, delícias; Maçã, Água, Sumo Compal, mini kitkat (ou similar)",
+    "key": "dia 13 e 20 wraps c alface pate de frango delicias maca agua sumo compal mini kitkat",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Dia 14 e 21: Sandes c/ alface: panado de porco, filete de peixe; Pêra, Água, Sumo Compal, mini kitkat (ou similar)",
+    "key": "dia 14 e 21 sandes c alface panado de porco filete de peixe pera agua sumo compal mini kitkat",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Lunch Box 5*: Saco reutilizável 1; Salada composta embalada (tempero, talher de madeira); Sandes c/ alface: patê de frango, de atum ou húmus c/ azeitona; Brownie c/ nozes; Maçã; Banana; Água; Sumo Compal",
+    "key": "lunch box 5 saco reutilizavel 1 salada composta embalada sandes c alface pate de frango de atum ou humus c azeitona brownie c nozes maca banana agua sumo compal",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Lunch Box 4*: Saco reutilizável; Salada composta embalada (tempero, talher de madeira); Sandes c/ alface: patê de frango, de atum ou húmus c/ azeitona; Brownie c/ nozes; Maçã; Água de; Sumo Compal",
+    "key": "lunch box 4 saco reutilizavel salada composta embalada sandes c alface pate de frango de atum ou humus c azeitona brownie c nozes maca agua de sumo compal",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Lunch Box 3*: Saco reutilizável; Sandes c/ alface: patê de frango, de atum ou húmus c/ azeitona; Brownie c/ nozes; Maçã; Água de; Sumo Compal",
+    "key": "lunch box 3 saco reutilizavel sandes c alface pate de frango de atum ou humus c azeitona brownie c nozes maca agua de sumo compal",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Lunch Box 2*: Saco reutilizável; Sandes c/ alface: patê de frango, de atum ou húmus c/ azeitona; Maçã; Água; Sumo Compal",
+    "key": "lunch box 2 saco reutilizavel sandes c alface pate de frango de atum ou humus c azeitona maca agua sumo compal",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Lunch Box 1*: Saco reutilizável; Sandes c/ alface: patê de frango, de atum ou húmus c/ azeitona; Maçã; Água",
+    "key": "lunch box 1 saco reutilizavel sandes c alface pate de frango de atum ou humus c azeitona maca agua",
+    "count": 1,
+    "segment": "other"
+   }
+  ],
+  "empadas": [
+   {
+    "name": "Empadas de Frango c/ cogumelos",
+    "key": "empadas de frango c cogumelos",
+    "count": 6,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Empadas de Cogumelos",
+    "key": "empadas de cogumelos",
+    "count": 5,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Empadas de Alheira",
+    "key": "empadas de alheira",
+    "count": 4,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Empadas de Legumes",
+    "key": "empadas de legumes",
+    "count": 2,
+    "segment": "savory_miniatures"
+   }
+  ],
+  "chamucas": [
+   {
+    "name": "Chamuças de frango (frito)",
+    "key": "chamucas de frango",
+    "count": 6,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Chamuças de vegetais",
+    "key": "chamucas de vegetais",
+    "count": 4,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Chamuças de vegetais c/ azeitona",
+    "key": "chamucas de vegetais c azeitona",
+    "count": 4,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Chamuças vegi",
+    "key": "chamucas vegi",
+    "count": 4,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Chamuças",
+    "key": "chamucas",
+    "count": 2,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Chamuças de frango c/ Ananás",
+    "key": "chamucas de frango c ananas",
+    "count": 1,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Chamuças de vegetais c/ ananás grelhado",
+    "key": "chamucas de vegetais c ananas grelhado",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Chamuças de legumes",
+    "key": "chamucas de legumes",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Chamuças c/ Ananás",
+    "key": "chamucas c ananas",
+    "count": 1,
+    "segment": "savory_miniatures"
+   }
+  ],
+  "carnes": [
+   {
+    "name": "Bifanas estufadas desfiadas",
+    "key": "bifanas estufadas desfiadas",
+    "count": 5,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Bifanas à moda do Porto (Sandes)",
+    "key": "bifanas a moda do porto",
+    "count": 5,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Bifanas estufadas",
+    "key": "bifanas estufadas",
+    "count": 5,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Mini bifanas á moda do Porto",
+    "key": "mini bifanas a moda do porto",
+    "count": 3,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Lombo Assado c/ Batatas a Murro",
+    "key": "lombo assado c batatas a murro",
+    "count": 3,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Línguas de Veado",
+    "key": "linguas de veado",
+    "count": 2,
+    "segment": "other"
+   },
+   {
+    "name": "Bifanas Estufadas á moda do Porto (Sandes)",
+    "key": "bifanas estufadas a moda do porto",
+    "count": 2,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Lombo de Porco c/ batatas assadas e puré de maçã (Mesa)",
+    "key": "lombo de porco c batatas assadas e pure de maca",
+    "count": 1,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Magret de Pato c/purê de ervilhas, vinho do porto e laranja (Mesa)",
+    "key": "magret de pato c pure de ervilhas vinho do porto e laranja",
+    "count": 1,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Leitão",
+    "key": "leitao",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Carne: Frango (cubinhos) c/ Batatas (assado)",
+    "key": "carne frango c batatas",
+    "count": 1,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Bifanas desfiadas",
+    "key": "bifanas desfiadas",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Moelas estufadas",
+    "key": "moelas estufadas",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Bifanas (Estufadas)",
+    "key": "bifanas",
+    "count": 1,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Lombos de Salmão c/ puré de Ervilhas",
+    "key": "lombos de salmao c pure de ervilhas",
+    "count": 1,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Lasanha de Frango ou Vitela",
+    "key": "lasanha de frango ou vitela",
+    "count": 1,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Frango assado c/ batatas assadas",
+    "key": "frango assado c batatas assadas",
+    "count": 1,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Bifanas de Frango",
+    "key": "bifanas de frango",
+    "count": 1,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Leitão assado á Bairrada c/ laranja",
+    "key": "leitao assado a bairrada c laranja",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Vol au vens Frango",
+    "key": "vol au vens frango",
+    "count": 1,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Frango (cubinhos) c/ Batatas (assado)",
+    "key": "frango c batatas",
+    "count": 1,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Bifanas desfiadas ou Moelas estufadas",
+    "key": "bifanas desfiadas ou moelas estufadas",
+    "count": 1,
+    "segment": "other"
+   }
+  ],
+  "fritos_variados": [
+   {
+    "name": "Variedade de Fritinhos",
+    "key": "variedade de fritinhos",
+    "count": 4,
+    "segment": "other"
+   },
+   {
+    "name": "Variedades de miniaturas fritas e",
+    "key": "variedades de miniaturas fritas e",
+    "count": 1,
+    "segment": "starter"
+   },
+   {
+    "name": "Variado de miniaturas fritas: Bolinhos de Bacalhau, Croquetes…",
+    "key": "variado de miniaturas fritas bolinhos de bacalhau croquetes",
+    "count": 1,
+    "segment": "other"
+   }
+  ],
+  "peixes": [
+   {
+    "name": "Camarão cozido (40/60)",
+    "key": "camarao cozido",
+    "count": 2,
+    "segment": "other"
+   },
+   {
+    "name": "Sushi (show cooking)",
+    "key": "sushi",
+    "count": 1,
+    "segment": "other"
+   },
+   {
+    "name": "Peixe: Pescada Primavera",
+    "key": "peixe pescada primavera",
+    "count": 1,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Peixe: Salmão c/ Batatas (assado)",
+    "key": "peixe salmao c batatas",
+    "count": 1,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Variedade de peças de Sushi (150uni)",
+    "key": "variedade de pecas de sushi",
+    "count": 1,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Pescada Primavera",
+    "key": "pescada primavera",
+    "count": 1,
+    "segment": "main_dish"
+   },
+   {
+    "name": "Salmão c/ Batatas (assado)",
+    "key": "salmao c batatas",
+    "count": 1,
+    "segment": "main_dish"
+   }
+  ],
+  "fritos_veg": [
+   {
+    "name": "Bolinhas de Grão de Bico (frito)",
+    "key": "bolinhas de grao de bico",
+    "count": 11,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Bolinhas vegi",
+    "key": "bolinhas vegi",
+    "count": 5,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Bolinhas de Hummus (Veg)",
+    "key": "bolinhas de hummus",
+    "count": 3,
+    "segment": "savory_miniatures"
+   },
+   {
+    "name": "Bolinhas de grão c/ cherry",
+    "key": "bolinhas de grao c cherry",
+    "count": 1,
+    "segment": "savory_miniatures"
+   }
+  ]
+ }
+}

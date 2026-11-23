@@ -1,0 +1,2880 @@
+{
+  "notes": {
+    "author": [],
+    "agent": [
+      {
+        "id": "2c4c1ea5-d2c2-4531-8641-59555b1d8d61",
+        "text": "v1: a spike in code. It reads the parsed tables (data/analysis/tables.json, aggregates.json in the finger-food repo; rebuild with analysis.py) and shows them: the tables and the links between them, the menu items and menu lines counted, and the Excel prices matched to the items. Nothing from the Excel is brought into the data. The matching of Excel rows to items is a guess by similar name (a score is shown): read it as a question, not as an answer. Near-duplicates are merged by name similarity (0.88): a switch shows the counts with and without the merge. Tables carry the names of the canonical ERD where it has them: proposal, moment, menu_line, menu_line_item, invoice, payment. menu_line_item holds the item as written (the text), since there is no catalog item yet: the counts group that text. invoice_lines, price_lines, price_list and documents have no table in the ERD.",
+        "at": "2026-10-20T16:40:48.000Z"
+      }
+    ]
+  },
+  "decisions": {
+    "espetadas de fruta variada": "merge",
+    "espetadas de frutas": "merge",
+    "espetadas de frutas variadas": "merge",
+    "sumo compal": "merge",
+    "sumos compal": "merge",
+    "sumo compal varios sabores": "merge",
+    "sumo": "merge",
+    "agua garrafas de vidro 1lt": "merge",
+    "oferta de servico de cafe e descafeinado": "merge",
+    "cafe e descafeinado x": "merge",
+    "agua aromatizada": "merge",
+    "agua aromatizada 1 jarro": "merge",
+    "bolhachinhas bacalhaus do casci": "merge",
+    "bolachinhas bacalhaus salgados do casci": "merge",
+    "bolachinhas bacalhaus salgados de casci": "merge",
+    "bolachinhas bacalhaus salgados do c a s c i": "merge",
+    "bolachas bacalhaus": "merge",
+    "bolachinhas bacalhaus salgados casci": "merge",
+    "bolachas bacalhaus do casci": "merge",
+    "bacalhaus salgados do c a s c i": "merge",
+    "bownie c nozes e caramelo salgado": "merge",
+    "brownie com nozes e caramelo salgado": "merge",
+    "brownie c nozes": "merge",
+    "pastel de nata": "merge",
+    "pasteis nata": "merge",
+    "mini pasteis de nata": "merge",
+    "vol au vent de guacamole": "merge",
+    "vol au vents c guacamole": "merge",
+    "vol au vents guacamole": "merge",
+    "variedade de brigadeiros ovos moles espetadas de fruta": "merge",
+    "variedade de brigadeiros espetadas de fruta": "merge",
+    "folhados de chocolate": "merge",
+    "folhados salsicha": "merge",
+    "folhados salsisha": "merge",
+    "folhados salcisha": "merge",
+    "folhados de salchicha": "merge",
+    "folhados c salsicha": "merge",
+    "folhados salcicha": "merge",
+    "folhado salsicha": "merge",
+    "folhados de salsisha": "merge",
+    "pecas de fruta variadas": "merge",
+    "pecas de fruta macas peras bananas": "merge",
+    "folhados mistos e de salchicha": "merge",
+    "folhados de salsicha e mistos": "merge",
+    "bolinhos de bacalhau em espeto de cherry": "merge",
+    "bolinhos de bacalhau em espetada c cherry e azeitona": "merge"
+  },
+  "dup": {
+    "tree": [
+      {
+        "id": "espetadas de fruta",
+        "children": [
+          {
+            "id": "espetadas de fruta variada",
+            "children": []
+          },
+          {
+            "id": "espetadas de frutas",
+            "children": []
+          },
+          {
+            "id": "espetadas de frutas variadas",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "sumo sabores variados",
+        "children": [
+          {
+            "id": "sumo compal",
+            "children": []
+          },
+          {
+            "id": "sumos compal",
+            "children": []
+          },
+          {
+            "id": "sumo compal varios sabores",
+            "children": []
+          },
+          {
+            "id": "sumo",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "agua",
+        "children": []
+      },
+      {
+        "id": "agua engarrafada",
+        "children": [
+          {
+            "id": "agua 0 50cl",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "agua garrafas de vidro",
+        "children": [
+          {
+            "id": "agua garrafas de vidro 1lt",
+            "children": []
+          },
+          {
+            "id": "aguas engarrafadas",
+            "children": []
+          },
+          {
+            "id": "aguas engarrafada",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "cafe e descafeinado",
+        "children": [
+          {
+            "id": "oferta de servico de cafe e descafeinado",
+            "children": []
+          },
+          {
+            "id": "cafe e descafeinado x",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "aguas aromatizadas",
+        "children": [
+          {
+            "id": "agua aromatizada",
+            "children": []
+          },
+          {
+            "id": "agua aromatizada 1 jarro",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "bolachinhas bacalhaus do casci",
+        "children": [
+          {
+            "id": "bolhachinhas bacalhaus do casci",
+            "children": []
+          },
+          {
+            "id": "bolachinhas bacalhaus salgados do casci",
+            "children": []
+          },
+          {
+            "id": "bolachinhas bacalhaus salgados de casci",
+            "children": []
+          },
+          {
+            "id": "bolachinhas bacalhaus salgados do c a s c i",
+            "children": []
+          },
+          {
+            "id": "bolachas bacalhaus",
+            "children": []
+          },
+          {
+            "id": "bolachinhas bacalhaus salgados casci",
+            "children": []
+          },
+          {
+            "id": "bolachas bacalhaus do casci",
+            "children": []
+          },
+          {
+            "id": "bacalhaus salgados do c a s c i",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "brownie c nozes e caramelo salgado",
+        "children": [
+          {
+            "id": "bownie c nozes e caramelo salgado",
+            "children": []
+          },
+          {
+            "id": "brownie com nozes e caramelo salgado",
+            "children": []
+          },
+          {
+            "id": "brownie c nozes",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "pasteis de nata",
+        "children": [
+          {
+            "id": "pastel de nata",
+            "children": []
+          },
+          {
+            "id": "pasteis nata",
+            "children": []
+          },
+          {
+            "id": "mini pasteis de nata",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "variedade de brigadeiros",
+        "children": [
+          {
+            "id": "variedade de brigadeiros ovos moles espetadas de fruta",
+            "children": []
+          },
+          {
+            "id": "variedade de brigadeiros espetadas de fruta",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "folhado de chocolate",
+        "children": [
+          {
+            "id": "folhados de chocolate",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "folhados de salsicha",
+        "children": [
+          {
+            "id": "folhados salsicha",
+            "children": []
+          },
+          {
+            "id": "folhados salsisha",
+            "children": []
+          },
+          {
+            "id": "folhados salcisha",
+            "children": []
+          },
+          {
+            "id": "folhados de salchicha",
+            "children": []
+          },
+          {
+            "id": "folhados c salsicha",
+            "children": []
+          },
+          {
+            "id": "folhados salcicha",
+            "children": []
+          },
+          {
+            "id": "folhado salsicha",
+            "children": []
+          },
+          {
+            "id": "folhados de salsisha",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "pecas de fruta",
+        "children": [
+          {
+            "id": "pecas de fruta variadas",
+            "children": []
+          },
+          {
+            "id": "pecas de fruta macas peras bananas",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "croquetes de vitela c azeitona",
+        "children": [
+          {
+            "id": "croquetes de vitela em espeto de azeitona",
+            "children": []
+          },
+          {
+            "id": "croquetes de vitela ou c azeitona recheada",
+            "children": []
+          },
+          {
+            "id": "croquetes de novilho c azeitona",
+            "children": []
+          },
+          {
+            "id": "croquetes c azeitona",
+            "children": []
+          },
+          {
+            "id": "croquetes",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "croquetes de vitela",
+        "children": [
+          {
+            "id": "croquetes de novilho",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "rissois de camarao em espeto de camarao",
+        "children": []
+      },
+      {
+        "id": "rissois de camarao",
+        "children": []
+      },
+      {
+        "id": "variedade de saladas",
+        "children": [
+          {
+            "id": "variado de saladas",
+            "children": []
+          },
+          {
+            "id": "variedade de saladas em bufett",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "bolinhos de bacalhau",
+        "children": [
+          {
+            "id": "bolos de bacalhau",
+            "children": []
+          },
+          {
+            "id": "bolinhos de bacalahau",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "sumo de laranja natural",
+        "children": [
+          {
+            "id": "sumo de laranja natural cliente fornece laranjas",
+            "children": []
+          },
+          {
+            "id": "sumos de laranja natural",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "arroz de pato",
+        "children": [
+          {
+            "id": "arroz de pato c enchidos",
+            "children": []
+          },
+          {
+            "id": "arroz de pato ou arroz de frango caldoso",
+            "children": []
+          },
+          {
+            "id": "arroz de pato ou arroz de frango caldoso c moelas",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "bacalhau c natas gratinado",
+        "children": [
+          {
+            "id": "bacalhau c natas",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "espetada de mozarela c cherry e manjericao",
+        "children": [
+          {
+            "id": "espetada de mozarela c azeitona cherry e manjericao",
+            "children": []
+          },
+          {
+            "id": "espetada de mozarela",
+            "children": []
+          },
+          {
+            "id": "espetada de mozarela c cherry mangericao e azeitona",
+            "children": []
+          },
+          {
+            "id": "espetada de cherry c mozzarella e mangericao",
+            "children": []
+          },
+          {
+            "id": "espetada de cherry c mozarela e manjericao",
+            "children": []
+          },
+          {
+            "id": "espetadas de cherry c manjericao e azeitona",
+            "children": []
+          },
+          {
+            "id": "espetadas de cherry c manjericao",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "croissant brioche c queijo",
+        "children": [
+          {
+            "id": "croissant brioche ou mini pao c queijo",
+            "children": []
+          },
+          {
+            "id": "croissant c queijo",
+            "children": []
+          },
+          {
+            "id": "croissants c queijo",
+            "children": []
+          },
+          {
+            "id": "croissant queijo",
+            "children": []
+          },
+          {
+            "id": "croissant brioche c queijo e croissant brioche c fiambre",
+            "children": []
+          },
+          {
+            "id": "croissant brioche c queijo e c fiambre",
+            "children": []
+          },
+          {
+            "id": "croissant folhado c queijo e croissant folhado c fiambre",
+            "children": []
+          },
+          {
+            "id": "croissants c queijo e croissants c fiambre",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "croissant brioche c fiambre",
+        "children": [
+          {
+            "id": "croissant brioche ou mini pao c fiambre",
+            "children": []
+          },
+          {
+            "id": "croissant c fiambre",
+            "children": []
+          },
+          {
+            "id": "croissants c fiambre",
+            "children": []
+          },
+          {
+            "id": "croissant fiambre",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "croissant folhado c queijo",
+        "children": [
+          {
+            "id": "croissants folhados c queijo",
+            "children": []
+          },
+          {
+            "id": "pao de sementes croissants c queijo",
+            "children": []
+          },
+          {
+            "id": "croissant ou mini pao de sementes c queijo",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "croissant folhado c fiambre",
+        "children": [
+          {
+            "id": "croissants folhados c fiambre",
+            "children": []
+          },
+          {
+            "id": "pao de sementes croissants c fiambre",
+            "children": []
+          },
+          {
+            "id": "croissant ou mini pao de sementes c fiambre",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "tabuas de queijos decoradas c frutos secos",
+        "children": [
+          {
+            "id": "tabuas de queijos e decoradas c frutos secos",
+            "children": []
+          },
+          {
+            "id": "tabuas de queijos",
+            "children": []
+          },
+          {
+            "id": "tabua de queijos",
+            "children": []
+          },
+          {
+            "id": "tabua de queijos decoradas c frutos secos",
+            "children": []
+          },
+          {
+            "id": "tabuas de queijos c frutos secos",
+            "children": []
+          },
+          {
+            "id": "charcutaria e grazing tabuas de queijos decoradas c frutos secos",
+            "children": []
+          },
+          {
+            "id": "2 tabuas de queijos e decoradas c frutos secos 4 variedades",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "iogurte c granola",
+        "children": [
+          {
+            "id": "iogurte de soja c granola",
+            "children": []
+          },
+          {
+            "id": "copinhos de iogurte c granola",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "espetada de bolinhos de bacalhau c cherry e azeitona",
+        "children": [
+          {
+            "id": "espetada de bolinhos de bacalhau",
+            "children": []
+          },
+          {
+            "id": "espetada de bolinhos de bacalhau c cherry",
+            "children": []
+          },
+          {
+            "id": "bolinhos de bacalhau em espeto de cherry c azeitona",
+            "children": []
+          },
+          {
+            "id": "bolinhos de bacalhau em espeto de cherry",
+            "children": []
+          },
+          {
+            "id": "bolinhos de bacalhau em espetada c cherry e azeitona",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "tabuas de enchidos decoradas c azeitonas",
+        "children": [
+          {
+            "id": "tabuas de enchidos decorados c azeitonas",
+            "children": []
+          },
+          {
+            "id": "tabuas de enchidos decoradas",
+            "children": []
+          },
+          {
+            "id": "tabua de enchidos",
+            "children": []
+          },
+          {
+            "id": "tabua de enchidos decoradas c azeitonas",
+            "children": []
+          },
+          {
+            "id": "tabuas de enchidos c azeitonas",
+            "children": []
+          },
+          {
+            "id": "tabuas de enchidos",
+            "children": []
+          },
+          {
+            "id": "charcutaria e grazing tabuas de enchidos c variado de azeitonas",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "mil folhas glace",
+        "children": [
+          {
+            "id": "mil folhas",
+            "children": []
+          },
+          {
+            "id": "mini mil folhas",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "ovos moles de aveiro",
+        "children": [
+          {
+            "id": "ovos moles",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "vol au vents de guacamole c azeitona",
+        "children": [
+          {
+            "id": "vol au vents de guacamole c azeitonas",
+            "children": []
+          },
+          {
+            "id": "vol au vents de guacamole",
+            "children": []
+          },
+          {
+            "id": "vol au vent de guacamole",
+            "children": []
+          },
+          {
+            "id": "vol au vents c guacamole",
+            "children": []
+          },
+          {
+            "id": "vol au vents guacamole",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "pao c fiambre",
+        "children": [
+          {
+            "id": "mini pao c fiambre",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "pao c queijo",
+        "children": [
+          {
+            "id": "mini pao c queijo",
+            "children": []
+          },
+          {
+            "id": "pao c queijo e pao c fiambre",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "pao de sementes c queijo",
+        "children": [
+          {
+            "id": "pao sementes c queijo",
+            "children": []
+          },
+          {
+            "id": "pao de sementes c queijo e c fiambre",
+            "children": []
+          },
+          {
+            "id": "pao sementes c queijo e pao sementes c fiambre",
+            "children": []
+          },
+          {
+            "id": "pao de sementes c queijo e pao de sementes c fiambre",
+            "children": []
+          },
+          {
+            "id": "mini pao de sementes c queijo",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "espumante para as sobremesas",
+        "children": [
+          {
+            "id": "espumante",
+            "children": []
+          },
+          {
+            "id": "espumante baga primavera",
+            "children": []
+          },
+          {
+            "id": "espumante 5 uni",
+            "children": []
+          },
+          {
+            "id": "oferta de espumante",
+            "children": []
+          },
+          {
+            "id": "espumante para brindar",
+            "children": []
+          },
+          {
+            "id": "espumante da bairrada oferta",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "frutos vermelhos",
+        "children": [
+          {
+            "id": "frutos vermelhos 16h",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "quinoa c legumes salteados",
+        "children": [
+          {
+            "id": "quinoa de legumes",
+            "children": []
+          },
+          {
+            "id": "quinoa com legumes salteados",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "cerveja mini",
+        "children": [
+          {
+            "id": "cerveja minis",
+            "children": []
+          },
+          {
+            "id": "cerveja minis 300 uni",
+            "children": []
+          },
+          {
+            "id": "cerveja mini sagres ou super",
+            "children": []
+          },
+          {
+            "id": "cerveja mini 120uni",
+            "children": []
+          },
+          {
+            "id": "cerveja mini sagres",
+            "children": []
+          },
+          {
+            "id": "cerveja mini 40",
+            "children": []
+          },
+          {
+            "id": "cerveja minis 60 uni",
+            "children": []
+          },
+          {
+            "id": "cerveja minis 90 uni",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "pao de sementes c fiambre",
+        "children": [
+          {
+            "id": "pao sementes c fiambre",
+            "children": []
+          },
+          {
+            "id": "mini pao de sementes c fiambre",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "bolinhas de berlim",
+        "children": [
+          {
+            "id": "bolas de berlim",
+            "children": []
+          },
+          {
+            "id": "bolinha de berlim",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "maca canela",
+        "children": [
+          {
+            "id": "maca canela 19h",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "bolo no copo",
+        "children": [
+          {
+            "id": "bolo no copo c iogurte e amendoa",
+            "children": []
+          },
+          {
+            "id": "bolo no copo variados",
+            "children": []
+          },
+          {
+            "id": "bolo no copo com frutos vermelhos",
+            "children": []
+          },
+          {
+            "id": "bolo no copo e espetadas de fruta na sobremesa",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "buffet de saladas",
+        "children": [
+          {
+            "id": "bufet de saladas",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "vol au vents de frango",
+        "children": [
+          {
+            "id": "vol au vens frango",
+            "children": []
+          },
+          {
+            "id": "vol au vents de frango c cogumelos",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "variedade de macarrons",
+        "children": [
+          {
+            "id": "variedade de macarrons espetadas de fruta",
+            "children": []
+          },
+          {
+            "id": "variedade de macarrons ovos moles espetadas de fruta",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "saladas variadas alface tomate cenoura milho couve roxa",
+        "children": [
+          {
+            "id": "saladas variadas alface tomate cherry cortado cenoura milho couve roxa",
+            "children": []
+          },
+          {
+            "id": "buffet de saladas alface cherry cenoura milho couve rocha e feta",
+            "children": []
+          },
+          {
+            "id": "buffet de saladas alface tomate cenoura milho",
+            "children": []
+          },
+          {
+            "id": "buffet de saladas alface tomate cenoura milho couve roxa e",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "variado de bolachas",
+        "children": [
+          {
+            "id": "variedade de bolachas manteiga",
+            "children": []
+          },
+          {
+            "id": "variado de bolacchas",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "bifanas estufadas a moda do porto",
+        "children": [
+          {
+            "id": "bifanas estufadas",
+            "children": []
+          },
+          {
+            "id": "bifanas a moda do porto",
+            "children": []
+          },
+          {
+            "id": "bifanas",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "coca cola sumol ice tea",
+        "children": [
+          {
+            "id": "sumo coca cola sumol",
+            "children": []
+          },
+          {
+            "id": "coca cola 7up ice tea",
+            "children": []
+          },
+          {
+            "id": "coca cola",
+            "children": []
+          },
+          {
+            "id": "coca cola zero",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "aguas aromatizadas frutos vermelhos",
+        "children": [
+          {
+            "id": "agua aromatizada de frutos vermelhos",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "tostas c pates de guacamole e humus",
+        "children": []
+      },
+      {
+        "id": "pate de humus e guacamole",
+        "children": []
+      },
+      {
+        "id": "sandes de cogumelos de cebolada",
+        "children": [
+          {
+            "id": "cogumelos de cebolada",
+            "children": []
+          },
+          {
+            "id": "cogumelos de cebolada veg",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "bolo de bolacha",
+        "children": [
+          {
+            "id": "bolo de bolacha do ceu",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "creme de legumes",
+        "children": [
+          {
+            "id": "creme de legumes c toque de hortela",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "sandes de pernil de porco no espeto",
+        "children": [
+          {
+            "id": "porco no espeto",
+            "children": []
+          },
+          {
+            "id": "sandes de porco no espeto",
+            "children": []
+          },
+          {
+            "id": "pernil no espeto sandes",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "vol au vents de cogumelos",
+        "children": [
+          {
+            "id": "vol au vebts de cogumelos",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "bacalhau lascado c grao de bico",
+        "children": [
+          {
+            "id": "bacalhau c natas ou bacalhau c grao",
+            "children": []
+          },
+          {
+            "id": "bacalhau com natas ou bacalhau lascado c grao de bico",
+            "children": []
+          },
+          {
+            "id": "bacalhau com natas ou bacalhau lascado c grao de bico e",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "chamucas de vegetais",
+        "children": [
+          {
+            "id": "chamucas vegi",
+            "children": []
+          },
+          {
+            "id": "chamucas de legumes",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "wraps queijo creme salmao e rucula",
+        "children": [
+          {
+            "id": "wraps de salmao fumado c queijo e rucula",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "folhados mistos e folhados de salsicha",
+        "children": [
+          {
+            "id": "folhados mistos e de salchicha",
+            "children": []
+          },
+          {
+            "id": "folhados de salsicha e mistos",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "mil folhas creme brule",
+        "children": [
+          {
+            "id": "mil folhas creme blule",
+            "children": []
+          },
+          {
+            "id": "mil folhas de creme brule",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "queques de laranja",
+        "children": [
+          {
+            "id": "queques laranja",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "vol au vents de atum",
+        "children": [
+          {
+            "id": "vol au vent de atum",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "sandes de panado de frango ou omelete c alfece e queijo",
+        "children": [
+          {
+            "id": "sandes de panado de frango alfece e queijo",
+            "children": []
+          },
+          {
+            "id": "sandes de panado de frango ou omelete c alface e queijo",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "aguas aromatizadas maca canela",
+        "children": [
+          {
+            "id": "aguas aromatizadas maca e canela",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "bifanas estufadas desfiadas",
+        "children": [
+          {
+            "id": "bifanas desfiadas",
+            "children": []
+          },
+          {
+            "id": "bifanas desfiadas ou moelas estufadas",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "caldo verde",
+        "children": [
+          {
+            "id": "caldo verde c chourica",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "4 variedades de brigadeiros",
+        "children": [
+          {
+            "id": "3 variedades de brigadeiros",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "chamucas de frango",
+        "children": [
+          {
+            "id": "chamucas de frango c ananas",
+            "children": []
+          },
+          {
+            "id": "chamucas",
+            "children": []
+          },
+          {
+            "id": "chamucas c ananas",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "bolo brigadeiro",
+        "children": [
+          {
+            "id": "bolo de aniversario creme de ovos ou brigadeiro",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "variado de miniaturas fritas bolinhos de bacalhau croquetes",
+        "children": [
+          {
+            "id": "variedade de fritinhos",
+            "children": []
+          },
+          {
+            "id": "variedade de miniaturas rissois chamucas croquetes",
+            "children": []
+          },
+          {
+            "id": "variedades de miniaturas fritas e",
+            "children": []
+          },
+          {
+            "id": "variedade de fritinhos bolinhos de bacalhau croquetes",
+            "children": []
+          },
+          {
+            "id": "rissois croquetes de vitela bolos de bacalhau",
+            "children": []
+          },
+          {
+            "id": "croquetes de vitela e rissois de camarao ou",
+            "children": []
+          },
+          {
+            "id": "bolinhos de bacalhau rissois croquetes bolinhas de legumes",
+            "children": []
+          },
+          {
+            "id": "croquetes de vitela e bolos de bacalhau",
+            "children": []
+          },
+          {
+            "id": "rissois croquetes bolos de bacalhau",
+            "children": []
+          },
+          {
+            "id": "rissois camarao",
+            "children": []
+          },
+          {
+            "id": "rissois",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "aguas aromatizadas hortela frutos vermelhos laranja e gengibre",
+        "children": [
+          {
+            "id": "aguas aromatizadas frutos vermelhos laranja e gengibre",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "salada de quinoa c legumes",
+        "children": [
+          {
+            "id": "salada de quinoa c legumes salteados",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "rosquinhas de chocolate preto",
+        "children": []
+      },
+      {
+        "id": "relava 2 x 6 mts c marcas de areas 2 balizas 5 bolas futebol bandeiras",
+        "children": [
+          {
+            "id": "relava 2 x 6 mts c marcas de areas 2 balizas 5 bolas futebol bandeiras toalhas e guardanapos ao tema",
+            "children": []
+          },
+          {
+            "id": "relva 2 x 6 mts c marcas de areas 2 balizas 5 bolas futebol bandeiras",
+            "children": []
+          },
+          {
+            "id": "relava 2 x 6 mts c marcas de areas 1 baliza 3 bolas futebol bandeiras",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "pizza de queijo cogumelos e azeitonas",
+        "children": [
+          {
+            "id": "pizza de cogumelos e azeitonas",
+            "children": []
+          },
+          {
+            "id": "pizzas de cogumelos e azeitona preta",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "sangria vinho tinto c laranja e canela jarro 15 lts",
+        "children": [
+          {
+            "id": "sangria vinho tinto c laranja e canela jarro",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "triologia no copo",
+        "children": [
+          {
+            "id": "trilogia no copo",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "bolachas manteiga",
+        "children": [
+          {
+            "id": "bolachinhas manteiga",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "rodizio de pizzas",
+        "children": [
+          {
+            "id": "rodizio de pizzas carne peixe e veg",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "mini hamburgueres",
+        "children": [
+          {
+            "id": "mini hamburgueres c cheddar",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "rosquinhas de chocolate leite",
+        "children": []
+      },
+      {
+        "id": "lombo de bacalhau assado com batatas a murro",
+        "children": [
+          {
+            "id": "bacalhau c batatas a murro e broa",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "tacos de salmao fumado c queijo creme rucula e tangerina",
+        "children": [
+          {
+            "id": "tacos de salmao e abacate c rucula e tangerina",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "sangria vinho branca c frutas",
+        "children": []
+      },
+      {
+        "id": "sangria tinta de frutas",
+        "children": []
+      },
+      {
+        "id": "wraps de salmao c rucula e tangerina",
+        "children": [
+          {
+            "id": "wraps de salmao fumado c queijo rucula e tangerina",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "agua das pedras",
+        "children": [
+          {
+            "id": "aguas das pedras",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "aguas aromatizadas frutos vermelhos maca canela hortela",
+        "children": [
+          {
+            "id": "aguas aromatizadas hortela frutos vermelhos e maca canela",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "mouse de chocolate",
+        "children": [
+          {
+            "id": "mouse de chocolate no copo",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "frango assado c batatas assadas",
+        "children": [
+          {
+            "id": "frango c batatas",
+            "children": []
+          },
+          {
+            "id": "carne frango c batatas",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "tabuas de enchidos decoradas c azeitonas acompanhadas c variedade de tostas e broa",
+        "children": [
+          {
+            "id": "tabuas de enchidos decoradas c azeitonas acompanhadas c variedade de tostas e gressinos",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "tarte de camembert c compota e frutos secos",
+        "children": [
+          {
+            "id": "tarte de camembert c molho pesto",
+            "children": []
+          },
+          {
+            "id": "tarte de camembert c molho pesto c frutos secos",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "arroz de pato ou arroz a valenciana",
+        "children": [
+          {
+            "id": "arroz de pato ou arroz a valenciana e",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "carne de porco estufada c arroz",
+        "children": [
+          {
+            "id": "carne carne de porco estufada c arroz",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "pescada primavera",
+        "children": [
+          {
+            "id": "peixe pescada primavera",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "jardineira de lulas",
+        "children": [
+          {
+            "id": "peixe jardineira de lulas",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "jardineira de soja",
+        "children": [
+          {
+            "id": "vegan jardineira de soja",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "salmao c batatas",
+        "children": [
+          {
+            "id": "peixe salmao c batatas",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "variedades de bolo no copo",
+        "children": [
+          {
+            "id": "variedades no copo",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "tabule marroquin",
+        "children": [
+          {
+            "id": "vegan tabule marroquin",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "wrap de pate de atum alface e cenoura",
+        "children": [
+          {
+            "id": "sandes de pate de atum alface e cenoura",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "sandes c alface panado de porco filete de peixe",
+        "children": [
+          {
+            "id": "dia 14 e 21 sandes c alface panado de porco filete de peixe pera agua sumo compal mini kitkat",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "salada de bacalhau c grao e salicornia",
+        "children": [
+          {
+            "id": "salada de bacalhau c grao de bico",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "salame de chocolate",
+        "children": []
+      },
+      {
+        "id": "folhados mistos",
+        "children": []
+      },
+      {
+        "id": "palmiers",
+        "children": []
+      },
+      {
+        "id": "chas variados",
+        "children": []
+      },
+      {
+        "id": "croissant simples",
+        "children": [
+          {
+            "id": "croissants simples",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "creme de cenoura",
+        "children": []
+      },
+      {
+        "id": "tarte de amendoa",
+        "children": []
+      },
+      {
+        "id": "pao de queijo",
+        "children": [
+          {
+            "id": "bolinhas de pao de queijo",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "acompanhadas c variedade de tostas e broa",
+        "children": []
+      },
+      {
+        "id": "rolinhos de pao c chourico",
+        "children": []
+      },
+      {
+        "id": "vol au vents de delicias",
+        "children": [
+          {
+            "id": "vol au vents de pate do mar",
+            "children": []
+          },
+          {
+            "id": "vol au vents de frutos do mar",
+            "children": []
+          },
+          {
+            "id": "vol ao vents de frutos do mar",
+            "children": []
+          },
+          {
+            "id": "vol au vents de delicias do mar",
+            "children": []
+          },
+          {
+            "id": "vol au vents de delicias do mar frango guacamole",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "batatas fritas",
+        "children": []
+      },
+      {
+        "id": "bolinhas de grao de bico",
+        "children": [
+          {
+            "id": "bolinhas vegi",
+            "children": []
+          },
+          {
+            "id": "bolinhas de hummus",
+            "children": []
+          },
+          {
+            "id": "bolinhas de grao c cherry",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "sopa creme de cenoura",
+        "children": []
+      },
+      {
+        "id": "arroz a valenciana",
+        "children": []
+      },
+      {
+        "id": "cafe",
+        "children": []
+      },
+      {
+        "id": "mini pizzas",
+        "children": []
+      },
+      {
+        "id": "torta de ovos c fios de ovos",
+        "children": []
+      },
+      {
+        "id": "aguas aromatizadas hortela frutos vermelhos",
+        "children": []
+      },
+      {
+        "id": "rolinhos primavera",
+        "children": []
+      },
+      {
+        "id": "bacalhau c grao de bico",
+        "children": []
+      },
+      {
+        "id": "maca",
+        "children": []
+      },
+      {
+        "id": "panquecas c iogurte e mirtilo",
+        "children": []
+      },
+      {
+        "id": "hungaros",
+        "children": []
+      },
+      {
+        "id": "creme de couve flor",
+        "children": []
+      },
+      {
+        "id": "salada composta embalada",
+        "children": []
+      },
+      {
+        "id": "empadas de frango c cogumelos",
+        "children": []
+      },
+      {
+        "id": "feijao frade com quinoa de legumes",
+        "children": []
+      },
+      {
+        "id": "wraps de frango c queijo e rucula",
+        "children": []
+      },
+      {
+        "id": "maca ou banana",
+        "children": []
+      },
+      {
+        "id": "sumo bongo 0 20cl",
+        "children": []
+      },
+      {
+        "id": "wraps de frango atum e guacamole c queijo e rucula",
+        "children": []
+      },
+      {
+        "id": "amendoins tremocos azeitonas",
+        "children": []
+      },
+      {
+        "id": "feijao frade c quinoa de legumes",
+        "children": []
+      },
+      {
+        "id": "bolachas de arroz c compotas",
+        "children": []
+      },
+      {
+        "id": "pao de leite c fiambre",
+        "children": []
+      },
+      {
+        "id": "pao de leite c queijo",
+        "children": []
+      },
+      {
+        "id": "empadas de cogumelos",
+        "children": []
+      },
+      {
+        "id": "bolinhos de feijao",
+        "children": []
+      },
+      {
+        "id": "compotas de frutas variadas c frutos secos",
+        "children": []
+      },
+      {
+        "id": "vinho do porto",
+        "children": []
+      },
+      {
+        "id": "bolinhos de coco",
+        "children": []
+      },
+      {
+        "id": "sandes c alface pate de frango de atum ou humus c azeitona",
+        "children": []
+      },
+      {
+        "id": "chamucas de vegetais c azeitona",
+        "children": []
+      },
+      {
+        "id": "couscous c cogumelos",
+        "children": []
+      },
+      {
+        "id": "sopa creme de legumes",
+        "children": []
+      },
+      {
+        "id": "brigadeiros",
+        "children": []
+      },
+      {
+        "id": "cachorros c batata palha",
+        "children": []
+      },
+      {
+        "id": "empadas de alheira",
+        "children": []
+      },
+      {
+        "id": "vol au vents de humus",
+        "children": []
+      },
+      {
+        "id": "pao integral c queijo",
+        "children": [
+          {
+            "id": "mini pao integral c queijo",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "pao integral c fiambre",
+        "children": [
+          {
+            "id": "mini pao integral c fiambre",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "feijao frade c cogumelos salteados",
+        "children": []
+      },
+      {
+        "id": "vinho branco e tinto",
+        "children": []
+      },
+      {
+        "id": "saco reutilizavel",
+        "children": []
+      },
+      {
+        "id": "smi frio de bolacha",
+        "children": []
+      },
+      {
+        "id": "palmieres",
+        "children": []
+      },
+      {
+        "id": "feijao frade c atum",
+        "children": []
+      },
+      {
+        "id": "wraps de frango",
+        "children": []
+      },
+      {
+        "id": "acompanhadas c variedade de tostas e gressinos",
+        "children": []
+      },
+      {
+        "id": "mini bifanas a moda do porto",
+        "children": []
+      },
+      {
+        "id": "tiramissu",
+        "children": []
+      },
+      {
+        "id": "lombo assado c batatas a murro",
+        "children": []
+      },
+      {
+        "id": "biscoitos e bolachas",
+        "children": []
+      },
+      {
+        "id": "vol au vents de pate de azeitona",
+        "children": []
+      },
+      {
+        "id": "vol au vents de bolonhesa de soja",
+        "children": []
+      },
+      {
+        "id": "limonada c hortela",
+        "children": []
+      },
+      {
+        "id": "queques de caramelo",
+        "children": []
+      },
+      {
+        "id": "queques de iogurte",
+        "children": []
+      },
+      {
+        "id": "queques de cenoura",
+        "children": []
+      },
+      {
+        "id": "queques de aveia",
+        "children": []
+      },
+      {
+        "id": "queques de maca",
+        "children": []
+      },
+      {
+        "id": "cuscuz c legumes salteados",
+        "children": []
+      },
+      {
+        "id": "leite creme queimado",
+        "children": []
+      },
+      {
+        "id": "sopa de legumes",
+        "children": []
+      },
+      {
+        "id": "croissants folhados mistos",
+        "children": []
+      },
+      {
+        "id": "jardineira de cogumelos salteados",
+        "children": []
+      },
+      {
+        "id": "bolo de bolacha no copo",
+        "children": []
+      },
+      {
+        "id": "refrigerantes",
+        "children": []
+      },
+      {
+        "id": "raivas do c a s c i",
+        "children": []
+      },
+      {
+        "id": "tiramisu",
+        "children": []
+      },
+      {
+        "id": "wraps de frango c maionese de trufa cheddar e rucula",
+        "children": []
+      },
+      {
+        "id": "variedade de mini muffins",
+        "children": []
+      },
+      {
+        "id": "tarte basca c frutos vermelhos",
+        "children": []
+      },
+      {
+        "id": "salada de feijao frade c atum",
+        "children": []
+      },
+      {
+        "id": "torta de laranja",
+        "children": []
+      },
+      {
+        "id": "camarao cozido",
+        "children": []
+      },
+      {
+        "id": "cachorrinho de camarao c maionese de wasabi",
+        "children": []
+      },
+      {
+        "id": "empadas de legumes",
+        "children": []
+      },
+      {
+        "id": "wraps de atum",
+        "children": []
+      },
+      {
+        "id": "bolachas de milho c guacamole",
+        "children": []
+      },
+      {
+        "id": "variado de biscoitos",
+        "children": []
+      },
+      {
+        "id": "focaccia com azeite e alecrim",
+        "children": []
+      },
+      {
+        "id": "donuts variados",
+        "children": []
+      },
+      {
+        "id": "banana",
+        "children": []
+      },
+      {
+        "id": "grao de bico com quinoa de legumes",
+        "children": []
+      },
+      {
+        "id": "vol au vents de camarao",
+        "children": []
+      },
+      {
+        "id": "espumante bruto fraga da pena ou similar",
+        "children": []
+      },
+      {
+        "id": "wraps de frango delicias c salada",
+        "children": []
+      },
+      {
+        "id": "queques variados",
+        "children": []
+      },
+      {
+        "id": "bolo de chocolate",
+        "children": []
+      },
+      {
+        "id": "flutes de acrilico",
+        "children": []
+      },
+      {
+        "id": "espumante caves sao domingos",
+        "children": []
+      },
+      {
+        "id": "argolas de chocolate",
+        "children": []
+      },
+      {
+        "id": "salada de feijao frade com cebola e salsa",
+        "children": []
+      },
+      {
+        "id": "ovos cozidos",
+        "children": []
+      },
+      {
+        "id": "linguas de veado",
+        "children": []
+      },
+      {
+        "id": "tortilhas de milho c humus",
+        "children": []
+      },
+      {
+        "id": "tortilhas de milho c guacamole",
+        "children": []
+      },
+      {
+        "id": "arroz de pato e quinoa c legumes salteados",
+        "children": []
+      },
+      {
+        "id": "humus c palitos de cenoura",
+        "children": []
+      },
+      {
+        "id": "bacalhau c natas e couscous c cogumelos",
+        "children": []
+      },
+      {
+        "id": "brownie c nozes ovos moles espetadas de fruta",
+        "children": []
+      },
+      {
+        "id": "agua de",
+        "children": []
+      },
+      {
+        "id": "agua garrafas de vidro aguas aromatizadas",
+        "children": []
+      },
+      {
+        "id": "variado de alfaces",
+        "children": []
+      },
+      {
+        "id": "tomate cherry",
+        "children": []
+      },
+      {
+        "id": "beterraba c maca",
+        "children": []
+      },
+      {
+        "id": "cenoura ralada",
+        "children": []
+      },
+      {
+        "id": "couve roxa",
+        "children": []
+      },
+      {
+        "id": "milho",
+        "children": []
+      },
+      {
+        "id": "bacalhau desfiado a portuguesa",
+        "children": []
+      },
+      {
+        "id": "lombo de porco c batatas assadas e pure de maca",
+        "children": []
+      },
+      {
+        "id": "magret de pato c pure de ervilhas vinho do porto e laranja",
+        "children": []
+      },
+      {
+        "id": "feijoada de cogumelos",
+        "children": []
+      },
+      {
+        "id": "bolo no copo tiramissu brigadeiro bolo bolacha mousse chocolate natas do ceu cheesecake frutos vermelhos",
+        "children": []
+      },
+      {
+        "id": "sushi",
+        "children": []
+      },
+      {
+        "id": "leitao",
+        "children": []
+      },
+      {
+        "id": "sumol",
+        "children": []
+      },
+      {
+        "id": "peixe bacalhau com natas",
+        "children": [
+          {
+            "id": "bacalhau com natas",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "carne arroz de pato",
+        "children": []
+      },
+      {
+        "id": "vegan quinoa com legumes salteados",
+        "children": []
+      },
+      {
+        "id": "carne arroz a valenciana",
+        "children": []
+      },
+      {
+        "id": "vegan couscous com legumes salteados",
+        "children": []
+      },
+      {
+        "id": "2 tabuas de enchidos decoradas c azeitonas 4 variedades",
+        "children": []
+      },
+      {
+        "id": "queques de ananas",
+        "children": []
+      },
+      {
+        "id": "queques de noz",
+        "children": []
+      },
+      {
+        "id": "chavenas de cafe",
+        "children": []
+      },
+      {
+        "id": "wrap de guacamole queijo vegan e azeitonas",
+        "children": []
+      },
+      {
+        "id": "tartes de atum c cebolinho",
+        "children": []
+      },
+      {
+        "id": "wraps de delicias do mar c queijo e rucula",
+        "children": []
+      },
+      {
+        "id": "tabuas de enchidos c azeitonas verdes recheadas e pretas",
+        "children": []
+      },
+      {
+        "id": "hamburgueres c queijo e bacon",
+        "children": []
+      },
+      {
+        "id": "variado de tostas e gressinos e pao de rio maior",
+        "children": []
+      },
+      {
+        "id": "hamburgueres de cogumelos",
+        "children": []
+      },
+      {
+        "id": "cheesecake de frutos vermelhos limao",
+        "children": []
+      },
+      {
+        "id": "aguas aromatizadas hortela e tangerina",
+        "children": []
+      },
+      {
+        "id": "tacinhas de salada de atum c feijao frade cebola e salsa",
+        "children": []
+      },
+      {
+        "id": "variedade de paes e tostas sem gluten",
+        "children": []
+      },
+      {
+        "id": "salada de salmao fumado no copo",
+        "children": []
+      },
+      {
+        "id": "cha frio",
+        "children": []
+      },
+      {
+        "id": "wraps de frango c cheddar e rucula em espeto de cherry",
+        "children": []
+      },
+      {
+        "id": "moelas estufadas",
+        "children": []
+      },
+      {
+        "id": "macarrons",
+        "children": []
+      },
+      {
+        "id": "bananas e macas",
+        "children": []
+      },
+      {
+        "id": "variedade de pecas de sushi",
+        "children": []
+      },
+      {
+        "id": "espumante 30 garrafas",
+        "children": []
+      },
+      {
+        "id": "salada de massa com fiambre e queijo mozarela",
+        "children": []
+      },
+      {
+        "id": "salada vegetariana com arroz primavera",
+        "children": []
+      },
+      {
+        "id": "tacinhas c salada de fruta",
+        "children": []
+      },
+      {
+        "id": "lombos de salmao c pure de ervilhas",
+        "children": []
+      },
+      {
+        "id": "lasanha de frango ou vitela",
+        "children": []
+      },
+      {
+        "id": "jardineira de frango ou vitela",
+        "children": []
+      },
+      {
+        "id": "bolacha no copo receita escocesa com bolachas de gengibre e canela e queijo creme",
+        "children": []
+      },
+      {
+        "id": "cerveja guinness",
+        "children": []
+      },
+      {
+        "id": "saladas variadas",
+        "children": []
+      },
+      {
+        "id": "sandes c alface pate de frango delicias",
+        "children": []
+      },
+      {
+        "id": "pera",
+        "children": []
+      },
+      {
+        "id": "variedade de pizzas",
+        "children": []
+      },
+      {
+        "id": "sandes c alface omelete c fiambre ou queijo e simples",
+        "children": []
+      },
+      {
+        "id": "tangerina",
+        "children": []
+      },
+      {
+        "id": "sandes c alface panado de frango filete de peixe",
+        "children": []
+      },
+      {
+        "id": "quiches fiambre e de cogumelos",
+        "children": []
+      },
+      {
+        "id": "sandes de guacamole c cenoura queijo e alface",
+        "children": []
+      },
+      {
+        "id": "bifanas de frango",
+        "children": []
+      },
+      {
+        "id": "bolachinhas de aveia",
+        "children": []
+      },
+      {
+        "id": "queques laranja chocolate iogurte",
+        "children": []
+      },
+      {
+        "id": "queques frutos vermelhos chocolate ananas",
+        "children": []
+      },
+      {
+        "id": "queques aveia chocolate laranja",
+        "children": []
+      },
+      {
+        "id": "aguas aromatizadas laranja canela e frutos vermelhos",
+        "children": []
+      },
+      {
+        "id": "wraps de delicias c rucula e tangerina",
+        "children": []
+      },
+      {
+        "id": "wraps de guacamole c queijo e cherry",
+        "children": []
+      },
+      {
+        "id": "salada de feijao frade com quinoa de legumes",
+        "children": []
+      },
+      {
+        "id": "wraps de guacamole c cenoura e rucula",
+        "children": [
+          {
+            "id": "wraps de guacamole c queijo e rucula",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "creme de couve flor ou creme de cenoura ou creme de legumes e",
+        "children": []
+      },
+      {
+        "id": "muffins de laranja e muffins de cenoura",
+        "children": []
+      },
+      {
+        "id": "mini hamburguer de salmao",
+        "children": []
+      },
+      {
+        "id": "wraps de frango delicias e guacamole c queijo e rucula",
+        "children": []
+      },
+      {
+        "id": "leitao assado a bairrada c laranja",
+        "children": []
+      },
+      {
+        "id": "bolo rei",
+        "children": []
+      },
+      {
+        "id": "rabanadas c ovos moles ou vinho do porto",
+        "children": []
+      },
+      {
+        "id": "queques de chocolate",
+        "children": []
+      },
+      {
+        "id": "tarte de chevre c molho pesto",
+        "children": []
+      },
+      {
+        "id": "hamburgers de atum",
+        "children": []
+      },
+      {
+        "id": "jardineira de frango e gao de bico c maca beterraba",
+        "children": []
+      },
+      {
+        "id": "arroz a valenciana e gao de bico c maca beterraba",
+        "children": []
+      },
+      {
+        "id": "pao de centeio c queijo",
+        "children": []
+      },
+      {
+        "id": "pao de centeio c fiambre",
+        "children": []
+      },
+      {
+        "id": "muffins de laranja iogurte aveia pistacho",
+        "children": []
+      },
+      {
+        "id": "saladas compostas frango atum e vegetarianas",
+        "children": []
+      },
+      {
+        "id": "sandes de filete de pescada c alface",
+        "children": []
+      },
+      {
+        "id": "wraps de pate de frango delicias e guacamole c queijo e rucula",
+        "children": []
+      },
+      {
+        "id": "mini hamburguer de carne",
+        "children": []
+      },
+      {
+        "id": "variedades paes coloridos c fiambre e c queijo",
+        "children": []
+      },
+      {
+        "id": "couscous com legumes salteados",
+        "children": []
+      },
+      {
+        "id": "wraps c queijo creme salmao fumado e alcaparras",
+        "children": []
+      },
+      {
+        "id": "frutos vermelhos maca canela",
+        "children": []
+      },
+      {
+        "id": "variado de alfaces cenoura ralada milho couve roxa beterraba",
+        "children": []
+      },
+      {
+        "id": "cookies de chocolate",
+        "children": []
+      }
+    ],
+    "checked": {
+      "bolachinhas bacalhaus do casci": true,
+      "brownie c nozes e caramelo salgado": true,
+      "aguas aromatizadas": true,
+      "cafe e descafeinado": true,
+      "agua engarrafada": true,
+      "agua garrafas de vidro": true,
+      "espetadas de fruta": true,
+      "sumo sabores variados": true,
+      "pasteis de nata": true,
+      "vol au vents de guacamole": true,
+      "variedade de brigadeiros": true,
+      "folhado de chocolate": true,
+      "folhados de salsicha": true,
+      "pecas de fruta": true,
+      "variedade de saladas": true,
+      "bolinhos de bacalhau": true,
+      "sumo de laranja natural": true,
+      "tabuas de queijos decoradas c frutos secos": true,
+      "iogurte c granola": true,
+      "bacalhau c natas gratinado": true,
+      "croissant brioche c fiambre": true,
+      "tabuas de enchidos decoradas c azeitonas": true,
+      "mil folhas glace": true,
+      "ovos moles de aveiro": true,
+      "pao c fiambre": true,
+      "espumante para as sobremesas": true,
+      "frutos vermelhos": true,
+      "quinoa c legumes salteados": true,
+      "cerveja mini": true,
+      "bolinhas de berlim": true,
+      "maca canela": true,
+      "bolo no copo": true,
+      "buffet de saladas": true,
+      "variedade de macarrons": true,
+      "saladas variadas alface tomate cenoura milho couve roxa": true,
+      "bolo de bolacha": true,
+      "creme de legumes": true,
+      "tabuas de enchidos decoradas c azeitonas acompanhadas c variedade de tostas e broa": true,
+      "tarte de camembert c compota e frutos secos": true,
+      "chamucas": true,
+      "arroz de pato ou arroz a valenciana": true,
+      "jardineira de lulas": true,
+      "jardineira de soja": true,
+      "wraps de salmao c rucula e tangerina": true,
+      "aguas aromatizadas frutos vermelhos maca canela hortela": true,
+      "mouse de chocolate": true,
+      "frango assado c batatas assadas": true,
+      "carne de porco estufada c arroz": true,
+      "pescada primavera": true,
+      "variado de bolachas": true,
+      "mini kitkat": true,
+      "bifanas estufadas a moda do porto": true,
+      "aguas aromatizadas frutos vermelhos": true,
+      "sandes de cogumelos de cebolada": true,
+      "variedade de miniaturas rissois chamucas croquetes": true,
+      "bolinhos de bacalhau em espeto de cherry c azeitona": true,
+      "sandes de pernil de porco no espeto": true,
+      "vol au vents de cogumelos": true,
+      "peixe bacalhau com natas": true,
+      "4 variedades de brigadeiros": true,
+      "folhados mistos e folhados de salsicha": true,
+      "mil folhas creme brule": true,
+      "mini pada c queijo da serra presunto": true,
+      "queques de laranja": true,
+      "vol au vents de atum": true,
+      "sandes de panado de frango ou omelete c alfece e queijo": true,
+      "aguas aromatizadas maca canela": true,
+      "caldo verde": true,
+      "vol au vents de frutos do mar": true,
+      "aguas aromatizadas hortela frutos vermelhos laranja e gengibre": true,
+      "salada de quinoa c legumes": true,
+      "relava 2 x 6 mts c marcas de areas 2 balizas 5 bolas futebol bandeiras": true,
+      "pizza de queijo cogumelos e azeitonas": true,
+      "pao de sementes c queijo e c fiambre": true,
+      "sangria vinho tinto c laranja e canela jarro 15 lts": true,
+      "triologia no copo": true,
+      "bolachas manteiga": true,
+      "rodizio de pizzas": true,
+      "mini hamburgueres": true,
+      "agua das pedras": true,
+      "salmao c batatas": true,
+      "variedade de sobremesas": true,
+      "variedades de bolo no copo": true,
+      "tabule marroquin": true,
+      "bacalhau lascado c grao de bico": true,
+      "wraps queijo creme salmao e rucula": true,
+      "bifanas estufadas desfiadas": true,
+      "bolo brigadeiro": true,
+      "espetada de mozarela c cherry e manjericao": true,
+      "coca cola sumol ice tea": true,
+      "croquetes de vitela c azeitona": true,
+      "croquetes de vitela": true,
+      "salada de bacalhau c grao e salicornia": true,
+      "sandes c alface panado de porco filete de peixe": true,
+      "wrap de pate de atum alface e cenoura": true,
+      "arroz de pato": true,
+      "lombo de bacalhau assado com batatas a murro": true,
+      "variado de miniaturas fritas bolinhos de bacalhau croquetes": true,
+      "tacos de salmao fumado c queijo creme rucula e tangerina": true
+    },
+    "names": {
+      "maca canela": "Água aromatizada maçã e canela",
+      "coca cola sumol ice tea": "Refrigerantes",
+      "espetada de mozarela c cherry e manjericao": "espetada de mozarela c cherry, manjericao e azeitona",
+      "variado de miniaturas fritas bolinhos de bacalhau croquetes": "variado de miniaturas fritas bolinhos de bacalhau, croquetes de vitela, rissois de camarão e chamuças",
+      "espetada de bolinhos de bacalhau c cherry e azeitona": "Bolinhos de bacalhau em espeto de cherry c/ azeitona",
+      "bolinhas de grao de bico": "Falafel",
+      "arroz a valenciana e gao de bico c maca beterraba": "Grão de bico c/ maçã e beterraba"
+    },
+    "removed": [
+      "barra de cereais",
+      "chamucas de vegetais c ananas grelhado",
+      "cupcakes decorados",
+      "dia 13 e 20 wraps c alface pate de frango delicias maca agua sumo compal mini kitkat",
+      "dia 15 e 22 variedade de pizzas banana agua sumo compal mini kitkat",
+      "dia 16 e 23 quiche de fiambre e de atum tangerina agua sumo compal mini kitkat",
+      "dia 17 e 24 empada de frango e 2 croquetes maca agua sumo compal mini kitkat",
+      "emprestimo de copos de tubo de vinho e de shot grande",
+      "f",
+      "folhadinhos de salsicha",
+      "folhado misto",
+      "lunch box 1 saco reutilizavel sandes c alface pate de frango de atum ou humus c azeitona maca agua",
+      "lunch box 2 saco reutilizavel sandes c alface pate de frango de atum ou humus c azeitona maca agua sumo compal",
+      "lunch box 3 saco reutilizavel sandes c alface pate de frango de atum ou humus c azeitona brownie c nozes maca agua de sumo compal",
+      "lunch box 4 saco reutilizavel salada composta embalada sandes c alface pate de frango de atum ou humus c azeitona brownie c nozes maca agua de sumo compal",
+      "lunch box 5 saco reutilizavel 1 salada composta embalada sandes c alface pate de frango de atum ou humus c azeitona brownie c nozes maca banana agua sumo compal",
+      "mesa de bebidas",
+      "mesa de bebidas presente em todos os momentos",
+      "mini kitkat",
+      "mini pada c queijo da serra presunto",
+      "miniaturas doces",
+      "panqueca de centeio c guacamole queijo e tomate",
+      "panqueca de hummus c queijo e azeitonas",
+      "possibilidade de apresentar opcoes vegetarianas",
+      "rissois de carne",
+      "variedade de sobremesas",
+      "vegetariano s gluten",
+      "wraps de milho c atum rucula e cenoura"
+    ],
+    "classes": {
+      "bolinhas de grao de bico": "fritos_veg",
+      "chamucas de vegetais": "fritos_veg",
+      "chamucas de vegetais c azeitona": "fritos_veg",
+      "batatas fritas": "tabuas_queijos",
+      "cookies de chocolate": "brigadeiros",
+      "focaccia com azeite e alecrim": "tabuas_queijos",
+      "croissants folhados mistos": "croissants",
+      "jardineira de frango e gao de bico c maca beterraba": "carnes",
+      "leite creme queimado": "bolos",
+      "mil folhas creme brule": "bolos",
+      "bolacha no copo receita escocesa com bolachas de gengibre e canela e queijo creme": "bolos",
+      "ovos cozidos": "saladas",
+      "hamburgers de atum": "croissants",
+      "humus c palitos de cenoura": "croissants",
+      "tortilhas de milho c humus": "croissants",
+      "tortilhas de milho c guacamole": "croissants",
+      "variedades paes coloridos c fiambre e c queijo": "croissants",
+      "quiches fiambre e de cogumelos": "saladas",
+      "rolinhos primavera": "croquetes",
+      "tangerina": "fruta_pecas",
+      "coca cola sumol ice tea": "refrigerantes",
+      "refrigerantes": "refrigerantes",
+      "sumol": "refrigerantes"
+    }
+  },
+  "combos": {
+    "doces": {
+      "brownie|nozes": false,
+      "done:brownie": true,
+      "done:folhado": true,
+      "done:salame": true,
+      "done:iogurte": true,
+      "done:bolo no copo": true,
+      "done:queques": true,
+      "done:bolachas": true,
+      "done:bolo": true,
+      "done:tarte": true,
+      "done:bolinhos": true,
+      "done:torta de ovos": true,
+      "done:muffins": true,
+      "done:panquecas": true,
+      "done:rosquinhas": true,
+      "done:mousse": true,
+      "done:semifrio": true,
+      "done:tarte de camembert": true,
+      "done:argolas": true,
+      "done:bolachas de milho": true,
+      "done:tarte basca": true,
+      "done:torta": true,
+      "done:rabanadas": true,
+      "done:cheesecake": true,
+      "done:bolachinhas": true,
+      "done:tarte de atum": true,
+      "done:tarte de chévre": true,
+      "done:bolachinhas bacalhaus": true,
+      "done:pastéis de nata": true,
+      "done:brigadeiros": true,
+      "done:palmiers": true,
+      "done:mil folhas": true,
+      "done:ovos moles": true,
+      "done:bolas de berlim": true,
+      "done:macarons": true,
+      "done:húngaros": true,
+      "done:tiramisu": true,
+      "done:raivas": true,
+      "done:donuts": true,
+      "done:bolo rei": true,
+      "done:cookies": true
+    },
+    "espetadas": {
+      "espetada de mozarela|cherry + manjericao": true,
+      "espetada de mozarela|azeitona + cherry + mangericao": true,
+      "done:espetada": true
+    },
+    "massas": {
+      "done:vol-au-vent": true,
+      "done:folhado": true,
+      "done:empada": true,
+      "bdel:croissant folhado": true
+    },
+    "pao": {
+      "done:croissant brioche": true,
+      "done:cachorro": true,
+      "done:croissant": true,
+      "done:croissant folhado": true,
+      "done:hambúrguer": true,
+      "done:pão": true,
+      "done:pão de centeio": true,
+      "done:pão de leite": true,
+      "done:pão de queijo": true,
+      "done:pão de sementes": true,
+      "done:pão integral": true,
+      "done:pizza": true,
+      "done:rolinhos de pão": true,
+      "merge:sandes|filete de peixe": "filete de pescada c/ alface",
+      "sandes|omelete c/ fiambre": false,
+      "sandes|omelete c/ queijo": false,
+      "sandes|omelete simples": false,
+      "done:sandes": true,
+      "done:tacos": true,
+      "done:tostas, gressinos e pão": true,
+      "merge:wrap|delícias": "delícias do mar c/ queijo e rúcula",
+      "merge:wrap|atum": "patê de atum, alface e cenoura",
+      "wrap|delícias c/ rúcula e tangerina": false,
+      "merge:wrap|frango": "frango c/ queijo e rúcula",
+      "wrap|frango c/ cheddar e rúcula em espeto de cherry": false,
+      "wrap|frango c/ maionese de trufa, cheddar e rúcula": false,
+      "merge:wrap|guacamole": "guacamole c/ cenoura e rúcula",
+      "merge:wrap|guacamole c/ queijo e cherry": "guacamole c/ cenoura e rúcula",
+      "merge:wrap|guacamole, queijo vegan e azeitonas": "guacamole c/ cenoura e rúcula",
+      "merge:wrap|patê de frango": "frango c/ queijo e rúcula",
+      "merge:wrap|queijo creme, salmão fumado e alcaparras": "queijo creme, salmão e rúcula",
+      "wrap de milho|atum, rúcula e cenoura": false,
+      "done:wrap": true,
+      "done:húmus": true,
+      "done:tortilha de milho": true,
+      "done:pães coloridos": true
+    },
+    "pratos": {
+      "done:arroz": true,
+      "done:bacalhau": true,
+      "done:bacalhau desfiado á portuguesa": true,
+      "merge:bifanas|estufadas desfiadas": "estufadas á moda do porto",
+      "merge:bifanas|á moda do porto": "estufadas á moda do porto",
+      "bifanas|frango": true,
+      "name:bifanas|frango": "frango estufadas á moda do porto",
+      "bifanas|estufadas á moda do porto": true,
+      "name:bifanas|estufadas á moda do porto": "porco estufadas á moda do porto",
+      "done:bifanas": true,
+      "done:camarão cozido": true,
+      "bdel:carne de porco estufada": true,
+      "done:couscous": true,
+      "done:feijão frade": true,
+      "done:feijoada": true,
+      "done:frango assado": true,
+      "done:grão de bico": true,
+      "done:jardineira": true,
+      "done:lasanha": true,
+      "bmerge:leitão": "leitão assado á bairrada",
+      "leitão assado á bairrada|laranja": true,
+      "name:leitão assado á bairrada|laranja": "laranja e batata frita",
+      "done:leitão assado á bairrada": true,
+      "bdel:línguas de veado": true,
+      "bmerge:lombo assado": "lombo de porco",
+      "done:lombo de bacalhau assado": true,
+      "done:lombo de porco": true,
+      "done:lombo de salmão": true,
+      "done:magret de pato": true,
+      "done:moelas estufadas": true,
+      "done:pescada primavera": true,
+      "done:quinoa": true,
+      "bdel:salmão assado": true,
+      "done:sushi": true,
+      "done:tabulê marroquino": true
+    },
+    "saladas_sopas": {
+      "done:alfaces": true,
+      "beterraba|maçã": false,
+      "done:beterraba": true,
+      "bdel:bolacha no copo": true,
+      "done:caldo verde": true,
+      "done:cenoura ralada": true,
+      "done:couve roxa": true,
+      "done:creme": true,
+      "done:leite creme": false,
+      "done:milho": true,
+      "done:salada": true,
+      "done:salada composta": true,
+      "done:salada de bacalhau": true,
+      "done:salada de feijão frade": true,
+      "done:salada de massa": true,
+      "done:salada de quinoa": true,
+      "bdel:salada vegetariana": true,
+      "bdel:saladas variadas": true,
+      "done:sopa": true,
+      "bdel:tacinhas": true,
+      "done:tomate cherry": true,
+      "done:salada de grão de bico": true,
+      "done:ovos cozidos": true,
+      "add:quiche|legumes": true,
+      "done:quiche": true
+    },
+    "bebidas": {
+      "done:água": true,
+      "done:água das pedras": true,
+      "done:água aromatizada": true,
+      "done:café": true,
+      "cerveja|guinness": false,
+      "done:cerveja": true,
+      "done:chá": true,
+      "bdel:chávenas de café": true,
+      "espumante|caves são domingos": false,
+      "espumante|ermelinda freitas": false,
+      "espumante|fraga da pena": false,
+      "done:espumante": true,
+      "limonada|hortelã": true,
+      "done:limonada": true,
+      "add:limonada|simples": true,
+      "refrigerantes|sumol": false,
+      "done:refrigerantes": true,
+      "sangria|tinta de frutas": false,
+      "done:sangria": true,
+      "done:sumo": true,
+      "done:vinho": true
+    },
+    "fritos": {
+      "done:croquetes": true,
+      "done:chamuças": true,
+      "done:bolinhos de bacalhau": true,
+      "done:falafel": true,
+      "done:miniaturas fritas": true,
+      "done:rissóis": true,
+      "done:rolinhos primavera": true
+    },
+    "fruta": {
+      "bdel:macarons": true,
+      "done:espetadas de fruta": true,
+      "done:fruta": true,
+      "done:tangerina": true,
+      "bdel:tangerina": true,
+      "add:fruta|tangerina": true
+    },
+    "servico": {
+      "bdel:flutes de acrílico": true,
+      "bdel:saco reutilizável": true
+    },
+    "tabuas": {
+      "done:aperitivos": true,
+      "done:bolachas de arroz": true,
+      "done:compotas": true,
+      "compotas|frutos secos": true,
+      "name:compotas|frutos secos": "de frutos variados c/ frutos secos",
+      "tábua de enchidos|azeitonas, tostas e broa": false,
+      "done:tábua de enchidos": true,
+      "done:patês": true,
+      "done:tábua de queijos": true,
+      "tostas|guacamole": false,
+      "tostas|húmus": false,
+      "tostas|pães sem glúten": false,
+      "done:tostas": true,
+      "add:aperitivos|batata frita": true,
+      "aperitivos|batata frita": true,
+      "name:aperitivos|batata frita": "",
+      "add:batatas fritas|batata frita": true,
+      "bname:batatas fritas": "batatas fritas",
+      "bmerge:batatas fritas": "aperitivos",
+      "done:batatas fritas": true,
+      "done:focaccia": true
+    },
+    "por_classificar": {
+      "done:cookies": true,
+      "bdel:folhado": true,
+      "bdel:panqueca": true,
+      "bdel:miniaturas doces": true,
+      "bdel:panqueca de centeio": true,
+      "add:quiche|legumes": true,
+      "bdel:quiche": true
+    }
+  },
+  "menu": {
+    "queques": {
+      "name": "queques variados"
+    }
+  },
+  "components": {
+    "flute de acrílico": {
+      "reusable": true
+    },
+    "copo (bolo no copo / sopa)": {
+      "reusable": true
+    },
+    "tacinha": {
+      "reusable": true
+    },
+    "vinho tinto": {}
+  }
+}
