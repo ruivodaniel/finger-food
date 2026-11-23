@@ -1,0 +1,81 @@
+{
+ "id": "ui-data-pattern-component-status-cards-whole-card-error",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-status-cards-whole-card-error",
+ "kind": "component",
+ "name": "whole-card-error",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "whole-card-error",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Card",
+   "props": {
+    "status": "error",
+    "className": "flex-1 min-w-56"
+   },
+   "children": [
+    {
+     "type": "Content",
+     "props": {},
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "scale": "sm"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "scale": "sm"
+         },
+         "children": [
+          {
+           "type": "Icon",
+           "props": {
+            "name": "error",
+            "size": "sm"
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--heading4",
+            "children": "Sync failed"
+           }
+          }
+         ]
+        },
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body-small",
+          "children": "Connection timed out after 30 s; 3 changes were not saved."
+         }
+        },
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body-extra-small",
+          "emphasis": "quiet",
+          "children": "2 h ago"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

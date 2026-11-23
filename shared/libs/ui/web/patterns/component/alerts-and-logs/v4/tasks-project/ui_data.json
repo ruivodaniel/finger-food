@@ -1,0 +1,673 @@
+{
+ "id": "ui-data-pattern-component-alerts-and-logs-tasks-project-v3",
+ "version": 2,
+ "uiNodeId": "ui-node-pattern-component-alerts-and-logs-tasks-project-v3",
+ "kind": "component",
+ "name": "tasks-project",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "tasks-project",
+  "version": 2,
+  "surface": "web",
+  "measure": "md",
+  "state": {
+   "done-plain-0": false,
+   "done-plain-1": false,
+   "done-plain-2": true,
+   "done-plain-3": false,
+   "done-hero-0": false,
+   "done-hero-1": false,
+   "done-hero-2": true,
+   "done-hero-3": false
+  },
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "row",
+    "align": "start",
+    "wrap": true,
+    "scale": "lg"
+   },
+   "children": [
+    {
+     "type": "Card",
+     "props": {
+      "className": "w-80"
+     },
+     "children": [
+      {
+       "type": "Content",
+       "props": {},
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "col",
+          "scale": "md"
+         },
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "row",
+            "justify": "between",
+            "align": "center",
+            "scale": "md"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--heading4",
+              "children": "Tasks Project"
+             }
+            },
+            {
+             "type": "Button",
+             "props": {
+              "buttonType": "icon",
+              "startIcon": "chevronUp",
+              "emphasis": "quiet",
+              "scale": "sm",
+              "aria-label": "Collapse"
+             }
+            }
+           ]
+          },
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col",
+            "scale": "md"
+           },
+           "children": [
+            {
+             "type": "Stack",
+             "props": {
+              "dir": "row",
+              "align": "center",
+              "scale": "md"
+             },
+             "children": [
+              {
+               "type": "Checkbox",
+               "props": {
+                "id": "tasks-a-0",
+                "checked": {
+                 "bind": "state.done-plain-0"
+                },
+                "data-testid": "alerts-tasks-a-0-check"
+               },
+               "on": {
+                "checkedChange": [
+                 {
+                  "set": {
+                   "state": "done-plain-0",
+                   "to": {
+                    "bind": "event"
+                   }
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "type": "Label",
+               "props": {
+                "htmlFor": "tasks-a-0",
+                "emphasis": {
+                 "if": [
+                  {
+                   "bind": "state.done-plain-0"
+                  },
+                  "quiet",
+                  null
+                 ]
+                },
+                "children": "Complete the development"
+               }
+              }
+             ]
+            },
+            {
+             "type": "Stack",
+             "props": {
+              "dir": "row",
+              "align": "center",
+              "scale": "md"
+             },
+             "children": [
+              {
+               "type": "Checkbox",
+               "props": {
+                "id": "tasks-a-1",
+                "checked": {
+                 "bind": "state.done-plain-1"
+                },
+                "data-testid": "alerts-tasks-a-1-check"
+               },
+               "on": {
+                "checkedChange": [
+                 {
+                  "set": {
+                   "state": "done-plain-1",
+                   "to": {
+                    "bind": "event"
+                   }
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "type": "Label",
+               "props": {
+                "htmlFor": "tasks-a-1",
+                "emphasis": {
+                 "if": [
+                  {
+                   "bind": "state.done-plain-1"
+                  },
+                  "quiet",
+                  null
+                 ]
+                },
+                "children": "Conduct testing and fix"
+               }
+              }
+             ]
+            },
+            {
+             "type": "Stack",
+             "props": {
+              "dir": "row",
+              "align": "center",
+              "scale": "md"
+             },
+             "children": [
+              {
+               "type": "Checkbox",
+               "props": {
+                "id": "tasks-a-2",
+                "checked": {
+                 "bind": "state.done-plain-2"
+                },
+                "data-testid": "alerts-tasks-a-2-check"
+               },
+               "on": {
+                "checkedChange": [
+                 {
+                  "set": {
+                   "state": "done-plain-2",
+                   "to": {
+                    "bind": "event"
+                   }
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "type": "Label",
+               "props": {
+                "htmlFor": "tasks-a-2",
+                "emphasis": {
+                 "if": [
+                  {
+                   "bind": "state.done-plain-2"
+                  },
+                  "quiet",
+                  null
+                 ]
+                },
+                "children": "Discuss new ideas for improving"
+               }
+              }
+             ]
+            },
+            {
+             "type": "Stack",
+             "props": {
+              "dir": "row",
+              "align": "center",
+              "scale": "md"
+             },
+             "children": [
+              {
+               "type": "Checkbox",
+               "props": {
+                "id": "tasks-a-3",
+                "checked": {
+                 "bind": "state.done-plain-3"
+                },
+                "data-testid": "alerts-tasks-a-3-check"
+               },
+               "on": {
+                "checkedChange": [
+                 {
+                  "set": {
+                   "state": "done-plain-3",
+                   "to": {
+                    "bind": "event"
+                   }
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "type": "Label",
+               "props": {
+                "htmlFor": "tasks-a-3",
+                "emphasis": {
+                 "if": [
+                  {
+                   "bind": "state.done-plain-3"
+                  },
+                  "quiet",
+                  null
+                 ]
+                },
+                "children": "Prepare a report on the work completed"
+               }
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "Footer",
+       "props": {},
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "justify": "between",
+          "align": "center",
+          "className": "w-full",
+          "scale": "md"
+         },
+         "children": [
+          {
+           "type": "Button",
+           "props": {
+            "asChild": true,
+            "emphasis": "quiet",
+            "scale": "sm"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "as": "a",
+              "href": "#",
+              "children": "View All Tasks"
+             }
+            }
+           ]
+          },
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "row",
+            "scale": "xs"
+           },
+           "children": [
+            {
+             "type": "Button",
+             "props": {
+              "buttonType": "icon",
+              "startIcon": "chevronLeft",
+              "emphasis": "quiet",
+              "scale": "sm",
+              "aria-label": "Previous"
+             }
+            },
+            {
+             "type": "Button",
+             "props": {
+              "buttonType": "icon",
+              "startIcon": "chevronRight",
+              "emphasis": "quiet",
+              "scale": "sm",
+              "aria-label": "Next"
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Card",
+     "props": {
+      "className": "w-80",
+      "emphasis": "hero"
+     },
+     "children": [
+      {
+       "type": "Content",
+       "props": {},
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "col",
+          "scale": "md"
+         },
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "row",
+            "justify": "between",
+            "align": "center",
+            "scale": "md"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--heading4",
+              "children": "Tasks Project"
+             }
+            },
+            {
+             "type": "Button",
+             "props": {
+              "buttonType": "icon",
+              "startIcon": "chevronUp",
+              "emphasis": "quiet",
+              "scale": "sm",
+              "aria-label": "Collapse"
+             }
+            }
+           ]
+          },
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col",
+            "scale": "md"
+           },
+           "children": [
+            {
+             "type": "Stack",
+             "props": {
+              "dir": "row",
+              "align": "center",
+              "scale": "md"
+             },
+             "children": [
+              {
+               "type": "Checkbox",
+               "props": {
+                "id": "tasks-hero-0",
+                "checked": {
+                 "bind": "state.done-hero-0"
+                },
+                "data-testid": "alerts-tasks-hero-0-check"
+               },
+               "on": {
+                "checkedChange": [
+                 {
+                  "set": {
+                   "state": "done-hero-0",
+                   "to": {
+                    "bind": "event"
+                   }
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "type": "Label",
+               "props": {
+                "htmlFor": "tasks-hero-0",
+                "emphasis": {
+                 "if": [
+                  {
+                   "bind": "state.done-hero-0"
+                  },
+                  "quiet",
+                  null
+                 ]
+                },
+                "children": "Complete the development"
+               }
+              }
+             ]
+            },
+            {
+             "type": "Stack",
+             "props": {
+              "dir": "row",
+              "align": "center",
+              "scale": "md"
+             },
+             "children": [
+              {
+               "type": "Checkbox",
+               "props": {
+                "id": "tasks-hero-1",
+                "checked": {
+                 "bind": "state.done-hero-1"
+                },
+                "data-testid": "alerts-tasks-hero-1-check"
+               },
+               "on": {
+                "checkedChange": [
+                 {
+                  "set": {
+                   "state": "done-hero-1",
+                   "to": {
+                    "bind": "event"
+                   }
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "type": "Label",
+               "props": {
+                "htmlFor": "tasks-hero-1",
+                "emphasis": {
+                 "if": [
+                  {
+                   "bind": "state.done-hero-1"
+                  },
+                  "quiet",
+                  null
+                 ]
+                },
+                "children": "Conduct testing and fix"
+               }
+              }
+             ]
+            },
+            {
+             "type": "Stack",
+             "props": {
+              "dir": "row",
+              "align": "center",
+              "scale": "md"
+             },
+             "children": [
+              {
+               "type": "Checkbox",
+               "props": {
+                "id": "tasks-hero-2",
+                "checked": {
+                 "bind": "state.done-hero-2"
+                },
+                "data-testid": "alerts-tasks-hero-2-check"
+               },
+               "on": {
+                "checkedChange": [
+                 {
+                  "set": {
+                   "state": "done-hero-2",
+                   "to": {
+                    "bind": "event"
+                   }
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "type": "Label",
+               "props": {
+                "htmlFor": "tasks-hero-2",
+                "emphasis": {
+                 "if": [
+                  {
+                   "bind": "state.done-hero-2"
+                  },
+                  "quiet",
+                  null
+                 ]
+                },
+                "children": "Discuss new ideas for improving"
+               }
+              }
+             ]
+            },
+            {
+             "type": "Stack",
+             "props": {
+              "dir": "row",
+              "align": "center",
+              "scale": "md"
+             },
+             "children": [
+              {
+               "type": "Checkbox",
+               "props": {
+                "id": "tasks-hero-3",
+                "checked": {
+                 "bind": "state.done-hero-3"
+                },
+                "data-testid": "alerts-tasks-hero-3-check"
+               },
+               "on": {
+                "checkedChange": [
+                 {
+                  "set": {
+                   "state": "done-hero-3",
+                   "to": {
+                    "bind": "event"
+                   }
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "type": "Label",
+               "props": {
+                "htmlFor": "tasks-hero-3",
+                "emphasis": {
+                 "if": [
+                  {
+                   "bind": "state.done-hero-3"
+                  },
+                  "quiet",
+                  null
+                 ]
+                },
+                "children": "Prepare a report on the work completed"
+               }
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "Footer",
+       "props": {},
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "justify": "between",
+          "align": "center",
+          "className": "w-full",
+          "scale": "md"
+         },
+         "children": [
+          {
+           "type": "Button",
+           "props": {
+            "asChild": true,
+            "emphasis": "quiet",
+            "scale": "sm"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "as": "a",
+              "href": "#",
+              "children": "View All Tasks"
+             }
+            }
+           ]
+          },
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "row",
+            "scale": "xs"
+           },
+           "children": [
+            {
+             "type": "Button",
+             "props": {
+              "buttonType": "icon",
+              "startIcon": "chevronLeft",
+              "emphasis": "quiet",
+              "scale": "sm",
+              "aria-label": "Previous"
+             }
+            },
+            {
+             "type": "Button",
+             "props": {
+              "buttonType": "icon",
+              "startIcon": "chevronRight",
+              "emphasis": "quiet",
+              "scale": "sm",
+              "aria-label": "Next"
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

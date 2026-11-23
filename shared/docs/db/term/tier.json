@@ -1,0 +1,19 @@
+{
+ "id": "term/tier",
+ "kind": "term",
+ "title": "tier",
+ "status": "approved",
+ "subjects": [
+  "main"
+ ],
+ "owner": "main/core",
+ "tags": [
+  "architecture"
+ ],
+ "paths": [],
+ "term": {
+  "def": "One of the levels code lives at: `configs`, `libs`, `slices`, `apps`. The tier fixes what something may import, and the import scope names it — `@modules/…`, `@libs/…`.",
+  "aliases": [],
+  "proposed": true
+ }
+}

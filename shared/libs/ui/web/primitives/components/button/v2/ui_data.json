@@ -1,0 +1,760 @@
+{
+ "id": "ui-data-primitive-button",
+ "version": 1,
+ "uiNodeId": "ui-node-primitive-button",
+ "kind": "component",
+ "name": "primitive-button",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "primitive-button",
+  "version": 1,
+  "surface": "web",
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "align": "center",
+    "scale": "2xl"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "emphasis"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "primary",
+          "children": "Primary",
+          "data-testid": "button-emphasis-1-btn"
+         }
+        },
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "secondary",
+          "children": "Secondary",
+          "data-testid": "button-emphasis-2-btn"
+         }
+        },
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "tertiary",
+          "children": "Tertiary",
+          "data-testid": "button-emphasis-3-btn"
+         }
+        },
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "quiet",
+          "children": "Quiet Bro",
+          "data-testid": "button-emphasis-4-btn"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "scale \u2014 emphasis=\"primary\""
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "primary",
+          "scale": "xs",
+          "children": "XS",
+          "data-testid": "button-scale-emphasis-primary-1-btn"
+         }
+        },
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "primary",
+          "scale": "sm",
+          "children": "SM",
+          "data-testid": "button-scale-emphasis-primary-2-btn"
+         }
+        },
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "primary",
+          "scale": "md",
+          "children": "MD",
+          "data-testid": "button-scale-emphasis-primary-3-btn"
+         }
+        },
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "primary",
+          "scale": "lg",
+          "children": "LG",
+          "data-testid": "button-scale-emphasis-primary-4-btn"
+         }
+        },
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "primary",
+          "scale": "xl",
+          "children": "XL",
+          "data-testid": "button-scale-emphasis-primary-5-btn"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "status primary"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "primary",
+          "status": "error",
+          "children": "Error",
+          "data-testid": "button-status-primary-1-btn"
+         }
+        },
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "primary",
+          "status": "warning",
+          "children": "Warning",
+          "data-testid": "button-status-primary-2-btn"
+         }
+        },
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "primary",
+          "status": "success",
+          "children": "Success",
+          "data-testid": "button-status-primary-3-btn"
+         }
+        },
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "primary",
+          "status": "destructive",
+          "children": "Destructive",
+          "data-testid": "button-status-primary-4-btn"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "status secondary"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "secondary",
+          "status": "error",
+          "children": "Error",
+          "data-testid": "button-status-secondary-1-btn"
+         }
+        },
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "secondary",
+          "status": "warning",
+          "children": "Warning",
+          "data-testid": "button-status-secondary-2-btn"
+         }
+        },
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "secondary",
+          "status": "success",
+          "children": "Success",
+          "data-testid": "button-status-secondary-3-btn"
+         }
+        },
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "secondary",
+          "status": "destructive",
+          "children": "Destructive",
+          "data-testid": "button-status-secondary-4-btn"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "state"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "primary",
+          "children": "Default",
+          "data-testid": "button-state-1-btn"
+         }
+        },
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "primary",
+          "state": "selected",
+          "children": "Selected",
+          "data-testid": "button-state-2-btn"
+         }
+        },
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "primary",
+          "disabled": true,
+          "children": "Disabled",
+          "data-testid": "button-state-3-btn"
+         }
+        },
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "primary",
+          "disabled": true,
+          "disabledReason": "You don't have permission to do this",
+          "children": "Disabled + reason",
+          "data-testid": "button-state-4-btn"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "icon-text (left icon)"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Button",
+         "props": {
+          "buttonType": "icon-text",
+          "startIcon": "add",
+          "children": "Add",
+          "data-testid": "button-icon-text-left-icon-1-btn"
+         }
+        },
+        {
+         "type": "Button",
+         "props": {
+          "buttonType": "icon-text",
+          "startIcon": "edit",
+          "emphasis": "secondary",
+          "children": "Edit",
+          "data-testid": "button-icon-text-left-icon-2-btn"
+         }
+        },
+        {
+         "type": "Button",
+         "props": {
+          "buttonType": "icon-text",
+          "startIcon": "delete",
+          "status": "destructive",
+          "children": "Delete",
+          "data-testid": "button-icon-text-left-icon-3-btn"
+         }
+        },
+        {
+         "type": "Button",
+         "props": {
+          "buttonType": "icon-text",
+          "startIcon": "download",
+          "emphasis": "tertiary",
+          "children": "Download",
+          "data-testid": "button-icon-text-left-icon-4-btn"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "text-icon (right icon)"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Button",
+         "props": {
+          "buttonType": "text-icon",
+          "endIcon": "arrowRight",
+          "children": "Continue",
+          "data-testid": "button-text-icon-right-icon-1-btn"
+         }
+        },
+        {
+         "type": "Button",
+         "props": {
+          "buttonType": "text-icon",
+          "endIcon": "externalLink",
+          "emphasis": "secondary",
+          "children": "Open link",
+          "data-testid": "button-text-icon-right-icon-2-btn"
+         }
+        },
+        {
+         "type": "Button",
+         "props": {
+          "buttonType": "text-icon",
+          "endIcon": "chevronDown",
+          "emphasis": "tertiary",
+          "children": "Options",
+          "data-testid": "button-text-icon-right-icon-3-btn"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "icon-text-icon (both)"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Button",
+         "props": {
+          "buttonType": "icon-text-icon",
+          "startIcon": "filter",
+          "endIcon": "chevronDown",
+          "children": "Filter",
+          "data-testid": "button-icon-text-icon-both-1-btn"
+         }
+        },
+        {
+         "type": "Button",
+         "props": {
+          "buttonType": "icon-text-icon",
+          "startIcon": "search",
+          "endIcon": "close",
+          "emphasis": "secondary",
+          "children": "Search",
+          "data-testid": "button-icon-text-icon-both-2-btn"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "icon only"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Button",
+         "props": {
+          "buttonType": "icon",
+          "startIcon": "add",
+          "data-testid": "button-icon-only-1-btn"
+         }
+        },
+        {
+         "type": "Button",
+         "props": {
+          "buttonType": "icon",
+          "startIcon": "edit",
+          "emphasis": "secondary",
+          "data-testid": "button-icon-only-2-btn"
+         }
+        },
+        {
+         "type": "Button",
+         "props": {
+          "buttonType": "icon",
+          "startIcon": "delete",
+          "status": "destructive",
+          "data-testid": "button-icon-only-3-btn"
+         }
+        },
+        {
+         "type": "Button",
+         "props": {
+          "buttonType": "icon",
+          "startIcon": "close",
+          "emphasis": "quiet",
+          "data-testid": "button-icon-only-4-btn"
+         }
+        },
+        {
+         "type": "Button",
+         "props": {
+          "buttonType": "icon",
+          "startIcon": "refresh",
+          "emphasis": "tertiary",
+          "data-testid": "button-icon-only-5-btn"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "icon background"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Button",
+         "props": {
+          "buttonType": "icon-text",
+          "startIcon": "add",
+          "iconBackground": "light",
+          "children": "Light bg",
+          "data-testid": "button-icon-background-1-btn"
+         }
+        },
+        {
+         "type": "Button",
+         "props": {
+          "buttonType": "icon-text",
+          "startIcon": "add",
+          "iconBackground": "dark",
+          "children": "Dark bg",
+          "data-testid": "button-icon-background-2-btn"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "icon bleed"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Button",
+         "props": {
+          "buttonType": "icon-text",
+          "startIcon": "add",
+          "iconBleed": true,
+          "children": "Left bleed",
+          "data-testid": "button-icon-bleed-1-btn"
+         }
+        },
+        {
+         "type": "Button",
+         "props": {
+          "buttonType": "text-icon",
+          "endIcon": "arrowRight",
+          "iconBleed": true,
+          "children": "Right bleed",
+          "data-testid": "button-icon-bleed-2-btn"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "fill"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Text",
+         "children": [
+          {
+           "type": "Button",
+           "props": {
+            "emphasis": "primary",
+            "position": "fill",
+            "children": "Fill container",
+            "data-testid": "button-fill-1-btn"
+           }
+          }
+         ],
+         "props": {
+          "as": "div",
+          "className": "flex w-72"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

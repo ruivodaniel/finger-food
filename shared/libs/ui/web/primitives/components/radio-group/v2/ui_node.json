@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-primitive-radio-group",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Radio group"
+}

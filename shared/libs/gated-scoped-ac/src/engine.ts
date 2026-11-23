@@ -182,6 +182,11 @@ export function createAc<S extends SchemaTables>(config: AcConfig<S>) {
         ? "json"
         : "scalar";
 
+  // An ABSENT operand — a bag path the bag does not hold, or holds as null —
+  // compiles to the shared FALSE under every operator, so a caller can tell it
+  // apart by identity. Left to SQL, `= NULL` happens to match nothing, but a
+  // negation matches every row (`IS DISTINCT FROM NULL`) or renders no
+  // parameter at all and fails to parse. Missing data never grants (AC1).
   const compareSql = (column: any, op: Operator, value: unknown): SQL => {
     const shape = shapeOf(column);
     if (op === "is" || op === "isNot") {
@@ -192,10 +197,12 @@ export function createAc<S extends SchemaTables>(config: AcConfig<S>) {
           `\`${op}\` needs a single-value column, got a ${shape} column. Use \`has\`.`,
         );
       }
+      if (value == null) return FALSE;
       return op === "is"
         ? eq(column, value)
         : sql`${column} IS DISTINCT FROM ${value}`;
     }
+    if (value == null) return FALSE;
     const present =
       shape === "array"
         ? sql`${value} = ANY(${column})`
@@ -209,12 +216,16 @@ export function createAc<S extends SchemaTables>(config: AcConfig<S>) {
       : sql`(${column} IS NULL OR NOT (${present}))`;
   };
 
-  // the in-memory twin, for context conditions (and, later, direct payload ones)
+  // the in-memory twin, for context and direct payload conditions. Both sides
+  // are bag values here, so an absent value on EITHER side fails every
+  // operator: two missing paths are not equal, and a negation never passes on
+  // a value that is not there.
   const compareValues = (
     subject: unknown,
     op: Operator,
     value: unknown,
   ): boolean => {
+    if (subject == null || value == null) return false;
     const present = Array.isArray(subject)
       ? subject.includes(value)
       : subject === value;
@@ -238,6 +249,9 @@ export function createAc<S extends SchemaTables>(config: AcConfig<S>) {
 
   // A rule's target is either all direct conditions (→ a SQL where) or a single
   // traversal (→ an IdSubquery descriptor). The pilot's rules never mix the two.
+  // Conditions are AND-ed, so one absent operand (compareSql's FALSE) means the
+  // rule matches no row: it compiles to nothing, exactly as if its context had
+  // dropped it — no rows, and no columns lent to the projection either.
   function compileRule(
     target: Condition[],
     entity: EntityName,
@@ -253,6 +267,15 @@ export function createAc<S extends SchemaTables>(config: AcConfig<S>) {
       const conds = (Array.isArray(traversal.where)
         ? traversal.where
         : [traversal.where]) as { field: string; has: any }[];
+      const wheres = conds.map((c) => {
+        const { op, operand } = operatorOf(c as any);
+        return compareSql(
+          columnOf(c.field),
+          op,
+          operandValue(operand, subjects),
+        );
+      });
+      if (wheres.includes(FALSE)) return {};
       return {
         idSubquery: {
           from: entity,
@@ -264,42 +287,31 @@ export function createAc<S extends SchemaTables>(config: AcConfig<S>) {
               joinColumnOf(join, (traversal as any).on),
             ),
           },
-          where: and(
-            ...conds.map((c) => {
-              const { op, operand } = operatorOf(c as any);
-              return compareSql(
-                columnOf(c.field),
-                op,
-                operandValue(operand, subjects),
-              );
-            }),
-          )!,
+          where: and(...wheres)!,
         },
       };
     }
     if (target.length === 0) return { where: TRUE }; // empty target = all rows
-    return {
-      where: and(
-        ...target.map((cond) => {
-          const { op, operand } = operatorOf(cond as any);
-          return compareSql(
-            columnOf((cond as any).field),
-            op,
-            operandValue(operand, subjects),
-          );
-        }),
-      )!,
-    };
+    const wheres = target.map((cond) => {
+      const { op, operand } = operatorOf(cond as any);
+      return compareSql(
+        columnOf((cond as any).field),
+        op,
+        operandValue(operand, subjects),
+      );
+    });
+    if (wheres.includes(FALSE)) return {};
+    return { where: and(...wheres)! };
   }
 
   // ── PAYLOAD — conditions on the row being written ─────────────────────────
-  // Subjects come out of the access context (`$requestBody.songId`), which the
-  // consumer's middleware puts there. Direct conditions settle in memory; a
+  // Subjects come out of the access context (`$requestBody.songId`), which
+  // `gateDb.create` fills with the row it inserts. Direct conditions settle in memory; a
   // traversal becomes one probe the gate runs before it inserts.
   //
-  // `ok: false` means this rule denies — either a direct condition failed, or
-  // the value the traversal needs is absent. A missing value must NEVER compile
-  // to an unconstrained query.
+  // `ok: false` means this rule denies — a direct condition failed, or a value
+  // the rule reads is absent (the traversal's subject, or an operand in its
+  // `where`). A missing value must NEVER compile to an unconstrained query.
   function compilePayload(
     conds: Condition[],
     subjects: unknown,
@@ -311,24 +323,23 @@ export function createAc<S extends SchemaTables>(config: AcConfig<S>) {
         const value = resolvePath(subjects, path);
         if (value === undefined || value === null) return { ok: false };
         const join = (cond as any).join as EntityName;
-        const wheres = (
+        const whereConds = (
           Array.isArray((cond as any).where)
             ? (cond as any).where
             : [(cond as any).where]
         ) as { field: string }[];
+        const wheres = whereConds.map((w) => {
+          const { op, operand } = operatorOf(w as any);
+          return compareSql(
+            columnOf(w.field),
+            op,
+            operandValue(operand, subjects),
+          );
+        });
+        if (wheres.includes(FALSE)) return { ok: false };
         probe = {
           from: join,
-          where: and(
-            eq(joinColumnOf(join, (cond as any).on), value),
-            ...wheres.map((w) => {
-              const { op, operand } = operatorOf(w as any);
-              return compareSql(
-                columnOf(w.field),
-                op,
-                operandValue(operand, subjects),
-              );
-            }),
-          )!,
+          where: and(eq(joinColumnOf(join, (cond as any).on), value), ...wheres)!,
         };
       } else {
         const { op, operand } = operatorOf(cond as any);
@@ -396,6 +407,7 @@ export function createAc<S extends SchemaTables>(config: AcConfig<S>) {
         if (compiled.where === TRUE) allRows = true;
         else if (compiled.where) wheres.push(compiled.where);
         else if (compiled.idSubquery) idSubqueries.push(compiled.idSubquery);
+        else continue; // matches no row (an absent operand): contributes nothing
         // a contributing rule's fields (undefined = all columns)
         fieldSets.push(def.fields && def.fields.length ? def.fields : undefined);
       }
@@ -553,13 +565,13 @@ export function createAc<S extends SchemaTables>(config: AcConfig<S>) {
     // scope. Context settles in memory; a rule's `payload` may additionally
     // demand that the parent it points at admits the caller, and that comes back
     // as probes for the gate to run — the engine still never touches a
-    // connection. The incoming row is read from the bag (`$requestBody.*`), put
-    // there by the consumer's middleware, not from `_candidate`.
+    // connection. The incoming row is read from the bag (`$requestBody.*`):
+    // `gateDb.create` puts the row it inserts there; a caller asking for an
+    // early verdict puts the row it is about to write.
     allowCreate(
       permissions: Iterable<string>,
       entity: EntityName,
       subjects: unknown,
-      _candidate?: Record<string, unknown>,
     ): Verdict<EntityName> {
       const applicable = contextGate(permissions, entity, "create", subjects);
       if (!applicable.length) {

@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-card-grids-review-agent-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-card-grids-review-agent",
+ "name": "default",
+ "title": "Card grids: review agent",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

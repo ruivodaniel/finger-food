@@ -9,3 +9,5 @@ export * from './platform/web';
 export * from './platform/mobile';
 export * from './modes';
 export * from './theme';
+export * from './define-props';
+export * from './axes-schema';

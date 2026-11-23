@@ -1,0 +1,19 @@
+{
+  "name": "@libs/mobile-ui-fixtures",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Renderable fixtures of the mobile UI library — elements and patterns. Tooling only, never bundled into a product.",
+  "type": "module",
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-native": ">=0.70.0"
+  },
+  "dependencies": {
+    "@libs/mobile-components": "workspace:*",
+    "@libs/mobile-layouts": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0 || ^19.0.0",
+    "typescript": "^5.0.0"
+  }
+}

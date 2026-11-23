@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-status-dots-trailing-label-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-status-dots-trailing-label",
+ "name": "default",
+ "title": "Status dots: trailing label",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

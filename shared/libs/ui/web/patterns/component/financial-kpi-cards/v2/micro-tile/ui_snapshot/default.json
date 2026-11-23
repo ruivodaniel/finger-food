@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-financial-kpi-cards-micro-tile-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-financial-kpi-cards-micro-tile",
+ "name": "default",
+ "title": "Financial kpi cards: micro tile",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

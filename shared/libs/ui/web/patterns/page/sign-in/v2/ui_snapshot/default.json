@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-page-sign-in-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-page-sign-in",
+ "name": "default",
+ "title": "Sign in",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

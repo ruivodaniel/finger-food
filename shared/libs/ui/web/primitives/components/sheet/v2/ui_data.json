@@ -1,0 +1,479 @@
+{
+ "id": "ui-data-primitive-sheet",
+ "version": 1,
+ "uiNodeId": "ui-node-primitive-sheet",
+ "kind": "component",
+ "name": "primitive-sheet",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "primitive-sheet",
+  "version": 1,
+  "surface": "web",
+  "state": {
+   "right_open": false,
+   "left_open": false,
+   "top_open": false,
+   "bottom_open": false
+  },
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "gap": 40,
+    "pad": 24,
+    "align": "center"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "gap": 8,
+      "align": "center",
+      "className": "w-full"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "right"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "gap": 12,
+        "align": "center",
+        "justify": "center",
+        "className": "flex-wrap w-full"
+       },
+       "children": [
+        {
+         "type": "Sheet",
+         "children": [
+          {
+           "type": "SheetTrigger",
+           "children": [
+            {
+             "type": "Button",
+             "props": {
+              "emphasis": "secondary",
+              "children": "Open right sheet",
+              "data-testid": "sheet-right-1-btn"
+             }
+            }
+           ],
+           "props": {
+            "asChild": true
+           }
+          },
+          {
+           "type": "SheetContent",
+           "children": [
+            {
+             "type": "Header",
+             "children": [
+              {
+               "type": "SheetTitle",
+               "props": {
+                "children": "Right Sheet"
+               }
+              },
+              {
+               "type": "SheetDescription",
+               "props": {
+                "children": "This sheet slides in from the right side of the screen."
+               }
+              }
+             ]
+            },
+            {
+             "type": "SheetClose",
+             "children": [
+              {
+               "type": "Button",
+               "props": {
+                "emphasis": "secondary",
+                "className": "mt-4",
+                "children": "Close",
+                "data-testid": "sheet-right-2-btn"
+               }
+              }
+             ],
+             "props": {
+              "asChild": true
+             }
+            }
+           ],
+           "props": {
+            "side": "right"
+           }
+          }
+         ],
+         "on": {
+          "openChange": [
+           {
+            "set": {
+             "state": "right_open",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "open": {
+           "bind": "state.right_open"
+          },
+          "data-testid": "sheet-right-3-dialog"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "gap": 8,
+      "align": "center",
+      "className": "w-full"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "left"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "gap": 12,
+        "align": "center",
+        "justify": "center",
+        "className": "flex-wrap w-full"
+       },
+       "children": [
+        {
+         "type": "Sheet",
+         "children": [
+          {
+           "type": "SheetTrigger",
+           "children": [
+            {
+             "type": "Button",
+             "props": {
+              "emphasis": "secondary",
+              "children": "Open left sheet",
+              "data-testid": "sheet-left-1-btn"
+             }
+            }
+           ],
+           "props": {
+            "asChild": true
+           }
+          },
+          {
+           "type": "SheetContent",
+           "children": [
+            {
+             "type": "Header",
+             "children": [
+              {
+               "type": "SheetTitle",
+               "props": {
+                "children": "Left Sheet"
+               }
+              },
+              {
+               "type": "SheetDescription",
+               "props": {
+                "children": "This sheet slides in from the left side of the screen."
+               }
+              }
+             ]
+            },
+            {
+             "type": "SheetClose",
+             "children": [
+              {
+               "type": "Button",
+               "props": {
+                "emphasis": "secondary",
+                "className": "mt-4",
+                "children": "Close",
+                "data-testid": "sheet-left-2-btn"
+               }
+              }
+             ],
+             "props": {
+              "asChild": true
+             }
+            }
+           ],
+           "props": {
+            "side": "left"
+           }
+          }
+         ],
+         "on": {
+          "openChange": [
+           {
+            "set": {
+             "state": "left_open",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "open": {
+           "bind": "state.left_open"
+          },
+          "data-testid": "sheet-left-3-dialog"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "gap": 8,
+      "align": "center",
+      "className": "w-full"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "top"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "gap": 12,
+        "align": "center",
+        "justify": "center",
+        "className": "flex-wrap w-full"
+       },
+       "children": [
+        {
+         "type": "Sheet",
+         "children": [
+          {
+           "type": "SheetTrigger",
+           "children": [
+            {
+             "type": "Button",
+             "props": {
+              "emphasis": "secondary",
+              "children": "Open top sheet",
+              "data-testid": "sheet-top-1-btn"
+             }
+            }
+           ],
+           "props": {
+            "asChild": true
+           }
+          },
+          {
+           "type": "SheetContent",
+           "children": [
+            {
+             "type": "Header",
+             "children": [
+              {
+               "type": "SheetTitle",
+               "props": {
+                "children": "Top Sheet"
+               }
+              },
+              {
+               "type": "SheetDescription",
+               "props": {
+                "children": "This sheet slides in from the top of the screen."
+               }
+              }
+             ]
+            },
+            {
+             "type": "SheetClose",
+             "children": [
+              {
+               "type": "Button",
+               "props": {
+                "emphasis": "secondary",
+                "className": "mt-4",
+                "children": "Close",
+                "data-testid": "sheet-top-2-btn"
+               }
+              }
+             ],
+             "props": {
+              "asChild": true
+             }
+            }
+           ],
+           "props": {
+            "side": "top"
+           }
+          }
+         ],
+         "on": {
+          "openChange": [
+           {
+            "set": {
+             "state": "top_open",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "open": {
+           "bind": "state.top_open"
+          },
+          "data-testid": "sheet-top-3-dialog"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "gap": 8,
+      "align": "center",
+      "className": "w-full"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "bottom"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "gap": 12,
+        "align": "center",
+        "justify": "center",
+        "className": "flex-wrap w-full"
+       },
+       "children": [
+        {
+         "type": "Sheet",
+         "children": [
+          {
+           "type": "SheetTrigger",
+           "children": [
+            {
+             "type": "Button",
+             "props": {
+              "emphasis": "secondary",
+              "children": "Open bottom sheet",
+              "data-testid": "sheet-bottom-1-btn"
+             }
+            }
+           ],
+           "props": {
+            "asChild": true
+           }
+          },
+          {
+           "type": "SheetContent",
+           "children": [
+            {
+             "type": "Header",
+             "children": [
+              {
+               "type": "SheetTitle",
+               "props": {
+                "children": "Bottom Sheet"
+               }
+              },
+              {
+               "type": "SheetDescription",
+               "props": {
+                "children": "This sheet slides in from the bottom of the screen."
+               }
+              }
+             ]
+            },
+            {
+             "type": "SheetClose",
+             "children": [
+              {
+               "type": "Button",
+               "props": {
+                "emphasis": "secondary",
+                "className": "mt-4",
+                "children": "Close",
+                "data-testid": "sheet-bottom-2-btn"
+               }
+              }
+             ],
+             "props": {
+              "asChild": true
+             }
+            }
+           ],
+           "props": {
+            "side": "bottom"
+           }
+          }
+         ],
+         "on": {
+          "openChange": [
+           {
+            "set": {
+             "state": "bottom_open",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "open": {
+           "bind": "state.bottom_open"
+          },
+          "data-testid": "sheet-bottom-3-dialog"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

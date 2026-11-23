@@ -1,0 +1,502 @@
+{
+ "id": "ui-data-pattern-component-financial-tables-financials-with-trend-bars",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-financial-tables-financials-with-trend-bars",
+ "kind": "component",
+ "name": "financials-with-trend-bars",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "financials-with-trend-bars",
+  "version": 1,
+  "surface": "web",
+  "root": {
+   "type": "Card",
+   "props": {
+    "style": {
+     "obj": {
+      "width": 860
+     }
+    }
+   },
+   "children": [
+    {
+     "type": "Content",
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "scale": "sm"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "justify": "between",
+          "align": "baseline"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "element": "type--body-small",
+            "emphasis": "quiet",
+            "children": "Income statement"
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "element": "type--body-small",
+            "emphasis": "quiet",
+            "children": "USD billions"
+           }
+          }
+         ]
+        },
+        {
+         "type": "RichTable",
+         "props": {
+          "columns": [
+           {
+            "obj": {
+             "key": "line",
+             "name": "",
+             "width": 220,
+             "frozen": "start",
+             "cell": {
+              "obj": {
+               "component": "Text",
+               "props": {
+                "obj": {
+                 "element": "type--body-small"
+                }
+               },
+               "from": {
+                "obj": {
+                 "content": "line",
+                 "style": "lineStyle"
+                }
+               }
+              }
+             }
+            }
+           },
+           {
+            "obj": {
+             "key": "trend",
+             "name": "Trend",
+             "width": 110,
+             "sortable": false,
+             "cell": {
+              "obj": {
+               "component": "MicroChart",
+               "props": {
+                "obj": {
+                 "kind": "bars",
+                 "scale": "sm",
+                 "width": 72,
+                 "format": {
+                  "obj": {
+                   "mode": {
+                    "obj": {
+                     "kind": "fixedScale",
+                     "scale": "unit",
+                     "n": 0
+                    }
+                   },
+                   "locale": "en-GB"
+                  }
+                 },
+                 "symbol": "B"
+                }
+               },
+               "from": {
+                "obj": {
+                 "data": "trend",
+                 "status": "trendStatus"
+                }
+               }
+              }
+             }
+            }
+           },
+           {
+            "obj": {
+             "key": "y20",
+             "name": "Sep '20",
+             "type": "number",
+             "width": 96,
+             "cell": {
+              "obj": {
+               "component": "DataNumber",
+               "align": "end",
+               "props": {
+                "obj": {
+                 "config": {
+                  "obj": {
+                   "mode": {
+                    "obj": {
+                     "kind": "fixedScale",
+                     "scale": "billion",
+                     "n": 0
+                    }
+                   },
+                   "locale": "en-GB"
+                  }
+                 },
+                 "scale": "sm",
+                 "monospace": true
+                }
+               },
+               "from": {
+                "obj": {
+                 "value": "y20"
+                }
+               }
+              }
+             }
+            }
+           },
+           {
+            "obj": {
+             "key": "y19",
+             "name": "Sep '19",
+             "type": "number",
+             "width": 96,
+             "cell": {
+              "obj": {
+               "component": "DataNumber",
+               "align": "end",
+               "props": {
+                "obj": {
+                 "config": {
+                  "obj": {
+                   "mode": {
+                    "obj": {
+                     "kind": "fixedScale",
+                     "scale": "billion",
+                     "n": 0
+                    }
+                   },
+                   "locale": "en-GB"
+                  }
+                 },
+                 "scale": "sm",
+                 "monospace": true,
+                 "emphasis": "quiet"
+                }
+               },
+               "from": {
+                "obj": {
+                 "value": "y19"
+                }
+               }
+              }
+             }
+            }
+           },
+           {
+            "obj": {
+             "key": "y18",
+             "name": "Sep '18",
+             "type": "number",
+             "width": 96,
+             "cell": {
+              "obj": {
+               "component": "DataNumber",
+               "align": "end",
+               "props": {
+                "obj": {
+                 "config": {
+                  "obj": {
+                   "mode": {
+                    "obj": {
+                     "kind": "fixedScale",
+                     "scale": "billion",
+                     "n": 0
+                    }
+                   },
+                   "locale": "en-GB"
+                  }
+                 },
+                 "scale": "sm",
+                 "monospace": true,
+                 "emphasis": "quiet"
+                }
+               },
+               "from": {
+                "obj": {
+                 "value": "y18"
+                }
+               }
+              }
+             }
+            }
+           },
+           {
+            "obj": {
+             "key": "y17",
+             "name": "Sep '17",
+             "type": "number",
+             "width": 96,
+             "cell": {
+              "obj": {
+               "component": "DataNumber",
+               "align": "end",
+               "props": {
+                "obj": {
+                 "config": {
+                  "obj": {
+                   "mode": {
+                    "obj": {
+                     "kind": "fixedScale",
+                     "scale": "billion",
+                     "n": 0
+                    }
+                   },
+                   "locale": "en-GB"
+                  }
+                 },
+                 "scale": "sm",
+                 "monospace": true,
+                 "emphasis": "quiet"
+                }
+               },
+               "from": {
+                "obj": {
+                 "value": "y17"
+                }
+               }
+              }
+             }
+            }
+           },
+           {
+            "obj": {
+             "key": "y16",
+             "name": "Sep '16",
+             "type": "number",
+             "width": 96,
+             "cell": {
+              "obj": {
+               "component": "DataNumber",
+               "align": "end",
+               "props": {
+                "obj": {
+                 "config": {
+                  "obj": {
+                   "mode": {
+                    "obj": {
+                     "kind": "fixedScale",
+                     "scale": "billion",
+                     "n": 0
+                    }
+                   },
+                   "locale": "en-GB"
+                  }
+                 },
+                 "scale": "sm",
+                 "monospace": true,
+                 "emphasis": "quiet"
+                }
+               },
+               "from": {
+                "obj": {
+                 "value": "y16"
+                }
+               }
+              }
+             }
+            }
+           }
+          ],
+          "source": {
+           "obj": {
+            "kind": "authored",
+            "rows": [
+             {
+              "obj": {
+               "id": 0,
+               "line": "Sales",
+               "lineStyle": {
+                "obj": {
+                 "paddingLeft": 0
+                }
+               },
+               "trend": [
+                214,
+                228,
+                266,
+                269,
+                274
+               ],
+               "trendStatus": "success",
+               "y16": 214000000000.0,
+               "y17": 228000000000.0,
+               "y18": 266000000000.0,
+               "y19": 269000000000.0,
+               "y20": 274000000000.0
+              }
+             },
+             {
+              "obj": {
+               "id": 1,
+               "line": "Cost of goods sold",
+               "lineStyle": {
+                "obj": {
+                 "paddingLeft": 16
+                }
+               },
+               "trend": [
+                130,
+                141,
+                164,
+                162,
+                170
+               ],
+               "trendStatus": "success",
+               "y16": 130000000000.0,
+               "y17": 141000000000.0,
+               "y18": 164000000000.0,
+               "y19": 162000000000.0,
+               "y20": 170000000000.0
+              }
+             },
+             {
+              "obj": {
+               "id": 2,
+               "line": "Gross income",
+               "lineStyle": {
+                "obj": {
+                 "paddingLeft": 0
+                }
+               },
+               "trend": [
+                84,
+                87,
+                102,
+                107,
+                104
+               ],
+               "trendStatus": "success",
+               "y16": 84000000000.0,
+               "y17": 87000000000.0,
+               "y18": 102000000000.0,
+               "y19": 107000000000.0,
+               "y20": 104000000000.0
+              }
+             },
+             {
+              "obj": {
+               "id": 3,
+               "line": "SG&A expense",
+               "lineStyle": {
+                "obj": {
+                 "paddingLeft": 16
+                }
+               },
+               "trend": [
+                15,
+                16,
+                17,
+                18,
+                19
+               ],
+               "trendStatus": "success",
+               "y16": 15000000000.0,
+               "y17": 16000000000.0,
+               "y18": 17000000000.0,
+               "y19": 18000000000.0,
+               "y20": 19000000000.0
+              }
+             },
+             {
+              "obj": {
+               "id": 4,
+               "line": "R&D",
+               "lineStyle": {
+                "obj": {
+                 "paddingLeft": 32
+                }
+               },
+               "trend": [
+                11,
+                12,
+                14,
+                16,
+                19
+               ],
+               "trendStatus": "success",
+               "y16": 11000000000.0,
+               "y17": 12000000000.0,
+               "y18": 14000000000.0,
+               "y19": 16000000000.0,
+               "y20": 19000000000.0
+              }
+             },
+             {
+              "obj": {
+               "id": 5,
+               "line": "EBIT",
+               "lineStyle": {
+                "obj": {
+                 "paddingLeft": 0
+                }
+               },
+               "trend": [
+                61,
+                64,
+                71,
+                66,
+                68
+               ],
+               "trendStatus": "success",
+               "y16": 61000000000.0,
+               "y17": 64000000000.0,
+               "y18": 71000000000.0,
+               "y19": 66000000000.0,
+               "y20": 68000000000.0
+              }
+             },
+             {
+              "obj": {
+               "id": 6,
+               "line": "Interest expense",
+               "lineStyle": {
+                "obj": {
+                 "paddingLeft": 16
+                }
+               },
+               "trend": [
+                1.4,
+                2.3,
+                3.2,
+                3.6,
+                2.9
+               ],
+               "trendStatus": "success",
+               "y16": 1400000000.0,
+               "y17": 2300000000.0,
+               "y18": 3200000000.0,
+               "y19": 3600000000.0,
+               "y20": 2900000000.0
+              }
+             }
+            ]
+           }
+          },
+          "editable": false,
+          "height": 340
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

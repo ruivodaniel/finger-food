@@ -1,0 +1,107 @@
+{
+ "id": "ui-data-pattern-component-list-rows-agent-status-2",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-list-rows-agent-status-2",
+ "kind": "component",
+ "name": "agent-status-2",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "agent-status-2",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Card",
+   "props": {
+    "concept": "acting"
+   },
+   "children": [
+    {
+     "type": "Content",
+     "props": {},
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Avatar",
+         "props": {
+          "scale": "lg",
+          "status": "success"
+         },
+         "children": [
+          {
+           "type": "AvatarFallback",
+           "props": {},
+           "children": [
+            {
+             "type": "Icon",
+             "props": {
+              "name": "bot"
+             }
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "col",
+          "size": "fill",
+          "scale": "xs"
+         },
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "row",
+            "align": "center",
+            "scale": "md"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--heading4",
+              "children": "Code Agent"
+             }
+            },
+            {
+             "type": "Badge",
+             "props": {
+              "children": "Acting",
+              "status": "info",
+              "concept": "acting",
+              "showIcon": true,
+              "iconName": "loading"
+             }
+            }
+           ]
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "emphasis": "quiet",
+            "children": "Writing implementation for auth middleware"
+           }
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

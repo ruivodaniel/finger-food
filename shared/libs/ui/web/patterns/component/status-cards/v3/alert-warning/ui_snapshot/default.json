@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-status-cards-alert-warning-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-status-cards-alert-warning",
+ "name": "default",
+ "title": "Status cards: alert warning",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

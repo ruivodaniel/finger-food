@@ -1,0 +1,7 @@
+{
+ "id": "route-pattern-layout-bare-layout",
+ "version": 1,
+ "surface": "web",
+ "path": "/patterns/layout/bare-layout",
+ "uiNodeId": "ui-node-pattern-layout-bare-layout"
+}

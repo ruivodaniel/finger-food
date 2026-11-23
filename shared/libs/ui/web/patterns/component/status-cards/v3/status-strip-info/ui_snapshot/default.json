@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-status-cards-status-strip-info-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-status-cards-status-strip-info",
+ "name": "default",
+ "title": "Status cards: status strip info",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

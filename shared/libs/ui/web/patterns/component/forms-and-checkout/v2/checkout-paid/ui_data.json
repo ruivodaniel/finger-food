@@ -1,0 +1,252 @@
+{
+ "id": "ui-data-pattern-component-forms-and-checkout-checkout-paid",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-forms-and-checkout-checkout-paid",
+ "kind": "component",
+ "name": "checkout-paid",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "checkout-paid",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Card",
+   "props": {
+    "className": "w-96"
+   },
+   "children": [
+    {
+     "type": "Header",
+     "props": {},
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "between",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--heading4",
+          "children": "Checkout"
+         }
+        },
+        {
+         "type": "Button",
+         "props": {
+          "data-testid": "checkout-close-btn",
+          "buttonType": "icon",
+          "startIcon": "close",
+          "emphasis": "quiet",
+          "scale": "sm",
+          "aria-label": "Close"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Content",
+     "props": {},
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "align": "center",
+        "justify": "center",
+        "size": "fill"
+       },
+       "children": [
+        {
+         "type": "Card",
+         "props": {
+          "status": "success",
+          "concept": "empty-state"
+         },
+         "children": [
+          {
+           "type": "Header",
+           "props": {},
+           "children": [
+            {
+             "type": "Icon",
+             "props": {
+              "name": "success",
+              "size": "lg"
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "p",
+              "element": "type--heading4",
+              "children": "Payment was successful!"
+             }
+            }
+           ]
+          },
+          {
+           "type": "Content",
+           "props": {},
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "as": "p",
+              "element": "type--body-small",
+              "emphasis": "quiet",
+              "children": "Your payment was successful."
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Footer",
+     "props": {},
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "className": "w-full",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "baseline",
+          "justify": "between",
+          "scale": "md"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "emphasis": "quiet",
+            "children": "Total paid"
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--numbers-small",
+            "children": "$45.00"
+           }
+          }
+         ]
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "baseline",
+          "justify": "between",
+          "scale": "md"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "emphasis": "quiet",
+            "children": "Payment method"
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body",
+            "children": "Visa ··· 4242"
+           }
+          }
+         ]
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "justify": "between",
+          "scale": "md"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "emphasis": "quiet",
+            "children": "Payment ID"
+           }
+          },
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "row",
+            "align": "center",
+            "scale": "xs"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--body-small",
+              "emphasis": "quiet",
+              "children": "cinv-cpayer_393JW…J1938"
+             }
+            },
+            {
+             "type": "Button",
+             "props": {
+              "data-testid": "checkout-copy-id-btn",
+              "buttonType": "icon",
+              "startIcon": "copy",
+              "emphasis": "quiet",
+              "scale": "xs",
+              "aria-label": "Copy payment ID"
+             }
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "Button",
+         "props": {
+          "data-testid": "checkout-go-app-btn",
+          "emphasis": "primary",
+          "fill": true,
+          "children": "Go to app"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

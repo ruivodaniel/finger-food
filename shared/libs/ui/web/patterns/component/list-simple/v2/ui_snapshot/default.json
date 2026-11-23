@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-list-simple-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-list-simple",
+ "name": "default",
+ "title": "List simple",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

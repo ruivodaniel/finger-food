@@ -1,0 +1,187 @@
+{
+ "id": "doc/payment-overview",
+ "kind": "doc",
+ "title": "Payment",
+ "status": "converted",
+ "subject": "payment",
+ "owner": "main/slices/payment",
+ "order": 1,
+ "tags": [
+  "payment",
+  "stripe"
+ ],
+ "paths": [
+  "apps/main/slices/seed/payment"
+ ],
+ "summary": "One seed slice, three products (a plan, bundles of credits, a marketplace), with Stripe as the system of record for money.",
+ "docId": "payment-overview",
+ "doc": {
+  "axioms": [],
+  "purpose": {
+   "intro": "One seed slice, three products, Stripe as the system of record for money. Credits belong to [[credits-overview|the credits slice]]; this slice adds the ways to pay on top of it.",
+   "points": [
+    "A **plan** (Stripe Subscription) grants credits each paid period and sets the prices the owner pays.",
+    "**Bundles** of credits (Stripe Checkout) never expire.",
+    "A **marketplace** lets a company sell its products on its own Stripe Express account; the platform keeps a 10% fee."
+   ],
+   "note": "The plans, bundles and marketplace terms are configured in [[payment-catalog|the payment catalog]]. The full design (goals, use cases, ERD, screens) lives in slice-design: `slice-design/projects/seed/slices/payment/`."
+  },
+  "reference": [
+   {
+    "topic": "Stripe for development",
+    "statement": "Every developer uses one Stripe sandbox, **sursum** (`acct_1UNssuDNkNQw824z`), in Lourenco's Stripe account, until the Sursum company account replaces it. Its values are in `apps/main/core/api/.env.example`: copy the Stripe block into your `.env`. Without a key the app still runs, and the Stripe-backed routes answer 503.",
+    "claims": [
+     {
+      "text": "**Webhooks:** run the listener with the sandbox's key, `stripe listen --api-key \"$STRIPE_SECRET_KEY\" …` (the full command is in `.env.example`). No `stripe login` is needed, and the signing secret it uses is the same for every developer."
+     },
+     {
+      "text": "**Test values:** card `4242 4242 4242 4242`, any future date, any CVC; pick EUR if Checkout offers another currency. Outside production (`VITE_APP_ENVIRONMENT`) the billing and product pages name the card beside their Stripe buttons. Express onboarding: \"Use test phone number\", \"Use test code\", date of birth `01/01/1901`, address line `address_full_match`, website `accessible.stripe.com`, payout account \"Use test account\"."
+     },
+     {
+      "text": "**Shared sandbox:** every listener receives every developer's events; an event for an account your database doesn't hold is logged and dropped. Don't edit the sandbox's products: everyone's price ids point at them."
+     },
+     {
+      "text": "**A new account** (the Sursum one) needs a product and price per plan and bundle, a Customer Portal configuration, Connect with Express and branding (set in live mode), and outside local development two webhook endpoints for the events the listener forwards. Then update `.env.example` and this section."
+     }
+    ]
+   },
+   {
+    "topic": "Two ledgers",
+    "statement": "Money and credits are kept apart. `payment_ledger` records real money; the credits ledger records credits; an event that touches both writes both in one transaction. The slice imports nothing from the credits slice: it declares `api/shared/credits-port.ts` and the app passes the credits ledger at mount.",
+    "claims": [
+     {
+      "text": "A plan or a bundle paid: a money row and a credits grant. A card purchase on the marketplace: a money row only."
+     },
+     {
+      "text": "A refund or a chargeback: a money row and a take-back of what is left of the credits it paid for, never below zero. A dispute won: a reversal row; credits taken stay taken."
+     }
+    ]
+   },
+   {
+    "topic": "A note on Stripe events",
+    "statement": "Every webhook takes one path on either endpoint: verify the signature, claim the event id, run its handler in the same transaction, answer 200. A bad signature is a 400; an event already claimed writes nothing; a handler that throws rolls back and answers 500, so Stripe retries for up to 72 hours. Handlers read the subscription or account from Stripe rather than trusting the event's payload, and every object we create in Stripe carries our `accountId` in its metadata.",
+    "claims": []
+   },
+   {
+    "topic": "Who needs a Stripe account",
+    "statement": "Vendors do, one per company; buyers never do.",
+    "claims": [
+     {
+      "text": "**Vendors: the app creates the account, Stripe verifies the seller.** When an Owner or Manage Billing starts Stripe onboarding on Selling, the API opens an Express account for the company. Stripe's hosted form then collects what the law requires to pay a seller: a phone number and email, identity, business details and a bank account. It happens once per company; after that, \"Open Stripe dashboard\" takes whoever has Manage Billing into the Express dashboard, where Stripe may ask for a code sent to the phone given at onboarding."
+     },
+     {
+      "text": "**The verification can't be skipped**, because it is what lets Stripe pay the vendor and carry the risk. Only where the form lives can change: Stripe's embedded onboarding components would put the same form inside Selling. The integration uses the hosted form today."
+     },
+     {
+      "text": "**Buyers pay as guests** on Stripe Checkout, with a card and an email. For plans and bundles the API creates a Stripe customer behind the scenes, tied to the billing owner (the organization, or the person when none is active); nobody logs into it. \"Manage in Stripe\" opens the Customer Portal through a one-time link the API makes. Checkout's \"Save my information\" is Stripe's own Link wallet and is optional."
+     }
+    ]
+   },
+   {
+    "topic": "Buy a bundle",
+    "statement": "Bundles never expire. The page polls after the redirect, so a webhook that lands late still shows.",
+    "claims": [],
+    "imagesAndDiagrams": [
+     {
+      "type": "html",
+      "src": "../assets/payment-overview/bundle.html"
+     }
+    ]
+   },
+   {
+    "topic": "A plan, from subscribing to cancelling",
+    "statement": "The plan's credits expire with the period they were paid for, and the plan's prices apply while it is active. `current_period_end` mirrors the last paid period.",
+    "claims": [],
+    "imagesAndDiagrams": [
+     {
+      "type": "html",
+      "src": "../assets/payment-overview/plan.html"
+     }
+    ]
+   },
+   {
+    "topic": "Refunds and chargebacks",
+    "statement": "Stripe reports a refund as a running total, so each refund row is the difference from what was already recorded, and an older total arriving late writes nothing.",
+    "claims": [],
+    "imagesAndDiagrams": [
+     {
+      "type": "html",
+      "src": "../assets/payment-overview/refund.html"
+     }
+    ]
+   },
+   {
+    "topic": "Vendor onboarding",
+    "statement": "A vendor is a company onboarded by its Owner or Manage Billing as a Stripe Express account under Managed Risk: Stripe screens it, bills it its fees and absorbs the losses it cannot recover. Express with Stripe liable exists only in Accounts v2, a preview API version (`ACCOUNTS_PREVIEW_VERSION`); the catalog's `marketplace.sellerCountry` gives the country, and the account is opened once per vendor, retries included.",
+    "claims": [],
+    "imagesAndDiagrams": [
+     {
+      "type": "html",
+      "src": "../assets/payment-overview/onboarding.html"
+     },
+     {
+      "title": "Express onboarding, hosted by Stripe, in the sandbox",
+      "type": "image",
+      "src": "../assets/payment-overview/onboarding-start.jpg",
+      "alt": "Stripe Express onboarding for sursum: Let's get started, with the Use test phone number button"
+     },
+     {
+      "title": "The vendor's Express dashboard after one €25.00 sale: €21.46 earned, after the 10% platform fee and Stripe's fee",
+      "type": "image",
+      "src": "../assets/payment-overview/express-dashboard.png",
+      "alt": "Stripe Express dashboard in test mode: recent earnings €21.46, a €25.00 payment, upcoming payout"
+     }
+    ]
+   },
+   {
+    "topic": "A marketplace sale",
+    "statement": "Sales are direct charges on the vendor's account: the money is the vendor's, the platform takes its fee, and the buyer's payment ledger records what they paid. Money refunds, payouts and disputes happen in the vendor's Express dashboard.",
+    "claims": [],
+    "imagesAndDiagrams": [
+     {
+      "type": "html",
+      "src": "../assets/payment-overview/sale.html"
+     }
+    ]
+   },
+   {
+    "topic": "Vendor credits",
+    "statement": "A vendor can also settle a sale in its own credits instead of money, when the product's refund policy allows it, up to what is still unsettled; or give a promotion to one of its buyers: anyone who ever bought from it, a refunded purchase included, which the server checks (`GET /selling/buyers` lists them once each). These credits are lots at the buyer, spendable only on that vendor's products, and no money moves when they are issued or spent. A buyer who holds enough of them can pay a product in full with them (never part credits, part card), and platform credits never pay a vendor.",
+    "claims": []
+   },
+   {
+    "topic": "What the app hands it",
+    "statement": "Instances and the session's values reach the slice at mount, from the app.",
+    "claims": [
+     {
+      "text": "API (`apps/main/core/api/src/mounts.ts`): `credits`, the credits ledger port, and `people`: the user-organization slice's organization and user-profile services, which name buyers and vendors."
+     },
+     {
+      "text": "Web (`apps/main/core/web/src/config/payment.config.ts`): the active organization, the credits adapter and `navigate`. Billing holds what is paid (plan, bundles, payments, purchases) and shows the credits slice's balance beside the plan, through its public `web/index.ts`; the lots, the members' allocations and the history are on the credits slice's own Credits page."
+     }
+    ]
+   },
+   {
+    "topic": "Named exceptions",
+    "statement": "The webhook handlers and `ensure` on the account write without an access context, through this slice's own repositories; a Stripe event has no session. Every user-facing read and every checkout goes through the scoped access-control engine.",
+    "claims": []
+   }
+  ],
+  "review": {
+   "axioms": {
+    "state": "unreviewed"
+   },
+   "purpose": {
+    "state": "unreviewed"
+   },
+   "reference": {
+    "state": "unreviewed"
+   }
+  },
+  "converted": true
+ },
+ "audience": [
+  "seed-contributor",
+  "seed-consumer"
+ ]
+}

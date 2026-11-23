@@ -1,0 +1,412 @@
+{
+ "id": "ui-data-pattern-page-layout-header-tabs",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-page-layout-header-tabs",
+ "kind": "page",
+ "name": "layout-header-tabs",
+ "document": {
+  "kind": "page",
+  "schemaVersion": 1,
+  "name": "layout-header-tabs",
+  "version": 1,
+  "surface": "web",
+  "state": {
+   "open": false,
+   "current": "dashboard",
+   "org": "org-acme-corp",
+   "mode": "light",
+   "tab": "members"
+  },
+  "root": {
+   "use": {
+    "component": "SideNavigationScreen",
+    "version": "latest"
+   },
+   "args": {
+    "open": {
+     "bind": "state.open"
+    },
+    "current": {
+     "bind": "state.current"
+    },
+    "org": {
+     "bind": "state.org"
+    },
+    "mode": {
+     "bind": "state.mode"
+    },
+    "expand": "overlay",
+    "account": "separate",
+    "withOrganizations": false,
+    "withModes": false,
+    "toggleAt": "top",
+    "backLabel": "PROWD"
+   },
+   "on": {
+    "openChange": [
+     {
+      "set": {
+       "state": "open",
+       "to": {
+        "bind": "event.open"
+       }
+      }
+     }
+    ],
+    "navigate": [
+     {
+      "set": {
+       "state": "current",
+       "to": {
+        "bind": "event.id"
+       }
+      }
+     }
+    ],
+    "organizationChange": [
+     {
+      "set": {
+       "state": "org",
+       "to": {
+        "bind": "event.id"
+       }
+      }
+     }
+    ],
+    "modeChange": [
+     {
+      "set": {
+       "state": "mode",
+       "to": {
+        "bind": "event.id"
+       }
+      }
+     }
+    ],
+    "back": [
+     {
+      "set": {
+       "state": "current",
+       "to": "back"
+      }
+     }
+    ]
+   },
+   "slots": {
+    "children": [
+     {
+      "use": {
+       "component": "SingleSidebarTabsLayout",
+       "version": "latest"
+      },
+      "slots": {
+       "pageHeader": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "justify": "between",
+          "size": "fill"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--heading3",
+            "children": "Team"
+           }
+          },
+          {
+           "type": "Button",
+           "props": {
+            "scale": "sm",
+            "children": "Invite",
+            "emphasis": "primary",
+            "data-testid": "layout-header-tabs-invite-btn"
+           }
+          }
+         ]
+        }
+       ],
+       "secondPageHeader": [
+        {
+         "type": "Tabs",
+         "props": {
+          "value": {
+           "bind": "state.tab"
+          },
+          "data-testid": "layout-header-tabs-tabs-tabs"
+         },
+         "children": [
+          {
+           "type": "TabsList",
+           "props": {},
+           "children": [
+            {
+             "type": "TabsTrigger",
+             "props": {
+              "value": "members",
+              "children": "Members",
+              "data-testid": "layout-header-tabs-members-tab"
+             }
+            },
+            {
+             "type": "TabsTrigger",
+             "props": {
+              "value": "invoices",
+              "children": "Invoices",
+              "data-testid": "layout-header-tabs-invoices-tab"
+             }
+            },
+            {
+             "type": "TabsTrigger",
+             "props": {
+              "value": "inbox",
+              "children": "Inbox",
+              "data-testid": "layout-header-tabs-inbox-tab"
+             }
+            }
+           ]
+          }
+         ],
+         "on": {
+          "valueChange": [
+           {
+            "set": {
+             "state": "tab",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         }
+        }
+       ],
+       "mainContainer": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "col",
+          "scale": "xl"
+         },
+         "children": [
+          {
+           "type": "Card",
+           "children": [
+            {
+             "type": "Content",
+             "children": [
+              {
+               "type": "Stack",
+               "props": {
+                "dir": "col",
+                "scale": "md"
+               },
+               "children": [
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "sm"
+                 }
+                },
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "md"
+                 }
+                },
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "md"
+                 }
+                },
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "md"
+                 }
+                },
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "md"
+                 }
+                },
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "md"
+                 }
+                },
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "md"
+                 }
+                }
+               ]
+              }
+             ]
+            }
+           ],
+           "when": {
+            "eq": [
+             {
+              "bind": "state.tab"
+             },
+             "members"
+            ]
+           }
+          },
+          {
+           "type": "Card",
+           "children": [
+            {
+             "type": "Content",
+             "children": [
+              {
+               "type": "Stack",
+               "props": {
+                "dir": "col",
+                "scale": "md"
+               },
+               "children": [
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "sm"
+                 }
+                },
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "md"
+                 }
+                },
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "md"
+                 }
+                },
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "md"
+                 }
+                },
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "md"
+                 }
+                },
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "md"
+                 }
+                },
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "md"
+                 }
+                }
+               ]
+              }
+             ]
+            }
+           ],
+           "when": {
+            "eq": [
+             {
+              "bind": "state.tab"
+             },
+             "invoices"
+            ]
+           }
+          },
+          {
+           "type": "Card",
+           "children": [
+            {
+             "type": "Content",
+             "children": [
+              {
+               "type": "Stack",
+               "props": {
+                "dir": "col",
+                "scale": "md"
+               },
+               "children": [
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "sm"
+                 }
+                },
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "md"
+                 }
+                },
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "md"
+                 }
+                },
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "md"
+                 }
+                },
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "md"
+                 }
+                },
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "md"
+                 }
+                },
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "md"
+                 }
+                }
+               ]
+              }
+             ]
+            }
+           ],
+           "when": {
+            "eq": [
+             {
+              "bind": "state.tab"
+             },
+             "inbox"
+            ]
+           }
+          }
+         ]
+        }
+       ]
+      }
+     }
+    ]
+   }
+  }
+ }
+}

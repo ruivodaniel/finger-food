@@ -1,0 +1,216 @@
+{
+ "id": "doc/ui-markup-dictionary-v2",
+ "kind": "doc",
+ "title": "Markup dictionary",
+ "status": "todo",
+ "subject": "ui",
+ "owner": "libs/ui",
+ "order": 6,
+ "tags": [
+  "ui",
+  "consumer",
+  "markup"
+ ],
+ "paths": [
+  "shared/libs/ui"
+ ],
+ "summary": "Every value a node may carry: the elements per family with their axes, the typography identities, the layout regions, the axis values. Generated.",
+ "docId": "ui-markup-dictionary-v2",
+ "doc": {
+  "axioms": [
+   {
+    "text": "The dictionary is generated from the table of primitives and never written by hand."
+   },
+   {
+    "text": "A value that is not in the dictionary is not valid markup."
+   }
+  ],
+  "purpose": {
+   "intro": "Markup and theme meet on a finite vocabulary. Listing it in one generated place means a component, a theme and a checker read the same list, and a typo is an error, not a silent miss."
+  },
+  "reference": [
+   {
+    "topic": "Element Values",
+    "claims": [],
+    "statement": "Format: `element=\"{family}--{element}\"`. Generated from `shared/libs/ui/types/elements.ts` by `shared/libs/ui/scripts/markup-dictionary-elements.ts`. Each row lists the axes the element carries: `all` is the full set from `types/axes.ts`, `–` means the axis does not apply, anything else is the subset. `concept` is always allowed. Typography identities (`type--…`) are a separate vocabulary."
+   },
+   {
+    "topic": "Element Values › Surface (`surface--…`)",
+    "claims": [],
+    "imagesAndDiagrams": [
+     {
+      "type": "ascii",
+      "value": "| Value | Emphasis | Status | State | Scale | Why |\n|---|---|---|---|---|---|\n| `surface--checkbox-inner` | – | – | selected | – | inner: the check mark, follows the outer; appears on selected |\n| `surface--switch-inner` | – | – | selected | – | inner: the thumb, follows the outer; moves with translateX on selected |\n| `surface--radio-inner` | – | – | selected | – | inner: the dot, follows the outer; appears on selected |\n| `surface--button-group-text` | – | – | – | – | part: a text cell inside the group |\n| `surface--tab-panel` | – | – | loading | – | part: waits for content |\n| `surface--breadcrumb-separator` | – | – | – | – | part |\n| `surface--otp-separator` | – | – | – | – | part |\n| `surface--input-group-addon` | – | – | hover active focus selected disabled | – | child: prefix, suffix, embedded button |\n| `surface--calendar` | all | – | loading disabled | all | parent: the grid, sizes its days |\n| `surface--label` | all | all | disabled | all | quiet or strong, error label, sized with its field |\n| `surface--field-description` | – | all | disabled | – | hint under a field, informative |\n| `surface--field-message` | – | all | – | – | the message is its status |\n| `surface--card` | all | all | all | all | everything: competes, a card in error, selectable, clickable, waits |\n| `surface--header` | all | all | – | all | a colored or hero band, an error header, its own height |\n| `surface--content` | – | – | loading | all | neutral region; waits; its own padding |\n| `surface--footer` | all | all | – | all | an action bar, like header |\n| `surface--panel` | all | all | all | all | a plain surface with everything |\n| `surface--tile` | all | all | all | all | a plain surface with everything, used in grids |\n| `surface--alert` | all | all | – | all | banner or inline; status is what it is |\n| `surface--empty-state` | all | all | loading | all | prominent or subtle; empty because of an error; empty while loading |\n| `surface--separator` | all | – | – | all | standalone divider: strong or subtle, thickness |\n| `surface--badge` | all | all | hover active focus selected disabled | all | status is what a badge is for; filter badges get chosen |\n| `surface--avatar` | all | all | hover active focus selected disabled | all | framed or plain; presence by status; picked, clickable |\n| `surface--progress` | all | all | loading disabled | all | outer: the track; thin or prominent; success/warning/error; indeterminate waits |\n| `surface--progress-inner` | – | – | – | – | inner: the fill, follows the outer; its width is the value |\n| `surface--spinner` | all | all | – | all | subtle or prominent, a colored spinner |\n| `surface--skeleton` | all | – | – | all | placeholder; line heights |\n| `surface--group` | – | – | – | – | part: a titled section of a list |\n| `surface--accordion-item` | – | all | hover active focus selected disabled | – | child: a section, open or not, with a status |\n| `surface--tree-view-group` | – | – | disabled | – | child: a branch, indent authored once |\n| `surface--list-draggable-group` | – | – | disabled | – | child: the rows nested under a row, indent authored once |\n| `surface--list-draggable-ghost` | – | – | – | – | part: the place a row left while it is dragged |\n| `surface--list-tree-ghost` | – | – | – | – | part: the place a row left while it is dragged |"
+     }
+    ]
+   },
+   {
+    "topic": "Element Values › Overlay (`overlay--…`)",
+    "claims": [],
+    "imagesAndDiagrams": [
+     {
+      "type": "ascii",
+      "value": "| Value | Emphasis | Status | State | Scale | Why |\n|---|---|---|---|---|---|\n| `overlay--dialog` | all | all | loading | all | hero or plain modal, error and destructive confirms, waits |\n| `overlay--alert-dialog` | all | all | loading | all | destructive and warning confirms, waits |\n| `overlay--sheet` | all | all | loading | all | dialog from an edge |\n| `overlay--popover` | all | all | loading | all | filled or plain, informative, waits for content |\n| `overlay--tooltip` | all | all | – | all | dark or light, a warning tooltip |\n| `overlay--hover-card` | all | all | loading | all | preview card, waits for data |\n| `overlay--dropdown-menu` | all | – | loading | all | the shell: filled or plain, waits for items, sizes its menu |\n| `overlay--toast` | all | all | hover loading | all | status is what a toast is for; a progress toast; pauses on hover |\n| `overlay--list-draggable-overlay` | – | – | – | – | part: the copy of the dragged row that follows the pointer |\n| `overlay--list-tree-overlay` | – | – | – | – | part: the copy of the dragged row that follows the pointer |"
+     }
+    ]
+   },
+   {
+    "topic": "Element Values › Control (`control--…`)",
+    "claims": [],
+    "imagesAndDiagrams": [
+     {
+      "type": "ascii",
+      "value": "| Value | Emphasis | Status | State | Scale | Why |\n|---|---|---|---|---|---|\n| `control--button` | all | all | all | all | standalone control: competes, carries meaning, every interaction state |\n| `control--chip` | all | all | hover active focus selected disabled | all | standalone control; chosen, removable |\n| `control--checkbox` | all | all | all | all | outer: standalone or in a choice group; validation on it |\n| `control--switch` | all | all | all | all | outer: the track; standalone or in a choice group; async switch waits |\n| `control--radio` | all | all | all | all | outer: the ring; in a choice group the group's axes win |\n| `control--toggle` | all | all | hover active focus selected disabled | all | standalone control; in a choice group the group's axes win |\n| `control--tab-trigger` | – | all | all | – | child: current tab, a tab carrying an error, every state |\n| `control--breadcrumb-item` | – | – | hover active focus selected disabled | – | child: current crumb, plain crumb, clickable |\n| `control--sidebar-item` | – | all | all | – | child: current, disabled, waiting, clickable; an item carrying a status |\n| `control--nav-item` | – | all | active focus selected disabled | – | child of a mobile navigation region: the current destination is selected; an entry carrying a status |\n| `control--calendar-day` | – | all | hover active focus selected disabled | – | child: today, picked, in range, a day with a status |\n| `control--menu-item` | – | all | all | – | child: chosen, destructive, waits, every state |\n| `control--list-item` | – | all | all | – | child: chosen, unavailable, waiting, clickable, a row with a status |\n| `control--accordion-trigger` | – | – | hover active focus selected disabled | – | child: the section header, open, hovered, disabled |\n| `control--tree-view-item` | – | all | all | – | child: chosen, unavailable, waiting, clickable |\n| `control--list-draggable-row` | – | all | hover focus selected disabled | – | child: a row, chosen, unavailable, with a status |\n| `control--list-draggable-handle` | – | – | hover active focus disabled | – | child: the grip that starts a drag, hovered, held, focused, unavailable |\n| `control--list-tree-row` | – | all | hover focus selected disabled | – | child: a row, chosen, unavailable, with a status |\n| `control--list-tree-toggle` | – | – | hover focus disabled | – | child: the chevron that opens and closes a row, hovered, focused, unavailable |\n| `control--list-tree-handle` | – | – | hover active focus disabled | – | child: the grip that starts a drag, hovered, held, focused, unavailable |"
+     }
+    ]
+   },
+   {
+    "topic": "Element Values › Control group (`control-group--…`)",
+    "claims": [],
+    "imagesAndDiagrams": [
+     {
+      "type": "ascii",
+      "value": "| Value | Emphasis | Status | State | Scale | Why |\n|---|---|---|---|---|---|\n| `control-group--choice-group` | all | all | loading disabled | all | parent: prominence, a validated choice, orientation and gap, sizes its options; replaces radioGroup and toggleGroup |\n| `control-group--button-group` | all | all | loading disabled | all | parent: joined look, a group with an error, whole group disabled, sizes its buttons |\n| `control-group--tab-bar` | all | – | loading | all | parent: pill or underline bar, sizes its tabs; no condition of its own |\n| `control-group--breadcrumb` | all | – | loading | all | parent: prominence of the trail, sizes crumbs, gap and separator |\n| `control-group--pagination-bar` | all | – | loading disabled | all | parent: prominence, sizes its links; links are buttons |\n| `control-group--sidebar` | all | all | loading disabled | all | parent: a column of items, main nav or anything else; collapsed is [collapsed], not a state; sizes its items |"
+     }
+    ]
+   },
+   {
+    "topic": "Element Values › Field (`field--…`)",
+    "claims": [],
+    "imagesAndDiagrams": [
+     {
+      "type": "ascii",
+      "value": "| Value | Emphasis | Status | State | Scale | Why |\n|---|---|---|---|---|---|\n| `field--input` | all | all | hover focus disabled loading | all | filled, outlined, ghost; validation; waits |\n| `field--textarea` | all | all | hover focus disabled loading | all | same as input |\n| `field--input-select` | all | all | hover focus disabled loading | all | a field; async search waits |\n| `field--select` | all | all | hover focus disabled loading | all | a field; async search waits |\n| `field--combobox` | all | all | hover focus disabled loading | all | a field; async search waits |\n| `field--multi-select` | all | all | hover focus disabled loading | all | a field; async search waits |\n| `field--phone-input` | all | all | hover focus disabled loading | all | a field |\n| `field--address-autocomplete` | all | all | hover focus disabled loading | all | a field; lookup waits |\n| `field--otp` | all | all | hover focus disabled loading | all | parent: the field, sizes its slots |\n| `field--otp-slot` | – | – | hover focus selected disabled | – | child: the active slot |\n| `field--input-group` | all | all | hover focus disabled loading | all | parent: one field surface, sizes input and addons |\n| `field--file-upload` | all | all | all | all | drop zone: drag-over is selected, uploading waits |\n| `field--date-picker` | all | all | hover focus disabled loading | all | the field |"
+     }
+    ]
+   },
+   {
+    "topic": "Element Values › List (`list--…`)",
+    "claims": [],
+    "imagesAndDiagrams": [
+     {
+      "type": "ascii",
+      "value": "| Value | Emphasis | Status | State | Scale | Why |\n|---|---|---|---|---|---|\n| `list--menu` | – | all | loading | – | child of the shell: the rows container, a menu with an error inside |\n| `list--list` | all | all | loading disabled | all | parent: bordered or plain, a list with an error inside, waits, sizes its items |\n| `list--accordion` | all | all | loading disabled | all | parent: sizes its items |\n| `list--tree-view` | all | all | loading disabled | all | parent: sizes its items |\n| `list--list-draggable` | all | all | loading disabled | all | parent: sizes its rows, waits, is unavailable as a whole |\n| `list--list-tree` | all | all | loading disabled | all | parent: sizes its rows, waits, is unavailable as a whole |"
+     }
+    ]
+   },
+   {
+    "topic": "Element Values › Table (`table--…`)",
+    "claims": [],
+    "imagesAndDiagrams": [
+     {
+      "type": "ascii",
+      "value": "| Value | Emphasis | Status | State | Scale | Why |\n|---|---|---|---|---|---|\n| `table--root` | all | all | loading disabled | all | parent: bordered or plain, a table with errors inside, waits, sizes rows and cells |\n| `table--header` | – | – | – | – | section: structure only |\n| `table--header-row` | – | – | – | – | section: structure only |\n| `table--body` | – | – | – | – | section: structure only |\n| `table--footer` | – | – | – | – | section: structure only |\n| `table--footer-row` | – | – | – | – | section: structure only |\n| `table--header-cell` | – | all | hover focus selected disabled | – | child: sorted column, a column with a status |\n| `table--row` | – | all | all | – | child: chosen, unavailable, waiting, clickable, a row with a status |\n| `table--cell` | – | all | hover focus selected disabled | – | child: selected or editable cell, a cell with a status |\n| `table--footer-cell` | – | all | hover focus selected disabled | – | child: like a cell |\n| `table--cell-content` | – | – | – | – | part: internal layout |"
+     }
+    ]
+   },
+   {
+    "topic": "Element Values › Shape (`shape--…`)",
+    "claims": [],
+    "imagesAndDiagrams": [
+     {
+      "type": "ascii",
+      "value": "| Value | Emphasis | Status | State | Scale | Why |\n|---|---|---|---|---|---|\n| `shape--list-draggable-drop-line` | – | – | – | – | part: the line that shows the drop lands before or after a row |\n| `shape--list-draggable-drop-into` | – | – | – | – | part: the outline that shows the drop lands inside a row |\n| `shape--list-tree-line` | – | – | – | – | part: a connector line, the stem down a level and the elbow into a row |\n| `shape--list-tree-drop-line` | – | – | – | – | part: the line that shows the drop lands before or after a row |\n| `shape--list-tree-drop-into` | – | – | – | – | part: the outline that shows the drop lands inside a row |\n| `shape--icon` | all | all | disabled | all | prominence and status color, sized |\n| `shape--svg` | all | – | – | all | prominence, sized |"
+     }
+    ]
+   },
+   {
+    "topic": "Element Values › Media (`media--…`)",
+    "claims": [],
+    "imagesAndDiagrams": [
+     {
+      "type": "ascii",
+      "value": "| Value | Emphasis | Status | State | Scale | Why |\n|---|---|---|---|---|---|\n| `media--image` | all | – | hover focus selected disabled loading | all | framed or plain, picked in a gallery, waits, clickable |"
+     }
+    ]
+   },
+   {
+    "topic": "Element Values › Typography (`type`)",
+    "claims": [],
+    "imagesAndDiagrams": [
+     {
+      "type": "ascii",
+      "value": "| Value | Usage |\n|-------|-------|\n| `type--heading1` through `type--heading4` | Headings |\n| `type--body-extra-large`, `type--body-large`, `type--body`, `type--body-small`, `type--body-extra-small` | Body text |\n| `type--quote-large`, `type--quote`, `type--quote-small` | Quotes |\n| `type--code` | Code |\n| `type--numbers-extra-large`, `type--numbers-large`, `type--numbers`, `type--numbers-small`, `type--numbers-extra-small` | Numbers |"
+     }
+    ]
+   },
+   {
+    "topic": "Layout Values",
+    "claims": [
+     {
+      "text": "Overlays (Dialog, Sheet) are component-library elements (`element=\"overlay--*\"`), not layout regions."
+     }
+    ],
+    "statement": "Format: `layout=\"{name}\"`. No family prefix.",
+    "imagesAndDiagrams": [
+     {
+      "type": "ascii",
+      "value": "| Value | Usage |\n|-------|-------|\n| `shell` | Outermost viewport frame |\n| `shell-side-nav` | Shell variant: global sidebar (fixed, collapsible) |\n| `shell-top-nav` | Shell variant: global top bar (sticky) |\n| `shell-none` | Shell variant: no chrome (auth pages, standalone) |\n| `shell-nav` | The shell's navigation column |\n| `page` | Everything inside the shell content area |\n| `page-header` | Full-width page title / action bar |\n| `second-page-header` | Optional second full-width row under the page header (e.g. the tabs) |\n| `page-body` | Flex row: page-left-sidebar + main + page-right-sidebar |\n| `page-left-sidebar` | Secondary sidebar spanning the page body (e.g. settings nav) |\n| `main` | Primary column, fills remaining space |\n| `main-header` | Full-width region spanning the main column (sticky optional) |\n| `second-main-header` | Optional second full-width row under the main header |\n| `main-content` | The row below the main headers: main-body + main-right-sidebar |\n| `main-body` | Scrollable content inside main-content |\n| `main-container` | Width-constrained content wrapper inside main-body |\n| `main-right-sidebar` | Inline aside inside main (e.g. knowledge panel, properties) |\n| `main-footer` | Full-width region at the bottom of the main column |\n| `page-right-sidebar` | Full-height aside spanning the page body (e.g. activity feed) |\n| `page-footer` | Full-width region below the page body |\n| `scroll-area` | Canonical internal scroll container — use anywhere a region needs to scroll |\n| `stack` | Auto-layout primitive, usable inside any region: a row or a column that owns gap, alignment and padding; each child hugs or fills. Nests freely. Structure only — no visuals |"
+     }
+    ]
+   },
+   {
+    "topic": "Axis Attributes › `emphasis` — visual prominence",
+    "claims": [],
+    "imagesAndDiagrams": [
+     {
+      "type": "ascii",
+      "value": "| Value | Region |\n|---|---|\n| `shell` `shell-side-nav` `shell-top-nav` `shell-none` `shell-nav` | the shell and its variants |\n| `page` `page-header` `second-page-header` `page-body` `page-footer` | the page |\n| `page-left-sidebar` `page-right-sidebar` | the page's columns |\n| `main` `main-header` `second-main-header` `main-content` `main-body` `main-container` `main-right-sidebar` `main-footer` | main |\n| `scroll-area` | the one scrolling container |\n| `stack` | composition inside a region |"
+     }
+    ]
+   },
+   {
+    "topic": "Axis Attributes › `status` — semantic condition",
+    "claims": [],
+    "imagesAndDiagrams": [
+     {
+      "type": "ascii",
+      "value": "| Value | Meaning |\n|-------|---------|\n| `neutral` | Default/neutral |\n| `info` | Informational |\n| `success` | Positive outcome |\n| `warning` | Caution |\n| `error` | Negative outcome |\n| `destructive` | Dangerous action |"
+     }
+    ]
+   },
+   {
+    "topic": "Axis Attributes › `state` — interaction/availability",
+    "claims": [],
+    "imagesAndDiagrams": [
+     {
+      "type": "ascii",
+      "value": "| Value | Meaning |\n|-------|---------|\n| `selected` | Currently selected |\n| `disabled` | Not available |\n| `loading` | In progress |"
+     }
+    ],
+    "statement": "Transient states (`hover`, `active`, `focus`) are CSS pseudo-classes only — never set as attributes."
+   },
+   {
+    "topic": "Axis Attributes › `scale` — structural size",
+    "claims": [],
+    "imagesAndDiagrams": [
+     {
+      "type": "ascii",
+      "value": "| Value |\n|-------|\n| `xs`, `sm`, `md`, `lg`, `xl` |"
+     }
+    ],
+    "statement": "Default when absent: `md`. Affects padding, typography, icon size. Never colors."
+   },
+   {
+    "topic": "Axis Attributes › `concept` — product-specific semantic identity",
+    "claims": [],
+    "statement": "Values are product-defined: `\"knowledge\"`, `\"dashboard\"`, `\"settings\"`, etc. Set on a wrapper element — descendants inherit the visual overrides."
+   }
+  ],
+  "review": {
+   "axioms": {
+    "state": "unreviewed"
+   },
+   "purpose": {
+    "state": "unreviewed"
+   },
+   "reference": {
+    "state": "unreviewed"
+   }
+  }
+ },
+ "audience": [
+  "seed-contributor",
+  "seed-consumer"
+ ]
+}

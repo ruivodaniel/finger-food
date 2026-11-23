@@ -1,0 +1,9 @@
+# shared/docs
+
+The documentation database and its viewer, built with the UI library (hard copy of `docs/db` made 2 Nov 2026; the old viewer on 8901 is untouched).
+
+- `db/` — one database: `doc/`, `term/`, `adr/`, `standards/` (one json per entry), `assets/<doc-id>/`. Every entry carries `owner`, where it lives in the map: `main/core`, `main/slices/<slice>`, `apps/<app>`, `libs/<lib>`, `root` (the docs system, open-api) or `root/infra`. `db/entries.json` is the flat list the viewer reads; `db/skills.json` is the skills: three groups (building the seed, building a product, at runtime) and their activities; each activity is a document of its own, `db/doc/skill-<activity>.json`, owner `skills/<group>`, created empty by the remap script and written like any doc.
+- `engine/remap-owner.ts` — derives `owner` from `subject` and writes `entries.json`. Idempotent: `slice-design/node_modules/.bin/tsx shared/docs/engine/remap-owner.ts`.
+- `viewer/` — a Vite + React app on **http://localhost:8902**: `cd shared/docs/viewer && npm install && npm run dev`. It imports `@libs/web-components` and `@libs/web-layouts` from `shared/libs/ui` and wears the wireframes v2 theme (the one theme; the engine owns every visual property). One tree: GLOSSARY (one leaf, every term alphabetical), SKILLS (the activity documents under their group; a group counts like any other) and MAPPER (every doc, decision and standards entry under its owner; a group row carries two counts, to approve and approved; a document row its status). Terms are not documents and enter no count. Picking a row never moves the tree. One search, one status filter.
+
+Owner map (from `subject`): main → main/core · a slice → main/slices/<slice> · slice-design → main/slices/product-design · orchestrator → apps/orchestrator · ui, list-query, realtime, gated-scoped-ac, value-types, rich-text-editor → libs/<lib> · infra → root/infra · docs, open-api → root.

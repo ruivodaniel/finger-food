@@ -2,13 +2,45 @@
 // Owner: global (inferred from location in scripts/lint/)
 // These controls apply to the entire codebase.
 
+import { readdirSync, readFileSync } from "node:fs";
+import path from "node:path";
 import type { ControlSet } from "./types.ts";
+import { webControls } from "./web-controls.ts";
+import webLayout from "./web-layout.ts";
+import { ALLOWED_JSX_PACKAGES } from "../../shared/libs/ui/rules/code.ts";
+
+// Web controls switched off, by id. The cockpit's toggles edit this list.
+const WEB_DISABLED: string[] = [];
+
+const web = webControls(webLayout, { disabled: WEB_DISABLED });
+
+// ── Worker versions the frontend may not import ──
+// Every `<id>/<version>` of @libs/orchestrator-workers whose contract does not
+// declare "client" in meta.runtimes, read from the contract's source so the
+// rule follows the declaration. A contract without an inline runtimes literal
+// fails here, loudly, rather than slipping through.
+const WORKERS_DIR = path.resolve(import.meta.dirname, "../../shared/libs/orchestrator/workers");
+const WORKERS_PKG = "@libs/orchestrator-workers";
+function serverOnlyWorkers(): string[] {
+  const out: string[] = [];
+  for (const id of readdirSync(WORKERS_DIR, { withFileTypes: true })) {
+    if (!id.isDirectory() || id.name === "lib" || id.name.startsWith("_") || id.name === "node_modules") continue;
+    for (const version of readdirSync(path.join(WORKERS_DIR, id.name), { withFileTypes: true })) {
+      if (!version.isDirectory() || !/^v\d+$/.test(version.name)) continue;
+      const contract = readFileSync(path.join(WORKERS_DIR, id.name, version.name, "contract.ts"), "utf8");
+      const runtimes = /runtimes:\s*\[([^\]]*)\]/.exec(contract);
+      if (!runtimes) throw new Error(`${id.name}/${version.name}: meta.runtimes must be written inline in contract.ts`);
+      if (!/["']client["']/.test(runtimes[1] ?? "")) out.push(`${WORKERS_PKG}/${id.name}/${version.name}`);
+    }
+  }
+  return out.sort();
+}
 
 // ── Layout component anchors (used by no-layout-dimension-override) ──
 // Matches a JSX opening tag for any @libs/web-layouts primitive followed by
 // className="..." so patterns only fire on these specific components.
-const _LAYOUT_ALL = "Page|PageHeader|PageBody|Main|MainHeader|MainBody|LeftSidebar|RightSidebar|ContextPanel|Container|ScrollArea|Shell|ShellNone|AuthPage";
-const _LAYOUT_SIDE = "LeftSidebar|RightSidebar|ContextPanel";
+const _LAYOUT_ALL = "Page|PageHeader|SecondPageHeader|PageBody|PageFooter|Main|MainHeader|SecondMainHeader|MainContent|MainBody|MainFooter|PageLeftSidebar|PageRightSidebar|MainRightSidebar|MainContainer|ScrollArea|Shell|ShellNone|AuthPage";
+const _LAYOUT_SIDE = "PageLeftSidebar|PageRightSidebar|MainRightSidebar";
 // className="..." anchor — prefix for class-based patterns
 const _A = `<(?:${_LAYOUT_ALL})(?=[\\s/>])[^>]*className="[^"]*`;
 const _AS = `<(?:${_LAYOUT_SIDE})(?=[\\s/>])[^>]*className="[^"]*`;
@@ -24,13 +56,15 @@ const controls: ControlSet = {
   //   shared/libs/<l>                 — generic engines
   //   configs/<c>                     — pure data
   sourceGlobs: [
-    "configs/**/*.{ts,tsx}",
+    "shared/configs/**/*.{ts,tsx}",
     "shared/contracts/**/*.{ts,tsx}",
-    "apps/main/shared/api/src/**/*.{ts,tsx}",
-    "apps/main/shared/web/src/**/*.{ts,tsx}",
+    "apps/main/core/api/src/**/*.{ts,tsx}",
+    "apps/main/core/web/src/**/*.{ts,tsx}",
     "apps/main/slices/*/*/**/*.{ts,tsx}",
     "apps/orchestrator/shared/**/*.{ts,tsx}",
     "apps/orchestrator/slices/**/*.{ts,tsx}",
+    "shared/libs/ui/themes/**/theme.ts",   // the themes: the rule theme-no-main-colours reads them
+    "shared/libs/orchestrator/**/*.ts",    // the orchestrator's libs: the schema stays runtime-agnostic
   ],
 
   "import-export": [
@@ -39,7 +73,7 @@ const controls: ControlSet = {
     //
     //   main shells    configs · libs · seed slices · product slices
     //   product slice  configs · libs · other product slices
-    //   seed slice     configs · libs                    (reaches nothing)
+    //   seed slice     configs · libs · another seed slice's api/ and web/ surface
     //   any other app  configs · libs                    + main's generated contract
     //   libs           node modules only
     //   NOBODY         another app's code · another app's db
@@ -54,8 +88,12 @@ const controls: ControlSet = {
       from: "apps/main/slices/seed/*/**",
       to: ["apps/main/slices/*/*/**", "@modules/**", "@seed/**", "@product/**"],
       selfImport: "skip",
-      description: "Seed slices reach nothing. A seed slice cannot import another slice — seed or product.",
-      message: "Seed slices may import configs and libs only. Composition happens in the shell that mounts them, not between slices.",
+      description: "A seed slice reaches another seed slice only through its public surface (api/index.ts, web/index.ts), and never a product slice.",
+      message: "Seed slices may import configs, libs and another seed slice's api/index.ts or web/index.ts. Its service instances come from the shell that mounts them.",
+      exceptions: [
+        { from: "apps/main/slices/*/*/web/**", to: ["@modules/*/web", "@seed/*/web", "@product/*/web"], reason: "Web rule 4: a slice may render another slice's shared/components, or place one of its pages in its own section, through its web/index.ts. web-slice-components-only checks what is imported." },
+        { from: "apps/main/slices/seed/*/api/**", to: ["@modules/*/api", "@seed/*/api"], reason: "A seed slice may use another seed slice's services through its api/index.ts (credits and payment name owners through user-organization-mgmt's); the instances are handed over at the mount." },
+      ],
     },
     {
       id: "product-slice-no-seed",
@@ -66,6 +104,9 @@ const controls: ControlSet = {
       to: ["apps/main/slices/seed/*/**", "@modules/**", "@seed/**"],
       description: "Product slices cannot import seed slices. A product slice may reach configs, libs, and other product slices.",
       message: "Seed slices are mounted by the shell, not consumed by product slices. If you need seed behaviour here, inject it at the mount.",
+      exceptions: [
+        { from: "apps/main/slices/*/*/web/**", to: ["@modules/*/web", "@seed/*/web"], reason: "Web rule 4: a slice may render another slice's shared/components, or place one of its pages in its own section, through its web/index.ts. web-slice-components-only checks what is imported." },
+      ],
     },
     {
       id: "slice-no-shell",
@@ -73,9 +114,10 @@ const controls: ControlSet = {
       direction: "import",
       allow: false,
       from: "apps/main/slices/*/*/**",
-      to: ["apps/main/shared/api/**", "apps/main/shared/web/**", "apps/main/shared/mobile/**", "@apps/**"],
+      // The web shell is web-slice-no-core's (web-controls.ts), which also resolves the @/ alias.
+      to: ["apps/main/core/api/**", "apps/main/core/mobile/**", "@apps/**"],
       description: "Slices cannot import their host shell. The shell mounts the slice and injects config/db — the arrow is one-way.",
-      message: "A slice must not reach into apps/main/{api,web,mobile}. Take what you need as a mount parameter.",
+      message: "A slice must not reach into apps/main/{api,mobile}. Take what you need as a mount parameter.",
     },
     {
       id: "cross-app-isolation",
@@ -102,7 +144,7 @@ const controls: ControlSet = {
       direction: "import",
       allow: false,
       from: "shared/libs/*/**",
-      to: "configs/**",
+      to: "shared/configs/**",
       description: "Libs cannot import from configs.",
     },
     {
@@ -115,6 +157,39 @@ const controls: ControlSet = {
       description: "Libs cannot import from apps.",
     },
     {
+      // The contract language is read by the orchestrator and by the browser
+      // alike, so it may depend on neither side's runtime. Its tsconfig has no
+      // node types and no DOM; this rule names the same line for the IDE and
+      // for packages that would still type-check (execa, hono, drizzle…).
+      id: "orchestrator-lib-schema-runtime-agnostic",
+      severity: "error",
+      direction: "import",
+      allow: false,
+      from: "shared/libs/orchestrator/lib-schema/**",
+      to: [
+        "node:**",
+        "fs", "path", "os", "child_process", "crypto", "stream", "buffer", "url", "util", "events", "worker_threads", "process",
+        "execa", "hono", "drizzle-orm", "pg", "openai", "pino", "@trigger.dev", "@aws-sdk", "@libs/storage",
+        "react", "react-dom",
+      ],
+      description: "@libs/orchestrator-lib-schema is runtime-agnostic: zod and nothing else. No node built-ins, no server packages, no UI.",
+      message: "The schema is shared by the orchestrator and the browser. Put runtime code with whoever runs it (the orchestrator, or a worker that declares its runtime), not in the schema.",
+    },
+    {
+      // A worker version runs in the browser only when its contract says so.
+      // The frontend imports @libs/orchestrator-workers/<id>/<version>; the
+      // versions without "client" in meta.runtimes are listed here, and so is
+      // the package's lib/ (server helpers: the open API's token, meteredExec).
+      id: "frontend-client-workers-only",
+      severity: "error",
+      direction: "import",
+      allow: false,
+      from: ["apps/main/core/web/**", "apps/main/core/mobile/**", "apps/main/slices/*/*/web/**"],
+      to: [...serverOnlyWorkers(), `${WORKERS_PKG}/lib`],
+      description: "The frontend imports only worker versions whose contract declares the \"client\" runtime.",
+      message: "This worker version does not declare runtimes \"client\". Call it through the orchestrator, or publish a new version that can run in the browser and declares it.",
+    },
+    {
       id: "shared-no-app",
       severity: "error",
       direction: "import",
@@ -124,22 +199,11 @@ const controls: ControlSet = {
       description: "Shared code cannot import from apps.",
     },
     {
-      id: "config-no-cross-import",
-      severity: "error",
-      direction: "import",
-      allow: false,
-      from: "configs/*/**",
-      to: "configs/*/**",
-      selfImport: "skip",
-      description: "Configs cannot import from other configs. Each config package is scoped to one module.",
-      message: "Cross-config imports create cross-module coupling. Use contracts for shared types.",
-    },
-    {
       id: "config-type-only-from-slice",
       severity: "error",
       direction: "import",
       allow: false,
-      from: "configs/**",
+      from: "shared/configs/**",
       to: ["apps/main/slices/*/*/**", "@modules/**", "@seed/**", "@product/**"],
       typeOnlyAllowed: true,
       description: "Configs can only type-import from slices.",
@@ -152,70 +216,17 @@ const controls: ControlSet = {
       severity: "error",
       direction: "import",
       allow: false,
-      from: "configs/**",
+      from: "shared/configs/**",
       to: [
-        "apps/main/shared/api/**",
-        "apps/main/shared/web/**",
-        "apps/main/shared/mobile/**",
+        "apps/main/core/api/**",
+        "apps/main/core/web/**",
+        "apps/main/core/mobile/**",
         "apps/orchestrator/**",
         "@apps/**",
       ],
       description: "Configuration is pure — config files cannot import from application code. Axiom: configuration never imports runtime.",
       message: "Config files are pure declarations. They cannot import from an app shell. If you need a shared type, move it to the slice that owns it and type-import that.",
     },
-    {
-      id: "domain-config-no-system-config-import",
-      severity: "error",
-      direction: "import",
-      allow: false,
-      from: "configs/*/**",
-      to: "configs/access-control/**",
-      selfImport: "skip",
-      description: "Domain configs must not import from system-wide configs. One-way dependency: access-control may import domain vocabulary, never the reverse.",
-      message: "Domain configs are leaves — they must not import from configs/access-control/. If you need shared vocabulary, expose it from the domain config and let access-control import it.",
-    },
-    {
-      id: "contract-zero-runtime",
-      severity: "error",
-      direction: "import",
-      allow: false,
-      from: "shared/contracts/**",
-      to: "apps/main/slices/*/*/**",
-      typeOnlyAllowed: true,
-      description: "Contracts are types-only. No runtime imports.",
-    },
-    // ── Frontend scoped-ac: governed surface ─────────────────────────
-    // Axiom: frontend can check, must not decide (access-control.md — Frontend
-    // Authorization, Tier 1). Tier 1 optimistic checks require role types and
-    // expandRoles; they do not require the engine factory or server query types.
-    // Shape: barrel guard (Category 1) — direction is allowed, surface is governed.
-    {
-      id: "frontend-scoped-ac",
-      severity: "error",
-      direction: "import",
-      allow: false,
-      from: "apps/main/shared/web/**",
-      to: "@prowd/scoped-ac",
-      description: "Frontend may import scoped-ac only for Tier 1 availability-check surface: role types, hierarchy types, scope context types, and expandRoles. Engine factory and server query types are backend-only. See docs/01_reference/access-control.md — Frontend Authorization.",
-      message: "Import only the Tier 1 availability-check surface from scoped-ac. Allowed: ScopedRoleDefinition, ScopedRoleDefinitions, RoleHierarchyConfig, RoleTree, ScopeContext, SubjectsBag, AccessRule, Action, expandRoles. Engine factory (createScopedAc), query types (ResolvedScope, ScopeFilter, DrizzleEntity*), and server setup helpers are backend-only.",
-      exceptions: [
-        {
-          reason: "Tier 1 availability-check surface — role types, hierarchy, scope context, expandRoles",
-          symbols: [
-            { name: "ScopedRoleDefinition", kind: "type" },
-            { name: "ScopedRoleDefinitions", kind: "type" },
-            { name: "RoleHierarchyConfig", kind: "type" },
-            { name: "RoleTree", kind: "type" },
-            { name: "ScopeContext", kind: "type" },
-            { name: "SubjectsBag", kind: "type" },
-            { name: "AccessRule", kind: "type" },
-            { name: "Action", kind: "type" },
-            { name: "expandRoles", kind: "function" },
-          ],
-        },
-      ],
-    },
-
     // ── Module public surface: models/index.ts ────────────
     // Constitution defines models/ as a separate public barrel for schema contracts.
     // Apps may import @prowd/<module>/models but not deep into models/ internals.
@@ -227,15 +238,15 @@ const controls: ControlSet = {
       severity: "error",
       direction: "import",
       allow: false,
-      from: ["apps/main/shared/api/**", "apps/main/shared/web/**", "apps/main/shared/mobile/**", "apps/orchestrator/**"],
+      from: ["apps/main/core/api/**", "apps/main/core/web/**", "apps/main/core/mobile/**", "apps/orchestrator/**"],
       to: "**/models/**",
       description: "A shell can import a slice's model surface (@modules/<slice>/models) but not deep into model internals.",
       message: "Import from @modules/<slice>/models (the public barrel), not from internal model files.",
       exceptions: [
-        { from: "apps/main/shared/api/src/models/**", reason: "App-owned models are internal to the app." },
-        { from: "apps/main/shared/api/src/features/**/models/**", reason: "App feature models are app-internal; cross-feature model imports are allowed by constitution." },
-        { from: "apps/main/shared/api/src/lib/**", reason: "App infrastructure may reference schema." },
-        { from: "apps/main/shared/api/src/wiring/**", reason: "App wiring may reference schema." },
+        { from: "apps/main/core/api/src/models/**", reason: "App-owned models are internal to the app." },
+        { from: "apps/main/core/api/src/features/**/models/**", reason: "App feature models are app-internal; cross-feature model imports are allowed by constitution." },
+        { from: "apps/main/core/api/src/lib/**", reason: "App infrastructure may reference schema." },
+        { from: "apps/main/core/api/src/wiring/**", reason: "App wiring may reference schema." },
         { to: "**/models/index.ts", reason: "Public model barrel is allowed." },
       ],
     },
@@ -247,25 +258,16 @@ const controls: ControlSet = {
       severity: "error",
       direction: "import",
       allow: false,
-      from: "apps/main/shared/web/**",
+      from: "apps/main/core/web/**",
       to: "**/repositories/**",
       description: "Frontend must not import repositories. Frontend accesses backend through HTTP endpoints only.",
-    },
-    {
-      id: "frontend-no-services",
-      severity: "error",
-      direction: "import",
-      allow: false,
-      from: "apps/main/shared/web/**",
-      to: "**/services/**",
-      description: "Frontend must not import services. Frontend accesses backend through HTTP endpoints only.",
     },
     {
       id: "frontend-no-drizzle",
       severity: "error",
       direction: "import",
       allow: false,
-      from: "apps/main/shared/web/**",
+      from: "apps/main/core/web/**",
       to: "drizzle-orm",
       description: "Frontend must not import Drizzle ORM. Frontend accesses backend through HTTP endpoints only.",
     },
@@ -274,10 +276,10 @@ const controls: ControlSet = {
       severity: "error",
       direction: "import",
       allow: false,
-      from: "apps/main/shared/web/**",
-      to: "@prowd/*/api",
-      description: "Frontend must not import module backend surfaces. Frontend accesses backend through HTTP endpoints only.",
-      message: "Use @prowd/<module>/web for frontend, not @prowd/<module>/api.",
+      from: "apps/main/core/web/**",
+      to: ["@modules/*/api", "@seed/*/api", "@product/*/api"],
+      description: "Frontend must not import a slice's backend surface. Frontend accesses backend through HTTP endpoints only.",
+      message: "Use @modules/<slice>/web for frontend, not @modules/<slice>/api.",
     },
 
     // ── API layering ────────────────────────────────────────
@@ -380,7 +382,7 @@ const controls: ControlSet = {
       severity: "warn",
       direction: "import",
       allow: false,
-      from: "apps/main/shared/web/src/routes/**",
+      from: "apps/main/core/web/src/routes/**",
       to: "@radix-ui/*",
       description: "App pages must import UI components from @libs/web-components, not from Radix directly.",
       message: "Import from @libs/web-components instead of @radix-ui/*. The component library wraps Radix with theme integration.",
@@ -391,15 +393,18 @@ const controls: ControlSet = {
   ],
 
   "content-patterns": [
-    // ── Module web barrel must not export pages ────────────────
     {
-      id: "no-page-export-from-web-barrel",
+      id: "theme-no-main-colours",
       severity: "warn",
       type: "line",
-      description: "Module web/index.ts must not export individual pages or layouts. Pages travel inside route contribution objects.",
-      match: ["export.*Page\\b", "export.*Layout\\b"],
-      in: "apps/main/slices/*/*/web/index.ts",
-      message: "Pages and layouts are internal. Export route contribution functions instead. Pages travel inside route objects.",
+      description: "A theme surface never names main-white or main-black: they do not swap with the mode. Fill is `background`, text is `foreground`, text on a coloured fill is `smart-fb`.",
+      // a line that names a main colour, except a mode anchor (a standalone background/foreground line) and a shadow
+      match: ["^(?! {6,8}(?:background|foreground):)(?!.*(?:drop-shadow|inner-shadow)).*\"main-(?:white|black)\""],
+      in: "shared/libs/ui/themes/**/theme.ts",
+      message: "main-white / main-black does not follow the mode. Use `background`, `foreground` or `smart-fb`; keep main-* only if this colour must be white (or black) in every mode, as a brand colour does, and say why.",
+      exceptions: [
+        { in: "**/*-mobile/**", reason: "The mobile themes reuse the web colours; they are migrated with the mobile emitter." },
+      ],
     },
     {
       id: "no-manual-role-check",
@@ -410,7 +415,7 @@ const controls: ControlSet = {
       message: "Use access control middleware, not manual role checks.",
       exceptions: [
         { in: "**/middlewares/**", reason: "Middleware implements role resolution." },
-        { in: "configs/**", reason: "Config declares role structures." },
+        { in: "shared/configs/**", reason: "Config declares role structures." },
       ],
     },
     {
@@ -667,34 +672,6 @@ const controls: ControlSet = {
         { in: "**/providers/**", reason: "Module provider is the adapter boundary — it may import the framework to wrap it." },
       ],
     },
-    {
-      id: "module-adapter-mediated-deps-mobile",
-      severity: "warn",
-      type: "line",
-      description: "Module mobile code must not import adapter-mediable framework libraries directly. Toast and i18n libraries are swappable per product and must go through the module's provider adapters.",
-      match: [
-        "from ['\"]sonner",
-        "from ['\"]react-hot-toast",
-        "from ['\"]react-toastify",
-        "from ['\"]i18next",
-        "from ['\"]react-i18next",
-      ],
-      in: "apps/main/slices/**/mobile/**",
-      message: "This library is adapter-mediated. Modules must consume it via the injected adapter (toast for notifications, translate / TranslationFunction for i18n) instead of importing the library directly.",
-      exceptions: [
-        { in: "**/providers/**", reason: "Module provider is the adapter boundary — it may import the framework to wrap it." },
-      ],
-    },
-    // ── WithScope naming anti-pattern ─────────────────────────
-    {
-      id: "no-with-scope-suffix",
-      severity: "warn",
-      type: "line",
-      description: "Do not suffix repository method names with WithScope — it's redundant. All protected queries use scope by default.",
-      match: ["WithScope\\(", "WithScope\\s*="],
-      in: ["**/repositories/**", "**/*.repository.ts"],
-      message: "WithScope suffix is redundant. Rename to the base name (e.g., findAllWithScope → findAll). Every protected query goes through engine.resolveForReadUpdate — the suffix implies there's an unscoped version.",
-    },
     // ── Rule E: pgTable/pgView declarations must live in models/ ──
     {
       id: "pg-table-only-in-models",
@@ -707,23 +684,6 @@ const controls: ControlSet = {
         { in: "**/models/**", reason: "Models define the schema." },
         { in: "**/migrations/**", reason: "Migrations may reference tables." },
         { in: "shared/libs/scoped-ac/**", reason: "scoped-ac reference schemas." },
-        { in: "**/__test__/**", reason: "Test files." },
-        { in: "**/*.test.*", reason: "Test files." },
-      ],
-    },
-    // ── scoped-ac v1 API globally forbidden ────────────────────────
-    // ADR 2026-04-25 (agnostic-engine): resolveScope, resolveScopeForJoin, canCreate
-    // are replaced by the v2 two-call API (expandRoles + resolveForReadUpdate /
-    // resolveForCreateDelete). Old names must not appear anywhere in consumer code.
-    {
-      id: "scoped-ac-v1-api-forbidden",
-      severity: "error",
-      type: "line",
-      description: "scoped-ac v1 API names are deprecated. Use v2: expandRoles + resolveForReadUpdate / resolveForCreateDelete.",
-      match: ["\\.resolveScope\\(", "resolveScopeForJoin\\(", "\\.canCreate\\("],
-      message: "scoped-ac v1 API. Migrate: resolveScope → resolveForReadUpdate, resolveScopeForJoin → (removed; use access conditions), canCreate → resolveForCreateDelete. See ADR 2026-04-25-agnostic-engine.md.",
-      exceptions: [
-        { in: "shared/libs/scoped-ac/**", reason: "scoped-ac may retain v1 names internally during the migration window." },
         { in: "**/__test__/**", reason: "Test files." },
         { in: "**/*.test.*", reason: "Test files." },
       ],
@@ -790,11 +750,11 @@ const controls: ControlSet = {
         // SVG — only the component library may render raw SVG
         "<svg[\\s>]",
       ],
-      in: ["apps/main/slices/**", "apps/main/shared/web/src/**"],
+      in: ["apps/main/slices/**", "apps/main/core/web/src/**"],
       message: "Use @libs/web-components instead of raw HTML elements. Component map: Button, ButtonGroup, Input, InputGroup, Checkbox, RadioGroup/RadioGroupItem, Toggle/ToggleGroup, Select, Combobox, MultiSelect, DatePicker, FileUpload, Textarea, Label, Dialog, AlertDialog, Alert, EmptyState, Popover, HoverCard, Progress, Breadcrumb, TreeView, Table/*, Separator, List/*, Icon (for SVG). Only <input type=\"file\"> is allowed raw.",
       exceptions: [
         { in: "shared/libs/ui/**", reason: "Component library defines these wrappers." },
-        { in: "apps/main/shared/web/src/routes/sandbox/**", reason: "Sandbox is a dev playground, not production UI." },
+        { in: "apps/main/core/web/src/routes/sandbox/**", reason: "Sandbox is a dev playground, not production UI." },
         { in: "**/__test__/**", reason: "Test files." },
         { in: "**/*.test.*", reason: "Test files." },
       ],
@@ -811,28 +771,11 @@ const controls: ControlSet = {
         "<h[1-4](?!.*element=)[\\s>]",
         "<p(?!.*element=)[\\s>]",
       ],
-      in: ["apps/main/slices/**", "apps/main/shared/web/src/**"],
+      in: ["apps/main/slices/**", "apps/main/core/web/src/**"],
       message: "Raw <h1>-<h4> and <p> elements must carry element=\"type--*\" to participate in the theme engine. Example: <h1 element=\"type--heading1\">.",
       exceptions: [
         { in: "shared/libs/ui/**", reason: "Component library internals." },
-        { in: "apps/main/shared/web/src/routes/sandbox/**", reason: "Sandbox is a dev playground, not production UI." },
-        { in: "**/__test__/**", reason: "Test files." },
-        { in: "**/*.test.*", reason: "Test files." },
-      ],
-    },
-    // ── UI: No camelCase type-- axis values ──────────────────
-    // CSS attribute selectors are case-sensitive. The engine emits [type--body-small].
-    // type--bodySmall in markup silently matches nothing.
-    {
-      id: "no-camelcase-type-axis",
-      severity: "error",
-      type: "line",
-      description: "type-- axis values must be kebab-case. type--bodySmall never matches a CSS selector.",
-      match: ["type--[a-z]+[A-Z]"],
-      in: ["apps/main/slices/**", "apps/main/shared/web/src/**"],
-      message: "type-- axis values must be kebab-case (e.g. type--body-small, not type--bodySmall). CamelCase values silently match no CSS selector.",
-      exceptions: [
-        { in: "shared/libs/ui/**", reason: "Component library internals." },
+        { in: "apps/main/core/web/src/routes/sandbox/**", reason: "Sandbox is a dev playground, not production UI." },
         { in: "**/__test__/**", reason: "Test files." },
         { in: "**/*.test.*", reason: "Test files." },
       ],
@@ -847,7 +790,7 @@ const controls: ControlSet = {
       match: [
         "(?=.*\\belement=)(?=.*\\blayout=)",
       ],
-      in: ["apps/main/slices/**", "apps/main/shared/web/src/**"],
+      in: ["apps/main/slices/**", "apps/main/core/web/src/**"],
       message: "A single node cannot have both element= and layout=. Use one or the other. Split into a layout wrapper and a styled child if both are needed.",
       exceptions: [
         { in: "shared/libs/ui/**", reason: "Component library internals." },
@@ -876,12 +819,12 @@ const controls: ControlSet = {
         // Raw <main> — use Main from @libs/web-layouts
         "<main[\\s>]",
       ],
-      in: ["apps/main/slices/**", "apps/main/shared/web/src/**"],
+      in: ["apps/main/slices/**", "apps/main/core/web/src/**"],
       message: "Shell-level structure (h-screen, overflow-auto, <main>) and layout= on bare divs must use @libs/web-layouts primitives (Shell, Page, Main, ScrollArea, etc.).",
       exceptions: [
         { in: "shared/libs/ui/**", reason: "Layout library internals." },
-        { in: "apps/main/shared/web/src/routes/sandbox/theme-editor/**", reason: "Theme editor is a meta-tool — must be independent from the theme engine." },
-        { in: "apps/main/shared/web/src/routes/sandbox/_shared/**", reason: "Sandbox shared components are dev tooling, not production UI." },
+        { in: "apps/main/core/web/src/routes/sandbox/theme-editor/**", reason: "Theme editor is a meta-tool — must be independent from the theme engine." },
+        { in: "apps/main/core/web/src/routes/sandbox/_shared/**", reason: "Sandbox shared components are dev tooling, not production UI." },
         { in: "**/__test__/**", reason: "Test files." },
         { in: "**/*.test.*", reason: "Test files." },
       ],
@@ -925,7 +868,7 @@ const controls: ControlSet = {
         // Inline style dimensions — same ownership rule
         `${_ST}(?:height|width|overflow|position)`,
       ],
-      in: ["apps/main/slices/**", "apps/main/shared/web/src/**"],
+      in: ["apps/main/slices/**", "apps/main/core/web/src/**"],
       message: "Remove this class from the layout component. Height, width, overflow, flex-fill, and positioning are set by the theme engine via scale= and layout= attributes. Use the `scale` or `sticky` props instead.",
       exceptions: [
         { in: "shared/libs/ui/**", reason: "Layout library internals." },
@@ -991,11 +934,11 @@ const controls: ControlSet = {
         "className=.*\\b(?:select-none)",
         "className=.*\\b(?:outline-\\w+)",
       ],
-      in: ["apps/main/slices/**", "apps/main/shared/web/src/**"],
+      in: ["apps/main/slices/**", "apps/main/core/web/src/**"],
       message: "Tailwind aesthetic classes are owned by the theme engine. Use element= and axis attributes instead. Only structural Tailwind (flex, grid, w, h, items, justify, overflow, relative, absolute, mx-auto) is allowed.",
       exceptions: [
         { in: "shared/libs/ui/**", reason: "Component library is the theme boundary." },
-        { in: "apps/main/shared/web/src/routes/sandbox/**", reason: "Sandbox is a dev playground, not production UI." },
+        { in: "apps/main/core/web/src/routes/sandbox/**", reason: "Sandbox is a dev playground, not production UI." },
         { in: "**/__test__/**", reason: "Test files." },
         { in: "**/*.test.*", reason: "Test files." },
       ],
@@ -1009,11 +952,11 @@ const controls: ControlSet = {
       match: [
         "style=\\{.*(?:color|backgroundColor|background|border|shadow|opacity|fontFamily|fontSize|fontWeight|borderRadius)",
       ],
-      in: ["apps/main/slices/**", "apps/main/shared/web/src/**"],
+      in: ["apps/main/slices/**", "apps/main/core/web/src/**"],
       message: "Inline styles for visual properties bypass the theme engine. Use element= and axis attributes instead.",
       exceptions: [
         { in: "shared/libs/ui/**", reason: "Component library internals." },
-        { in: "apps/main/shared/web/src/routes/sandbox/**", reason: "Sandbox is a dev playground, not production UI." },
+        { in: "apps/main/core/web/src/routes/sandbox/**", reason: "Sandbox is a dev playground, not production UI." },
         { in: "**/__test__/**", reason: "Test files." },
         { in: "**/*.test.*", reason: "Test files." },
       ],
@@ -1027,143 +970,13 @@ const controls: ControlSet = {
       match: [
         "style=\\{.*--(?:bg|fg|tint|border-color|bg-alpha)",
       ],
-      in: ["apps/main/slices/**", "apps/main/shared/web/src/**"],
+      in: ["apps/main/slices/**", "apps/main/core/web/src/**"],
       message: "Do not override theme composition variables (--bg, --fg, --tint, --border-color, --bg-alpha) via inline styles. Customise through the theme object or concept overrides.",
       exceptions: [
         { in: "shared/libs/ui/**", reason: "Theme engine internals." },
         { in: "**/__test__/**", reason: "Test files." },
         { in: "**/*.test.*", reason: "Test files." },
       ],
-    },
-
-    // ── TypeScript discipline: `as` casts ─────────────────────
-    // The constitution forbids `as` casts except at sanctioned system
-    // boundaries (Hono validator erasure, BetterAuth response normalization,
-    // Drizzle row reads where TS cannot infer, TanStack Router typing gaps,
-    // test mocks, `as const`).
-    //
-    // Rule 1: `as unknown as X` double-casts are ALWAYS banned — no
-    //   boundary can legitimise them. They bypass the type system entirely.
-    //
-    // Rule 2: Single `as X` casts must be accompanied by a
-    //   `// boundary:` comment on the same line or the line immediately
-    //   above, naming the sanctioned context. `as const` is exempt
-    //   (language idiom, not a cast), as are `as never` (Hono validator
-    //   erasure — always at a boundary), import aliases, and TSX generic
-    //   identifiers.
-    //
-    // See _meta/reports/2026-04-19-as-cast-inventory.md for context.
-    {
-      id: "no-as-unknown-as",
-      severity: "error",
-      type: "line",
-      description: "`as unknown as X` double-casts are always forbidden — they bypass the type system.",
-      match: ["\\bas\\s+unknown\\s+as\\b"],
-      message: "`as unknown as X` is unconditionally banned. Use a single `as X` at a sanctioned boundary (with a `// boundary:` comment), or rewrite the types / add runtime validation.",
-      exceptions: [
-        { in: "**/__test__/**", reason: "Test files may mock with double-casts." },
-        { in: "**/*.test.*", reason: "Test files." },
-        { in: "**/__proof__/**", reason: "Type-proof files are PoC scaffolding." },
-        { in: "apps/main/shared/web/src/routes/sandbox/**", reason: "Sandbox playground." },
-        { in: "apps/main/slices/seed/notifications/**", reason: "Stub module — separate decision." },
-        { in: "apps/main/shared/mobile/**", reason: "POC app — deferred." },
-      ],
-    },
-    {
-      id: "require-boundary-comment-on-cast",
-      // Superseded by the `cast-boundary` processor (allowlist-gated enforcement).
-      // Comment convention preserved as documentation; enforcement moved to file allowlists.
-      severity: "warn",
-      type: "line",
-      description: "`as` casts must carry a `// boundary:` comment naming the sanctioned boundary.",
-      // Match ` as <TypeName>` where TypeName starts with a capital letter or `{`
-      // (type literal) or `(` (parenthesized type). Exclude:
-      //   - `as const` (language idiom)
-      //   - `as never` (Hono validator erasure — always at a boundary; covered by closed list #1)
-      //   - import/export aliases (`import { X as Y } from ...` / `export ... as Y`)
-      //   - generic type params like `Array<T as ...>` (non-standard, unlikely)
-      match: [
-        " as (?!const\\b|never\\b|unknown\\b)[A-Z_$][A-Za-z0-9_$]*",
-        " as \\{",
-        " as \\(",
-      ],
-      // Skip when:
-      //   - same / preceding line carries `// boundary:` annotation
-      //   - line begins with `import` / `export` (single-line statement)
-      //   - line is a destructure entry inside a multi-line import (e.g.
-      //     `  X as Y,` between `import {` and `} from "..."`); the
-      //     processor only walks back one non-blank line, so this pattern
-      //     lets the chain continue through alias-only lines.
-      skipIfNearby: "//\\s*boundary:|^\\s*(?:import|export)\\s|^\\s*[A-Za-z_$][A-Za-z0-9_$]*\\s+as\\s+[A-Za-z_$][A-Za-z0-9_$]*\\s*,?\\s*$",
-      in: [
-        "shared/libs/**",
-        "apps/main/slices/seed/user-organization-mgmt/**",
-        "configs/**",
-        "apps/main/shared/api/src/**",
-        "apps/main/shared/web/src/**",
-        "apps/orchestrator/shared/**",
-        "apps/orchestrator/slices/**",
-      ],
-      message: "`as` cast without `// boundary:` annotation. Either add a comment naming the sanctioned boundary (Hono, BetterAuth, Drizzle, Test, TanStack), rewrite using proper typing / runtime validation, or use `as const` if that's what you meant.",
-      exceptions: [
-        { in: "**/__test__/**", reason: "Test files." },
-        { in: "**/*.test.*", reason: "Test files." },
-        { in: "**/__proof__/**", reason: "Type-proof files." },
-        { in: "apps/main/shared/web/src/routes/sandbox/**", reason: "Sandbox playground." },
-        { in: "apps/main/slices/seed/notifications/**", reason: "Stub module — separate decision." },
-        { in: "apps/main/shared/mobile/**", reason: "POC app — deferred." },
-      ],
-    },
-
-    // ── i18n enforcement ─────────────────────────────────────
-    {
-      id: "i18n-config-strings-web",
-      severity: "warn",
-      type: "co-occurrence",
-      description: "Web app TS files with user-facing string properties should use i18n.",
-      in: "apps/main/shared/web/src/**/*.ts",
-      match: ["title:\\s*['\"]", "label:\\s*['\"]", "description:\\s*['\"]", "message:\\s*['\"]"],
-      mustCoexist: ["i18next", "useTranslation", "\\bt\\("],
-      message: "This file contains user-facing string properties (title, label, etc.) but doesn't use i18n. Wrap with t() or accept a TranslationFunction.",
-      exceptions: [
-        { in: "**/variables.config.ts", reason: "Display format preferences, not user-facing labels." },
-        { in: "**/route-tree.ts", reason: "Route definitions — titles come from module route contributions." },
-        { in: "**/lib/**", reason: "Adapter/infrastructure code — errors are mapped to i18n keys downstream." },
-        { in: "apps/main/shared/web/src/routes/sandbox/theme-editor/**", reason: "Theme editor is a developer tool — strings are editor labels, not product UI." },
-        { in: "apps/main/shared/web/src/routes/sandbox/_shared/**", reason: "Sandbox shared dev tooling." },
-      ],
-    },
-    {
-      id: "i18n-config-strings-mobile",
-      severity: "warn",
-      type: "co-occurrence",
-      description: "Mobile app TS files with user-facing string properties should use i18n.",
-      in: "apps/main/shared/mobile/src/**/*.ts",
-      match: ["title:\\s*['\"]", "label:\\s*['\"]", "description:\\s*['\"]", "message:\\s*['\"]"],
-      mustCoexist: ["i18next", "useTranslation", "\\bt\\("],
-      message: "This file contains user-facing string properties (title, label, etc.) but doesn't use i18n. Wrap with t() or accept a TranslationFunction.",
-      exceptions: [
-        { in: "**/lib/**", reason: "Adapter/infrastructure code — errors are mapped to i18n keys downstream." },
-      ],
-    },
-    // ── BA HTTP CRUD endpoints must stay disabled ─────────────────────
-    // Successor to the retired `data-access:ba-disabled-paths-missing` rule.
-    // The org-plugin's nine HTTP endpoints (/api/auth/organization/*) bypass
-    // the module middleware chain and the engine; they must be turned off
-    // via BetterAuth's `disabledPaths` so every entity write goes through
-    // /api/client/* and the BAAdapter. Single regex with nine path lookaheads —
-    // the rule fires unless all are present in the file.
-    {
-      id: "ba-disabled-paths-complete",
-      severity: "error",
-      type: "co-occurrence",
-      description: "BetterAuth instance must disable all nine /organization/* HTTP CRUD endpoints. Each one bypasses the module's authorization chain and the scoped-ac engine.",
-      in: "apps/main/slices/seed/user-organization-mgmt/api/services/mount-user-org-auth.ts",
-      match: ["\\bbetterAuth\\("],
-      mustCoexist: [
-        "(?=[\\s\\S]*[\"']/organization/create[\"'])(?=[\\s\\S]*[\"']/organization/update[\"'])(?=[\\s\\S]*[\"']/organization/delete[\"'])(?=[\\s\\S]*[\"']/organization/invite-member[\"'])(?=[\\s\\S]*[\"']/organization/accept-invitation[\"'])(?=[\\s\\S]*[\"']/organization/reject-invitation[\"'])(?=[\\s\\S]*[\"']/organization/cancel-invitation[\"'])(?=[\\s\\S]*[\"']/organization/remove-member[\"'])(?=[\\s\\S]*[\"']/organization/update-member-role[\"'])",
-      ],
-      message: "BetterAuth is configured but `disabledPaths` is missing one or more of the nine /organization/* CRUD entries. All nine must be disabled — those endpoints bypass /api/client/* and the BAAdapter, leaking writes around the access control system.",
     },
 
     // ── Config data purity ────────────────────────────────────────
@@ -1177,49 +990,13 @@ const controls: ControlSet = {
         "^export\\s+const\\s+\\w+\\s*=\\s*(async\\s+)?\\(",
         "^export\\s+const\\s+\\w+\\s*=\\s*(async\\s+)?function",
       ],
-      in: ["configs/**/*.config.ts"],
+      in: ["shared/configs/**/*.config.ts"],
       message: "Export a plain data value instead of a function. Runtime logic belongs in the module, not in a config file.",
     },
   ],
 
-  metrics: [
-    { id: "max-file-lines", enabled: false, type: "file-lines", warn: 300, error: 500 },
-    { id: "max-folder-files", enabled: false, type: "folder-files", warn: 15, error: 25 },
-    { id: "max-function-lines", enabled: false, type: "function-lines", warn: 50, error: 80 },
-    { id: "max-function-params", enabled: false, type: "function-params", warn: 4, error: 6 },
-  ],
 
   structure: [
-    {
-      id: "module-has-controls",
-      severity: "warn",
-      type: "required",
-      description: "Every module should have a lint-controls.ts.",
-      path: "apps/main/slices/*/*/lint-controls.ts",
-    },
-    {
-      id: "lib-has-controls",
-      severity: "warn",
-      type: "required",
-      description: "Every lib should have a lint-controls.ts.",
-      path: "shared/libs/*/lint-controls.ts",
-    },
-    {
-      id: "no-stray-module-root-files",
-      severity: "error",
-      type: "forbidden",
-      description: "No .ts files directly in module root.",
-      path: "apps/main/slices/*/*/*.ts",
-      allowedFiles: ["lint-controls.ts", "lint-config.ts", "index.ts"],
-    },
-    {
-      id: "module-has-shared-types",
-      severity: "error",
-      type: "required",
-      description: "Every module must have shared/types/ for public type contracts.",
-      path: "apps/main/slices/*/*/shared/types/",
-      mustNotBeEmpty: true,
-    },
     // ── Config zone positive assertion ────────────────────────────
     // Axiom (config-architecture.md): everything configurable lives under configs/.
     // Positive control: any *.config.ts outside the configs/ zone is a violation —
@@ -1231,7 +1008,7 @@ const controls: ControlSet = {
       description: "Module config files (*.config.ts) must live under configs/. Placing them in shared/ or scattered across apps/ violates the single-config-zone axiom.",
       path: "**/*.config.ts",
       exceptions: [
-        { path: "configs/**", reason: "configs/ is the canonical config zone — all module configs live here." },
+        { path: "shared/configs/**", reason: "configs/ is the canonical config zone — all module configs live here." },
         { path: "apps/**/config/**", reason: "App-level wiring (module-mount, server config) is app-internal infrastructure, not module config." },
         { path: "shared/libs/**", reason: "Library-internal config helpers are not module configs." },
         // Tooling configs — these configure build, test, and migration tools, not module business logic.
@@ -1254,40 +1031,11 @@ const controls: ControlSet = {
       allowedFiles: [],
       exceptions: [
         { path: "**/models/**", reason: "Models directory is the canonical location." },
-        { path: "configs/**", reason: "Configs may use Zod for value declarations." },
+        { path: "shared/configs/**", reason: "Configs may use Zod for value declarations." },
         { path: "**/__test__/**", reason: "Test files." },
       ],
     },
 
-    // ── Config zone rules ─────────────────────────────────────────
-    // Enforce the canonical config-architecture.md layout:
-    // only .config.ts, .ac.ts, index.ts, or types.ts are allowed.
-    {
-      id: "configs-suffix-discipline",
-      severity: "warn",
-      type: "forbidden",
-      description: "Files under configs/ must use .config.ts, .ac.ts, index.ts, or types.ts suffixes. Other names signal runtime code or misplaced types.",
-      message: "Rename to *.config.ts (data), *.ac.ts (rules), index.ts, or types.ts — or move the file to the owning module.",
-      path: "configs/**/*.ts",
-      exceptions: [
-        { path: "configs/**/*.config.ts", reason: "Allowed: config data declaration files." },
-        { path: "configs/**/*.ac.ts", reason: "Allowed: access-control rule files." },
-        { path: "configs/**/index.ts", reason: "Allowed: package entry points." },
-        { path: "configs/**/types.ts", reason: "Allowed: type declaration files." },
-      ],
-    },
-    {
-      id: "ac-rules-only-in-rules-folder",
-      severity: "error",
-      type: "forbidden",
-      description: "*.ac.ts files must live under configs/access-control/rules/<module>/. An ac file elsewhere mixes rule authorship with config declarations.",
-      message: "Move this .ac.ts file to configs/access-control/rules/<module>/.",
-      path: "configs/**/*.ac.ts",
-      exceptions: [
-        { path: "configs/access-control/rules/*.ac.ts", reason: "Canonical location for AC rule files (direct in rules/)." },
-        { path: "configs/access-control/rules/**/*.ac.ts", reason: "Canonical location for AC rule files (in module subfolders)." },
-      ],
-    },
   ],
 
   // ── JSX External Allowlist ─────────────────────────────────────
@@ -1300,25 +1048,9 @@ const controls: ControlSet = {
       severity: "warn",
       description: "JSX components from external packages must come from the approved design system.",
       message: "This component is imported from an external package not in the UI allowlist. Use @libs/web-components or @libs/web-layouts instead.",
-      in: ["apps/main/slices/**", "apps/main/shared/web/src/**"],
-      allowedPackages: [
-        // Design system
-        "@libs/web-components",
-        "@libs/web-layouts",
-        "@libs/list-query",
-        "@libs/availability-check",
-        // React core (Fragment, Suspense, StrictMode, etc.)
-        "react",
-        "react-dom",
-        // Router (Link, Outlet, etc.)
-        "@tanstack/react-router",
-        "@tanstack/react-router-devtools",
-        "@tanstack/react-query",
-        // i18n (Trans component)
-        "react-i18next",
-        // Forms (Controller, FormProvider, etc.)
-        "react-hook-form",
-      ],
+      in: ["apps/main/slices/**", "apps/main/core/web/src/**"],
+      // the list lives in the UI library: shared/libs/ui/rules/code.ts
+      allowedPackages: [...ALLOWED_JSX_PACKAGES],
       exceptions: [
         { in: "shared/libs/ui/**", reason: "Component library wraps external primitives." },
         { in: "**/__test__/**", reason: "Test files." },
@@ -1327,10 +1059,24 @@ const controls: ControlSet = {
     },
   ],
 
+  // ── Slot Rules ─────────────────────────────────────────────────
+  // The 17 rules of UI structure (concept-table v98, slot rules tab):
+  // container × slot × child. Checks UI as code (tsx fixtures and slice code)
+  // and UI as data (pattern json). Rules live in slot-rules-data.ts.
+  "slot-rules": {
+    in: ["shared/libs/ui/web/patterns/**"],
+    exceptions: [
+      { in: "shared/libs/ui/web/primitives/**", reason: "The primitives themselves." },
+      { in: "**/__test__/**", reason: "Test files." },
+      { in: "**/*.test.*", reason: "Test files." },
+    ],
+    severity: "warn",
+  },
+
   // ── JSX AST Rules ──────────────────────────────────────────────
   // These rules require parsing the JSX tree (parent-child awareness).
   "jsx-ast": {
-    in: ["apps/main/slices/**", "apps/main/shared/web/src/**"],
+    in: ["apps/main/slices/**", "apps/main/core/web/src/**"],
     exceptions: [
       { in: "shared/libs/ui/**", reason: "Component library internals." },
       { in: "**/__test__/**", reason: "Test files." },
@@ -1369,446 +1115,12 @@ const controls: ControlSet = {
     },
   },
 
-  // ── Cast Boundary Allowlists ───────────────────────────────────────
-  // Files listed here are permitted to contain `as X` casts at the named boundary.
-  // Enforcement semantics (see cast-boundary.processor.ts):
-  //   File in list + correct comment       → PASS
-  //   File in list + missing comment       → WARN  (documentation debt)
-  //   File in list + wrong-boundary comment → WARN  (doc mismatch)
-  //   File NOT in any list                 → ERROR
-  //   `as const` / `as never` / import aliases → always exempt
-  //
-  // Closed boundary list: BetterAuth | Hono | Drizzle | TanStack | Test
-  // DO NOT add boundaries outside this list.
-  "cast-boundary": {
-    allowLists: {
-      BetterAuth: [
-        // ── Module-internal BetterAuth construction ────────────
-        { path: "apps/main/slices/seed/user-organization-mgmt/api/services/mount-user-org-auth.ts",
-          rationale: "BetterAuth server setup + plugin wiring (encapsulated inside the module)" },
-        { path: "apps/main/slices/seed/user-organization-mgmt/api/mount.ts",
-          rationale: "BA system caller adapter + per-method auth.api widening at the mount seam" },
-        // ── App infrastructure ──────────────────────────────────
-        { path: "apps/main/shared/api/src/lib/error.ts",
-          rationale: "BetterAuth error-shape translation" },
-        // ── Web auth client infrastructure ──────────────────────
-        { path: "apps/main/shared/web/src/lib/auth-client-adapter.ts",
-          rationale: "Adapter to BetterAuth untyped client surface" },
-        { path: "apps/main/shared/web/src/components/**",
-          rationale: "App-level components may consume BetterAuth session data" },
-        { path: "apps/main/shared/web/src/hooks/**",
-          rationale: "App-level hooks consume BetterAuth session shapes" },
-        // ── Module API services + lib ───────────────────────────
-        { path: "apps/main/slices/seed/user-organization-mgmt/api/services/**",
-          rationale: "Services bridge BetterAuth API calls and cross-org operations" },
-        { path: "apps/main/slices/seed/user-organization-mgmt/api/lib/**",
-          rationale: "Module API infrastructure bridges BetterAuth and Hono context" },
-        // ── Module shared utilities ──────────────────────────────
-        { path: "apps/main/slices/seed/user-organization-mgmt/shared/**",
-          rationale: "Shared utilities process BetterAuth-derived and module config shapes" },
-        // ── Module web layer ────────────────────────────────────
-        { path: "apps/main/slices/seed/user-organization-mgmt/web/**",
-          rationale: "All web code in this module is at the BetterAuth session boundary" },
-      ],
-      Hono: [
-        // ── Module routes (c.req.valid type erasure) ────────────
-        { path: "apps/main/slices/*/*/api/routes/**",
-          rationale: "c.req.valid() return type is erased to unknown at the Hono route boundary" },
-        // ── Module middlewares (Hono context vars) ───────────────
-        { path: "apps/main/slices/*/*/api/middlewares/**",
-          rationale: "Hono context variable type erasure (c.get/c.set)" },
-        // ── App API routes ───────────────────────────────────────
-        { path: "apps/main/shared/api/src/routes/**",
-          rationale: "c.req.valid type erasure at Hono router boundary" },
-        // ── App feature routers (flat naming convention) ─────────
-        { path: "apps/main/shared/api/src/features/**/*.router.ts",
-          rationale: "c.req.valid type erasure at Hono route boundary — same as routes/, flat convention" },
-        // ── Feature session-context helpers ──────────────────────
-        { path: "apps/main/shared/api/src/features/**/lib/session-context.ts",
-          rationale: "c.get() context variable type erasure at the Hono context boundary" },
-        // ── scoped-ac Hono adapter ───────────────────────────────
-        { path: "shared/libs/scoped-ac/src/adapters/hono/**",
-          rationale: "Hono middleware adapter casts Hono context variable shapes" },
-      ],
-      Drizzle: [
-        // ── Module repositories (ORM row-read inference) ─────────
-        { path: "apps/main/slices/*/*/api/repositories/**",
-          rationale: "Drizzle ORM row-read inference gaps require casts at the repository boundary" },
-        // ── App feature repositories (flat naming convention) ────
-        { path: "apps/main/shared/api/src/features/**/*.repository.ts",
-          rationale: "Drizzle ORM row-read inference gaps — same as repositories/, flat convention" },
-        // ── Module mount entrypoint (db narrowing) ───────────────
-        { path: "apps/main/slices/*/*/api/mount*",
-          rationale: "Mount entrypoint narrows app superset db type to the module's schema subset" },
-        // ── scoped-ac Drizzle adapter ────────────────────────────
-        { path: "shared/libs/scoped-ac/src/adapters/drizzle/**",
-          rationale: "Drizzle column/SQL fragment casts at the adapter boundary" },
-      ],
-      TanStack: [
-        // ── Route tree assembly ──────────────────────────────────
-        { path: "apps/main/shared/web/src/lib/build-route-tree.ts",
-          rationale: "TanStack Router generic erasure in route-tree assembly" },
-        { path: "apps/main/shared/web/src/route-tree.ts",
-          rationale: "TanStack Router generated route tree — strict generic inference gaps" },
-        // ── App route files ──────────────────────────────────────
-        { path: "apps/main/shared/web/src/routes/**",
-          rationale: "TanStack Router strict:false hook types + Link dynamic props" },
-        // ── Feature page files ───────────────────────────────────
-        // Page files own TanStack interactions (useParams, useNavigate, as never
-        // path/params casts) when pages move out of routes/ into features/*/pages/.
-        // Scoped to pages/ only — other feature files (api, hooks, components)
-        // have no legitimate TanStack cast surface.
-        { path: "apps/main/shared/web/src/features/**/pages/**",
-          rationale: "TanStack Router hook types + params casts in feature page files" },
-        // ── Module route definitions ─────────────────────────────
-        { path: "apps/main/slices/*/*/web/routes/**",
-          rationale: "Module-level TanStack Router route definition objects" },
-        // ── App entrypoint ───────────────────────────────────────
-        { path: "apps/main/shared/web/src/main.tsx",
-          rationale: "TanStack Router routeTree cast at app entrypoint" },
-      ],
-      Test: [
-        { path: "**/__test__/**", rationale: "Test mocks may require double-cast or loose typing" },
-        { path: "**/*.test.ts",   rationale: "Test files" },
-        { path: "**/*.test.tsx",  rationale: "Test files" },
-        { path: "**/*.spec.ts",   rationale: "Test files" },
-        { path: "**/*.spec.tsx",  rationale: "Test files" },
-      ],
-    },
-  },
-  // ── DSL Coherence ────────────────────────────────────────────────
-  // Validates that access-control DSL rule files do not declare incoherent
-  // role combinations. Currently enforces Axiom 3 of scoped-ac:
-  //
-  //   "Reads and updates resolve to a query-clause filter.
-  //    Creates and deletes resolve to an allow/deny verdict."
-  //
-  // resolveForCreateDelete evaluates target rules by walking field paths
-  // directly into the properties dict — it cannot follow traversal hops.
-  // A traversal target on a create/delete role silently denies all callers.
-  //
-  // Correct pattern (from platform-admin.ac.ts):
-  //   manage_ops_center_members:   { member: { actions: ["read","update"],  target: ["member.orgId → org.type:'ops_center'"] } }
-  //   manage_ops_center_members_write: { member: { actions: ["create","delete"], target: [] } }
-  "dsl-coherence": [
-    {
-      id: "traversal-in-create-delete",
-      severity: "error",
-      description: "DSL role has create/delete action with a traversal (→) target.",
-      message: "resolveForCreateDelete cannot follow traversal (→) hops — split into two roles: one with [\"read\",\"update\"] + traversal target, another with [\"create\",\"delete\"] + direct or empty target.",
-      in: "configs/access-control/rules/**/*.ac.ts",
-    },
-  ],
-
-  // ── Pattern Tags ─────────────────────────────────────────────────
-  // Enforces the closed authorized set of [AC:X] access-control tags
-  // across all service and repository files in the entire codebase.
-  //
-  // Tag grammar and full pattern reference:
-  //   docs/01_reference/access-control.md#patterns
-  //   shared/libs/scoped-ac/docs/consumer/AC-PATTERNS.md
-  //
-  // Authorized tags:
-  //
-  //   Repository-side (engine call location):
-  //     AC:R      — Read, engine.resolveRead filters the query
-  //     AC:R·J    — Enrichment join read, engine.resolveRead where applied in LEFT JOIN ON
-  //     AC:G2     — Gate-2 boolean (findByIdForAllow), resolveUpdate/resolveDelete inside
-  //
-  //   Service-side (gate location):
-  //     AC:C·I    — Create → repo executor
-  //     AC:C·P    — Create → external provider (generic)
-  //     AC:C·P:BA — Create → BetterAuth executor
-  //     AC:U·I    — Update → repo executor (gate via findByIdForAllow)
-  //     AC:U·P    — Update → external provider
-  //     AC:U·P:BA — Update → BetterAuth executor
-  //     AC:D·I    — Delete by id → repo executor (gate via findByIdForAllow)
-  //     AC:D·P    — Delete by id → external provider
-  //     AC:D·P:BA — Delete by id → BetterAuth executor
-  //     AC:D·R·I  — Delete with row in hand → repo executor
-  //     AC:D·R·P  — Delete with row in hand → external provider (generic)
-  //     AC:D·R·P:BA — Delete with row in hand → BetterAuth executor
-  "pattern-tags": {
-    authorized: [
-      // Repository-side
-      "AC:R",
-      "AC:R·J",
-      "AC:G2",
-      // Service-side — internal (repo) executor
-      "AC:C·I",
-      "AC:U·I",
-      "AC:D·I",
-      "AC:D·R·I",
-      // Service-side — external provider (generic)
-      "AC:C·P",
-      "AC:U·P",
-      "AC:D·P",
-      "AC:D·R·P",
-      // Service-side — BetterAuth executor
-      "AC:C·P:BA",
-      "AC:U·P:BA",
-      "AC:D·P:BA",
-      "AC:D·R·P:BA",
-    ],
-
-    definitions: [
-      // ── Repository: Read ─────────────────────────────────────────
-      {
-        name: "AC:R",
-        description: "Repo read — engine.resolveRead applies where/joins/select to the query",
-        in: "**/*.repository.ts",
-        requires: [
-          { match: "engine\\.resolveRead\\(", description: "engine.resolveRead call" },
-        ],
-      },
-      {
-        name: "AC:R·J",
-        description: "Repo enrichment join read — engine.resolveRead where applied in LEFT JOIN ON, never WHERE",
-        in: "**/*.repository.ts",
-        requires: [
-          { match: "engine\\.resolveRead\\(", description: "engine.resolveRead call" },
-        ],
-      },
-
-      // ── Repository: Gate-2 ────────────────────────────────────────
-      {
-        name: "AC:G2",
-        description: "Gate-2 findByIdForAllow — returns boolean only, resolveUpdate or resolveDelete inside, never the row",
-        in: "**/*.repository.ts",
-        requires: [
-          {
-            match: ["engine\\.resolveUpdate\\(", "engine\\.resolveDelete\\("],
-            description: "engine.resolveUpdate or engine.resolveDelete call",
-          },
-        ],
-      },
-
-      // ── Service: Create — internal executor ──────────────────────
-      {
-        name: "AC:C·I",
-        description: "Service create, repo executor — resolveCreate verdict + audit + forbidden + repo write",
-        in: "**/*.service.ts",
-        requires: [
-          { match: "engine\\.resolveCreate\\(", description: "engine.resolveCreate call" },
-          { match: "\\bthis\\.audit", description: "audit call" },
-          { match: "\\.errors\\.forbidden\\(|throw.*[Ff]orbidden", description: "forbidden() throw on denied" },
-        ],
-        coherence: [
-          {
-            extract1: "resolveCreate\\([^,]+,\\s*[\"'](\\w+)[\"']",
-            extract2: "entity:\\s*[\"'](\\w+)[\"']",
-            description: "entity in resolveCreate must match entity in audit log",
-          },
-        ],
-      },
-
-      // ── Service: Create — external provider ──────────────────────
-      {
-        name: "AC:C·P",
-        description: "Service create, external provider executor — resolveCreate verdict + audit + forbidden",
-        in: "**/*.service.ts",
-        requires: [
-          { match: "engine\\.resolveCreate\\(", description: "engine.resolveCreate call" },
-          { match: "\\bthis\\.audit", description: "audit call" },
-          { match: "\\.errors\\.forbidden\\(|throw.*[Ff]orbidden", description: "forbidden() throw on denied" },
-        ],
-        coherence: [
-          {
-            extract1: "resolveCreate\\([^,]+,\\s*[\"'](\\w+)[\"']",
-            extract2: "entity:\\s*[\"'](\\w+)[\"']",
-            description: "entity in resolveCreate must match entity in audit log",
-          },
-        ],
-      },
-      {
-        name: "AC:C·P:BA",
-        description: "Service create, BetterAuth executor — resolveCreate verdict + audit + forbidden + baAdapter call",
-        in: "**/*.service.ts",
-        requires: [
-          { match: "engine\\.resolveCreate\\(", description: "engine.resolveCreate call" },
-          { match: "\\bthis\\.audit", description: "audit call" },
-          { match: "\\.errors\\.forbidden\\(|throw.*[Ff]orbidden", description: "forbidden() throw on denied" },
-          { match: "this\\.baAdapter\\.", description: "BAAdapter call" },
-        ],
-        coherence: [
-          {
-            extract1: "resolveCreate\\([^,]+,\\s*[\"'](\\w+)[\"']",
-            extract2: "entity:\\s*[\"'](\\w+)[\"']",
-            description: "entity in resolveCreate must match entity in audit log",
-          },
-        ],
-      },
-
-      // ── Service: Update — internal executor ──────────────────────
-      {
-        name: "AC:U·I",
-        description: "Service update, repo executor — findByIdForAllow gate + audit + forbidden + repo write",
-        in: "**/*.service.ts",
-        requires: [
-          { match: "\\.findByIdForAllow\\(", description: "findByIdForAllow gate call" },
-          { match: "\\bthis\\.audit", description: "audit call" },
-          { match: "\\.errors\\.forbidden\\(|throw.*[Ff]orbidden", description: "forbidden() throw on denied" },
-        ],
-      },
-
-      // ── Service: Update — external provider ──────────────────────
-      {
-        name: "AC:U·P",
-        description: "Service update, external provider — findByIdForAllow gate + audit + forbidden",
-        in: "**/*.service.ts",
-        requires: [
-          { match: "\\.findByIdForAllow\\(", description: "findByIdForAllow gate call" },
-          { match: "\\bthis\\.audit", description: "audit call" },
-          { match: "\\.errors\\.forbidden\\(|throw.*[Ff]orbidden", description: "forbidden() throw on denied" },
-        ],
-      },
-      {
-        name: "AC:U·P:BA",
-        description: "Service update, BetterAuth executor — findByIdForAllow gate + audit + forbidden + baAdapter call",
-        in: "**/*.service.ts",
-        requires: [
-          { match: "\\.findByIdForAllow\\(", description: "findByIdForAllow gate call" },
-          { match: "\\bthis\\.audit", description: "audit call" },
-          { match: "\\.errors\\.forbidden\\(|throw.*[Ff]orbidden", description: "forbidden() throw on denied" },
-          { match: "this\\.baAdapter\\.", description: "BAAdapter call" },
-        ],
-      },
-
-      // ── Service: Delete by id — internal executor ─────────────────
-      {
-        name: "AC:D·I",
-        description: "Service delete by id, repo executor — findByIdForAllow gate + audit + forbidden + repo delete",
-        in: "**/*.service.ts",
-        requires: [
-          { match: "\\.findByIdForAllow\\(", description: "findByIdForAllow gate call" },
-          { match: "\\bthis\\.audit", description: "audit call" },
-          { match: "\\.errors\\.forbidden\\(|throw.*[Ff]orbidden", description: "forbidden() throw on denied" },
-        ],
-      },
-
-      // ── Service: Delete by id — external provider ─────────────────
-      {
-        name: "AC:D·P",
-        description: "Service delete by id, external provider — findByIdForAllow gate + audit + forbidden",
-        in: "**/*.service.ts",
-        requires: [
-          { match: "\\.findByIdForAllow\\(", description: "findByIdForAllow gate call" },
-          { match: "\\bthis\\.audit", description: "audit call" },
-          { match: "\\.errors\\.forbidden\\(|throw.*[Ff]orbidden", description: "forbidden() throw on denied" },
-        ],
-      },
-      {
-        name: "AC:D·P:BA",
-        description: "Service delete by id, BetterAuth executor — findByIdForAllow gate + audit + forbidden + baAdapter call",
-        in: "**/*.service.ts",
-        requires: [
-          { match: "\\.findByIdForAllow\\(", description: "findByIdForAllow gate call" },
-          { match: "\\bthis\\.audit", description: "audit call" },
-          { match: "\\.errors\\.forbidden\\(|throw.*[Ff]orbidden", description: "forbidden() throw on denied" },
-          { match: "this\\.baAdapter\\.", description: "BAAdapter call" },
-        ],
-      },
-
-      // ── Service: Delete with row in hand — internal executor ──────
-      {
-        name: "AC:D·R·I",
-        description: "Service delete with row in hand, repo executor — resolveDelete verdict + audit + forbidden",
-        in: "**/*.service.ts",
-        requires: [
-          { match: "engine\\.resolveDelete\\(", description: "engine.resolveDelete call" },
-          { match: "\\bthis\\.audit", description: "audit call" },
-          { match: "\\.errors\\.forbidden\\(|throw.*[Ff]orbidden", description: "forbidden() throw on denied" },
-        ],
-        coherence: [
-          {
-            extract1: "resolveDelete\\([^,]+,\\s*[\"'](\\w+)[\"']",
-            extract2: "entity:\\s*[\"'](\\w+)[\"']",
-            description: "entity in resolveDelete must match entity in audit log",
-          },
-        ],
-      },
-
-      // ── Service: Delete with row in hand — external provider ──────
-      {
-        name: "AC:D·R·P",
-        description: "Service delete with row in hand, external provider — resolveDelete verdict + audit + forbidden",
-        in: "**/*.service.ts",
-        requires: [
-          { match: "engine\\.resolveDelete\\(", description: "engine.resolveDelete call" },
-          { match: "\\bthis\\.audit", description: "audit call" },
-          { match: "\\.errors\\.forbidden\\(|throw.*[Ff]orbidden", description: "forbidden() throw on denied" },
-        ],
-        coherence: [
-          {
-            extract1: "resolveDelete\\([^,]+,\\s*[\"'](\\w+)[\"']",
-            extract2: "entity:\\s*[\"'](\\w+)[\"']",
-            description: "entity in resolveDelete must match entity in audit log",
-          },
-        ],
-      },
-      {
-        name: "AC:D·R·P:BA",
-        description: "Service delete with row in hand, BetterAuth executor — resolveDelete verdict + audit + forbidden + baAdapter call",
-        in: "**/*.service.ts",
-        requires: [
-          { match: "engine\\.resolveDelete\\(", description: "engine.resolveDelete call" },
-          { match: "\\bthis\\.audit", description: "audit call" },
-          { match: "\\.errors\\.forbidden\\(|throw.*[Ff]orbidden", description: "forbidden() throw on denied" },
-          { match: "this\\.baAdapter\\.", description: "BAAdapter call" },
-        ],
-        coherence: [
-          {
-            extract1: "resolveDelete\\([^,]+,\\s*[\"'](\\w+)[\"']",
-            extract2: "entity:\\s*[\"'](\\w+)[\"']",
-            description: "entity in resolveDelete must match entity in audit log",
-          },
-        ],
-      },
-    ],
-
-    // Guarded engine calls — any public method containing these must carry an [AC:X] tag.
-    // Private methods are automatically exempt (they are internal helpers).
-    guardedCalls: [
-      // ── Repository layer ─────────────────────────────────────────
-      // Public repo methods calling the engine directly must be tagged.
-      {
-        match: "engine\\.resolveRead\\(",
-        description: "engine.resolveRead",
-        in: "**/*.repository.ts",
-      },
-      {
-        match: "engine\\.resolveUpdate\\(",
-        description: "engine.resolveUpdate",
-        in: "**/*.repository.ts",
-      },
-      {
-        match: "engine\\.resolveDelete\\(",
-        description: "engine.resolveDelete",
-        in: "**/*.repository.ts",
-      },
-      // ── Service layer ─────────────────────────────────────────────
-      // Public service methods calling the engine or gate-2 must be tagged.
-      {
-        match: "engine\\.resolveCreate\\(",
-        description: "engine.resolveCreate",
-        in: "**/*.service.ts",
-      },
-      {
-        match: "engine\\.resolveDelete\\(",
-        description: "engine.resolveDelete (row in hand)",
-        in: "**/*.service.ts",
-      },
-      {
-        match: "\\.findByIdForAllow\\(",
-        description: "repo.findByIdForAllow (gate-2)",
-        in: "**/*.service.ts",
-      },
-    ],
-  },
+  // ── Web structure and import boundaries (web-controls.ts) ──────
+  "web-boundaries": web,
 
   // ── Layer Discipline ─────────────────────────────────────────────
   // Universal invariant: a file at layer N cannot import from layer N+.
-  // Two stacks — same abstract principle, different vocabularies.
+  // The web's layering is web-boundaries' (web-controls.ts).
   // Axiom: docs/01_reference/import-boundaries.md — layer ordering.
   "layer-discipline": {
     stacks: [
@@ -1817,7 +1129,7 @@ const controls: ControlSet = {
       {
         id: "api-layers",
         description: "API layer ordering: model < repository < service < router < middleware",
-        in: ["apps/main/shared/api/**", "apps/main/slices/*/*/api/**"],
+        in: ["apps/main/core/api/**", "apps/main/slices/*/*/api/**"],
         layers: [
           { name: "model",      match: ["**/*.model.ts", "**/models/**"] },
           { name: "repository", match: ["**/*.repository.ts", "**/repositories/**"] },
@@ -1835,21 +1147,6 @@ const controls: ControlSet = {
             reason: "Scope hydration middleware reads AccessContext directly from repo — read-only hydration, no service indirection needed by design.",
           },
         ],
-      },
-
-      // ── Web stack ──────────────────────────────────────────────
-      // api → hooks → components → pages
-      {
-        id: "web-layers",
-        description: "Web layer ordering: api < hooks < components < pages",
-        in: ["apps/main/shared/web/**", "apps/main/slices/*/*/web/**"],
-        layers: [
-          { name: "api",        match: ["**/api/**", "**/api.ts"] },
-          { name: "hooks",      match: "**/hooks/**" },
-          { name: "components", match: "**/components/**" },
-          { name: "pages",      match: "**/pages/**" },
-        ],
-        exceptions: [],
       },
     ],
   },

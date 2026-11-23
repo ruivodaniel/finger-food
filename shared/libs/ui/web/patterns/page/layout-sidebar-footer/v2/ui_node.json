@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-page-layout-sidebar-footer",
+ "version": 1,
+ "type": "screen",
+ "surface": "web",
+ "title": "Sidebar and footer"
+}

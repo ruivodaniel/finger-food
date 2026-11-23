@@ -1,0 +1,7 @@
+{
+ "id": "route-pattern-layout-auth-page",
+ "version": 1,
+ "surface": "web",
+ "path": "/patterns/layout/auth-page",
+ "uiNodeId": "ui-node-pattern-layout-auth-page"
+}

@@ -1,0 +1,136 @@
+{
+ "id": "doc/gated-scoped-ac-bag",
+ "kind": "doc",
+ "title": "Access Context",
+ "status": "todo",
+ "subject": "gated-scoped-ac",
+ "owner": "libs/gated-scoped-ac",
+ "order": 4,
+ "tags": [
+  "gated-scoped-ac",
+  "consumer"
+ ],
+ "paths": [
+  "shared/libs/gated-scoped-ac"
+ ],
+ "summary": "The per-request access context: the bag a rule's `$` paths read, the caller's roles and permissions, and the gated handle bound to that bag.",
+ "docId": "gated-scoped-ac-bag",
+ "doc": {
+  "axioms": [
+   {
+    "text": "The [[access context]] is built once per request, by the app's hydration middleware, and every layer below reads it."
+   },
+   {
+    "text": "The engine takes permissions and a bag on every call. It never reads the database to find out who is asking."
+   },
+   {
+    "text": "Every value in the bag is trusted. Building it from server-side sources is the app's job."
+   }
+  ],
+  "purpose": {
+   "intro": "What a rule can say about the caller is whatever the bag holds. This page is the bag's shape, the context around it, and how a `$` path resolves.",
+   "note": "`ScopedAcRequestContext` is the one place the library names the app's session shape, a named exception to AC37 in [[access-control|Access Control]]. The engine and the gate still take the bag as `unknown`."
+  },
+  "reference": [
+   {
+    "topic": "The type",
+    "statement": "`src/context.ts` declares the context and its bag. Every slice and app imports them from `@libs/gated-scoped-ac`.",
+    "claims": [
+     {
+      "text": "`bag`: the subjects the rules read, passed to every engine call."
+     },
+     {
+      "text": "`roles`: the baseline roles plus the active organization's membership roles, resolved on the server."
+     },
+     {
+      "text": "`permissions`: the permissions those roles carry, resolved once by `engine.resolveEffectivePermissions(roles, bag)`. This, not `roles`, is what the engine's calls take."
+     },
+     {
+      "text": "`gateDb`: the [[gated db]] bound to this bag, the only path to the database for scoped work."
+     }
+    ],
+    "examples": [
+     {
+      "snippets": [
+       {
+        "code": "export interface ScopedAcBag {\n  session: {\n    user: { id: string };\n    organization: { id: string; type: string } | null; // null: no active organization\n  };\n}\n\nexport interface ScopedAcRequestContext {\n  bag: ScopedAcBag;\n  roles: string[];\n  permissions: string[];\n  gateDb: GatedDb<SchemaTables>;\n}"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "topic": "Paths a rule can read",
+    "statement": "A `$` path is walked through the bag: `$session.user.id` reads `bag.session.user.id`.",
+    "claims": [
+     {
+      "text": "`$session.user.id`: the caller."
+     },
+     {
+      "text": "`$session.organization.id`, `$session.organization.type`: the active organization, or `null` when none is active. The type is also where the engine looks for the forest to use (`orgTypePath`, default `$session.organization.type`)."
+     },
+     {
+      "text": "`$requestBody.*`: the row being created. The gate's `create` sets it to the values it inserts, replacing whatever the caller put there. A service that wants an early `allowCreate` verdict adds it to a copy of the bag itself."
+     },
+     {
+      "text": "A path that is not set, or set to null, is absent, and every condition reading it fails, negations included. The engine has no list of valid paths, so a rule naming a path the bag never holds loads fine and then never matches. See [[gated-scoped-ac-security|Security]]."
+     }
+    ]
+   },
+   {
+    "topic": "How the context is built",
+    "statement": "The app's hydration middleware runs after the session is verified and before any route, and builds the context only for a signed-in request.",
+    "claims": [
+     {
+      "text": "It reads the active organization from the session, already checked against the caller's memberships, and never from anything the client asserts."
+     },
+     {
+      "text": "It unions the baseline roles (the roots of `accountBaseline`) with the active membership's roles, calls `resolveEffectivePermissions` once, and binds a `gateDb` to the bag."
+     },
+     {
+      "text": "An unauthenticated request gets no context and passes through: hydration never rejects. A route that needs one answers 401 when it is missing."
+     },
+     {
+      "text": "In this repo the middleware is `buildScopedAc` in `apps/main/slices/seed/user-organization-mgmt/api/middlewares/create-scoped-ac-middleware.ts`, and open-api builds the same shape for a delegated user. See [[gated-scoped-ac-mount|Mount]]."
+     }
+    ],
+    "examples": [
+     {
+      "snippets": [
+       {
+        "code": "const bag: ScopedAcBag = {\n  session: {\n    user: { id: userId },\n    organization: active ? { id: active.organizationId, type: active.orgType } : null,\n  },\n};\nconst roles = [...baselineRoles, ...(active?.roles ?? [])];\nconst permissions = engine.resolveEffectivePermissions(roles, bag);\nreturn { bag, roles, permissions, gateDb: gatedDb(bag) };"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "topic": "Reading it in a slice",
+    "statement": "A slice never builds the context; it reads the one hydration stored on the request.",
+    "claims": [
+     {
+      "text": "A slice's Hono env declares `scopedAc?: ScopedAcRequestContext`; its route helper reads it and answers 401 when it is absent."
+     },
+     {
+      "text": "Services take the context as their first argument and pass `ac.permissions` and `ac.bag` to the engine, and `ac.gateDb` (or a `gatedDb(bag)` of their own, for a bag they extended) to the repository."
+     }
+    ]
+   }
+  ],
+  "review": {
+   "axioms": {
+    "state": "unreviewed"
+   },
+   "purpose": {
+    "state": "unreviewed"
+   },
+   "reference": {
+    "state": "unreviewed"
+   }
+  },
+  "converted": true
+ },
+ "audience": [
+  "seed-consumer"
+ ]
+}

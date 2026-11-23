@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-primitive-radio-group-default",
+ "version": 1,
+ "uiDataId": "ui-data-primitive-radio-group",
+ "name": "default",
+ "title": "Radio group, its cases",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

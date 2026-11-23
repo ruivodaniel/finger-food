@@ -1,0 +1,2111 @@
+{
+ "id": "ui-data-pattern-component-organization-avatar",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-organization-avatar",
+ "kind": "component",
+ "name": "organization-avatar",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "organization-avatar",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "size": "fill",
+    "scale": "xl"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "size": "fill",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body-extra-small",
+        "children": "image alone, five sizes, tooltip",
+        "emphasis": "quiet"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "wrap": true,
+        "size": "fill",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-acme-corp",
+          "name": "Acme Corp",
+          "type": "Company",
+          "width": "hug",
+          "layout": "image",
+          "scale": "xs",
+          "tooltip": true
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-harbour-lettings",
+          "name": "Harbour Lettings",
+          "type": "Agency",
+          "width": "hug",
+          "layout": "image",
+          "scale": "sm",
+          "tooltip": true
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-northwind-traders",
+          "name": "Northwind Traders",
+          "type": "Company",
+          "width": "hug",
+          "layout": "image",
+          "scale": "md",
+          "tooltip": true
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-mill-street-studio",
+          "name": "Mill Street Studio",
+          "type": "Freelancer",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "tooltip": true
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-clifton-partners",
+          "name": "Clifton Partners",
+          "type": "Partnership",
+          "width": "hug",
+          "layout": "image",
+          "scale": "xl",
+          "tooltip": true
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "size": "fill",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body-extra-small",
+        "children": "inline",
+        "emphasis": "quiet"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "wrap": true,
+        "size": "fill",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body",
+          "children": "Invoice from"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-harbour-lettings",
+          "name": "Harbour Lettings",
+          "type": "Agency",
+          "width": "hug",
+          "layout": "inline"
+         }
+        },
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body",
+          "children": "to"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-acme-corp",
+          "name": "Acme Corp",
+          "type": "Company",
+          "width": "hug",
+          "layout": "inline",
+          "showType": true
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "size": "fill",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body-extra-small",
+        "children": "badge: small, medium, large",
+        "emphasis": "quiet"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "wrap": true,
+        "size": "fill",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-acme-corp",
+          "name": "Acme Corp",
+          "type": "Company",
+          "width": "hug",
+          "layout": "badge",
+          "scale": "sm"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-harbour-lettings",
+          "name": "Harbour Lettings",
+          "type": "Agency",
+          "width": "hug",
+          "layout": "badge",
+          "scale": "md"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-northwind-traders",
+          "name": "Northwind Traders",
+          "type": "Company",
+          "width": "hug",
+          "layout": "badge",
+          "scale": "lg"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "size": "fill",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body-extra-small",
+        "children": "row: name",
+        "emphasis": "quiet"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "wrap": true,
+        "size": "fill",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-acme-corp",
+          "name": "Acme Corp",
+          "type": "Company",
+          "width": "hug",
+          "layout": "row",
+          "showName": true
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "size": "fill",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body-extra-small",
+        "children": "row: name, type",
+        "emphasis": "quiet"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "wrap": true,
+        "size": "fill",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-harbour-lettings",
+          "name": "Harbour Lettings",
+          "type": "Agency",
+          "width": "hug",
+          "layout": "row",
+          "showName": true,
+          "showType": true
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "size": "fill",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body-extra-small",
+        "children": "row: fill",
+        "emphasis": "quiet"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "align": "stretch",
+        "wrap": false,
+        "size": "fill",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-acme-corp",
+          "name": "Acme Corp",
+          "type": "Company",
+          "width": "fill",
+          "layout": "row",
+          "showName": true,
+          "showType": true
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-harbour-lettings",
+          "name": "Harbour Lettings",
+          "type": "Agency",
+          "width": "fill",
+          "layout": "row",
+          "showName": true,
+          "showType": true
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-northwind-traders",
+          "name": "Northwind Traders",
+          "type": "Company",
+          "width": "fill",
+          "layout": "row",
+          "showName": true,
+          "showType": true
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body-extra-small",
+        "children": "no logo: initials, and each kind of generated picture",
+        "emphasis": "quiet"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "initials"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-acme-corp",
+          "name": "Acme Corp",
+          "type": "Company",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "initials"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-harbour-lettings",
+          "name": "Harbour Lettings",
+          "type": "Agency",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "initials"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-northwind",
+          "name": "Northwind Traders",
+          "type": "Company",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "initials"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-mill-street",
+          "name": "Mill Street Studio",
+          "type": "Freelancer",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "initials"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-clifton-partners",
+          "name": "Clifton Partners",
+          "type": "Partnership",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "initials"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "dicebear-initials"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-acme-corp",
+          "name": "Acme Corp",
+          "type": "Company",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-initials"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-harbour-lettings",
+          "name": "Harbour Lettings",
+          "type": "Agency",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-initials"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-northwind",
+          "name": "Northwind Traders",
+          "type": "Company",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-initials"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-mill-street",
+          "name": "Mill Street Studio",
+          "type": "Freelancer",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-initials"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-clifton-partners",
+          "name": "Clifton Partners",
+          "type": "Partnership",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-initials"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "pixel"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-acme-corp",
+          "name": "Acme Corp",
+          "type": "Company",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "pixel"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-harbour-lettings",
+          "name": "Harbour Lettings",
+          "type": "Agency",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "pixel"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-northwind",
+          "name": "Northwind Traders",
+          "type": "Company",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "pixel"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-mill-street",
+          "name": "Mill Street Studio",
+          "type": "Freelancer",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "pixel"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-clifton-partners",
+          "name": "Clifton Partners",
+          "type": "Partnership",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "pixel"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "ring"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-acme-corp",
+          "name": "Acme Corp",
+          "type": "Company",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "ring"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-harbour-lettings",
+          "name": "Harbour Lettings",
+          "type": "Agency",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "ring"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-northwind",
+          "name": "Northwind Traders",
+          "type": "Company",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "ring"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-mill-street",
+          "name": "Mill Street Studio",
+          "type": "Freelancer",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "ring"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-clifton-partners",
+          "name": "Clifton Partners",
+          "type": "Partnership",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "ring"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "bauhaus"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-acme-corp",
+          "name": "Acme Corp",
+          "type": "Company",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "bauhaus"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-harbour-lettings",
+          "name": "Harbour Lettings",
+          "type": "Agency",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "bauhaus"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-northwind",
+          "name": "Northwind Traders",
+          "type": "Company",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "bauhaus"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-mill-street",
+          "name": "Mill Street Studio",
+          "type": "Freelancer",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "bauhaus"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-clifton-partners",
+          "name": "Clifton Partners",
+          "type": "Partnership",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "bauhaus"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "dicebear-identicon"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-acme-corp",
+          "name": "Acme Corp",
+          "type": "Company",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-identicon"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-harbour-lettings",
+          "name": "Harbour Lettings",
+          "type": "Agency",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-identicon"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-northwind",
+          "name": "Northwind Traders",
+          "type": "Company",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-identicon"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-mill-street",
+          "name": "Mill Street Studio",
+          "type": "Freelancer",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-identicon"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-clifton-partners",
+          "name": "Clifton Partners",
+          "type": "Partnership",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-identicon"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "dicebear-icons"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-acme-corp",
+          "name": "Acme Corp",
+          "type": "Company",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-icons"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-harbour-lettings",
+          "name": "Harbour Lettings",
+          "type": "Agency",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-icons"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-northwind",
+          "name": "Northwind Traders",
+          "type": "Company",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-icons"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-mill-street",
+          "name": "Mill Street Studio",
+          "type": "Freelancer",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-icons"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-clifton-partners",
+          "name": "Clifton Partners",
+          "type": "Partnership",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-icons"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "dicebear-shapes"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-acme-corp",
+          "name": "Acme Corp",
+          "type": "Company",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-shapes"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-harbour-lettings",
+          "name": "Harbour Lettings",
+          "type": "Agency",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-shapes"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-northwind",
+          "name": "Northwind Traders",
+          "type": "Company",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-shapes"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-mill-street",
+          "name": "Mill Street Studio",
+          "type": "Freelancer",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-shapes"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-clifton-partners",
+          "name": "Clifton Partners",
+          "type": "Partnership",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-shapes"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "space-invader"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-acme-corp",
+          "name": "Acme Corp",
+          "type": "Company",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-invader"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-harbour-lettings",
+          "name": "Harbour Lettings",
+          "type": "Agency",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-invader"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-northwind",
+          "name": "Northwind Traders",
+          "type": "Company",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-invader"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-mill-street",
+          "name": "Mill Street Studio",
+          "type": "Freelancer",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-invader"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-clifton-partners",
+          "name": "Clifton Partners",
+          "type": "Partnership",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-invader"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "morphatar-geometric"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-acme-corp",
+          "name": "Acme Corp",
+          "type": "Company",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "morphatar-geometric"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-harbour-lettings",
+          "name": "Harbour Lettings",
+          "type": "Agency",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "morphatar-geometric"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-northwind",
+          "name": "Northwind Traders",
+          "type": "Company",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "morphatar-geometric"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-mill-street",
+          "name": "Mill Street Studio",
+          "type": "Freelancer",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "morphatar-geometric"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-clifton-partners",
+          "name": "Clifton Partners",
+          "type": "Partnership",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "morphatar-geometric"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "morphatar-pixel"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-acme-corp",
+          "name": "Acme Corp",
+          "type": "Company",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "morphatar-pixel"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-harbour-lettings",
+          "name": "Harbour Lettings",
+          "type": "Agency",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "morphatar-pixel"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-northwind",
+          "name": "Northwind Traders",
+          "type": "Company",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "morphatar-pixel"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-mill-street",
+          "name": "Mill Street Studio",
+          "type": "Freelancer",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "morphatar-pixel"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-clifton-partners",
+          "name": "Clifton Partners",
+          "type": "Partnership",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "morphatar-pixel"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "jdenticon"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-acme-corp",
+          "name": "Acme Corp",
+          "type": "Company",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "jdenticon"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-harbour-lettings",
+          "name": "Harbour Lettings",
+          "type": "Agency",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "jdenticon"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-northwind",
+          "name": "Northwind Traders",
+          "type": "Company",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "jdenticon"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-mill-street",
+          "name": "Mill Street Studio",
+          "type": "Freelancer",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "jdenticon"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-clifton-partners",
+          "name": "Clifton Partners",
+          "type": "Partnership",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "jdenticon"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "marble"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-acme-corp",
+          "name": "Acme Corp",
+          "type": "Company",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "marble"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-harbour-lettings",
+          "name": "Harbour Lettings",
+          "type": "Agency",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "marble"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-northwind",
+          "name": "Northwind Traders",
+          "type": "Company",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "marble"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-mill-street",
+          "name": "Mill Street Studio",
+          "type": "Freelancer",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "marble"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-clifton-partners",
+          "name": "Clifton Partners",
+          "type": "Partnership",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "marble"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "sunset"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-acme-corp",
+          "name": "Acme Corp",
+          "type": "Company",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "sunset"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-harbour-lettings",
+          "name": "Harbour Lettings",
+          "type": "Agency",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "sunset"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-northwind",
+          "name": "Northwind Traders",
+          "type": "Company",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "sunset"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-mill-street",
+          "name": "Mill Street Studio",
+          "type": "Freelancer",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "sunset"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-clifton-partners",
+          "name": "Clifton Partners",
+          "type": "Partnership",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "sunset"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "space-lumina"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-acme-corp",
+          "name": "Acme Corp",
+          "type": "Company",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-lumina"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-harbour-lettings",
+          "name": "Harbour Lettings",
+          "type": "Agency",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-lumina"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-northwind",
+          "name": "Northwind Traders",
+          "type": "Company",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-lumina"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-mill-street",
+          "name": "Mill Street Studio",
+          "type": "Freelancer",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-lumina"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-clifton-partners",
+          "name": "Clifton Partners",
+          "type": "Partnership",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-lumina"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "space-triton"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-acme-corp",
+          "name": "Acme Corp",
+          "type": "Company",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-triton"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-harbour-lettings",
+          "name": "Harbour Lettings",
+          "type": "Agency",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-triton"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-northwind",
+          "name": "Northwind Traders",
+          "type": "Company",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-triton"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-mill-street",
+          "name": "Mill Street Studio",
+          "type": "Freelancer",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-triton"
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "org-clifton-partners",
+          "name": "Clifton Partners",
+          "type": "Partnership",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-triton"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

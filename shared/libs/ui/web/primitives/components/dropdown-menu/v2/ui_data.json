@@ -1,0 +1,422 @@
+{
+ "id": "ui-data-primitive-dropdown-menu",
+ "version": 1,
+ "uiNodeId": "ui-node-primitive-dropdown-menu",
+ "kind": "component",
+ "name": "primitive-dropdown-menu",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "primitive-dropdown-menu",
+  "version": 1,
+  "surface": "web",
+  "state": {
+   "basic_open": false,
+   "checkboxes_open": false,
+   "checkboxes_profile": false,
+   "checkboxes_settings": true,
+   "checkboxes_billing": false,
+   "plan_open": false,
+   "plan_plan": "pro"
+  },
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "align": "center",
+    "scale": "2xl"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "basic"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "DropdownMenu",
+         "children": [
+          {
+           "type": "DropdownMenuTrigger",
+           "children": [
+            {
+             "type": "Button",
+             "props": {
+              "emphasis": "secondary",
+              "children": "Open menu",
+              "data-testid": "dropdown-menu-basic-1-btn"
+             }
+            }
+           ],
+           "props": {
+            "asChild": true
+           }
+          },
+          {
+           "type": "DropdownMenuContent",
+           "children": [
+            {
+             "type": "DropdownMenuLabel",
+             "props": {
+              "children": "My Account"
+             }
+            },
+            {
+             "type": "DropdownMenuGroup",
+             "children": [
+              {
+               "type": "DropdownMenuItem",
+               "props": {
+                "children": "Profile"
+               }
+              },
+              {
+               "type": "DropdownMenuItem",
+               "props": {
+                "children": "Settings"
+               }
+              },
+              {
+               "type": "DropdownMenuItem",
+               "props": {
+                "children": "Billing"
+               }
+              }
+             ]
+            },
+            {
+             "type": "DropdownMenuSeparator"
+            },
+            {
+             "type": "DropdownMenuItem",
+             "props": {
+              "variant": "destructive",
+              "children": "Delete account"
+             }
+            }
+           ]
+          }
+         ],
+         "on": {
+          "openChange": [
+           {
+            "set": {
+             "state": "basic_open",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "open": {
+           "bind": "state.basic_open"
+          },
+          "data-testid": "dropdown-menu-basic-2-menu"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "with checkbox items"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "DropdownMenu",
+         "children": [
+          {
+           "type": "DropdownMenuTrigger",
+           "children": [
+            {
+             "type": "Button",
+             "props": {
+              "emphasis": "secondary",
+              "children": "View options",
+              "data-testid": "dropdown-menu-with-checkbox-items-1-btn"
+             }
+            }
+           ],
+           "props": {
+            "asChild": true
+           }
+          },
+          {
+           "type": "DropdownMenuContent",
+           "children": [
+            {
+             "type": "DropdownMenuLabel",
+             "props": {
+              "children": "Visible columns"
+             }
+            },
+            {
+             "type": "DropdownMenuSeparator"
+            },
+            {
+             "type": "DropdownMenuCheckboxItem",
+             "on": {
+              "checkedChange": [
+               {
+                "set": {
+                 "state": "checkboxes_profile",
+                 "to": {
+                  "bind": "event"
+                 }
+                }
+               }
+              ]
+             },
+             "props": {
+              "checked": {
+               "bind": "state.checkboxes_profile"
+              },
+              "children": "Profile",
+              "data-testid": "dropdown-menu-with-checkbox-items-2-card"
+             }
+            },
+            {
+             "type": "DropdownMenuCheckboxItem",
+             "on": {
+              "checkedChange": [
+               {
+                "set": {
+                 "state": "checkboxes_settings",
+                 "to": {
+                  "bind": "event"
+                 }
+                }
+               }
+              ]
+             },
+             "props": {
+              "checked": {
+               "bind": "state.checkboxes_settings"
+              },
+              "children": "Settings",
+              "data-testid": "dropdown-menu-with-checkbox-items-3-card"
+             }
+            },
+            {
+             "type": "DropdownMenuCheckboxItem",
+             "on": {
+              "checkedChange": [
+               {
+                "set": {
+                 "state": "checkboxes_billing",
+                 "to": {
+                  "bind": "event"
+                 }
+                }
+               }
+              ]
+             },
+             "props": {
+              "checked": {
+               "bind": "state.checkboxes_billing"
+              },
+              "children": "Billing",
+              "data-testid": "dropdown-menu-with-checkbox-items-4-card"
+             }
+            }
+           ]
+          }
+         ],
+         "on": {
+          "openChange": [
+           {
+            "set": {
+             "state": "checkboxes_open",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "open": {
+           "bind": "state.checkboxes_open"
+          },
+          "data-testid": "dropdown-menu-with-checkbox-items-5-menu"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "with radio items"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "DropdownMenu",
+         "children": [
+          {
+           "type": "DropdownMenuTrigger",
+           "children": [
+            {
+             "type": "Button",
+             "props": {
+              "emphasis": "secondary",
+              "children": "Select plan",
+              "data-testid": "dropdown-menu-with-radio-items-1-btn"
+             }
+            }
+           ],
+           "props": {
+            "asChild": true
+           }
+          },
+          {
+           "type": "DropdownMenuContent",
+           "children": [
+            {
+             "type": "DropdownMenuLabel",
+             "props": {
+              "children": "Subscription plan"
+             }
+            },
+            {
+             "type": "DropdownMenuSeparator"
+            },
+            {
+             "type": "DropdownMenuRadioGroup",
+             "children": [
+              {
+               "type": "DropdownMenuRadioItem",
+               "props": {
+                "value": "free",
+                "children": "Free"
+               }
+              },
+              {
+               "type": "DropdownMenuRadioItem",
+               "props": {
+                "value": "pro",
+                "children": "Pro"
+               }
+              },
+              {
+               "type": "DropdownMenuRadioItem",
+               "props": {
+                "value": "enterprise",
+                "children": "Enterprise"
+               }
+              }
+             ],
+             "on": {
+              "valueChange": [
+               {
+                "set": {
+                 "state": "plan_plan",
+                 "to": {
+                  "bind": "event"
+                 }
+                }
+               }
+              ]
+             },
+             "props": {
+              "value": {
+               "bind": "state.plan_plan"
+              },
+              "data-testid": "dropdown-menu-with-radio-items-2-card"
+             }
+            }
+           ]
+          }
+         ],
+         "on": {
+          "openChange": [
+           {
+            "set": {
+             "state": "plan_open",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "open": {
+           "bind": "state.plan_open"
+          },
+          "data-testid": "dropdown-menu-with-radio-items-3-menu"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

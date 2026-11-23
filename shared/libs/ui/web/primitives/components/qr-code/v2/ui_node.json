@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-primitive-qr-code",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Qr code"
+}

@@ -1,0 +1,47 @@
+{
+  "id": "ui-data-standalone-layout",
+  "version": 1,
+  "uiNodeId": "node-standalone-layout",
+  "kind": "component",
+  "name": "standalone-layout",
+  "document": {
+    "kind": "component",
+    "schemaVersion": 1,
+    "name": "standalone-layout",
+    "version": 1,
+    "params": [
+      "icon",
+      "title"
+    ],
+    "slots": [
+      "main"
+    ],
+    "root": {
+      "type": "SingleSidebarLayout",
+      "props": {
+        "scale": "sm",
+        "pageHeaderContent": {
+          "use": {
+            "component": "title-header",
+            "version": "latest"
+          },
+          "args": {
+            "icon": {
+              "bind": "icon"
+            },
+            "title": {
+              "bind": "title"
+            },
+            "titleTestId": null
+          }
+        },
+        "mainContainerContent": {
+          "type": "Slot",
+          "props": {
+            "name": "main"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-container-2-sheet-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-container-2-sheet",
+ "name": "default",
+ "title": "Container 2: the sheet",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

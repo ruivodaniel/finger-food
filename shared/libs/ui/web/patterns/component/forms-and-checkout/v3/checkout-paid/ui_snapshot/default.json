@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-forms-and-checkout-checkout-paid-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-forms-and-checkout-checkout-paid",
+ "name": "default",
+ "title": "Forms and checkout: checkout paid",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

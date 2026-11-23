@@ -1,5 +1,5 @@
-import { FixtureBody, Row, Swatch, Token } from "../_chrome";
-import { useThemeVars, withPrefix } from "../_theme-vars";
+import { FixtureBody, Row, Swatch, Token } from "../../lib/_chrome";
+import { useThemeVars, withPrefix } from "../../lib/_theme-vars";
 
 /** Effects — shadows, gradients and the overlay scrim, from their variables. */
 export default function EffectsFixture() {

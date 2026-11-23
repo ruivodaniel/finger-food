@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-component-chat-thread-as-list",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Chat: thread as list"
+}

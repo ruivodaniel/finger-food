@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-pricing-and-offers-pricing-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-pricing-and-offers-pricing",
+ "name": "default",
+ "title": "Pricing and offers: pricing",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

@@ -1,0 +1,246 @@
+{
+ "id": "ui-data-pattern-component-financial-tables-targets-table",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-financial-tables-targets-table",
+ "kind": "component",
+ "name": "targets-table",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "targets-table",
+  "version": 1,
+  "surface": "web",
+  "root": {
+   "type": "Card",
+   "props": {
+    "style": {
+     "obj": {
+      "width": 540
+     }
+    }
+   },
+   "children": [
+    {
+     "type": "Content",
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "scale": "sm"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "element": "type--body-small",
+          "emphasis": "quiet",
+          "children": "Targets · Q4"
+         }
+        },
+        {
+         "type": "RichTable",
+         "props": {
+          "columns": [
+           {
+            "obj": {
+             "key": "metric",
+             "name": "Metric",
+             "width": 160
+            }
+           },
+           {
+            "obj": {
+             "key": "target",
+             "name": "Target %",
+             "type": "number",
+             "width": 110,
+             "cell": {
+              "obj": {
+               "component": "DataNumber",
+               "align": "end",
+               "props": {
+                "obj": {
+                 "config": {
+                  "obj": {
+                   "mode": {
+                    "obj": {
+                     "kind": "fixedScale",
+                     "scale": "unit",
+                     "n": 1
+                    }
+                   },
+                   "locale": "en-GB"
+                  }
+                 },
+                 "scale": "sm",
+                 "monospace": true,
+                 "emphasis": "quiet"
+                }
+               },
+               "from": {
+                "obj": {
+                 "value": "target"
+                }
+               }
+              }
+             }
+            }
+           },
+           {
+            "obj": {
+             "key": "actual",
+             "name": "Actual %",
+             "type": "number",
+             "width": 120,
+             "cell": {
+              "obj": {
+               "component": "DataNumber",
+               "align": "end",
+               "props": {
+                "obj": {
+                 "config": {
+                  "obj": {
+                   "mode": {
+                    "obj": {
+                     "kind": "fixedScale",
+                     "scale": "unit",
+                     "n": 1
+                    }
+                   },
+                   "locale": "en-GB"
+                  }
+                 },
+                 "scale": "sm",
+                 "monospace": true
+                }
+               },
+               "from": {
+                "obj": {
+                 "value": "actual",
+                 "status": "status",
+                 "trend": "trend"
+                }
+               }
+              }
+             }
+            }
+           },
+           {
+            "obj": {
+             "key": "gap",
+             "name": "Gap pp",
+             "type": "number",
+             "width": 100,
+             "cell": {
+              "obj": {
+               "component": "DataNumber",
+               "align": "end",
+               "props": {
+                "obj": {
+                 "config": {
+                  "obj": {
+                   "mode": {
+                    "obj": {
+                     "kind": "fixedScale",
+                     "scale": "unit",
+                     "n": 1
+                    }
+                   },
+                   "locale": "en-GB"
+                  }
+                 },
+                 "scale": "sm",
+                 "monospace": true
+                }
+               },
+               "from": {
+                "obj": {
+                 "value": "gap",
+                 "status": "status"
+                }
+               }
+              }
+             }
+            }
+           }
+          ],
+          "source": {
+           "obj": {
+            "kind": "authored",
+            "rows": [
+             {
+              "obj": {
+               "id": 1,
+               "metric": "Gross margin",
+               "target": 40,
+               "actual": 41.2,
+               "gap": 1.2,
+               "status": "success",
+               "trend": "check",
+               "range": [
+                0,
+                60
+               ]
+              }
+             },
+             {
+              "obj": {
+               "id": 2,
+               "metric": "Opex ratio",
+               "target": 22,
+               "actual": 23.9,
+               "gap": 1.9,
+               "status": "error",
+               "trend": "arrowUp",
+               "range": [
+                0,
+                40
+               ]
+              }
+             },
+             {
+              "obj": {
+               "id": 3,
+               "metric": "Churn",
+               "target": 2,
+               "actual": 1.8,
+               "gap": -0.2,
+               "status": "success",
+               "trend": "check",
+               "range": [
+                0,
+                5
+               ]
+              }
+             },
+             {
+              "obj": {
+               "id": 4,
+               "metric": "Net retention",
+               "target": 110,
+               "actual": 104.5,
+               "gap": -5.5,
+               "status": "warning",
+               "trend": "arrowDown",
+               "range": [
+                0,
+                130
+               ]
+              }
+             }
+            ]
+           }
+          },
+          "editable": false,
+          "height": 220
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

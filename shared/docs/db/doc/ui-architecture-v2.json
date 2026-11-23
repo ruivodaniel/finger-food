@@ -1,0 +1,190 @@
+{
+ "id": "doc/ui-architecture-v2",
+ "kind": "doc",
+ "title": "UI architecture",
+ "status": "todo",
+ "subject": "ui",
+ "owner": "libs/ui",
+ "order": 1,
+ "tags": [
+  "ui",
+  "contributor",
+  "library"
+ ],
+ "paths": [
+  "shared/libs/ui"
+ ],
+ "summary": "The principles of the UI: three concerns with one owner each (markup, library, theme), what markup may and may never say, the library as the finite vocabulary, the theme as the one place of look, seed slices wearing any project, who follows what, and where to read next.",
+ "docId": "ui-architecture-v2",
+ "doc": {
+  "axioms": [
+   {
+    "text": "Markup is responsible for behaviour and for placing elements in their relative positions."
+   },
+   {
+    "text": "Markup is written only with the primitive components and the zone primitives of the library."
+   },
+   {
+    "text": "Nothing but the theme emits CSS. only the theme can set the aspect of every element and their absolute sizes."
+   }
+  ],
+  "purpose": {
+   "intro": "PROWD is a product builder: one seed, many products, and the UI of every product is written by humans and agents together. The three axioms are the harness they write under. They give a product's look every freedom and the markup none: markup says where things stand and how they behave, the library says what exists, the theme says how everything looks. Under this harness one centralised theme per project dresses every screen, and changing it re-dresses all of them, including the seed slices written before the project existed. A component or a slice is written once and wears any product; a change of look never touches a slice; markup is reviewable because it can only say position and behaviour."
+  },
+  "reference": [
+   {
+    "topic": "The three concerns",
+    "statement": "Every piece of UI is one of three concerns, each with one owner and one place.",
+    "claims": [
+     {
+      "text": "Markup: behaviour and relative position. Written in the slices, the core and the library's own components, with the library's primitives and layout primitives only."
+     },
+     {
+      "text": "Library: the finite vocabulary. The elements table in `shared/libs/ui/types/elements.ts` lists every element and every layout region that exists; the primitives and the layout primitives are its code."
+     },
+     {
+      "text": "Theme: the look and the absolute sizes. One declaration per project, compiled by the theme engine into the one CSS the application loads. Nothing else emits CSS."
+     }
+    ]
+   },
+   {
+    "topic": "What markup may say",
+    "statement": "Markup names what a node is and under which condition it is shown; it never says how it looks.",
+    "claims": [
+     {
+      "text": "It may say: which element (`element`, `layout`), its condition (the axes: emphasis, status, state, scale, concept), its relative position (a layout component, a Stack, a Grid), its behaviour."
+     },
+     {
+      "text": "It may never say: a colour, a font, a padding, a radius, a width or height in units. Fill and hug are position and stay; a measure is a theme value."
+     },
+     {
+      "text": "A need that cannot be said with the primitives is a library change, never a one-off class, style or wrapper in a slice. The Markup rules document is the full rule set."
+     }
+    ]
+   },
+   {
+    "topic": "The library as the finite vocabulary",
+    "statement": "The theme can address everything that exists and nothing that does not because the set of elements is closed and listed.",
+    "claims": [
+     {
+      "text": "Elements belong to families; a family is one token shape the theme writes once and every element of the family inherits."
+     },
+     {
+      "text": "Layout regions are part of the vocabulary: a region is a themed surface with dimensions, named by its zone on the page (the Layouts document)."
+     },
+     {
+      "text": "Adding an element or a region is a change to the table, the engine, the components and the Markup dictionary together, never to one of them alone."
+     }
+    ]
+   },
+   {
+    "topic": "Zones",
+    "statement": "Every box that holds other boxes is a zone; the level says which. A shell zone primitive holds layout zone primitives; a layout zone primitive holds container zones; a container zone holds part zones; a part zone holds primitives, part zones, or a container zone again.",
+    "claims": [
+     {
+      "text": "Shell zone primitive: the frame of the application (shell, shell side nav, shell top nav, shell none). Layout zone primitive: a region of a page (page, page header, main, main container, the sidebars, main body). A layout is what a pattern composes out of layout zone primitives; the zone is not the layout."
+     },
+     {
+      "text": "Container zone: a surface that owns its box, its height, its frame, its padding (card, sheet, dialog, alert dialog, popover, tab panel, list, table). Part zone: a surface that divides a container (header, content, footer, stack, tile, alert, empty state, separator, the rows); it takes its width from the container and is never placed in a layout zone on its own."
+     },
+     {
+      "text": "Stack is a part zone with no surface of its own: it lays out what a part or a container holds and the theme paints nothing on it."
+     },
+     {
+      "text": "A primitive (a control, a field, an image, a text, a badge) is not a zone: it holds nothing that lays out and sits inside a part zone, never directly in a container or a layout zone."
+     },
+     {
+      "text": "Padding is the container's. A part zone bleeds to the container's edges and takes the container's padding on the bled edges; the bleed goes from a container zone to its part zones and stops at the next container zone. The Theme document says how a container asks for it."
+     },
+     {
+      "text": "Scroll is the markup's: the instance caps the container (height or max height) and names the part that scrolls (Content with overflow); the theme never says scroll."
+     }
+    ]
+   },
+   {
+    "topic": "The theme as the one place of look",
+    "statement": "A project has one theme at one version, and the theme is the only author of appearance.",
+    "claims": [
+     {
+      "text": "A theme is a declaration by levels; the engine turns it into CSS. The Theme document owns authoring and the engine."
+     },
+     {
+      "text": "A product-specific look is a concept over existing elements, never a new element: the vocabulary stays shared, the look stays per product."
+     },
+     {
+      "text": "Breakpoints are named conditions in the theme; markup names the condition, the theme holds the measure at which it applies."
+     }
+    ]
+   },
+   {
+    "topic": "Seed slices and products",
+    "statement": "A seed slice is written against the library only, so whichever project mounts it dresses it with its own theme.",
+    "claims": [
+     {
+      "text": "The seed slices (user and organization management, notifications, and the rest) carry no look of their own and know no product."
+     },
+     {
+      "text": "A product's slices follow the same rules, so a product can later be re-themed, or its slices promoted to the seed, without rewriting markup."
+     },
+     {
+      "text": "Switching a project's theme, or bumping its version, is a one-line change in the project's configuration and a rebuild."
+     }
+    ]
+   },
+   {
+    "topic": "Who follows what",
+    "statement": "The harness is the same for a human and for an agent; the difference is who reviews.",
+    "claims": [
+     {
+      "text": "Whoever writes markup (a slice page, a component, a layout) writes under the three axioms and the Markup rules, and uses only the Markup dictionary's names."
+     },
+     {
+      "text": "Whoever designs writes the theme and never markup; the theme cannot place anything, so a designer cannot break a page."
+     },
+     {
+      "text": "Whoever changes the library changes the table first; the engine, the components and the documents follow the table."
+     }
+    ]
+   },
+   {
+    "topic": "Where to read next",
+    "statement": "This document holds the principles; each subject has its own document in this folder, in reading order.",
+    "claims": [
+     {
+      "text": "Markup rules: how to write markup under the axioms."
+     },
+     {
+      "text": "Layouts: the regions of a page, the application layouts and the layout primitives."
+     },
+     {
+      "text": "Theme: authoring a theme and how the engine compiles it."
+     },
+     {
+      "text": "Markup dictionary: every element, region and axis value by name."
+     },
+     {
+      "text": "Naming: the names of elements, families, regions and files."
+     },
+     {
+      "text": "Mobile library: the same architecture in the mobile shapes."
+     }
+    ]
+   }
+  ],
+  "review": {
+   "axioms": {
+    "state": "unreviewed"
+   },
+   "purpose": {
+    "state": "unreviewed"
+   },
+   "reference": {
+    "state": "unreviewed"
+   }
+  }
+ },
+ "audience": [
+  "seed-contributor",
+  "seed-consumer"
+ ]
+}

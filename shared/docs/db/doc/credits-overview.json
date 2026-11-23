@@ -1,0 +1,124 @@
+{
+ "id": "doc/credits-overview",
+ "kind": "doc",
+ "title": "Credits",
+ "status": "converted",
+ "subject": "credits",
+ "owner": "main/slices/credits",
+ "order": 1,
+ "tags": [
+  "credits"
+ ],
+ "paths": [
+  "apps/main/slices/seed/credits"
+ ],
+ "summary": "A unit for controlling what people spend on the platform, with no payment needed: credits are created or bought, they are spent, and spending stops at the balance or at what a member was allocated.",
+ "docId": "credits-overview",
+ "doc": {
+  "axioms": [],
+  "purpose": {
+   "intro": "A unit for controlling what people spend on the platform, with no payment needed: credits are created or bought, they are spent, and spending stops at the balance or at what a member was allocated. An app can run this slice alone; [[payment-overview|the payment slice]], when present, adds plans and bundles on top."
+  },
+  "reference": [
+   {
+    "topic": "Credits live in lots",
+    "statement": "Every grant is a **lot**: an amount, what remains, what it can pay for (every service, some services, or one vendor's products), a priority and an expiry. A balance is the sum of what remains in the lots that have not expired; it is never stored. Credits are shown as plain credits.",
+    "claims": [
+     {
+      "text": "**Spending order:** gifts, then the plan's credits, then bundles; among equals, credits limited to some services before general ones, then the soonest expiry."
+     },
+     {
+      "text": "**Nothing runs on a schedule.** An expired lot is never counted, and the first touch after its expiry writes it off in the ledger."
+     },
+     {
+      "text": "**The ledger** has one row per lot touched per movement: grant, charge, refund, expire, take-back. It holds credits only."
+     }
+    ]
+   },
+   {
+    "topic": "Where credits come from",
+    "statement": "Scoped access control decides, per organization type. Without a permission that says otherwise, an organization's credits can only be bought, if the app offers a way to buy.",
+    "claims": [
+     {
+      "text": "**Admin grant:** `grant_credits_platform`, held by the Platform Owner."
+     },
+     {
+      "text": "**A member allocation that creates its credits:** `create_credits_<type>` on the organization's type. In the seed, musical projects have it and companies don't."
+     },
+     {
+      "text": "**Plans and bundles:** the payment slice, when mounted."
+     },
+     {
+      "text": "**Welcome credits:** [[credits-catalog|the catalog]], 0 by default."
+     }
+    ]
+   },
+   {
+    "topic": "Spend credits",
+    "statement": "A slice that charges declares what it needs in its own words, and the app passes `credits.metering` at mount; `apps/main/slices/product/meteors/api/shared/credits-port.ts` is the example. Charge before the action under an id chosen first, turn a refusal into a 402, refund if the action fails.",
+    "claims": [],
+    "imagesAndDiagrams": [
+     {
+      "type": "html",
+      "src": "../assets/credits-overview/spend.html"
+     }
+    ]
+   },
+   {
+    "topic": "Member allocations",
+    "statement": "On organization credits only, a rule says what a member may spend per day, week or month (UTC, weeks from Monday), on which services, and whether unspent credits carry over (top up) or reset (replace). Nothing about spending is stored and no job runs: a member's next action brings the count up to date. Changing the period, mode or source starts fresh; a new top-up amount counts from the next period; a new replace amount holds at once.",
+    "claims": [],
+    "imagesAndDiagrams": [
+     {
+      "type": "html",
+      "src": "../assets/credits-overview/allocation.html"
+     }
+    ]
+   },
+   {
+    "topic": "Admin grants",
+    "statement": "The Platform Owner gives anyone credits without payment, on the Credit grants page (`/manage-credits`).",
+    "claims": [],
+    "imagesAndDiagrams": [
+     {
+      "type": "html",
+      "src": "../assets/credits-overview/grant.html"
+     }
+    ]
+   },
+   {
+    "topic": "What the app hands it",
+    "statement": "Instances and the session's values reach the slice at mount, from the app.",
+    "claims": [
+     {
+      "text": "API (`mountCreditsApi`): the db, `createId`, the catalog, the access-control engine, and `people`: the user-organization slice's organization and user-profile services, which name owners and find them by name. It returns the gated router, `metering` for consumers, `welcome` for the lifecycle hooks, and the services."
+     },
+     {
+      "text": "Web (`mountCreditsWeb`): the http client, the catalog, the active organization, `listMembers`, `useBuyCredits` and the toast. `useBuyCredits` says where the caller buys more credits (the payment slice's Billing) or that they can't; the Credits page shows \"Buy credits\" when it answers. It returns the routes (the Credits page every member sees, and its place in Settings) and self-fetching sections (balance, lots, ledger, allocations) that another slice's page may place among its own."
+     }
+    ]
+   },
+   {
+    "topic": "Named exceptions",
+    "statement": "`metering.charge` and `metering.refund`, the welcome hooks, the ledger methods a payment port calls inside a webhook's transaction, and what a rule owes when it comes due write without an access context; the routes above them are the gated surface.",
+    "claims": []
+   }
+  ],
+  "review": {
+   "axioms": {
+    "state": "unreviewed"
+   },
+   "purpose": {
+    "state": "unreviewed"
+   },
+   "reference": {
+    "state": "unreviewed"
+   }
+  },
+  "converted": true
+ },
+ "audience": [
+  "seed-contributor",
+  "seed-consumer"
+ ]
+}

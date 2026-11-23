@@ -1,0 +1,253 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "centered-strip",
+ "version": 1,
+ "surface": "web",
+ "measure": "lg",
+ "root": {
+  "type": "Stack",
+  "props": {
+   "dir": "col",
+   "gap": 0,
+   "concept": "hero",
+   "className": "w-full max-w-5xl"
+  },
+  "children": [
+   {
+    "type": "Card",
+    "props": {
+     "emphasis": "hero",
+     "className": "w-full"
+    },
+    "children": [
+     {
+      "type": "Content",
+      "children": [
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "col",
+         "gap": 24,
+         "align": "center"
+        },
+        "children": [
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "col",
+           "gap": 14,
+           "align": "center"
+          },
+          "children": [
+           {
+            "type": "Label",
+            "props": {
+             "children": "Week 45 · 3 squads"
+            }
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "h2",
+             "element": "type--heading1",
+             "children": "Your squads trained 12% more this week",
+             "className": "text-center"
+            }
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "p",
+             "element": "type--body",
+             "children": "Tuesday's U17 session is confirmed and two athletes still wait on a medical clearance.",
+             "className": "text-center max-w-xl"
+            }
+           },
+           {
+            "type": "Stack",
+            "props": {
+             "dir": "row",
+             "gap": 12,
+             "justify": "center",
+             "className": "pt-2"
+            },
+            "children": [
+             {
+              "type": "Button",
+              "props": {
+               "emphasis": "primary",
+               "children": "Open today's session"
+              }
+             },
+             {
+              "type": "Button",
+              "props": {
+               "emphasis": "tertiary",
+               "children": "Week report"
+              }
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "row",
+           "gap": 16,
+           "concept": "stats",
+           "className": "w-full pt-6"
+          },
+          "children": [
+           {
+            "type": "Tile",
+            "props": {
+             "className": "w-full"
+            },
+            "children": [
+             {
+              "type": "Stack",
+              "props": {
+               "dir": "col",
+               "gap": 4,
+               "align": "center"
+              },
+              "children": [
+               {
+                "type": "Text",
+                "props": {
+                 "as": "span",
+                 "element": "type--numbers-extra-large",
+                 "children": "12"
+                }
+               },
+               {
+                "type": "Text",
+                "props": {
+                 "as": "span",
+                 "element": "type--body-small",
+                 "children": "Sessions",
+                 "emphasis": "quiet"
+                }
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "type": "Tile",
+            "props": {
+             "className": "w-full"
+            },
+            "children": [
+             {
+              "type": "Stack",
+              "props": {
+               "dir": "col",
+               "gap": 4,
+               "align": "center"
+              },
+              "children": [
+               {
+                "type": "Text",
+                "props": {
+                 "as": "span",
+                 "element": "type--numbers-extra-large",
+                 "children": "412 AU"
+                }
+               },
+               {
+                "type": "Text",
+                "props": {
+                 "as": "span",
+                 "element": "type--body-small",
+                 "children": "Average load",
+                 "emphasis": "quiet"
+                }
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "type": "Tile",
+            "props": {
+             "className": "w-full"
+            },
+            "children": [
+             {
+              "type": "Stack",
+              "props": {
+               "dir": "col",
+               "gap": 4,
+               "align": "center"
+              },
+              "children": [
+               {
+                "type": "Text",
+                "props": {
+                 "as": "span",
+                 "element": "type--numbers-extra-large",
+                 "children": "2"
+                }
+               },
+               {
+                "type": "Text",
+                "props": {
+                 "as": "span",
+                 "element": "type--body-small",
+                 "children": "Clearances open",
+                 "emphasis": "quiet"
+                }
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "type": "Tile",
+            "props": {
+             "className": "w-full"
+            },
+            "children": [
+             {
+              "type": "Stack",
+              "props": {
+               "dir": "col",
+               "gap": 4,
+               "align": "center"
+              },
+              "children": [
+               {
+                "type": "Text",
+                "props": {
+                 "as": "span",
+                 "element": "type--numbers-extra-large",
+                 "children": "96%"
+                }
+               },
+               {
+                "type": "Text",
+                "props": {
+                 "as": "span",
+                 "element": "type--body-small",
+                 "children": "Attendance",
+                 "emphasis": "quiet"
+                }
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

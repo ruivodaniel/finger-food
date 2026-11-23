@@ -1,0 +1,21 @@
+{
+ "id": "term/shell-zone-primitive",
+ "kind": "term",
+ "title": "shell zone primitive",
+ "status": "approved",
+ "subjects": [
+  "ui"
+ ],
+ "owner": "libs/ui",
+ "tags": [
+  "ui"
+ ],
+ "paths": [
+  "shared/libs/ui/web/primitives/layouts/shell"
+ ],
+ "term": {
+  "def": "The frame of the application, emitting one `layout=\"shell\u2026\"` region: shell, shell side nav, shell top nav, shell none. Holds layout zone primitives. Application level only.",
+  "aliases": [],
+  "proposed": true
+ }
+}

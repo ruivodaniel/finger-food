@@ -1,0 +1,158 @@
+[
+  {
+    "id": "event-enter",
+    "livePlayStepId": "step-page-2",
+    "act": "enter",
+    "target": "organizations-table",
+    "waitMs": 600,
+    "durationMs": 700,
+    "version": 1
+  },
+  {
+    "id": "event-scroll-page-2",
+    "livePlayStepId": "step-page-2",
+    "act": "scroll",
+    "target": "list-pagination-page-2-btn",
+    "waitMs": 500,
+    "durationMs": 800,
+    "version": 1
+  },
+  {
+    "id": "event-hover-page-2",
+    "livePlayStepId": "step-page-2",
+    "act": "hover",
+    "target": "list-pagination-page-2-btn",
+    "waitMs": 400,
+    "durationMs": 700,
+    "version": 1
+  },
+  {
+    "id": "event-page-2",
+    "livePlayStepId": "step-page-2",
+    "act": "click",
+    "target": "list-pagination-page-2-btn",
+    "waitMs": 250,
+    "durationMs": 250,
+    "version": 1
+  },
+  {
+    "id": "event-scroll-page-1",
+    "livePlayStepId": "step-open-borealis",
+    "act": "scroll",
+    "target": "list-pagination-page-1-btn",
+    "waitMs": 900,
+    "durationMs": 800,
+    "version": 1
+  },
+  {
+    "id": "event-page-1",
+    "livePlayStepId": "step-open-borealis",
+    "act": "click",
+    "target": "list-pagination-page-1-btn",
+    "waitMs": 400,
+    "durationMs": 500,
+    "version": 1
+  },
+  {
+    "id": "event-scroll-borealis",
+    "livePlayStepId": "step-open-borealis",
+    "act": "scroll",
+    "target": "org-row-abc123-enter-btn",
+    "waitMs": 700,
+    "durationMs": 800,
+    "version": 1
+  },
+  {
+    "id": "event-enter-borealis",
+    "livePlayStepId": "step-open-borealis",
+    "act": "click",
+    "target": "org-row-abc123-enter-btn",
+    "waitMs": 400,
+    "durationMs": 700,
+    "version": 1
+  },
+  {
+    "id": "event-members",
+    "livePlayStepId": "step-open-borealis",
+    "act": "click",
+    "target": "org-nav-members-link",
+    "waitMs": 1200,
+    "durationMs": 500,
+    "version": 1
+  },
+  {
+    "id": "event-leave",
+    "livePlayStepId": "step-open-borealis",
+    "act": "leave",
+    "waitMs": 1200,
+    "durationMs": 700,
+    "version": 1
+  },
+  {
+    "id": "event-moment-1",
+    "livePlayStepId": "step-moment-1",
+    "act": "set_url_param",
+    "target": "_t",
+    "value": "1",
+    "waitMs": 400,
+    "version": 1
+  },
+  {
+    "id": "event-ask-again",
+    "livePlayStepId": "step-moment-1",
+    "act": "refetch",
+    "version": 1
+  },
+  {
+    "id": "info-open",
+    "version": 1,
+    "livePlayStepId": "info-step-open",
+    "act": "goto",
+    "url": "/organizations/abc123/info"
+  },
+  {
+    "id": "info-fill-name",
+    "version": 1,
+    "livePlayStepId": "info-step-name",
+    "act": "fill",
+    "target": "org-info-name-input",
+    "value": "Borealis Group",
+    "waitMs": 900,
+    "durationMs": 1400
+  },
+  {
+    "id": "info-hover-save",
+    "version": 1,
+    "livePlayStepId": "info-step-name",
+    "act": "hover",
+    "target": "org-info-save",
+    "waitMs": 600,
+    "durationMs": 700
+  },
+  {
+    "id": "info-members",
+    "version": 1,
+    "livePlayStepId": "info-step-tabs",
+    "act": "click",
+    "target": "org-nav-members-link",
+    "waitMs": 900,
+    "durationMs": 600
+  },
+  {
+    "id": "info-back",
+    "version": 1,
+    "livePlayStepId": "info-step-tabs",
+    "act": "click",
+    "target": "org-nav-info-link",
+    "waitMs": 1200,
+    "durationMs": 400
+  },
+  {
+    "id": "info-leave",
+    "version": 1,
+    "livePlayStepId": "info-step-tabs",
+    "act": "leave",
+    "waitMs": 900,
+    "durationMs": 700
+  }
+]

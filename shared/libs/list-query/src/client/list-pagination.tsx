@@ -39,9 +39,23 @@ import {
 } from "@libs/web-components";
 import type { ListQueryState } from "./use-list-query-state";
 
+/** the props schema, for tooling (the UI-as-data validator reads it) */
+export const listPaginationSchema = {
+  component: "ListPagination",
+  props: {
+    query: { kind: "other", required: true, doc: "{ page, pageSize }" },
+    total: { kind: "number", required: true, doc: "Total row count" },
+    onPageChange: { kind: "function", doc: "(page) — the page the user asked for" },
+    siblingCount: { kind: "number", default: 1, doc: "Page links around the current page" },
+    "data-testid": { kind: "string", default: "list-pagination", doc: "Test id; the buttons take it as a prefix" },
+  },
+} as const;
+
 export interface ListPaginationProps {
   /** The current query state from `useListQueryState`. Reads `page` + `pageSize`. */
   query: Pick<ListQueryState<unknown>, "page" | "pageSize">;
+  /** The test id of the control; its buttons take it as a prefix: <id>-previous-btn, <id>-next-btn, <id>-page-<n>-btn (default: "list-pagination") */
+  "data-testid"?: string;
   /** Total row count from the list response. */
   total: number;
   /** Called with the next page when the user clicks prev / next / a page link. */
@@ -55,6 +69,7 @@ export function ListPagination({
   total,
   onPageChange,
   siblingCount = 1,
+  "data-testid": testId = "list-pagination",
 }: ListPaginationProps) {
   const { page, pageSize } = query;
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
@@ -72,7 +87,7 @@ export function ListPagination({
   return (
     <div
       className="flex items-center justify-between gap-4 py-2"
-      data-testid="list-pagination"
+      data-testid={testId}
     >
       <div className="text-sm text-muted-foreground">
         Showing <strong>{start}</strong>–<strong>{end}</strong> of{" "}
@@ -83,6 +98,7 @@ export function ListPagination({
           <PaginationContent>
             <PaginationItem>
               <PaginationPrevious
+                data-testid={`${testId}-previous-btn`}
                 disabled={!hasPrev}
                 onClick={() => hasPrev && onPageChange(page - 1)}
               />
@@ -95,6 +111,7 @@ export function ListPagination({
               ) : (
                 <PaginationItem key={p}>
                   <PaginationLink
+                    data-testid={`${testId}-page-${p}-btn`}
                     isActive={p === page}
                     onClick={() => onPageChange(p)}
                   >
@@ -105,6 +122,7 @@ export function ListPagination({
             )}
             <PaginationItem>
               <PaginationNext
+                data-testid={`${testId}-next-btn`}
                 disabled={!hasNext}
                 onClick={() => hasNext && onPageChange(page + 1)}
               />

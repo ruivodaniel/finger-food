@@ -1,0 +1,19 @@
+{
+ "id": "term/product-contributor",
+ "kind": "term",
+ "title": "product contributor",
+ "status": "approved",
+ "subjects": [
+  "docs"
+ ],
+ "owner": "documentation",
+ "tags": [
+  "docs",
+  "audience"
+ ],
+ "paths": [],
+ "term": {
+  "def": "Whoever designs a product inside the running application: personas, sitemap, ERD, use cases, worlds. The application's features are their tool; they write no code. One of the three audiences: [[seed contributor]], [[seed consumer]], [[product contributor]]; every document and every skill group names its audience.",
+  "aliases": []
+ }
+}

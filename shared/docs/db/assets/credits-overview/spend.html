@@ -1,0 +1,93 @@
+<figure style="margin:0">
+<svg viewBox="0 0 980 826" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;font-family:Inter,system-ui,sans-serif" role="img" aria-label="Activity diagram: a slice spends credits before it acts">
+  <defs>
+    <marker id="ad-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#5c6f80"/></marker>
+    <marker id="ad-arrow-ev" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#635bff"/></marker>
+  </defs>
+  <style>
+    .ad-lane  { fill:#faf8f3; stroke:#e6dfd2; stroke-width:1; }
+    .ad-lane2 { fill:#fffdf8; stroke:#e6dfd2; stroke-width:1; }
+    .ad-sep   { stroke:#e6dfd2; stroke-width:1; }
+    .ad-head  { font-size:11.5px; fill:#8c8478; letter-spacing:.08em; text-anchor:middle; }
+    .ad-act   { fill:#ffffff; stroke:#8c8478; stroke-width:1.1; }
+    .ad-stripe{ fill:#f1f0ff; stroke:#635bff; stroke-width:1.1; }
+    .ad-dec   { fill:#f3ead6; stroke:#a9752a; stroke-width:1.1; }
+    .ad-stop  { fill:#fbecea; stroke:#c0504d; stroke-width:1.1; }
+    .ad-t     { font-size:13px; fill:#1b1813; text-anchor:middle; }
+    .ad-m     { font-size:11.5px; fill:#8c8478; text-anchor:middle; }
+    .ad-flow  { fill:none; stroke:#5c6f80; stroke-width:1.4; marker-end:url(#ad-arrow); }
+    .ad-ev    { stroke:#635bff; stroke-dasharray:5 4; marker-end:url(#ad-arrow-ev); }
+    .ad-lbl   { font-size:11px; fill:#5c6f80; font-style:italic; }
+    .ad-note  { font-size:12px; fill:#5c6f80; }
+    .ad-dot   { fill:#1b1813; }
+    .ad-ring  { fill:none; stroke:#1b1813; stroke-width:1.5; }
+  </style>
+
+  <rect x="10" y="10" width="320" height="770" class="ad-lane"/>
+  <rect x="330" y="10" width="320" height="770" class="ad-lane2"/>
+  <rect x="650" y="10" width="320" height="770" class="ad-lane"/>
+  <text x="170" y="34" class="ad-head">MEMBER</text>
+  <text x="490" y="34" class="ad-head">CONSUMER SLICE (METEORS)</text>
+  <text x="810" y="34" class="ad-head">CREDITS SLICE</text>
+  <line x1="10" y1="50" x2="970" y2="50" class="ad-sep"/>
+
+  <circle cx="170" cy="92" r="9" class="ad-dot"/>
+  <path d="M170 101 V142" class="ad-flow"/>
+
+  <rect x="45" y="142" width="250" height="44" rx="10" class="ad-act"/>
+  <text x="170" y="169" class="ad-t">Create a meteor</text>
+  <path d="M170 186 V200 H490 V214" class="ad-flow"/>
+
+  <rect x="365" y="214" width="250" height="44" rx="10" class="ad-act"/>
+  <text x="490" y="232" class="ad-t">Choose the meteor's id</text>
+  <text x="490" y="249" class="ad-m">it is the charge's reference</text>
+  <path d="M490 258 V272 H810 V286" class="ad-flow"/>
+
+  <rect x="685" y="286" width="250" height="44" rx="10" class="ad-act"/>
+  <text x="810" y="304" class="ad-t">Charge before acting</text>
+  <text x="810" y="321" class="ad-m">price list &#8594; allocation &#8594; lots</text>
+  <path d="M810 330 V358" class="ad-flow"/>
+
+  <polygon points="685,380 810,358 935,380 810,402" class="ad-dec"/>
+  <text x="810" y="384" class="ad-t">Covered?</text>
+  <path d="M685 380 H615" class="ad-flow"/>
+  <text x="642" y="373" class="ad-lbl">no</text>
+
+  <rect x="365" y="358" width="250" height="44" rx="10" class="ad-stop"/>
+  <text x="490" y="376" class="ad-t">Refuse with a 402</text>
+  <text x="490" y="393" class="ad-m">entitlement &#183; allocation &#183; balance</text>
+  <path d="M365 380 H181" class="ad-flow"/>
+  <circle cx="170" cy="380" r="11" class="ad-ring"/><circle cx="170" cy="380" r="6" class="ad-dot"/>
+
+  <path d="M810 402 V430" class="ad-flow"/>
+  <text x="818" y="421" class="ad-lbl">yes</text>
+  <rect x="685" y="430" width="250" height="44" rx="10" class="ad-act"/>
+  <text x="810" y="448" class="ad-t">Draw from the lots</text>
+  <text x="810" y="465" class="ad-m">by priority, then soonest expiry</text>
+  <path d="M810 474 V488 H490 V502" class="ad-flow"/>
+
+  <rect x="365" y="502" width="250" height="44" rx="10" class="ad-act"/>
+  <text x="490" y="529" class="ad-t">Insert the meteor</text>
+  <path d="M490 546 V574" class="ad-flow"/>
+
+  <polygon points="365,596 490,574 615,596 490,618" class="ad-dec"/>
+  <text x="490" y="600" class="ad-t">Saved?</text>
+  <path d="M615 596 H685" class="ad-flow"/>
+  <text x="642" y="589" class="ad-lbl">no</text>
+
+  <rect x="685" y="574" width="250" height="44" rx="10" class="ad-act"/>
+  <text x="810" y="592" class="ad-t">Refund the reference</text>
+  <text x="810" y="609" class="ad-m">back into the lots it came from</text>
+  <path d="M810 618 V657" class="ad-flow"/>
+  <circle cx="810" cy="668" r="11" class="ad-ring"/><circle cx="810" cy="668" r="6" class="ad-dot"/>
+
+  <path d="M490 618 V632 H170 V646" class="ad-flow"/>
+  <text x="498" y="631" class="ad-lbl">yes</text>
+  <rect x="45" y="646" width="250" height="44" rx="10" class="ad-act"/>
+  <text x="170" y="673" class="ad-t">Sees the meteor</text>
+  <path d="M170 690 V729" class="ad-flow"/>
+  <circle cx="170" cy="740" r="11" class="ad-ring"/><circle cx="170" cy="740" r="6" class="ad-dot"/>
+
+  <text x="10" y="806" class="ad-note">Deleting a meteor less than a minute old refunds its charge the same way. With no credits port mounted, meteors are free.</text>
+</svg>
+</figure>

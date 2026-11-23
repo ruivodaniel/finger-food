@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-tabbed-key-values-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-tabbed-key-values",
+ "name": "default",
+ "title": "Tabbed key values",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

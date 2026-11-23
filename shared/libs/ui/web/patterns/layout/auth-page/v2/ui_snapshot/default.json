@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-layout-auth-page-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-layout-auth-page",
+ "name": "default",
+ "title": "Auth page",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

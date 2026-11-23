@@ -3,7 +3,7 @@
  * and provider identifiers.
  */
 
-import { PRIVATE, type Private, type Public } from "@libs/gated-scoped-ac";
+import { PRIVATE, type Private, type Public, type ScopedAcRequestContext } from "@libs/gated-scoped-ac";
 import type { UserView } from "../../shared/types/domain";
 import {
   IdentityProviderError,
@@ -12,7 +12,6 @@ import {
   type IdentityProviderPort,
   type IdentitySnapshot,
 } from "../identity/identity-provider.port";
-import type { ScopedAcRequestContext } from "../shared/scoped-ac";
 import type { UserRepository } from "../repositories/user.repository";
 import type { ProfilePatch } from "../repositories/user-profile.repository";
 import type {
@@ -31,7 +30,7 @@ export interface UserServiceDeps {
    * services, never their repositories (API12). */
   userProfileService: Pick<
     UserProfileService,
-    "create" | "getByUserId" | "update" | "updateScoped"
+    "create" | "getByUserId" | "updateScoped"
   >;
   userContactService: Pick<UserContactService, "seedDefault">;
   port: IdentityProviderPort;
@@ -139,17 +138,9 @@ export class UserService {
     };
   }
 
-  /** Raw profile write — the pre-session registration name-seed (auth.service,
-   * no bag yet). The authenticated `/me` write is `updateOwnProfile`. */
-  async updateProfile(userId: string, patch: ProfilePatch): Promise<void> {
-    await this.deps.userProfileService.update(userId, patch);
-    await this.deps.hooks.onUserUpdated?.({ userId });
-  }
-
-  /** The authenticated caller updating their OWN profile (`PATCH /me/profile`):
-   * the profile owner gates the write behind the engine (AC5/AC10). Split from
-   * the raw `updateProfile` by signature (a travelling AC context) — the
-   * pre-session seed never carries one. */
+  /** The caller updating their OWN profile (`PATCH /me/profile`, and the name
+   * given at registration): the profile owner gates the write behind the
+   * engine (AC5/AC10). */
   async updateOwnProfile(
     ac: ScopedAcRequestContext,
     visibility: Private,
@@ -168,7 +159,7 @@ export class UserService {
   /**
    * Presign the caller's avatar upload. The server derives the key — the
    * client never chooses storage paths. The returned publicUrl is what
-   * `updateProfile({ image })` stores after the browser PUTs the bytes.
+   * `updateOwnProfile({ image })` stores after the browser PUTs the bytes.
    */
   async presignAvatarUpload(
     visibility: Private,

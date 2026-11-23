@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-timelines-and-agenda-team-standup-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-timelines-and-agenda-team-standup",
+ "name": "default",
+ "title": "Timelines and agenda: team standup",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

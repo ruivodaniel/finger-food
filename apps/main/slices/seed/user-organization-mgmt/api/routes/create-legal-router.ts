@@ -13,7 +13,7 @@
  *   GET  /legal/consent/pending                      unmet consent, grouped by scope
  *   GET  /legal/consent/history                      the caller's own consent records
  *   POST /legal/consent                              record consent (context "gate")
- *   GET  /legal-admin/catalog                        authorable (scope, type) pairs
+ *   GET  /legal-admin/catalog                        the (scope, type) pairs (config, any signed-in user)
  *   GET  /legal-admin/documents?type=&orgTypeId=     every version, drafts included
  *   GET  /legal-admin/documents/:id                  one version, draft visible
  *   PUT  /legal-admin/documents/draft                upsert the scope's draft
@@ -145,8 +145,8 @@ export function createLegalRouter(options: CreateLegalRouterOptions) {
   // ── Authoring (/legal-admin — gate-visible, gated by the engine) ──
 
   router.get("/legal-admin/catalog", async (c) => {
-    const ac = requireScopedAc(c, options.errors);
-    return c.json(options.legalDocumentService.authoringCatalog(ac, PRIVATE));
+    requireUser(c, options.errors);
+    return c.json(options.legalDocumentService.authoringCatalog(PRIVATE));
   });
 
   router.get(

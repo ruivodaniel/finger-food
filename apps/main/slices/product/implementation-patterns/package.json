@@ -1,0 +1,96 @@
+{
+  "name": "@product/implementation-patterns",
+  "version": "0.1.0",
+  "description": "Implementation patterns \u2014 the front end's and the API's patterns as small working cases, kept as reference: the meteors (a list under scoped access control, the default data flow) and the massive minesweeper (the slice store)",
+  "type": "module",
+  "exports": {
+    "./shared": {
+      "types": "./shared/index.ts",
+      "import": "./shared/index.ts"
+    },
+    "./api": {
+      "types": "./api/index.ts",
+      "import": "./api/index.ts"
+    },
+    "./models": {
+      "types": "./api/models/index.ts",
+      "import": "./api/models/index.ts",
+      "default": "./api/models/index.ts"
+    },
+    "./web": {
+      "types": "./web/index.ts",
+      "import": "./web/index.ts"
+    },
+    "./theme": {
+      "types": "./web/theme/index.ts",
+      "import": "./web/theme/index.ts"
+    }
+  },
+  "files": [
+    "shared",
+    "api",
+    "web"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test:unit": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@libs/gated-scoped-ac": "workspace:*",
+    "@libs/versioning": "workspace:*",
+    "@libs/web-routing": "workspace:*",
+    "@modules/collaboration": "workspace:*",
+    "@modules/versioning": "workspace:*"
+  },
+  "peerDependencies": {
+    "@hono/zod-validator": ">=0.4.0",
+    "@libs/list-query": "workspace:*",
+    "@libs/web-components": "workspace:*",
+    "@libs/web-layouts": "workspace:*",
+    "@modules/shared": "workspace:*",
+    "@tanstack/react-query": "^5.77.0",
+    "@tanstack/react-router": "^1.120.0",
+    "drizzle-orm": ">=0.30.0",
+    "drizzle-zod": ">=0.8.0",
+    "hono": "^4.12.17",
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0",
+    "zod": "^4.4.3",
+    "zustand": "^5.0.5"
+  },
+  "peerDependenciesMeta": {
+    "@libs/web-components": {
+      "optional": true
+    },
+    "@libs/web-layouts": {
+      "optional": true
+    },
+    "@libs/list-query": {
+      "optional": true
+    },
+    "@tanstack/react-query": {
+      "optional": true
+    },
+    "@tanstack/react-router": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    },
+    "@modules/shared": {
+      "optional": true
+    },
+    "zustand": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0 || ^19.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^3.1.4"
+  }
+}

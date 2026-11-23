@@ -24,6 +24,7 @@ import {
   InMemoryUserRepository,
   makeUserStack,
   publishTestDoc,
+  testAc,
   testEngine,
   testErrors,
   testLogger,
@@ -288,7 +289,7 @@ describe("gate service", () => {
       { type: "termsAndConditions" as const, shown: true as const, consent: true as const, mandatory: true },
       { type: "privacyPolicy" as const, shown: true as const, consent: true as const, mandatory: true },
     ];
-    await legalService.recordConsent({
+    await legalService.recordConsentScoped(testAc(s.userId), PRIVATE, {
       userId: s.userId,
       items: consentItems,
       decisions: [
@@ -402,7 +403,7 @@ describe("gate service", () => {
       title: "Platform T&C",
       contentHtml: "<p>t</p>",
     });
-    await legalService.recordConsent({
+    await legalService.recordConsentScoped(testAc(s.userId), PRIVATE, {
       userId: s.userId,
       items: [
         { type: "termsAndConditions", shown: true, consent: true, mandatory: true },
@@ -449,7 +450,7 @@ describe("gate service", () => {
       engine: testEngine,
       errors: testErrors,
     });
-    await legalService.recordConsent({
+    await legalService.recordConsentScoped(testAc(s.userId), PRIVATE, {
       userId: s.userId,
       items: [
         { type: "termsAndConditions", shown: true, consent: true, mandatory: true },

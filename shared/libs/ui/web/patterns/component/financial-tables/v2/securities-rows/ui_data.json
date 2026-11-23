@@ -1,0 +1,298 @@
+{
+ "id": "ui-data-pattern-component-financial-tables-securities-rows",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-financial-tables-securities-rows",
+ "kind": "component",
+ "name": "securities-rows",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "securities-rows",
+  "version": 1,
+  "surface": "web",
+  "root": {
+   "type": "Card",
+   "props": {
+    "style": {
+     "obj": {
+      "width": 720
+     }
+    }
+   },
+   "children": [
+    {
+     "type": "Content",
+     "children": [
+      {
+       "type": "RichTable",
+       "props": {
+        "columns": [
+         {
+          "obj": {
+           "key": "security",
+           "name": "Security",
+           "width": 170,
+           "frozen": "start"
+          }
+         },
+         {
+          "obj": {
+           "key": "price",
+           "name": "Price",
+           "type": "number",
+           "width": 120,
+           "cell": [
+            {
+             "obj": {
+              "component": "DataNumber",
+              "align": "end",
+              "props": {
+               "obj": {
+                "config": {
+                 "obj": {
+                  "mode": {
+                   "obj": {
+                    "kind": "full"
+                   }
+                  },
+                  "locale": "en-GB"
+                 }
+                },
+                "scale": "sm",
+                "monospace": true
+               }
+              },
+              "from": {
+               "obj": {
+                "value": "price"
+               }
+              }
+             }
+            },
+            {
+             "obj": {
+              "component": "DataNumber",
+              "align": "end",
+              "props": {
+               "obj": {
+                "config": {
+                 "obj": {
+                  "mode": {
+                   "obj": {
+                    "kind": "fixedScale",
+                    "scale": "unit",
+                    "n": 2
+                   }
+                  },
+                  "locale": "en-GB",
+                  "representation": {
+                   "obj": {
+                    "kind": "percentage",
+                    "input": "points"
+                   }
+                  }
+                 }
+                },
+                "scale": "xs",
+                "monospace": true
+               }
+              },
+              "from": {
+               "obj": {
+                "value": "change",
+                "status": "changeStatus",
+                "trend": "changeTrend"
+               }
+              }
+             }
+            }
+           ]
+          }
+         },
+         {
+          "obj": {
+           "key": "ytw",
+           "name": "YTW %",
+           "type": "number",
+           "width": 100,
+           "cell": {
+            "obj": {
+             "component": "DataNumber",
+             "align": "end",
+             "props": {
+              "obj": {
+               "config": {
+                "obj": {
+                 "mode": {
+                  "obj": {
+                   "kind": "fixedScale",
+                   "scale": "unit",
+                   "n": 2
+                  }
+                 },
+                 "locale": "en-GB"
+                }
+               },
+               "scale": "sm",
+               "monospace": true
+              }
+             },
+             "from": {
+              "obj": {
+               "value": "ytw"
+              }
+             }
+            }
+           }
+          }
+         },
+         {
+          "obj": {
+           "key": "z",
+           "name": "Z-spread %",
+           "type": "number",
+           "width": 110,
+           "cell": {
+            "obj": {
+             "component": "DataNumber",
+             "align": "end",
+             "props": {
+              "obj": {
+               "config": {
+                "obj": {
+                 "mode": {
+                  "obj": {
+                   "kind": "fixedScale",
+                   "scale": "unit",
+                   "n": 2
+                  }
+                 },
+                 "locale": "en-GB"
+                }
+               },
+               "scale": "sm",
+               "monospace": true
+              }
+             },
+             "from": {
+              "obj": {
+               "value": "z"
+              }
+             }
+            }
+           }
+          }
+         },
+         {
+          "obj": {
+           "key": "amount",
+           "name": "Amount",
+           "type": "number",
+           "width": 140,
+           "cell": {
+            "obj": {
+             "component": "DataNumber",
+             "align": "end",
+             "props": {
+              "obj": {
+               "config": {
+                "obj": {
+                 "mode": {
+                  "obj": {
+                   "kind": "fixedScale",
+                   "scale": "million",
+                   "n": 0
+                  }
+                 },
+                 "locale": "en-GB"
+                }
+               },
+               "scale": "sm",
+               "monospace": true
+              }
+             },
+             "from": {
+              "obj": {
+               "value": "amount",
+               "symbol": "ccy"
+              }
+             }
+            }
+           }
+          }
+         }
+        ],
+        "source": {
+         "obj": {
+          "kind": "authored",
+          "rows": [
+           {
+            "obj": {
+             "id": 1,
+             "security": "AAPL 1.15 08/26",
+             "price": 100.08,
+             "change": 0.032,
+             "changeStatus": "success",
+             "changeTrend": "arrowUp",
+             "ytw": 0.24,
+             "z": 1.67,
+             "amount": 1250000000.0,
+             "ccy": "USD"
+            }
+           },
+           {
+            "obj": {
+             "id": 2,
+             "security": "IBM 3.30 05/27",
+             "price": 98.27,
+             "change": -0.76,
+             "changeStatus": "error",
+             "changeTrend": "arrowDown",
+             "ytw": 8.55,
+             "z": 7.19,
+             "amount": 460000000.0,
+             "ccy": "USD"
+            }
+           },
+           {
+            "obj": {
+             "id": 3,
+             "security": "BMW 0.75 07/29",
+             "price": 100.59,
+             "change": -0.47,
+             "changeStatus": "error",
+             "changeTrend": "arrowDown",
+             "ytw": 5.77,
+             "z": 4.38,
+             "amount": 500000000.0,
+             "ccy": "EUR"
+            }
+           },
+           {
+            "obj": {
+             "id": 4,
+             "security": "TSLA 5.30 08/25",
+             "price": 101.2,
+             "change": 0.21,
+             "changeStatus": "success",
+             "changeTrend": "arrowUp",
+             "ytw": 4.9,
+             "z": 3.12,
+             "amount": 1800000000.0,
+             "ccy": "USD"
+            }
+           }
+          ]
+         }
+        },
+        "editable": false,
+        "height": 260,
+        "rowHeight": 48
+       }
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

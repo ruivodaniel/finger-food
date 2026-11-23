@@ -1,0 +1,84 @@
+{
+  "name": "@modules/chatbot",
+  "version": "0.1.0",
+  "description": "Chatbot \u2014 a user's chats and messages, a run on the orchestrator for each message, and each chat's events pushed to its owner",
+  "type": "module",
+  "exports": {
+    "./shared": {
+      "types": "./shared/index.ts",
+      "import": "./shared/index.ts"
+    },
+    "./api": {
+      "types": "./api/index.ts",
+      "import": "./api/index.ts"
+    },
+    "./models": {
+      "types": "./api/models/index.ts",
+      "import": "./api/models/index.ts",
+      "default": "./api/models/index.ts"
+    },
+    "./web": {
+      "types": "./web/index.ts",
+      "import": "./web/index.ts"
+    }
+  },
+  "files": [
+    "shared",
+    "api",
+    "web"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test:unit": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@libs/chat-stream": "workspace:*",
+    "@libs/orchestrator-lib-schema": "workspace:*",
+    "@libs/orchestrator-workers": "workspace:*",
+    "@libs/realtime": "workspace:*",
+    "@libs/web-routing": "workspace:*",
+    "@tanstack/react-router": "^1.120.0"
+  },
+  "peerDependencies": {
+    "@hono/zod-validator": ">=0.4.0",
+    "drizzle-orm": ">=0.30.0",
+    "hono": "^4.12.17",
+    "zod": "^4.4.3",
+    "@libs/web-components": "workspace:*",
+    "@libs/web-layouts": "workspace:*",
+    "@tanstack/react-query": "^5.77.0",
+    "react": "^18.0.0 || ^19.0.0",
+    "@modules/shared": "workspace:*",
+    "zustand": "^5.0.5"
+  },
+  "devDependencies": {
+    "@hono/zod-validator": "0.4.3",
+    "drizzle-orm": "0.43.1",
+    "hono": "4.12.17",
+    "typescript": "^5.0.0",
+    "vitest": "^3.1.4",
+    "zod": "^4.3.6",
+    "@types/react": "^18.0.0 || ^19.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@libs/web-components": {
+      "optional": true
+    },
+    "@libs/web-layouts": {
+      "optional": true
+    },
+    "@tanstack/react-query": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    },
+    "@modules/shared": {
+      "optional": true
+    },
+    "zustand": {
+      "optional": true
+    }
+  }
+}

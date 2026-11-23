@@ -1,0 +1,95 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "basis-points",
+ "version": 1,
+ "surface": "web",
+ "measure": "md",
+ "root": {
+  "type": "Card",
+  "props": {
+   "style": {
+    "width": 320
+   }
+  },
+  "children": [
+   {
+    "type": "Content",
+    "children": [
+     {
+      "type": "Stack",
+      "props": {
+       "dir": "col",
+       "gap": 6
+      },
+      "children": [
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--body-small",
+         "emphasis": "quiet",
+         "children": "Yield to worst"
+        }
+       },
+       {
+        "type": "DataNumber",
+        "props": {
+         "value": 8.55,
+         "config": {
+          "mode": {
+           "kind": "fixedScale",
+           "scale": "unit",
+           "n": 2
+          },
+          "locale": "en-GB",
+          "representation": {
+           "kind": "percentage",
+           "input": "points"
+          }
+         },
+         "scale": "xl"
+        }
+       },
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "gap": 6,
+         "align": "baseline"
+        },
+        "children": [
+         {
+          "type": "DataNumber",
+          "props": {
+           "value": 158,
+           "config": {
+            "mode": {
+             "kind": "full"
+            },
+            "locale": "en-GB"
+           },
+           "symbol": "bps",
+           "trend": "arrowUp",
+           "status": "success",
+           "scale": "sm"
+          }
+         },
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--body-extra-small",
+           "emphasis": "quiet",
+           "children": "today"
+          }
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

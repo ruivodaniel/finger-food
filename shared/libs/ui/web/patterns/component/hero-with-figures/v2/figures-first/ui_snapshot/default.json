@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-hero-with-figures-figures-first-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-hero-with-figures-figures-first",
+ "name": "default",
+ "title": "Hero with figures: figures first",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

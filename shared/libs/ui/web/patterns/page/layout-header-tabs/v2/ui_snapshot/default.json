@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-page-layout-header-tabs-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-page-layout-header-tabs",
+ "name": "default",
+ "title": "Header, tabs and main",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

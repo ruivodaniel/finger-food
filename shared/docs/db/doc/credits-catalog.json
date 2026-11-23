@@ -1,0 +1,91 @@
+{
+ "id": "doc/credits-catalog",
+ "kind": "doc",
+ "title": "Credits catalog",
+ "status": "converted",
+ "subject": "credits",
+ "owner": "main/slices/credits",
+ "order": 2,
+ "tags": [
+  "credits",
+  "catalog"
+ ],
+ "paths": [
+  "shared/configs/credits",
+  "apps/main/slices/seed/credits/shared/catalog.ts"
+ ],
+ "summary": "What an app configures for credits: the currency, the services that cost credits, the price lists and the welcome credits.",
+ "docId": "credits-catalog",
+ "doc": {
+  "axioms": [],
+  "purpose": {
+   "intro": "The credits slice's configuration is data: one call to `defineCreditsCatalog` in `shared/configs/credits/index.ts`. It validates when imported, so a bad entry fails dev, CI and boot alike, with every problem listed. The amounts in the seed are placeholders until product sets them."
+  },
+  "reference": [
+   {
+    "topic": "The seed's catalog",
+    "statement": "The whole file, without its header comment.",
+    "claims": [],
+    "examples": [
+     {
+      "snippets": [
+       {
+        "caption": "typescript",
+        "code": "import { defineCreditsCatalog } from \"@modules/credits/shared\";\n\nexport const creditsCatalog = defineCreditsCatalog({\n  currency: \"eur\",\n  services: [\n    { key: \"assistant\", name: \"Ask the assistant\", unit: \"question\" },\n    { key: \"meteor\", name: \"Create a meteor\", unit: \"meteor\" },\n  ],\n  defaultPriceList: \"free\",\n  priceLists: {\n    free: { assistant: 10, meteor: 10 },\n    starter: { assistant: 5, meteor: 5 },\n    pro: { assistant: 5, meteor: 5 },\n  },\n  welcome: { user: 0, organization: 0, expiresInDays: 180 },\n});"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "topic": "The fields",
+    "statement": "Keys are lower-case identifiers; amounts are whole credits.",
+    "claims": [
+     {
+      "text": "`currency`: the platform currency, a lower-case ISO code. One credit is one cent of it, which matters only where credits meet money, as with vendor credits."
+     },
+     {
+      "text": "`services`: what costs credits. `key` is what a consuming slice charges with (`metering.charge(owner, { service: \"meteor\", … })`) and what allocation rules and grants list; `name` is shown on screens; `unit` is what one charge counts."
+     },
+     {
+      "text": "`priceLists`: credits per unit of each service, per list. A service missing from a list is refused for owners on that list (the `entitlement` reason); a price of 0 costs nothing."
+     },
+     {
+      "text": "`defaultPriceList`: the list of an owner with no other assigned, such as an owner without a plan. It must exist."
+     },
+     {
+      "text": "`welcome`: credits given once to every new person (`user`) and organization, and how many days they last (`null` never expires). 0 gives nothing; it is the one source of credits outside access control, so an app turns it on deliberately."
+     }
+    ]
+   },
+   {
+    "topic": "Rules that span the catalogs",
+    "statement": "With the payment slice mounted, the two catalogs are read together.",
+    "claims": [
+     {
+      "text": "Every plan key in [[payment-catalog|the payment catalog]] needs a price list with the same key here; the API refuses to boot otherwise. While the plan is active, its owner pays by that list."
+     },
+     {
+      "text": "Adding a service: add it to `services`, price it in each list that should include it, and charge with its key from the consuming slice's credits port."
+     }
+    ]
+   }
+  ],
+  "review": {
+   "axioms": {
+    "state": "unreviewed"
+   },
+   "purpose": {
+    "state": "unreviewed"
+   },
+   "reference": {
+    "state": "unreviewed"
+   }
+  },
+  "converted": true
+ },
+ "audience": [
+  "seed-contributor",
+  "seed-consumer"
+ ]
+}

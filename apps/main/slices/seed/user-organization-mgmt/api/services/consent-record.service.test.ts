@@ -67,7 +67,7 @@ describe("consent-record service", () => {
     });
     // privacy is mandatory but unpublished → waived; rejecting terms fails
     await expect(
-      service.recordConsent({
+      service.recordConsentScoped(testAc("u1"), PRIVATE, {
         userId: "u1",
         items,
         decisions: [{ type: "termsAndConditions", accepted: false }],
@@ -76,7 +76,7 @@ describe("consent-record service", () => {
       }),
     ).rejects.toThrow(/termsAndConditions/);
 
-    await service.recordConsent({
+    await service.recordConsentScoped(testAc("u1"), PRIVATE, {
       userId: "u1",
       items,
       decisions: [
@@ -102,7 +102,7 @@ describe("consent-record service", () => {
     });
     const mandatoryOnly = items.slice(0, 1);
     expect(await service.consentSatisfied("u1", mandatoryOnly, null)).toBe(false);
-    await service.recordConsent({
+    await service.recordConsentScoped(testAc("u1"), PRIVATE, {
       userId: "u1",
       items: mandatoryOnly,
       decisions: [{ type: "termsAndConditions", accepted: true }],
@@ -128,7 +128,7 @@ describe("consent-record service", () => {
       contentHtml: "<p>t</p>",
     });
     const mandatoryOnly = items.slice(0, 1);
-    await service.recordConsent({
+    await service.recordConsentScoped(testAc("u1"), PRIVATE, {
       userId: "u1",
       items: mandatoryOnly,
       decisions: [{ type: "termsAndConditions", accepted: true }],

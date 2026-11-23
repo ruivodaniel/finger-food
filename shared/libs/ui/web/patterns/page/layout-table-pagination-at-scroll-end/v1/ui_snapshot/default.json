@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-page-layout-table-pagination-at-scroll-end-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-page-layout-table-pagination-at-scroll-end",
+ "name": "default",
+ "title": "Table: pagination at the bottom of the scroll (default)",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

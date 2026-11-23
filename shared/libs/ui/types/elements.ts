@@ -21,7 +21,7 @@
 // Status goes to fields, controls, and containers that highlight a child in error.
 // `platform` says where the element exists: both, the web only, or mobile only. On mobile an element takes its
 // states minus `hover`; where it has `hover`, mobile has `long-pressed` in its place; `mobileState` adds the rest.
-// `none` means the axis does not apply. `concept` is on every element and never listed.
+// `none` means the axis does not apply. `concept` and `flag` are on every element and never listed.
 // `position` (types/axes.ts POSITION) says where the element stands in its parent and how much it takes: a markup axis,
 // one value = one fixed set of structural classes (web/components/src/lib/position.ts); the theme never reads it.
 
@@ -287,6 +287,17 @@ export const ELEMENTS = {
     position: POSITION,
     why: "child: current, disabled, waiting, clickable; an item carrying a status",
   },
+  // ── topbar: the bar at the top of a shell, a row of navigation entries and menus ──
+  topbar: {
+    family: "control-group",
+    platform: WEB,
+    emphasis: EMPHASIS,
+    status: STATUS,
+    state: ["loading", "disabled"],
+    scale: SCALE,
+    position: POSITION,
+    why: "parent: a row of entries, the main navigation of a shell with a top bar; away is [away] (hidden on scroll), not a state",
+  },
   // ── nav item: mobile's navigation entry — an item of the tab bar, an entry of the drawer ──
   navItem: {
     family: "control",
@@ -465,6 +476,48 @@ export const ELEMENTS = {
     scale: SCALE,
     position: POSITION,
     why: "the field",
+  },
+  // ── colour picker ──
+  colorPicker: {
+    family: "field",
+    platform: WEB,
+    emphasis: EMPHASIS,
+    status: STATUS,
+    state: ["hover", "focus", "disabled", "loading"],
+    scale: SCALE,
+    position: POSITION,
+    why: "the field: the chosen colour(s) and a way to change them",
+  },
+  swatch: {
+    family: "control",
+    platform: WEB,
+    emphasis: none,
+    status: none,
+    state: ["hover", "focus", "selected", "disabled"],
+    scale: SCALE,
+    position: none,
+    why: "child: one colour to choose, in a palette or among the chosen ones",
+  },
+  // ── icon picker ──
+  iconPicker: {
+    family: "field",
+    platform: WEB,
+    emphasis: EMPHASIS,
+    status: STATUS,
+    state: ["hover", "focus", "disabled", "loading"],
+    scale: SCALE,
+    position: POSITION,
+    why: "the field: the chosen icon and a way to change it",
+  },
+  iconTile: {
+    family: "control",
+    platform: WEB,
+    emphasis: none,
+    status: none,
+    state: ["hover", "focus", "selected", "disabled"],
+    scale: SCALE,
+    position: none,
+    why: "child: one icon to choose, in a library",
   },
   calendar: {
     family: "surface",
@@ -1263,7 +1316,7 @@ export type MobileStateOf<K extends ElementKey> =
 
 /** The axis props a component for element K may carry. Read by the component, never declared by it. */
 export type ElementProps<K extends ElementKey> =
-  { concept?: string }
+  { concept?: string; flag?: string }
   & ([EmphasisOf<K>] extends [never] ? Record<never, never> : { emphasis?: EmphasisOf<K> })
   & ([StatusOf<K>] extends [never] ? Record<never, never> : { status?: StatusOf<K> })
   & ([StateOf<K>] extends [never] ? Record<never, never> : { state?: StateOf<K> })

@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Split credits out of payment — plan</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root {
+    --ink: #1d2b2a; --muted: #697B79; --line: #b9c6c4; --bg: #f7f9f9; --card: #ffffff;
+    --blue: #0fa4ea; --magenta: #e7107e; --green: #1d8a6b; --amber: #8a7400;
+    --mono: "SF Mono", ui-monospace, Menlo, Consolas, monospace;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 40px 40px 90px; background: var(--bg); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.5; }
+  main { max-width: 1040px; margin: 0 auto; }
+  h1 { font-size: 26px; margin: 0 0 4px; letter-spacing: -0.02em; }
+  .subtitle { color: var(--muted); font-size: 13px; margin-bottom: 14px; }
+  .legend { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 36px; font-size: 11.5px; color: var(--muted); }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .dot { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+  .d-new { background: #bfe6d4; } .d-move { background: #bfe0f5; } .d-mod { background: #f2e6a2; } .d-del { background: #f7c3de; }
+  .section { margin-bottom: 48px; }
+  .section-title { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted);
+    margin-bottom: 18px; display: flex; align-items: center; gap: 10px; }
+  .section-title::after { content: ""; flex: 1; height: 1px; background: #dde4e3; }
+  p { margin: 0 0 12px; max-width: 76ch; }
+  code { font-family: var(--mono); font-size: 12.5px; background: #edf1f0; padding: 1px 5px; border-radius: 4px; }
+  .ask { border-left: 3px solid var(--blue); padding: 8px 14px; background: var(--card); margin-bottom: 10px; font-style: italic; max-width: 76ch; }
+  .good { background: #f2faf6; border: 1.5px solid #8fd0b3; border-radius: 8px; padding: 14px 18px; margin-bottom: 14px; }
+  table { border-collapse: collapse; width: 100%; background: var(--card); font-size: 13px; }
+  th, td { text-align: left; padding: 8px 12px; border: 1px solid #dde4e3; vertical-align: top; }
+  th { background: #edf1f0; font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+  .flow { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 6px 0 14px; }
+  .box { background: var(--card); border: 1.5px solid #dbe3e2; border-radius: 8px; padding: 8px 14px; font-family: var(--mono); font-size: 13px; font-weight: 650; }
+  .box.credits { border-color: #8fd0b3; background: #f2faf6; } .box.payment { border-color: #8ec9ec; background: #f1f8fd; } .box.chat { border-color: #e0cd6a; background: #fcf9ea; }
+  .arrow { color: var(--muted); font-size: 12px; }
+  .seam { background: var(--card); border: 1px solid #dde4e3; border-radius: 8px; padding: 12px 16px; margin-bottom: 10px; }
+  .seam h3 { margin: 0 0 4px; font-size: 14px; }
+  .seam p { margin: 0; }
+  pre { font-family: var(--mono); font-size: 12px; background: var(--ink); color: #e6eeec; padding: 14px 16px; border-radius: 8px; overflow-x: auto; }
+  .tree ul { list-style: none; margin: 0; padding-left: 34px; position: relative; }
+  .tree ul::before { content: ""; position: absolute; top: 0; bottom: 14px; left: 12px; border-left: 2px solid var(--line); }
+  .tree li { position: relative; padding: 4px 0 4px 18px; }
+  .tree li::before { content: ""; position: absolute; top: 20px; left: -22px; width: 40px; border-top: 2px solid var(--line); }
+  .tree > ul { padding-left: 0; } .tree > ul::before { display: none; }
+  .tree > ul > li { padding-left: 0; } .tree > ul > li::before { display: none; }
+  .node { display: inline-flex; align-items: baseline; gap: 10px; background: var(--card); border: 1.5px solid #dbe3e2; border-radius: 8px; padding: 5px 12px; flex-wrap: wrap; }
+  .node .url { font-family: var(--mono); font-size: 12.5px; font-weight: 650; }
+  .node .label { font-size: 11.5px; color: var(--muted); }
+  .root > .node { background: var(--ink); border-color: var(--ink); } .root > .node .url { color: #fff; } .root > .node .label { color: #b8c4c2; }
+  .n-new > .node { border-color: #8fd0b3; background: #f2faf6; }
+  .n-move > .node { border-color: #8ec9ec; background: #f1f8fd; }
+  .n-mod > .node { border-color: #e0cd6a; background: #fcf9ea; }
+  .n-del > .node { border-color: #efa3cd; background: #fdf3f9; text-decoration: line-through; }
+  .rec { color: var(--green); font-weight: 700; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Split credits out of payment</h1>
+  <div class="subtitle">Split, “Credits limited to services” and “Member allocations” built, uncommitted · browser and Stripe test-mode checks passed 9 Nov 2026 · revision 8 · branch <code>lourenco/payment-slice</code> at <code>36fb71ff6</code> · 9 Nov 2026</div>
+  <div class="legend">
+    <span><i class="dot d-new"></i>new</span><span><i class="dot d-move"></i>moved to credits</span>
+    <span><i class="dot d-mod"></i>modified</span><span><i class="dot d-del"></i>deleted</span>
+  </div>
+
+  <div class="section">
+    <div class="section-title">The ask</div>
+    <div class="ask">separate credits and payment into 2 slices</div>
+    <div class="ask">for now lets keep how we were doing then, exposing the services each slice needs from other and pass them on the mount, no direct imports. also we wanted to do this split because there will be apps that only have credits like an admin gives credits to a regular user for him to be able to do llm calls, but with a limit</div>
+    <div class="ask">i want to be able to track every expense and purchase via credits even when the app only needs platform purchases and subscriptions, so credits are still a reference of everything that happens money wise</div>
+    <div class="good"><b>The rule stays as documented.</b> A slice declares what it needs, in its own words. The app passes it at mount and is the only place that knows both sides. No docs or lint change is needed.</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Target</div>
+    <div class="flow">
+      <div class="box">app (mounts, the only one that knows both)</div>
+      <span class="arrow">injects credits into →</span>
+      <div class="box payment">payment</div>
+      <div class="box chat">meteors (optional)</div>
+      <span class="arrow">neither imports</span>
+      <div class="box credits">credits</div>
+    </div>
+    <table>
+      <tr><th></th><th>credits (new, seed)</th><th>payment (stays, seed)</th></tr>
+      <tr><td><b>Tables</b></td><td><code>credit_account</code> (new), <code>credit_lot</code>, <code>credit_ledger</code>, <code>member_allowance</code></td><td><code>payment_account</code> (Stripe mirror only), <code>payment_ledger</code> (new), <code>stripe_event</code>, <code>product</code>, <code>purchase</code></td></tr>
+      <tr><td><b>Services</b></td><td>Ledger, Allowance, CreditGrants, CreditAccount (the credits half of AccountService)</td><td>Billing, Selling, Marketplace, VendorCredits, Webhook, PaymentAccount (the other half)</td></tr>
+      <tr><td><b>Routes</b></td><td><code>/credits/summary · lots · ledger · me · allowances</code>, <code>/admin/credit-grants</code></td><td><code>/billing/summary · purchases · checkout · portal</code>, <code>/selling/*</code>, <code>/marketplace/*</code>, webhooks</td></tr>
+      <tr><td><b>Config</b></td><td><code>@configs/credits</code>: currency, services, price lists, welcome</td><td><code>@configs/payment</code>: plans, bundles, marketplace terms, vendor refund expiry</td></tr>
+      <tr><td><b>Web</b></td><td>Its own credits page, balance, lots, ledger and allowance components, credit grants page, credits-exhausted alert</td><td>Billing page, plan card, bundles, purchases, selling, marketplace</td></tr>
+      <tr><td><b>Exposes</b></td><td><code>quote · charge · refund</code> for metered callers, welcome, the ledger methods payment needs</td><td>Router and webhook mount</td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <div class="section-title">The credits-only app, as the acceptance test</div>
+    <p>The reason for the split: some apps only need credits. The test is that an admin grants credits, they get spent, and spending stops when they run out or at a member's weekly cap, with payment and Stripe absent. LLM calls are one future example of that spending; creating a meteor is the first spender wired.</p>
+    <table>
+      <tr><th>Needed</th><th>Today</th><th>In this plan</th></tr>
+      <tr><td>Admin grants credits to a person</td><td>Works: the credit grants page, for a platform owner, with amount, expiry and note</td><td>Moves to credits unchanged</td></tr>
+      <tr><td>No credits until an admin grants them</td><td>Works: setting welcome credits to 0 grants nothing</td><td>Configuration of that app</td></tr>
+      <tr><td>A price for a spending action with no plans</td><td>Half there: pricing falls back to the free plan's prices</td><td>Price lists with a default; no plan needed</td></tr>
+      <tr><td>The user sees their balance</td><td><b>Missing alone:</b> the balance lives on payment's billing page</td><td>Credits gets its own page</td></tr>
+      <tr><td>Settings page without payment</td><td><b>Broken:</b> user-org-management imports payment for the billing page. That was my merge, copying how notifications is placed</td><td>The app passes settings pages in; that import goes away</td></tr>
+      <tr><td>The limit</td><td>Spending stops when the balance runs out. Organizations can already cap a member by day, week or month</td><td>No limit by default. An organization can cap an individual member per week; day and month go away. Personal credits have no cap, only their amount</td></tr>
+      <tr><td>Something spends credits</td><td><b>Missing:</b> <code>charge</code> has no caller anywhere</td><td>Creating a meteor; the chat is not wired for now</td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Two ledgers</div>
+    <p><b>The rule:</b> the <b>payment ledger</b> records real money and lives in payment. The <b>credits ledger</b> records credits and lives in credits. When one event touches both, such as buying a bundle, both rows are written in the same transaction as the Stripe event, so one cannot exist without the other.</p>
+    <table>
+      <tr><th>Event</th><th>Payment ledger</th><th>Credits ledger</th></tr>
+      <tr><td>Bundle bought for €10</td><td>Bought Small bundle · €10</td><td>Bundle credits +€10</td></tr>
+      <tr><td>Pro subscription renews at €60</td><td>Subscription Pro · €60</td><td>Plan credits +€60</td></tr>
+      <tr><td>Upgrade from Starter to Pro, €40 charged</td><td>Subscription upgrade · €40</td><td>Starter credits expire, Pro credits +€60</td></tr>
+      <tr><td>Marketplace purchase by card, €25</td><td>Bought Mix review · €25</td><td>Nothing</td></tr>
+      <tr><td>Seller A refunds buyer B in credits, €25</td><td>Nothing, no money moves</td><td>Credits +€25, spendable only at seller A</td></tr>
+      <tr><td>Seller A refunds buyer B in money, €25</td><td>Refund · Mix review −€25</td><td>Nothing</td></tr>
+      <tr><td>Seller A gives buyer B a promotion</td><td>Nothing</td><td>Credits +amount, spendable only at seller A</td></tr>
+      <tr><td>Buyer B pays seller A with those credits, €25</td><td>Nothing</td><td>Vendor credits −€25</td></tr>
+      <tr><td>Creating a meteor</td><td>Nothing</td><td>Service charge</td></tr>
+      <tr><td>Admin grant or welcome credits</td><td>Nothing</td><td>Grant</td></tr>
+      <tr><td>Bundle refunded after €3 was spent</td><td>Refund · Small bundle −€10</td><td>Remaining €7 taken back</td></tr>
+      <tr><td>Chargeback</td><td>Chargeback when funds leave; a reversal if they return</td><td>Same take-back as a refund</td></tr>
+    </table>
+    <p style="margin-top:12px"><b>The new table</b> is <code>payment_ledger</code>, append-only: owner account, kind, signed amount, currency, description, the unique Stripe reference, and the reference of any credits it granted. That last field is how a refund finds the credits to take back.</p>
+    <p><b>What this removes:</b> the net-zero card-purchase pair and its lot reason, and the need for a single-currency rule, since the payment ledger stores each row's own currency. Credit refunds still need the purchase to be in the platform currency, as they do today.</p>
+    <p><b>Gaps it closes:</b> today the amount paid on an invoice or bundle is never recorded, and refunds of bundles and subscriptions and chargebacks are lost. Those need the invoice id and amount, the charge's customer, and new dispute events from Stripe.</p>
+    <p><b>Consequence:</b> the credits ledger is no longer the record of all money; the payment ledger is. A subscription that grants no credits appears only in the payment ledger. A credits-only app simply has no payment ledger.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">What gets passed at mount</div>
+<pre>// payment/api/shared/credits-port.ts — declared by payment, in its own words, importing nothing from credits
+export interface CreditsPort {
+  currency: string;
+  hasPriceList(key: string): boolean;
+  setPriceList(tx: Executor, owner: PaymentOwner, key: string | null): Promise&lt;void&gt;;
+  grant(tx: Executor, input: CreditGrant): Promise&lt;{ id: string } | null&gt;;
+  endLots(tx: Executor, owner: PaymentOwner, reason: string, meta: { sourceEventId?: string }): Promise&lt;void&gt;;
+  takeBack(tx: Executor, owner: PaymentOwner, input: { sourceRef: string; upTo: number; sourceEventId: string }): Promise&lt;{ taken: number }&gt;;   // what is left of that grant, never below zero
+  chargeVendor(tx: Executor, input: VendorCharge): Promise&lt;VendorChargeResult&gt;;
+  vendorBalance(executor: Executor, owner: PaymentOwner, vendorOrganizationId: string): Promise&lt;number&gt;;
+  issuedBy(executor: Executor, vendorOrganizationId: string): Promise&lt;VendorCreditTotals[]&gt;;
+}
+
+// core/api/src/mounts.ts — the only file that knows both
+export const credits = mountCreditsApi({ db, createId, catalog: creditsCatalog, engine: acEngine, ownerNames, searchOwners, logger, errors });
+export const payment = mountPaymentApi({ ..., credits: credits.services.ledger });   // typechecked here
+export const meteors = mountMeteorsApi({ ..., credits: credits.metering });          // optional: absent, creating a meteor is free
+
+// core/web/src/routes/route-tree.ts — the same idea for the settings section
+getUserOrgMgmtRoutes({ homePath, settingsPages: [personalBillingRoute] })            // a credits-only app passes personalCreditsRoute</pre>
+    <p>This is the pattern the repo already uses for <code>ownerNames</code>, <code>startRun</code> and the notifications queue. The web side follows the same rule: services and hooks arrive through <code>mountPaymentWeb</code>. Rendering another slice's components through its <code>web/index.ts</code> stays allowed, as the docs say, so payment's billing page can show credits' sections and the full app looks the same as today.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">The seams that need care</div>
+    <div class="seam"><h3>1 · The owner record</h3><p>Every credit table points at <code>payment_account</code> today. Credits gets its own <code>credit_account</code> (organization or user, exactly one). Payment always talks to credits by owner, so no foreign key crosses the slices.</p></div>
+    <div class="seam"><h3>2 · Pricing reads the plan</h3><p><code>charge</code> and <code>quote</code> read <code>planKey</code>, which is a Stripe mirror in payment. Credits owns <b>price lists</b> and stores which one applies. Billing sets it through the port, in the same transaction that mirrors the subscription. Without payment, everyone is on the default list.</p></div>
+    <div class="seam"><h3>3 · One transaction across both</h3><p>A webhook's event claim and its grant must commit together. Credits' write methods keep taking the caller's <code>tx</code>, as <code>grant</code> already does. Locks are always taken payment first, then credits.</p></div>
+    <div class="seam"><h3>4 · Stripe words in the ledger</h3><p><code>credit_ledger.stripe_event_id</code> becomes <code>source_event_id</code>. The lot reasons (<code>plan</code>, <code>top_up</code>…) stay in credits as plain vocabulary; <code>card_purchase</code> goes away, and the ledger gains a <code>take_back</code> reason.</p></div>
+    <div class="seam"><h3>5 · Vendor credits straddle the line</h3><p>This is the original idea and it stays: a seller can refund a buyer in credits usable only at that seller. The lots and their spending are credits. The refund policy is payment's. <code>VendorCreditsService</code> stays in payment and stops reaching <code>lotRepo</code>; that query becomes a credits method on the port.</p></div>
+    <div class="seam"><h3>6 · The summary is two answers</h3><p><code>/billing/summary</code> mixes plan and balance, so it splits in two. The marketplace pages get a buyer's vendor holdings through a hook passed to <code>mountPaymentWeb</code>.</p></div>
+    <div class="seam"><h3>7 · Access control</h3><p>A permission names one entity, so credits needs its own pair on <code>credit_account</code>: one for a person's own credits, one for a company's Manage Billing role. The grant permission stays with the platform owner, so a credits-only app needs a platform organization with an owner.</p></div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Files</div>
+    <div class="tree"><ul>
+      <li class="root"><div class="node"><span class="url">repo</span></div>
+      <ul>
+        <li class="n-new"><div class="node"><span class="url">apps/main/slices/seed/credits/</span><span class="label">@modules/credits, built to master's current slice shape</span></div>
+          <ul>
+            <li class="n-new"><div class="node"><span class="url">api/models/credit-account.model.ts</span><span class="label">owner + price list</span></div></li>
+            <li class="n-move"><div class="node"><span class="url">api/models/{credit-lot, credit-ledger, member-allowance}</span></div></li>
+            <li class="n-move"><div class="node"><span class="url">api/repositories/{credit-lot, credit-ledger, member-allowance}</span></div></li>
+            <li class="n-move"><div class="node"><span class="url">api/services/{ledger, allowance, credit-grants}</span><span class="label">+ tests</span></div></li>
+            <li class="n-new"><div class="node"><span class="url">api/services/credit-account.service.ts</span><span class="label">credits half of account.service</span></div></li>
+            <li class="n-new"><div class="node"><span class="url">api/{mount, routes/create-credits-router, testing/}</span></div></li>
+            <li class="n-new"><div class="node"><span class="url">web/services/{api, application}/, web/routes/get-routes.ts</span><span class="label">master's http client; getCreditsRoutes, personalCreditsRoute</span></div></li>
+            <li class="n-new"><div class="node"><span class="url">web/pages/credits/CreditsPage.tsx</span><span class="label">balance, lots, ledger, own allowance</span></div></li>
+            <li class="n-move"><div class="node"><span class="url">web/shared/components/{BalanceCard, LotsTable, LedgerTable, AllowancesTable, AllowanceSheet, MyAllowanceCard, CreditsExhaustedAlert}</span></div></li>
+            <li class="n-move"><div class="node"><span class="url">web/pages/credit-grants/CreditGrantsPage.tsx</span></div></li>
+          </ul>
+        </li>
+        <li class="n-mod"><div class="node"><span class="url">apps/main/slices/seed/payment/</span></div>
+          <ul>
+            <li class="n-new"><div class="node"><span class="url">api/shared/credits-port.ts</span><span class="label">what payment needs, in its own words</span></div></li>
+            <li class="n-new"><div class="node"><span class="url">api/{models/payment-ledger.model, repositories/payment-ledger.repository}.ts</span><span class="label">the real-money record</span></div></li>
+            <li class="n-mod"><div class="node"><span class="url">api/services/{billing, marketplace, selling, vendor-credits}</span><span class="label">call the port; write the payment ledger; tests get a fake port</span></div></li>
+            <li class="n-mod"><div class="node"><span class="url">api/stripe/{provider, stripe-adapter}.ts, api/mount.ts</span><span class="label">invoice id + amount, charge customer, dispute events</span></div></li>
+            <li class="n-mod"><div class="node"><span class="url">api/services/account.service.ts → payment-account.service.ts</span><span class="label">plan side only</span></div></li>
+            <li class="n-mod"><div class="node"><span class="url">api/models/payment-account.model.ts, api/mount*.ts</span></div></li>
+            <li class="n-mod"><div class="node"><span class="url">web/services/application/mount.ts, web/pages/{BillingPage, ProductPage, MarketplacePage}</span><span class="label">billing page gains a Payments list</span></div></li>
+          </ul>
+        </li>
+        <li class="n-mod"><div class="node"><span class="url">apps/main/slices/seed/user-organization-mgmt/web/routes/get-routes.ts</span><span class="label">settingsPages option; drops the payment import and dependency</span></div></li>
+        <li class="n-mod"><div class="node"><span class="url">apps/main/slices/product/meteors/api/{mount, services/meteor.service, repositories/meteor.repository}.ts</span><span class="label">optional credits port; charge before the create; refund on failure, or on delete within one minute of creation</span></div></li>
+        <li class="n-new"><div class="node"><span class="url">shared/configs/credits/</span><span class="label">split from shared/configs/payment</span></div></li>
+        <li class="n-mod"><div class="node"><span class="url">shared/configs/access-control/index.ts</span><span class="label">credit_account permissions</span></div></li>
+        <li class="n-mod"><div class="node"><span class="url">apps/main/core/api/src/{mounts, access-control, routes/client, models/index}.ts</span></div></li>
+        <li class="n-mod"><div class="node"><span class="url">apps/main/core/api/src/shared/error.ts</span><span class="label">PaymentRequired (402), for a refused spend</span></div></li>
+        <li class="n-mod"><div class="node"><span class="url">apps/main/core/api/drizzle/0006_*</span><span class="label">regenerated; the branch never shipped, so no data migration</span></div></li>
+        <li class="n-move"><div class="node"><span class="url">apps/main/core/api/__test__/integration/credits/</span><span class="label">credits + grants suites + the credits-only test</span></div></li>
+        <li class="n-new"><div class="node"><span class="url">apps/main/core/web/src/config/credits.config.ts</span><span class="label">+ main.tsx, route-tree.ts, navigation.config.ts</span></div></li>
+      </ul></li>
+    </ul></div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Build order</div>
+    <table>
+      <tr><th>#</th><th>Step</th><th>Proof</th></tr>
+      <tr><td>1</td><td><b>Credits API.</b> New slice: models, repositories, services, routes, mount, config. The member cap becomes weekly only: the period column and its choices are removed. Not yet mounted.</td><td>Slice typecheck and unit tests</td></tr>
+      <tr><td>2</td><td><b>Switch payment over.</b> Payment uses the port, the moved code is deleted, the app mounts both, access control gains <code>credit_account</code>, migration regenerated.</td><td>All unit tests; integration tier; the migration applies on a fresh Postgres</td></tr>
+      <tr><td>3</td><td><b>Payment ledger.</b> The new table; invoices, bundles, card purchases, refunds and chargebacks write to it; refunds take back what is left of the credits they paid for; the Stripe listener's event list grows.</td><td>A test per row of the two-ledger table; both rows commit or neither; a repeated event writes nothing; a partial refund takes back at most its amount; never below zero</td></tr>
+      <tr><td>4</td><td><b>Web.</b> Credits web and its page; a Payments list on the billing page; billing, product and marketplace pages adapted; settings pages passed in by the app.</td><td>Web build; browser pass; Stripe bundle, subscription and refund round-trips appear in both ledgers</td></tr>
+      <tr><td>5</td><td><b>First spender: creating a meteor.</b> A demo price in the default price list. The service charges through an optional port before the insert, answers 402 when refused, refunds a failed create, and refunds a delete only within one minute of creation.</td><td>Unit tests with a controlled clock; a refused create inserts nothing; a failed create gives the credits back; a delete at 59 seconds refunds and at 61 does not; a member's weekly cap refuses in the browser; the ledger shows the charge and the refund</td></tr>
+      <tr><td>6</td><td><b>Removal test.</b> In a throwaway worktree, delete payment and its app wiring.</td><td>Builds and passes; an admin grants credits, meteors are charged and stop at the balance and the weekly cap; no new lint violations; e2e identical to master</td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Decisions</div>
+    <table>
+      <tr><th>Decision</th><th>Ruling or recommendation</th><th>Alternative</th></tr>
+      <tr><td><b>1 · What is “the limit”?</b></td><td><b>Ruled:</b> no limit by default. On organization credits, a limit per individual, per week. <b>Built this way; decision 7 widens it</b> to day, week or month.</td><td>—</td></tr>
+      <tr><td><b>2 · What is the first example of spending credits?</b></td><td><b>Ruled:</b> creating a meteor, no chat for now. The price comes back if the create fails, or if the meteor is deleted less than one minute after creation. The meteor's id is generated before the charge, so it can be the charge's reference. Meteors belong to organizations, so a person's own credits are proven by the credits-only integration test rather than on screen.</td><td>—</td></tr>
+      <tr><td><b>3 · Slice-design artifacts?</b></td><td><b>Ruled:</b> not now. The design stays one “payment” slice and its ERD will lag.</td><td>—</td></tr>
+      <tr><td><b>4 · Where is money recorded?</b></td><td><b>Ruled:</b> two ledgers, a payment ledger for real money and a credits ledger for credits, both written when an event touches both. Sellers keep seeing sales in the Sales table on the Selling page; nothing is added to their ledgers for now.</td><td>—</td></tr>
+      <tr><td><b>5 · A bundle's money is refunded: do its remaining credits go away?</b></td><td><b>Ruled:</b> take back what is left, never below zero. The same applies to the plan credits of a refunded subscription invoice.</td><td>—</td></tr>
+      <tr><td><b>6 · Can credits be limited to some services?</b></td><td><b>Ruled:</b> yes, each lot carries a list of the services it can pay for, and no list means everything. Admin grants only for now. Built, detailed below.</td><td>—</td></tr>
+      <tr><td><b>7 · Can an organization give each member an amount per period?</b></td><td><b>Ruled:</b> yes, one rule per member (or all members): day, week or month, top up or replace, an optional list of services. When a member's amount is used up they stop, whatever else the organization holds. Built, detailed below.</td><td>Credits set aside per member, or a budget only. Both dropped: the one rule covers created and bought credits.</td></tr>
+      <tr><td><b>8 · Who can create credits?</b></td><td><b>Ruled:</b> scoped access control decides, per organization type. Without a permission that says otherwise, an organization's credits can only be bought, if the app has an option to buy. The Platform Owner's grant is one such permission; removing it from the role in the config turns it off.</td><td>—</td></tr>
+      <tr><td><b>9 · Welcome credits?</b></td><td><b>Ruled:</b> 0 by default, because they are the one source outside access control. An app that wants them turns them on in the catalog.</td><td>—</td></tr>
+      <tr><td><b>10 · How are credits shown?</b></td><td><b>Ruled:</b> as plain credits (“1,000 credits”). Money appears only where someone is paying.</td><td>A catalog setting per app. Dropped: one app can hold both created and bought credits.</td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Credits limited to services</div>
+    <p>Today a lot goes to the platform (any service) or to one vendor. This adds a third answer: only these services. For example, a grant that pays for meteors and chat but not for search.</p>
+    <table>
+      <tr><th>Part</th><th>Change</th></tr>
+      <tr><td><b>Lot</b></td><td>New nullable <code>credit_lot.service_keys</code> (<code>text[]</code>). Null is everything; <code>{meteor, chat}</code> is those two. Migration <code>0006_credits</code> has not shipped, so it is regenerated rather than added to.</td></tr>
+      <tr><td><b>Charge</b></td><td>Draws only from lots where <code>service_keys is null or service = any(service_keys)</code>. The balance a charge checks is what those lots hold, so a refusal for <code>balance</code> can happen while other credits sit unused.</td></tr>
+      <tr><td><b>Spend order</b></td><td>Within the same priority, restricted lots go before general ones; then soonest expiry, then oldest. Otherwise general credits are used up while restricted ones sit idle.</td></tr>
+      <tr><td><b>Grant</b></td><td><code>grant</code> and the admin grant schema take <code>services</code>, checked against the catalog. The Credit grants page gets a “Spend on” multi-select. Plans and bundles stay general for now.</td></tr>
+      <tr><td><b>Screens</b></td><td>The lots table shows what each lot can pay for. The summary and balance card group by list: “€10 for everything · €5 for Create a meteor, Chat”.</td></tr>
+      <tr><td><b>Unchanged</b></td><td>Refunds and take-backs, which already act on the exact lot. Price lists, which still decide per owner whether a service can run at all: to switch search off completely, leave it out of the owner's price list.</td></tr>
+      <tr><td><b>Later features</b></td><td>A list names what is allowed, so a new service is not paid by old restricted lots. General lots pay for it with nothing to update. “Everything except search” is left out until it is needed.</td></tr>
+      <tr><td><b>Proof</b></td><td>Unit and PGlite tests: a restricted lot pays for its services and refuses others; restricted lots draw first; a grant naming an unknown service is refused; refund returns to the restricted lot.</td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Member allocations</div>
+    <p>An easy way for an organization to control what each member spends on its own platform. Credits are a unit of control here, not money: depending on the organization type they are created by its owner or bought. Either way the member sees the same thing, an amount per period that stops when it is used up.</p>
+    <table>
+      <tr><th></th><th>The owner can create credits</th><th>The owner cannot</th></tr>
+      <tr><td><b>Where credits come from</b></td><td>Each period the rule creates them on the organization</td><td>Buying them, if the app has payment</td></tr>
+      <tr><td><b>Replace</b></td><td>Unspent created credits expire at the end of the period</td><td>Unspent credits stay with the organization, since they were paid for; only the member's amount resets</td></tr>
+      <tr><td><b>Top up</b></td><td>Created credits do not expire; the member's amount adds up</td><td>The member's amount adds up; credits stay where they are</td></tr>
+      <tr><td><b>The organization runs out</b></td><td>Cannot happen: the rule creates what it needs</td><td>Members stop, refused for <code>balance</code>, until someone buys more</td></tr>
+    </table>
+    <table>
+      <tr><th>Part</th><th>Change</th></tr>
+      <tr><td><b>The rule</b></td><td>Extends <code>member_allowance</code>: <code>period</code> (day, week, month) comes back; <code>unspent</code> (top up or replace); nullable <code>service_keys</code>; <code>creates_credits</code>, set when the rule is saved from the caller's permission; a nullable <code>user_id</code>, where null is every member without a rule of their own. No rule still means no limit. Personal credits have no rules. Migration <code>0006_credits</code> has not shipped, so it is regenerated.</td></tr>
+      <tr><td><b>Permission</b></td><td>A new permission in <code>shared/configs/access-control</code>, held by the roles and organization types chosen there, valid only for the caller's own organization. It stays separate from <code>grant_credits_platform</code>, which can give credits to anyone. In the seed, musical projects hold it (<code>create_credits_musical_project</code>, their owner) and companies do not: companies buy, projects create.</td></tr>
+      <tr><td><b>Creating</b></td><td>No job. The first time a member acts or a page reads in a new period, as lazy expiry already works: one lot on the organization's account, reason <code>allocation</code>, keyed by rule, member and period so it is created once. Replace expires it at the period's end; top up never expires it. A member away for three months on top up gets all three on return.</td></tr>
+      <tr><td><b>What a member has left</b></td><td>Never stored, read from the ledger. Replace: the amount minus what was spent this period. Top up: the amount for every period since the rule began, minus what was spent since. Changing a top-up amount keeps what the member had left and counts the new amount from the next period.</td></tr>
+      <tr><td><b>Spending</b></td><td>The charge checks the member's rule (amount left, service in the list), refusing as <code>allowance</code>, then draws from the organization's lots as it does today. Soonest expiry first means replace credits go before top-up ones. Members with no rule share the organization's credits as they do today.</td></tr>
+      <tr><td><b>Welcome credits</b></td><td><code>welcome</code> in <code>shared/configs/credits</code> goes to 0 for people and organizations; the setting stays.</td></tr>
+      <tr><td><b>Display</b></td><td>The credits screens, the plan card and the admin grant form show and take plain credits. Bundle and plan prices, product prices and the Payments list stay money. Vendor credits stand for a product's price at one credit to one cent, so the product page and the vendor's refund sheet keep showing money.</td></tr>
+      <tr><td><b>Screens</b></td><td>The weekly limits table and sheet become the allocations table and sheet: period, top up or replace, spend on, and “create these credits” for callers holding the permission. A member's own card shows what is left and when it renews.</td></tr>
+      <tr><td><b>Proof</b></td><td>Unit tests with a moved clock for each period and both modes; a member with no rule; a rule for all members and a member's own overriding it; catch-up after months away; created once per period; replace on bought credits leaves them with the organization. PGlite with the real engine: an owner without the permission cannot save a creating rule, and the permission reaches only their own organization.</td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Out of scope</div>
+    <p>Payment's existing lint debt (the 40 violations from the merge), except what disappears with moved code. Wiring the chat or any LLM call. Splitting the slice-design artifacts. The open question about returning the platform fee on refunds. The billing page's visual alignment with master.</p>
+  </div>
+</main>
+</body>
+</html>

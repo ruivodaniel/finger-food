@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-side-navigation-7-notifications-in-footer-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-side-navigation-7-notifications-in-footer",
+ "name": "default",
+ "title": "Side navigation 7: the notifications entry in the footer; the same place expanded and collapsed; expands inline",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

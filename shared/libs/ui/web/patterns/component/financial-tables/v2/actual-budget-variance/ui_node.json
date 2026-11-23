@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-component-financial-tables-actual-budget-variance",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Actual against budget: the rich table by its name, so the latest version"
+}

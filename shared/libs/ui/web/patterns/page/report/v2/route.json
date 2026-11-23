@@ -1,0 +1,7 @@
+{
+ "id": "route-pattern-page-report",
+ "version": 1,
+ "surface": "web",
+ "path": "/patterns/page/report",
+ "uiNodeId": "ui-node-pattern-page-report"
+}

@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-list-rows-top-players-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-list-rows-top-players",
+ "name": "default",
+ "title": "List rows: top players",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

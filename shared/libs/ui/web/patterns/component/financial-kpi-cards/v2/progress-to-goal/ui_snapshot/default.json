@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-financial-kpi-cards-progress-to-goal-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-financial-kpi-cards-progress-to-goal",
+ "name": "default",
+ "title": "Financial kpi cards: progress to goal",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

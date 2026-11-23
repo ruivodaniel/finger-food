@@ -1,0 +1,21 @@
+{
+ "id": "term/container-zone",
+ "kind": "term",
+ "title": "container zone",
+ "status": "approved",
+ "subjects": [
+  "ui"
+ ],
+ "owner": "libs/ui",
+ "tags": [
+  "ui"
+ ],
+ "paths": [
+  "shared/libs/ui/web/primitives/components"
+ ],
+ "term": {
+  "def": "A surface that owns its box: its height, its frame, its padding. Card, sheet, dialog, alert dialog, popover, tab panel, list, table. Holds part zones. Says `childrenSmartBleed` under its padding when its parts bleed to its edges.",
+  "aliases": [],
+  "proposed": true
+ }
+}

@@ -1,0 +1,411 @@
+{
+ "id": "ui-data-pattern-component-avatar-list",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-avatar-list",
+ "kind": "component",
+ "name": "avatar-list",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "avatar-list",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Card",
+   "props": {
+    "className": "w-full max-w-md"
+   },
+   "children": [
+    {
+     "type": "Header",
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "justify": "between",
+        "align": "center",
+        "className": "w-full",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "as": "h3",
+          "element": "type--heading2",
+          "children": "Upcoming renewals"
+         }
+        },
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "quiet",
+          "scale": "sm",
+          "children": "View all"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Content",
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "concept": "rows",
+        "className": "w-full"
+       },
+       "children": [
+        {
+         "type": "List",
+         "props": {
+          "className": "w-full"
+         },
+         "children": [
+          {
+           "type": "ListItem",
+           "props": {
+            "className": "w-full gap-3"
+           },
+           "children": [
+            {
+             "type": "ListItemIcon",
+             "children": [
+              {
+               "type": "Avatar",
+               "props": {
+                "scale": "sm"
+               },
+               "children": [
+                {
+                 "type": "AvatarFallback",
+                 "props": {
+                  "children": "AK"
+                 }
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "ListItemContent",
+             "children": [
+              {
+               "type": "ListItemTitle",
+               "children": [
+                {
+                 "type": "Text",
+                 "props": {
+                  "as": "strong",
+                  "element": "type--body",
+                  "children": "Aisha Khan"
+                 }
+                }
+               ]
+              },
+              {
+               "type": "ListItemDescription",
+               "children": [
+                {
+                 "type": "Text",
+                 "props": {
+                  "as": "span",
+                  "element": "type--body-small",
+                  "children": "8 Harbour Lane · AST",
+                  "emphasis": "quiet"
+                 }
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "ListItemAction",
+             "children": [
+              {
+               "type": "Badge",
+               "props": {
+                "scale": "xs",
+                "status": "warning"
+               },
+               "children": [
+                {
+                 "type": "Badge",
+                 "props": {
+                  "scale": "3xs",
+                  "concept": "dot",
+                  "status": "warning"
+                 }
+                },
+                {
+                 "type": "Text",
+                 "props": {
+                  "as": "span",
+                  "element": "type--body-extra-small",
+                  "children": "12 days"
+                 }
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "ListItem",
+           "props": {
+            "className": "w-full gap-3"
+           },
+           "children": [
+            {
+             "type": "ListItemIcon",
+             "children": [
+              {
+               "type": "Avatar",
+               "props": {
+                "scale": "sm"
+               },
+               "children": [
+                {
+                 "type": "AvatarFallback",
+                 "props": {
+                  "children": "JP"
+                 }
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "ListItemContent",
+             "children": [
+              {
+               "type": "ListItemTitle",
+               "children": [
+                {
+                 "type": "Text",
+                 "props": {
+                  "as": "strong",
+                  "element": "type--body",
+                  "children": "Joao Pereira"
+                 }
+                }
+               ]
+              },
+              {
+               "type": "ListItemDescription",
+               "children": [
+                {
+                 "type": "Text",
+                 "props": {
+                  "as": "span",
+                  "element": "type--body-small",
+                  "children": "22 Mill Street · AST",
+                  "emphasis": "quiet"
+                 }
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "ListItemAction",
+             "children": [
+              {
+               "type": "Badge",
+               "props": {
+                "scale": "xs",
+                "emphasis": "quiet"
+               },
+               "children": [
+                {
+                 "type": "Text",
+                 "props": {
+                  "as": "span",
+                  "element": "type--body-extra-small",
+                  "children": "38 days"
+                 }
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "ListItem",
+           "props": {
+            "className": "w-full gap-3"
+           },
+           "children": [
+            {
+             "type": "ListItemIcon",
+             "children": [
+              {
+               "type": "Avatar",
+               "props": {
+                "scale": "sm"
+               },
+               "children": [
+                {
+                 "type": "AvatarFallback",
+                 "props": {
+                  "children": "LH"
+                 }
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "ListItemContent",
+             "children": [
+              {
+               "type": "ListItemTitle",
+               "children": [
+                {
+                 "type": "Text",
+                 "props": {
+                  "as": "strong",
+                  "element": "type--body",
+                  "children": "Lena Hoffmann"
+                 }
+                }
+               ]
+              },
+              {
+               "type": "ListItemDescription",
+               "children": [
+                {
+                 "type": "Text",
+                 "props": {
+                  "as": "span",
+                  "element": "type--body-small",
+                  "children": "3 Orchard Close · periodic",
+                  "emphasis": "quiet"
+                 }
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "ListItemAction",
+             "children": [
+              {
+               "type": "Badge",
+               "props": {
+                "scale": "xs",
+                "emphasis": "quiet"
+               },
+               "children": [
+                {
+                 "type": "Text",
+                 "props": {
+                  "as": "span",
+                  "element": "type--body-extra-small",
+                  "children": "61 days"
+                 }
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "ListItem",
+           "props": {
+            "className": "w-full gap-3"
+           },
+           "children": [
+            {
+             "type": "ListItemIcon",
+             "children": [
+              {
+               "type": "Avatar",
+               "props": {
+                "scale": "sm"
+               },
+               "children": [
+                {
+                 "type": "AvatarFallback",
+                 "props": {
+                  "children": "MS"
+                 }
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "ListItemContent",
+             "children": [
+              {
+               "type": "ListItemTitle",
+               "children": [
+                {
+                 "type": "Text",
+                 "props": {
+                  "as": "strong",
+                  "element": "type--body",
+                  "children": "Marta Silveira"
+                 }
+                }
+               ]
+              },
+              {
+               "type": "ListItemDescription",
+               "children": [
+                {
+                 "type": "Text",
+                 "props": {
+                  "as": "span",
+                  "element": "type--body-small",
+                  "children": "14 Clifton Road · AST",
+                  "emphasis": "quiet"
+                 }
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "ListItemAction",
+             "children": [
+              {
+               "type": "Badge",
+               "props": {
+                "scale": "xs",
+                "emphasis": "quiet"
+               },
+               "children": [
+                {
+                 "type": "Text",
+                 "props": {
+                  "as": "span",
+                  "element": "type--body-extra-small",
+                  "children": "90 days"
+                 }
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

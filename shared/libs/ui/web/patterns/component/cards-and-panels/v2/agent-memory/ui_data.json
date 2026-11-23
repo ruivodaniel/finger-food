@@ -1,0 +1,740 @@
+{
+ "id": "ui-data-pattern-component-cards-and-panels-agent-memory",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-cards-and-panels-agent-memory",
+ "kind": "component",
+ "name": "agent-memory",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "agent-memory",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "state": {
+   "query": "",
+   "open": [
+    "working"
+   ]
+  },
+  "root": {
+   "type": "Card",
+   "props": {
+    "className": "w-full max-w-xl"
+   },
+   "children": [
+    {
+     "type": "Header",
+     "props": {},
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Avatar",
+         "props": {
+          "scale": "md"
+         },
+         "children": [
+          {
+           "type": "AvatarFallback",
+           "props": {},
+           "children": [
+            {
+             "type": "Icon",
+             "props": {
+              "name": "database",
+              "size": "sm"
+             }
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "col",
+          "scale": "2xs"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--heading4",
+            "children": "Agent Memory"
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "emphasis": "quiet",
+            "children": "5 items"
+           }
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Content",
+     "props": {},
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Input",
+         "props": {
+          "type": "search",
+          "value": {
+           "bind": "state.query"
+          },
+          "placeholder": "Search memories…",
+          "startIcon": {
+           "type": "Icon",
+           "props": {
+            "name": "search",
+            "size": "sm"
+           }
+          },
+          "data-testid": "agent-memory-search-input"
+         },
+         "on": {
+          "change": [
+           {
+            "set": {
+             "state": "query",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         }
+        },
+        {
+         "type": "Accordion",
+         "props": {
+          "type": "multiple",
+          "value": {
+           "bind": "state.open"
+          }
+         },
+         "children": [
+          {
+           "type": "AccordionItem",
+           "props": {
+            "value": "working"
+           },
+           "children": [
+            {
+             "type": "AccordionTrigger",
+             "props": {},
+             "children": [
+              {
+               "type": "Stack",
+               "props": {
+                "dir": "row",
+                "align": "center",
+                "scale": "md"
+               },
+               "children": [
+                {
+                 "type": "Avatar",
+                 "props": {
+                  "scale": "md"
+                 },
+                 "children": [
+                  {
+                   "type": "AvatarFallback",
+                   "props": {},
+                   "children": [
+                    {
+                     "type": "Icon",
+                     "props": {
+                      "name": "database",
+                      "size": "sm"
+                     }
+                    }
+                   ]
+                  }
+                 ]
+                },
+                {
+                 "type": "Stack",
+                 "props": {
+                  "dir": "col",
+                  "align": "start",
+                  "scale": "2xs"
+                 },
+                 "children": [
+                  {
+                   "type": "Stack",
+                   "props": {
+                    "dir": "row",
+                    "align": "center",
+                    "scale": "sm"
+                   },
+                   "children": [
+                    {
+                     "type": "Text",
+                     "props": {
+                      "as": "span",
+                      "element": "type--heading4",
+                      "children": "Working Memory"
+                     }
+                    },
+                    {
+                     "type": "Badge",
+                     "props": {
+                      "emphasis": "secondary",
+                      "status": "neutral",
+                      "children": 2
+                     }
+                    }
+                   ]
+                  },
+                  {
+                   "type": "Text",
+                   "props": {
+                    "as": "span",
+                    "element": "type--body-small",
+                    "emphasis": "quiet",
+                    "children": "Active context for current conversation"
+                   }
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "AccordionContent",
+             "props": {},
+             "children": [
+              {
+               "type": "Stack",
+               "props": {
+                "dir": "col",
+                "scale": "md"
+               },
+               "children": [
+                {
+                 "type": "Tile",
+                 "props": {},
+                 "children": [
+                  {
+                   "type": "Stack",
+                   "props": {
+                    "dir": "col",
+                    "scale": "sm"
+                   },
+                   "children": [
+                    {
+                     "type": "Text",
+                     "props": {
+                      "as": "span",
+                      "element": "type--body",
+                      "children": "User prefers TypeScript over JavaScript"
+                     }
+                    },
+                    {
+                     "type": "Stack",
+                     "props": {
+                      "dir": "row",
+                      "align": "center",
+                      "scale": "md"
+                     },
+                     "children": [
+                      {
+                       "type": "Chip",
+                       "props": {
+                        "emphasis": "secondary",
+                        "status": "success",
+                        "scale": "sm",
+                        "closable": false,
+                        "showIcon": true,
+                        "iconName": "message",
+                        "children": "Conversation"
+                       }
+                      },
+                      {
+                       "type": "Text",
+                       "props": {
+                        "as": "span",
+                        "element": "type--body-small",
+                        "emphasis": "quiet",
+                        "className": "inline-flex items-center gap-2"
+                       },
+                       "children": [
+                        {
+                         "type": "Icon",
+                         "props": {
+                          "name": "clock",
+                          "size": "sm"
+                         }
+                        },
+                        {
+                         "type": "Text",
+                         "props": {
+                          "as": "span",
+                          "children": "11:06 PM"
+                         }
+                        }
+                       ]
+                      }
+                     ]
+                    }
+                   ]
+                  }
+                 ]
+                },
+                {
+                 "type": "Tile",
+                 "props": {},
+                 "children": [
+                  {
+                   "type": "Stack",
+                   "props": {
+                    "dir": "col",
+                    "scale": "sm"
+                   },
+                   "children": [
+                    {
+                     "type": "Text",
+                     "props": {
+                      "as": "span",
+                      "element": "type--body",
+                      "children": "Current project uses Next.js 15 with App Router"
+                     }
+                    },
+                    {
+                     "type": "Stack",
+                     "props": {
+                      "dir": "row",
+                      "align": "center",
+                      "scale": "md"
+                     },
+                     "children": [
+                      {
+                       "type": "Chip",
+                       "props": {
+                        "emphasis": "secondary",
+                        "status": "info",
+                        "scale": "sm",
+                        "closable": false,
+                        "showIcon": true,
+                        "iconName": "settings",
+                        "children": "System"
+                       }
+                      },
+                      {
+                       "type": "Text",
+                       "props": {
+                        "as": "span",
+                        "element": "type--body-small",
+                        "emphasis": "quiet",
+                        "className": "inline-flex items-center gap-2"
+                       },
+                       "children": [
+                        {
+                         "type": "Icon",
+                         "props": {
+                          "name": "clock",
+                          "size": "sm"
+                         }
+                        },
+                        {
+                         "type": "Text",
+                         "props": {
+                          "as": "span",
+                          "children": "11:03 PM"
+                         }
+                        }
+                       ]
+                      }
+                     ]
+                    }
+                   ]
+                  }
+                 ]
+                },
+                {
+                 "type": "Button",
+                 "props": {
+                  "emphasis": "tertiary",
+                  "fill": true,
+                  "buttonType": "icon-text",
+                  "startIcon": "add",
+                  "children": "Add memory"
+                 }
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "AccordionItem",
+           "props": {
+            "value": "history"
+           },
+           "children": [
+            {
+             "type": "AccordionTrigger",
+             "props": {},
+             "children": [
+              {
+               "type": "Stack",
+               "props": {
+                "dir": "row",
+                "align": "center",
+                "scale": "md"
+               },
+               "children": [
+                {
+                 "type": "Avatar",
+                 "props": {
+                  "scale": "md"
+                 },
+                 "children": [
+                  {
+                   "type": "AvatarFallback",
+                   "props": {},
+                   "children": [
+                    {
+                     "type": "Icon",
+                     "props": {
+                      "name": "history",
+                      "size": "sm"
+                     }
+                    }
+                   ]
+                  }
+                 ]
+                },
+                {
+                 "type": "Stack",
+                 "props": {
+                  "dir": "col",
+                  "align": "start",
+                  "scale": "2xs"
+                 },
+                 "children": [
+                  {
+                   "type": "Stack",
+                   "props": {
+                    "dir": "row",
+                    "align": "center",
+                    "scale": "sm"
+                   },
+                   "children": [
+                    {
+                     "type": "Text",
+                     "props": {
+                      "as": "span",
+                      "element": "type--heading4",
+                      "children": "Conversation History"
+                     }
+                    },
+                    {
+                     "type": "Badge",
+                     "props": {
+                      "emphasis": "secondary",
+                      "status": "neutral",
+                      "children": 3
+                     }
+                    }
+                   ]
+                  },
+                  {
+                   "type": "Text",
+                   "props": {
+                    "as": "span",
+                    "element": "type--body-small",
+                    "emphasis": "quiet",
+                    "children": "Past interactions and context"
+                   }
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "AccordionContent",
+             "props": {},
+             "children": [
+              {
+               "type": "Stack",
+               "props": {
+                "dir": "col",
+                "scale": "md"
+               },
+               "children": [
+                {
+                 "type": "Tile",
+                 "props": {},
+                 "children": [
+                  {
+                   "type": "Stack",
+                   "props": {
+                    "dir": "col",
+                    "scale": "sm"
+                   },
+                   "children": [
+                    {
+                     "type": "Text",
+                     "props": {
+                      "as": "span",
+                      "element": "type--body",
+                      "children": "User is a senior developer at Clerk"
+                     }
+                    },
+                    {
+                     "type": "Stack",
+                     "props": {
+                      "dir": "row",
+                      "align": "center",
+                      "scale": "md"
+                     },
+                     "children": [
+                      {
+                       "type": "Chip",
+                       "props": {
+                        "emphasis": "secondary",
+                        "status": "neutral",
+                        "scale": "sm",
+                        "closable": false,
+                        "showIcon": true,
+                        "iconName": "user",
+                        "children": "Profile"
+                       }
+                      },
+                      {
+                       "type": "Text",
+                       "props": {
+                        "as": "span",
+                        "element": "type--body-small",
+                        "emphasis": "quiet",
+                        "className": "inline-flex items-center gap-2"
+                       },
+                       "children": [
+                        {
+                         "type": "Icon",
+                         "props": {
+                          "name": "clock",
+                          "size": "sm"
+                         }
+                        },
+                        {
+                         "type": "Text",
+                         "props": {
+                          "as": "span",
+                          "children": "Yesterday"
+                         }
+                        }
+                       ]
+                      }
+                     ]
+                    }
+                   ]
+                  }
+                 ]
+                },
+                {
+                 "type": "Tile",
+                 "props": {},
+                 "children": [
+                  {
+                   "type": "Stack",
+                   "props": {
+                    "dir": "col",
+                    "scale": "sm"
+                   },
+                   "children": [
+                    {
+                     "type": "Text",
+                     "props": {
+                      "as": "span",
+                      "element": "type--body",
+                      "children": "Asked how to protect API routes with middleware"
+                     }
+                    },
+                    {
+                     "type": "Stack",
+                     "props": {
+                      "dir": "row",
+                      "align": "center",
+                      "scale": "md"
+                     },
+                     "children": [
+                      {
+                       "type": "Chip",
+                       "props": {
+                        "emphasis": "secondary",
+                        "status": "success",
+                        "scale": "sm",
+                        "closable": false,
+                        "showIcon": true,
+                        "iconName": "message",
+                        "children": "Conversation"
+                       }
+                      },
+                      {
+                       "type": "Text",
+                       "props": {
+                        "as": "span",
+                        "element": "type--body-small",
+                        "emphasis": "quiet",
+                        "className": "inline-flex items-center gap-2"
+                       },
+                       "children": [
+                        {
+                         "type": "Icon",
+                         "props": {
+                          "name": "clock",
+                          "size": "sm"
+                         }
+                        },
+                        {
+                         "type": "Text",
+                         "props": {
+                          "as": "span",
+                          "children": "Yesterday"
+                         }
+                        }
+                       ]
+                      }
+                     ]
+                    }
+                   ]
+                  }
+                 ]
+                },
+                {
+                 "type": "Tile",
+                 "props": {},
+                 "children": [
+                  {
+                   "type": "Stack",
+                   "props": {
+                    "dir": "col",
+                    "scale": "sm"
+                   },
+                   "children": [
+                    {
+                     "type": "Text",
+                     "props": {
+                      "as": "span",
+                      "element": "type--body",
+                      "children": "Prefers short answers with a code sample"
+                     }
+                    },
+                    {
+                     "type": "Stack",
+                     "props": {
+                      "dir": "row",
+                      "align": "center",
+                      "scale": "md"
+                     },
+                     "children": [
+                      {
+                       "type": "Chip",
+                       "props": {
+                        "emphasis": "secondary",
+                        "status": "success",
+                        "scale": "sm",
+                        "closable": false,
+                        "showIcon": true,
+                        "iconName": "message",
+                        "children": "Conversation"
+                       }
+                      },
+                      {
+                       "type": "Text",
+                       "props": {
+                        "as": "span",
+                        "element": "type--body-small",
+                        "emphasis": "quiet",
+                        "className": "inline-flex items-center gap-2"
+                       },
+                       "children": [
+                        {
+                         "type": "Icon",
+                         "props": {
+                          "name": "clock",
+                          "size": "sm"
+                         }
+                        },
+                        {
+                         "type": "Text",
+                         "props": {
+                          "as": "span",
+                          "children": "Mon"
+                         }
+                        }
+                       ]
+                      }
+                     ]
+                    }
+                   ]
+                  }
+                 ]
+                },
+                {
+                 "type": "Button",
+                 "props": {
+                  "emphasis": "tertiary",
+                  "fill": true,
+                  "buttonType": "icon-text",
+                  "startIcon": "add",
+                  "children": "Add memory"
+                 }
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          }
+         ],
+         "on": {
+          "valueChange": [
+           {
+            "set": {
+             "state": "open",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

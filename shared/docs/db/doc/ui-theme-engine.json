@@ -1,0 +1,321 @@
+{
+ "id": "doc/ui-theme-engine",
+ "kind": "doc",
+ "title": "Theme engine",
+ "status": "todo",
+ "subject": "ui",
+ "owner": "libs/ui",
+ "order": 5,
+ "tags": [
+  "ui",
+  "theme",
+  "engine"
+ ],
+ "audience": [
+  "seed-contributor"
+ ],
+ "paths": [
+  "shared/libs/ui/web/theme-engine"
+ ],
+ "summary": "How the engine compiles a theme: the selector model, specificity, the composition variables, output principles and structure, smart bleed, the build pipeline, what the engine does not do.",
+ "docId": "ui-theme-engine",
+ "doc": {
+  "axioms": [
+   {
+    "text": "The engine emits only what the theme declares; a zero theme is zero cascade lines."
+   },
+   {
+    "text": "Cascade priority is CSS source order and specificity, never a variable chain."
+   },
+   {
+    "text": "The engine's only structural knowledge is the conventions file; everything else it reads from the theme and the elements table."
+   }
+  ],
+  "purpose": {
+   "intro": "The engine turns a theme declaration into the one CSS file an application loads. This document is for whoever changes the engine; a theme author reads the Theme document and never needs this one."
+  },
+  "reference": [
+   {
+    "topic": "Selector Model",
+    "claims": [],
+    "statement": "Two attributes, never on the same node:",
+    "examples": [
+     {
+      "snippets": [
+       {
+        "code": "<div element=\"surface--card\">        element = {family}--{element}\n<div layout=\"left-sidebar\">          layout = bare name (no prefix)",
+        "caption": "html"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "topic": "Selector Model › Part attribute",
+    "claims": [
+     {
+      "text": "Rules: only emit CSS for `part` values **explicitly declared** in the theme under that surface's `parts` field. An undeclared `part` is inert — zero CSS emitted. This prevents developers from using `part` as a free styling escape hatch. `part` is never used on the same node as `element` or `layout`."
+     },
+     {
+      "text": "Selector emitted: `[element=\"surface--card\"] [part=\"body\"] { ... }`"
+     }
+    ],
+    "statement": "`part=\"name\"` marks a structural sub-region of a themed ancestor. Use it on plain divs that a designer needs to control (padding, gap, background) without giving the div a full element identity.",
+    "examples": [
+     {
+      "snippets": [
+       {
+        "code": "<div element=\"surface--card\">\n  <div part=\"body\">      ← designer controls interior here\n  <div part=\"actions\">   ← designer controls gap here",
+        "caption": "html"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "topic": "Selector Model › Family prefixes (for element attribute)",
+    "claims": [],
+    "imagesAndDiagrams": [
+     {
+      "type": "ascii",
+      "value": "| Family key              | Prefix          |\n|-------------------------|-----------------|\n| surfaceContainer        | `surface`       |\n| elevatedOverlay         | `overlay`       |\n| interactiveControl      | `control`       |\n| interactiveControlGroup | `control-group` |\n| field                   | `field`         |\n| listContainer           | `list`          |\n| shape                   | `shape`         |\n| media                   | `media`         |"
+     }
+    ],
+    "statement": "Layout uses `layout=\"value\"` directly — no family prefix."
+   },
+   {
+    "topic": "Selector Model › Axis attributes (bare, no data- prefix)",
+    "claims": [],
+    "statement": "`emphasis`, `status`, `state`, `scale`, `concept`"
+   },
+   {
+    "topic": "CSS Specificity",
+    "claims": [],
+    "statement": "CSS source order + specificity handles cascade priority. No variable chains or bridge systems. The engine emits rules in this order:",
+    "examples": [
+     {
+      "snippets": [
+       {
+        "code": "[element^=\"surface--\"]                                  L2 family (lowest)\n[element=\"surface--card\"]                               L3 element\n[element=\"surface--card\"][emphasis=\"primary\"]            axis (emphasis first)\n[element=\"surface--card\"][status=\"error\"]                axis (status later = wins)\n[element=\"surface--card\"]:hover                         pseudo-class (highest)\n[element=\"surface--card\"][emphasis=\"primary\"]:hover      compound (most specific)\n[concept=\"X\"] [element=\"surface--card\"]                 concept (2 selectors)\n[element=\"A\"] [element=\"B\"]                             contextual (2 selectors)"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "topic": "Composition Variables",
+    "claims": [
+     {
+      "text": "Everything else is plain CSS. Padding, radius, shadow, cursor, transition, typography — set directly, no variables."
+     }
+    ],
+    "statement": "5 CSS custom properties handle cross-property composition:",
+    "imagesAndDiagrams": [
+     {
+      "type": "ascii",
+      "value": "| Variable | Why it exists |\n|----------|---------------|\n| `--bg` | Tint mixes into background via `color-mix()` |\n| `--fg` | `smart-bw` computes foreground from background |\n| `--tint` | One color modifies both background and border |\n| `--border-color` | Tint mixes into border via `color-mix()` |\n| `--bg-alpha` | Alpha composites with transparent |"
+     }
+    ]
+   },
+   {
+    "topic": "Composition Variables › Property application (on [element] and [layout])",
+    "claims": [],
+    "examples": [
+     {
+      "snippets": [
+       {
+        "code": "[element] {\n  background: color-mix(in srgb,\n    color-mix(in srgb, var(--tint, var(--bg, transparent)) 20%, var(--bg, transparent))\n    var(--bg-alpha, 100%),\n    transparent\n  );\n  color: var(--fg, inherit);\n  border-color: color-mix(in srgb,\n    var(--tint, var(--border-color, transparent)) 30%,\n    var(--border-color, transparent)\n  );\n}",
+        "caption": "css"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "topic": "Output Principles",
+    "claims": [
+     {
+      "text": "**Zero theme = zero cascade lines.** Only structural plumbing remains."
+     },
+     {
+      "text": "**Only emit what the theme defines.** No defaults copied to elements."
+     },
+     {
+      "text": "**Deltas only.** Elements don't repeat family values."
+     },
+     {
+      "text": "**One file, all modes.** Default on `:root`, others on `[data-mode]`."
+     },
+     {
+      "text": "**Readable in devtools.** Each rule shows what it does."
+     }
+    ]
+   },
+   {
+    "topic": "Smart Bleed CSS",
+    "claims": [
+     {
+      "text": "Which children: `[element^=\"surface--\"]`, `[element^=\"list--\"]`, `[element^=\"table--\"]` and `[layout=\"stack\"]`, direct children only. The edges follow `data-dir` on the parent (none is a column)."
+     },
+     {
+      "text": "The parent part of the selector is `:where(parent)`, so a part's own rule in the theme beats the bleed; the soft padding rule (`padding-<side>: var(--parent-pad-x|y)`) weighs the child alone, so a padding the theme writes on the part wins."
+     },
+     {
+      "text": "A Stack passes through: `[layout=\"stack\"] > child { --parent-*: inherit }`, so the parts it holds bleed into the container's padding. A container inside a part publishes its own values, so the bleed stops there."
+     },
+     {
+      "text": "Inner radius = parent radius - parent border width, never below zero. The part never reaches over the border; the interior edges are straight. No modes."
+     },
+     {
+      "text": "A content is two boxes: `formatRule` sends every padding declared on `[element=\"surface--content\"]` to `> [data-part=\"inner\"]`, and the soft bleed padding does the same, so the outer box stays a bare scroll window."
+     }
+    ],
+    "statement": "Resolved in the DOM, never at build time. Every themed element publishes its padding, radius, border width and gap to its direct children as `--parent-*` variables (a companion rule `S > [element], S > [layout], S > [data-part]`, reset on every element so nothing inherits further). The bleed is fixed CSS reading them, emitted once per container whose `childrenSmartBleed` is true:",
+    "examples": [
+     {
+      "snippets": [
+       {
+        "code": "/* the parent publishes */\n[element=\"surface--card\"] > [element], [element=\"surface--card\"] > [layout], [element=\"surface--card\"] > [data-part] {\n  --parent-pad-x: var(--spacing-lg); --parent-pad-y: var(--spacing-md);\n  --parent-radius-tl: …; --parent-border-width: …; --parent-gap: …;\n}\n\n/* the children bleed (column parent, the sides always) */\n:where([element=\"surface--card\"]):not([data-dir=\"row\"]) > :is([element^=\"surface--\"], [element^=\"list--\"], [element^=\"table--\"], [layout=\"stack\"]) {\n  margin-left: calc(-1 * var(--parent-pad-x, 0px));\n  margin-right: calc(-1 * var(--parent-pad-x, 0px));\n}\n:where(:where([element=\"surface--card\"]):not([data-dir=\"row\"])) > :is(…) {\n  padding-left: var(--parent-pad-x, 0px);   /* the default; the part's own padding wins */\n  padding-right: var(--parent-pad-x, 0px);\n}\n/* :first-child: the top and the top corners; :last-child: the bottom and the bottom corners */",
+        "caption": "css"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "topic": "Architecture",
+    "claims": [],
+    "examples": [
+     {
+      "snippets": [
+       {
+        "code": "shared/libs/ui/web/theme-engine/\n├── conventions.ts     Family prefixes, element→family mapping, selector generation\n├── emit.ts            Token-to-CSS emitters (boundary, interior, typography, etc.)\n├── theme-process.ts   Main engine: walks theme, generates complete CSS output\n├── build.ts           Build script: imports theme, runs engine, writes CSS file\n├── index.ts           Barrel export\n├── fonts/             Font files (owned by the lib)\n├── generated/         Output CSS (one file per theme)\n└── sandbox/           Visual test page"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "topic": "Convention-Driven",
+    "claims": [
+     {
+      "text": "The only structural knowledge is in `conventions.ts`:"
+     },
+     {
+      "text": "**FAMILY_PREFIXES** — 9 entries mapping family keys to CSS prefixes"
+     },
+     {
+      "text": "**ELEMENT_FAMILIES** — maps each element key to its family"
+     },
+     {
+      "text": "**FAMILY_DEFAULTS** — sensible defaults per family (cursor, transition)"
+     },
+     {
+      "text": "Add an element to the theme → the engine processes it automatically. No registry to update."
+     }
+    ],
+    "statement": "The engine has no hardcoded element lists. It walks the theme object dynamically and processes whatever it finds."
+   },
+   {
+    "topic": "Hybrid CSS Approach",
+    "claims": [
+     {
+      "text": "These exist because tint, smart-bw, and alpha mixing require cross-property composition that plain CSS properties can't express."
+     },
+     {
+      "text": "**Everything else is plain CSS.** Padding, border-width, radius, shadow, cursor, transition, typography — set directly on cascade selectors. No indirection, no variable chains."
+     }
+    ],
+    "statement": "The engine uses **5 CSS custom properties** for composition: `--bg`, `--fg`, `--tint`, `--border-color`, `--bg-alpha`."
+   },
+   {
+    "topic": "Output Structure",
+    "claims": [
+     {
+      "text": "**@font-face** — font file declarations"
+     },
+     {
+      "text": "**Tailwind variant declarations** — `@custom-variant dark`"
+     },
+     {
+      "text": "**L1: Primitives** — `:root` custom properties (colors, typography, spacing, etc.)"
+     },
+     {
+      "text": "**L1b: Modes + Derivations** — per color scheme (`:root` default, `[data-mode]` others)"
+     },
+     {
+      "text": "**Tailwind token registrations** — `@theme inline` block"
+     },
+     {
+      "text": "**Base layer** — `@layer base` (body bg/fg, border defaults)"
+     },
+     {
+      "text": "**Property application** — tint/alpha composition on `[element]` and `[layout]`"
+     },
+     {
+      "text": "**Family & element extras** — scrim, placeholder, scrollbar, disabled, icons"
+     },
+     {
+      "text": "**Cascade** — L2 families → L3 elements → L4 concepts → L5 contextual → axes → sizes"
+     }
+    ],
+    "statement": "The generated CSS file reads as a coherent document:"
+   },
+   {
+    "topic": "Build Pipeline",
+    "claims": [
+     {
+      "text": "The app wears exactly one theme@version, chosen in `configs/theme/index.ts` (`APP_THEME = { theme, version }`); its vite config aliases `@theme` to that version's generated CSS:"
+     },
+     {
+      "text": "Watch mode: `pnpm theme:watch` — rebuilds on theme or engine file changes."
+     }
+    ],
+    "examples": [
+     {
+      "snippets": [
+       {
+        "code": "npx tsx shared/libs/ui/web/theme-engine/build.ts",
+        "caption": "bash"
+       }
+      ]
+     },
+     {
+      "snippets": [
+       {
+        "code": "@import \"@theme-fonts\";\n@import \"@theme\";   /* → shared/libs/ui/themes/wireframes/v2/generated/wireframes.css */",
+        "caption": "css"
+       }
+      ]
+     }
+    ],
+    "statement": "Reads every `themes/<theme>/v<n>/theme.ts`, runs the engine, writes `themes/<theme>/v<n>/generated/<theme>.css` (+ `<theme>-fonts.css`) beside it."
+   },
+   {
+    "topic": "Smart Bleed (the DOM, not the build)",
+    "claims": [],
+    "statement": "The engine never resolves a parent's geometry at build time: it cannot know the parent of a node. The parent publishes, the child reads. The one remaining build-time resolution, the icon zones of a control, moves to the same variables."
+   },
+   {
+    "topic": "What the Engine Does NOT Do",
+    "claims": [
+     {
+      "text": "No runtime JavaScript in the browser"
+     },
+     {
+      "text": "No Shadow DOM isolation"
+     },
+     {
+      "text": "No PR layout class generation"
+     },
+     {
+      "text": "No runtime linting"
+     },
+     {
+      "text": "No component modifications"
+     }
+    ]
+   }
+  ]
+ }
+}

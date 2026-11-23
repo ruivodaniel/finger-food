@@ -1,0 +1,27 @@
+{
+ "id": "ui-data-primitive-toast",
+ "version": 1,
+ "uiNodeId": "ui-node-primitive-toast",
+ "kind": "component",
+ "name": "primitive-toast",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "primitive-toast",
+  "version": 1,
+  "surface": "web",
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "align": "center",
+    "scale": "2xl"
+   },
+   "children": [
+    {
+     "type": "Toaster"
+    }
+   ]
+  }
+ }
+}

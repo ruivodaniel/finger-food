@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-page-security-settings-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-page-security-settings",
+ "name": "default",
+ "title": "Security settings",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

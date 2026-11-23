@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-container-8-popover-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-container-8-popover",
+ "name": "default",
+ "title": "Container 8: the popover: content only",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

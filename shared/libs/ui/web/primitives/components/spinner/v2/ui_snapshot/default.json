@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-primitive-spinner-default",
+ "version": 1,
+ "uiDataId": "ui-data-primitive-spinner",
+ "name": "default",
+ "title": "Spinner, its cases",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

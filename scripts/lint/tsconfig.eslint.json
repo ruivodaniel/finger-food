@@ -1,0 +1,10 @@
+{
+  // The TypeScript program behind the lint's type-aware ESLint rules
+  // (processors/eslint.processor.ts). tsconfig.base.json has no "include", so
+  // on its own it takes every .ts file in the repo; the folders below are not
+  // linted (runner.ts IGNORE_PATTERNS) and would only fill the program, and
+  // the memory, with files no rule reads.
+  "extends": "../../tsconfig.base.json",
+  "include": ["../../**/*.ts", "../../**/*.tsx"],
+  "exclude": ["../../**/node_modules", "../../**/dist", "../../_archive", "../../_meta", "../../slice-design"]
+}

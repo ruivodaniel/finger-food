@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-primitive-accordion-default",
+ "version": 1,
+ "uiDataId": "ui-data-primitive-accordion",
+ "name": "default",
+ "title": "Accordion, its cases",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

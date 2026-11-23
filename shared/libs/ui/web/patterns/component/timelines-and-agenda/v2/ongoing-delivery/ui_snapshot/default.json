@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-timelines-and-agenda-ongoing-delivery-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-timelines-and-agenda-ongoing-delivery",
+ "name": "default",
+ "title": "Timelines and agenda: ongoing delivery",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

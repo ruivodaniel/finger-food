@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-panels-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-panels",
+ "name": "default",
+ "title": "Panels",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

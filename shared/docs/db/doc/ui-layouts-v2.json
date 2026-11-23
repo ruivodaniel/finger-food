@@ -1,0 +1,335 @@
+{
+ "id": "doc/ui-layouts-v2",
+ "kind": "doc",
+ "title": "Layouts",
+ "status": "todo",
+ "subject": "ui",
+ "owner": "libs/ui",
+ "order": 3,
+ "tags": [
+  "ui",
+  "consumer",
+  "layout",
+  "shell",
+  "page"
+ ],
+ "paths": [
+  "shared/libs/ui"
+ ],
+ "summary": "The page: shells and regions, their anatomy, the primitives that emit them, the container, the breakpoints, who owns the shell.",
+ "docId": "ui-layouts-v2",
+ "doc": {
+  "axioms": [
+   {
+    "text": "A page is a fixed tree of regions."
+   },
+   {
+    "text": "A region frames content and knows nothing of it."
+   },
+   {
+    "text": "The application owns the shell; a slice never builds one."
+   },
+   {
+    "text": "A region reacts to the viewport through the states it offers; which state at which width is the theme's."
+   }
+  ],
+  "purpose": {
+   "intro": "Every page of every product is the same tree of regions, so a reader knows where a thing is before reading the page, a theme can size and style every region once, and a slice page composes inside the regions without deciding the frame."
+  },
+  "reference": [
+   {
+    "topic": "Core principle",
+    "claims": [
+     {
+      "text": "**Columns** (`PageLeftSidebar`, `PageRightSidebar`, `MainRightSidebar`, `Main`) — width is set by the theme (`Main` takes what is left), height grows to the parent's max."
+     },
+     {
+      "text": "**Containers** (`PageBody`, `MainBody`) — flex rows that fill the remaining height after their header sibling. They carry their own structural defaults; you do not need to add sizing classes to them."
+     },
+     {
+      "text": "Scroll: `main-body` scrolls the page; inside a container the `Content` part scrolls (`overflow` per axis), see Markup rules. `ScrollArea` is to sunset; never add `overflow: auto/scroll` by hand."
+     }
+    ],
+    "statement": "Rows (`PageHeader`, `SecondPageHeader`, `MainHeader`, `SecondMainHeader`, `MainFooter`, `PageFooter`) — height is set by the theme, width grows to fill the parent."
+   },
+   {
+    "topic": "The layout vocabulary",
+    "claims": [
+     {
+      "text": "Overlays (Dialog, Sheet) are handled by the component library as `element=\"overlay--*\"` surfaces, not layout regions. They are independent of the page tree."
+     }
+    ],
+    "statement": "Every structural region carries a `layout` attribute. A div is **either** `layout` or `element`, never both. The theme engine styles `layout` regions (background, border, etc.) the same way it styles `element` surfaces — the layout components never emit visual CSS themselves."
+   },
+   {
+    "topic": "Full map",
+    "claims": [],
+    "examples": [
+     {
+      "snippets": [
+       {
+        "code": "shell                          ← outermost viewport frame\n├── shell-side-nav             ← global sidebar (fixed, collapsible)\n├── shell-top-nav              ← global top bar (sticky)\n└── shell-none                 ← no chrome (auth pages, standalone)\n\npage                           ← everything inside the shell content area\n├── page-header                ← full-width page title / action bar\n├── second-page-header         ← optional second full-width row under it (e.g. the tabs)\n├── page-body                  ← flex row: page-left-sidebar + main + page-right-sidebar\n│   ├── page-left-sidebar      ← the page's left column (e.g. a section's nav)\n│   ├── main                   ← primary column, fills remaining space\n│   │   ├── main-header        ← full-width region spanning main (sticky optional)\n│   │   ├── second-main-header ← optional second full-width row under main-header\n│   │   ├── main-content       ← invisible row: main-body + main-right-sidebar\n│   │   │   ├── main-body      ← scrollable content below the headers\n│   │   │   │   └── main-container ← width-constrained content wrapper (scale + align)\n│   │   │   └── main-right-sidebar ← aside inside main (e.g. properties, knowledge)\n│   │   └── main-footer        ← full-width region at the bottom of main\n│   └── page-right-sidebar     ← the page's right column (e.g. activity feed)\n└── page-footer                ← full-width row under everything, sidebars included\n\nscroll-area                    ← canonical internal scroll container (use anywhere)"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "topic": "Anatomy diagram › Shells",
+    "claims": [
+     {
+      "text": "**shell-side-nav**"
+     },
+     {
+      "text": "**shell-none**"
+     }
+    ],
+    "statement": "**shell-top-nav**",
+    "examples": [
+     {
+      "snippets": [
+       {
+        "code": "┌─────────────────────────────────────────────────┐\n│  shell-top-nav                                  │\n├─────────────────────────────────────────────────┤\n│                                                 │\n│                                                 │\n│                     PAGE                        │\n│                                                 │\n│                                                 │\n└─────────────────────────────────────────────────┘"
+       }
+      ]
+     },
+     {
+      "snippets": [
+       {
+        "code": "┌────────┬─────────────────────────────────────────┐\n│        │                                         │\n│        │                                         │\n│  shell-│             PAGE                        │\n│  side- │                                         │\n│  nav   │                                         │\n│        │                                         │\n└────────┴─────────────────────────────────────────┘"
+       }
+      ]
+     },
+     {
+      "snippets": [
+       {
+        "code": "┌─────────────────────────────────────────────────┐\n│  shell-none                                     │\n│                                                 │\n│                                                 │\n│                     PAGE                        │\n│                                                 │\n│                                                 │\n└─────────────────────────────────────────────────┘"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "topic": "Anatomy diagram",
+    "claims": [
+     {
+      "text": "MINIMAL PAGE"
+     },
+     {
+      "text": "**Mental model:**"
+     },
+     {
+      "text": "**Cols** (ShellNav, PageLeftSidebar, PageRightSidebar, MainRightSidebar, MainBody): `width` set by theme, height fills parent (`align-self: stretch` or `flex: 1`)"
+     },
+     {
+      "text": "**Rows** (Shell, Page, PageBody, Main, MainContent): `height` set by theme or fills parent (`flex: 1`), width is always `100%`"
+     },
+     {
+      "text": "**Fixed edges** (PageHeader, SecondPageHeader, MainHeader, SecondMainHeader, MainFooter, PageFooter): `flex-shrink: 0` — they never shrink; the remaining space goes to MainContent"
+     },
+     {
+      "text": "All structural flex defaults are **engine-hardcoded** — not theme-overridable. Theme controls surfaces, widths, and heights only."
+     },
+     {
+      "text": "The `page` region sits inside the shell content area. `page-body` is the flex row. `second-page-header` and `second-main-header` are optional: a second row under the page header (e.g. the tabs of the page) and under the main header. Use them in order, never alone: no second row without the first. `main-header` spans the full width of the `main` column — it is NOT inside `page-left-sidebar` or `page-right-sidebar`."
+     },
+     {
+      "text": "`page-right-sidebar` and `main-right-sidebar` can coexist — the flex layout handles both simultaneously (e.g. activity feed + properties panel)."
+     }
+    ],
+    "examples": [
+     {
+      "snippets": [
+       {
+        "code": "┌──────────────────────────────────────────────────────────────┐\n│  page-header                                                 │\n├──────────────────────────────────────────────────────────────┤\n│  second-page-header                                          │\n├──────────────┬──────────────────────────────────┬────────────┤\n│              │  main-header                     │            │\n│              ├──────────────────────────────────┤            │\n│              │  second-main-header              │            │\n│  page-left-  ├──────────────────────────────────┤  page-     │\n│  sidebar     │  main-content                    │  right-    │\n│              │  (invisible row)                 │  sidebar   │\n│              ├─────────────────────┬────────────┤            │\n│              │  main-body          │  main-     │            │\n│              │  ┌───────────────┐  │  right-    │            │\n│              │  │               │  │  sidebar   │            │\n│              │  │ main-container│  │            │            │\n│              │  │               │  │            │            │\n│              │  └───────────────┘  │            │            │\n│              ├─────────────────────┴────────────┤            │\n│              │  main-footer                     │            │\n├──────────────┴──────────────────────────────────┴────────────┤\n│  page-footer                                                 │\n└──────────────────────────────────────────────────────────────┘"
+       }
+      ]
+     },
+     {
+      "snippets": [
+       {
+        "code": "Shell (shell-side-nav) --> row\n├── ShellNav  (shell-nav)        --> col   [width: theme, height: stretch]\n└── Page      (page)             --> col   [flex: 1]\n    ├── PageHeader  (page-header)    --> row  [height: theme, width: 100%]\n    ├── SecondPageHeader (second-page-header) --> row [height: theme, width: 100%]  (optional)\n    ├── PageBody    (page-body)      --> row  [flex: 1]\n    │   ├── PageLeftSidebar  (page-left-sidebar)    --> col  [width: theme, height: stretch]\n    │   ├── Main         (main)            --> col  [flex: 1]\n    │   │   ├── MainHeader   (main-header)   --> row  [height: theme, width: 100%]\n    │   │   ├── SecondMainHeader (second-main-header) --> row [height: theme, width: 100%]  (optional)\n    │   │   ├── MainContent  (main-content)  --> row  [flex: 1, invisible]\n    │   │   │   ├── MainBody      (main-body)      --> col  [flex: 1, overflow-y: auto]\n    │   │   │   │   └── MainContainer (main-container) --> col  [max-width: theme, margin: auto]\n    │   │   │   └── MainRightSidebar (main-right-sidebar) --> col  [width: theme, height: stretch]\n    │   │   └── MainFooter   (main-footer)   --> row  [height: theme, width: 100%]\n    │   └── PageRightSidebar (page-right-sidebar)   --> col  [width: theme, height: stretch]\n    └── PageFooter  (page-footer)    --> row  [height: theme, width: 100%]  (optional)\n\n    <Page>\n      <PageHeader></PageHeader>\n      <SecondPageHeader></SecondPageHeader>\n      <PageBody>\n        <PageLeftSidebar></PageLeftSidebar>\n        <Main>\n          <MainHeader></MainHeader>\n          <SecondMainHeader></SecondMainHeader>\n          <MainContent>\n            <MainBody>\n              <MainContainer></MainContainer>\n            </MainBody>\n            <MainRightSidebar></MainRightSidebar>\n          </MainContent>\n          <MainFooter></MainFooter>\n        </Main>\n        <PageRightSidebar></PageRightSidebar>\n      </PageBody>\n      <PageFooter></PageFooter>\n    </Page>\n"
+       }
+      ]
+     },
+     {
+      "snippets": [
+       {
+        "code": "Shell (shell-none / shell-top-nav) --> col\n└── Page      (page)          --> col  [flex: 1]\n    └── PageBody (page-body)  --> row  [flex: 1]\n        └── Main (main)       --> col  [flex: 1]\n            └── MainContent (main-content)  --> row  [flex: 1]\n                └── MainBody (main-body)    --> col  [flex: 1, overflow-y: auto]\n                    └── MainContainer (main-container) --> col  [max-width: theme, margin: auto]\n\n    <Page>\n      <PageBody>\n        <Main>\n          <MainContent>\n            <MainBody>\n              <MainContainer></MainContainer>\n            </MainBody>\n          </MainContent>\n        </Main>\n      </PageBody>\n    </Page>\n"
+       }
+      ]
+     }
+    ],
+    "statement": "FULL PAGE"
+   },
+   {
+    "topic": "Main container",
+    "claims": [],
+    "statement": "`main-container` is the only layout region that accepts configuration props:",
+    "imagesAndDiagrams": [
+     {
+      "type": "ascii",
+      "value": "| Prop | Values | Default | Notes |\n|------|--------|---------|-------|\n| `scale` | `xs` `sm` `md` `lg` `xl` | `lg` | The reading measure. The theme gives each scale its max-width (`layouts.container` in the theme); the page never writes a number |\n| `align` | `left` `center` `right` | `center` | Where the measure sits inside main-body |\n| `position` | `fill` … | — | As on every region; `fill` = edge to edge, no measure |"
+     }
+    ],
+    "examples": [
+     {
+      "snippets": [
+       {
+        "code": "\n<div layout=\"main-container\">…</div>\n\n\n<div layout=\"main-container\" position=\"fill\">…</div>\n\n\n<div layout=\"main-container\" scale=\"md\" align=\"left\">…</div>",
+        "caption": "html"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "topic": "Region props",
+    "claims": [],
+    "imagesAndDiagrams": [
+     {
+      "type": "ascii",
+      "value": "| Region | Prop | Values | Default | Notes |\n|--------|------|--------|---------|-------|\n| `page-left-sidebar` | `collapsed` | `boolean` | `false` | Emits `state=\"collapsed\"` on the node; theme styles the collapsed state |\n| `main-header` | `sticky` | `boolean` | `false` | Opt-in sticky positioning |"
+     }
+    ]
+   },
+   {
+    "topic": "Breakpoints",
+    "claims": [],
+    "imagesAndDiagrams": [
+     {
+      "type": "ascii",
+      "value": "| Region | States it offers |\n|--------|------------------|\n| `shell-side-nav` | expanded · rail · drawer · hidden (a nav trigger in the top row while it is a drawer) |\n| `page-left-sidebar` · `page-right-sidebar` · `main-right-sidebar` | expanded · collapsed · hidden |\n| `main` · `page-body` | none: they take what is left |"
+     }
+    ],
+    "statement": "A layout region breaks on the viewport. The primitive implements the states a region can take; the theme says at which viewport width a region takes which state and which width (`layouts.<region>`). The primitive decides nothing."
+   },
+   {
+    "topic": "Ownership › The application owns the shell",
+    "claims": [],
+    "statement": "Each route file picks a shell variant and wraps the page content. The route MUST use the layout primitives — `Shell`, `ShellSideNav`, `ShellTopNav`, `ShellNone`, `Page` — so the theme engine can target them.",
+    "examples": [
+     {
+      "snippets": [
+       {
+        "code": "_protected/route.tsx              _auth/route.tsx\n└── Shell                         └── ShellNone\n    ├── ShellSideNav                  └── Page\n    │   └── AppSidebar                    └── <Outlet />\n    │       ├── header: logo + slice widgets\n    │       ├── nav: application-owned items\n    │       └── footer: slice widgets\n    └── Page\n        └── <Outlet />"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "topic": "Ownership › Layout components handle structural behavior only",
+    "claims": [],
+    "statement": "Scroll, overflow, collapse, breakpoints, sticky positioning. They render `layout=\"...\"` attributes. They know nothing about content or visual appearance. The theme engine handles visuals."
+   },
+   {
+    "topic": "Ownership › Slices compose with the primitives and patterns",
+    "claims": [],
+    "statement": "A slice page never builds its own shell. Inside the shell it composes with the layout primitives, following the layout patterns; a structure shared by a section's pages is a slice layout, composed once.",
+    "examples": [
+     {
+      "snippets": [
+       {
+        "caption": "tsx",
+        "code": "// a slice layout: the structure its section's pages share, composed from the primitives\n<Page>\n  <PageHeader>{pageHeaderContent}</PageHeader>\n  <PageBody>\n    <PageLeftSidebar>{pageLeftSidebarContent}</PageLeftSidebar>\n    <Main><MainContent><MainBody><MainContainer>{mainContainerContent}</MainContainer></MainBody></MainContent></Main>\n  </PageBody>\n</Page>"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "topic": "Rules",
+    "claims": [
+     {
+      "text": "**A layout zone primitive holds container zones.** A part zone (a header, a content, a stack) is never placed in a region on its own; it divides a container."
+     },
+     {
+      "text": "**`layout` or `element`, never both.** A div is the structural frame OR the morphological surface inside it. Never mix them."
+     },
+     {
+      "text": "**Layout components own all structural decisions.** Scroll, overflow, collapse, breakpoints, sticky. Page authors fill slots — they never write structural CSS."
+     },
+     {
+      "text": "**The theme engine styles layout regions.** `layout=\"page-left-sidebar\"` gets background, border, width from the theme. The layout component itself emits no visual CSS."
+     },
+     {
+      "text": "**`main-header` spans the full `main` column.** It is not inside `page-left-sidebar`. It is a full-width region at the top of `main`, sitting above `main-body`."
+     },
+     {
+      "text": "**Slices never build their own shell or navigation.** The application owns the shell; a page composes the primitives inside it."
+     }
+    ]
+   },
+   {
+    "topic": "Public surface (`@libs/web-layouts`)",
+    "claims": [],
+    "statement": "The package exports the primitives, and the layout patterns it ships."
+   },
+   {
+    "topic": "Public surface (`@libs/web-layouts`) › Layout patterns",
+    "claims": [],
+    "statement": "A layout pattern is a composition of the primitives written once to be followed. The application layouts are named by their structure, never by their consumer; a slice layout (SettingsLayout, OrganizationLayout…) wears one of them. Outlets are named by the region they fill. Slots are typed as `React.ReactNode`.",
+    "imagesAndDiagrams": [
+     {
+      "type": "ascii",
+      "value": "| Export | Slots | Notes |\n|--------|-------|-------|\n| `DoubleSidebarLayout` | `pageHeaderContent`, `pageLeftSidebarContent`, `mainContainerContent`, `scale` | shell nav + page header + page left sidebar + main-container |\n| `SingleSidebarLayout` | `pageHeaderContent`, `mainContainerContent`, `scale` | shell nav + page header + main-container |\n| `BareLayout` | `mainContainerContent`, `scale` | shell nav + main-container |\n| `AuthPage` | `children` | shell-none + a centred `main-container` at `scale=\"xs\"` |"
+     }
+    ]
+   },
+   {
+    "topic": "Public surface (`@libs/web-layouts`) › Primitives",
+    "claims": [],
+    "statement": "The zone primitives of the page: shell zone primitives (shell…) and layout zone primitives (page…, main…, the sidebars). Every page composes with them. Stack is not one: it is a part zone, exported from `@libs/web-components` (kept here as a re-export for one round).",
+    "imagesAndDiagrams": [
+     {
+      "type": "ascii",
+      "value": "| Export | Emits |\n|--------|-------|\n| `Shell` | `layout=\"shell\"` |\n| `ShellSideNav` | `layout=\"shell-side-nav\"` |\n| `ShellTopNav` | `layout=\"shell-top-nav\"` |\n| `ShellNone` | `layout=\"shell-none\"` |\n| `ShellNav` | `layout=\"shell-nav\"` |\n| `Page` | `layout=\"page\"` |\n| `PageHeader` | `layout=\"page-header\"` |\n| `SecondPageHeader` | `layout=\"second-page-header\"` |\n| `PageBody` | `layout=\"page-body\"` |\n| `PageLeftSidebar` | `layout=\"page-left-sidebar\"`, accepts `collapsed` |\n| `Main` | `layout=\"main\"` |\n| `MainHeader` | `layout=\"main-header\"`, accepts `sticky` |\n| `SecondMainHeader` | `layout=\"second-main-header\"` |\n| `MainContent` | `layout=\"main-content\"` |\n| `MainBody` | `layout=\"main-body\"` |\n| `MainContainer` | `layout=\"main-container\"`, accepts `scale`, `align`, `position` |\n| `MainRightSidebar` | `layout=\"main-right-sidebar\"` |\n| `MainFooter` | `layout=\"main-footer\"` |\n| `PageRightSidebar` | `layout=\"page-right-sidebar\"` |\n| `PageFooter` | `layout=\"page-footer\"` |\n| `ScrollArea` | `layout=\"scroll-area\"`, to sunset: a region that scrolls says so itself, a container's `Content` scrolls |\n| `Stack` | re-export of the part zone (`@libs/web-components`): `layout=\"stack\"`, accepts `dir`, `gap`, `align`, `justify`, `wrap`, `pad`, `position`, the breakpoint names |"
+     }
+    ]
+   },
+   {
+    "topic": "DOM example",
+    "claims": [],
+    "examples": [
+     {
+      "snippets": [
+       {
+        "code": "<div layout=\"shell\">\n\n  <div layout=\"shell-side-nav\">\n    <div element=\"surface--sidebar\">\n      <div element=\"surface--header\">Logo</div>\n      <nav element=\"control-group--navbar\">…</nav>\n      <div element=\"surface--footer\">User menu</div>\n    </div>\n  </div>\n\n  <div layout=\"page\">\n\n    <div layout=\"page-header\">\n      <div element=\"surface--page-header\">Page title + actions</div>\n    </div>\n\n    <div layout=\"page-body\">\n\n      <div layout=\"page-left-sidebar\">\n        <div element=\"surface--panel\">…</div>\n      </div>\n\n      <div layout=\"main\">\n\n        <div layout=\"main-header\">\n          <div element=\"surface--main-header\">Section title + toolbar</div>\n        </div>\n\n        <div layout=\"main-body\">\n          <div layout=\"main-container\" scale=\"lg\" align=\"center\">\n            Page content\n          </div>\n          <div layout=\"main-right-sidebar\">\n            Knowledge panel\n          </div>\n        </div>\n\n      </div>\n\n      <div layout=\"page-right-sidebar\">\n        Activity feed\n      </div>\n\n    </div>\n\n  </div>\n\n</div>",
+        "caption": "html"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "topic": "File locations",
+    "claims": [],
+    "examples": [
+     {
+      "snippets": [
+       {
+        "code": "shared/libs/ui/web/layouts/src/\n├── components/          the primitives\n│   ├── Shell.tsx        shell, shell-side-nav, shell-top-nav, shell-none, shell-nav\n│   ├── Page.tsx         page, page-header, second-page-header, page-body, page-footer\n│   ├── Main.tsx         main, main-header, second-main-header, main-content, main-body, main-footer\n│   ├── Sidebars.tsx     page-left-sidebar, page-right-sidebar, main-right-sidebar\n│   ├── Container.tsx    main-container (scale + align)\n│   └── ScrollArea.tsx   scroll-area (to sunset)\n│\n│   stack lives with the components: shared/libs/ui/web/primitives/components/stack/\n├── compositions/        the layout patterns the package ships\n│   └── AuthPage.tsx     shell-none + a centered main-container\n├── position.ts          the position axis → structural classes\n└── schemas.ts"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "review": {
+   "axioms": {
+    "state": "unreviewed"
+   },
+   "purpose": {
+    "state": "unreviewed"
+   },
+   "reference": {
+    "state": "unreviewed"
+   }
+  }
+ },
+ "audience": [
+  "seed-contributor",
+  "seed-consumer"
+ ]
+}

@@ -1,0 +1,1004 @@
+{
+ "id": "ui-data-primitive-color-picker",
+ "version": 1,
+ "uiNodeId": "ui-node-primitive-color-picker",
+ "kind": "component",
+ "name": "primitive-color-picker",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "primitive-color-picker",
+  "version": 1,
+  "surface": "web",
+  "state": {
+   "name_or_hex_value": "#4a2d8f",
+   "hex_value": "#4a2d8f",
+   "icon_text_value": "#4a2d8f",
+   "icon_rectangle_value": "#4a2d8f",
+   "stroke_line_value": {
+    "color": "#4a2d8f",
+    "pattern": "solid",
+    "width": 2
+   },
+   "stroke_shape_value": {
+    "color": "#4a2d8f",
+    "pattern": "dashed",
+    "width": 3
+   },
+   "multiple_value": [
+    "#4a2d8f",
+    "#f7c56a"
+   ],
+   "hex_alone_value": "#4a2d8f",
+   "user_colours": [
+    {
+     "value": "#ffd166",
+     "name": "sun"
+    },
+    {
+     "value": "#06d6a0",
+     "name": "mint"
+    }
+   ]
+  },
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "align": "center",
+    "scale": "2xl"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "the trigger says the colour: its name or its hex, with the opacity row; its hex"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "xl",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "PickerMenu",
+         "on": {
+          "change": [
+           {
+            "set": {
+             "state": "name_or_hex_value",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ],
+          "addColor": [
+           {
+            "set": {
+             "state": "user_colours",
+             "to": {
+              "append": [
+               {
+                "bind": "state.user_colours"
+               },
+               {
+                "obj": {
+                 "value": {
+                  "bind": "event.hex"
+                 }
+                }
+               }
+              ]
+             }
+            }
+           }
+          ],
+          "removeColor": [
+           {
+            "set": {
+             "state": "user_colours",
+             "to": {
+              "filter": [
+               {
+                "bind": "state.user_colours"
+               },
+               {
+                "ne": [
+                 {
+                  "bind": "item.value"
+                 },
+                 {
+                  "bind": "event.hex"
+                 }
+                ]
+               }
+              ]
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "trigger": {
+           "text": "name-or-hex"
+          },
+          "sections": [
+           {
+            "id": "brand",
+            "label": "brand",
+            "colors": [
+             {
+              "value": "#4a2d8f",
+              "name": "primary"
+             },
+             {
+              "value": "#7aa2f7",
+              "name": "secondary"
+             },
+             {
+              "value": "#f7c56a",
+              "name": "accent"
+             },
+             {
+              "value": "#8fd36a",
+              "name": "lime"
+             },
+             {
+              "value": "#f7768e",
+              "name": "rose"
+             }
+            ],
+            "allowTransparent": true
+           },
+           {
+            "obj": {
+             "id": "user",
+             "label": "my colours",
+             "addable": true,
+             "colors": {
+              "bind": "state.user_colours"
+             }
+            }
+           }
+          ],
+          "opacity": true,
+          "value": {
+           "bind": "state.name_or_hex_value"
+          },
+          "data-testid": "color-picker-name-or-hex-select"
+         }
+        },
+        {
+         "type": "PickerMenu",
+         "on": {
+          "change": [
+           {
+            "set": {
+             "state": "hex_value",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ],
+          "addColor": [
+           {
+            "set": {
+             "state": "user_colours",
+             "to": {
+              "append": [
+               {
+                "bind": "state.user_colours"
+               },
+               {
+                "obj": {
+                 "value": {
+                  "bind": "event.hex"
+                 }
+                }
+               }
+              ]
+             }
+            }
+           }
+          ],
+          "removeColor": [
+           {
+            "set": {
+             "state": "user_colours",
+             "to": {
+              "filter": [
+               {
+                "bind": "state.user_colours"
+               },
+               {
+                "ne": [
+                 {
+                  "bind": "item.value"
+                 },
+                 {
+                  "bind": "event.hex"
+                 }
+                ]
+               }
+              ]
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "trigger": {
+           "text": "hex"
+          },
+          "sections": [
+           {
+            "id": "brand",
+            "label": "brand",
+            "colors": [
+             {
+              "value": "#4a2d8f",
+              "name": "primary"
+             },
+             {
+              "value": "#7aa2f7",
+              "name": "secondary"
+             },
+             {
+              "value": "#f7c56a",
+              "name": "accent"
+             },
+             {
+              "value": "#8fd36a",
+              "name": "lime"
+             },
+             {
+              "value": "#f7768e",
+              "name": "rose"
+             }
+            ]
+           },
+           {
+            "obj": {
+             "id": "user",
+             "label": "my colours",
+             "addable": true,
+             "colors": {
+              "bind": "state.user_colours"
+             }
+            }
+           }
+          ],
+          "value": {
+           "bind": "state.hex_value"
+          },
+          "data-testid": "color-picker-hex-select"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "the trigger is an icon in the colour"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "xl",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "PickerMenu",
+         "on": {
+          "change": [
+           {
+            "set": {
+             "state": "icon_text_value",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ],
+          "addColor": [
+           {
+            "set": {
+             "state": "user_colours",
+             "to": {
+              "append": [
+               {
+                "bind": "state.user_colours"
+               },
+               {
+                "obj": {
+                 "value": {
+                  "bind": "event.hex"
+                 }
+                }
+               }
+              ]
+             }
+            }
+           }
+          ],
+          "removeColor": [
+           {
+            "set": {
+             "state": "user_colours",
+             "to": {
+              "filter": [
+               {
+                "bind": "state.user_colours"
+               },
+               {
+                "ne": [
+                 {
+                  "bind": "item.value"
+                 },
+                 {
+                  "bind": "event.hex"
+                 }
+                ]
+               }
+              ]
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "trigger": {
+           "icon": "text"
+          },
+          "sections": [
+           {
+            "id": "brand",
+            "label": "brand",
+            "colors": [
+             {
+              "value": "#4a2d8f",
+              "name": "primary"
+             },
+             {
+              "value": "#7aa2f7",
+              "name": "secondary"
+             },
+             {
+              "value": "#f7c56a",
+              "name": "accent"
+             },
+             {
+              "value": "#8fd36a",
+              "name": "lime"
+             },
+             {
+              "value": "#f7768e",
+              "name": "rose"
+             }
+            ],
+            "allowTransparent": true
+           },
+           {
+            "obj": {
+             "id": "user",
+             "label": "my colours",
+             "addable": true,
+             "colors": {
+              "bind": "state.user_colours"
+             }
+            }
+           }
+          ],
+          "value": {
+           "bind": "state.icon_text_value"
+          },
+          "data-testid": "color-picker-icon-text-select"
+         }
+        },
+        {
+         "type": "PickerMenu",
+         "on": {
+          "change": [
+           {
+            "set": {
+             "state": "icon_rectangle_value",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ],
+          "addColor": [
+           {
+            "set": {
+             "state": "user_colours",
+             "to": {
+              "append": [
+               {
+                "bind": "state.user_colours"
+               },
+               {
+                "obj": {
+                 "value": {
+                  "bind": "event.hex"
+                 }
+                }
+               }
+              ]
+             }
+            }
+           }
+          ],
+          "removeColor": [
+           {
+            "set": {
+             "state": "user_colours",
+             "to": {
+              "filter": [
+               {
+                "bind": "state.user_colours"
+               },
+               {
+                "ne": [
+                 {
+                  "bind": "item.value"
+                 },
+                 {
+                  "bind": "event.hex"
+                 }
+                ]
+               }
+              ]
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "trigger": {
+           "icon": "rectangle"
+          },
+          "sections": [
+           {
+            "id": "brand",
+            "label": "brand",
+            "colors": [
+             {
+              "value": "#4a2d8f",
+              "name": "primary"
+             },
+             {
+              "value": "#7aa2f7",
+              "name": "secondary"
+             },
+             {
+              "value": "#f7c56a",
+              "name": "accent"
+             },
+             {
+              "value": "#8fd36a",
+              "name": "lime"
+             },
+             {
+              "value": "#f7768e",
+              "name": "rose"
+             }
+            ]
+           },
+           {
+            "obj": {
+             "id": "user",
+             "label": "my colours",
+             "addable": true,
+             "colors": {
+              "bind": "state.user_colours"
+             }
+            }
+           }
+          ],
+          "value": {
+           "bind": "state.icon_rectangle_value"
+          },
+          "data-testid": "color-picker-icon-rectangle-select"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "a stroke: colour, pattern and thickness"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "xl",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "PickerMenu",
+         "on": {
+          "change": [
+           {
+            "set": {
+             "state": "stroke_line_value",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ],
+          "addColor": [
+           {
+            "set": {
+             "state": "user_colours",
+             "to": {
+              "append": [
+               {
+                "bind": "state.user_colours"
+               },
+               {
+                "obj": {
+                 "value": {
+                  "bind": "event.hex"
+                 }
+                }
+               }
+              ]
+             }
+            }
+           }
+          ],
+          "removeColor": [
+           {
+            "set": {
+             "state": "user_colours",
+             "to": {
+              "filter": [
+               {
+                "bind": "state.user_colours"
+               },
+               {
+                "ne": [
+                 {
+                  "bind": "item.value"
+                 },
+                 {
+                  "bind": "event.hex"
+                 }
+                ]
+               }
+              ]
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "trigger": {
+           "icon": "remove"
+          },
+          "stroke": true,
+          "sections": [
+           {
+            "id": "brand",
+            "label": "brand",
+            "colors": [
+             {
+              "value": "#4a2d8f",
+              "name": "primary"
+             },
+             {
+              "value": "#7aa2f7",
+              "name": "secondary"
+             },
+             {
+              "value": "#f7c56a",
+              "name": "accent"
+             },
+             {
+              "value": "#8fd36a",
+              "name": "lime"
+             },
+             {
+              "value": "#f7768e",
+              "name": "rose"
+             }
+            ],
+            "allowTransparent": true
+           },
+           {
+            "obj": {
+             "id": "user",
+             "label": "my colours",
+             "addable": true,
+             "colors": {
+              "bind": "state.user_colours"
+             }
+            }
+           }
+          ],
+          "widths": [
+           0,
+           16
+          ],
+          "value": {
+           "bind": "state.stroke_line_value"
+          },
+          "data-testid": "color-picker-stroke-line-select"
+         }
+        },
+        {
+         "type": "PickerMenu",
+         "on": {
+          "change": [
+           {
+            "set": {
+             "state": "stroke_shape_value",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ],
+          "addColor": [
+           {
+            "set": {
+             "state": "user_colours",
+             "to": {
+              "append": [
+               {
+                "bind": "state.user_colours"
+               },
+               {
+                "obj": {
+                 "value": {
+                  "bind": "event.hex"
+                 }
+                }
+               }
+              ]
+             }
+            }
+           }
+          ],
+          "removeColor": [
+           {
+            "set": {
+             "state": "user_colours",
+             "to": {
+              "filter": [
+               {
+                "bind": "state.user_colours"
+               },
+               {
+                "ne": [
+                 {
+                  "bind": "item.value"
+                 },
+                 {
+                  "bind": "event.hex"
+                 }
+                ]
+               }
+              ]
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "trigger": {
+           "icon": "rectangle"
+          },
+          "stroke": true,
+          "sections": [
+           {
+            "id": "brand",
+            "label": "brand",
+            "colors": [
+             {
+              "value": "#4a2d8f",
+              "name": "primary"
+             },
+             {
+              "value": "#7aa2f7",
+              "name": "secondary"
+             },
+             {
+              "value": "#f7c56a",
+              "name": "accent"
+             },
+             {
+              "value": "#8fd36a",
+              "name": "lime"
+             },
+             {
+              "value": "#f7768e",
+              "name": "rose"
+             }
+            ]
+           },
+           {
+            "obj": {
+             "id": "user",
+             "label": "my colours",
+             "addable": true,
+             "colors": {
+              "bind": "state.user_colours"
+             }
+            }
+           }
+          ],
+          "widths": [
+           0,
+           16
+          ],
+          "value": {
+           "bind": "state.stroke_shape_value"
+          },
+          "data-testid": "color-picker-stroke-shape-select"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "several colours, four at most"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "xl",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "PickerMenu",
+         "on": {
+          "change": [
+           {
+            "set": {
+             "state": "multiple_value",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ],
+          "addColor": [
+           {
+            "set": {
+             "state": "user_colours",
+             "to": {
+              "append": [
+               {
+                "bind": "state.user_colours"
+               },
+               {
+                "obj": {
+                 "value": {
+                  "bind": "event.hex"
+                 }
+                }
+               }
+              ]
+             }
+            }
+           }
+          ],
+          "removeColor": [
+           {
+            "set": {
+             "state": "user_colours",
+             "to": {
+              "filter": [
+               {
+                "bind": "state.user_colours"
+               },
+               {
+                "ne": [
+                 {
+                  "bind": "item.value"
+                 },
+                 {
+                  "bind": "event.hex"
+                 }
+                ]
+               }
+              ]
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "trigger": {
+           "text": "name-or-hex"
+          },
+          "multiple": true,
+          "max": 4,
+          "opacity": true,
+          "sections": [
+           {
+            "id": "brand",
+            "label": "brand",
+            "colors": [
+             {
+              "value": "#4a2d8f",
+              "name": "primary"
+             },
+             {
+              "value": "#7aa2f7",
+              "name": "secondary"
+             },
+             {
+              "value": "#f7c56a",
+              "name": "accent"
+             },
+             {
+              "value": "#8fd36a",
+              "name": "lime"
+             },
+             {
+              "value": "#f7768e",
+              "name": "rose"
+             }
+            ]
+           },
+           {
+            "obj": {
+             "id": "user",
+             "label": "my colours",
+             "addable": true,
+             "colors": {
+              "bind": "state.user_colours"
+             }
+            }
+           }
+          ],
+          "value": {
+           "bind": "state.multiple_value"
+          },
+          "data-testid": "color-picker-multiple-select"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "the hex picker alone, on any trigger"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "xl",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "HexColorPicker",
+         "on": {
+          "commit": [
+           {
+            "set": {
+             "state": "hex_alone_value",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "value": {
+           "bind": "state.hex_alone_value"
+          },
+          "data-testid": "color-picker-hex-alone-select"
+         },
+         "children": [
+          {
+           "type": "Button",
+           "props": {
+            "emphasis": "secondary",
+            "children": {
+             "bind": "state.hex_alone_value"
+            },
+            "data-testid": "color-picker-hex-alone-btn"
+           }
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

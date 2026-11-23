@@ -1,0 +1,21 @@
+{
+  "id": "term/registry-of-methods",
+  "kind": "term",
+  "title": "registry of methods",
+  "status": "converted",
+  "subjects": [
+    "open-api"
+  ],
+  "owner": "orchestrator",
+  "tags": [
+    "open-api"
+  ],
+  "paths": [
+    "apps/main/core/api/open-api"
+  ],
+  "term": {
+    "def": "Which services the open API exposes.",
+    "aliases": [],
+    "proposed": true
+  }
+}

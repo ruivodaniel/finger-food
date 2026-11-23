@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-layout-bare-layout-barelayout",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "BareLayout"
+}

@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-primitive-alert-default",
+ "version": 1,
+ "uiDataId": "ui-data-primitive-alert",
+ "name": "default",
+ "title": "Alert, its cases",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

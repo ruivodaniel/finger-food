@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-financial-tables-securities-rows-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-financial-tables-securities-rows",
+ "name": "default",
+ "title": "Securities rows",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

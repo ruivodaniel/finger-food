@@ -1,0 +1,21 @@
+{
+ "id": "term/zone",
+ "kind": "term",
+ "title": "zone",
+ "status": "approved",
+ "subjects": [
+  "ui"
+ ],
+ "owner": "libs/ui",
+ "tags": [
+  "ui"
+ ],
+ "paths": [
+  "shared/libs/ui/web/primitives"
+ ],
+ "term": {
+  "def": "A box that holds other boxes. Four levels: the shell zone primitive holds layout zone primitives, a layout zone primitive holds container zones, a container zone holds part zones, a part zone holds primitives, part zones or a container zone again. A primitive is not a zone: it holds nothing that lays out.",
+  "aliases": [],
+  "proposed": true
+ }
+}

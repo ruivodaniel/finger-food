@@ -1,0 +1,99 @@
+{
+ "id": "ui-data-pattern-component-side-navigation-4-floating",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-side-navigation-4-floating",
+ "kind": "component",
+ "name": "side-navigation-4-floating",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "side-navigation-4-floating",
+  "version": 1,
+  "surface": "web",
+  "state": {
+   "open": false,
+   "current": "dashboard",
+   "org": "org-acme-corp",
+   "mode": "light"
+  },
+  "root": {
+   "use": {
+    "component": "SideNavigationScreen",
+    "version": "latest"
+   },
+   "args": {
+    "open": {
+     "bind": "state.open"
+    },
+    "current": {
+     "bind": "state.current"
+    },
+    "org": {
+     "bind": "state.org"
+    },
+    "mode": {
+     "bind": "state.mode"
+    },
+    "text": "The sidebar floats: its zone has horizontal padding, so it stands inset from the edge.",
+    "expand": "inline",
+    "account": "separate",
+    "withOrganizations": true,
+    "withModes": true,
+    "zoneConcept": "sidebar-zone-floating",
+    "sidebarConcept": "sidebar-floating",
+    "unread": 3,
+    "notificationsAt": "header"
+   },
+   "on": {
+    "openChange": [
+     {
+      "set": {
+       "state": "open",
+       "to": {
+        "bind": "event.open"
+       }
+      }
+     }
+    ],
+    "navigate": [
+     {
+      "set": {
+       "state": "current",
+       "to": {
+        "bind": "event.id"
+       }
+      }
+     }
+    ],
+    "organizationChange": [
+     {
+      "set": {
+       "state": "org",
+       "to": {
+        "bind": "event.id"
+       }
+      }
+     }
+    ],
+    "modeChange": [
+     {
+      "set": {
+       "state": "mode",
+       "to": {
+        "bind": "event.id"
+       }
+      }
+     }
+    ],
+    "back": [
+     {
+      "set": {
+       "state": "current",
+       "to": "back"
+      }
+     }
+    ]
+   }
+  }
+ }
+}

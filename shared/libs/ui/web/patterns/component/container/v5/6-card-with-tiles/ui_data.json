@@ -1,0 +1,175 @@
+{
+ "id": "ui-data-pattern-component-container-6-card-with-tiles",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-container-6-card-with-tiles",
+ "kind": "component",
+ "name": "container-6-card-with-tiles",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "container-6-card-with-tiles",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Card",
+   "children": [
+    {
+     "type": "Header",
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "between"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--heading3",
+          "children": "Title"
+         }
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "scale": "sm"
+         },
+         "children": [
+          {
+           "type": "Button",
+           "props": {
+            "scale": "sm",
+            "emphasis": "secondary",
+            "children": "Action",
+            "data-testid": "c-tiles-first-action-btn"
+           }
+          },
+          {
+           "type": "Button",
+           "props": {
+            "scale": "sm",
+            "emphasis": "primary",
+            "children": "Action",
+            "data-testid": "c-tiles-second-action-btn"
+           }
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Content",
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Tile",
+         "props": {
+          "position": "fill"
+         },
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col",
+            "scale": "sm"
+           },
+           "children": [
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "sm"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "sm"
+             }
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "Tile",
+         "props": {
+          "position": "fill"
+         },
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col",
+            "scale": "sm"
+           },
+           "children": [
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "sm"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "sm"
+             }
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "Tile",
+         "props": {
+          "position": "fill"
+         },
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col",
+            "scale": "sm"
+           },
+           "children": [
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "sm"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "sm"
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "props": {
+    "concept": "container-example"
+   }
+  }
+ }
+}

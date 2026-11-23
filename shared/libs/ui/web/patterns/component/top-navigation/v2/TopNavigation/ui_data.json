@@ -1,0 +1,781 @@
+{
+ "id": "ui-data-pattern-component-top-navigation-topnavigation",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-top-navigation-topnavigation",
+ "kind": "component",
+ "name": "TopNavigation",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "TopNavigation",
+  "version": 1,
+  "surface": "web",
+  "params": [
+   "logoWide",
+   "logoSquare",
+   "productName",
+   "groups",
+   "currentId",
+   "groupsAs",
+   "organizations",
+   "activeId",
+   "user",
+   "userItems",
+   "modes",
+   "mode",
+   "modeLabel",
+   "manageLabel",
+   "account",
+   "unread",
+   "notificationsLabel",
+   "menuLabel",
+   "away"
+  ],
+  "emits": [
+   "modeChange",
+   "navigate",
+   "notifications",
+   "organizationChange",
+   "signOut",
+   "userSelect"
+  ],
+  "root": {
+   "type": "Fragment",
+   "children": [
+    {
+     "type": "TopbarWhen",
+     "props": {
+      "state": "desktop"
+     },
+     "children": [
+      {
+       "type": "Topbar",
+       "props": {
+        "away": {
+         "bind": "away"
+        }
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "size": "fill",
+          "scale": "lg",
+          "concept": "topbar-row"
+         },
+         "children": [
+          {
+           "type": "RemoteImage",
+           "props": {
+            "src": {
+             "bind": "logoWide"
+            },
+            "alt": {
+             "bind": "productName"
+            },
+            "concept": "logo-wide",
+            "fit": "height"
+           }
+          },
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "row",
+            "align": "center",
+            "size": "fill",
+            "scale": "xs",
+            "clip": true
+           },
+           "children": [
+            {
+             "type": "Stack",
+             "props": {
+              "dir": "row",
+              "align": "center",
+              "scale": "xs"
+             },
+             "repeat": {
+              "each": "groups",
+              "as": "group"
+             },
+             "children": [
+              {
+               "type": "DropdownMenu",
+               "when": {
+                "and": [
+                 {
+                  "exists": [
+                   {
+                    "bind": "group.label"
+                   }
+                  ]
+                 },
+                 {
+                  "not": [
+                   {
+                    "eq": [
+                     {
+                      "bind": "groupsAs"
+                     },
+                     "inline"
+                    ]
+                   }
+                  ]
+                 }
+                ]
+               },
+               "children": [
+                {
+                 "type": "DropdownMenuTrigger",
+                 "props": {
+                  "asChild": true
+                 },
+                 "children": [
+                  {
+                   "type": "Button",
+                   "props": {
+                    "emphasis": "tertiary",
+                    "scale": "sm",
+                    "buttonType": "text-icon",
+                    "endIcon": "chevronDown",
+                    "children": {
+                     "bind": "group.label"
+                    },
+                    "data-testid": {
+                     "concat": [
+                      "nav-group-",
+                      {
+                       "bind": "group.id"
+                      },
+                      "-btn"
+                     ]
+                    }
+                   }
+                  }
+                 ]
+                },
+                {
+                 "type": "DropdownMenuContent",
+                 "props": {
+                  "align": "start"
+                 },
+                 "children": [
+                  {
+                   "type": "DropdownMenuItem",
+                   "props": {
+                    "data-testid": {
+                     "concat": [
+                      "nav-",
+                      {
+                       "bind": "entry.id"
+                      },
+                      "-menu"
+                     ]
+                    }
+                   },
+                   "children": [
+                    {
+                     "type": "Stack",
+                     "props": {
+                      "dir": "row",
+                      "align": "center",
+                      "scale": "sm"
+                     },
+                     "children": [
+                      {
+                       "type": "Icon",
+                       "props": {
+                        "name": {
+                         "bind": "entry.icon"
+                        },
+                        "scale": "sm"
+                       }
+                      },
+                      {
+                       "type": "Stack",
+                       "props": {
+                        "size": "fill"
+                       },
+                       "children": [
+                        {
+                         "type": "Text",
+                         "props": {
+                          "as": "span",
+                          "element": "type--body",
+                          "children": {
+                           "bind": "entry.label"
+                          }
+                         }
+                        }
+                       ]
+                      },
+                      {
+                       "type": "Text",
+                       "props": {
+                        "as": "span",
+                        "element": "type--body-small",
+                        "emphasis": "quiet",
+                        "children": {
+                         "bind": "entry.count"
+                        }
+                       },
+                       "when": {
+                        "gt": [
+                         {
+                          "bind": "entry.count"
+                         },
+                         0
+                        ]
+                       }
+                      }
+                     ]
+                    }
+                   ],
+                   "on": {
+                    "select": [
+                     {
+                      "emit": {
+                       "event": "navigate",
+                       "payload": {
+                        "id": {
+                         "bind": "entry.id"
+                        }
+                       }
+                      }
+                     }
+                    ]
+                   },
+                   "repeat": {
+                    "each": "group.items",
+                    "as": "entry"
+                   }
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "type": "Stack",
+               "props": {
+                "dir": "row",
+                "align": "center",
+                "scale": "xs"
+               },
+               "when": {
+                "not": [
+                 {
+                  "and": [
+                   {
+                    "exists": [
+                     {
+                      "bind": "group.label"
+                     }
+                    ]
+                   },
+                   {
+                    "not": [
+                     {
+                      "eq": [
+                       {
+                        "bind": "groupsAs"
+                       },
+                       "inline"
+                      ]
+                     }
+                    ]
+                   }
+                  ]
+                 }
+                ]
+               },
+               "children": [
+                {
+                 "type": "Button",
+                 "props": {
+                  "emphasis": "tertiary",
+                  "scale": "sm",
+                  "buttonType": "icon-text",
+                  "startIcon": {
+                   "bind": "entry.icon"
+                  },
+                  "children": {
+                   "bind": "entry.label"
+                  },
+                  "state": {
+                   "if": [
+                    {
+                     "eq": [
+                      {
+                       "bind": "entry.id"
+                      },
+                      {
+                       "bind": "currentId"
+                      }
+                     ]
+                    },
+                    "selected"
+                   ]
+                  },
+                  "aria-current": {
+                   "if": [
+                    {
+                     "eq": [
+                      {
+                       "bind": "entry.id"
+                      },
+                      {
+                       "bind": "currentId"
+                      }
+                     ]
+                    },
+                    "page"
+                   ]
+                  },
+                  "data-testid": {
+                   "concat": [
+                    "nav-",
+                    {
+                     "bind": "entry.id"
+                    },
+                    "-link"
+                   ]
+                  }
+                 },
+                 "on": {
+                  "click": [
+                   {
+                    "emit": {
+                     "event": "navigate",
+                     "payload": {
+                      "id": {
+                       "bind": "entry.id"
+                      }
+                     }
+                    }
+                   }
+                  ]
+                 },
+                 "repeat": {
+                  "each": "group.items",
+                  "as": "entry"
+                 }
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "row",
+            "align": "center",
+            "scale": "sm"
+           },
+           "children": [
+            {
+             "type": "Button",
+             "props": {
+              "emphasis": "tertiary",
+              "scale": "sm",
+              "buttonType": "icon",
+              "startIcon": "bell",
+              "aria-label": {
+               "bind": "notificationsLabel"
+              },
+              "data-testid": "nav-notifications-btn"
+             },
+             "when": {
+              "gt": [
+               {
+                "bind": "unread"
+               },
+               -1
+              ]
+             },
+             "on": {
+              "click": [
+               {
+                "emit": {
+                 "event": "notifications",
+                 "payload": {}
+                }
+               }
+              ]
+             }
+            },
+            {
+             "use": {
+              "component": "OrganizationSwitcher",
+              "version": "latest"
+             },
+             "args": {
+              "organizations": {
+               "bind": "organizations"
+              },
+              "activeId": {
+               "bind": "activeId"
+              },
+              "compact": true
+             },
+             "when": {
+              "and": [
+               {
+                "gt": [
+                 {
+                  "count": [
+                   {
+                    "bind": "organizations"
+                   }
+                  ]
+                 },
+                 0
+                ]
+               },
+               {
+                "not": [
+                 {
+                  "eq": [
+                   {
+                    "bind": "account"
+                   },
+                   "combined"
+                  ]
+                 }
+                ]
+               }
+              ]
+             },
+             "on": {
+              "change": [
+               {
+                "emit": {
+                 "event": "organizationChange",
+                 "payload": {
+                  "id": {
+                   "bind": "event.id"
+                  }
+                 }
+                }
+               }
+              ]
+             }
+            },
+            {
+             "use": {
+              "component": "UserMenu",
+              "version": "latest"
+             },
+             "args": {
+              "user": {
+               "bind": "user"
+              },
+              "items": {
+               "bind": "userItems"
+              },
+              "modes": {
+               "bind": "modes"
+              },
+              "mode": {
+               "bind": "mode"
+              },
+              "modeLayout": "switch",
+              "modeLabel": {
+               "bind": "modeLabel"
+              },
+              "modeIcon": "palette",
+              "header": "large",
+              "manageLabel": {
+               "bind": "manageLabel"
+              },
+              "compact": true
+             },
+             "when": {
+              "not": [
+               {
+                "eq": [
+                 {
+                  "bind": "account"
+                 },
+                 "combined"
+                ]
+               }
+              ]
+             },
+             "on": {
+              "select": [
+               {
+                "emit": {
+                 "event": "userSelect",
+                 "payload": {
+                  "id": {
+                   "bind": "event.id"
+                  }
+                 }
+                }
+               }
+              ],
+              "modeChange": [
+               {
+                "emit": {
+                 "event": "modeChange",
+                 "payload": {
+                  "id": {
+                   "bind": "event.id"
+                  }
+                 }
+                }
+               }
+              ],
+              "signOut": [
+               {
+                "emit": {
+                 "event": "signOut",
+                 "payload": {}
+                }
+               }
+              ]
+             }
+            },
+            {
+             "use": {
+              "component": "UserOrganizationMenu",
+              "version": "latest"
+             },
+             "args": {
+              "user": {
+               "bind": "user"
+              },
+              "items": {
+               "bind": "userItems"
+              },
+              "modes": {
+               "bind": "modes"
+              },
+              "mode": {
+               "bind": "mode"
+              },
+              "modeLayout": "switch",
+              "modeLabel": {
+               "bind": "modeLabel"
+              },
+              "modeIcon": "palette",
+              "header": "large",
+              "manageLabel": {
+               "bind": "manageLabel"
+              },
+              "compact": true,
+              "organizations": {
+               "bind": "organizations"
+              },
+              "activeId": {
+               "bind": "activeId"
+              }
+             },
+             "when": {
+              "eq": [
+               {
+                "bind": "account"
+               },
+               "combined"
+              ]
+             },
+             "on": {
+              "select": [
+               {
+                "emit": {
+                 "event": "userSelect",
+                 "payload": {
+                  "id": {
+                   "bind": "event.id"
+                  }
+                 }
+                }
+               }
+              ],
+              "modeChange": [
+               {
+                "emit": {
+                 "event": "modeChange",
+                 "payload": {
+                  "id": {
+                   "bind": "event.id"
+                  }
+                 }
+                }
+               }
+              ],
+              "signOut": [
+               {
+                "emit": {
+                 "event": "signOut",
+                 "payload": {}
+                }
+               }
+              ],
+              "organizationChange": [
+               {
+                "emit": {
+                 "event": "organizationChange",
+                 "payload": {
+                  "id": {
+                   "bind": "event.id"
+                  }
+                 }
+                }
+               }
+              ]
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "TopbarWhen",
+     "props": {
+      "state": "mobile"
+     },
+     "children": [
+      {
+       "use": {
+        "component": "MainNavSidebar",
+        "version": "latest"
+       },
+       "args": {
+        "logoWide": {
+         "bind": "logoWide"
+        },
+        "logoSquare": {
+         "bind": "logoSquare"
+        },
+        "productName": {
+         "bind": "productName"
+        },
+        "groups": {
+         "bind": "groups"
+        },
+        "currentId": {
+         "bind": "currentId"
+        },
+        "open": false,
+        "expand": "inline",
+        "organizations": {
+         "bind": "organizations"
+        },
+        "activeId": {
+         "bind": "activeId"
+        },
+        "user": {
+         "bind": "user"
+        },
+        "userItems": {
+         "bind": "userItems"
+        },
+        "modes": {
+         "bind": "modes"
+        },
+        "mode": {
+         "bind": "mode"
+        },
+        "modeLabel": {
+         "bind": "modeLabel"
+        },
+        "manageLabel": {
+         "bind": "manageLabel"
+        },
+        "account": {
+         "bind": "account"
+        },
+        "toggleAt": "top",
+        "unread": {
+         "bind": "unread"
+        },
+        "notificationsLabel": {
+         "bind": "notificationsLabel"
+        },
+        "notificationsAt": "header",
+        "menuLabel": {
+         "bind": "menuLabel"
+        }
+       },
+       "on": {
+        "navigate": [
+         {
+          "emit": {
+           "event": "navigate",
+           "payload": {
+            "id": {
+             "bind": "event.id"
+            }
+           }
+          }
+         }
+        ],
+        "organizationChange": [
+         {
+          "emit": {
+           "event": "organizationChange",
+           "payload": {
+            "id": {
+             "bind": "event.id"
+            }
+           }
+          }
+         }
+        ],
+        "modeChange": [
+         {
+          "emit": {
+           "event": "modeChange",
+           "payload": {
+            "id": {
+             "bind": "event.id"
+            }
+           }
+          }
+         }
+        ],
+        "notifications": [
+         {
+          "emit": {
+           "event": "notifications",
+           "payload": {}
+          }
+         }
+        ],
+        "signOut": [
+         {
+          "emit": {
+           "event": "signOut",
+           "payload": {}
+          }
+         }
+        ],
+        "userSelect": [
+         {
+          "emit": {
+           "event": "userSelect",
+           "payload": {
+            "id": {
+             "bind": "event.id"
+            }
+           }
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

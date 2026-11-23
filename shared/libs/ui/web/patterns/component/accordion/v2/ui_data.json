@@ -1,0 +1,103 @@
+{
+ "id": "ui-data-pattern-component-accordion",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-accordion",
+ "kind": "component",
+ "name": "accordion",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "accordion",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "state": {
+   "value": ""
+  },
+  "root": {
+   "type": "Accordion",
+   "props": {
+    "type": "single",
+    "collapsible": true,
+    "className": "w-full",
+    "value": {
+     "bind": "state.value"
+    }
+   },
+   "children": [
+    {
+     "type": "AccordionItem",
+     "props": {
+      "value": "item-1"
+     },
+     "children": [
+      {
+       "type": "AccordionTrigger",
+       "props": {
+        "children": "Is it accessible?"
+       }
+      },
+      {
+       "type": "AccordionContent",
+       "props": {
+        "children": "Yes. It adheres to the WAI-ARIA design pattern."
+       }
+      }
+     ]
+    },
+    {
+     "type": "AccordionItem",
+     "props": {
+      "value": "item-2"
+     },
+     "children": [
+      {
+       "type": "AccordionTrigger",
+       "props": {
+        "children": "Is it styled?"
+       }
+      },
+      {
+       "type": "AccordionContent",
+       "props": {
+        "children": "Yes. It comes with default styles that match the other components."
+       }
+      }
+     ]
+    },
+    {
+     "type": "AccordionItem",
+     "props": {
+      "value": "item-3"
+     },
+     "children": [
+      {
+       "type": "AccordionTrigger",
+       "props": {
+        "children": "Is it animated?"
+       }
+      },
+      {
+       "type": "AccordionContent",
+       "props": {
+        "children": "Yes. It's animated by default, but you can disable it if you prefer."
+       }
+      }
+     ]
+    }
+   ],
+   "on": {
+    "valueChange": [
+     {
+      "set": {
+       "state": "value",
+       "to": {
+        "bind": "event"
+       }
+      }
+     }
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-component-avatar-list",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Avatar list"
+}

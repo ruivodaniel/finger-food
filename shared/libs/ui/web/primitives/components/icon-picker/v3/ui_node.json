@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-primitive-icon-picker",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Icon picker"
+}

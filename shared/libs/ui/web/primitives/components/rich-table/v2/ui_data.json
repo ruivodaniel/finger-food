@@ -1,0 +1,960 @@
+{
+ "id": "ui-data-primitive-rich-table",
+ "version": 1,
+ "uiNodeId": "ui-node-primitive-rich-table",
+ "kind": "component",
+ "name": "primitive-rich-table",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "primitive-rich-table",
+  "version": 1,
+  "surface": "web",
+  "state": {
+   "wide_rows": [
+    {
+     "id": 1,
+     "region": "Region 1",
+     "Jan": 100,
+     "Feb": 153,
+     "Mar": 206,
+     "Apr": 259,
+     "May": 312,
+     "Jun": 365,
+     "Jul": 418,
+     "Aug": 471,
+     "Sep": 124,
+     "Oct": 177,
+     "Nov": 230,
+     "Dec": 283,
+     "target": 3600,
+     "gap": -502,
+     "owner": "Ana Costa",
+     "note": "review the plan",
+     "total": 3098
+    },
+    {
+     "id": 2,
+     "region": "Region 2",
+     "Jan": 137,
+     "Feb": 190,
+     "Mar": 243,
+     "Apr": 296,
+     "May": 349,
+     "Jun": 402,
+     "Jul": 455,
+     "Aug": 108,
+     "Sep": 161,
+     "Oct": 214,
+     "Nov": 267,
+     "Dec": 320,
+     "target": 3600,
+     "gap": -458,
+     "owner": "Bruno Reis",
+     "note": "",
+     "total": 3142
+    },
+    {
+     "id": 3,
+     "region": "Region 3",
+     "Jan": 174,
+     "Feb": 227,
+     "Mar": 280,
+     "Apr": 333,
+     "May": 386,
+     "Jun": 439,
+     "Jul": 492,
+     "Aug": 145,
+     "Sep": 198,
+     "Oct": 251,
+     "Nov": 304,
+     "Dec": 357,
+     "target": 3600,
+     "gap": -14,
+     "owner": "Carla Lima",
+     "note": "",
+     "total": 3586
+    },
+    {
+     "id": 4,
+     "region": "Region 4",
+     "Jan": 211,
+     "Feb": 264,
+     "Mar": 317,
+     "Apr": 370,
+     "May": 423,
+     "Jun": 476,
+     "Jul": 129,
+     "Aug": 182,
+     "Sep": 235,
+     "Oct": 288,
+     "Nov": 341,
+     "Dec": 394,
+     "target": 3600,
+     "gap": 30,
+     "owner": "Diogo Pires",
+     "note": "review the plan",
+     "total": 3630
+    },
+    {
+     "id": 5,
+     "region": "Region 5",
+     "Jan": 248,
+     "Feb": 301,
+     "Mar": 354,
+     "Apr": 407,
+     "May": 460,
+     "Jun": 113,
+     "Jul": 166,
+     "Aug": 219,
+     "Sep": 272,
+     "Oct": 325,
+     "Nov": 378,
+     "Dec": 431,
+     "target": 3600,
+     "gap": 74,
+     "owner": "Ana Costa",
+     "note": "",
+     "total": 3674
+    },
+    {
+     "id": 6,
+     "region": "Region 6",
+     "Jan": 285,
+     "Feb": 338,
+     "Mar": 391,
+     "Apr": 444,
+     "May": 497,
+     "Jun": 150,
+     "Jul": 203,
+     "Aug": 256,
+     "Sep": 309,
+     "Oct": 362,
+     "Nov": 415,
+     "Dec": 468,
+     "target": 3600,
+     "gap": 518,
+     "owner": "Bruno Reis",
+     "note": "",
+     "total": 4118
+    },
+    {
+     "id": 7,
+     "region": "Region 7",
+     "Jan": 322,
+     "Feb": 375,
+     "Mar": 428,
+     "Apr": 481,
+     "May": 134,
+     "Jun": 187,
+     "Jul": 240,
+     "Aug": 293,
+     "Sep": 346,
+     "Oct": 399,
+     "Nov": 452,
+     "Dec": 105,
+     "target": 3600,
+     "gap": 162,
+     "owner": "Carla Lima",
+     "note": "review the plan",
+     "total": 3762
+    },
+    {
+     "id": 8,
+     "region": "Region 8",
+     "Jan": 359,
+     "Feb": 412,
+     "Mar": 465,
+     "Apr": 118,
+     "May": 171,
+     "Jun": 224,
+     "Jul": 277,
+     "Aug": 330,
+     "Sep": 383,
+     "Oct": 436,
+     "Nov": 489,
+     "Dec": 142,
+     "target": 3600,
+     "gap": 206,
+     "owner": "Diogo Pires",
+     "note": "",
+     "total": 3806
+    },
+    {
+     "id": 9,
+     "region": "Region 9",
+     "Jan": 396,
+     "Feb": 449,
+     "Mar": 102,
+     "Apr": 155,
+     "May": 208,
+     "Jun": 261,
+     "Jul": 314,
+     "Aug": 367,
+     "Sep": 420,
+     "Oct": 473,
+     "Nov": 126,
+     "Dec": 179,
+     "target": 3600,
+     "gap": -150,
+     "owner": "Ana Costa",
+     "note": "",
+     "total": 3450
+    },
+    {
+     "id": 10,
+     "region": "Region 10",
+     "Jan": 433,
+     "Feb": 486,
+     "Mar": 139,
+     "Apr": 192,
+     "May": 245,
+     "Jun": 298,
+     "Jul": 351,
+     "Aug": 404,
+     "Sep": 457,
+     "Oct": 110,
+     "Nov": 163,
+     "Dec": 216,
+     "target": 3600,
+     "gap": -106,
+     "owner": "Bruno Reis",
+     "note": "review the plan",
+     "total": 3494
+    },
+    {
+     "id": 11,
+     "region": "Region 11",
+     "Jan": 470,
+     "Feb": 123,
+     "Mar": 176,
+     "Apr": 229,
+     "May": 282,
+     "Jun": 335,
+     "Jul": 388,
+     "Aug": 441,
+     "Sep": 494,
+     "Oct": 147,
+     "Nov": 200,
+     "Dec": 253,
+     "target": 3600,
+     "gap": -62,
+     "owner": "Carla Lima",
+     "note": "",
+     "total": 3538
+    },
+    {
+     "id": 12,
+     "region": "Region 12",
+     "Jan": 107,
+     "Feb": 160,
+     "Mar": 213,
+     "Apr": 266,
+     "May": 319,
+     "Jun": 372,
+     "Jul": 425,
+     "Aug": 478,
+     "Sep": 131,
+     "Oct": 184,
+     "Nov": 237,
+     "Dec": 290,
+     "target": 3600,
+     "gap": -418,
+     "owner": "Diogo Pires",
+     "note": "",
+     "total": 3182
+    },
+    {
+     "id": 13,
+     "region": "Region 13",
+     "Jan": 144,
+     "Feb": 197,
+     "Mar": 250,
+     "Apr": 303,
+     "May": 356,
+     "Jun": 409,
+     "Jul": 462,
+     "Aug": 115,
+     "Sep": 168,
+     "Oct": 221,
+     "Nov": 274,
+     "Dec": 327,
+     "target": 3600,
+     "gap": -374,
+     "owner": "Ana Costa",
+     "note": "review the plan",
+     "total": 3226
+    },
+    {
+     "id": 14,
+     "region": "Region 14",
+     "Jan": 181,
+     "Feb": 234,
+     "Mar": 287,
+     "Apr": 340,
+     "May": 393,
+     "Jun": 446,
+     "Jul": 499,
+     "Aug": 152,
+     "Sep": 205,
+     "Oct": 258,
+     "Nov": 311,
+     "Dec": 364,
+     "target": 3600,
+     "gap": 70,
+     "owner": "Bruno Reis",
+     "note": "",
+     "total": 3670
+    }
+   ],
+   "wide_columns": [
+    {
+     "key": "region",
+     "name": "Region",
+     "width": 160,
+     "frozen": "start"
+    },
+    {
+     "key": "Jan",
+     "name": "Jan",
+     "type": "number",
+     "width": 100
+    },
+    {
+     "key": "Feb",
+     "name": "Feb",
+     "type": "number",
+     "width": 100
+    },
+    {
+     "key": "Mar",
+     "name": "Mar",
+     "type": "number",
+     "width": 100
+    },
+    {
+     "key": "Apr",
+     "name": "Apr",
+     "type": "number",
+     "width": 100
+    },
+    {
+     "key": "May",
+     "name": "May",
+     "type": "number",
+     "width": 100
+    },
+    {
+     "key": "Jun",
+     "name": "Jun",
+     "type": "number",
+     "width": 100
+    },
+    {
+     "key": "Jul",
+     "name": "Jul",
+     "type": "number",
+     "width": 100
+    },
+    {
+     "key": "Aug",
+     "name": "Aug",
+     "type": "number",
+     "width": 100
+    },
+    {
+     "key": "Sep",
+     "name": "Sep",
+     "type": "number",
+     "width": 100
+    },
+    {
+     "key": "Oct",
+     "name": "Oct",
+     "type": "number",
+     "width": 100
+    },
+    {
+     "key": "Nov",
+     "name": "Nov",
+     "type": "number",
+     "width": 100
+    },
+    {
+     "key": "Dec",
+     "name": "Dec",
+     "type": "number",
+     "width": 100
+    },
+    {
+     "key": "target",
+     "name": "Target",
+     "type": "number",
+     "width": 110
+    },
+    {
+     "key": "gap",
+     "name": "Gap",
+     "type": "number",
+     "width": 100
+    },
+    {
+     "key": "owner",
+     "name": "Owner",
+     "width": 160
+    },
+    {
+     "key": "note",
+     "name": "Note",
+     "width": 240
+    },
+    {
+     "key": "total",
+     "name": "Total",
+     "type": "number",
+     "width": 120,
+     "frozen": "end"
+    }
+   ],
+   "cells_rows": [
+    {
+     "id": 1,
+     "task": "Draft the proposal",
+     "owner": "Ana Costa",
+     "labels": [
+      "sales",
+      "urgent"
+     ],
+     "points": 5
+    },
+    {
+     "id": 2,
+     "task": "Review the contract",
+     "owner": "Rui Matos",
+     "labels": [
+      "legal"
+     ],
+     "points": 3
+    },
+    {
+     "id": 3,
+     "task": "Plan the kickoff",
+     "owner": "Marta Reis",
+     "labels": [
+      "ops",
+      "q1",
+      "team"
+     ],
+     "points": 8
+    }
+   ],
+   "cells_opened": "none yet",
+   "authored_rows": [
+    {
+     "id": 1,
+     "task": "Draft the proposal",
+     "status": "doing",
+     "points": 5,
+     "due": "2026-12-01"
+    },
+    {
+     "id": 2,
+     "task": "Review the contract",
+     "status": "todo",
+     "points": 3,
+     "due": "2026-12-04"
+    },
+    {
+     "id": 3,
+     "task": "Plan the kickoff",
+     "status": "done",
+     "points": 8,
+     "due": "2026-11-28"
+    }
+   ],
+   "queried_rows": [
+    {
+     "id": 1,
+     "name": "Ana Costa 1",
+     "city": "Lisbon",
+     "revenue": 1000
+    },
+    {
+     "id": 2,
+     "name": "Rui Matos 2",
+     "city": "Porto",
+     "revenue": 1137
+    },
+    {
+     "id": 3,
+     "name": "Marta Reis 3",
+     "city": "Braga",
+     "revenue": 1274
+    },
+    {
+     "id": 4,
+     "name": "Jo\u00e3o Dias 4",
+     "city": "Faro",
+     "revenue": 1411
+    },
+    {
+     "id": 5,
+     "name": "In\u00eas Lopes 5",
+     "city": "Lisbon",
+     "revenue": 1548
+    },
+    {
+     "id": 6,
+     "name": "Ana Costa 6",
+     "city": "Porto",
+     "revenue": 1685
+    },
+    {
+     "id": 7,
+     "name": "Rui Matos 7",
+     "city": "Braga",
+     "revenue": 1822
+    },
+    {
+     "id": 8,
+     "name": "Marta Reis 8",
+     "city": "Faro",
+     "revenue": 1959
+    },
+    {
+     "id": 9,
+     "name": "Jo\u00e3o Dias 9",
+     "city": "Lisbon",
+     "revenue": 2096
+    },
+    {
+     "id": 10,
+     "name": "In\u00eas Lopes 10",
+     "city": "Porto",
+     "revenue": 2233
+    }
+   ],
+   "queried_total": 45,
+   "queried_query": {
+    "page": 1,
+    "size": 10,
+    "sort": [],
+    "filters": {}
+   }
+  },
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "scale": "2xl"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "a cell holds what the column gives it: an avatar and a name, one badge per label, a button that says what it opened"
+       }
+      },
+      {
+       "type": "RichTable",
+       "props": {
+        "source": {
+         "obj": {
+          "kind": "authored",
+          "rows": {
+           "bind": "state.cells_rows"
+          }
+         }
+        },
+        "columns": [
+         {
+          "obj": {
+           "key": "task",
+           "name": "Task",
+           "width": 220
+          }
+         },
+         {
+          "obj": {
+           "key": "owner",
+           "name": "Owner",
+           "width": 200,
+           "render": {
+            "type": "Stack",
+            "props": {
+             "dir": "row",
+             "scale": "sm",
+             "align": "center"
+            },
+            "children": [
+             {
+              "type": "Avatar",
+              "children": [
+               {
+                "type": "AvatarFallback",
+                "props": {
+                 "children": {
+                  "initials": {
+                   "bind": "item.owner"
+                  }
+                 }
+                }
+               }
+              ]
+             },
+             {
+              "type": "Text",
+              "props": {
+               "children": {
+                "bind": "item.owner"
+               }
+              }
+             }
+            ]
+           }
+          }
+         },
+         {
+          "obj": {
+           "key": "labels",
+           "name": "Labels",
+           "width": 220,
+           "render": {
+            "type": "Stack",
+            "props": {
+             "dir": "row",
+             "scale": "2xs",
+             "align": "center"
+            },
+            "children": [
+             {
+              "type": "Badge",
+              "repeat": {
+               "each": "item.labels",
+               "as": "label"
+              },
+              "props": {
+               "scale": "xs",
+               "status": "neutral",
+               "children": {
+                "bind": "label"
+               }
+              }
+             }
+            ]
+           }
+          }
+         },
+         {
+          "obj": {
+           "key": "points",
+           "name": "Points",
+           "type": "number",
+           "width": 90
+          }
+         },
+         {
+          "obj": {
+           "key": "open",
+           "name": "",
+           "width": 110,
+           "render": {
+            "type": "Button",
+            "props": {
+             "scale": "xs",
+             "emphasis": "secondary",
+             "children": "Open",
+             "data-testid": {
+              "concat": [
+               "rich-table-cells-open-",
+               {
+                "bind": "item.id"
+               },
+               "-btn"
+              ]
+             }
+            },
+            "on": {
+             "click": [
+              {
+               "set": {
+                "state": "cells_opened",
+                "to": {
+                 "bind": "item.task"
+                }
+               }
+              }
+             ]
+            }
+           }
+          }
+         }
+        ],
+        "editable": false,
+        "height": 260,
+        "data-testid": "rich-table-cells-editor",
+        "rowHeight": 56
+       }
+      },
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-small",
+        "children": {
+         "concat": [
+          "opened: ",
+          {
+           "bind": "state.cells_opened"
+          }
+         ]
+        }
+       }
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "authored: the rows are the document's; an edit, a new row, a deleted or a moved row comes back as the event rowsChange"
+       }
+      },
+      {
+       "type": "RichTable",
+       "on": {
+        "rowsChange": [
+         {
+          "set": {
+           "state": "authored_rows",
+           "to": {
+            "bind": "event"
+           }
+          }
+         }
+        ]
+       },
+       "props": {
+        "source": {
+         "obj": {
+          "kind": "authored",
+          "rows": {
+           "bind": "state.authored_rows"
+          }
+         }
+        },
+        "columns": [
+         {
+          "obj": {
+           "key": "task",
+           "name": "Task",
+           "width": 240
+          }
+         },
+         {
+          "obj": {
+           "key": "status",
+           "name": "Status",
+           "type": "tag",
+           "options": [
+            "todo",
+            "doing",
+            "done"
+           ],
+           "width": 130
+          }
+         },
+         {
+          "obj": {
+           "key": "points",
+           "name": "Points",
+           "type": "number",
+           "width": 100
+          }
+         },
+         {
+          "obj": {
+           "key": "due",
+           "name": "Due",
+           "type": "date",
+           "width": 140
+          }
+         }
+        ],
+        "newRow": {
+         "obj": {
+          "task": "",
+          "status": "todo",
+          "points": 0,
+          "due": ""
+         }
+        },
+        "selection": "row",
+        "height": 280,
+        "data-testid": "rich-table-authored-editor"
+       }
+      },
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-small",
+        "children": {
+         "concat": [
+          "rows: ",
+          {
+           "count": {
+            "bind": "state.authored_rows"
+           }
+          }
+         ]
+        }
+       }
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "queried: the table asks with the event queryChange (page, sort, filters) and draws the rows and the total it is given; here the document always gives the same page"
+       }
+      },
+      {
+       "type": "RichTable",
+       "on": {
+        "queryChange": [
+         {
+          "set": {
+           "state": "queried_query",
+           "to": {
+            "bind": "event"
+           }
+          }
+         }
+        ]
+       },
+       "props": {
+        "source": {
+         "obj": {
+          "kind": "queried",
+          "rows": {
+           "bind": "state.queried_rows"
+          },
+          "total": {
+           "bind": "state.queried_total"
+          },
+          "pageSize": 10
+         }
+        },
+        "columns": [
+         {
+          "obj": {
+           "key": "name",
+           "name": "Name",
+           "width": 220,
+           "filterable": true
+          }
+         },
+         {
+          "obj": {
+           "key": "city",
+           "name": "City",
+           "width": 160,
+           "filterable": true
+          }
+         },
+         {
+          "obj": {
+           "key": "revenue",
+           "name": "Revenue",
+           "type": "number",
+           "width": 140
+          }
+         }
+        ],
+        "height": 320,
+        "data-testid": "rich-table-queried-editor"
+       }
+      },
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-small",
+        "children": {
+         "concat": [
+          "asked: page ",
+          {
+           "bind": "state.queried_query.page"
+          }
+         ]
+        }
+       }
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "wide: eighteen columns, 300px high; the header stays, the first column and the total stick, the rest scrolls sideways (read-only)"
+       }
+      },
+      {
+       "type": "RichTable",
+       "props": {
+        "source": {
+         "obj": {
+          "kind": "authored",
+          "rows": {
+           "bind": "state.wide_rows"
+          }
+         }
+        },
+        "columns": {
+         "bind": "state.wide_columns"
+        },
+        "editable": false,
+        "striped": true,
+        "density": "compact",
+        "height": 300,
+        "data-testid": "rich-table-wide-editor"
+       }
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

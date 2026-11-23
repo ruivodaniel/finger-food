@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-financial-kpi-cards-basis-points-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-financial-kpi-cards-basis-points",
+ "name": "default",
+ "title": "Financial kpi cards: basis points",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

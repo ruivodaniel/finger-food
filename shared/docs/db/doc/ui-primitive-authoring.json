@@ -1,0 +1,108 @@
+{
+ "id": "doc/ui-primitive-authoring",
+ "kind": "doc",
+ "title": "Primitive authoring",
+ "status": "todo",
+ "subject": "ui",
+ "owner": "libs/ui",
+ "order": 9,
+ "tags": [
+  "ui",
+  "primitives"
+ ],
+ "audience": [
+  "seed-contributor"
+ ],
+ "paths": [
+  "shared/libs/ui/web/components",
+  "shared/libs/ui/web/layouts"
+ ],
+ "summary": "How a primitive of the library is built so that markup written with it complies: the attributes its root carries, element or layout never both, the root of a simple and of a compound component, what Stack emits, where spacing is applied.",
+ "docId": "ui-primitive-authoring",
+ "doc": {
+  "axioms": [
+   {
+    "text": "A primitive renders the one element the theme addresses and carries the theme's attributes on its root."
+   },
+   {
+    "text": "A primitive's root carries `element` or `layout`, never both."
+   },
+   {
+    "text": "A primitive emits structural CSS only; every visual property is the theme's."
+   }
+  ],
+  "purpose": {
+   "intro": "A seed consumer writes markup with the library's components and nothing else, so the components must carry the whole contract between markup and theme. This document is for the seed contributor who builds or changes a primitive: what its root carries, how a simple and a compound component are rooted, what the layout primitives emit."
+  },
+  "reference": [
+   {
+    "topic": "The attributes a root carries",
+    "statement": "The root carries `element` (`{family}--{element}`) or `layout` (a region name), never both. The axes `emphasis`, `status`, `state`, `scale` and `concept` go on either, as bare attributes; so does `position`. Transient states (hover, active, focus) are pseudo-classes, never attributes.",
+    "claims": [],
+    "examples": [
+     {
+      "snippets": [
+       {
+        "caption": "html, as rendered",
+        "code": "<button element=\"control--button\" emphasis=\"primary\" scale=\"md\">Submit</button>\n<div layout=\"main-body\" concept=\"dashboard\">…</div>"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "topic": "The root of a component",
+    "claims": [
+     {
+      "text": "A simple component (Button, Checkbox): the native element is the root and carries every theme attribute."
+     },
+     {
+      "text": "A compound component (an input with a toggle, an input with icons): a wrapper is the root surface; the native elements are its children, styled by inheritance."
+     }
+    ],
+    "examples": [
+     {
+      "snippets": [
+       {
+        "caption": "html",
+        "code": "<button element=\"control--button\" scale=\"md\" emphasis=\"primary\">Submit</button>\n\n<div element=\"field--input\" scale=\"md\" status=\"error\">\n  <input type=\"password\" />\n  <button>toggle visibility</button>\n</div>"
+       }
+      ]
+     }
+    ],
+    "statement": "Which node is the root decides which node the theme addresses."
+   },
+   {
+    "topic": "The parts: Header, Content, Footer, Stack",
+    "statement": "A part zone divides a container. `Header` and `Footer` emit `surface--header` and `surface--footer`, a row that shrinks to its content. `Content` emits two boxes: the outer `surface--content` fills the height the two leave and scrolls when the markup says `overflow` (per axis: visible, clip, scroll), never padded; the inner `data-part=\"inner\"` carries the padding the theme writes on the content and places what it holds (`align`), so the text scrolls with its padding. `Stack` emits `layout=\"stack\"` with `data-dir`: the part with no surface. None of the four paints anything.",
+    "claims": [
+     {
+      "text": "There is one Header, one Content and one Footer for every container: a card, a sheet, a dialog, an alert dialog. The per-container names (CardHeader, SheetFooter and the like) are gone; the old names stay as deprecated aliases only so earlier explorations compile."
+     },
+     {
+      "text": "Stack is the one primitive that takes spacing from markup (`gap`, `pad`); no other primitive takes a spacing or size number. Their spacing and dimensions come from the theme."
+     },
+     {
+      "text": "A breakpoint name on a Stack (`when={{ narrow: \"col\" }}`) becomes a bare attribute the theme's container query matches."
+     },
+     {
+      "text": "A part bleeds to its container's edges when the container says `childrenSmartBleed`; a Stack passes the container's padding through to the parts it holds. The engine does both; the part declares nothing."
+     },
+     {
+      "text": "The `min-width: 0` on a filling child, and the row/column nesting rules, are encoded once in Stack's classes."
+     }
+    ]
+   },
+   {
+    "topic": "What ScrollArea emits",
+    "statement": "`layout=\"scroll-area\"`, to sunset: a container scrolls through its `Content` part, a region through itself. The theme styles the scrollbar through the element.",
+    "claims": []
+   },
+   {
+    "topic": "A compound component's form",
+    "statement": "A compound component chooses its form by what it offers (an input with a clear button is the compound form when `showClear` is set), never by its value.",
+    "claims": []
+   }
+  ]
+ }
+}

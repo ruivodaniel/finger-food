@@ -1,0 +1,5 @@
+{
+ "since": "2026-11-05",
+ "reason": "Only the layouts' ScrollArea and VirtualScrollArea scroll.",
+ "use": "ScrollArea (primitives/layouts/scroll-area)"
+}

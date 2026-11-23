@@ -1,0 +1,207 @@
+{
+ "id": "ui-data-pattern-component-progress-list",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-progress-list",
+ "kind": "component",
+ "name": "progress-list",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "progress-list",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Card",
+   "props": {
+    "className": "w-full max-w-md"
+   },
+   "children": [
+    {
+     "type": "Header",
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "justify": "between",
+        "align": "center",
+        "className": "w-full",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "as": "h3",
+          "element": "type--heading2",
+          "children": "Applications in progress"
+         }
+        },
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "quiet",
+          "scale": "sm",
+          "children": "All 3"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Content",
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "concept": "progressList",
+        "className": "w-full",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "col",
+          "className": "w-full",
+          "scale": "sm"
+         },
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "row",
+            "justify": "between",
+            "align": "baseline",
+            "className": "w-full",
+            "scale": "md"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--body-small",
+              "children": "14 Clifton Road · remortgage"
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--numbers-extra-small",
+              "children": "4 of 5",
+              "emphasis": "quiet"
+             }
+            }
+           ]
+          },
+          {
+           "type": "Progress",
+           "props": {
+            "value": 80
+           }
+          }
+         ]
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "col",
+          "className": "w-full",
+          "scale": "sm"
+         },
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "row",
+            "justify": "between",
+            "align": "baseline",
+            "className": "w-full",
+            "scale": "md"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--body-small",
+              "children": "8 Harbour Lane · purchase"
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--numbers-extra-small",
+              "children": "2 of 5",
+              "emphasis": "quiet"
+             }
+            }
+           ]
+          },
+          {
+           "type": "Progress",
+           "props": {
+            "value": 40
+           }
+          }
+         ]
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "col",
+          "className": "w-full",
+          "scale": "sm"
+         },
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "row",
+            "justify": "between",
+            "align": "baseline",
+            "className": "w-full",
+            "scale": "md"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--body-small",
+              "children": "22 Mill Street · further advance"
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--numbers-extra-small",
+              "children": "1 of 5",
+              "emphasis": "quiet"
+             }
+            }
+           ]
+          },
+          {
+           "type": "Progress",
+           "props": {
+            "value": 20
+           }
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

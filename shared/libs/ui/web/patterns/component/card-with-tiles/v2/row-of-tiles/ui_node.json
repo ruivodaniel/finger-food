@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-component-card-with-tiles-row-of-tiles",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Card with tiles: row of tiles"
+}

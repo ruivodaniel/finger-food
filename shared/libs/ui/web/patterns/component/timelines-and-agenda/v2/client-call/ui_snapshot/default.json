@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-timelines-and-agenda-client-call-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-timelines-and-agenda-client-call",
+ "name": "default",
+ "title": "Timelines and agenda: client call",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

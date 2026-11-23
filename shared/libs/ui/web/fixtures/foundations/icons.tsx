@@ -1,6 +1,6 @@
 import { Icon, iconRegistry, type IconName, type IconScale } from "@libs/web-components";
-import { FixtureBody, Row, Token } from "../_chrome";
-import { useThemeVars, withPrefix } from "../_theme-vars";
+import { FixtureBody, Row, Token } from "../../lib/_chrome";
+import { useThemeVars, withPrefix } from "../../lib/_theme-vars";
 
 /** Icons — the size and weight tokens, then the whole registry at md. */
 const NAMES = Object.keys(iconRegistry) as IconName[];
@@ -16,7 +16,7 @@ export default function IconsFixture() {
       <Row label="scale">
         {SCALES.map((s) => (
           <Token key={s} name={`size=${s}`}>
-            <Icon name="settings" size={s} />
+            <Icon name="settings" scale={s} />
           </Token>
         ))}
       </Row>
@@ -24,7 +24,7 @@ export default function IconsFixture() {
         <div className="flex flex-wrap gap-3">
           {NAMES.map((n) => (
             <div key={n} className="flex flex-col items-center gap-1" style={{ width: 84 }} title={n}>
-              <Icon name={n} size="md" />
+              <Icon name={n} scale="md" />
               <span style={{ fontFamily: "'SF Mono',Menlo,monospace", fontSize: 9, opacity: 0.6, textAlign: "center", wordBreak: "break-all" }}>{n}</span>
             </div>
           ))}

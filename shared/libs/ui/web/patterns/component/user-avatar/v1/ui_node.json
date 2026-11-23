@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-component-user-avatar",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "User avatar"
+}

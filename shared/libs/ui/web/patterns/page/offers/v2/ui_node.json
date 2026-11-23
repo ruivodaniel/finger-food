@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-page-offers",
+ "version": 1,
+ "type": "screen",
+ "surface": "web",
+ "title": "Offers"
+}

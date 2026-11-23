@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-primitive-collapsible",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Collapsible"
+}

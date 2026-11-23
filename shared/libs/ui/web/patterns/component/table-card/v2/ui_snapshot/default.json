@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-table-card-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-table-card",
+ "name": "default",
+ "title": "Table card",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

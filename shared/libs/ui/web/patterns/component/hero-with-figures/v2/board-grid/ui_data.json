@@ -1,0 +1,323 @@
+{
+ "id": "ui-data-pattern-component-hero-with-figures-board-grid",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-hero-with-figures-board-grid",
+ "kind": "component",
+ "name": "board-grid",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "board-grid",
+  "version": 1,
+  "surface": "web",
+  "measure": "lg",
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "concept": "hero",
+    "className": "w-full max-w-5xl"
+   },
+   "children": [
+    {
+     "type": "Card",
+     "props": {
+      "emphasis": "hero",
+      "className": "w-full"
+     },
+     "children": [
+      {
+       "type": "Content",
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "col",
+          "scale": "md"
+         },
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "row",
+            "align": "center",
+            "className": "w-full",
+            "scale": "md"
+           },
+           "children": [
+            {
+             "type": "Stack",
+             "props": {
+              "dir": "col",
+              "size": "fill",
+              "scale": "sm"
+             },
+             "children": [
+              {
+               "type": "Label",
+               "props": {
+                "children": "Launch board · v2.4"
+               }
+              },
+              {
+               "type": "Text",
+               "props": {
+                "as": "h2",
+                "element": "type--heading1",
+                "children": "Release is on track for Monday"
+               }
+              }
+             ]
+            },
+            {
+             "type": "Badge",
+             "props": {
+              "scale": "xs",
+              "children": "On track",
+              "status": "success"
+             }
+            },
+            {
+             "type": "Button",
+             "props": {
+              "emphasis": "tertiary",
+              "children": "Open the board"
+             }
+            }
+           ]
+          },
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "row",
+            "className": "w-full pt-4",
+            "concept": "stats",
+            "scale": "md"
+           },
+           "children": [
+            {
+             "type": "Tile",
+             "props": {
+              "className": "w-full"
+             },
+             "children": [
+              {
+               "type": "Stack",
+               "props": {
+                "dir": "row",
+                "align": "center",
+                "scale": "md"
+               },
+               "children": [
+                {
+                 "type": "Icon",
+                 "props": {
+                  "name": "check",
+                  "scale": "sm"
+                 }
+                },
+                {
+                 "type": "Stack",
+                 "props": {
+                  "dir": "col",
+                  "scale": "2xs"
+                 },
+                 "children": [
+                  {
+                   "type": "Text",
+                   "props": {
+                    "as": "span",
+                    "element": "type--numbers-extra-large",
+                    "children": "42"
+                   }
+                  },
+                  {
+                   "type": "Text",
+                   "props": {
+                    "as": "span",
+                    "element": "type--body-small",
+                    "children": "Tasks done",
+                    "emphasis": "quiet"
+                   }
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "Tile",
+             "props": {
+              "className": "w-full"
+             },
+             "children": [
+              {
+               "type": "Stack",
+               "props": {
+                "dir": "row",
+                "align": "center",
+                "scale": "md"
+               },
+               "children": [
+                {
+                 "type": "Icon",
+                 "props": {
+                  "name": "clock",
+                  "scale": "sm"
+                 }
+                },
+                {
+                 "type": "Stack",
+                 "props": {
+                  "dir": "col",
+                  "scale": "2xs"
+                 },
+                 "children": [
+                  {
+                   "type": "Text",
+                   "props": {
+                    "as": "span",
+                    "element": "type--numbers-extra-large",
+                    "children": "7"
+                   }
+                  },
+                  {
+                   "type": "Text",
+                   "props": {
+                    "as": "span",
+                    "element": "type--body-small",
+                    "children": "In progress",
+                    "emphasis": "quiet"
+                   }
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "row",
+            "className": "w-full",
+            "scale": "md"
+           },
+           "children": [
+            {
+             "type": "Tile",
+             "props": {
+              "className": "w-full"
+             },
+             "children": [
+              {
+               "type": "Stack",
+               "props": {
+                "dir": "row",
+                "align": "center",
+                "scale": "md"
+               },
+               "children": [
+                {
+                 "type": "Icon",
+                 "props": {
+                  "name": "warning",
+                  "scale": "sm"
+                 }
+                },
+                {
+                 "type": "Stack",
+                 "props": {
+                  "dir": "col",
+                  "scale": "2xs"
+                 },
+                 "children": [
+                  {
+                   "type": "Text",
+                   "props": {
+                    "as": "span",
+                    "element": "type--numbers-extra-large",
+                    "children": "2"
+                   }
+                  },
+                  {
+                   "type": "Text",
+                   "props": {
+                    "as": "span",
+                    "element": "type--body-small",
+                    "children": "Blockers",
+                    "emphasis": "quiet"
+                   }
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "Tile",
+             "props": {
+              "className": "w-full"
+             },
+             "children": [
+              {
+               "type": "Stack",
+               "props": {
+                "dir": "row",
+                "align": "center",
+                "scale": "md"
+               },
+               "children": [
+                {
+                 "type": "Icon",
+                 "props": {
+                  "name": "users",
+                  "scale": "sm"
+                 }
+                },
+                {
+                 "type": "Stack",
+                 "props": {
+                  "dir": "col",
+                  "scale": "2xs"
+                 },
+                 "children": [
+                  {
+                   "type": "Text",
+                   "props": {
+                    "as": "span",
+                    "element": "type--numbers-extra-large",
+                    "children": "9"
+                   }
+                  },
+                  {
+                   "type": "Text",
+                   "props": {
+                    "as": "span",
+                    "element": "type--body-small",
+                    "children": "Contributors",
+                    "emphasis": "quiet"
+                   }
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

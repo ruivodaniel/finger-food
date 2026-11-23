@@ -1,0 +1,91 @@
+<figure style="margin:0">
+<svg viewBox="0 0 980 896" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;font-family:Inter,system-ui,sans-serif" role="img" aria-label="Activity diagram: a vendor onboards to Stripe Express">
+  <defs>
+    <marker id="ad-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#5c6f80"/></marker>
+    <marker id="ad-arrow-ev" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#635bff"/></marker>
+  </defs>
+  <style>
+    .ad-lane  { fill:#faf8f3; stroke:#e6dfd2; stroke-width:1; }
+    .ad-lane2 { fill:#fffdf8; stroke:#e6dfd2; stroke-width:1; }
+    .ad-sep   { stroke:#e6dfd2; stroke-width:1; }
+    .ad-head  { font-size:11.5px; fill:#8c8478; letter-spacing:.08em; text-anchor:middle; }
+    .ad-act   { fill:#ffffff; stroke:#8c8478; stroke-width:1.1; }
+    .ad-stripe{ fill:#f1f0ff; stroke:#635bff; stroke-width:1.1; }
+    .ad-dec   { fill:#f3ead6; stroke:#a9752a; stroke-width:1.1; }
+    .ad-stop  { fill:#fbecea; stroke:#c0504d; stroke-width:1.1; }
+    .ad-t     { font-size:13px; fill:#1b1813; text-anchor:middle; }
+    .ad-m     { font-size:11.5px; fill:#8c8478; text-anchor:middle; }
+    .ad-flow  { fill:none; stroke:#5c6f80; stroke-width:1.4; marker-end:url(#ad-arrow); }
+    .ad-ev    { stroke:#635bff; stroke-dasharray:5 4; marker-end:url(#ad-arrow-ev); }
+    .ad-lbl   { font-size:11px; fill:#5c6f80; font-style:italic; }
+    .ad-note  { font-size:12px; fill:#5c6f80; }
+    .ad-dot   { fill:#1b1813; }
+    .ad-ring  { fill:none; stroke:#1b1813; stroke-width:1.5; }
+  </style>
+
+  <rect x="10" y="10" width="320" height="842" class="ad-lane"/>
+  <rect x="330" y="10" width="320" height="842" class="ad-lane2"/>
+  <rect x="650" y="10" width="320" height="842" class="ad-lane"/>
+  <text x="170" y="34" class="ad-head">VENDOR (OWNER OR MANAGE BILLING)</text>
+  <text x="490" y="34" class="ad-head">APP</text>
+  <text x="810" y="34" class="ad-head">STRIPE</text>
+  <line x1="10" y1="50" x2="970" y2="50" class="ad-sep"/>
+
+  <circle cx="170" cy="92" r="9" class="ad-dot"/>
+  <path d="M170 101 V142" class="ad-flow"/>
+
+  <rect x="45" y="142" width="250" height="44" rx="10" class="ad-act"/>
+  <text x="170" y="160" class="ad-t">Start Stripe onboarding</text>
+  <text x="170" y="177" class="ad-m">on Selling</text>
+  <path d="M170 186 V200 H490 V214" class="ad-flow"/>
+
+  <rect x="365" y="214" width="250" height="44" rx="10" class="ad-act"/>
+  <text x="490" y="232" class="ad-t">Open the vendor's account, once</text>
+  <text x="490" y="249" class="ad-m">Accounts v2 &#183; Express &#183; Stripe liable</text>
+  <path d="M490 258 V286" class="ad-flow"/>
+
+  <rect x="365" y="286" width="250" height="44" rx="10" class="ad-act"/>
+  <text x="490" y="313" class="ad-t">Ask for an onboarding link</text>
+  <path d="M490 330 V344 H810 V358" class="ad-flow"/>
+
+  <rect x="685" y="358" width="250" height="44" rx="10" class="ad-stripe"/>
+  <text x="810" y="376" class="ad-t">Hosted Express onboarding</text>
+  <text x="810" y="393" class="ad-m">identity, business, payout account</text>
+  <path d="M810 402 V430" class="ad-flow"/>
+
+  <rect x="685" y="430" width="250" height="44" rx="10" class="ad-stripe"/>
+  <text x="810" y="448" class="ad-t">account.updated</text>
+  <text x="810" y="465" class="ad-m">and the vendor is sent back to Selling</text>
+  <path d="M810 474 V488 H490 V502" class="ad-flow ad-ev"/>
+
+  <rect x="365" y="502" width="250" height="44" rx="10" class="ad-act"/>
+  <text x="490" y="520" class="ad-t">Mirror charges_enabled</text>
+  <text x="490" y="537" class="ad-m">and read the standing again</text>
+  <path d="M490 546 V574" class="ad-flow"/>
+
+  <polygon points="365,596 490,574 615,596 490,618" class="ad-dec"/>
+  <text x="490" y="600" class="ad-t">Can take payments?</text>
+  <path d="M365 596 H295" class="ad-flow"/>
+  <text x="322" y="589" class="ad-lbl">no</text>
+
+  <rect x="45" y="574" width="250" height="44" rx="10" class="ad-act"/>
+  <text x="170" y="592" class="ad-t">Continue onboarding</text>
+  <text x="170" y="609" class="ad-m">Stripe needs more details</text>
+  <path d="M45 596 H25 V308 H365" class="ad-flow"/>
+
+  <path d="M490 618 V632 H170 V646" class="ad-flow"/>
+  <text x="498" y="631" class="ad-lbl">yes</text>
+  <rect x="45" y="646" width="250" height="44" rx="10" class="ad-act"/>
+  <text x="170" y="664" class="ad-t">List products</text>
+  <text x="170" y="681" class="ad-m">price, currency, refund policy</text>
+  <path d="M170 690 V718" class="ad-flow"/>
+
+  <rect x="45" y="718" width="250" height="44" rx="10" class="ad-act"/>
+  <text x="170" y="736" class="ad-t">Open the Express dashboard</text>
+  <text x="170" y="753" class="ad-m">payouts, money refunds, disputes</text>
+  <path d="M170 762 V801" class="ad-flow"/>
+  <circle cx="170" cy="812" r="11" class="ad-ring"/><circle cx="170" cy="812" r="6" class="ad-dot"/>
+
+  <text x="10" y="878" class="ad-note">Dashed: a webhook. Stripe screens the vendor and absorbs the losses it cannot recover (Managed Risk); its fees come out of the vendor's balance.</text>
+</svg>
+</figure>

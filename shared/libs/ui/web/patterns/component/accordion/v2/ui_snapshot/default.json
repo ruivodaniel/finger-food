@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-accordion-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-accordion",
+ "name": "default",
+ "title": "Accordion",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

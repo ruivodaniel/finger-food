@@ -88,7 +88,7 @@ const appFiles = await glob(
   { ignore: IGNORE },
 );
 
-/** apps/main/shared/api/src/x.ts → "main"; apps/orchestrator/shared/x.ts → "orchestrator" */
+/** apps/main/core/api/src/x.ts → "main"; apps/orchestrator/shared/x.ts → "orchestrator" */
 function appOf(p: string): string | null {
   const m = p.match(/^apps\/([^/]+)\//);
   return m ? m[1] : null;

@@ -13,8 +13,9 @@ import {
   type Public,
   type Scope,
   type SchemaTables,
+  type ScopedAcBag,
+  type ScopedAcRequestContext,
 } from "@libs/gated-scoped-ac";
-import type { ScopedAcBag, ScopedAcRequestContext } from "../shared/scoped-ac";
 import type {
   LegalDocumentPatch,
   LegalDocumentRepository,
@@ -134,6 +135,21 @@ export class InMemoryUserProfileRepository implements UserProfileRepository {
       .filter((p): p is UomUserProfileSelect => p !== undefined);
   }
 
+  async searchByName(
+    _visibility: Private,
+    search: string,
+    limit: number,
+    _scope: Scope<"user_profile", "read">,
+    _gateDb: GatedDb<SchemaTables>,
+  ): Promise<Array<{ userId: string; name: string }>> {
+    const needle = search.toLowerCase();
+    return [...this.profiles.values()]
+      .filter((p) => p.name?.toLowerCase().includes(needle))
+      .sort((a, b) => (a.name ?? "").localeCompare(b.name ?? ""))
+      .slice(0, limit)
+      .map((p) => ({ userId: p.userId, name: p.name ?? p.userId }));
+  }
+
   // Scope + gated handle ignored in-memory (no runnable SQL); the permissive
   // `testEngine` makes every AC call pass so business logic is what's tested.
   async findAllByUserIdsScoped(
@@ -144,6 +160,8 @@ export class InMemoryUserProfileRepository implements UserProfileRepository {
     return this.findAllByUserIds(PRIVATE, userIds);
   }
 
+  /** Test seeding only — not on the repository interface (profile writes go
+   * through `updateScoped`): set profile fields directly, as a fixture would. */
   async update(userId: string, patch: ProfilePatch): Promise<void> {
     // A real user always has a profile row (seeded at create); if a test seeds
     // the user directly, materialize it here so update is not a silent no-op.
@@ -293,6 +311,21 @@ export class InMemoryLegalDocumentRepository
     return this.documents.filter((d) => ids.includes(d.id));
   }
 
+  async findPublishedByScope(
+    _visibility: Public,
+    type: LegalConsentType,
+    orgTypeId: string | null,
+  ) {
+    return this.documents
+      .filter(
+        (d) =>
+          d.type === type &&
+          (d.orgTypeId ?? null) === orgTypeId &&
+          d.publishedAt,
+      )
+      .sort((a, b) => b.version - a.version);
+  }
+
   // Scope + gated handle ignored in-memory (no runnable SQL); `testEngine` allows.
   async findByIdsScoped(
     _visibility: Private,
@@ -318,21 +351,22 @@ export class InMemoryLegalDocumentRepository
     );
   }
 
-  async findAllByScope(
+  async findDraftScoped(
     _visibility: Private,
     type: LegalConsentType,
     orgTypeId: string | null,
     _scope: Scope<"legal_document", "read">,
     _gateDb: GatedDb<SchemaTables>,
   ) {
-    return this.documents
-      .filter((d) => d.type === type && (d.orgTypeId ?? null) === orgTypeId)
-      .sort((a, b) => b.version - a.version);
+    return this.findDraft(PRIVATE, type, orgTypeId);
   }
 
   async create(
     _visibility: Private,
     input: SaveDraftRecord,
+    _permissions?: Iterable<string>,
+    _readScope?: Scope<"legal_document", "read">,
+    _gateDb?: GatedDb<SchemaTables>,
   ): Promise<UomLegalDocumentSelect> {
     const versions = this.documents
       .filter(
@@ -382,8 +416,12 @@ export class InMemoryConsentRecordRepository
 {
   consents: UomConsentRecordSelect[] = [];
 
-  async create(input: CreateConsentRecord): Promise<void> {
-    this.consents.push({
+  async create(
+    input: CreateConsentRecord,
+    _permissions: Iterable<string>,
+    _gateDb: GatedDb<SchemaTables>,
+  ): Promise<UomConsentRecordSelect | null> {
+    const row: UomConsentRecordSelect = {
       id: nextId("consent"),
       userId: input.userId,
       legalDocumentId: input.document.id,
@@ -394,7 +432,9 @@ export class InMemoryConsentRecordRepository
       consentedAt: new Date(),
       ipAddress: input.ipAddress ?? null,
       userAgent: input.userAgent ?? null,
-    });
+    };
+    this.consents.push(row);
+    return row;
   }
 
   async findAllByUserIds(userIds: string[]) {
@@ -405,9 +445,12 @@ export class InMemoryConsentRecordRepository
 export class InMemoryOrganizationRepository implements OrganizationRepository {
   organizations = new Map<string, UomOrganizationSelect>();
 
+  // The gate args are optional so tests can seed rows directly.
   async create(
     _visibility: Private,
     input: CreateOrganizationRecord,
+    _permissions?: Iterable<string>,
+    _gateDb?: GatedDb<SchemaTables>,
   ): Promise<UomOrganizationSelect> {
     const row: UomOrganizationSelect = {
       id: nextId("org"),
@@ -430,6 +473,23 @@ export class InMemoryOrganizationRepository implements OrganizationRepository {
         (row): row is NonNullable<typeof row> =>
           row !== undefined && row.deletedAt === null,
       );
+  }
+
+  async searchByName(
+    _visibility: Private,
+    search: string,
+    limit: number,
+    _scope: Scope<"organization", "read">,
+    _gateDb: GatedDb<SchemaTables>,
+  ) {
+    const needle = search.toLowerCase();
+    return [...this.organizations.values()]
+      .filter(
+        (row) => row.deletedAt === null && row.name.toLowerCase().includes(needle),
+      )
+      .sort((a, b) => a.name.localeCompare(b.name))
+      .slice(0, limit)
+      .map((row) => ({ id: row.id, name: row.name }));
   }
 
   // Scope + gated handle are ignored in-memory (they carry no runnable SQL); the
@@ -686,7 +746,9 @@ export class InMemoryInvitationRepository implements InvitationRepository {
   async create(
     _visibility: Private,
     input: CreateInvitationRecord,
-  ): Promise<UomInvitationSelect> {
+    _permissions: Iterable<string>,
+    _gateDb: GatedDb<SchemaTables>,
+  ): Promise<UomInvitationSelect | null> {
     const row: UomInvitationSelect = {
       id: nextId("invite"),
       organizationId: input.organizationId,
@@ -754,11 +816,13 @@ export class InMemoryInvitationRepository implements InvitationRepository {
     id: string,
     status: InvitationStatus,
     invitedUserId?: string,
-  ): Promise<void> {
+  ): Promise<UomInvitationSelect | null> {
+    // Mirrors the real WHERE: only a still-pending invitation moves.
     const row = this.invitations.get(id);
-    if (!row) return;
+    if (!row || row.status !== "pending") return null;
     row.status = status;
     if (invitedUserId !== undefined) row.invitedUserId = invitedUserId;
+    return row;
   }
 
   async updateScoped(

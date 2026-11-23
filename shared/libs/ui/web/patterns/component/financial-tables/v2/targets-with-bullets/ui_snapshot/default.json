@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-financial-tables-targets-with-bullets-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-financial-tables-targets-with-bullets",
+ "name": "default",
+ "title": "Targets with bullets",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

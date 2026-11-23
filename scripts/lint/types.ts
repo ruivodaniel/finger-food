@@ -444,6 +444,55 @@ export interface LayerDisciplineConfig {
   stacks: LayerStack[];
 }
 
+// ── Web Boundaries ────────────────────────────────────────────────
+// Where the web lives in this repo, and the web import boundaries.
+
+export interface WebLayout {
+  /** The app's web directory (the core). */
+  core: string;
+  /** Slice web directories: globs ending at the web dir, e.g. "apps/main/slices/*\/*\/web". */
+  slices: string[];
+  /** Import aliases to repo paths. `pattern` is a regex; `to` uses $1, $2 and is tried in order. */
+  aliases: { pattern: string; to: string[] }[];
+}
+
+export type WebBoundaryRuleId =
+  | "web-core-via-index"
+  | "web-slice-no-core"
+  | "web-slice-components-only"
+  | "web-page-private"
+  | "web-api-only-from-application"
+  | "web-logic-via-application"
+  | "web-store-no-raw-access"
+  | "web-helpers-pure"
+  | "web-core-no-application"
+  | "web-shape-core"
+  | "web-shape-slice"
+  | "web-shape-page"
+  | "web-shape-pages-are-folders";
+
+/** The folders (and files) one kind of web directory must hold. A file name may be a glob ("*Page.tsx"). */
+export interface WebShape {
+  dirs: string[];
+  files: string[];
+}
+
+export interface WebBoundaryRule {
+  severity: Severity;
+  /** What the rule says, as the docs number it. Shown by the cockpit. */
+  description: string;
+  enabled?: boolean;
+  /** `from`: the importing file. `to`: the resolved target file. */
+  exceptions?: { from?: PathPattern; to?: PathPattern; reason: string }[];
+}
+
+export interface WebBoundariesConfig {
+  enabled?: boolean;
+  layout: WebLayout;
+  shape: { core: WebShape; slice: WebShape; page: WebShape };
+  rules: Partial<Record<WebBoundaryRuleId, WebBoundaryRule>>;
+}
+
 // ── Control Set ───────────────────────────────────────────────────
 // Same shape everywhere: global, module, library.
 // Owner is inferred from file location.
@@ -460,10 +509,12 @@ export interface ControlSet {
   "eslint"?: EslintControls;
   "jsx-external-allowlist"?: JsxExternalAllowlistControl[];
   "jsx-ast"?: JsxAstConfig;
+  "slot-rules"?: SlotRulesConfig;
   "cast-boundary"?: CastBoundaryConfig;
   "dsl-coherence"?: DslCoherenceControl[];
   "pattern-tags"?: PatternTagsConfig;
   "layer-discipline"?: LayerDisciplineConfig;
+  "web-boundaries"?: WebBoundariesConfig;
 }
 
 // ── Violations ─────────────────────────────────────────────────────
@@ -511,4 +562,11 @@ export interface LoadedControlSet {
   owner: string;
   /** The control set */
   controls: ControlSet;
+}
+
+
+export interface SlotRulesConfig {
+  in: string | string[];
+  exceptions?: Array<{ in: string; reason: string }>;
+  severity?: Severity;
 }

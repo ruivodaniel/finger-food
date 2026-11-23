@@ -1,0 +1,249 @@
+{
+ "id": "ui-data-pattern-component-alerts-and-logs-error-alert-expanded",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-alerts-and-logs-error-alert-expanded",
+ "kind": "component",
+ "name": "error-alert-expanded",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "error-alert-expanded",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "state": {
+   "open": true
+  },
+  "root": {
+   "type": "Card",
+   "props": {
+    "status": "error",
+    "className": "w-full max-w-3xl",
+    "concept": "alert"
+   },
+   "children": [
+    {
+     "type": "Header",
+     "props": {},
+     "children": [
+      {
+       "type": "Icon",
+       "props": {
+        "name": "warning"
+       }
+      },
+      {
+       "type": "Text",
+       "props": {
+        "as": "p",
+        "element": "type--heading4",
+        "children": "Error"
+       }
+      }
+     ]
+    },
+    {
+     "type": "Content",
+     "props": {},
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "p",
+        "element": "type--body-small",
+        "emphasis": "quiet",
+        "children": "Cannot read properties of undefined (reading 'map')"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "wrap": true,
+        "scale": "sm"
+       },
+       "children": [
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "secondary",
+          "status": "error",
+          "scale": "sm",
+          "buttonType": "icon-text",
+          "startIcon": "refresh",
+          "children": "Try again"
+         }
+        },
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "secondary",
+          "status": "error",
+          "scale": "sm",
+          "buttonType": "icon-text",
+          "startIcon": "copy",
+          "children": "Copy error"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Collapsible",
+       "props": {
+        "open": {
+         "bind": "state.open"
+        }
+       },
+       "children": [
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "quiet",
+          "status": "error",
+          "fill": true,
+          "buttonType": "text-icon",
+          "endIcon": {
+           "if": [
+            {
+             "bind": "state.open"
+            },
+            "chevronUp",
+            "chevronDown"
+           ]
+          },
+          "className": "justify-between",
+          "children": "Stack Trace"
+         }
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "col",
+          "className": "overflow-hidden",
+          "scale": "xs"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "code",
+            "element": "type--code"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--code",
+              "emphasis": "quiet",
+              "children": "at "
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "children": "UserList"
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--code",
+              "emphasis": "quiet",
+              "children": " (src/components/UserList.tsx:15:23)"
+             }
+            }
+           ]
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "code",
+            "element": "type--code"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--code",
+              "emphasis": "quiet",
+              "children": "at "
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "children": "renderWithHooks"
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--code",
+              "emphasis": "quiet",
+              "children": " (node_modules/react-dom/cjs/react-dom.development.js:14985:18)"
+             }
+            }
+           ]
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "code",
+            "element": "type--code"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--code",
+              "emphasis": "quiet",
+              "children": "at "
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "children": "mountIndeterminateComponent"
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--code",
+              "emphasis": "quiet",
+              "children": " (node_modules/react-dom/cjs/react-dom.development.js:17811:13)"
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ],
+       "on": {
+        "openChange": [
+         {
+          "set": {
+           "state": "open",
+           "to": {
+            "bind": "event"
+           }
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

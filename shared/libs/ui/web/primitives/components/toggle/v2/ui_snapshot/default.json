@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-primitive-toggle-default",
+ "version": 1,
+ "uiDataId": "ui-data-primitive-toggle",
+ "name": "default",
+ "title": "Toggle, its cases",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

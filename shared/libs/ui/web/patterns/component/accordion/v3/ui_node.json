@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-component-accordion-v3",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Accordion"
+}

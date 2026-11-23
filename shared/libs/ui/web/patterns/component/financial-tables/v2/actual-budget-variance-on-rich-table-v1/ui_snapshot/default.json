@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-financial-tables-actual-budget-variance-on-rich-table-v1-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-financial-tables-actual-budget-variance-on-rich-table-v1",
+ "name": "default",
+ "title": "The same document, with the rich table pinned to version 1: it does not know a cell said as data",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

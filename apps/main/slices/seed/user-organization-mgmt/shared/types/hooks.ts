@@ -34,9 +34,21 @@ export interface InvitationAcceptedPayload {
   role: string;
 }
 
+/**
+ * An organization was created. Emitted after the row and, when the lifecycle
+ * seats the creator, their owner membership have committed — so a consumer
+ * can act on an organization that exists and has its first member.
+ */
+export interface OrganizationCreatedPayload {
+  organizationId: string;
+  orgType: string;
+  creatorUserId: string;
+}
+
 export interface UserOrgMgmtHooks {
   onUserRegistered?: (input: { userId: string }) => void | Promise<void>;
   onUserUpdated?: (input: { userId: string }) => void | Promise<void>;
+  onOrganizationCreated?: (payload: OrganizationCreatedPayload) => void | Promise<void>;
   onInvitationAccepted?: (
     payload: InvitationAcceptedPayload,
     ctx?: EmitCtx,

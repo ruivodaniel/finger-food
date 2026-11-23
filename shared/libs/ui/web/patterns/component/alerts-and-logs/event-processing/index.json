@@ -1,0 +1,154 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "event-processing",
+ "version": 1,
+ "surface": "web",
+ "measure": "md",
+ "root": {
+  "type": "Card",
+  "props": {},
+  "children": [
+   {
+    "type": "Content",
+    "props": {},
+    "children": [
+     {
+      "type": "Stack",
+      "props": {
+       "dir": "col",
+       "gap": 16
+      },
+      "children": [
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "justify": "between",
+         "align": "center",
+         "gap": 12
+        },
+        "children": [
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "row",
+           "align": "center",
+           "gap": 12
+          },
+          "children": [
+           {
+            "type": "Badge",
+            "props": {
+             "status": "info",
+             "emphasis": "secondary",
+             "scale": "lg",
+             "aria-label": "Processing",
+             "showIcon": false
+            },
+            "children": [
+             {
+              "type": "Spinner",
+              "props": {
+               "scale": "xs",
+               "status": "info"
+              }
+             }
+            ]
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--heading4",
+             "status": "info",
+             "children": "Processing"
+            }
+           }
+          ]
+         },
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--code",
+           "emphasis": "quiet",
+           "children": "msg_abc1..."
+          }
+         }
+        ]
+       },
+       {
+        "type": "Text",
+        "props": {
+         "as": "code",
+         "element": "type--code",
+         "children": "{\"userId\": \"user_123\", \"action\": \"send_email\"}"
+        }
+       },
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "align": "center",
+         "gap": 16,
+         "wrap": true
+        },
+        "children": [
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--body-small",
+           "emphasis": "quiet"
+          },
+          "children": [
+           {
+            "type": "Icon",
+            "props": {
+             "name": "calendar",
+             "size": "xs"
+            }
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "children": " 11 Feb, 16:15"
+            }
+           }
+          ]
+         },
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--body-small",
+           "emphasis": "quiet"
+          },
+          "children": [
+           {
+            "type": "Icon",
+            "props": {
+             "name": "refresh",
+             "size": "xs"
+            }
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "children": " 1/3 retries"
+            }
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

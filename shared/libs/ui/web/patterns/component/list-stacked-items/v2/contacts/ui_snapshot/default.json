@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-list-stacked-items-contacts-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-list-stacked-items-contacts",
+ "name": "default",
+ "title": "List stacked items: contacts",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

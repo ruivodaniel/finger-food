@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-primitive-data-tooltip",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Data tooltip"
+}

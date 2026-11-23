@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-page-organization-members-default-v3",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-page-organization-members-v3",
+ "name": "default",
+ "title": "Organization members",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

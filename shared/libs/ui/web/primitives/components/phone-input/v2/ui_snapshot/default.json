@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-primitive-phone-input-default",
+ "version": 1,
+ "uiDataId": "ui-data-primitive-phone-input",
+ "name": "default",
+ "title": "Phone input, its cases",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

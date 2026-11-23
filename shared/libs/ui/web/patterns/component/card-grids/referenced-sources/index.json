@@ -1,0 +1,678 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "referenced-sources",
+ "version": 1,
+ "surface": "web",
+ "measure": "md",
+ "root": {
+  "type": "Accordion",
+  "props": {
+   "type": "multiple",
+   "defaultValue": [
+    "sources"
+   ],
+   "className": "w-full max-w-3xl"
+  },
+  "children": [
+   {
+    "type": "AccordionItem",
+    "props": {
+     "value": "sources"
+    },
+    "children": [
+     {
+      "type": "AccordionTrigger",
+      "props": {},
+      "children": [
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "align": "center",
+         "gap": 14
+        },
+        "children": [
+         {
+          "type": "Avatar",
+          "props": {
+           "scale": "md"
+          },
+          "children": [
+           {
+            "type": "AvatarFallback",
+            "props": {},
+            "children": [
+             {
+              "type": "Icon",
+              "props": {
+               "name": "fileText",
+               "size": "sm"
+              }
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--heading4",
+           "children": "Referenced Sources"
+          }
+         },
+         {
+          "type": "Badge",
+          "props": {
+           "emphasis": "secondary",
+           "status": "neutral",
+           "children": "4"
+          }
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "AccordionContent",
+      "props": {},
+      "children": [
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "gap": 16,
+         "wrap": true
+        },
+        "children": [
+         {
+          "type": "Tile",
+          "props": {
+           "className": "w-[calc(50%-8px)]"
+          },
+          "children": [
+           {
+            "type": "Stack",
+            "props": {
+             "dir": "row",
+             "align": "start",
+             "gap": 14
+            },
+            "children": [
+             {
+              "type": "Avatar",
+              "props": {
+               "scale": "md"
+              },
+              "children": [
+               {
+                "type": "AvatarFallback",
+                "props": {},
+                "children": [
+                 {
+                  "type": "Icon",
+                  "props": {
+                   "name": "lock",
+                   "size": "sm"
+                  }
+                 }
+                ]
+               }
+              ]
+             },
+             {
+              "type": "Stack",
+              "props": {
+               "dir": "col",
+               "gap": 8,
+               "size": "fill"
+              },
+              "children": [
+               {
+                "type": "Stack",
+                "props": {
+                 "dir": "col",
+                 "gap": 2
+                },
+                "children": [
+                 {
+                  "type": "Text",
+                  "props": {
+                   "as": "span",
+                   "element": "type--heading4",
+                   "children": "Next.js Quickstart - Clerk"
+                  }
+                 },
+                 {
+                  "type": "Text",
+                  "props": {
+                   "as": "span",
+                   "element": "type--body-small",
+                   "emphasis": "quiet",
+                   "children": "clerk.com"
+                  }
+                 }
+                ]
+               },
+               {
+                "type": "Text",
+                "props": {
+                 "as": "span",
+                 "element": "type--body-small",
+                 "emphasis": "quiet",
+                 "children": "Learn how to add authentication to your Next.js application with Clerk."
+                }
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "Tile",
+          "props": {
+           "className": "w-[calc(50%-8px)]"
+          },
+          "children": [
+           {
+            "type": "Stack",
+            "props": {
+             "dir": "row",
+             "align": "start",
+             "gap": 14
+            },
+            "children": [
+             {
+              "type": "Avatar",
+              "props": {
+               "scale": "md"
+              },
+              "children": [
+               {
+                "type": "AvatarFallback",
+                "props": {},
+                "children": [
+                 {
+                  "type": "Icon",
+                  "props": {
+                   "name": "code",
+                   "size": "sm"
+                  }
+                 }
+                ]
+               }
+              ]
+             },
+             {
+              "type": "Stack",
+              "props": {
+               "dir": "col",
+               "gap": 8,
+               "size": "fill"
+              },
+              "children": [
+               {
+                "type": "Stack",
+                "props": {
+                 "dir": "col",
+                 "gap": 2
+                },
+                "children": [
+                 {
+                  "type": "Text",
+                  "props": {
+                   "as": "span",
+                   "element": "type--heading4",
+                   "children": "Authentication - Next.js"
+                  }
+                 },
+                 {
+                  "type": "Text",
+                  "props": {
+                   "as": "span",
+                   "element": "type--body-small",
+                   "emphasis": "quiet",
+                   "children": "nextjs.org"
+                  }
+                 }
+                ]
+               },
+               {
+                "type": "Text",
+                "props": {
+                 "as": "span",
+                 "element": "type--body-small",
+                 "emphasis": "quiet",
+                 "children": "Learn how to implement authentication in Next.js applications."
+                }
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "Tile",
+          "props": {
+           "className": "w-[calc(50%-8px)]"
+          },
+          "children": [
+           {
+            "type": "Stack",
+            "props": {
+             "dir": "row",
+             "align": "start",
+             "gap": 14
+            },
+            "children": [
+             {
+              "type": "Avatar",
+              "props": {
+               "scale": "md"
+              },
+              "children": [
+               {
+                "type": "AvatarFallback",
+                "props": {},
+                "children": [
+                 {
+                  "type": "Icon",
+                  "props": {
+                   "name": "component",
+                   "size": "sm"
+                  }
+                 }
+                ]
+               }
+              ]
+             },
+             {
+              "type": "Stack",
+              "props": {
+               "dir": "col",
+               "gap": 8,
+               "size": "fill"
+              },
+              "children": [
+               {
+                "type": "Stack",
+                "props": {
+                 "dir": "col",
+                 "gap": 2
+                },
+                "children": [
+                 {
+                  "type": "Text",
+                  "props": {
+                   "as": "span",
+                   "element": "type--heading4",
+                   "children": "Managing State - React"
+                  }
+                 },
+                 {
+                  "type": "Text",
+                  "props": {
+                   "as": "span",
+                   "element": "type--body-small",
+                   "emphasis": "quiet",
+                   "children": "react.dev"
+                  }
+                 }
+                ]
+               },
+               {
+                "type": "Text",
+                "props": {
+                 "as": "span",
+                 "element": "type--body-small",
+                 "emphasis": "quiet",
+                 "children": "Learn how to manage state effectively in React applications."
+                }
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "Tile",
+          "props": {
+           "className": "w-[calc(50%-8px)]"
+          },
+          "children": [
+           {
+            "type": "Stack",
+            "props": {
+             "dir": "row",
+             "align": "start",
+             "gap": 14
+            },
+            "children": [
+             {
+              "type": "Avatar",
+              "props": {
+               "scale": "md"
+              },
+              "children": [
+               {
+                "type": "AvatarFallback",
+                "props": {},
+                "children": [
+                 {
+                  "type": "Icon",
+                  "props": {
+                   "name": "gitBranch",
+                   "size": "sm"
+                  }
+                 }
+                ]
+               }
+              ]
+             },
+             {
+              "type": "Stack",
+              "props": {
+               "dir": "col",
+               "gap": 8,
+               "size": "fill"
+              },
+              "children": [
+               {
+                "type": "Stack",
+                "props": {
+                 "dir": "col",
+                 "gap": 2
+                },
+                "children": [
+                 {
+                  "type": "Text",
+                  "props": {
+                   "as": "span",
+                   "element": "type--heading4",
+                   "children": "clerk/javascript - GitHub"
+                  }
+                 },
+                 {
+                  "type": "Text",
+                  "props": {
+                   "as": "span",
+                   "element": "type--body-small",
+                   "emphasis": "quiet",
+                   "children": "github.com"
+                  }
+                 }
+                ]
+               },
+               {
+                "type": "Text",
+                "props": {
+                 "as": "span",
+                 "element": "type--body-small",
+                 "emphasis": "quiet",
+                 "children": "Official Clerk JavaScript SDK monorepo with React, Next.js, and more."
+                }
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "AccordionItem",
+    "props": {
+     "value": "api"
+    },
+    "children": [
+     {
+      "type": "AccordionTrigger",
+      "props": {},
+      "children": [
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "align": "center",
+         "gap": 14
+        },
+        "children": [
+         {
+          "type": "Avatar",
+          "props": {
+           "scale": "md"
+          },
+          "children": [
+           {
+            "type": "AvatarFallback",
+            "props": {},
+            "children": [
+             {
+              "type": "Icon",
+              "props": {
+               "name": "fileText",
+               "size": "sm"
+              }
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--heading4",
+           "children": "API References"
+          }
+         },
+         {
+          "type": "Badge",
+          "props": {
+           "emphasis": "secondary",
+           "status": "neutral",
+           "children": "2"
+          }
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "AccordionContent",
+      "props": {},
+      "children": [
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "gap": 16,
+         "wrap": true
+        },
+        "children": [
+         {
+          "type": "Tile",
+          "props": {
+           "className": "w-[calc(50%-8px)]"
+          },
+          "children": [
+           {
+            "type": "Stack",
+            "props": {
+             "dir": "row",
+             "align": "start",
+             "gap": 14
+            },
+            "children": [
+             {
+              "type": "Avatar",
+              "props": {
+               "scale": "md"
+              },
+              "children": [
+               {
+                "type": "AvatarFallback",
+                "props": {},
+                "children": [
+                 {
+                  "type": "Icon",
+                  "props": {
+                   "name": "fileCode",
+                   "size": "sm"
+                  }
+                 }
+                ]
+               }
+              ]
+             },
+             {
+              "type": "Stack",
+              "props": {
+               "dir": "col",
+               "gap": 8,
+               "size": "fill"
+              },
+              "children": [
+               {
+                "type": "Stack",
+                "props": {
+                 "dir": "col",
+                 "gap": 2
+                },
+                "children": [
+                 {
+                  "type": "Text",
+                  "props": {
+                   "as": "span",
+                   "element": "type--heading4",
+                   "children": "useAuth() - Clerk"
+                  }
+                 },
+                 {
+                  "type": "Text",
+                  "props": {
+                   "as": "span",
+                   "element": "type--body-small",
+                   "emphasis": "quiet",
+                   "children": "clerk.com"
+                  }
+                 }
+                ]
+               },
+               {
+                "type": "Text",
+                "props": {
+                 "as": "span",
+                 "element": "type--body-small",
+                 "emphasis": "quiet",
+                 "children": "Hook returning the current session, the user id and a token getter."
+                }
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "Tile",
+          "props": {
+           "className": "w-[calc(50%-8px)]"
+          },
+          "children": [
+           {
+            "type": "Stack",
+            "props": {
+             "dir": "row",
+             "align": "start",
+             "gap": 14
+            },
+            "children": [
+             {
+              "type": "Avatar",
+              "props": {
+               "scale": "md"
+              },
+              "children": [
+               {
+                "type": "AvatarFallback",
+                "props": {},
+                "children": [
+                 {
+                  "type": "Icon",
+                  "props": {
+                   "name": "fileCode",
+                   "size": "sm"
+                  }
+                 }
+                ]
+               }
+              ]
+             },
+             {
+              "type": "Stack",
+              "props": {
+               "dir": "col",
+               "gap": 8,
+               "size": "fill"
+              },
+              "children": [
+               {
+                "type": "Stack",
+                "props": {
+                 "dir": "col",
+                 "gap": 2
+                },
+                "children": [
+                 {
+                  "type": "Text",
+                  "props": {
+                   "as": "span",
+                   "element": "type--heading4",
+                   "children": "middleware - Next.js"
+                  }
+                 },
+                 {
+                  "type": "Text",
+                  "props": {
+                   "as": "span",
+                   "element": "type--body-small",
+                   "emphasis": "quiet",
+                   "children": "nextjs.org"
+                  }
+                 }
+                ]
+               },
+               {
+                "type": "Text",
+                "props": {
+                 "as": "span",
+                 "element": "type--body-small",
+                 "emphasis": "quiet",
+                 "children": "Run code before a request is completed, at the edge."
+                }
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,99 @@
+{
+ "id": "ui-data-pattern-component-status-cards-title-row-error",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-status-cards-title-row-error",
+ "kind": "component",
+ "name": "title-row-error",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "title-row-error",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Card",
+   "props": {
+    "className": "flex-1 min-w-56"
+   },
+   "children": [
+    {
+     "type": "Content",
+     "props": {},
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "scale": "sm"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "justify": "between",
+          "scale": "sm"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--heading4",
+            "status": "error"
+           },
+           "children": [
+            {
+             "type": "Icon",
+             "props": {
+              "name": "error",
+              "size": "sm"
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "children": " Sync failed"
+             }
+            }
+           ]
+          },
+          {
+           "type": "Badge",
+           "props": {
+            "emphasis": "quiet",
+            "status": "error",
+            "scale": "xs",
+            "children": "Error"
+           }
+          }
+         ]
+        },
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body-small",
+          "children": "Connection timed out after 30 s; 3 changes were not saved."
+         }
+        },
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body-extra-small",
+          "emphasis": "quiet",
+          "children": "2 h ago"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

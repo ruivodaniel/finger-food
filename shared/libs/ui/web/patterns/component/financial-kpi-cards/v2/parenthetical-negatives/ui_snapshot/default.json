@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-financial-kpi-cards-parenthetical-negatives-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-financial-kpi-cards-parenthetical-negatives",
+ "name": "default",
+ "title": "Financial kpi cards: parenthetical negatives",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

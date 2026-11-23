@@ -1,0 +1,40 @@
+[
+  {
+    "id": "ruling",
+    "name": "a ruling",
+    "data": {
+      "id": "ruling",
+      "title": "The ruling",
+      "text": "One Frame type in the harness: { uiData, theme, world, storage, fixtures, routes, args? }. A ui_snapshot, a ui_live_play_step and a component fixture each build one; playFeed.load takes it. The separators and the signed-in persona are the play's data over the frame, drawn by the frame.",
+      "color": "flat-yellow"
+    }
+  },
+  {
+    "id": "question",
+    "name": "an open question",
+    "data": {
+      "id": "question",
+      "title": "Open",
+      "text": "Which document hosts a tool drawing made of product components? The tool's document has no theme; the product's theme wrote a reset on every svg.",
+      "color": "flat-orange"
+    }
+  },
+  {
+    "id": "short",
+    "name": "one line",
+    "data": {
+      "id": "short",
+      "text": "a component fixture is a named set of args",
+      "color": "flat-blue"
+    }
+  },
+  {
+    "id": "plain",
+    "name": "no colour",
+    "data": {
+      "id": "plain",
+      "title": "Later, not now",
+      "text": "Passing a value between two screens: a document that writes the mock storage, the other reads it. The convention is written when it is needed."
+    }
+  }
+]

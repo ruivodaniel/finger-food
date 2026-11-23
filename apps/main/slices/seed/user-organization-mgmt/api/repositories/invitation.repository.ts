@@ -27,11 +27,15 @@ export interface CreateInvitationRecord {
 }
 
 export interface InvitationRepository {
-  /** AC42: reached only via `invitationService.create` (private). */
+  /** Gated insert — the gate takes the create verdict on the row itself (its
+   * payload pins `organizationId` to the active org); null when denied.
+   * AC42: reached only via `invitationService.create` (private). */
   create(
     visibility: Private,
     input: CreateInvitationRecord,
-  ): Promise<UomInvitationSelect>;
+    permissions: Iterable<string>,
+    gateDb: GatedDb<SchemaTables>,
+  ): Promise<UomInvitationSelect | null>;
   /** Bulk lookup — want one? pass `[id]` and read the first row. AC42: Public —
    * reached by the public `getPublicView` branch, so the loosest demand covers
    * every caller (the private `revoke` and the token-less accept/reject
@@ -64,13 +68,15 @@ export interface InvitationRepository {
     },
   ): Promise<UomInvitationSelect[]>;
   /** Raw status write-by-id — the ungated accept/reject path (identifier-matched
-   * in the service). Revoke gates via `updateScoped`. AC42: token-less (rule 5
-   * — a raw split variant reached only by the accept/reject internals). */
+   * in the service). Moves only a still-pending invitation, so of an accept and
+   * a reject racing, one wins; null when it is no longer pending. Revoke gates
+   * via `updateScoped`. AC42: token-less (rule 5 — a raw split variant reached
+   * only by the accept/reject internals). */
   update(
     id: string,
     status: InvitationStatus,
     invitedUserId?: string,
-  ): Promise<void>;
+  ): Promise<UomInvitationSelect | null>;
   /** Scoped status write-by-id — the gated handle fuses the update Scope into
    * the statement; returns the row, or null when the Scope admits no such row.
    * AC42: private-only surface. */
@@ -97,7 +103,9 @@ export class DrizzleInvitationRepository implements InvitationRepository {
   async create(
     visibility: Private,
     input: CreateInvitationRecord,
-  ): Promise<UomInvitationSelect> {
+    permissions: Iterable<string>,
+    gateDb: GatedDb<SchemaTables>,
+  ): Promise<UomInvitationSelect | null> {
     void visibility; // leaf
     const now = new Date();
     const row = {
@@ -113,8 +121,10 @@ export class DrizzleInvitationRepository implements InvitationRepository {
       createdAt: now,
       updatedAt: now,
     };
-    await this.deps.db.insert(uomInvitation).values(row);
-    return row;
+    // The gate runs the verdict (and any payload probe) and inserts; null ⇒
+    // refused, and the service decides what that means.
+    const inserted = await gateDb.create("invitation", permissions, row);
+    return (inserted as UomInvitationSelect | null) ?? null;
   }
 
   async findByIds(
@@ -203,15 +213,21 @@ export class DrizzleInvitationRepository implements InvitationRepository {
     id: string,
     status: InvitationStatus,
     invitedUserId?: string,
-  ): Promise<void> {
-    await this.deps.db
+  ): Promise<UomInvitationSelect | null> {
+    // The pending check rides in the WHERE: the service read the invitation
+    // as pending, but a concurrent accept/reject/revoke may have moved it since.
+    const [row] = await this.deps.db
       .update(uomInvitation)
       .set({
         status,
         ...(invitedUserId !== undefined ? { invitedUserId } : {}),
         updatedAt: new Date(),
       })
-      .where(eq(uomInvitation.id, id));
+      .where(
+        and(eq(uomInvitation.id, id), eq(uomInvitation.status, "pending")),
+      )
+      .returning();
+    return row ?? null;
   }
 
   async updateScoped(

@@ -1,0 +1,61 @@
+{
+ "id": "ui-data-pattern-component-timelines-and-agenda-pickup-drop",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-timelines-and-agenda-pickup-drop",
+ "kind": "component",
+ "name": "pickup-drop",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "pickup-drop",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Card",
+   "props": {},
+   "children": [
+    {
+     "type": "Content",
+     "props": {},
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Icon",
+         "props": {
+          "name": "package"
+         }
+        },
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body-large",
+          "className": "flex-1 min-w-0",
+          "children": "Pickup / Drop New Package"
+         }
+        },
+        {
+         "type": "Button",
+         "props": {
+          "buttonType": "icon",
+          "startIcon": "send",
+          "aria-label": "New package",
+          "data-testid": "new-package-btn"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

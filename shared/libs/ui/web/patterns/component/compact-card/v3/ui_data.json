@@ -1,0 +1,100 @@
+{
+ "id": "ui-data-pattern-component-compact-card",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-compact-card",
+ "kind": "component",
+ "name": "compact-card",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "compact-card",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Card",
+   "props": {},
+   "children": [
+    {
+     "type": "Header",
+     "props": {},
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "between"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "as": "p",
+          "element": "type--body",
+          "children": "Compact card as data"
+         }
+        },
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "tertiary",
+          "children": "Action"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Content",
+     "props": {},
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "p",
+        "element": "type--body-small",
+        "emphasis": "quiet",
+        "children": "A titled card: header with an action, content, and a footer."
+       }
+      }
+     ]
+    },
+    {
+     "type": "Footer",
+     "props": {},
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "end"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "scale": "sm"
+         },
+         "children": [
+          {
+           "type": "Button",
+           "props": {
+            "emphasis": "primary",
+            "children": "Save"
+           }
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,64 @@
+{
+ "id": "ui-data-pattern-component-timelines-and-agenda-team-standup",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-timelines-and-agenda-team-standup",
+ "kind": "component",
+ "name": "team-standup",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "team-standup",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Card",
+   "props": {
+    "status": "info"
+   },
+   "children": [
+    {
+     "type": "Content",
+     "props": {},
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "scale": "xs"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--heading4",
+          "children": "Team Standup"
+         }
+        },
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body",
+          "emphasis": "quiet",
+          "children": "9:00 AM - 9:30 AM"
+         }
+        },
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body-small",
+          "emphasis": "quiet",
+          "children": "Google Meet"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

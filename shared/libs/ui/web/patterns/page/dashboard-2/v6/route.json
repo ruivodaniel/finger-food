@@ -1,0 +1,7 @@
+{
+ "id": "route-pattern-page-dashboard-2",
+ "version": 1,
+ "surface": "web",
+ "path": "/patterns/page/dashboard-2",
+ "uiNodeId": "ui-node-pattern-page-dashboard-2"
+}

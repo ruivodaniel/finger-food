@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-timelines-and-agenda-complete-onboarding-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-timelines-and-agenda-complete-onboarding",
+ "name": "default",
+ "title": "Timelines and agenda: complete onboarding",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

@@ -1,0 +1,300 @@
+{
+ "id": "ui-data-primitive-text",
+ "version": 1,
+ "uiNodeId": "ui-node-primitive-text",
+ "kind": "component",
+ "name": "primitive-text",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "primitive-text",
+  "version": 1,
+  "surface": "web",
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "align": "center",
+    "scale": "2xl"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "type \u2014 headings and body"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "as": "h1",
+          "element": "type--heading1",
+          "children": "Heading 1"
+         }
+        },
+        {
+         "type": "Text",
+         "props": {
+          "as": "h2",
+          "element": "type--heading2",
+          "children": "Heading 2"
+         }
+        },
+        {
+         "type": "Text",
+         "props": {
+          "as": "h3",
+          "element": "type--heading3",
+          "children": "Heading 3"
+         }
+        },
+        {
+         "type": "Text",
+         "props": {
+          "as": "p",
+          "element": "type--body-large",
+          "children": "Body large"
+         }
+        },
+        {
+         "type": "Text",
+         "props": {
+          "as": "p",
+          "element": "type--body",
+          "children": "Body"
+         }
+        },
+        {
+         "type": "Text",
+         "props": {
+          "as": "p",
+          "element": "type--body-small",
+          "children": "Body small"
+         }
+        },
+        {
+         "type": "Text",
+         "props": {
+          "as": "p",
+          "element": "type--body-extra-small",
+          "children": "Body extra small"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "type \u2014 quote, code, numbers"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "as": "p",
+          "element": "type--quote",
+          "children": "A quote, set by the theme."
+         }
+        },
+        {
+         "type": "Text",
+         "props": {
+          "element": "type--code",
+          "children": "const x = 1;"
+         }
+        },
+        {
+         "type": "Text",
+         "props": {
+          "element": "type--numbers-large",
+          "children": "1,234.56"
+         }
+        },
+        {
+         "type": "Text",
+         "props": {
+          "element": "type--numbers",
+          "children": "1,234.56"
+         }
+        },
+        {
+         "type": "Text",
+         "props": {
+          "element": "type--numbers-small",
+          "children": "1,234.56"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "emphasis and status \u2014 type=\"body\""
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "emphasis": "hero",
+          "element": "type--body",
+          "children": "Hero"
+         }
+        },
+        {
+         "type": "Text",
+         "props": {
+          "emphasis": "primary",
+          "element": "type--body",
+          "children": "Primary"
+         }
+        },
+        {
+         "type": "Text",
+         "props": {
+          "emphasis": "secondary",
+          "element": "type--body",
+          "children": "Secondary"
+         }
+        },
+        {
+         "type": "Text",
+         "props": {
+          "emphasis": "quiet",
+          "element": "type--body",
+          "children": "Quiet"
+         }
+        },
+        {
+         "type": "Text",
+         "props": {
+          "status": "success",
+          "element": "type--body",
+          "children": "Success"
+         }
+        },
+        {
+         "type": "Text",
+         "props": {
+          "status": "warning",
+          "element": "type--body",
+          "children": "Warning"
+         }
+        },
+        {
+         "type": "Text",
+         "props": {
+          "status": "error",
+          "element": "type--body",
+          "children": "Error"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "truncate"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "element": "type--body",
+          "className": "truncate",
+          "children": "A line long enough to be cut by its container, ending in an ellipsis."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

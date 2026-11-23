@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-timelines-and-agenda-pickup-drop-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-timelines-and-agenda-pickup-drop",
+ "name": "default",
+ "title": "Timelines and agenda: pickup drop",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

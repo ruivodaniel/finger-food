@@ -1,0 +1,4805 @@
+[
+  {
+    "id": "b1c97273",
+    "version": 1,
+    "productProjectId": "prowd",
+    "title": "Browse the organizations",
+    "worldId": "world-acme",
+    "t": 0,
+    "initialStoreState": {
+      "session": "u-samantha",
+      "activeOrganization": "o-platform"
+    },
+    "initialUiDataId": "ui-data-organizations",
+    "initialParams": {},
+    "recordedRequests": [
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/auth/session",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "user": {
+              "id": "u-samantha",
+              "profile": {
+                "name": "Samantha Reyes",
+                "image": null
+              },
+              "identifiers": [
+                {
+                  "type": "email",
+                  "value": "samantha.reyes@example.com"
+                }
+              ]
+            },
+            "session": {
+              "id": "session-samantha",
+              "userId": "u-samantha",
+              "activeOrganizationId": "o-platform",
+              "memberships": [
+                {
+                  "organizationId": "o-platform",
+                  "roles": [
+                    "owner"
+                  ]
+                }
+              ],
+              "aal": "aal1",
+              "methods": [
+                "password"
+              ],
+              "expiresAt": "2026-03-09T09:00:00.000Z"
+            }
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/types",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": [
+            {
+              "id": "client",
+              "label": "Client"
+            },
+            {
+              "id": "partner",
+              "label": "Partner"
+            },
+            {
+              "id": "supplier",
+              "label": "Supplier"
+            }
+          ]
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/me/creatable-organization-types",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": [
+            {
+              "id": "client",
+              "label": "Client"
+            },
+            {
+              "id": "partner",
+              "label": "Partner"
+            },
+            {
+              "id": "supplier",
+              "label": "Supplier"
+            }
+          ]
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": {
+              "table": "organization",
+              "ids": [
+                "org-01",
+                "abc123",
+                "org-03",
+                "org-04",
+                "org-05",
+                "org-06",
+                "org-07",
+                "org-08",
+                "org-09",
+                "org-10",
+                "org-11",
+                "org-12",
+                "org-13",
+                "org-14",
+                "org-15",
+                "org-16",
+                "org-17",
+                "org-18",
+                "org-19",
+                "org-20"
+              ]
+            },
+            "total": 57
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations",
+          "query": {
+            "page": "2",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": {
+              "table": "organization",
+              "ids": [
+                "org-21",
+                "org-22",
+                "org-23",
+                "org-24",
+                "org-25",
+                "org-26",
+                "org-27",
+                "org-28",
+                "org-29",
+                "org-30",
+                "org-31",
+                "org-32",
+                "org-33",
+                "org-34",
+                "org-35",
+                "org-36",
+                "org-37",
+                "org-38",
+                "org-39",
+                "org-40"
+              ]
+            },
+            "total": 57
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations",
+          "query": {
+            "page": "3",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": {
+              "table": "organization",
+              "ids": [
+                "org-41",
+                "org-42",
+                "org-43",
+                "org-44",
+                "org-45",
+                "org-46",
+                "org-47",
+                "org-48",
+                "org-49",
+                "org-50",
+                "org-51",
+                "org-52",
+                "org-53",
+                "org-54",
+                "org-55",
+                "org-56",
+                "org-57"
+              ]
+            },
+            "total": 57
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-01",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-01"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/abc123",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "abc123"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-03",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-03"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-04",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-04"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-05",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-05"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-06",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-06"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-07",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-07"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-08",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-08"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-09",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-09"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-10",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-10"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-11",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-11"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-12",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-12"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-13",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-13"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-14",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-14"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-15",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-15"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-16",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-16"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-17",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-17"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-18",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-18"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-19",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-19"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-20",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-20"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-21",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-21"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-22",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-22"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-23",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-23"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-24",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-24"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-25",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-25"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-26",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-26"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-27",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-27"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-28",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-28"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-29",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-29"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-30",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-30"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-31",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-31"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-32",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-32"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-33",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-33"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-34",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-34"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-35",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-35"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-36",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-36"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-37",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-37"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-38",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-38"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-39",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-39"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-40",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-40"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-41",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-41"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-42",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-42"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-43",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-43"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-44",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-44"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-45",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-45"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-46",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-46"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-47",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-47"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-48",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-48"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-49",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-49"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-50",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-50"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-51",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-51"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-52",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-52"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-53",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-53"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-54",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-54"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-55",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-55"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-56",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-56"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-57",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "org-57"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-01/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-01-tomas"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-tomas"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-tomas"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-01-ingrid"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-ingrid"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-ingrid"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-01-kwame"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-kwame"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-kwame"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/abc123/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-abc123-ingrid"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-ingrid"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-ingrid"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-abc123-kwame"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-kwame"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-kwame"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-abc123-leila"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-leila"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-leila"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-abc123-rafael"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-rafael"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-rafael"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-abc123-yuki"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-yuki"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-yuki"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-abc123-priya"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-priya"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-priya"
+                }
+              }
+            ],
+            "total": 6
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-03/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-03-kwame"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-kwame"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-kwame"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-03-leila"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-leila"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-leila"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-03-rafael"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-rafael"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-rafael"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-04/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-04-leila"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-leila"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-leila"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-04-rafael"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-rafael"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-rafael"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-04-yuki"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-yuki"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-yuki"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-05/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-05-rafael"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-rafael"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-rafael"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-05-yuki"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-yuki"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-yuki"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-05-priya"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-priya"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-priya"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-06/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-06-yuki"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-yuki"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-yuki"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-06-priya"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-priya"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-priya"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-06-oliver"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-oliver"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-oliver"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-07/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-07-priya"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-priya"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-priya"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-07-oliver"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-oliver"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-oliver"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-07-chiara"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-chiara"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-chiara"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-08/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-08-oliver"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-oliver"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-oliver"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-08-chiara"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-chiara"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-chiara"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-08-mateus"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-mateus"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-mateus"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-09/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-09-chiara"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-chiara"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-chiara"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-09-mateus"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-mateus"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-mateus"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-09-noor"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-noor"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-noor"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-10/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-10-mateus"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-mateus"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-mateus"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-10-noor"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-noor"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-noor"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-10-samantha"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-samantha"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-samantha"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-11/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-11-noor"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-noor"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-noor"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-11-samantha"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-samantha"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-samantha"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-11-tomas"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-tomas"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-tomas"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-12/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-12-samantha"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-samantha"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-samantha"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-12-tomas"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-tomas"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-tomas"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-12-ingrid"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-ingrid"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-ingrid"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-13/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-13-tomas"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-tomas"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-tomas"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-13-ingrid"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-ingrid"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-ingrid"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-13-kwame"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-kwame"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-kwame"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-14/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-14-ingrid"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-ingrid"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-ingrid"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-14-kwame"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-kwame"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-kwame"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-14-leila"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-leila"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-leila"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-15/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-15-kwame"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-kwame"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-kwame"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-15-leila"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-leila"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-leila"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-15-rafael"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-rafael"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-rafael"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-16/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-16-leila"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-leila"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-leila"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-16-rafael"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-rafael"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-rafael"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-16-yuki"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-yuki"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-yuki"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-17/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-17-rafael"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-rafael"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-rafael"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-17-yuki"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-yuki"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-yuki"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-17-priya"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-priya"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-priya"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-18/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-18-yuki"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-yuki"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-yuki"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-18-priya"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-priya"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-priya"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-18-oliver"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-oliver"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-oliver"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-19/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-19-priya"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-priya"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-priya"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-19-oliver"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-oliver"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-oliver"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-19-chiara"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-chiara"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-chiara"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-20/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-20-oliver"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-oliver"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-oliver"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-20-chiara"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-chiara"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-chiara"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-20-mateus"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-mateus"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-mateus"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-21/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-21-chiara"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-chiara"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-chiara"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-21-mateus"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-mateus"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-mateus"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-21-noor"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-noor"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-noor"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-22/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-22-mateus"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-mateus"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-mateus"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-22-noor"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-noor"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-noor"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-22-samantha"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-samantha"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-samantha"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-23/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-23-noor"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-noor"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-noor"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-23-samantha"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-samantha"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-samantha"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-23-tomas"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-tomas"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-tomas"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-24/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-24-samantha"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-samantha"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-samantha"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-24-tomas"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-tomas"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-tomas"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-24-ingrid"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-ingrid"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-ingrid"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-25/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-25-tomas"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-tomas"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-tomas"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-25-ingrid"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-ingrid"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-ingrid"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-25-kwame"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-kwame"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-kwame"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-26/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-26-ingrid"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-ingrid"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-ingrid"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-26-kwame"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-kwame"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-kwame"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-26-leila"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-leila"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-leila"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-27/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-27-kwame"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-kwame"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-kwame"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-27-leila"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-leila"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-leila"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-27-rafael"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-rafael"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-rafael"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-28/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-28-leila"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-leila"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-leila"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-28-rafael"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-rafael"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-rafael"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-28-yuki"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-yuki"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-yuki"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-29/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-29-rafael"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-rafael"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-rafael"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-29-yuki"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-yuki"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-yuki"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-29-priya"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-priya"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-priya"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-30/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-30-yuki"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-yuki"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-yuki"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-30-priya"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-priya"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-priya"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-30-oliver"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-oliver"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-oliver"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-31/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-31-priya"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-priya"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-priya"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-31-oliver"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-oliver"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-oliver"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-31-chiara"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-chiara"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-chiara"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-32/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-32-oliver"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-oliver"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-oliver"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-32-chiara"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-chiara"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-chiara"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-32-mateus"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-mateus"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-mateus"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-33/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-33-chiara"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-chiara"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-chiara"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-33-mateus"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-mateus"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-mateus"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-33-noor"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-noor"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-noor"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-34/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-34-mateus"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-mateus"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-mateus"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-34-noor"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-noor"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-noor"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-34-samantha"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-samantha"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-samantha"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-35/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-35-noor"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-noor"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-noor"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-35-samantha"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-samantha"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-samantha"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-35-tomas"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-tomas"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-tomas"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-36/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-36-samantha"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-samantha"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-samantha"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-36-tomas"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-tomas"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-tomas"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-36-ingrid"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-ingrid"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-ingrid"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-37/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-37-tomas"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-tomas"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-tomas"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-37-ingrid"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-ingrid"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-ingrid"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-37-kwame"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-kwame"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-kwame"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-38/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-38-ingrid"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-ingrid"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-ingrid"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-38-kwame"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-kwame"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-kwame"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-38-leila"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-leila"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-leila"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-39/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-39-kwame"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-kwame"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-kwame"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-39-leila"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-leila"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-leila"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-39-rafael"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-rafael"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-rafael"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-40/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-40-leila"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-leila"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-leila"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-40-rafael"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-rafael"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-rafael"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-40-yuki"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-yuki"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-yuki"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-41/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-41-rafael"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-rafael"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-rafael"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-41-yuki"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-yuki"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-yuki"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-41-priya"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-priya"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-priya"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-42/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-42-yuki"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-yuki"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-yuki"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-42-priya"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-priya"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-priya"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-42-oliver"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-oliver"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-oliver"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-43/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-43-priya"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-priya"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-priya"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-43-oliver"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-oliver"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-oliver"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-43-chiara"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-chiara"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-chiara"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-44/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-44-oliver"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-oliver"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-oliver"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-44-chiara"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-chiara"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-chiara"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-44-mateus"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-mateus"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-mateus"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-45/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-45-chiara"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-chiara"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-chiara"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-45-mateus"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-mateus"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-mateus"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-45-noor"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-noor"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-noor"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-46/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-46-mateus"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-mateus"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-mateus"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-46-noor"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-noor"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-noor"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-46-samantha"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-samantha"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-samantha"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-47/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-47-noor"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-noor"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-noor"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-47-samantha"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-samantha"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-samantha"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-47-tomas"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-tomas"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-tomas"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-48/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-48-samantha"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-samantha"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-samantha"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-48-tomas"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-tomas"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-tomas"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-48-ingrid"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-ingrid"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-ingrid"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-49/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-49-tomas"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-tomas"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-tomas"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-49-ingrid"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-ingrid"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-ingrid"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-49-kwame"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-kwame"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-kwame"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-50/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-50-ingrid"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-ingrid"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-ingrid"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-50-kwame"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-kwame"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-kwame"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-50-leila"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-leila"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-leila"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-51/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-51-kwame"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-kwame"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-kwame"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-51-leila"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-leila"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-leila"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-51-rafael"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-rafael"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-rafael"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-52/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-52-leila"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-leila"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-leila"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-52-rafael"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-rafael"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-rafael"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-52-yuki"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-yuki"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-yuki"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-53/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-53-rafael"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-rafael"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-rafael"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-53-yuki"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-yuki"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-yuki"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-53-priya"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-priya"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-priya"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-54/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-54-yuki"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-yuki"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-yuki"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-54-priya"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-priya"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-priya"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-54-oliver"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-oliver"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-oliver"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-55/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-55-priya"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-priya"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-priya"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-55-oliver"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-oliver"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-oliver"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-55-chiara"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-chiara"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-chiara"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-56/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-56-oliver"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-oliver"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-oliver"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-56-chiara"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-chiara"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-chiara"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-56-mateus"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-mateus"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-mateus"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/org-57/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-57-chiara"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-chiara"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-chiara"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-57-mateus"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-mateus"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-mateus"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-org-57-noor"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-noor"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-noor"
+                }
+              }
+            ],
+            "total": 3
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "PATCH",
+          "path": "/api/client/organizations/abc123",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "abc123"
+          }
+        }
+      }
+    ]
+  }
+]

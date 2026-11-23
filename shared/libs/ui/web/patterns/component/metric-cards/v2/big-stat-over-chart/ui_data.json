@@ -1,0 +1,118 @@
+{
+ "id": "ui-data-pattern-component-metric-cards-big-stat-over-chart",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-metric-cards-big-stat-over-chart",
+ "kind": "component",
+ "name": "big-stat-over-chart",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "big-stat-over-chart",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Card",
+   "props": {
+    "className": "w-96"
+   },
+   "children": [
+    {
+     "type": "Content",
+     "props": {},
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "col",
+          "scale": "xs"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--numbers-extra-large",
+            "children": "104.7K"
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body",
+            "children": "GitHub Stars for shadcn-ui/ui"
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "emphasis": "quiet",
+            "children": "Last 30 days"
+           }
+          }
+         ]
+        },
+        {
+         "type": "Card",
+         "props": {
+          "emphasis": "quiet",
+          "className": "h-56",
+          "concept": "empty-state"
+         },
+         "children": [
+          {
+           "type": "Header",
+           "props": {},
+           "children": [
+            {
+             "type": "Icon",
+             "props": {
+              "name": "activity",
+              "size": "lg"
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "p",
+              "element": "type--heading4",
+              "children": "Star history"
+             }
+            }
+           ]
+          },
+          {
+           "type": "Content",
+           "props": {},
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "as": "p",
+              "element": "type--body-small",
+              "emphasis": "quiet",
+              "children": "Daily stars, last 30 days"
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

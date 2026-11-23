@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-layout-double-sidebar-footer-layout",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Double sidebar layout with a page footer"
+}

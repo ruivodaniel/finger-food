@@ -7,6 +7,7 @@
 
 import { inArray } from "drizzle-orm";
 import type { NodePgDatabase } from "drizzle-orm/node-postgres";
+import type { GatedDb, SchemaTables } from "@libs/gated-scoped-ac";
 import {
   uomConsentRecord,
   type UomConsentRecordSelect,
@@ -25,7 +26,13 @@ export interface CreateConsentRecord {
 }
 
 export interface ConsentRecordRepository {
-  create(input: CreateConsentRecord): Promise<void>;
+  /** Gated insert — the gate takes the `record_own_consent` verdict on the row
+   * (its payload: the row is the caller's own); null when denied. */
+  create(
+    input: CreateConsentRecord,
+    permissions: Iterable<string>,
+    gateDb: GatedDb<SchemaTables>,
+  ): Promise<UomConsentRecordSelect | null>;
   /** Every consent the users have given — plural, id-filtered (API6). */
   findAllByUserIds(userIds: string[]): Promise<UomConsentRecordSelect[]>;
 }
@@ -36,16 +43,22 @@ export interface DrizzleConsentRecordRepositoryDeps {
 }
 
 // AC42: token-less. Both methods are reached exclusively through the module's
-// token-less infrastructure paths (registration self-heal's `recordConsent`,
-// the gate evaluator's `consentSatisfied`) — rule 5, no route mints a token
-// for either, so neither gains a `visibility` parameter.
+// token-less infrastructure paths (`recordConsentScoped`'s recorder, the gate
+// evaluator's `consentSatisfied`) — rule 5, no route mints a token for either,
+// so neither gains a `visibility` parameter.
 export class DrizzleConsentRecordRepository
   implements ConsentRecordRepository
 {
   constructor(private readonly deps: DrizzleConsentRecordRepositoryDeps) {}
 
-  async create(input: CreateConsentRecord): Promise<void> {
-    await this.deps.db.insert(uomConsentRecord).values({
+  async create(
+    input: CreateConsentRecord,
+    permissions: Iterable<string>,
+    gateDb: GatedDb<SchemaTables>,
+  ): Promise<UomConsentRecordSelect | null> {
+    // The gate runs the verdict (the row's userId must be the caller's) and
+    // inserts; null ⇒ refused, and the service decides what that means.
+    const inserted = await gateDb.create("consent_record", permissions, {
       id: this.deps.createId(),
       userId: input.userId,
       legalDocumentId: input.document.id,
@@ -57,6 +70,7 @@ export class DrizzleConsentRecordRepository
       ipAddress: input.ipAddress,
       userAgent: input.userAgent,
     });
+    return (inserted as UomConsentRecordSelect | null) ?? null;
   }
 
   // Raw infrastructure read (AC39): the sole caller is the gate obligation

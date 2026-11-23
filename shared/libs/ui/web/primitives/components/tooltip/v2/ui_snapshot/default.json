@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-primitive-tooltip-default",
+ "version": 1,
+ "uiDataId": "ui-data-primitive-tooltip",
+ "name": "default",
+ "title": "Tooltip, its cases",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

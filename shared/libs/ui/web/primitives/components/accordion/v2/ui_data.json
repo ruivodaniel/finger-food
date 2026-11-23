@@ -1,0 +1,648 @@
+{
+ "id": "ui-data-primitive-accordion",
+ "version": 1,
+ "uiNodeId": "ui-node-primitive-accordion",
+ "kind": "component",
+ "name": "primitive-accordion",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "primitive-accordion",
+  "version": 1,
+  "surface": "web",
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "align": "center",
+    "scale": "2xl"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "three questions"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "style": {
+         "obj": {
+          "maxWidth": 480
+         }
+        },
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Accordion",
+         "props": {
+          "type": "single",
+          "collapsible": true,
+          "className": "w-full"
+         },
+         "children": [
+          {
+           "type": "AccordionItem",
+           "props": {
+            "value": "one"
+           },
+           "children": [
+            {
+             "type": "AccordionTrigger",
+             "props": {
+              "children": "What is Acme?"
+             }
+            },
+            {
+             "type": "AccordionContent",
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "as": "p",
+                "element": "type--body-small",
+                "emphasis": "quiet",
+                "children": "A collaboration platform connecting teams across your organization."
+               }
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "AccordionItem",
+           "props": {
+            "value": "two"
+           },
+           "children": [
+            {
+             "type": "AccordionTrigger",
+             "props": {
+              "children": "How do I manage my organization?"
+             }
+            },
+            {
+             "type": "AccordionContent",
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "as": "p",
+                "element": "type--body-small",
+                "emphasis": "quiet",
+                "children": "Settings \u2192 Organization to invite members, change roles, and configure access."
+               }
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "AccordionItem",
+           "props": {
+            "value": "three"
+           },
+           "children": [
+            {
+             "type": "AccordionTrigger",
+             "props": {
+              "children": "What roles are available?"
+             }
+            },
+            {
+             "type": "AccordionContent",
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "as": "p",
+                "element": "type--body-small",
+                "emphasis": "quiet",
+                "children": "Owner, Admin, Member, and Viewer \u2014 assignable per organization."
+               }
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "one item"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "style": {
+         "obj": {
+          "maxWidth": 480
+         }
+        },
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Accordion",
+         "props": {
+          "type": "single",
+          "collapsible": true,
+          "className": "w-full"
+         },
+         "children": [
+          {
+           "type": "AccordionItem",
+           "props": {
+            "value": "one"
+           },
+           "children": [
+            {
+             "type": "AccordionTrigger",
+             "props": {
+              "children": "What is Acme?"
+             }
+            },
+            {
+             "type": "AccordionContent",
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "as": "p",
+                "element": "type--body-small",
+                "emphasis": "quiet",
+                "children": "A collaboration platform connecting teams across your organization."
+               }
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "ten items"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "style": {
+         "obj": {
+          "maxWidth": 480
+         }
+        },
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Accordion",
+         "props": {
+          "type": "single",
+          "collapsible": true,
+          "className": "w-full"
+         },
+         "children": [
+          {
+           "type": "AccordionItem",
+           "props": {
+            "value": "item-1"
+           },
+           "children": [
+            {
+             "type": "AccordionTrigger",
+             "props": {
+              "children": "Question 1"
+             }
+            },
+            {
+             "type": "AccordionContent",
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "as": "p",
+                "element": "type--body-small",
+                "emphasis": "quiet",
+                "children": "Answer 1."
+               }
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "AccordionItem",
+           "props": {
+            "value": "item-2"
+           },
+           "children": [
+            {
+             "type": "AccordionTrigger",
+             "props": {
+              "children": "Question 2"
+             }
+            },
+            {
+             "type": "AccordionContent",
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "as": "p",
+                "element": "type--body-small",
+                "emphasis": "quiet",
+                "children": "Answer 2."
+               }
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "AccordionItem",
+           "props": {
+            "value": "item-3"
+           },
+           "children": [
+            {
+             "type": "AccordionTrigger",
+             "props": {
+              "children": "Question 3"
+             }
+            },
+            {
+             "type": "AccordionContent",
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "as": "p",
+                "element": "type--body-small",
+                "emphasis": "quiet",
+                "children": "Answer 3."
+               }
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "AccordionItem",
+           "props": {
+            "value": "item-4"
+           },
+           "children": [
+            {
+             "type": "AccordionTrigger",
+             "props": {
+              "children": "Question 4"
+             }
+            },
+            {
+             "type": "AccordionContent",
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "as": "p",
+                "element": "type--body-small",
+                "emphasis": "quiet",
+                "children": "Answer 4."
+               }
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "AccordionItem",
+           "props": {
+            "value": "item-5"
+           },
+           "children": [
+            {
+             "type": "AccordionTrigger",
+             "props": {
+              "children": "Question 5"
+             }
+            },
+            {
+             "type": "AccordionContent",
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "as": "p",
+                "element": "type--body-small",
+                "emphasis": "quiet",
+                "children": "Answer 5."
+               }
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "AccordionItem",
+           "props": {
+            "value": "item-6"
+           },
+           "children": [
+            {
+             "type": "AccordionTrigger",
+             "props": {
+              "children": "Question 6"
+             }
+            },
+            {
+             "type": "AccordionContent",
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "as": "p",
+                "element": "type--body-small",
+                "emphasis": "quiet",
+                "children": "Answer 6."
+               }
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "AccordionItem",
+           "props": {
+            "value": "item-7"
+           },
+           "children": [
+            {
+             "type": "AccordionTrigger",
+             "props": {
+              "children": "Question 7"
+             }
+            },
+            {
+             "type": "AccordionContent",
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "as": "p",
+                "element": "type--body-small",
+                "emphasis": "quiet",
+                "children": "Answer 7."
+               }
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "AccordionItem",
+           "props": {
+            "value": "item-8"
+           },
+           "children": [
+            {
+             "type": "AccordionTrigger",
+             "props": {
+              "children": "Question 8"
+             }
+            },
+            {
+             "type": "AccordionContent",
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "as": "p",
+                "element": "type--body-small",
+                "emphasis": "quiet",
+                "children": "Answer 8."
+               }
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "AccordionItem",
+           "props": {
+            "value": "item-9"
+           },
+           "children": [
+            {
+             "type": "AccordionTrigger",
+             "props": {
+              "children": "Question 9"
+             }
+            },
+            {
+             "type": "AccordionContent",
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "as": "p",
+                "element": "type--body-small",
+                "emphasis": "quiet",
+                "children": "Answer 9."
+               }
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "AccordionItem",
+           "props": {
+            "value": "item-10"
+           },
+           "children": [
+            {
+             "type": "AccordionTrigger",
+             "props": {
+              "children": "Question 10"
+             }
+            },
+            {
+             "type": "AccordionContent",
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "as": "p",
+                "element": "type--body-small",
+                "emphasis": "quiet",
+                "children": "Answer 10."
+               }
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "long content"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "style": {
+         "obj": {
+          "maxWidth": 480
+         }
+        },
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Accordion",
+         "props": {
+          "type": "single",
+          "collapsible": true,
+          "className": "w-full"
+         },
+         "children": [
+          {
+           "type": "AccordionItem",
+           "props": {
+            "value": "one"
+           },
+           "children": [
+            {
+             "type": "AccordionTrigger",
+             "props": {
+              "children": "A question whose title is long enough to need a second line at the width the accordion is shown in the cockpit"
+             }
+            },
+            {
+             "type": "AccordionContent",
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "as": "p",
+                "element": "type--body-small",
+                "emphasis": "quiet",
+                "children": "A very long value that does not fit the width of its column and shows how the cell behaves when the text is longer than the space it was given. A very long value that does not fit the width of its column and shows how the cell behaves when the text is longer than the space it was given. A very long value that does not fit the width of its column and shows how the cell behaves when the text is longer than the space it was given. A very long value that does not fit the width of its column and shows how the cell behaves when the text is longer than the space it was given."
+               }
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "AccordionItem",
+           "props": {
+            "value": "two"
+           },
+           "children": [
+            {
+             "type": "AccordionTrigger",
+             "props": {
+              "children": "How do I manage my organization?"
+             }
+            },
+            {
+             "type": "AccordionContent",
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "as": "p",
+                "element": "type--body-small",
+                "emphasis": "quiet",
+                "children": "Settings \u2192 Organization to invite members, change roles, and configure access."
+               }
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

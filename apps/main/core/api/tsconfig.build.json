@@ -1,0 +1,23 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "composite": false,
+    "declaration": true,
+    "declarationMap": true,
+    "noEmitOnError": false,
+    "paths": {
+      "@/*": ["./src/*"],
+      "@configs/access-control": ["../../../../shared/configs/access-control/index.ts"],
+      "@configs/access-control/*": ["../../../../shared/configs/access-control/*"],
+      "@configs/user-organization-mgmt": ["../../../../shared/configs/user-organization-mgmt/index.ts"],
+      "@configs/user-organization-mgmt/*": ["../../../../shared/configs/user-organization-mgmt/*"]
+    }
+  },
+  "include": ["src/**/*", "../../../../shared/configs/**/*", "../../slices/**/*"],
+  "exclude": [
+    "../../slices/*/*/web/**",
+    "../../slices/*/*/mobile/**",
+    "../../slices/*/*/api/**/__test__/**"
+  ]
+}

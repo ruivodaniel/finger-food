@@ -1,0 +1,259 @@
+{
+ "id": "ui-data-pattern-component-hero-with-figures-centered-strip",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-hero-with-figures-centered-strip",
+ "kind": "component",
+ "name": "centered-strip",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "centered-strip",
+  "version": 1,
+  "surface": "web",
+  "measure": "lg",
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "concept": "hero",
+    "className": "w-full max-w-5xl"
+   },
+   "children": [
+    {
+     "type": "Card",
+     "props": {
+      "emphasis": "hero",
+      "className": "w-full"
+     },
+     "children": [
+      {
+       "type": "Content",
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "col",
+          "align": "center",
+          "scale": "lg"
+         },
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col",
+            "align": "center",
+            "scale": "md"
+           },
+           "children": [
+            {
+             "type": "Label",
+             "props": {
+              "children": "Week 45 · 3 squads"
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "h2",
+              "element": "type--heading1",
+              "children": "Your squads trained 12% more this week",
+              "className": "text-center"
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "p",
+              "element": "type--body",
+              "children": "Tuesday's U17 session is confirmed and two athletes still wait on a medical clearance.",
+              "className": "text-center max-w-xl"
+             }
+            },
+            {
+             "type": "Stack",
+             "props": {
+              "dir": "row",
+              "justify": "center",
+              "className": "pt-2",
+              "scale": "md"
+             },
+             "children": [
+              {
+               "type": "Button",
+               "props": {
+                "emphasis": "primary",
+                "children": "Open today's session"
+               }
+              },
+              {
+               "type": "Button",
+               "props": {
+                "emphasis": "tertiary",
+                "children": "Week report"
+               }
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "row",
+            "concept": "stats",
+            "className": "w-full pt-6",
+            "scale": "md"
+           },
+           "children": [
+            {
+             "type": "Tile",
+             "props": {
+              "className": "w-full"
+             },
+             "children": [
+              {
+               "type": "Stack",
+               "props": {
+                "dir": "col",
+                "align": "center",
+                "scale": "xs"
+               },
+               "children": [
+                {
+                 "type": "Text",
+                 "props": {
+                  "as": "span",
+                  "element": "type--numbers-extra-large",
+                  "children": "12"
+                 }
+                },
+                {
+                 "type": "Text",
+                 "props": {
+                  "as": "span",
+                  "element": "type--body-small",
+                  "children": "Sessions",
+                  "emphasis": "quiet"
+                 }
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "Tile",
+             "props": {
+              "className": "w-full"
+             },
+             "children": [
+              {
+               "type": "Stack",
+               "props": {
+                "dir": "col",
+                "align": "center",
+                "scale": "xs"
+               },
+               "children": [
+                {
+                 "type": "Text",
+                 "props": {
+                  "as": "span",
+                  "element": "type--numbers-extra-large",
+                  "children": "412 AU"
+                 }
+                },
+                {
+                 "type": "Text",
+                 "props": {
+                  "as": "span",
+                  "element": "type--body-small",
+                  "children": "Average load",
+                  "emphasis": "quiet"
+                 }
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "Tile",
+             "props": {
+              "className": "w-full"
+             },
+             "children": [
+              {
+               "type": "Stack",
+               "props": {
+                "dir": "col",
+                "align": "center",
+                "scale": "xs"
+               },
+               "children": [
+                {
+                 "type": "Text",
+                 "props": {
+                  "as": "span",
+                  "element": "type--numbers-extra-large",
+                  "children": "2"
+                 }
+                },
+                {
+                 "type": "Text",
+                 "props": {
+                  "as": "span",
+                  "element": "type--body-small",
+                  "children": "Clearances open",
+                  "emphasis": "quiet"
+                 }
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "Tile",
+             "props": {
+              "className": "w-full"
+             },
+             "children": [
+              {
+               "type": "Stack",
+               "props": {
+                "dir": "col",
+                "align": "center",
+                "scale": "xs"
+               },
+               "children": [
+                {
+                 "type": "Text",
+                 "props": {
+                  "as": "span",
+                  "element": "type--numbers-extra-large",
+                  "children": "96%"
+                 }
+                },
+                {
+                 "type": "Text",
+                 "props": {
+                  "as": "span",
+                  "element": "type--body-small",
+                  "children": "Attendance",
+                  "emphasis": "quiet"
+                 }
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

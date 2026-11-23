@@ -1,0 +1,106 @@
+{
+ "id": "ui-data-pattern-component-status-cards-alert-success",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-status-cards-alert-success",
+ "kind": "component",
+ "name": "alert-success",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "alert-success",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Card",
+   "props": {
+    "status": "success",
+    "className": "flex-1 min-w-56",
+    "concept": "alert"
+   },
+   "children": [
+    {
+     "type": "Header",
+     "props": {},
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "between"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "scale": "sm"
+         },
+         "children": [
+          {
+           "type": "Icon",
+           "props": {
+            "name": "success"
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "p",
+            "element": "type--heading4",
+            "children": "Payment received"
+           }
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Content",
+     "props": {},
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "p",
+        "element": "type--body-small",
+        "emphasis": "quiet",
+        "children": "€4,800.00 from Altar Design Systems for INV-2026-0142."
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "scale": "sm"
+       },
+       "children": [
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "secondary",
+          "status": "success",
+          "scale": "sm",
+          "children": "View invoice"
+         }
+        },
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "quiet",
+          "scale": "sm",
+          "children": "Dismiss"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

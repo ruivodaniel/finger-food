@@ -1,0 +1,294 @@
+{
+ "id": "ui-data-primitive-date-picker",
+ "version": 1,
+ "uiNodeId": "ui-node-primitive-date-picker",
+ "kind": "component",
+ "name": "primitive-date-picker",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "primitive-date-picker",
+  "version": 1,
+  "surface": "web",
+  "state": {
+   "single_sm_value": null,
+   "single_md_value": null,
+   "single_lg_value": null,
+   "range_md_value": null,
+   "status_error_value": null,
+   "status_warning_value": null,
+   "status_success_value": null
+  },
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "align": "center",
+    "scale": "2xl"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "single"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "DatePicker",
+         "on": {
+          "change": [
+           {
+            "set": {
+             "state": "single_sm_value",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "mode": "single",
+          "scale": "sm",
+          "placeholder": "Small",
+          "value": {
+           "bind": "state.single_sm_value"
+          },
+          "data-testid": "date-picker-single-1-input"
+         }
+        },
+        {
+         "type": "DatePicker",
+         "on": {
+          "change": [
+           {
+            "set": {
+             "state": "single_md_value",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "mode": "single",
+          "scale": "md",
+          "placeholder": "Medium",
+          "value": {
+           "bind": "state.single_md_value"
+          },
+          "data-testid": "date-picker-single-2-input"
+         }
+        },
+        {
+         "type": "DatePicker",
+         "on": {
+          "change": [
+           {
+            "set": {
+             "state": "single_lg_value",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "mode": "single",
+          "scale": "lg",
+          "placeholder": "Large",
+          "value": {
+           "bind": "state.single_lg_value"
+          },
+          "data-testid": "date-picker-single-3-input"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "range"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "DatePicker",
+         "on": {
+          "change": [
+           {
+            "set": {
+             "state": "range_md_value",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "mode": "range",
+          "scale": "md",
+          "placeholder": "Select range",
+          "value": {
+           "bind": "state.range_md_value"
+          },
+          "data-testid": "date-picker-range-1-input"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "status"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "DatePicker",
+         "on": {
+          "change": [
+           {
+            "set": {
+             "state": "status_error_value",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "mode": "single",
+          "scale": "md",
+          "status": "error",
+          "placeholder": "Error",
+          "value": {
+           "bind": "state.status_error_value"
+          },
+          "data-testid": "date-picker-status-1-input"
+         }
+        },
+        {
+         "type": "DatePicker",
+         "on": {
+          "change": [
+           {
+            "set": {
+             "state": "status_warning_value",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "mode": "single",
+          "scale": "md",
+          "status": "warning",
+          "placeholder": "Warning",
+          "value": {
+           "bind": "state.status_warning_value"
+          },
+          "data-testid": "date-picker-status-2-input"
+         }
+        },
+        {
+         "type": "DatePicker",
+         "on": {
+          "change": [
+           {
+            "set": {
+             "state": "status_success_value",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "mode": "single",
+          "scale": "md",
+          "status": "success",
+          "placeholder": "Success",
+          "value": {
+           "bind": "state.status_success_value"
+          },
+          "data-testid": "date-picker-status-3-input"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,73 @@
+name: Prowd
+
+# Ory Kratos rides along with the uom-v2 module — the module ships its own
+# identity-provider runtime (services, config, schema, templates). Removing
+# the module removes Kratos; this include is the only Kratos line here.
+# The fragment expects the `postgres` service below on the project network.
+include:
+  - ../../slices/seed/user-organization-mgmt/api/identity/kratos/infra/docker-compose.kratos.yml
+  # the payment slice's Stripe listener; an app without payments drops this line
+  - ../../slices/seed/payment/api/stripe/infra/docker-compose.stripe.yml
+
+services:
+  postgres:
+    image: postgres:17.5
+    container_name: postgres-Prowd
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: Prowd
+    ports:
+      # host 5433 -> container 5432. Matches DATABASE_URL (…@localhost:5433) and
+      # keeps clear of a stock postgres occupying the host's 5432. In-cluster
+      # consumers (kratos, migrations) still reach postgres:5432 over the network.
+      - "5433:5432"
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d Prowd"]
+      interval: 3s
+      timeout: 3s
+      retries: 10
+
+  maildev:
+    image: maildev/maildev:2.2.1
+    container_name: maildev-Prowd
+    restart: unless-stopped
+    ports:
+      - "1080:1080"
+      - "1025:1025"
+
+
+  # SMS-Dev: run separately via `npx @relay-works/sms-dev start`
+  # UI at http://localhost:4000, API at http://localhost:4001
+  # (npm package, no Docker image available)
+
+  localstack:
+    env_file: .env
+    # image: localstack/localstack-pro:4.6.0 # (PRO IMAGE)
+    image: localstack/localstack:4.6.0
+    container_name: localstack-Prowd
+    restart: unless-stopped
+    environment:
+      - LOCALSTACK_AUTH_TOKEN="{{YOUR_TOKEN}}" # (PRO IMAGE)
+      - PERSISTENCE=1 # enables data persistence (PRO IMAGE)
+      - SNAPSHOT_SAVE_STRATEGY=ON_SHUTDOWN # (PRO IMAGE)
+      - SNAPSHOT_LOAD_STRATEGY=ON_STARTUP # (PRO IMAGE)
+      - DEBUG=${DEBUG:-0}
+      - SERVICES=s3
+    ports:
+      - "127.0.0.1:4566:4566"
+      - "127.0.0.1:4510-4559:4510-4559"
+      - "127.0.0.1:443:443" # HTTPS Gateway (PRO IMAGE)
+    volumes:
+      - "localstack-data:/tmp/Prowd-localstack/data"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "./scripts/init-awslocal.sh:/etc/localstack/init/ready.d/init-awslocal.sh"
+
+volumes:
+  pg-data:
+    name: Prowd-postgres-data
+  localstack-data:
+    name: Prowd-localstack-data

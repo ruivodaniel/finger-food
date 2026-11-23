@@ -1,0 +1,23 @@
+{
+ "id": "term/core",
+ "kind": "term",
+ "title": "core",
+ "status": "converted",
+ "subjects": [
+  "main"
+ ],
+ "owner": "main/core",
+ "tags": [
+  "architecture"
+ ],
+ "paths": [
+  "apps/main"
+ ],
+ "term": {
+  "def": "The app itself: `apps/main/core`, beside `slices/` — its api, web and mobile. It mounts the [[slice|slices]] and wires them, and holds no application logic. The web core, `apps/main/core/web/src`, owns the [[shell]], the layouts, the routes and the one store.",
+  "aliases": [
+   "app main core"
+  ],
+  "proposed": true
+ }
+}

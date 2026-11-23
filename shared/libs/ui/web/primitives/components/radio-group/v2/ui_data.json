@@ -1,0 +1,233 @@
+{
+ "id": "ui-data-primitive-radio-group",
+ "version": 1,
+ "uiNodeId": "ui-node-primitive-radio-group",
+ "kind": "component",
+ "name": "primitive-radio-group",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "primitive-radio-group",
+  "version": 1,
+  "surface": "web",
+  "state": {
+   "state_value": "b",
+   "scale_sm_value": "sm",
+   "scale_md_value": "md",
+   "scale_lg_value": "lg"
+  },
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "align": "center",
+    "scale": "2xl"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "state \u2014 scale=\"md\""
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "RadioGroup",
+         "children": [
+          {
+           "type": "RadioGroupItem",
+           "props": {
+            "value": "a",
+            "data-testid": "radio-group-state-scale-md-1-radio"
+           }
+          },
+          {
+           "type": "RadioGroupItem",
+           "props": {
+            "value": "b",
+            "data-testid": "radio-group-state-scale-md-2-radio"
+           }
+          },
+          {
+           "type": "RadioGroupItem",
+           "props": {
+            "value": "c",
+            "disabled": true,
+            "data-testid": "radio-group-state-scale-md-3-radio"
+           }
+          }
+         ],
+         "on": {
+          "valueChange": [
+           {
+            "set": {
+             "state": "state_value",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "scale": "md",
+          "className": "flex flex-row gap-4",
+          "value": {
+           "bind": "state.state_value"
+          },
+          "data-testid": "radio-group-state-scale-md-4-radio"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "scale \u2014 all checked"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "RadioGroup",
+         "children": [
+          {
+           "type": "RadioGroupItem",
+           "props": {
+            "value": "sm",
+            "data-testid": "radio-group-scale-all-checked-1-radio"
+           }
+          }
+         ],
+         "on": {
+          "valueChange": [
+           {
+            "set": {
+             "state": "scale_sm_value",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "scale": "sm",
+          "className": "flex flex-row gap-4",
+          "value": {
+           "bind": "state.scale_sm_value"
+          },
+          "data-testid": "radio-group-scale-all-checked-2-radio"
+         }
+        },
+        {
+         "type": "RadioGroup",
+         "children": [
+          {
+           "type": "RadioGroupItem",
+           "props": {
+            "value": "md",
+            "data-testid": "radio-group-scale-all-checked-3-radio"
+           }
+          }
+         ],
+         "on": {
+          "valueChange": [
+           {
+            "set": {
+             "state": "scale_md_value",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "scale": "md",
+          "className": "flex flex-row gap-4",
+          "value": {
+           "bind": "state.scale_md_value"
+          },
+          "data-testid": "radio-group-scale-all-checked-4-radio"
+         }
+        },
+        {
+         "type": "RadioGroup",
+         "children": [
+          {
+           "type": "RadioGroupItem",
+           "props": {
+            "value": "lg",
+            "data-testid": "radio-group-scale-all-checked-5-radio"
+           }
+          }
+         ],
+         "on": {
+          "valueChange": [
+           {
+            "set": {
+             "state": "scale_lg_value",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "scale": "lg",
+          "className": "flex flex-row gap-4",
+          "value": {
+           "bind": "state.scale_lg_value"
+          },
+          "data-testid": "radio-group-scale-all-checked-6-radio"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

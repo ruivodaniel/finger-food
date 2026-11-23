@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-primitive-avatar-generator-default",
+ "version": 1,
+ "uiDataId": "ui-data-primitive-avatar-generator",
+ "name": "default",
+ "title": "AvatarGenerator, a kind from each group",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

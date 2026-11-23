@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-primitive-chart-legend",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Chart legend"
+}

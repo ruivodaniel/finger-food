@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-component-table-stacked-cells-invoices-invoicerow",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "InvoiceRow"
+}

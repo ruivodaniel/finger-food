@@ -1,0 +1,136 @@
+{
+ "id": "ui-data-pattern-layout-triple-sidebar-tabs-layout-triplesidebartabslayout",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-layout-triple-sidebar-tabs-layout-triplesidebartabslayout",
+ "kind": "component",
+ "name": "TripleSidebarTabsLayout",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "TripleSidebarTabsLayout",
+  "version": 1,
+  "surface": "web",
+  "params": [
+   "away"
+  ],
+  "emits": [
+   "scrollDirection"
+  ],
+  "slots": [
+   "pageHeader",
+   "secondPageHeader",
+   "pageLeftSidebar",
+   "mainBody",
+   "mainRightSidebar"
+  ],
+  "root": {
+   "type": "Page",
+   "children": [
+    {
+     "type": "PageHeader",
+     "props": {
+      "away": {
+       "bind": "away.pageHeader"
+      }
+     },
+     "children": [
+      {
+       "type": "Slot",
+       "props": {
+        "name": "pageHeader"
+       }
+      }
+     ]
+    },
+    {
+     "type": "SecondPageHeader",
+     "props": {
+      "away": {
+       "bind": "away.secondPageHeader"
+      }
+     },
+     "children": [
+      {
+       "type": "Slot",
+       "props": {
+        "name": "secondPageHeader"
+       }
+      }
+     ]
+    },
+    {
+     "type": "PageBody",
+     "children": [
+      {
+       "type": "PageLeftSidebar",
+       "props": {
+        "away": {
+         "bind": "away.pageLeftSidebar"
+        }
+       },
+       "children": [
+        {
+         "type": "Slot",
+         "props": {
+          "name": "pageLeftSidebar"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Main",
+       "children": [
+        {
+         "type": "MainContent",
+         "children": [
+          {
+           "type": "MainBody",
+           "on": {
+            "scrollDirection": [
+             {
+              "emit": {
+               "event": "scrollDirection",
+               "payload": {
+                "direction": {
+                 "bind": "event"
+                }
+               }
+              }
+             }
+            ]
+           },
+           "children": [
+            {
+             "type": "Slot",
+             "props": {
+              "name": "mainBody"
+             }
+            }
+           ]
+          },
+          {
+           "type": "MainRightSidebar",
+           "props": {
+            "away": {
+             "bind": "away.mainRightSidebar"
+            }
+           },
+           "children": [
+            {
+             "type": "Slot",
+             "props": {
+              "name": "mainRightSidebar"
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

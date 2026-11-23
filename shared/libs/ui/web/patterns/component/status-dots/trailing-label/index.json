@@ -1,0 +1,248 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "trailing-label",
+ "version": 1,
+ "surface": "web",
+ "measure": "md",
+ "root": {
+  "type": "Stack",
+  "props": {
+   "dir": "col",
+   "gap": 8,
+   "className": "w-full max-w-md"
+  },
+  "children": [
+   {
+    "type": "Stack",
+    "props": {
+     "dir": "row",
+     "justify": "between",
+     "align": "center",
+     "className": "w-full"
+    },
+    "children": [
+     {
+      "type": "Text",
+      "props": {
+       "as": "span",
+       "element": "type--body-small",
+       "children": "Signature with an authorised role is accepted"
+      }
+     },
+     {
+      "type": "Stack",
+      "props": {
+       "dir": "row",
+       "gap": 6,
+       "align": "center"
+      },
+      "children": [
+       {
+        "type": "Badge",
+        "props": {
+         "status": "success",
+         "scale": "3xs"
+        }
+       },
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--body-extra-small",
+         "status": "success",
+         "className": "capitalize",
+         "children": "pass"
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Stack",
+    "props": {
+     "dir": "row",
+     "justify": "between",
+     "align": "center",
+     "className": "w-full"
+    },
+    "children": [
+     {
+      "type": "Text",
+      "props": {
+       "as": "span",
+       "element": "type--body-small",
+       "children": "Signature with an unauthorised role is rejected"
+      }
+     },
+     {
+      "type": "Stack",
+      "props": {
+       "dir": "row",
+       "gap": 6,
+       "align": "center"
+      },
+      "children": [
+       {
+        "type": "Badge",
+        "props": {
+         "status": "error",
+         "scale": "3xs"
+        }
+       },
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--body-extra-small",
+         "status": "error",
+         "className": "capitalize",
+         "children": "fail"
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Stack",
+    "props": {
+     "dir": "row",
+     "justify": "between",
+     "align": "center",
+     "className": "w-full"
+    },
+    "children": [
+     {
+      "type": "Text",
+      "props": {
+       "as": "span",
+       "element": "type--body-small",
+       "children": "Batch start records signature, user and timestamp"
+      }
+     },
+     {
+      "type": "Stack",
+      "props": {
+       "dir": "row",
+       "gap": 6,
+       "align": "center"
+      },
+      "children": [
+       {
+        "type": "Badge",
+        "props": {
+         "status": "info",
+         "scale": "3xs"
+        }
+       },
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--body-extra-small",
+         "status": "info",
+         "className": "capitalize",
+         "children": "note"
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Stack",
+    "props": {
+     "dir": "row",
+     "justify": "between",
+     "align": "center",
+     "className": "w-full"
+    },
+    "children": [
+     {
+      "type": "Text",
+      "props": {
+       "as": "span",
+       "element": "type--body-small",
+       "children": "Deviation raised requires review before continuing"
+      }
+     },
+     {
+      "type": "Stack",
+      "props": {
+       "dir": "row",
+       "gap": 6,
+       "align": "center"
+      },
+      "children": [
+       {
+        "type": "Badge",
+        "props": {
+         "status": "warning",
+         "scale": "3xs"
+        }
+       },
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--body-extra-small",
+         "status": "warning",
+         "className": "capitalize",
+         "children": "flag"
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Stack",
+    "props": {
+     "dir": "row",
+     "justify": "between",
+     "align": "center",
+     "className": "w-full"
+    },
+    "children": [
+     {
+      "type": "Text",
+      "props": {
+       "as": "span",
+       "element": "type--body-small",
+       "children": "Recipe selection loads the approved recipe"
+      }
+     },
+     {
+      "type": "Stack",
+      "props": {
+       "dir": "row",
+       "gap": 6,
+       "align": "center"
+      },
+      "children": [
+       {
+        "type": "Badge",
+        "props": {
+         "status": "neutral",
+         "scale": "3xs"
+        }
+       },
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--body-extra-small",
+         "status": "neutral",
+         "className": "capitalize",
+         "children": "not run"
+        }
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

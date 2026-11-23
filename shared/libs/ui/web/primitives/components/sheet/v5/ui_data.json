@@ -1,0 +1,864 @@
+{
+ "id": "ui-data-primitive-sheet-v3",
+ "version": 3,
+ "uiNodeId": "ui-node-primitive-sheet-v3",
+ "kind": "component",
+ "name": "primitive-sheet",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "primitive-sheet",
+  "version": 3,
+  "surface": "web",
+  "state": {
+   "right_sm": false,
+   "right_md": false,
+   "right_lg": false,
+   "right_xl": false,
+   "left_md": false,
+   "top_md": false,
+   "bottom_md": false,
+   "right_2xl": false,
+   "right_3xl": false
+  },
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "row",
+    "align": "center",
+    "scale": "md",
+    "wrap": true
+   },
+   "children": [
+    {
+     "type": "Sheet",
+     "props": {
+      "open": {
+       "bind": "state.right_sm"
+      },
+      "data-testid": "sheet-right-sm-dialog"
+     },
+     "on": {
+      "openChange": [
+       {
+        "set": {
+         "state": "right_sm",
+         "to": {
+          "bind": "event"
+         }
+        }
+       }
+      ]
+     },
+     "children": [
+      {
+       "type": "SheetTrigger",
+       "props": {
+        "asChild": true
+       },
+       "children": [
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "secondary",
+          "children": "right, sm",
+          "data-testid": "sheet-right-sm-open-btn"
+         }
+        }
+       ]
+      },
+      {
+       "type": "SheetContent",
+       "props": {
+        "side": "right",
+        "scale": "sm"
+       },
+       "children": [
+        {
+         "type": "Content",
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col",
+            "scale": "md"
+           },
+           "children": [
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "sm"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "md"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "md"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "md"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "lg"
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Sheet",
+     "props": {
+      "open": {
+       "bind": "state.right_md"
+      },
+      "data-testid": "sheet-right-md-dialog"
+     },
+     "on": {
+      "openChange": [
+       {
+        "set": {
+         "state": "right_md",
+         "to": {
+          "bind": "event"
+         }
+        }
+       }
+      ]
+     },
+     "children": [
+      {
+       "type": "SheetTrigger",
+       "props": {
+        "asChild": true
+       },
+       "children": [
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "secondary",
+          "children": "right, md",
+          "data-testid": "sheet-right-md-open-btn"
+         }
+        }
+       ]
+      },
+      {
+       "type": "SheetContent",
+       "props": {
+        "side": "right",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Content",
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col",
+            "scale": "md"
+           },
+           "children": [
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "sm"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "md"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "md"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "md"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "lg"
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Sheet",
+     "props": {
+      "open": {
+       "bind": "state.right_lg"
+      },
+      "data-testid": "sheet-right-lg-dialog"
+     },
+     "on": {
+      "openChange": [
+       {
+        "set": {
+         "state": "right_lg",
+         "to": {
+          "bind": "event"
+         }
+        }
+       }
+      ]
+     },
+     "children": [
+      {
+       "type": "SheetTrigger",
+       "props": {
+        "asChild": true
+       },
+       "children": [
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "secondary",
+          "children": "right, lg",
+          "data-testid": "sheet-right-lg-open-btn"
+         }
+        }
+       ]
+      },
+      {
+       "type": "SheetContent",
+       "props": {
+        "side": "right",
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "Content",
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col",
+            "scale": "md"
+           },
+           "children": [
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "sm"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "md"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "md"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "md"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "lg"
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Sheet",
+     "props": {
+      "open": {
+       "bind": "state.right_xl"
+      },
+      "data-testid": "sheet-right-xl-dialog"
+     },
+     "on": {
+      "openChange": [
+       {
+        "set": {
+         "state": "right_xl",
+         "to": {
+          "bind": "event"
+         }
+        }
+       }
+      ]
+     },
+     "children": [
+      {
+       "type": "SheetTrigger",
+       "props": {
+        "asChild": true
+       },
+       "children": [
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "secondary",
+          "children": "right, xl",
+          "data-testid": "sheet-right-xl-open-btn"
+         }
+        }
+       ]
+      },
+      {
+       "type": "SheetContent",
+       "props": {
+        "side": "right",
+        "scale": "xl"
+       },
+       "children": [
+        {
+         "type": "Content",
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col",
+            "scale": "md"
+           },
+           "children": [
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "sm"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "md"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "md"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "md"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "lg"
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Sheet",
+     "props": {
+      "open": {
+       "bind": "state.right_2xl"
+      },
+      "data-testid": "sheet-right-2xl-dialog"
+     },
+     "on": {
+      "openChange": [
+       {
+        "set": {
+         "state": "right_2xl",
+         "to": {
+          "bind": "event"
+         }
+        }
+       }
+      ]
+     },
+     "children": [
+      {
+       "type": "SheetTrigger",
+       "props": {
+        "asChild": true
+       },
+       "children": [
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "secondary",
+          "children": "right, 2xl",
+          "data-testid": "sheet-right-2xl-open-btn"
+         }
+        }
+       ]
+      },
+      {
+       "type": "SheetContent",
+       "props": {
+        "side": "right",
+        "scale": "2xl"
+       },
+       "children": [
+        {
+         "type": "Content",
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col",
+            "scale": "md"
+           },
+           "children": [
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "sm"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "md"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "md"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "md"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "lg"
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Sheet",
+     "props": {
+      "open": {
+       "bind": "state.right_3xl"
+      },
+      "data-testid": "sheet-right-3xl-dialog"
+     },
+     "on": {
+      "openChange": [
+       {
+        "set": {
+         "state": "right_3xl",
+         "to": {
+          "bind": "event"
+         }
+        }
+       }
+      ]
+     },
+     "children": [
+      {
+       "type": "SheetTrigger",
+       "props": {
+        "asChild": true
+       },
+       "children": [
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "secondary",
+          "children": "right, 3xl",
+          "data-testid": "sheet-right-3xl-open-btn"
+         }
+        }
+       ]
+      },
+      {
+       "type": "SheetContent",
+       "props": {
+        "side": "right",
+        "scale": "3xl"
+       },
+       "children": [
+        {
+         "type": "Content",
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col",
+            "scale": "md"
+           },
+           "children": [
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "sm"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "md"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "md"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "md"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "lg"
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Sheet",
+     "props": {
+      "open": {
+       "bind": "state.left_md"
+      },
+      "data-testid": "sheet-left-md-dialog"
+     },
+     "on": {
+      "openChange": [
+       {
+        "set": {
+         "state": "left_md",
+         "to": {
+          "bind": "event"
+         }
+        }
+       }
+      ]
+     },
+     "children": [
+      {
+       "type": "SheetTrigger",
+       "props": {
+        "asChild": true
+       },
+       "children": [
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "secondary",
+          "children": "left, md",
+          "data-testid": "sheet-left-md-open-btn"
+         }
+        }
+       ]
+      },
+      {
+       "type": "SheetContent",
+       "props": {
+        "side": "left",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Content",
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col",
+            "scale": "md"
+           },
+           "children": [
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "sm"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "md"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "md"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "md"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "lg"
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Sheet",
+     "props": {
+      "open": {
+       "bind": "state.top_md"
+      },
+      "data-testid": "sheet-top-md-dialog"
+     },
+     "on": {
+      "openChange": [
+       {
+        "set": {
+         "state": "top_md",
+         "to": {
+          "bind": "event"
+         }
+        }
+       }
+      ]
+     },
+     "children": [
+      {
+       "type": "SheetTrigger",
+       "props": {
+        "asChild": true
+       },
+       "children": [
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "secondary",
+          "children": "top, md",
+          "data-testid": "sheet-top-md-open-btn"
+         }
+        }
+       ]
+      },
+      {
+       "type": "SheetContent",
+       "props": {
+        "side": "top",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Content",
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col",
+            "scale": "md"
+           },
+           "children": [
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "sm"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "md"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "md"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "md"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "lg"
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Sheet",
+     "props": {
+      "open": {
+       "bind": "state.bottom_md"
+      },
+      "data-testid": "sheet-bottom-md-dialog"
+     },
+     "on": {
+      "openChange": [
+       {
+        "set": {
+         "state": "bottom_md",
+         "to": {
+          "bind": "event"
+         }
+        }
+       }
+      ]
+     },
+     "children": [
+      {
+       "type": "SheetTrigger",
+       "props": {
+        "asChild": true
+       },
+       "children": [
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "secondary",
+          "children": "bottom, md",
+          "data-testid": "sheet-bottom-md-open-btn"
+         }
+        }
+       ]
+      },
+      {
+       "type": "SheetContent",
+       "props": {
+        "side": "bottom",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Content",
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col",
+            "scale": "md"
+           },
+           "children": [
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "sm"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "md"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "md"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "md"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "lg"
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

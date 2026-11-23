@@ -1,0 +1,24 @@
+{
+ "id": "doc/skill-write-a-pattern",
+ "kind": "doc",
+ "title": "write a pattern",
+ "status": "todo",
+ "subject": "skills",
+ "owner": "skills/seed-contributor/libs-ui",
+ "tags": [
+  "skills",
+  "seed-contributor",
+  "libs-ui"
+ ],
+ "paths": [],
+ "summary": "",
+ "docId": "skill-write-a-pattern",
+ "doc": {
+  "axioms": [],
+  "purpose": {},
+  "reference": []
+ },
+ "audience": [
+  "seed-contributor"
+ ]
+}

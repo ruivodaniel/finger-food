@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-primitive-chart-toolbar-default",
+ "version": 1,
+ "uiDataId": "ui-data-primitive-chart-toolbar",
+ "name": "default",
+ "title": "Chart toolbar, its cases",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

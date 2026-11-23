@@ -1,0 +1,22 @@
+{
+ "id": "term/part-zone",
+ "kind": "term",
+ "title": "part zone",
+ "status": "approved",
+ "subjects": [
+  "ui"
+ ],
+ "owner": "libs/ui",
+ "tags": [
+  "ui"
+ ],
+ "paths": [
+  "shared/libs/ui/web/primitives/components/parts",
+  "shared/libs/ui/web/primitives/components/stack"
+ ],
+ "term": {
+  "def": "A surface that divides a container: header, content, footer, stack, tile, alert, empty state, separator, the rows. Takes its width from the container, bleeds its padding and takes the container's padding on the bled edges. Never placed in a layout zone on its own. Holds primitives, part zones or a container zone.",
+  "aliases": [],
+  "proposed": true
+ }
+}

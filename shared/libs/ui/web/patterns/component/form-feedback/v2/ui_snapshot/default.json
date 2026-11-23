@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-form-feedback-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-form-feedback",
+ "name": "default",
+ "title": "Form feedback",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-component-container-footer-2-with-a-summary",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Container footer 2: a summary stands at the left, after the action that backs out"
+}

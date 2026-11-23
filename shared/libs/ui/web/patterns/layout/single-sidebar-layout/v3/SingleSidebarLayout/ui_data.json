@@ -1,0 +1,96 @@
+{
+ "id": "ui-data-pattern-layout-single-sidebar-layout-singlesidebarlayout",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-layout-single-sidebar-layout-singlesidebarlayout",
+ "kind": "component",
+ "name": "SingleSidebarLayout",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "SingleSidebarLayout",
+  "version": 1,
+  "surface": "web",
+  "params": [
+   "scale",
+   "away"
+  ],
+  "emits": [
+   "scrollDirection"
+  ],
+  "slots": [
+   "pageHeader",
+   "mainContainer"
+  ],
+  "root": {
+   "type": "Page",
+   "children": [
+    {
+     "type": "PageHeader",
+     "props": {
+      "away": {
+       "bind": "away.pageHeader"
+      }
+     },
+     "children": [
+      {
+       "type": "Slot",
+       "props": {
+        "name": "pageHeader"
+       }
+      }
+     ]
+    },
+    {
+     "type": "PageBody",
+     "children": [
+      {
+       "type": "Main",
+       "children": [
+        {
+         "type": "MainContent",
+         "children": [
+          {
+           "type": "MainBody",
+           "on": {
+            "scrollDirection": [
+             {
+              "emit": {
+               "event": "scrollDirection",
+               "payload": {
+                "direction": {
+                 "bind": "event"
+                }
+               }
+              }
+             }
+            ]
+           },
+           "children": [
+            {
+             "type": "MainContainer",
+             "props": {
+              "scale": {
+               "bind": "scale"
+              }
+             },
+             "children": [
+              {
+               "type": "Slot",
+               "props": {
+                "name": "mainContainer"
+               }
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

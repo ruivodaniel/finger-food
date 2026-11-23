@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-cards-and-panels-automation-card-default-v3",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-cards-and-panels-automation-card-v3",
+ "name": "default",
+ "title": "Cards and panels: automation card",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

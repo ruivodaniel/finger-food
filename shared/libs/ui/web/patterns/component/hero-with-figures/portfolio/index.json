@@ -1,0 +1,261 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "portfolio",
+ "version": 1,
+ "surface": "web",
+ "measure": "lg",
+ "root": {
+  "type": "Stack",
+  "props": {
+   "dir": "col",
+   "gap": 0,
+   "concept": "hero",
+   "className": "w-full max-w-5xl"
+  },
+  "children": [
+   {
+    "type": "Card",
+    "props": {
+     "emphasis": "hero",
+     "className": "w-full"
+    },
+    "children": [
+     {
+      "type": "Content",
+      "children": [
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "gap": 48,
+         "align": "center",
+         "className": "w-full"
+        },
+        "children": [
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "col",
+           "gap": 14,
+           "size": "fill"
+          },
+          "children": [
+           {
+            "type": "Label",
+            "props": {
+             "children": "Tuesday 30 October · 4 properties · 2 open applications"
+            }
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "h2",
+             "element": "type--heading1",
+             "children": "Good morning, Sarah. Your portfolio is up 4.2% this quarter."
+            }
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "p",
+             "element": "type--body",
+             "children": "Two lenders reprice on Friday and one application is waiting on company accounts. Rates were refreshed this morning at 6:00; the 5-year fixed on 14 Clifton Road is still the cheapest in the market for your circumstances."
+            }
+           },
+           {
+            "type": "Stack",
+            "props": {
+             "dir": "row",
+             "gap": 12,
+             "align": "center",
+             "className": "pt-2"
+            },
+            "children": [
+             {
+              "type": "Button",
+              "props": {
+               "emphasis": "primary",
+               "children": "Review applications"
+              }
+             },
+             {
+              "type": "Button",
+              "props": {
+               "emphasis": "secondary",
+               "children": "Read the quarterly report"
+              }
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "col",
+           "gap": 0,
+           "size": "fixed",
+           "className": "w-2/5",
+           "concept": "stats"
+          },
+          "children": [
+           {
+            "type": "Tile",
+            "props": {
+             "className": "w-full"
+            },
+            "children": [
+             {
+              "type": "Stack",
+              "props": {
+               "dir": "row",
+               "gap": 16,
+               "justify": "between",
+               "align": "baseline",
+               "className": "w-full"
+              },
+              "children": [
+               {
+                "type": "Text",
+                "props": {
+                 "as": "span",
+                 "element": "type--body-small",
+                 "children": "Next review",
+                 "emphasis": "quiet"
+                }
+               },
+               {
+                "type": "Text",
+                "props": {
+                 "as": "span",
+                 "element": "type--heading2",
+                 "children": "Fri 2 Nov"
+                }
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "type": "Tile",
+            "props": {
+             "className": "w-full"
+            },
+            "children": [
+             {
+              "type": "Stack",
+              "props": {
+               "dir": "row",
+               "gap": 16,
+               "justify": "between",
+               "align": "baseline",
+               "className": "w-full"
+              },
+              "children": [
+               {
+                "type": "Text",
+                "props": {
+                 "as": "span",
+                 "element": "type--body-small",
+                 "children": "Open tasks",
+                 "emphasis": "quiet"
+                }
+               },
+               {
+                "type": "Text",
+                "props": {
+                 "as": "span",
+                 "element": "type--heading2",
+                 "children": "5"
+                }
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "type": "Tile",
+            "props": {
+             "className": "w-full"
+            },
+            "children": [
+             {
+              "type": "Stack",
+              "props": {
+               "dir": "row",
+               "gap": 16,
+               "justify": "between",
+               "align": "baseline",
+               "className": "w-full"
+              },
+              "children": [
+               {
+                "type": "Text",
+                "props": {
+                 "as": "span",
+                 "element": "type--body-small",
+                 "children": "Cheapest 5-year fixed",
+                 "emphasis": "quiet"
+                }
+               },
+               {
+                "type": "Text",
+                "props": {
+                 "as": "span",
+                 "element": "type--heading2",
+                 "children": "4.19%"
+                }
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "type": "Tile",
+            "props": {
+             "className": "w-full"
+            },
+            "children": [
+             {
+              "type": "Stack",
+              "props": {
+               "dir": "row",
+               "gap": 16,
+               "justify": "between",
+               "align": "baseline",
+               "className": "w-full"
+              },
+              "children": [
+               {
+                "type": "Text",
+                "props": {
+                 "as": "span",
+                 "element": "type--body-small",
+                 "children": "Rates updated",
+                 "emphasis": "quiet"
+                }
+               },
+               {
+                "type": "Text",
+                "props": {
+                 "as": "span",
+                 "element": "type--heading2",
+                 "children": "06:00"
+                }
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

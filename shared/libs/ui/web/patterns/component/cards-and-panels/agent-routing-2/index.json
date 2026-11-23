@@ -1,0 +1,183 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "agent-routing-2",
+ "version": 1,
+ "surface": "web",
+ "measure": "md",
+ "root": {
+  "type": "Card",
+  "props": {
+   "status": "info"
+  },
+  "children": [
+   {
+    "type": "Header",
+    "props": {},
+    "children": [
+     {
+      "type": "Stack",
+      "props": {
+       "dir": "row",
+       "gap": 14,
+       "align": "center"
+      },
+      "children": [
+       {
+        "type": "Avatar",
+        "props": {
+         "scale": "md"
+        },
+        "children": [
+         {
+          "type": "AvatarFallback",
+          "props": {},
+          "children": [
+           {
+            "type": "Icon",
+            "props": {
+             "name": "star",
+             "size": "sm"
+            }
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--heading4",
+         "children": "Agent Routing"
+        }
+       },
+       {
+        "type": "Badge",
+        "props": {
+         "emphasis": "secondary",
+         "status": "info",
+         "children": "Routing…"
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Content",
+    "props": {},
+    "children": [
+     {
+      "type": "Stack",
+      "props": {
+       "dir": "col",
+       "gap": 16
+      },
+      "children": [
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "col",
+         "gap": 8
+        },
+        "children": [
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--body-extra-small",
+           "emphasis": "quiet",
+           "children": "INPUT"
+          }
+         },
+         {
+          "type": "Tile",
+          "props": {
+           "emphasis": "quiet"
+          },
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body",
+             "children": "What is the weather like today?"
+            }
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "gap": 24,
+         "align": "end"
+        },
+        "children": [
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "row",
+           "justify": "center",
+           "className": "w-24"
+          },
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body",
+             "status": "info"
+            },
+            "children": [
+             {
+              "type": "Icon",
+              "props": {
+               "name": "arrowRight",
+               "size": "md"
+              }
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "col",
+           "gap": 8
+          },
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body-extra-small",
+             "emphasis": "quiet",
+             "children": "TARGET AGENT"
+            }
+           },
+           {
+            "type": "Chip",
+            "props": {
+             "emphasis": "tertiary",
+             "closable": false,
+             "showIcon": true,
+             "iconName": "loading",
+             "children": "Determining…"
+            }
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-layout-double-sidebar-layout-doublesidebarlayout",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "DoubleSidebarLayout"
+}

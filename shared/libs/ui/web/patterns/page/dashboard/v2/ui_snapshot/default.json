@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-page-dashboard-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-page-dashboard",
+ "name": "default",
+ "title": "Dashboard",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

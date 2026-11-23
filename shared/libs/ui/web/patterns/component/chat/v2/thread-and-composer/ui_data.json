@@ -1,0 +1,277 @@
+{
+ "id": "ui-data-pattern-component-chat-thread-and-composer",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-chat-thread-and-composer",
+ "kind": "component",
+ "name": "thread-and-composer",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "thread-and-composer",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "state": {
+   "message": ""
+  },
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "className": "w-full max-w-md",
+    "scale": "md"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "scale": "md"
+     },
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "start",
+        "justify": "start",
+        "data-testid": "msg-m1",
+        "scale": "sm"
+       },
+       "children": [
+        {
+         "type": "Avatar",
+         "props": {
+          "scale": "xs"
+         },
+         "children": [
+          {
+           "type": "AvatarFallback",
+           "props": {},
+           "children": [
+            {
+             "type": "Icon",
+             "props": {
+              "name": "bot",
+              "size": "xs"
+             }
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "col",
+          "className": "max-w-[82%]",
+          "scale": "2xs"
+         },
+         "children": [
+          {
+           "type": "Tile",
+           "props": {
+            "emphasis": "quiet",
+            "className": "px-3 py-2"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--body-small",
+              "children": "I drafted the FAT protocol outline from the run — 6 sections. Reorder or drop them, then tell me when you're ready."
+             }
+            }
+           ]
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-extra-small",
+            "emphasis": "quiet",
+            "children": "dAInta · 09:14"
+           }
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "start",
+        "justify": "end",
+        "data-testid": "msg-m2",
+        "scale": "sm"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "col",
+          "className": "max-w-[82%]",
+          "scale": "2xs"
+         },
+         "children": [
+          {
+           "type": "Tile",
+           "props": {
+            "emphasis": "secondary",
+            "className": "px-3 py-2"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--body-small",
+              "children": "Move Deviations above Test cases."
+             }
+            }
+           ]
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-extra-small",
+            "emphasis": "quiet",
+            "className": "text-right",
+            "children": "09:15"
+           }
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "start",
+        "justify": "start",
+        "data-testid": "msg-m3",
+        "scale": "sm"
+       },
+       "children": [
+        {
+         "type": "Avatar",
+         "props": {
+          "scale": "xs"
+         },
+         "children": [
+          {
+           "type": "AvatarFallback",
+           "props": {},
+           "children": [
+            {
+             "type": "Icon",
+             "props": {
+              "name": "bot",
+              "size": "xs"
+             }
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "col",
+          "className": "max-w-[82%]",
+          "scale": "2xs"
+         },
+         "children": [
+          {
+           "type": "Tile",
+           "props": {
+            "emphasis": "quiet",
+            "className": "px-3 py-2"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--body-small",
+              "children": "Done. Deviations now precedes the test cases. Ready to preview when you are."
+             }
+            }
+           ]
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-extra-small",
+            "emphasis": "quiet",
+            "children": "dAInta · 09:15"
+           }
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "className": "w-full",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Textarea",
+       "props": {
+        "placeholder": "Message dAInta…",
+        "value": {
+         "bind": "state.message"
+        },
+        "minRows": 1,
+        "maxRows": 4,
+        "autoSize": true,
+        "data-testid": "chat-message-input"
+       },
+       "on": {
+        "change": [
+         {
+          "set": {
+           "state": "message",
+           "to": {
+            "bind": "event"
+           }
+          }
+         }
+        ]
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "justify": "end"
+       },
+       "children": [
+        {
+         "type": "Button",
+         "props": {
+          "children": "Send",
+          "emphasis": "primary",
+          "scale": "sm",
+          "data-testid": "chat-send-btn"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

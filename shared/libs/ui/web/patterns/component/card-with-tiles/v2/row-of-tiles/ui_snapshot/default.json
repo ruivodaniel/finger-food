@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-card-with-tiles-row-of-tiles-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-card-with-tiles-row-of-tiles",
+ "name": "default",
+ "title": "Card with tiles: row of tiles",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

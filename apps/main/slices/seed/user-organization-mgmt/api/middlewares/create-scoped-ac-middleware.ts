@@ -19,8 +19,7 @@
 
 import type { MiddlewareHandler } from "hono";
 
-import type { Ac, GatedDb, SchemaTables } from "@libs/gated-scoped-ac";
-import type { ScopedAcBag } from "../shared/scoped-ac";
+import type { Ac, GatedDb, SchemaTables, ScopedAcBag, ScopedAcRequestContext } from "@libs/gated-scoped-ac";
 import type { ScopedAcEnv } from "../types";
 
 export interface CreateScopedAcMiddlewareOptions {
@@ -39,8 +38,6 @@ export interface CreateScopedAcMiddlewareOptions {
 export function createScopedAcMiddleware(
   options: CreateScopedAcMiddlewareOptions,
 ): MiddlewareHandler<ScopedAcEnv> {
-  const { engine, gatedDb, baselineRoles } = options;
-
   return async (c, next) => {
     const user = c.get("user");
     const session = c.get("session");
@@ -57,34 +54,47 @@ export function createScopedAcMiddleware(
         null)
       : null;
 
-    const bag: ScopedAcBag = {
-      session: {
-        user: { id: user.id },
-        organization: activeMembership
-          ? {
-              id: activeMembership.organizationId,
-              type: activeMembership.orgType,
-            }
-          : null,
-      },
-    };
-
-    // Baseline roles always; the active org's membership roles only when an org
-    // is in context (AC16/AC19).
-    const roles = [...baselineRoles, ...(activeMembership?.roles ?? [])];
-
-    // Resolve permissions ONCE here (AC14); downstream layers receive the result.
-    const permissions = engine.resolveEffectivePermissions(roles, bag);
-
-    c.set("scopedAc", {
-      bag,
-      roles,
-      permissions,
-      // The bag-bound handle is the only way to reach the DB under a Scope (AC41).
-      // No repo/service consumes it yet — this commit only makes it available.
-      gateDb: gatedDb(bag),
-    });
+    c.set("scopedAc", buildScopedAc(options, user.id, activeMembership));
 
     await next();
   };
+}
+
+/**
+ * The AC context of a signed-in user acting in `activeMembership`'s org (null:
+ * no active org). Every request's context is built here; registration builds
+ * the new user's here too, so both get the same bag and permissions.
+ */
+export function buildScopedAc(
+  options: CreateScopedAcMiddlewareOptions,
+  userId: string,
+  activeMembership: {
+    organizationId: string;
+    orgType: string;
+    roles: string[];
+  } | null,
+): ScopedAcRequestContext {
+  const { engine, gatedDb, baselineRoles } = options;
+
+  const bag: ScopedAcBag = {
+    session: {
+      user: { id: userId },
+      organization: activeMembership
+        ? {
+            id: activeMembership.organizationId,
+            type: activeMembership.orgType,
+          }
+        : null,
+    },
+  };
+
+  // Baseline roles always; the active org's membership roles only when an org
+  // is in context (AC16/AC19).
+  const roles = [...baselineRoles, ...(activeMembership?.roles ?? [])];
+
+  // Resolve permissions ONCE here (AC14); downstream layers receive the result.
+  const permissions = engine.resolveEffectivePermissions(roles, bag);
+
+  // The bag-bound handle is the only way to reach the DB under a Scope (AC41).
+  return { bag, roles, permissions, gateDb: gatedDb(bag) };
 }

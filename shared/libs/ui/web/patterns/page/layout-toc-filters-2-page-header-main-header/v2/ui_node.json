@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-page-layout-toc-filters-2-page-header-main-header",
+ "version": 1,
+ "type": "screen",
+ "surface": "web",
+ "title": "Page header, then page left sidebar and a main with its own header"
+}

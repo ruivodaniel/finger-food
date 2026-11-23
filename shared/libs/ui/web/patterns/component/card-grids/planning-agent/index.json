@@ -1,0 +1,160 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "planning-agent",
+ "version": 1,
+ "surface": "web",
+ "measure": "md",
+ "root": {
+  "type": "Card",
+  "props": {},
+  "children": [
+   {
+    "type": "Content",
+    "props": {},
+    "children": [
+     {
+      "type": "Stack",
+      "props": {
+       "dir": "col",
+       "gap": 14
+      },
+      "children": [
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "align": "start",
+         "justify": "between",
+         "gap": 12
+        },
+        "children": [
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "row",
+           "align": "center",
+           "gap": 14
+          },
+          "children": [
+           {
+            "type": "Avatar",
+            "props": {
+             "scale": "md"
+            },
+            "children": [
+             {
+              "type": "AvatarFallback",
+              "props": {},
+              "children": [
+               {
+                "type": "Icon",
+                "props": {
+                 "name": "bot",
+                 "size": "sm"
+                }
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "type": "Stack",
+            "props": {
+             "dir": "col",
+             "gap": 2
+            },
+            "children": [
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--heading4",
+               "children": "Planning Agent"
+              }
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "Badge",
+          "props": {
+           "emphasis": "quiet",
+           "status": "success"
+          },
+          "children": [
+           {
+            "type": "Badge",
+            "props": {
+             "scale": "3xs",
+             "concept": "dot",
+             "status": "success"
+            }
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body-extra-small",
+             "children": "Active"
+            }
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--body",
+         "emphasis": "quiet",
+         "children": "Breaks down complex tasks and creates execution plans"
+        }
+       },
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "align": "center",
+         "gap": 8,
+         "wrap": true
+        },
+        "children": [
+         {
+          "type": "Chip",
+          "props": {
+           "emphasis": "tertiary",
+           "scale": "sm",
+           "closable": false,
+           "children": "Task Decomposition"
+          }
+         },
+         {
+          "type": "Chip",
+          "props": {
+           "emphasis": "tertiary",
+           "scale": "sm",
+           "closable": false,
+           "children": "Scheduling"
+          }
+         },
+         {
+          "type": "Chip",
+          "props": {
+           "emphasis": "tertiary",
+           "scale": "sm",
+           "closable": false,
+           "children": "Prioritization"
+          }
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

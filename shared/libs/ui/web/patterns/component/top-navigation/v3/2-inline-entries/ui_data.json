@@ -1,0 +1,74 @@
+{
+ "id": "ui-data-pattern-component-top-navigation-2-inline-entries",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-top-navigation-2-inline-entries",
+ "kind": "component",
+ "name": "top-navigation-2-inline-entries",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "top-navigation-2-inline-entries",
+  "version": 1,
+  "surface": "web",
+  "state": {
+   "current": "dashboard",
+   "org": "org-acme-corp",
+   "mode": "light"
+  },
+  "root": {
+   "use": {
+    "component": "TopNavigationScreen",
+    "version": "latest"
+   },
+   "args": {
+    "current": {
+     "bind": "state.current"
+    },
+    "org": {
+     "bind": "state.org"
+    },
+    "mode": {
+     "bind": "state.mode"
+    },
+    "text": "Every entry stands in the bar, group after group. No organizations and no colour mode.",
+    "groupsAs": "inline",
+    "account": "separate",
+    "withOrganizations": false,
+    "withModes": false,
+    "unread": -1
+   },
+   "on": {
+    "navigate": [
+     {
+      "set": {
+       "state": "current",
+       "to": {
+        "bind": "event.id"
+       }
+      }
+     }
+    ],
+    "organizationChange": [
+     {
+      "set": {
+       "state": "org",
+       "to": {
+        "bind": "event.id"
+       }
+      }
+     }
+    ],
+    "modeChange": [
+     {
+      "set": {
+       "state": "mode",
+       "to": {
+        "bind": "event.id"
+       }
+      }
+     }
+    ]
+   }
+  }
+ }
+}

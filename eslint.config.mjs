@@ -43,12 +43,12 @@ export default tseslint.config(
   // ── i18n: catch hardcoded user-facing strings in JSX ──────────
   {
     files: [
-      "apps/main/shared/web/src/**/*.tsx",
-      "apps/main/shared/mobile/src/**/*.tsx",
+      "apps/main/core/web/src/**/*.tsx",
+      "apps/main/core/mobile/src/**/*.tsx",
       "apps/main/slices/seed/user-organization-mgmt/web/**/*.tsx",
       "apps/main/slices/seed/user-organization-mgmt/mobile/**/*.tsx",
     ],
-    ignores: ["apps/main/shared/web/src/___ref__*/**"],
+    ignores: ["apps/main/core/web/src/___ref__*/**"],
     plugins: { i18next },
     rules: {
       "i18next/no-literal-string": ["warn", {

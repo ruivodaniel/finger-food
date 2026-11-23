@@ -1,0 +1,178 @@
+{
+ "id": "ui-data-pattern-component-metric-cards-stat-tiles-1",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-metric-cards-stat-tiles-1",
+ "kind": "component",
+ "name": "stat-tiles-1",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "stat-tiles-1",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "row",
+    "scale": "md"
+   },
+   "children": [
+    {
+     "type": "Tile",
+     "props": {
+      "className": "flex-1 min-w-0"
+     },
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "scale": "sm"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body",
+          "emphasis": "quiet",
+          "children": "MRR"
+         }
+        },
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--numbers-large",
+          "children": "$12.4K"
+         }
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "baseline",
+          "scale": "sm"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "status": "success"
+           },
+           "children": [
+            {
+             "type": "Icon",
+             "props": {
+              "name": "arrowUp",
+              "size": "xs"
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "children": " +11.2%"
+             }
+            }
+           ]
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "emphasis": "quiet",
+            "children": "vs last period"
+           }
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Tile",
+     "props": {
+      "className": "flex-1 min-w-0"
+     },
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "scale": "sm"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body",
+          "emphasis": "quiet",
+          "children": "ARR"
+         }
+        },
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--numbers-large",
+          "children": "$149.4K"
+         }
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "baseline",
+          "scale": "sm"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "status": "success"
+           },
+           "children": [
+            {
+             "type": "Icon",
+             "props": {
+              "name": "arrowUp",
+              "size": "xs"
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "children": " +11.2%"
+             }
+            }
+           ]
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "emphasis": "quiet",
+            "children": "vs last period"
+           }
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,363 @@
+{
+ "id": "ui-data-primitive-data-tooltip",
+ "version": 1,
+ "uiNodeId": "ui-node-primitive-data-tooltip",
+ "kind": "component",
+ "name": "primitive-data-tooltip",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "primitive-data-tooltip",
+  "version": 1,
+  "surface": "web",
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "align": "center",
+    "scale": "2xl"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "body only \u2014 hover the button"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "DataTooltip",
+         "children": [
+          {
+           "type": "Button",
+           "props": {
+            "emphasis": "secondary",
+            "scale": "sm",
+            "children": "Body only",
+            "data-testid": "data-tooltip-body-only-hover-the-button-1-btn"
+           }
+          }
+         ],
+         "props": {
+          "content": {
+           "type": "Text",
+           "props": {
+            "element": "type--numbers",
+            "children": "1,250,000,000.00 USD"
+           }
+          }
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "header and body \u2014 comparison rows as the body (a pattern, drawn here by hand)"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "DataTooltip",
+         "children": [
+          {
+           "type": "Button",
+           "props": {
+            "emphasis": "secondary",
+            "scale": "sm",
+            "children": "Header and body",
+            "data-testid": "data-tooltip-header-and-body-comparison-rows-as-the-b-1-btn"
+           }
+          }
+         ],
+         "props": {
+          "header": {
+           "type": "Text",
+           "props": {
+            "emphasis": "primary",
+            "element": "type--body-small",
+            "children": "Price \u00b7 30d"
+           }
+          },
+          "content": {
+           "type": "Stack",
+           "children": [
+            {
+             "type": "Stack",
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "emphasis": "quiet",
+                "element": "type--body-small",
+                "children": "Reference (Sep 20)"
+               }
+              },
+              {
+               "type": "Text",
+               "props": {
+                "element": "type--numbers-small",
+                "children": "99.76"
+               }
+              }
+             ],
+             "props": {
+              "dir": "row",
+              "justify": "between",
+              "scale": "lg"
+             }
+            },
+            {
+             "type": "Stack",
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "emphasis": "quiet",
+                "element": "type--body-small",
+                "children": "Difference"
+               }
+              },
+              {
+               "type": "Text",
+               "props": {
+                "element": "type--numbers-small",
+                "children": "+0.32"
+               }
+              }
+             ],
+             "props": {
+              "dir": "row",
+              "justify": "between",
+              "scale": "lg"
+             }
+            },
+            {
+             "type": "Stack",
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "emphasis": "quiet",
+                "element": "type--body-small",
+                "children": "Relative"
+               }
+              },
+              {
+               "type": "Text",
+               "props": {
+                "element": "type--numbers-small",
+                "children": "+0.32 %"
+               }
+              }
+             ],
+             "props": {
+              "dir": "row",
+              "justify": "between",
+              "scale": "lg"
+             }
+            }
+           ],
+           "props": {
+            "dir": "col",
+            "scale": "2xs"
+           }
+          }
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "header, body and footer"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "DataTooltip",
+         "children": [
+          {
+           "type": "Button",
+           "props": {
+            "emphasis": "secondary",
+            "scale": "sm",
+            "children": "With a footer",
+            "data-testid": "data-tooltip-header-body-and-footer-1-btn"
+           }
+          }
+         ],
+         "props": {
+          "header": {
+           "type": "Text",
+           "props": {
+            "emphasis": "primary",
+            "element": "type--body-small",
+            "children": "Z-Spread"
+           }
+          },
+          "content": {
+           "type": "Text",
+           "props": {
+            "element": "type--numbers",
+            "children": "1.67"
+           }
+          },
+          "footer": {
+           "type": "Text",
+           "props": {
+            "emphasis": "quiet",
+            "element": "type--body-extra-small",
+            "children": "Last 30 days"
+           }
+          }
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "a click instead of a hover, and a status"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "DataTooltip",
+         "children": [
+          {
+           "type": "Button",
+           "props": {
+            "emphasis": "secondary",
+            "scale": "sm",
+            "children": "Click",
+            "data-testid": "data-tooltip-a-click-instead-of-a-hover-and-a-status-1-btn"
+           }
+          }
+         ],
+         "props": {
+          "trigger": "click",
+          "content": {
+           "type": "Text",
+           "props": {
+            "element": "type--body-small",
+            "children": "Opened by a click"
+           }
+          }
+         }
+        },
+        {
+         "type": "DataTooltip",
+         "children": [
+          {
+           "type": "Button",
+           "props": {
+            "emphasis": "secondary",
+            "scale": "sm",
+            "children": "Warning",
+            "data-testid": "data-tooltip-a-click-instead-of-a-hover-and-a-status-2-btn"
+           }
+          }
+         ],
+         "props": {
+          "status": "warning",
+          "delay": 0,
+          "content": {
+           "type": "Text",
+           "props": {
+            "element": "type--body-small",
+            "children": "A warning, no delay"
+           }
+          }
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

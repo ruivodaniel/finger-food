@@ -1,0 +1,5 @@
+[
+  { "id": "date-time", "name": "a function", "data": { "id": "date-time", "code": "function getCurrentDateTime() {\n  const now = new Date();\n  const options = {\n    year: 'numeric',\n    month: 'long',\n    day: 'numeric',\n    hour: '2-digit',\n    minute: '2-digit',\n    second: '2-digit',\n    hour12: true,\n  };\n  return now.toLocaleString('en-US', options);\n}\n\nconsole.log(getCurrentDateTime());\n\n// July 28, 2024 at 08:30:37 PM" } },
+  { "id": "empty", "name": "empty", "data": { "id": "empty", "code": "" } },
+  { "id": "one-line", "name": "one line", "data": { "id": "one-line", "code": "const answer = 42;" } }
+]

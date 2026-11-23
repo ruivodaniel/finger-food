@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-page-layout-table-fills-page-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-page-layout-table-fills-page",
+ "name": "default",
+ "title": "Table: the table fills the page, the rows scroll inside",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

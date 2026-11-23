@@ -17,7 +17,10 @@ export type {
   SchemaTables,
   Verdict,
 } from "./engine";
-export type { GateDeps, GatedDb } from "./gate";
+export type { GateDeps, GatedDb, GatedDbFactory } from "./gate";
+
+// ── the per-request access context (the app's session shape, see context.ts) ──
+export type { ScopedAcBag, ScopedAcRequestContext } from "./context";
 
 // ── the visibility token (public/private) ──
 export { isPrivate, PRIVATE, PUBLIC } from "./visibility";

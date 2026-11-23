@@ -1,0 +1,18 @@
+{
+  "id": "term/mapr",
+  "kind": "term",
+  "title": "MAPR",
+  "status": "converted",
+  "subjects": [
+    "docs"
+  ],
+  "owner": "documentation",
+  "tags": [
+    "docs"
+  ],
+  "paths": [],
+  "term": {
+    "def": "Map → Axioms → Purpose → Reference: the documentation standard.",
+    "aliases": []
+  }
+}

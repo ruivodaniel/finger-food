@@ -1,0 +1,425 @@
+{
+ "id": "ui-data-primitive-dialog",
+ "version": 1,
+ "uiNodeId": "ui-node-primitive-dialog",
+ "kind": "component",
+ "name": "primitive-dialog",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "primitive-dialog",
+  "version": 1,
+  "surface": "web",
+  "state": {
+   "sm_open": false,
+   "md_open": false,
+   "lg_open": false
+  },
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "align": "center",
+    "scale": "2xl"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "sm"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Dialog",
+         "children": [
+          {
+           "type": "DialogTrigger",
+           "children": [
+            {
+             "type": "Button",
+             "props": {
+              "emphasis": "secondary",
+              "children": "Open sm dialog",
+              "data-testid": "dialog-sm-1-btn"
+             }
+            }
+           ],
+           "props": {
+            "asChild": true
+           }
+          },
+          {
+           "type": "DialogContent",
+           "children": [
+            {
+             "type": "Header",
+             "children": [
+              {
+               "type": "DialogTitle",
+               "props": {
+                "children": "Small Dialog"
+               }
+              },
+              {
+               "type": "DialogDescription",
+               "props": {
+                "children": "This is a small dialog. It contains a brief description of the action being performed."
+               }
+              }
+             ]
+            },
+            {
+             "type": "Footer",
+             "children": [
+              {
+               "type": "DialogClose",
+               "children": [
+                {
+                 "type": "Button",
+                 "props": {
+                  "emphasis": "secondary",
+                  "children": "Cancel",
+                  "data-testid": "dialog-sm-2-btn"
+                 }
+                }
+               ],
+               "props": {
+                "asChild": true
+               }
+              },
+              {
+               "type": "Button",
+               "on": {
+                "click": [
+                 {
+                  "set": {
+                   "state": "sm_open",
+                   "to": false
+                  }
+                 }
+                ]
+               },
+               "props": {
+                "children": "Confirm",
+                "data-testid": "dialog-sm-3-btn"
+               }
+              }
+             ]
+            }
+           ],
+           "props": {
+            "scale": "sm"
+           }
+          }
+         ],
+         "on": {
+          "openChange": [
+           {
+            "set": {
+             "state": "sm_open",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "open": {
+           "bind": "state.sm_open"
+          },
+          "data-testid": "dialog-sm-4-dialog"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "md"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Dialog",
+         "children": [
+          {
+           "type": "DialogTrigger",
+           "children": [
+            {
+             "type": "Button",
+             "props": {
+              "emphasis": "secondary",
+              "children": "Open md dialog",
+              "data-testid": "dialog-md-1-btn"
+             }
+            }
+           ],
+           "props": {
+            "asChild": true
+           }
+          },
+          {
+           "type": "DialogContent",
+           "children": [
+            {
+             "type": "Header",
+             "children": [
+              {
+               "type": "DialogTitle",
+               "props": {
+                "children": "Medium Dialog"
+               }
+              },
+              {
+               "type": "DialogDescription",
+               "props": {
+                "children": "This is a medium dialog. It contains a more detailed description of the action being performed, with a bit more room for content."
+               }
+              }
+             ]
+            },
+            {
+             "type": "Footer",
+             "children": [
+              {
+               "type": "DialogClose",
+               "children": [
+                {
+                 "type": "Button",
+                 "props": {
+                  "emphasis": "secondary",
+                  "children": "Cancel",
+                  "data-testid": "dialog-md-2-btn"
+                 }
+                }
+               ],
+               "props": {
+                "asChild": true
+               }
+              },
+              {
+               "type": "Button",
+               "on": {
+                "click": [
+                 {
+                  "set": {
+                   "state": "md_open",
+                   "to": false
+                  }
+                 }
+                ]
+               },
+               "props": {
+                "children": "Confirm",
+                "data-testid": "dialog-md-3-btn"
+               }
+              }
+             ]
+            }
+           ],
+           "props": {
+            "scale": "md"
+           }
+          }
+         ],
+         "on": {
+          "openChange": [
+           {
+            "set": {
+             "state": "md_open",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "open": {
+           "bind": "state.md_open"
+          },
+          "data-testid": "dialog-md-4-dialog"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "lg"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Dialog",
+         "children": [
+          {
+           "type": "DialogTrigger",
+           "children": [
+            {
+             "type": "Button",
+             "props": {
+              "emphasis": "secondary",
+              "children": "Open lg dialog",
+              "data-testid": "dialog-lg-1-btn"
+             }
+            }
+           ],
+           "props": {
+            "asChild": true
+           }
+          },
+          {
+           "type": "DialogContent",
+           "children": [
+            {
+             "type": "Header",
+             "children": [
+              {
+               "type": "DialogTitle",
+               "props": {
+                "children": "Large Dialog"
+               }
+              },
+              {
+               "type": "DialogDescription",
+               "props": {
+                "children": "This is a large dialog. It provides ample space for more complex content, forms, or detailed information that requires additional room to display properly."
+               }
+              }
+             ]
+            },
+            {
+             "type": "Footer",
+             "children": [
+              {
+               "type": "DialogClose",
+               "children": [
+                {
+                 "type": "Button",
+                 "props": {
+                  "emphasis": "secondary",
+                  "children": "Cancel",
+                  "data-testid": "dialog-lg-2-btn"
+                 }
+                }
+               ],
+               "props": {
+                "asChild": true
+               }
+              },
+              {
+               "type": "Button",
+               "on": {
+                "click": [
+                 {
+                  "set": {
+                   "state": "lg_open",
+                   "to": false
+                  }
+                 }
+                ]
+               },
+               "props": {
+                "children": "Confirm",
+                "data-testid": "dialog-lg-3-btn"
+               }
+              }
+             ]
+            }
+           ],
+           "props": {
+            "scale": "lg"
+           }
+          }
+         ],
+         "on": {
+          "openChange": [
+           {
+            "set": {
+             "state": "lg_open",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "open": {
+           "bind": "state.lg_open"
+          },
+          "data-testid": "dialog-lg-4-dialog"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

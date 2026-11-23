@@ -1,0 +1,135 @@
+{
+ "groups": [
+  {
+   "id": "seed-contributor",
+   "title": "seed contributor",
+   "note": "everything in shared, main/core, the seed slices, the other apps. Whoever touches it masters all of it",
+   "groups": [
+    {
+     "id": "libs-ui",
+     "title": "libs/ui",
+     "activities": [
+      {
+       "id": "build-a-primitive",
+       "title": "build a primitive"
+      },
+      {
+       "id": "write-a-pattern",
+       "title": "write a pattern"
+      }
+     ]
+    },
+    {
+     "id": "libs-knowledge",
+     "title": "libs/knowledge",
+     "activities": [
+      {
+       "id": "build-a-previewer-editor",
+       "title": "build a previewer-editor"
+      },
+      {
+       "id": "build-a-host",
+       "title": "build a host"
+      }
+     ]
+    },
+    {
+     "id": "main-core",
+     "title": "main/core",
+     "activities": [
+      {
+       "id": "add-to-the-core",
+       "title": "add to the core"
+      }
+     ]
+    },
+    {
+     "id": "seed-slices",
+     "title": "seed slices",
+     "activities": [
+      {
+       "id": "build-a-seed-slice",
+       "title": "build a seed slice"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "seed-consumer",
+   "title": "seed consumer",
+   "note": "the code of a product's slices",
+   "groups": [
+    {
+     "id": "all-slices",
+     "title": "all slices",
+     "activities": [
+      {
+       "id": "add-a-page-to-a-slice",
+       "title": "add a page to a slice"
+      },
+      {
+       "id": "build-a-slice-component",
+       "title": "build a slice component"
+      },
+      {
+       "id": "build-a-slice-layout",
+       "title": "build a slice layout"
+      },
+      {
+       "id": "build-a-page-component",
+       "title": "build a page component"
+      },
+      {
+       "id": "add-access-control",
+       "title": "add access control"
+      }
+     ]
+    },
+    {
+     "id": "user-organization-mgmt",
+     "title": "user-organization-mgmt",
+     "activities": [
+      {
+       "id": "add-organization-types",
+       "title": "add organization types"
+      },
+      {
+       "id": "add-roles",
+       "title": "add roles"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "product-contributor",
+   "title": "product contributor",
+   "note": "what the product does with its database",
+   "groups": [
+    {
+     "id": "product-design",
+     "title": "product-design",
+     "activities": [
+      {
+       "id": "author-an-erd",
+       "title": "author an ERD"
+      },
+      {
+       "id": "author-a-sitemap",
+       "title": "author a sitemap"
+      },
+      {
+       "id": "author-personas",
+       "title": "author personas"
+      },
+      {
+       "id": "author-use-cases",
+       "title": "author use cases"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

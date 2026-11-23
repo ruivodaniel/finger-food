@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-side-navigation-5-compressed-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-side-navigation-5-compressed",
+ "name": "default",
+ "title": "Side navigation 5: compressed; the zone has vertical padding and the sidebar is shorter than the page",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

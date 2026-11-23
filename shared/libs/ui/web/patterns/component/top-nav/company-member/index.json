@@ -1,0 +1,222 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "company-member",
+ "version": 1,
+ "surface": "web",
+ "measure": "xl",
+ "state": {
+  "tab": "home"
+ },
+ "root": {
+  "type": "ShellNav",
+  "props": {
+   "className": "w-full"
+  },
+  "children": [
+   {
+    "type": "Stack",
+    "props": {
+     "dir": "row",
+     "gap": 16,
+     "align": "center",
+     "justify": "between"
+    },
+    "children": [
+     {
+      "type": "Stack",
+      "props": {
+       "dir": "row",
+       "gap": 12,
+       "align": "center"
+      },
+      "children": [
+       {
+        "type": "Tile",
+        "props": {
+         "emphasis": "quiet",
+         "className": "p-1"
+        },
+        "children": [
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--body-extra-small",
+           "emphasis": "quiet",
+           "children": "Platform logo"
+          }
+         }
+        ]
+       },
+       {
+        "type": "Button",
+        "props": {
+         "emphasis": "quiet",
+         "endIcon": "chevronDown",
+         "aria-label": "Active organization: Borealis"
+        },
+        "children": [
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "row",
+           "gap": 6,
+           "align": "center"
+          },
+          "children": [
+           {
+            "type": "Avatar",
+            "props": {
+             "scale": "xs"
+            },
+            "children": [
+             {
+              "type": "AvatarFallback",
+              "props": {
+               "children": "BO"
+              }
+             }
+            ]
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body",
+             "children": "Borealis"
+            }
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "Tabs",
+      "props": {
+       "value": {
+        "bind": "state.tab"
+       }
+      },
+      "children": [
+       {
+        "type": "TabsList",
+        "props": {},
+        "children": [
+         {
+          "type": "TabsTrigger",
+          "props": {
+           "value": "home"
+          },
+          "children": [
+           {
+            "type": "Icon",
+            "props": {
+             "name": "home",
+             "size": "sm"
+            }
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "children": "Home"
+            }
+           }
+          ]
+         },
+         {
+          "type": "TabsTrigger",
+          "props": {
+           "value": "organizations"
+          },
+          "children": [
+           {
+            "type": "Icon",
+            "props": {
+             "name": "users",
+             "size": "sm"
+            }
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "children": "Organizations"
+            }
+           },
+           {
+            "type": "Badge",
+            "props": {
+             "scale": "xs",
+             "status": "info",
+             "children": "2"
+            }
+           }
+          ]
+         }
+        ]
+       }
+      ],
+      "on": {
+       "valueChange": [
+        {
+         "set": {
+          "state": "tab",
+          "to": {
+           "bind": "event"
+          }
+         }
+        }
+       ]
+      }
+     },
+     {
+      "type": "Button",
+      "props": {
+       "emphasis": "quiet",
+       "endIcon": "chevronDown",
+       "aria-label": "Account menu: Daniel Ruivo"
+      },
+      "children": [
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "gap": 6,
+         "align": "center"
+        },
+        "children": [
+         {
+          "type": "Avatar",
+          "props": {
+           "scale": "xs"
+          },
+          "children": [
+           {
+            "type": "AvatarFallback",
+            "props": {
+             "children": "DR"
+            }
+           }
+          ]
+         },
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--body",
+           "children": "Daniel Ruivo"
+          }
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

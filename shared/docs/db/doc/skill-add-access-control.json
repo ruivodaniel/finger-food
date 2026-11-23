@@ -1,0 +1,24 @@
+{
+ "id": "doc/skill-add-access-control",
+ "kind": "doc",
+ "title": "add access control",
+ "status": "todo",
+ "subject": "skills",
+ "owner": "skills/seed-consumer/all-slices",
+ "tags": [
+  "skills",
+  "seed-consumer",
+  "all-slices"
+ ],
+ "paths": [],
+ "summary": "",
+ "docId": "skill-add-access-control",
+ "doc": {
+  "axioms": [],
+  "purpose": {},
+  "reference": []
+ },
+ "audience": [
+  "seed-consumer"
+ ]
+}

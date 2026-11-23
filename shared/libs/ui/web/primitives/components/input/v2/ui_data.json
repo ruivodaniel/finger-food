@@ -1,0 +1,334 @@
+{
+ "id": "ui-data-primitive-input",
+ "version": 1,
+ "uiNodeId": "ui-node-primitive-input",
+ "kind": "component",
+ "name": "primitive-input",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "primitive-input",
+  "version": 1,
+  "surface": "web",
+  "state": {
+   "scale_sm_value": "",
+   "scale_md_value": "",
+   "scale_lg_value": "",
+   "status_default_value": "",
+   "status_error_value": "",
+   "state_default_value": "",
+   "state_disabled_value": ""
+  },
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "align": "center",
+    "scale": "2xl"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "scale"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Text",
+         "children": [
+          {
+           "type": "Input",
+           "on": {
+            "change": [
+             {
+              "set": {
+               "state": "scale_sm_value",
+               "to": {
+                "bind": "event"
+               }
+              }
+             }
+            ]
+           },
+           "props": {
+            "scale": "sm",
+            "disabled": false,
+            "placeholder": "Small input",
+            "value": {
+             "bind": "state.scale_sm_value"
+            },
+            "data-testid": "input-scale-1-input"
+           }
+          },
+          {
+           "type": "Input",
+           "on": {
+            "change": [
+             {
+              "set": {
+               "state": "scale_md_value",
+               "to": {
+                "bind": "event"
+               }
+              }
+             }
+            ]
+           },
+           "props": {
+            "scale": "md",
+            "disabled": false,
+            "placeholder": "Medium input",
+            "value": {
+             "bind": "state.scale_md_value"
+            },
+            "data-testid": "input-scale-2-input"
+           }
+          },
+          {
+           "type": "Input",
+           "on": {
+            "change": [
+             {
+              "set": {
+               "state": "scale_lg_value",
+               "to": {
+                "bind": "event"
+               }
+              }
+             }
+            ]
+           },
+           "props": {
+            "scale": "lg",
+            "disabled": false,
+            "placeholder": "Large input",
+            "value": {
+             "bind": "state.scale_lg_value"
+            },
+            "data-testid": "input-scale-3-input"
+           }
+          }
+         ],
+         "props": {
+          "as": "div",
+          "className": "flex flex-col gap-2",
+          "style": {
+           "obj": {
+            "maxWidth": 320
+           }
+          }
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "status"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Text",
+         "children": [
+          {
+           "type": "Input",
+           "on": {
+            "change": [
+             {
+              "set": {
+               "state": "status_default_value",
+               "to": {
+                "bind": "event"
+               }
+              }
+             }
+            ]
+           },
+           "props": {
+            "scale": "md",
+            "disabled": false,
+            "placeholder": "Default",
+            "value": {
+             "bind": "state.status_default_value"
+            },
+            "data-testid": "input-status-1-input"
+           }
+          },
+          {
+           "type": "Input",
+           "on": {
+            "change": [
+             {
+              "set": {
+               "state": "status_error_value",
+               "to": {
+                "bind": "event"
+               }
+              }
+             }
+            ]
+           },
+           "props": {
+            "scale": "md",
+            "status": "error",
+            "disabled": false,
+            "placeholder": "Error state",
+            "value": {
+             "bind": "state.status_error_value"
+            },
+            "data-testid": "input-status-2-input"
+           }
+          }
+         ],
+         "props": {
+          "as": "div",
+          "className": "flex flex-col gap-2",
+          "style": {
+           "obj": {
+            "maxWidth": 320
+           }
+          }
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "state"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Text",
+         "children": [
+          {
+           "type": "Input",
+           "on": {
+            "change": [
+             {
+              "set": {
+               "state": "state_default_value",
+               "to": {
+                "bind": "event"
+               }
+              }
+             }
+            ]
+           },
+           "props": {
+            "scale": "md",
+            "disabled": false,
+            "placeholder": "Default",
+            "value": {
+             "bind": "state.state_default_value"
+            },
+            "data-testid": "input-state-1-input"
+           }
+          },
+          {
+           "type": "Input",
+           "on": {
+            "change": [
+             {
+              "set": {
+               "state": "state_disabled_value",
+               "to": {
+                "bind": "event"
+               }
+              }
+             }
+            ]
+           },
+           "props": {
+            "scale": "md",
+            "disabled": true,
+            "placeholder": "Disabled",
+            "value": {
+             "bind": "state.state_disabled_value"
+            },
+            "data-testid": "input-state-2-input"
+           }
+          }
+         ],
+         "props": {
+          "as": "div",
+          "className": "flex flex-col gap-2",
+          "style": {
+           "obj": {
+            "maxWidth": 320
+           }
+          }
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

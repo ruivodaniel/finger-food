@@ -1,0 +1,152 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "contacts",
+ "version": 1,
+ "surface": "web",
+ "measure": "md",
+ "root": {
+  "type": "List",
+  "props": {
+   "className": "w-full max-w-2xl"
+  },
+  "children": [
+   {
+    "use": {
+     "component": "ContactRow",
+     "version": "latest"
+    },
+    "args": {
+     "id": "0",
+     "name": "Daniel Ruivo",
+     "initials": "DR",
+     "role": "Owner",
+     "email": "daniel@altar.io",
+     "last": "Active now",
+     "presence": 1,
+     "invited": false,
+     "selected": true
+    }
+   },
+   {
+    "use": {
+     "component": "ContactRow",
+     "version": "latest"
+    },
+    "args": {
+     "id": "1",
+     "name": "Inês Carvalho",
+     "initials": "IC",
+     "role": "Admin",
+     "email": "ines@altar.io",
+     "last": "12 min ago",
+     "presence": 1,
+     "invited": false,
+     "selected": false
+    }
+   },
+   {
+    "use": {
+     "component": "ContactRow",
+     "version": "latest"
+    },
+    "args": {
+     "id": "2",
+     "name": "Tomás Ferreira",
+     "initials": "TF",
+     "role": "Designer",
+     "email": "tomas@altar.io",
+     "last": "2 h ago",
+     "presence": 5,
+     "invited": false,
+     "selected": false
+    }
+   },
+   {
+    "use": {
+     "component": "ContactRow",
+     "version": "latest"
+    },
+    "args": {
+     "id": "3",
+     "name": "Marta Silva",
+     "initials": "MS",
+     "role": "Engineer",
+     "email": "marta@altar.io",
+     "last": "Yesterday",
+     "presence": 5,
+     "invited": false,
+     "selected": false
+    }
+   },
+   {
+    "use": {
+     "component": "ContactRow",
+     "version": "latest"
+    },
+    "args": {
+     "id": "4",
+     "name": "Rui Almeida",
+     "initials": "RA",
+     "role": "Engineer",
+     "email": "rui@altar.io",
+     "last": "Invite pending",
+     "presence": 2,
+     "invited": true,
+     "selected": false
+    }
+   },
+   {
+    "use": {
+     "component": "ContactRow",
+     "version": "latest"
+    },
+    "args": {
+     "id": "5",
+     "name": "Sofia Mendes",
+     "initials": "SM",
+     "role": "Product",
+     "email": "sofia@altar.io",
+     "last": "3 days ago",
+     "presence": 5,
+     "invited": false,
+     "selected": false
+    }
+   },
+   {
+    "use": {
+     "component": "ContactRow",
+     "version": "latest"
+    },
+    "args": {
+     "id": "6",
+     "name": "João Costa",
+     "initials": "JC",
+     "role": "Viewer",
+     "email": "joao@altar.io",
+     "last": "Last week",
+     "presence": 5,
+     "invited": false,
+     "selected": false
+    }
+   },
+   {
+    "use": {
+     "component": "ContactRow",
+     "version": "latest"
+    },
+    "args": {
+     "id": "7",
+     "name": "Beatriz Lopes",
+     "initials": "BL",
+     "role": "Viewer",
+     "email": "beatriz@altar.io",
+     "last": "Invite pending",
+     "presence": 2,
+     "invited": true,
+     "selected": false
+    }
+   }
+  ]
+ }
+}

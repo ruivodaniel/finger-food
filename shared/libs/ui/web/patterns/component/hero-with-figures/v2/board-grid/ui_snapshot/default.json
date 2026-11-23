@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-hero-with-figures-board-grid-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-hero-with-figures-board-grid",
+ "name": "default",
+ "title": "Hero with figures: board grid",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

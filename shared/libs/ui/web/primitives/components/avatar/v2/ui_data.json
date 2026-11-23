@@ -1,0 +1,185 @@
+{
+ "id": "ui-data-primitive-avatar",
+ "version": 1,
+ "uiNodeId": "ui-node-primitive-avatar",
+ "kind": "component",
+ "name": "primitive-avatar",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "primitive-avatar",
+  "version": 1,
+  "surface": "web",
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "gap": 40,
+    "pad": 24,
+    "align": "center"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "gap": 8,
+      "align": "center",
+      "className": "w-full"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "scale"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "gap": 12,
+        "align": "center",
+        "justify": "center",
+        "className": "flex-wrap w-full"
+       },
+       "children": [
+        {
+         "type": "Avatar",
+         "children": [
+          {
+           "type": "AvatarFallback",
+           "props": {
+            "children": "XS"
+           }
+          }
+         ],
+         "props": {
+          "scale": "xs"
+         }
+        },
+        {
+         "type": "Avatar",
+         "children": [
+          {
+           "type": "AvatarFallback",
+           "props": {
+            "children": "SM"
+           }
+          }
+         ],
+         "props": {
+          "scale": "sm"
+         }
+        },
+        {
+         "type": "Avatar",
+         "children": [
+          {
+           "type": "AvatarFallback",
+           "props": {
+            "children": "MD"
+           }
+          }
+         ],
+         "props": {
+          "scale": "md"
+         }
+        },
+        {
+         "type": "Avatar",
+         "children": [
+          {
+           "type": "AvatarFallback",
+           "props": {
+            "children": "LG"
+           }
+          }
+         ],
+         "props": {
+          "scale": "lg"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "gap": 8,
+      "align": "center",
+      "className": "w-full"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "fallback initials — scale=\"md\""
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "gap": 12,
+        "align": "center",
+        "justify": "center",
+        "className": "flex-wrap w-full"
+       },
+       "children": [
+        {
+         "type": "Avatar",
+         "children": [
+          {
+           "type": "AvatarFallback",
+           "props": {
+            "children": "JD"
+           }
+          }
+         ],
+         "props": {
+          "scale": "md"
+         }
+        },
+        {
+         "type": "Avatar",
+         "children": [
+          {
+           "type": "AvatarFallback",
+           "props": {
+            "children": "PA"
+           }
+          }
+         ],
+         "props": {
+          "scale": "md"
+         }
+        },
+        {
+         "type": "Avatar",
+         "children": [
+          {
+           "type": "AvatarFallback",
+           "props": {
+            "children": "AB"
+           }
+          }
+         ],
+         "props": {
+          "scale": "md"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

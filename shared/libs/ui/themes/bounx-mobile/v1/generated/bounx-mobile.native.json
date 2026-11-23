@@ -8,21 +8,60 @@
    "palette": {
     "main-white": "#ffffff",
     "main-black": "#1a1813",
-    "brand-1": "#1f9d5c",
+    "brand-1": "#ff0000",
     "brand-2": "#1a1813",
     "brand-3": "#e2902b",
     "brand-4": "#7c7666",
-    "flat-red": "#d6453b",
-    "flat-orange": "#e2902b",
-    "flat-yellow": "#d8a53b",
-    "flat-lime": "#3fbe7c",
-    "flat-green": "#1f9d5c",
-    "flat-mint": "#e5f3ea",
-    "flat-turquoise": "#1fa463",
-    "flat-blue": "#3e8fd0",
-    "flat-violet": "#7c7666",
-    "flat-purple": "#1a1813",
-    "flat-pink": "#fbe3e1",
+    "content-tomato-standard": "#c04c34",
+    "content-tomato-soft": "#f0b7a9",
+    "content-red-standard": "#c04849",
+    "content-red-soft": "#f0b5b1",
+    "content-ruby-standard": "#c0475c",
+    "content-ruby-soft": "#f0b4b9",
+    "content-crimson-standard": "#c44272",
+    "content-crimson-soft": "#f2b3c4",
+    "content-pink-standard": "#b44288",
+    "content-pink-soft": "#eab2cf",
+    "content-plum-standard": "#8f459b",
+    "content-plum-soft": "#d5b2da",
+    "content-purple-standard": "#7747a3",
+    "content-purple-soft": "#c7b3df",
+    "content-violet-standard": "#5d4ca9",
+    "content-violet-soft": "#b9b5e3",
+    "content-iris-standard": "#4e50ae",
+    "content-iris-soft": "#b1b8e6",
+    "content-indigo-standard": "#3856b4",
+    "content-indigo-soft": "#a8bbe9",
+    "content-blue-standard": "#267fd5",
+    "content-blue-soft": "#a9cdf6",
+    "content-sky-standard": "#7ecbe1",
+    "content-sky-soft": "#caebf5",
+    "content-cyan-standard": "#2b8daa",
+    "content-cyan-soft": "#acd2df",
+    "content-teal-standard": "#2e8e81",
+    "content-teal-soft": "#add2cb",
+    "content-jade-standard": "#368c73",
+    "content-jade-soft": "#aed1c4",
+    "content-green-standard": "#398d61",
+    "content-green-soft": "#afd2bc",
+    "content-grass-standard": "#489053",
+    "content-grass-soft": "#b3d3b6",
+    "content-mint-standard": "#86d2c1",
+    "content-mint-soft": "#ceeee6",
+    "content-lime-standard": "#b0d76e",
+    "content-lime-soft": "#def0c3",
+    "content-yellow-standard": "#e5d352",
+    "content-yellow-soft": "#f5eebb",
+    "content-amber-standard": "#e2b553",
+    "content-amber-soft": "#f6e1ba",
+    "content-orange-standard": "#d2662e",
+    "content-orange-soft": "#f6c1aa",
+    "content-brown-standard": "#947052",
+    "content-brown-soft": "#d5c3b5",
+    "content-bronze-standard": "#8a7065",
+    "content-bronze-soft": "#d0c3be",
+    "content-gold-standard": "#82725b",
+    "content-gold-soft": "#ccc4b9",
     "gray-pure-50": "#fafafa",
     "gray-pure-100": "#f2f2f2",
     "gray-pure-150": "#ececec",
@@ -55,21 +94,19 @@
     "gray-800": "#3a3834",
     "gray-900": "#2a2824",
     "gray-950": "#23211c",
-    "brand-1-gray-50": "#e9f3ee",
-    "brand-1-gray-100": "#e3ede7",
-    "brand-1-gray-150": "#dee8e3",
-    "brand-1-gray-200": "#d8e2dc",
-    "brand-1-gray-250": "#d0d9d4",
-    "brand-1-gray-300": "#c7d1cb",
-    "brand-1-gray-400": "#a3ada6",
-    "brand-1-gray-500": "#848d85",
-    "brand-1-gray-600": "#646d65",
-    "brand-1-gray-700": "#4d564d",
-    "brand-1-gray-800": "#384037",
-    "brand-1-gray-900": "#293228",
-    "brand-1-gray-950": "#232b22",
-    "brand-1-light": "#e4f3eb",
-    "brand-1-dark": "#1d7043",
+    "brand-1-gray-50": "#fbe6e6",
+    "brand-1-gray-100": "#f4e0e0",
+    "brand-1-gray-150": "#f0dcdb",
+    "brand-1-gray-200": "#ead5d5",
+    "brand-1-gray-250": "#e2cdcc",
+    "brand-1-gray-300": "#d9c4c4",
+    "brand-1-gray-400": "#b5a09f",
+    "brand-1-gray-500": "#96807e",
+    "brand-1-gray-600": "#76605d",
+    "brand-1-gray-700": "#5f4946",
+    "brand-1-gray-800": "#4a3430",
+    "brand-1-gray-900": "#3b2521",
+    "brand-1-gray-950": "#351f1a",
     "brand-2-gray-50": "#e8e8e8",
     "brand-2-gray-100": "#e2e2e1",
     "brand-2-gray-150": "#dededd",
@@ -83,8 +120,6 @@
     "brand-2-gray-800": "#373631",
     "brand-2-gray-900": "#292722",
     "brand-2-gray-950": "#22211c",
-    "brand-2-light": "#e4e3e3",
-    "brand-2-dark": "#1a1813",
     "brand-3-gray-50": "#f8f2ea",
     "brand-3-gray-100": "#f2ebe3",
     "brand-3-gray-150": "#eee7df",
@@ -98,8 +133,6 @@
     "brand-3-gray-800": "#473f33",
     "brand-3-gray-900": "#393024",
     "brand-3-gray-950": "#322a1e",
-    "brand-3-light": "#fcf2e6",
-    "brand-3-dark": "#9e6723",
     "brand-4-gray-50": "#f0f0ee",
     "brand-4-gray-100": "#eae9e8",
     "brand-4-gray-150": "#e6e5e4",
@@ -113,17 +146,7 @@
     "brand-4-gray-800": "#3f3d38",
     "brand-4-gray-900": "#312e29",
     "brand-4-gray-950": "#2a2822",
-    "brand-4-light": "#efefed",
-    "brand-4-dark": "#5b564a",
-    "status-success-light": "#ddf0e7",
-    "status-success-dark": "#1d7043",
-    "status-info-light": "#ddf0e7",
-    "status-info-dark": "#1d7043",
-    "status-warning-light": "#fbeedf",
-    "status-warning-dark": "#9e6723",
-    "status-error-light": "#f9e3e2",
-    "status-error-dark": "#96362d",
-    "primary": "#1f9d5c",
+    "primary": "#ff0000",
     "secondary": "#1a1813",
     "accent": "#e2902b",
     "muted": "#7c7666"
@@ -131,7 +154,7 @@
    "shadows": {
     "none": "none",
     "card": "0px 2px 10px 0px rgba(60, 50, 30, 0.03)",
-    "button": "0px 8px 20px 0px rgba(31, 157, 92, 0.25)",
+    "button": "0px 8px 20px 0px rgba(255, 0, 0, 0.25)",
     "buttonDark": "0px 8px 20px 0px rgba(26, 24, 19, 0.22)",
     "sheet": "0px 14px 40px 0px rgba(60, 50, 30, 0.08)",
     "drawer": "-20px 0px 44px 0px rgba(60, 50, 30, 0.16)",
@@ -142,21 +165,60 @@
    "palette": {
     "main-white": "#ffffff",
     "main-black": "#1a1813",
-    "brand-1": "#1f9d5c",
+    "brand-1": "#ff0000",
     "brand-2": "#1a1813",
     "brand-3": "#e2902b",
     "brand-4": "#7c7666",
-    "flat-red": "#d6453b",
-    "flat-orange": "#e2902b",
-    "flat-yellow": "#d8a53b",
-    "flat-lime": "#3fbe7c",
-    "flat-green": "#1f9d5c",
-    "flat-mint": "#e5f3ea",
-    "flat-turquoise": "#1fa463",
-    "flat-blue": "#3e8fd0",
-    "flat-violet": "#7c7666",
-    "flat-purple": "#1a1813",
-    "flat-pink": "#fbe3e1",
+    "content-tomato-standard": "#c9604a",
+    "content-tomato-soft": "#582f26",
+    "content-red-standard": "#cb5e5c",
+    "content-red-soft": "#592f2d",
+    "content-ruby-standard": "#c95c6c",
+    "content-ruby-soft": "#592e33",
+    "content-crimson-standard": "#c9547c",
+    "content-crimson-soft": "#582b39",
+    "content-pink-standard": "#c45d9a",
+    "content-pink-soft": "#572e45",
+    "content-plum-standard": "#b975c4",
+    "content-plum-soft": "#513655",
+    "content-purple-standard": "#ad82d9",
+    "content-purple-soft": "#4b3c5d",
+    "content-violet-standard": "#9a8fe9",
+    "content-violet-soft": "#444063",
+    "content-iris-standard": "#8c94ee",
+    "content-iris-soft": "#3e4265",
+    "content-indigo-standard": "#7799f3",
+    "content-indigo-soft": "#364467",
+    "content-blue-standard": "#3580cd",
+    "content-blue-soft": "#203c5a",
+    "content-sky-standard": "#004c5c",
+    "content-sky-soft": "#112a31",
+    "content-cyan-standard": "#3386a0",
+    "content-cyan-soft": "#203e47",
+    "content-teal-standard": "#3d8e82",
+    "content-teal-soft": "#24413c",
+    "content-jade-standard": "#479079",
+    "content-jade-soft": "#264239",
+    "content-green-standard": "#49926a",
+    "content-green-soft": "#274232",
+    "content-grass-standard": "#4f8e58",
+    "content-grass-soft": "#29412c",
+    "content-mint-standard": "#004d41",
+    "content-mint-soft": "#122a25",
+    "content-lime-standard": "#304400",
+    "content-lime-soft": "#1d2806",
+    "content-yellow-standard": "#3c3500",
+    "content-yellow-soft": "#262100",
+    "content-amber-standard": "#584000",
+    "content-amber-soft": "#322404",
+    "content-orange-standard": "#b15220",
+    "content-orange-soft": "#502b1a",
+    "content-brown-standard": "#9c7b60",
+    "content-brown-soft": "#46392f",
+    "content-bronze-standard": "#967e74",
+    "content-bronze-soft": "#443a37",
+    "content-gold-standard": "#92846f",
+    "content-gold-soft": "#423c34",
     "gray-pure-50": "#fafafa",
     "gray-pure-100": "#f2f2f2",
     "gray-pure-150": "#ececec",
@@ -189,21 +251,19 @@
     "gray-800": "#d7d3cb",
     "gray-900": "#e6e2db",
     "gray-950": "#ede9e1",
-    "brand-1-gray-50": "#1a2319",
-    "brand-1-gray-100": "#20291f",
-    "brand-1-gray-150": "#242d23",
-    "brand-1-gray-200": "#2b3329",
-    "brand-1-gray-250": "#333c31",
-    "brand-1-gray-300": "#3b4439",
-    "brand-1-gray-400": "#5e665c",
-    "brand-1-gray-500": "#7d857a",
-    "brand-1-gray-600": "#9ca498",
-    "brand-1-gray-700": "#b3baae",
-    "brand-1-gray-800": "#c8cfc2",
-    "brand-1-gray-900": "#d6ddd1",
-    "brand-1-gray-950": "#dde3d7",
-    "brand-1-light": "#172d1d",
-    "brand-1-dark": "#60b787",
+    "brand-1-gray-50": "#2c1612",
+    "brand-1-gray-100": "#321d18",
+    "brand-1-gray-150": "#36211c",
+    "brand-1-gray-200": "#3c2722",
+    "brand-1-gray-250": "#452f2a",
+    "brand-1-gray-300": "#4d3732",
+    "brand-1-gray-400": "#705a54",
+    "brand-1-gray-500": "#8f7973",
+    "brand-1-gray-600": "#ae9791",
+    "brand-1-gray-700": "#c5aea7",
+    "brand-1-gray-800": "#dac2bb",
+    "brand-1-gray-900": "#e8d0c9",
+    "brand-1-gray-950": "#eed6cf",
     "brand-2-gray-50": "#1a1813",
     "brand-2-gray-100": "#201f19",
     "brand-2-gray-150": "#24231d",
@@ -217,8 +277,6 @@
     "brand-2-gray-800": "#c7c4bd",
     "brand-2-gray-900": "#d6d2cb",
     "brand-2-gray-950": "#dcd8d1",
-    "brand-2-light": "#161510",
-    "brand-2-dark": "#5c5954",
     "brand-3-gray-50": "#2a2215",
     "brand-3-gray-100": "#30281b",
     "brand-3-gray-150": "#342c1f",
@@ -232,8 +290,6 @@
     "brand-3-gray-800": "#d7cebf",
     "brand-3-gray-900": "#e6dccd",
     "brand-3-gray-950": "#ece2d3",
-    "brand-3-light": "#3a2a14",
-    "brand-3-dark": "#e8ad64",
     "brand-4-gray-50": "#21201a",
     "brand-4-gray-100": "#282620",
     "brand-4-gray-150": "#2c2a24",
@@ -247,17 +303,7 @@
     "brand-4-gray-800": "#cfcbc3",
     "brand-4-gray-900": "#dedad1",
     "brand-4-gray-950": "#e4e0d7",
-    "brand-4-light": "#28261f",
-    "brand-4-dark": "#a19b8e",
-    "status-success-light": "#172d1d",
-    "status-success-dark": "#60b787",
-    "status-info-light": "#172d1d",
-    "status-info-dark": "#60b787",
-    "status-warning-light": "#3a2a14",
-    "status-warning-dark": "#e8ad64",
-    "status-error-light": "#381d17",
-    "status-error-dark": "#e07970",
-    "primary": "#1f9d5c",
+    "primary": "#ff0000",
     "secondary": "#1a1813",
     "accent": "#e2902b",
     "muted": "#7c7666"
@@ -265,7 +311,7 @@
    "shadows": {
     "none": "none",
     "card": "0px 2px 10px 0px rgba(60, 50, 30, 0.03)",
-    "button": "0px 8px 20px 0px rgba(31, 157, 92, 0.25)",
+    "button": "0px 8px 20px 0px rgba(255, 0, 0, 0.25)",
     "buttonDark": "0px 8px 20px 0px rgba(26, 24, 19, 0.22)",
     "sheet": "0px 14px 40px 0px rgba(60, 50, 30, 0.08)",
     "drawer": "-20px 0px 44px 0px rgba(60, 50, 30, 0.16)",
@@ -674,7 +720,7 @@
      "vars": {
       "borderColor": "transparent",
       "bg": "transparent",
-      "fg": "brand-1-dark"
+      "fg": "brand-1"
      },
      "when": {
       "emphasis": "tertiary"
@@ -713,7 +759,7 @@
     {
      "vars": {
       "borderColor": "status-success",
-      "fg": "brand-1-dark",
+      "fg": "brand-1",
       "tint": "status-success"
      },
      "when": {
@@ -723,7 +769,7 @@
     {
      "vars": {
       "borderColor": "status-warning",
-      "fg": "status-warning-dark",
+      "fg": "status-warning",
       "tint": "status-warning"
      },
      "when": {
@@ -733,7 +779,7 @@
     {
      "vars": {
       "borderColor": "brand-1",
-      "fg": "brand-1-dark",
+      "fg": "brand-1",
       "tint": "brand-1"
      },
      "when": {
@@ -895,7 +941,7 @@
     },
     {
      "vars": {
-      "bg": "brand-1-dark",
+      "bg": "brand-1",
       "fg": "smart-bw"
      },
      "when": {
@@ -905,7 +951,7 @@
     },
     {
      "vars": {
-      "bg": "brand-1-dark",
+      "bg": "brand-1",
       "fg": "smart-bw"
      },
      "when": {
@@ -915,7 +961,8 @@
     },
     {
      "vars": {
-      "bg": "brand-1-light"
+      "bg": "background",
+      "tint": "brand-1"
      },
      "when": {
       "state": "active",
@@ -1109,7 +1156,7 @@
      "vars": {
       "borderColor": "transparent",
       "bg": "transparent",
-      "fg": "brand-1-dark"
+      "fg": "brand-1"
      },
      "when": {
       "emphasis": "tertiary"
@@ -1148,7 +1195,7 @@
     {
      "vars": {
       "borderColor": "status-success",
-      "fg": "brand-1-dark",
+      "fg": "brand-1",
       "tint": "status-success"
      },
      "when": {
@@ -1158,7 +1205,7 @@
     {
      "vars": {
       "borderColor": "status-warning",
-      "fg": "status-warning-dark",
+      "fg": "status-warning",
       "tint": "status-warning"
      },
      "when": {
@@ -1168,7 +1215,7 @@
     {
      "vars": {
       "borderColor": "brand-1",
-      "fg": "brand-1-dark",
+      "fg": "brand-1",
       "tint": "brand-1"
      },
      "when": {
@@ -1330,7 +1377,7 @@
     },
     {
      "vars": {
-      "bg": "brand-1-dark",
+      "bg": "brand-1",
       "fg": "smart-bw"
      },
      "when": {
@@ -1340,7 +1387,7 @@
     },
     {
      "vars": {
-      "bg": "brand-1-dark",
+      "bg": "brand-1",
       "fg": "smart-bw"
      },
      "when": {
@@ -1350,7 +1397,8 @@
     },
     {
      "vars": {
-      "bg": "brand-1-light"
+      "bg": "background",
+      "tint": "brand-1"
      },
      "when": {
       "state": "active",
@@ -1616,7 +1664,7 @@
      "vars": {
       "borderColor": "transparent",
       "bg": "transparent",
-      "fg": "brand-1-dark"
+      "fg": "brand-1"
      },
      "when": {
       "emphasis": "tertiary"
@@ -1655,7 +1703,7 @@
     {
      "vars": {
       "borderColor": "status-success",
-      "fg": "brand-1-dark",
+      "fg": "brand-1",
       "tint": "status-success"
      },
      "when": {
@@ -1665,7 +1713,7 @@
     {
      "vars": {
       "borderColor": "status-warning",
-      "fg": "status-warning-dark",
+      "fg": "status-warning",
       "tint": "status-warning"
      },
      "when": {
@@ -1675,7 +1723,7 @@
     {
      "vars": {
       "borderColor": "brand-1",
-      "fg": "brand-1-dark",
+      "fg": "brand-1",
       "tint": "brand-1"
      },
      "when": {
@@ -1863,7 +1911,7 @@
     },
     {
      "vars": {
-      "bg": "brand-1-dark",
+      "bg": "brand-1",
       "fg": "smart-bw"
      },
      "when": {
@@ -1873,7 +1921,7 @@
     },
     {
      "vars": {
-      "bg": "brand-1-dark",
+      "bg": "brand-1",
       "fg": "smart-bw"
      },
      "when": {
@@ -1883,7 +1931,8 @@
     },
     {
      "vars": {
-      "bg": "brand-1-light"
+      "bg": "background",
+      "tint": "brand-1"
      },
      "when": {
       "state": "active",
@@ -1943,9 +1992,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "error"
@@ -1953,9 +2003,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "destructive"
@@ -1963,9 +2014,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "success"
@@ -1973,9 +2025,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-warning-light",
-      "bg": "status-warning-light",
-      "fg": "status-warning-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-warning",
+      "tint": "status-warning"
      },
      "when": {
       "status": "warning"
@@ -1983,9 +2036,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "info"
@@ -2022,7 +2076,8 @@
     {
      "vars": {
       "borderColor": "brand-1",
-      "bg": "brand-1-light"
+      "bg": "background",
+      "tint": "brand-1"
      },
      "when": {
       "state": "selected"
@@ -2228,7 +2283,7 @@
      "vars": {
       "borderColor": "transparent",
       "bg": "transparent",
-      "fg": "brand-1-dark"
+      "fg": "brand-1"
      },
      "when": {
       "emphasis": "tertiary"
@@ -2267,7 +2322,7 @@
     {
      "vars": {
       "borderColor": "status-success",
-      "fg": "brand-1-dark",
+      "fg": "brand-1",
       "tint": "status-success"
      },
      "when": {
@@ -2277,7 +2332,7 @@
     {
      "vars": {
       "borderColor": "status-warning",
-      "fg": "status-warning-dark",
+      "fg": "status-warning",
       "tint": "status-warning"
      },
      "when": {
@@ -2287,7 +2342,7 @@
     {
      "vars": {
       "borderColor": "brand-1",
-      "fg": "brand-1-dark",
+      "fg": "brand-1",
       "tint": "brand-1"
      },
      "when": {
@@ -2465,7 +2520,7 @@
     },
     {
      "vars": {
-      "bg": "brand-1-dark",
+      "bg": "brand-1",
       "fg": "smart-bw"
      },
      "when": {
@@ -2475,7 +2530,7 @@
     },
     {
      "vars": {
-      "bg": "brand-1-dark",
+      "bg": "brand-1",
       "fg": "smart-bw"
      },
      "when": {
@@ -2485,7 +2540,8 @@
     },
     {
      "vars": {
-      "bg": "brand-1-light"
+      "bg": "background",
+      "tint": "brand-1"
      },
      "when": {
       "state": "active",
@@ -2569,9 +2625,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "error"
@@ -2579,9 +2636,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "destructive"
@@ -2589,9 +2647,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "success"
@@ -2599,9 +2658,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-warning-light",
-      "bg": "status-warning-light",
-      "fg": "status-warning-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-warning",
+      "tint": "status-warning"
      },
      "when": {
       "status": "warning"
@@ -2609,9 +2669,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "info"
@@ -2648,7 +2709,8 @@
     {
      "vars": {
       "borderColor": "brand-1",
-      "bg": "brand-1-light"
+      "bg": "background",
+      "tint": "brand-1"
      },
      "when": {
       "state": "selected"
@@ -2831,7 +2893,7 @@
      "vars": {
       "borderColor": "transparent",
       "bg": "transparent",
-      "fg": "brand-1-dark"
+      "fg": "brand-1"
      },
      "when": {
       "emphasis": "tertiary"
@@ -2870,7 +2932,7 @@
     {
      "vars": {
       "borderColor": "status-success",
-      "fg": "brand-1-dark",
+      "fg": "brand-1",
       "tint": "status-success"
      },
      "when": {
@@ -2880,7 +2942,7 @@
     {
      "vars": {
       "borderColor": "status-warning",
-      "fg": "status-warning-dark",
+      "fg": "status-warning",
       "tint": "status-warning"
      },
      "when": {
@@ -2890,7 +2952,7 @@
     {
      "vars": {
       "borderColor": "brand-1",
-      "fg": "brand-1-dark",
+      "fg": "brand-1",
       "tint": "brand-1"
      },
      "when": {
@@ -3052,7 +3114,7 @@
     },
     {
      "vars": {
-      "bg": "brand-1-dark",
+      "bg": "brand-1",
       "fg": "smart-bw"
      },
      "when": {
@@ -3062,7 +3124,7 @@
     },
     {
      "vars": {
-      "bg": "brand-1-dark",
+      "bg": "brand-1",
       "fg": "smart-bw"
      },
      "when": {
@@ -3072,7 +3134,8 @@
     },
     {
      "vars": {
-      "bg": "brand-1-light"
+      "bg": "background",
+      "tint": "brand-1"
      },
      "when": {
       "state": "active",
@@ -3132,9 +3195,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "error"
@@ -3142,9 +3206,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "destructive"
@@ -3152,9 +3217,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "success"
@@ -3162,9 +3228,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-warning-light",
-      "bg": "status-warning-light",
-      "fg": "status-warning-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-warning",
+      "tint": "status-warning"
      },
      "when": {
       "status": "warning"
@@ -3172,9 +3239,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "info"
@@ -3211,7 +3279,8 @@
     {
      "vars": {
       "borderColor": "brand-1",
-      "bg": "brand-1-light"
+      "bg": "background",
+      "tint": "brand-1"
      },
      "when": {
       "state": "selected"
@@ -3424,7 +3493,7 @@
      "vars": {
       "borderColor": "transparent",
       "bg": "transparent",
-      "fg": "brand-1-dark"
+      "fg": "brand-1"
      },
      "when": {
       "emphasis": "tertiary"
@@ -3463,7 +3532,7 @@
     {
      "vars": {
       "borderColor": "status-success",
-      "fg": "brand-1-dark",
+      "fg": "brand-1",
       "tint": "status-success"
      },
      "when": {
@@ -3473,7 +3542,7 @@
     {
      "vars": {
       "borderColor": "status-warning",
-      "fg": "status-warning-dark",
+      "fg": "status-warning",
       "tint": "status-warning"
      },
      "when": {
@@ -3483,7 +3552,7 @@
     {
      "vars": {
       "borderColor": "brand-1",
-      "fg": "brand-1-dark",
+      "fg": "brand-1",
       "tint": "brand-1"
      },
      "when": {
@@ -3702,7 +3771,7 @@
     },
     {
      "vars": {
-      "bg": "brand-1-dark",
+      "bg": "brand-1",
       "fg": "smart-bw"
      },
      "when": {
@@ -3712,7 +3781,7 @@
     },
     {
      "vars": {
-      "bg": "brand-1-dark",
+      "bg": "brand-1",
       "fg": "smart-bw"
      },
      "when": {
@@ -3722,7 +3791,8 @@
     },
     {
      "vars": {
-      "bg": "brand-1-light"
+      "bg": "background",
+      "tint": "brand-1"
      },
      "when": {
       "state": "active",
@@ -3853,9 +3923,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "error"
@@ -3863,9 +3934,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "destructive"
@@ -3873,9 +3945,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "success"
@@ -3883,9 +3956,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-warning-light",
-      "bg": "status-warning-light",
-      "fg": "status-warning-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-warning",
+      "tint": "status-warning"
      },
      "when": {
       "status": "warning"
@@ -3893,9 +3967,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "info"
@@ -3932,7 +4007,8 @@
     {
      "vars": {
       "borderColor": "brand-1",
-      "bg": "brand-1-light"
+      "bg": "background",
+      "tint": "brand-1"
      },
      "when": {
       "state": "selected"
@@ -4135,7 +4211,7 @@
      "vars": {
       "borderColor": "transparent",
       "bg": "transparent",
-      "fg": "brand-1-dark"
+      "fg": "brand-1"
      },
      "when": {
       "emphasis": "tertiary"
@@ -4174,7 +4250,7 @@
     {
      "vars": {
       "borderColor": "status-success",
-      "fg": "brand-1-dark",
+      "fg": "brand-1",
       "tint": "status-success"
      },
      "when": {
@@ -4184,7 +4260,7 @@
     {
      "vars": {
       "borderColor": "status-warning",
-      "fg": "status-warning-dark",
+      "fg": "status-warning",
       "tint": "status-warning"
      },
      "when": {
@@ -4194,7 +4270,7 @@
     {
      "vars": {
       "borderColor": "brand-1",
-      "fg": "brand-1-dark",
+      "fg": "brand-1",
       "tint": "brand-1"
      },
      "when": {
@@ -4356,7 +4432,7 @@
     },
     {
      "vars": {
-      "bg": "brand-1-dark",
+      "bg": "brand-1",
       "fg": "smart-bw"
      },
      "when": {
@@ -4366,7 +4442,7 @@
     },
     {
      "vars": {
-      "bg": "brand-1-dark",
+      "bg": "brand-1",
       "fg": "smart-bw"
      },
      "when": {
@@ -4376,7 +4452,8 @@
     },
     {
      "vars": {
-      "bg": "brand-1-light"
+      "bg": "background",
+      "tint": "brand-1"
      },
      "when": {
       "state": "active",
@@ -4436,9 +4513,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "error"
@@ -4446,9 +4524,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "destructive"
@@ -4456,9 +4535,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "success"
@@ -4466,9 +4546,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-warning-light",
-      "bg": "status-warning-light",
-      "fg": "status-warning-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-warning",
+      "tint": "status-warning"
      },
      "when": {
       "status": "warning"
@@ -4476,9 +4557,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "info"
@@ -4515,7 +4597,8 @@
     {
      "vars": {
       "borderColor": "brand-1",
-      "bg": "brand-1-light"
+      "bg": "background",
+      "tint": "brand-1"
      },
      "when": {
       "state": "selected"
@@ -4733,7 +4816,7 @@
      "vars": {
       "borderColor": "transparent",
       "bg": "transparent",
-      "fg": "brand-1-dark"
+      "fg": "brand-1"
      },
      "when": {
       "emphasis": "tertiary"
@@ -4772,7 +4855,7 @@
     {
      "vars": {
       "borderColor": "status-success",
-      "fg": "brand-1-dark",
+      "fg": "brand-1",
       "tint": "status-success"
      },
      "when": {
@@ -4782,7 +4865,7 @@
     {
      "vars": {
       "borderColor": "status-warning",
-      "fg": "status-warning-dark",
+      "fg": "status-warning",
       "tint": "status-warning"
      },
      "when": {
@@ -4792,7 +4875,7 @@
     {
      "vars": {
       "borderColor": "brand-1",
-      "fg": "brand-1-dark",
+      "fg": "brand-1",
       "tint": "brand-1"
      },
      "when": {
@@ -4980,7 +5063,7 @@
     },
     {
      "vars": {
-      "bg": "brand-1-dark",
+      "bg": "brand-1",
       "fg": "smart-bw"
      },
      "when": {
@@ -4990,7 +5073,7 @@
     },
     {
      "vars": {
-      "bg": "brand-1-dark",
+      "bg": "brand-1",
       "fg": "smart-bw"
      },
      "when": {
@@ -5000,7 +5083,8 @@
     },
     {
      "vars": {
-      "bg": "brand-1-light"
+      "bg": "background",
+      "tint": "brand-1"
      },
      "when": {
       "state": "active",
@@ -6594,9 +6678,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "error"
@@ -6604,9 +6689,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "destructive"
@@ -6614,9 +6700,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "success"
@@ -6624,9 +6711,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-warning-light",
-      "bg": "status-warning-light",
-      "fg": "status-warning-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-warning",
+      "tint": "status-warning"
      },
      "when": {
       "status": "warning"
@@ -6634,9 +6722,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "info"
@@ -6673,7 +6762,8 @@
     {
      "vars": {
       "borderColor": "brand-1",
-      "bg": "brand-1-light"
+      "bg": "background",
+      "tint": "brand-1"
      },
      "when": {
       "state": "selected"
@@ -6868,9 +6958,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "error"
@@ -6878,9 +6969,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "destructive"
@@ -6888,9 +6980,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "success"
@@ -6898,9 +6991,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-warning-light",
-      "bg": "status-warning-light",
-      "fg": "status-warning-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-warning",
+      "tint": "status-warning"
      },
      "when": {
       "status": "warning"
@@ -6908,9 +7002,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "info"
@@ -6947,7 +7042,8 @@
     {
      "vars": {
       "borderColor": "brand-1",
-      "bg": "brand-1-light"
+      "bg": "background",
+      "tint": "brand-1"
      },
      "when": {
       "state": "selected"
@@ -7288,9 +7384,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "error"
@@ -7298,9 +7395,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "destructive"
@@ -7308,9 +7406,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "success"
@@ -7318,9 +7417,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-warning-light",
-      "bg": "status-warning-light",
-      "fg": "status-warning-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-warning",
+      "tint": "status-warning"
      },
      "when": {
       "status": "warning"
@@ -7328,9 +7428,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "info"
@@ -7367,7 +7468,8 @@
     {
      "vars": {
       "borderColor": "brand-1",
-      "bg": "brand-1-light"
+      "bg": "background",
+      "tint": "brand-1"
      },
      "when": {
       "state": "selected"
@@ -7550,7 +7652,7 @@
      "vars": {
       "borderColor": "transparent",
       "bg": "transparent",
-      "fg": "brand-1-dark"
+      "fg": "brand-1"
      },
      "when": {
       "emphasis": "tertiary"
@@ -7589,7 +7691,7 @@
     {
      "vars": {
       "borderColor": "status-success",
-      "fg": "brand-1-dark",
+      "fg": "brand-1",
       "tint": "status-success"
      },
      "when": {
@@ -7599,7 +7701,7 @@
     {
      "vars": {
       "borderColor": "status-warning",
-      "fg": "status-warning-dark",
+      "fg": "status-warning",
       "tint": "status-warning"
      },
      "when": {
@@ -7609,7 +7711,7 @@
     {
      "vars": {
       "borderColor": "brand-1",
-      "fg": "brand-1-dark",
+      "fg": "brand-1",
       "tint": "brand-1"
      },
      "when": {
@@ -7771,7 +7873,7 @@
     },
     {
      "vars": {
-      "bg": "brand-1-dark",
+      "bg": "brand-1",
       "fg": "smart-bw"
      },
      "when": {
@@ -7781,7 +7883,7 @@
     },
     {
      "vars": {
-      "bg": "brand-1-dark",
+      "bg": "brand-1",
       "fg": "smart-bw"
      },
      "when": {
@@ -7791,7 +7893,8 @@
     },
     {
      "vars": {
-      "bg": "brand-1-light"
+      "bg": "background",
+      "tint": "brand-1"
      },
      "when": {
       "state": "active",
@@ -7878,9 +7981,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "error"
@@ -7888,9 +7992,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "destructive"
@@ -7898,9 +8003,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "success"
@@ -7908,9 +8014,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-warning-light",
-      "bg": "status-warning-light",
-      "fg": "status-warning-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-warning",
+      "tint": "status-warning"
      },
      "when": {
       "status": "warning"
@@ -7918,9 +8025,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "info"
@@ -7957,7 +8065,8 @@
     {
      "vars": {
       "borderColor": "brand-1",
-      "bg": "brand-1-light"
+      "bg": "background",
+      "tint": "brand-1"
      },
      "when": {
       "state": "selected"
@@ -8032,9 +8141,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "error"
@@ -8042,9 +8152,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "destructive"
@@ -8052,9 +8163,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "success"
@@ -8062,9 +8174,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-warning-light",
-      "bg": "status-warning-light",
-      "fg": "status-warning-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-warning",
+      "tint": "status-warning"
      },
      "when": {
       "status": "warning"
@@ -8072,9 +8185,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "info"
@@ -8111,7 +8225,8 @@
     {
      "vars": {
       "borderColor": "brand-1",
-      "bg": "brand-1-light"
+      "bg": "background",
+      "tint": "brand-1"
      },
      "when": {
       "state": "selected"
@@ -8186,9 +8301,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "error"
@@ -8196,9 +8312,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "destructive"
@@ -8206,9 +8323,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "success"
@@ -8216,9 +8334,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-warning-light",
-      "bg": "status-warning-light",
-      "fg": "status-warning-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-warning",
+      "tint": "status-warning"
      },
      "when": {
       "status": "warning"
@@ -8226,9 +8345,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "info"
@@ -8265,7 +8385,8 @@
     {
      "vars": {
       "borderColor": "brand-1",
-      "bg": "brand-1-light"
+      "bg": "background",
+      "tint": "brand-1"
      },
      "when": {
       "state": "selected"
@@ -8283,7 +8404,7 @@
     {
      "vars": {
       "bg": "transparent",
-      "fg": "brand-1-dark"
+      "fg": "brand-1"
      },
      "when": {
       "status": "success"
@@ -8292,7 +8413,7 @@
     {
      "vars": {
       "bg": "transparent",
-      "fg": "status-warning-dark"
+      "fg": "status-warning"
      },
      "when": {
       "status": "warning"
@@ -8352,9 +8473,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "error"
@@ -8362,9 +8484,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "destructive"
@@ -8372,9 +8495,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "success"
@@ -8382,9 +8506,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-warning-light",
-      "bg": "status-warning-light",
-      "fg": "status-warning-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-warning",
+      "tint": "status-warning"
      },
      "when": {
       "status": "warning"
@@ -8392,9 +8517,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "info"
@@ -8431,7 +8557,8 @@
     {
      "vars": {
       "borderColor": "brand-1",
-      "bg": "brand-1-light"
+      "bg": "background",
+      "tint": "brand-1"
      },
      "when": {
       "state": "selected"
@@ -8514,9 +8641,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "error"
@@ -8524,9 +8652,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "destructive"
@@ -8534,9 +8663,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "success"
@@ -8544,9 +8674,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-warning-light",
-      "bg": "status-warning-light",
-      "fg": "status-warning-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-warning",
+      "tint": "status-warning"
      },
      "when": {
       "status": "warning"
@@ -8554,9 +8685,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "info"
@@ -8593,7 +8725,8 @@
     {
      "vars": {
       "borderColor": "brand-1",
-      "bg": "brand-1-light"
+      "bg": "background",
+      "tint": "brand-1"
      },
      "when": {
       "state": "selected"
@@ -8663,9 +8796,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "error"
@@ -8673,9 +8807,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "destructive"
@@ -8683,9 +8818,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "success"
@@ -8693,9 +8829,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-warning-light",
-      "bg": "status-warning-light",
-      "fg": "status-warning-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-warning",
+      "tint": "status-warning"
      },
      "when": {
       "status": "warning"
@@ -8703,9 +8840,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "info"
@@ -8742,7 +8880,8 @@
     {
      "vars": {
       "borderColor": "brand-1",
-      "bg": "brand-1-light"
+      "bg": "background",
+      "tint": "brand-1"
      },
      "when": {
       "state": "selected"
@@ -8817,9 +8956,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "error"
@@ -8827,9 +8967,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "destructive"
@@ -8837,9 +8978,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "success"
@@ -8847,9 +8989,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-warning-light",
-      "bg": "status-warning-light",
-      "fg": "status-warning-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-warning",
+      "tint": "status-warning"
      },
      "when": {
       "status": "warning"
@@ -8857,9 +9000,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "info"
@@ -8896,7 +9040,8 @@
     {
      "vars": {
       "borderColor": "brand-1",
-      "bg": "brand-1-light"
+      "bg": "background",
+      "tint": "brand-1"
      },
      "when": {
       "state": "selected"
@@ -8945,9 +9090,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "error"
@@ -8955,9 +9101,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "destructive"
@@ -8965,9 +9112,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "success"
@@ -8975,9 +9123,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-warning-light",
-      "bg": "status-warning-light",
-      "fg": "status-warning-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-warning",
+      "tint": "status-warning"
      },
      "when": {
       "status": "warning"
@@ -8985,9 +9134,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "info"
@@ -9024,7 +9174,8 @@
     {
      "vars": {
       "borderColor": "brand-1",
-      "bg": "brand-1-light"
+      "bg": "background",
+      "tint": "brand-1"
      },
      "when": {
       "state": "selected"
@@ -9073,9 +9224,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "error"
@@ -9083,9 +9235,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "destructive"
@@ -9093,9 +9246,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "success"
@@ -9103,9 +9257,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-warning-light",
-      "bg": "status-warning-light",
-      "fg": "status-warning-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-warning",
+      "tint": "status-warning"
      },
      "when": {
       "status": "warning"
@@ -9113,9 +9268,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "info"
@@ -9152,7 +9308,8 @@
     {
      "vars": {
       "borderColor": "brand-1",
-      "bg": "brand-1-light"
+      "bg": "background",
+      "tint": "brand-1"
      },
      "when": {
       "state": "selected"
@@ -9215,9 +9372,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "error"
@@ -9225,9 +9383,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "destructive"
@@ -9235,9 +9394,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "success"
@@ -9245,9 +9405,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-warning-light",
-      "bg": "status-warning-light",
-      "fg": "status-warning-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-warning",
+      "tint": "status-warning"
      },
      "when": {
       "status": "warning"
@@ -9255,9 +9416,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "info"
@@ -9294,7 +9456,8 @@
     {
      "vars": {
       "borderColor": "brand-1",
-      "bg": "brand-1-light"
+      "bg": "background",
+      "tint": "brand-1"
      },
      "when": {
       "state": "selected"
@@ -9378,9 +9541,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "error"
@@ -9388,9 +9552,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "destructive"
@@ -9398,9 +9563,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "success"
@@ -9408,9 +9574,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-warning-light",
-      "bg": "status-warning-light",
-      "fg": "status-warning-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-warning",
+      "tint": "status-warning"
      },
      "when": {
       "status": "warning"
@@ -9418,9 +9585,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "info"
@@ -9457,7 +9625,8 @@
     {
      "vars": {
       "borderColor": "brand-1",
-      "bg": "brand-1-light"
+      "bg": "background",
+      "tint": "brand-1"
      },
      "when": {
       "state": "selected"
@@ -9523,9 +9692,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "error"
@@ -9533,9 +9703,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "destructive"
@@ -9543,9 +9714,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "success"
@@ -9553,9 +9725,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-warning-light",
-      "bg": "status-warning-light",
-      "fg": "status-warning-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-warning",
+      "tint": "status-warning"
      },
      "when": {
       "status": "warning"
@@ -9563,9 +9736,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "info"
@@ -9602,7 +9776,8 @@
     {
      "vars": {
       "borderColor": "brand-1",
-      "bg": "brand-1-light"
+      "bg": "background",
+      "tint": "brand-1"
      },
      "when": {
       "state": "selected"
@@ -9644,8 +9819,9 @@
     {
      "vars": {
       "borderColor": "gray-200",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "view": {
       "borderTopWidth": 0,
@@ -9683,9 +9859,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "error"
@@ -9693,9 +9870,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "destructive"
@@ -9703,9 +9881,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "success"
@@ -9713,9 +9892,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-warning-light",
-      "bg": "status-warning-light",
-      "fg": "status-warning-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-warning",
+      "tint": "status-warning"
      },
      "when": {
       "status": "warning"
@@ -9723,9 +9903,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "info"
@@ -9762,7 +9943,8 @@
     {
      "vars": {
       "borderColor": "brand-1",
-      "bg": "brand-1-light"
+      "bg": "background",
+      "tint": "brand-1"
      },
      "when": {
       "state": "selected"
@@ -9788,8 +9970,9 @@
     },
     {
      "vars": {
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "error"
@@ -9797,8 +9980,9 @@
     },
     {
      "vars": {
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "destructive"
@@ -9806,8 +9990,9 @@
     },
     {
      "vars": {
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "success"
@@ -9815,8 +10000,9 @@
     },
     {
      "vars": {
-      "bg": "status-warning-light",
-      "fg": "status-warning-dark"
+      "bg": "background",
+      "fg": "status-warning",
+      "tint": "status-warning"
      },
      "when": {
       "status": "warning"
@@ -9824,8 +10010,9 @@
     },
     {
      "vars": {
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "info"
@@ -9903,9 +10090,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "error"
@@ -9913,9 +10101,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "destructive"
@@ -9923,9 +10112,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "success"
@@ -9933,9 +10123,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-warning-light",
-      "bg": "status-warning-light",
-      "fg": "status-warning-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-warning",
+      "tint": "status-warning"
      },
      "when": {
       "status": "warning"
@@ -9943,9 +10134,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "info"
@@ -9982,7 +10174,8 @@
     {
      "vars": {
       "borderColor": "brand-1",
-      "bg": "brand-1-light"
+      "bg": "background",
+      "tint": "brand-1"
      },
      "when": {
       "state": "selected"
@@ -10031,9 +10224,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "error"
@@ -10041,9 +10235,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "destructive"
@@ -10051,9 +10246,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "success"
@@ -10061,9 +10257,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-warning-light",
-      "bg": "status-warning-light",
-      "fg": "status-warning-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-warning",
+      "tint": "status-warning"
      },
      "when": {
       "status": "warning"
@@ -10071,9 +10268,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "info"
@@ -10110,7 +10308,8 @@
     {
      "vars": {
       "borderColor": "brand-1",
-      "bg": "brand-1-light"
+      "bg": "background",
+      "tint": "brand-1"
      },
      "when": {
       "state": "selected"
@@ -10159,9 +10358,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "error"
@@ -10169,9 +10369,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "destructive"
@@ -10179,9 +10380,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "success"
@@ -10189,9 +10391,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-warning-light",
-      "bg": "status-warning-light",
-      "fg": "status-warning-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-warning",
+      "tint": "status-warning"
      },
      "when": {
       "status": "warning"
@@ -10199,9 +10402,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "info"
@@ -10238,7 +10442,8 @@
     {
      "vars": {
       "borderColor": "brand-1",
-      "bg": "brand-1-light"
+      "bg": "background",
+      "tint": "brand-1"
      },
      "when": {
       "state": "selected"
@@ -10287,9 +10492,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "error"
@@ -10297,9 +10503,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "destructive"
@@ -10307,9 +10514,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "success"
@@ -10317,9 +10525,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-warning-light",
-      "bg": "status-warning-light",
-      "fg": "status-warning-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-warning",
+      "tint": "status-warning"
      },
      "when": {
       "status": "warning"
@@ -10327,9 +10536,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "info"
@@ -10366,7 +10576,8 @@
     {
      "vars": {
       "borderColor": "brand-1",
-      "bg": "brand-1-light"
+      "bg": "background",
+      "tint": "brand-1"
      },
      "when": {
       "state": "selected"
@@ -10415,9 +10626,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "error"
@@ -10425,9 +10637,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "destructive"
@@ -10435,9 +10648,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "success"
@@ -10445,9 +10659,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-warning-light",
-      "bg": "status-warning-light",
-      "fg": "status-warning-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-warning",
+      "tint": "status-warning"
      },
      "when": {
       "status": "warning"
@@ -10455,9 +10670,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "info"
@@ -10494,7 +10710,8 @@
     {
      "vars": {
       "borderColor": "brand-1",
-      "bg": "brand-1-light"
+      "bg": "background",
+      "tint": "brand-1"
      },
      "when": {
       "state": "selected"
@@ -10692,7 +10909,8 @@
      },
      {
       "vars": {
-       "bg": "brand-1-light"
+       "bg": "background",
+       "tint": "brand-1"
       },
       "when": {
        "state": "selected"
@@ -10886,7 +11104,7 @@
      "vars": {
       "borderColor": "transparent",
       "bg": "transparent",
-      "fg": "brand-1-dark"
+      "fg": "brand-1"
      },
      "when": {
       "emphasis": "tertiary"
@@ -10925,7 +11143,7 @@
     {
      "vars": {
       "borderColor": "status-success",
-      "fg": "brand-1-dark",
+      "fg": "brand-1",
       "tint": "status-success"
      },
      "when": {
@@ -10935,7 +11153,7 @@
     {
      "vars": {
       "borderColor": "status-warning",
-      "fg": "status-warning-dark",
+      "fg": "status-warning",
       "tint": "status-warning"
      },
      "when": {
@@ -10945,7 +11163,7 @@
     {
      "vars": {
       "borderColor": "brand-1",
-      "fg": "brand-1-dark",
+      "fg": "brand-1",
       "tint": "brand-1"
      },
      "when": {
@@ -11107,7 +11325,7 @@
     },
     {
      "vars": {
-      "bg": "brand-1-dark",
+      "bg": "brand-1",
       "fg": "smart-bw"
      },
      "when": {
@@ -11117,7 +11335,7 @@
     },
     {
      "vars": {
-      "bg": "brand-1-dark",
+      "bg": "brand-1",
       "fg": "smart-bw"
      },
      "when": {
@@ -11127,7 +11345,8 @@
     },
     {
      "vars": {
-      "bg": "brand-1-light"
+      "bg": "background",
+      "tint": "brand-1"
      },
      "when": {
       "state": "active",
@@ -11206,9 +11425,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "error"
@@ -11216,9 +11436,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "destructive"
@@ -11226,9 +11447,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "success"
@@ -11236,9 +11458,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-warning-light",
-      "bg": "status-warning-light",
-      "fg": "status-warning-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-warning",
+      "tint": "status-warning"
      },
      "when": {
       "status": "warning"
@@ -11246,9 +11469,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "info"
@@ -11285,7 +11509,8 @@
     {
      "vars": {
       "borderColor": "brand-1",
-      "bg": "brand-1-light"
+      "bg": "background",
+      "tint": "brand-1"
      },
      "when": {
       "state": "selected"
@@ -11388,7 +11613,8 @@
      },
      {
       "vars": {
-       "bg": "brand-1-light"
+       "bg": "background",
+       "tint": "brand-1"
       },
       "when": {
        "state": "selected"
@@ -11620,7 +11846,7 @@
      "vars": {
       "borderColor": "transparent",
       "bg": "transparent",
-      "fg": "brand-1-dark"
+      "fg": "brand-1"
      },
      "when": {
       "emphasis": "tertiary"
@@ -11659,7 +11885,7 @@
     {
      "vars": {
       "borderColor": "status-success",
-      "fg": "brand-1-dark",
+      "fg": "brand-1",
       "tint": "status-success"
      },
      "when": {
@@ -11669,7 +11895,7 @@
     {
      "vars": {
       "borderColor": "status-warning",
-      "fg": "status-warning-dark",
+      "fg": "status-warning",
       "tint": "status-warning"
      },
      "when": {
@@ -11679,7 +11905,7 @@
     {
      "vars": {
       "borderColor": "brand-1",
-      "fg": "brand-1-dark",
+      "fg": "brand-1",
       "tint": "brand-1"
      },
      "when": {
@@ -11747,8 +11973,8 @@
     },
     {
      "vars": {
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark",
+      "bg": "background",
+      "fg": "brand-1",
       "tint": "brand-1"
      },
      "when": {
@@ -11891,7 +12117,7 @@
     },
     {
      "vars": {
-      "bg": "brand-1-dark",
+      "bg": "brand-1",
       "fg": "smart-bw"
      },
      "when": {
@@ -11901,7 +12127,7 @@
     },
     {
      "vars": {
-      "bg": "brand-1-dark",
+      "bg": "brand-1",
       "fg": "smart-bw"
      },
      "when": {
@@ -11911,7 +12137,8 @@
     },
     {
      "vars": {
-      "bg": "brand-1-light"
+      "bg": "background",
+      "tint": "brand-1"
      },
      "when": {
       "state": "active",
@@ -11975,7 +12202,8 @@
      },
      {
       "vars": {
-       "bg": "brand-1-light"
+       "bg": "background",
+       "tint": "brand-1"
       },
       "when": {
        "state": "selected"
@@ -12035,9 +12263,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "error"
@@ -12045,9 +12274,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-error-light",
-      "bg": "status-error-light",
-      "fg": "status-error-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-error",
+      "tint": "status-error"
      },
      "when": {
       "status": "destructive"
@@ -12055,9 +12285,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "success"
@@ -12065,9 +12296,10 @@
     },
     {
      "vars": {
-      "borderColor": "status-warning-light",
-      "bg": "status-warning-light",
-      "fg": "status-warning-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "status-warning",
+      "tint": "status-warning"
      },
      "when": {
       "status": "warning"
@@ -12075,9 +12307,10 @@
     },
     {
      "vars": {
-      "borderColor": "brand-1-light",
-      "bg": "brand-1-light",
-      "fg": "brand-1-dark"
+      "borderColor": "transparent",
+      "bg": "background",
+      "fg": "brand-1",
+      "tint": "brand-1"
      },
      "when": {
       "status": "info"
@@ -12114,7 +12347,8 @@
     {
      "vars": {
       "borderColor": "brand-1",
-      "bg": "brand-1-light"
+      "bg": "background",
+      "tint": "brand-1"
      },
      "when": {
       "state": "selected"
@@ -12297,7 +12531,7 @@
      "vars": {
       "borderColor": "transparent",
       "bg": "transparent",
-      "fg": "brand-1-dark"
+      "fg": "brand-1"
      },
      "when": {
       "emphasis": "tertiary"
@@ -12336,7 +12570,7 @@
     {
      "vars": {
       "borderColor": "status-success",
-      "fg": "brand-1-dark",
+      "fg": "brand-1",
       "tint": "status-success"
      },
      "when": {
@@ -12346,7 +12580,7 @@
     {
      "vars": {
       "borderColor": "status-warning",
-      "fg": "status-warning-dark",
+      "fg": "status-warning",
       "tint": "status-warning"
      },
      "when": {
@@ -12356,7 +12590,7 @@
     {
      "vars": {
       "borderColor": "brand-1",
-      "fg": "brand-1-dark",
+      "fg": "brand-1",
       "tint": "brand-1"
      },
      "when": {
@@ -12518,7 +12752,7 @@
     },
     {
      "vars": {
-      "bg": "brand-1-dark",
+      "bg": "brand-1",
       "fg": "smart-bw"
      },
      "when": {
@@ -12528,7 +12762,7 @@
     },
     {
      "vars": {
-      "bg": "brand-1-dark",
+      "bg": "brand-1",
       "fg": "smart-bw"
      },
      "when": {
@@ -12538,7 +12772,8 @@
     },
     {
      "vars": {
-      "bg": "brand-1-light"
+      "bg": "background",
+      "tint": "brand-1"
      },
      "when": {
       "state": "active",

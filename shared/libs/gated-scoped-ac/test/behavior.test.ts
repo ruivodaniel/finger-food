@@ -3,7 +3,7 @@
 // through the gate, assert the visible note ids per persona. Plus the write
 // gates (create / update / delete allowed vs denied).
 
-import { eq } from "drizzle-orm";
+import { asc, eq } from "drizzle-orm";
 import { beforeAll, beforeEach, describe, expect, test } from "vitest";
 
 import { makeAc, makeGate } from "./fixture/ac";
@@ -114,6 +114,39 @@ describe("read visibility (through gateDb)", () => {
     expect(await visibleNoteIds(hydrate("sasuke", "altar", "company"))).toEqual([
       "note-2",
     ]);
+  });
+});
+
+// -------------------------------------------------------------
+// READ — ordering, paging and the count stay inside the Scope
+// -------------------------------------------------------------
+describe("read paging (orderBy, limit, offset, count)", () => {
+  // kakashi sees note-1 "Roadmap Q3", note-2 "Public Update", note-4 "Konoha Memo"
+  const read = (h: Ctx) =>
+    gate(h.bag).read("note", engine.resolveRead(h.permissions, "note", h.bag));
+
+  test("a page of the admitted rows, in order", async () => {
+    const page = (await read(hydrate("kakashi"))
+      .orderBy(asc(tables.note.title))
+      .limit(2)
+      .offset(1)
+      .rows()) as { id: string }[];
+    expect(page.map((r) => r.id)).toEqual(["note-2", "note-1"]);
+  });
+
+  test("count is the admitted total under the WHERE, paging ignored", async () => {
+    const kakashi = hydrate("kakashi");
+    expect(await read(kakashi).limit(1).count()).toBe(3);
+    expect(
+      await read(kakashi).where(eq(tables.note.title, "Roadmap Q3")).count(),
+    ).toBe(1);
+  });
+
+  test("paging never widens: a large limit still returns only what the Scope admits", async () => {
+    const sasuke = hydrate("sasuke", null, null);
+    expect(await read(sasuke).limit(50).count()).toBe(1);
+    expect(((await read(sasuke).limit(50).rows()) as { id: string }[]).map((r) => r.id))
+      .toEqual(["note-2"]);
   });
 });
 
@@ -310,11 +343,11 @@ describe("findRowsByIdWhereCanUpdate / …CanDelete", () => {
 });
 
 // -------------------------------------------------------------
-// The one sanctioned ungated path — for hydration only
+// The one sanctioned ungated path
 // -------------------------------------------------------------
-describe("unscopedForHydration", () => {
+describe("ungated", () => {
   test("hands back the raw handle so hydration can read before AC exists", async () => {
-    const raw = gate.unscopedForHydration();
+    const raw = gate.ungated();
     const rows = (await raw.select().from(tables.note)) as { id: string }[];
     expect(rows.length).toBeGreaterThan(0); // no scope involved
   });

@@ -1,0 +1,92 @@
+[
+  {
+    "id": "step-samantha",
+    "kind": "separator",
+    "separatorKind": "persona",
+    "worldUserId": "u-samantha",
+    "version": 1,
+    "uiLivePlayId": "play-browse"
+  },
+  {
+    "id": "step-page-2",
+    "kind": "actions",
+    "uiEventOrder": [
+      "event-enter",
+      "event-scroll-page-2",
+      "event-hover-page-2",
+      "event-page-2"
+    ],
+    "version": 1,
+    "uiLivePlayId": "play-browse"
+  },
+  {
+    "id": "step-note-borealis",
+    "kind": "separator",
+    "separatorKind": "note",
+    "text": "She goes back to the first page and opens Borealis Ltd.",
+    "version": 1,
+    "uiLivePlayId": "play-browse"
+  },
+  {
+    "id": "step-open-borealis",
+    "kind": "actions",
+    "uiEventOrder": [
+      "event-scroll-page-1",
+      "event-page-1",
+      "event-scroll-borealis",
+      "event-enter-borealis",
+      "event-members",
+      "event-leave"
+    ],
+    "version": 1,
+    "uiLivePlayId": "play-browse"
+  },
+  {
+    "id": "step-note-renamed",
+    "kind": "separator",
+    "separatorKind": "note",
+    "text": "Later, the organization is renamed Borealis Group.",
+    "version": 1,
+    "uiLivePlayId": "play-browse"
+  },
+  {
+    "id": "step-moment-1",
+    "kind": "actions",
+    "uiEventOrder": [
+      "event-moment-1",
+      "event-ask-again"
+    ],
+    "version": 1,
+    "uiLivePlayId": "play-browse"
+  },
+  {
+    "id": "info-step-open",
+    "version": 1,
+    "uiLivePlayId": "play-info",
+    "kind": "actions",
+    "uiEventOrder": [
+      "info-open"
+    ]
+  },
+  {
+    "id": "info-step-name",
+    "version": 1,
+    "uiLivePlayId": "play-info",
+    "kind": "actions",
+    "uiEventOrder": [
+      "info-fill-name",
+      "info-hover-save"
+    ]
+  },
+  {
+    "id": "info-step-tabs",
+    "version": 1,
+    "uiLivePlayId": "play-info",
+    "kind": "actions",
+    "uiEventOrder": [
+      "info-members",
+      "info-back",
+      "info-leave"
+    ]
+  }
+]

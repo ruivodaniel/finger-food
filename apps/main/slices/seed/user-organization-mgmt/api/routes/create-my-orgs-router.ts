@@ -21,7 +21,7 @@ import type { MembershipService } from "../services/membership.service";
 import type { InvitationService } from "../services/invitation.service";
 import { LegalConsentTypeSchema } from "../models/legal.schemas";
 import type { ModuleErrors } from "../shared/module-errors";
-import { requestMeta, requireUser } from "./route-helpers";
+import { requestMeta, requireScopedAc, requireUser } from "./route-helpers";
 import type { UserOrgMgmtEnv } from "../types";
 
 export interface CreateMyOrgsRouterOptions {
@@ -44,8 +44,8 @@ export function createMyOrgsRouter(options: CreateMyOrgsRouterOptions) {
   });
 
   router.get("/me/creatable-organization-types", async (c) => {
-    requireUser(c, errors);
-    return c.json(organizationService.creatableTypes(PRIVATE));
+    const ac = requireScopedAc(c, errors);
+    return c.json(organizationService.creatableTypes(ac, PRIVATE));
   });
 
   router.get("/me/invitations", async (c) => {
@@ -68,10 +68,11 @@ export function createMyOrgsRouter(options: CreateMyOrgsRouterOptions) {
       }),
     ),
     async (c) => {
-      const user = requireUser(c, errors);
+      requireUser(c, errors);
+      const ac = requireScopedAc(c, errors);
       await invitationService.accept(
+        ac,
         PRIVATE,
-        user.id,
         c.req.param("id"),
         c.req.valid("json").consents,
         requestMeta(c),

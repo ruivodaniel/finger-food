@@ -1,0 +1,1008 @@
+[
+  {
+    "id": "components",
+    "name": "The global components board (23 Oct)",
+    "data": {
+      "id": "components",
+      "name": "global components",
+      "columns": [
+        {
+          "id": "agent",
+          "name": "agent candidates",
+          "tone": "var(--violet, #bb9af7)"
+        },
+        {
+          "id": "appreciated",
+          "name": "approved for later",
+          "tone": "var(--green, #9ece6a)"
+        },
+        {
+          "id": "todo",
+          "name": "to do",
+          "tone": "var(--accent, #7aa2f7)"
+        },
+        {
+          "id": "done",
+          "name": "done",
+          "tone": "var(--accent-2, #7aa2f7)"
+        },
+        {
+          "id": "rejected",
+          "name": "rejected",
+          "tone": "var(--red, #f7768e)"
+        }
+      ],
+      "cards": [
+        {
+          "id": "p-persona",
+          "column": "done",
+          "title": "persona",
+          "text": "A shared previewer for personas, in sizes the consumer chooses: a badge, a card, a large one. Hover on the badge shows more; a click opens a modal. The first to build: personas are shown in canvases, in explorations and in the tool. Image: the avatar for the small sizes, the bust for the large one.",
+          "from": "Daniel",
+          "tags": [
+            "previewer"
+          ],
+          "createdAt": "2026-10-16T20:20:00.000Z"
+        },
+        {
+          "id": "p-organization",
+          "column": "done",
+          "title": "organization",
+          "text": "The same for organizations, with the logo. After personas, if the approach works.",
+          "from": "Daniel",
+          "tags": [
+            "previewer"
+          ],
+          "createdAt": "2026-10-16T20:20:00.000Z"
+        },
+        {
+          "id": "p-screen",
+          "column": "done",
+          "title": "ui_snapshot",
+          "text": "A previewer for screens: the screen shown by its id, in the sizes the consumer chooses.",
+          "from": "Daniel",
+          "tags": [
+            "previewer"
+          ],
+          "createdAt": "2026-10-16T21:30:00.000Z"
+        },
+        {
+          "id": "p-goal",
+          "column": "done",
+          "title": "goal",
+          "text": "A goal can have its use cases inside: one of its modes is expandable, showing the use cases within the goal.",
+          "from": "Daniel",
+          "tags": [
+            "previewer"
+          ],
+          "createdAt": "2026-10-16T21:30:00.000Z"
+        },
+        {
+          "id": "p-usecase",
+          "column": "done",
+          "title": "use case",
+          "text": "A previewer for use cases. It is also what a goal shows when expanded.",
+          "from": "Daniel",
+          "tags": [
+            "previewer"
+          ],
+          "createdAt": "2026-10-16T21:30:00.000Z"
+        },
+        {
+          "id": "p-erd-node",
+          "column": "done",
+          "title": "ERD node",
+          "text": "The ERD node is already a previewer, but it is part of the ERD. Promote it to a global previewer so anything else can call it.",
+          "from": "Daniel",
+          "tags": [
+            "previewer"
+          ],
+          "createdAt": "2026-10-16T21:30:00.000Z"
+        },
+        {
+          "id": "p-exploration",
+          "column": "done",
+          "title": "exploration",
+          "text": "A previewer for explorations.",
+          "from": "Daniel",
+          "tags": [
+            "previewer"
+          ],
+          "createdAt": "2026-10-16T21:30:00.000Z"
+        },
+        {
+          "id": "1ac1fdde-c02c-44c7-9770-7be6958e9a3e",
+          "column": "done",
+          "title": "Goal Group",
+          "text": "",
+          "from": "",
+          "tags": [
+            "previewer"
+          ],
+          "createdAt": "2026-10-17T01:10:19.689Z"
+        },
+        {
+          "id": "637b8828-4447-4c1f-acc5-c8ca6d5ea7e3",
+          "column": "todo",
+          "title": "Code Block",
+          "text": "with semantic higlight for diff langs\nbutton to edit\n",
+          "from": "",
+          "tags": [
+            "previewer"
+          ],
+          "createdAt": "2026-10-18T08:44:24.933Z"
+        },
+        {
+          "id": "e-t-todo",
+          "column": "todo",
+          "title": "to do",
+          "text": "A tree of items to tick, nest and reorder. State per version.",
+          "from": "Explorations V2 \u00b7 tab template",
+          "tags": [
+            "other"
+          ],
+          "links": [
+            {
+              "label": "prowd-as-a-product v19",
+              "url": "/slice-design/projects/PROWD/explorations/tool/prowd-as-a-product/v19"
+            }
+          ],
+          "createdAt": "2026-10-19T01:30:00.000Z"
+        },
+        {
+          "id": "e-t-notes",
+          "column": "todo",
+          "title": "notes",
+          "text": "Author and agent notes, saved with the exploration.",
+          "from": "Explorations V2 \u00b7 tab template",
+          "tags": [
+            "other"
+          ],
+          "links": [
+            {
+              "label": "prowd-as-a-product v19",
+              "url": "/slice-design/projects/PROWD/explorations/tool/prowd-as-a-product/v19"
+            }
+          ],
+          "createdAt": "2026-10-19T01:30:00.000Z"
+        },
+        {
+          "id": "e-t-sitemap",
+          "column": "appreciated",
+          "title": "sitemap",
+          "text": "The sitemap of a slice, each node with a picture and what it can do. Filters for web, mobile, access, shared components.\n\nThe very same component as in the product but not with pitsures.... we'll allow to be normal as the other... which can as well take pitcures, but it can take UI as Data",
+          "from": "Explorations V2 \u00b7 tab template",
+          "tags": [
+            "specific"
+          ],
+          "links": [
+            {
+              "label": "screens-and-components-migration v17",
+              "url": "/slice-design/projects/PROWD/explorations/tool/screens-and-components-migration/v17"
+            }
+          ],
+          "createdAt": "2026-10-19T01:30:00.000Z"
+        },
+        {
+          "id": "e-t-erd",
+          "column": "appreciated",
+          "title": "erd",
+          "text": "The ERD tables that matter, in the saved positions of the ERD page...",
+          "from": "Explorations V2 \u00b7 tab template",
+          "tags": [
+            "specific",
+            "canvas template"
+          ],
+          "links": [
+            {
+              "label": "CANNONICAL ERD",
+              "url": "http://localhost:4410/slice-design/projects/PROWD/erd?ds=components%2Flists%2Flist-tree"
+            }
+          ],
+          "createdAt": "2026-10-19T01:30:00.000Z"
+        },
+        {
+          "id": "e-t-delta",
+          "column": "todo",
+          "title": "delta",
+          "text": "What differs between two sets of things (ERD against the entity model), as boxes and as a table.",
+          "from": "Explorations V2 \u00b7 tab template",
+          "tags": [
+            "other"
+          ],
+          "links": [
+            {
+              "label": "erd-delta v2",
+              "url": "/slice-design/projects/PROWD/explorations/tool/erd-delta/v2"
+            },
+            {
+              "label": "prowd-as-a-product v19",
+              "url": "/slice-design/projects/PROWD/explorations/tool/prowd-as-a-product/v19"
+            }
+          ],
+          "createdAt": "2026-10-19T01:30:00.000Z"
+        },
+        {
+          "id": "e-t-map",
+          "column": "todo",
+          "title": "component map",
+          "text": "Components, layouts, shells and pages as a graph. Rules to come from Daniel: slice on the left, global on the right, switches.\n\nBEFORE BUILT --> we must improve the template",
+          "from": "Explorations V2 \u00b7 tab template",
+          "tags": [
+            "specific"
+          ],
+          "links": [
+            {
+              "label": "ui-as-code v18",
+              "url": "/slice-design/projects/PROWD/explorations/tool/ui-as-code/v18"
+            },
+            {
+              "label": "the map example",
+              "url": "/slice-design/projects/PROWD/explorations/tool/screens-explorations-and-the-canon/v1"
+            }
+          ],
+          "createdAt": "2026-10-19T01:30:00.000Z"
+        },
+        {
+          "id": "e-t-liveplay",
+          "column": "todo",
+          "title": "UX Flows .",
+          "text": "The Player over snapshots, with its step list.\n\nPAGE JUST THE SAME AS http://localhost:4410/slice-design/projects/PROWD/ux-flows\n\ndata should have all that is needed there: UX flows list, their. Use Cases and Live Flows\n\nper UX flow we can create use case and or live",
+          "from": "Explorations V2 \u00b7 tab template",
+          "tags": [
+            "specific"
+          ],
+          "links": [
+            {
+              "label": "UX flows page",
+              "url": "/slice-design/projects/PROWD/ux-flows"
+            }
+          ],
+          "createdAt": "2026-10-19T01:30:00.000Z"
+        },
+        {
+          "id": "e-t-kanban",
+          "column": "todo",
+          "title": "kanban",
+          "text": "Cards in columns, edited by click and moved by drag. State per version.\n\nNOTE: all is set per config, and data... also even the columns... their colors... etc... ",
+          "from": "Explorations V2 \u00b7 tab template",
+          "tags": [
+            "other"
+          ],
+          "links": [
+            {
+              "label": "this board",
+              "url": "/slice-design/projects/PROWD/explorations/tool/explorations-v2/v22?tab=tabs"
+            }
+          ],
+          "createdAt": "2026-10-19T01:30:00.000Z"
+        },
+        {
+          "id": "e-t-arch",
+          "column": "appreciated",
+          "title": "architecture diagram",
+          "text": "A simplified React Flow of how a thing is built. Floating edges.",
+          "from": "Explorations V2 \u00b7 tab template",
+          "tags": [
+            "specific",
+            "canvas template"
+          ],
+          "links": [
+            {
+              "label": "architecture tab",
+              "url": "/slice-design/projects/PROWD/explorations/tool/explorations-v2/v2?tab=architecture"
+            },
+            {
+              "label": "ui-as-code v18",
+              "url": "/slice-design/projects/PROWD/explorations/tool/ui-as-code/v18"
+            }
+          ],
+          "createdAt": "2026-10-19T01:30:00.000Z"
+        },
+        {
+          "id": "e-t-personas",
+          "column": "todo",
+          "title": "Org Type, Roles & Personas",
+          "text": "The cast as cards with bust, avatar and the roles they hold in a world.",
+          "from": "Explorations V2 \u00b7 tab template",
+          "tags": [
+            "specific"
+          ],
+          "links": [
+            {
+              "label": "Personas page",
+              "url": "/slice-design/projects/PROWD/org-types-roles"
+            }
+          ],
+          "createdAt": "2026-10-19T01:30:00.000Z"
+        },
+        {
+          "id": "e-t-world",
+          "column": "todo",
+          "title": "world",
+          "text": "The rows a set of screens stands on, at a moment, with the mutations that make them.\n\nThe world expansion shouldn't open a JSON, should open a component we should build for JSON viewer that should:\nshow as JSON or as list tree using our component for list-tree \nI'll explain later",
+          "from": "Explorations V2 \u00b7 tab template",
+          "tags": [
+            "specific"
+          ],
+          "links": [
+            {
+              "label": "worlds page",
+              "url": "/slice-design/projects/PROWD/uxui?tab=worlds"
+            },
+            {
+              "label": "ui-as-code v18",
+              "url": "/slice-design/projects/PROWD/explorations/tool/ui-as-code/v18"
+            }
+          ],
+          "createdAt": "2026-10-19T01:30:00.000Z"
+        },
+        {
+          "id": "e-t-screens",
+          "column": "todo",
+          "title": "screens gallery",
+          "text": "refference is the actuall canonical galery \n\nGALERY canonical\n\nbut with different filters I'll explain later",
+          "from": "Explorations V2 \u00b7 tab template",
+          "tags": [
+            "other"
+          ],
+          "links": [
+            {
+              "label": "GALERY canonical",
+              "url": "http://localhost:4410/slice-design/projects/PROWD/uxui?sm-slice=user-organization-mgmt&sm-surface=web&sm-show=page&tab=gallery"
+            }
+          ],
+          "createdAt": "2026-10-19T01:30:00.000Z"
+        },
+        {
+          "id": "e-t-process",
+          "column": "appreciated",
+          "title": "process",
+          "text": "A process drawn as steps with their actors.",
+          "from": "Explorations V2 \u00b7 tab template",
+          "tags": [
+            "other"
+          ],
+          "links": [
+            {
+              "label": "working-set-9-sep v10",
+              "url": "/slice-design/projects/dAinta/explorations/dainta-protocol-generation/working-set-9-sep/v10"
+            }
+          ],
+          "createdAt": "2026-10-19T01:30:00.000Z"
+        },
+        {
+          "id": "e-t-goals",
+          "column": "appreciated",
+          "title": "goals",
+          "text": "Goals of a product, grouped.",
+          "from": "Explorations V2 \u00b7 tab template",
+          "tags": [
+            "specific"
+          ],
+          "links": [
+            {
+              "label": "working-set-9-sep v10",
+              "url": "/slice-design/projects/dAinta/explorations/dainta-protocol-generation/working-set-9-sep/v10"
+            }
+          ],
+          "createdAt": "2026-10-19T01:30:00.000Z"
+        },
+        {
+          "id": "e-t-mapping",
+          "column": "appreciated",
+          "title": "mapping",
+          "text": "What maps to what: one set of things against another.\n\nMAPPING should be adapted to the rules we define for the canvas explorations",
+          "from": "Explorations V2 \u00b7 tab template",
+          "tags": [
+            "other"
+          ],
+          "links": [
+            {
+              "label": "working-set-9-sep v10",
+              "url": "/slice-design/projects/dAinta/explorations/dainta-protocol-generation/working-set-9-sep/v10"
+            }
+          ],
+          "createdAt": "2026-10-19T01:30:00.000Z"
+        },
+        {
+          "id": "e-t-flowchart",
+          "column": "todo",
+          "title": "ACTIVITY DIAGRAM",
+          "text": "A decision flow drawn as boxes and arrows.\nwe must bring this to a more structured manner MAYBE not even react flow ....\nalso inspired by the KanBan logics of sticky column headers when scroll down etc....\nmaybe react flow not the best cause this is most likely a BPMN on asteroids.\nI think it is.... and activity diagrams must be done that way .",
+          "from": "Explorations V2 \u00b7 tab template",
+          "tags": [
+            "editor"
+          ],
+          "links": [
+            {
+              "label": "ui-as-code TAB flow",
+              "url": "http://localhost:4410/slice-design/projects/PROWD/explorations/tool/ui-as-code/v19?full=0"
+            },
+            {
+              "label": "not in canvas... lanes are cols and sticky headers",
+              "url": "http://localhost:4410/slice-design/projects/PROWD/explorations/tool/explorations-v2?full=0&tab=cockpit"
+            }
+          ],
+          "createdAt": "2026-10-19T01:30:00.000Z"
+        },
+        {
+          "id": "e-t-canvas",
+          "column": "todo",
+          "title": "canvas",
+          "text": "A React Flow canvas as a tab template, and the default canvas. What is decided for it here (how it is drawn, how it opens, how positions and filters are kept) applies to every tab that draws a graph. The other canvases (the ERD, the component map, the architecture diagram, the delta) are adapted to it so they all behave the same. It is explored in its own exploration, \"exploration canvas\", created with the v2 architecture.\n\nStandards: to be set in that exploration. There is no good reference yet, so none is linked.",
+          "from": "Explorations V2 \u00b7 tab template",
+          "tags": [
+            "other"
+          ],
+          "createdAt": "2026-10-19T01:30:00.000Z"
+        },
+        {
+          "id": "e-t-richtables",
+          "column": "appreciated",
+          "title": "rich UI tables and lists",
+          "text": "Tables and lists built with UI as data. A cell or an item holds a stack of elements (text, images from blobs, chips, links) with different heading sizes, so a table or a list reads well however much it holds. Rich UI tables, and rich UI lists.\n\nSee this mention: GLOBAL ELEMENTS (NOT A TAB)\nthis will be relevant because these type of elements will be important in all but specifically this exploration\n",
+          "from": "Explorations V2 \u00b7 tab template",
+          "tags": [
+            "other",
+            "ui as data"
+          ],
+          "links": [
+            {
+              "label": "templates tab",
+              "url": "http://localhost:4410/slice-design/projects/PROWD/explorations/tool/explorations-v2/v21?full=0&tab=templates"
+            }
+          ],
+          "createdAt": "2026-10-19T01:30:00.000Z"
+        },
+        {
+          "id": "e-cefa8a09-fd4f-496b-adad-ce3143abc555",
+          "column": "appreciated",
+          "title": "GLOBAL ELEMENTS (NOT A TAB)",
+          "text": "See this example:\n\nhttp://localhost:4410/slice-design/projects/PROWD/explorations/tool/explorations-v2/v22?full=0&tab=templates\n\nthe way we have the elements from this exploration mentioned we must allow this to be done freely with the right approach.... but in a nutshell... UX UI to allow polimorphic mention of all entities of the exploration, and have a \"badge\" that is hoverable and clickable... hover should show more info (each element can have its own previewers) and click should allow to open a modal with info from that element...\n\nthis is smt global that can be used from to any entity from explorations",
+          "from": "Explorations V2 \u00b7 tab template",
+          "tags": [
+            "other",
+            "ui as data"
+          ],
+          "createdAt": "2026-10-19T01:30:00.000Z"
+        },
+        {
+          "id": "e-t-tabui",
+          "column": "appreciated",
+          "title": "FLEXIBLE tab \u2192 tab as UI as data",
+          "text": "A tab whose content is a UI as data document. The exploration describes the tab as a document (layout, stacks, tables, lists, a canvas, whatever it needs), gets its data through the exploration's data API, and one generic renderer draws it. It gives an exploration full freedom: any tab can be made without new code, and the tabs of the templates are special cases of it. Possible name: open tab.\n\nThe global elements (see the card \"GLOBAL ELEMENTS (NOT A TAB)\": a mention of any entity of the exploration, shown as a badge with a hover preview and a click that opens a modal) and the rich UI tables and lists are available inside these documents.",
+          "from": "Explorations V2 \u00b7 tab template",
+          "tags": [
+            "other",
+            "ui as data"
+          ],
+          "createdAt": "2026-10-19T01:30:00.000Z"
+        },
+        {
+          "id": "e-a168c7e5-5b7d-442b-854c-361071929ce4",
+          "column": "appreciated",
+          "title": "The Perfect Word Document",
+          "text": "",
+          "from": "Explorations V2 \u00b7 tab template",
+          "tags": [
+            "other",
+            "ui as data"
+          ],
+          "createdAt": "2026-10-19T01:30:00.000Z"
+        },
+        {
+          "id": "e-t-canvas-standards",
+          "column": "todo",
+          "title": "canvas standards",
+          "text": "The standards the old canvas v2 already had, to carry into the exploration canvas. Toolbox on the left: select (V), pan (H), rectangle (R), group (G), text (T), note (N), document (K). Every node has a handle on each side plus one at the center. A connection dropped on the center handle is a floating edge: it runs center to center and leaves from the border facing the other node. A connection dropped on a side handle is fixed to that side. Loose connection mode, so any handle connects to any handle. Dragging the end of an edge reconnects it; double click on an edge edits its label. Dropping a node into a group adopts it, dragging it out releases it. Pan only in pan mode, box selection in select mode. Resizer on rectangle, text and group. Minimap, zoom controls, background. To add from the new brief: dark mode follows the theme, click a node highlights it and its direct connections, positions saved as in the ERD, trackpad pan and pinch zoom, multi-select and drag, drawing shapes.",
+          "from": "Explorations V2 \u00b7 tab template",
+          "tags": [
+            "other"
+          ],
+          "createdAt": "2026-10-19T01:30:00.000Z"
+        },
+        {
+          "id": "e-t-component-builder",
+          "column": "todo",
+          "title": "component builder",
+          "text": "A tab type to build a component while playing with it, from the old Component Cockpit. You pick the component. Its props are read from its TypeScript and become controls: a switch for a boolean, a select for a union of strings, a field for a string or a number, sizes included. The component renders live next to the controls. A permutation list shows every combination of the union and boolean props, each with its applied props on hover. Fixtures feed the component: a sample fixture that ships with it, plus fixtures you add and name, and a data source to load a real entity by id from the data API. Panels: config, data source, code, readme. In the old cockpit an entry went candidate, component, pattern, ready, with status draft, approved or deprecated. Here the fixtures would be saved in the exploration's state, and the same component would show under global previewers.",
+          "from": "Explorations V2 \u00b7 tab template",
+          "tags": [
+            "other"
+          ],
+          "createdAt": "2026-10-19T01:30:00.000Z"
+        },
+        {
+          "id": "p-live-play-player",
+          "column": "done",
+          "title": "live play player",
+          "text": "One component that shows a ui_live_play by its id, composing the play's parts (header, cast, stage, transport with the step list) in a layout: player (the stage with the commands over it, on hover), panel (the stage and the step list beside), full (header and cast across the top). The parts share one store per play: one request, one position. The simplest instance is the stage with the commands over it.",
+          "from": "Daniel",
+          "tags": [
+            "previewer"
+          ],
+          "links": [
+            {
+              "label": "code",
+              "url": "/slice-design/shared/ui/components/entity-previewers/live-play"
+            }
+          ],
+          "createdAt": "2026-10-16T20:20:00.000Z"
+        },
+        {
+          "id": "42879d3d-651b-41f1-9179-64283927ee04",
+          "column": "done",
+          "title": "Color Swatches + Picker",
+          "text": "",
+          "from": "",
+          "tags": [
+            "other",
+            "library"
+          ],
+          "links": [
+            {
+              "label": "library",
+              "url": "/slice-design/projects/PROWD/uxui?tab=design-system"
+            }
+          ],
+          "createdAt": "2026-10-23T14:32:13.055Z"
+        },
+        {
+          "id": "812de02e-54b7-4ab3-a9c0-071614a6e46e",
+          "column": "todo",
+          "title": "Media Manager",
+          "text": "brwoser + search + folders + uploader\nsee old seed media manager\n\n\nwith the id: 8b5d909e-af68-4e28-836b-1f8c0f83b9b1\nregistry: slice-design/projects/PROWD/slices/tool/shared/uploads/core.json \u2014 find the entity with this id (kind \"folder\"). Its \"items\" are the ids of the files inside; look each up in the same registry for the original and any conversions.\n\nsee this to merge with our concepts",
+          "from": "",
+          "tags": [
+            "other"
+          ],
+          "createdAt": "2026-10-23T14:32:29.877Z"
+        },
+        {
+          "id": "ed-persona",
+          "column": "done",
+          "title": "persona editor",
+          "text": "The persona editor: info and images tabs, selects everywhere, generated busts gallery, upload, crop inside the editor. Cockpit entry persona-editor; the persona previewer opens it on hover (editable switch).",
+          "from": "Daniel, 24 Oct",
+          "tags": [
+            "editor"
+          ],
+          "links": [
+            {
+              "label": "code",
+              "url": "/slice-design/shared/ui/components/entity-previewers/personas/Editor.tsx"
+            }
+          ],
+          "createdAt": "2026-10-23T18:00:00.000Z"
+        },
+        {
+          "id": "ed-canvas-card",
+          "column": "done",
+          "title": "canvas card editor",
+          "text": "Title, description, note, colour (ColorPicker over the ten canvas tokens), picture (icon via IconPicker or image by url). Cockpit entry canvas-card-editor.",
+          "from": "Daniel, 24 Oct",
+          "tags": [
+            "editor"
+          ],
+          "links": [
+            {
+              "label": "code",
+              "url": "/slice-design/shared/ui/components/entity-previewers/canvas/card/Editor.tsx"
+            }
+          ],
+          "createdAt": "2026-10-23T18:00:00.000Z"
+        },
+        {
+          "id": "ed-swimlane",
+          "column": "done",
+          "title": "swimlane diagram editor",
+          "text": "Surface (lanes and flow, emits events; readOnly makes it a viewer) and bar (status, save, close). Standards from the BPMN swimlane skill. Will support more kinds later.",
+          "from": "this exploration",
+          "tags": [
+            "editor"
+          ],
+          "links": [
+            {
+              "label": "code",
+              "url": "/slice-design/shared/ui/components/editors/swimlane-diagram"
+            }
+          ],
+          "createdAt": "2026-10-23T18:00:00.000Z"
+        },
+        {
+          "id": "ed-organization",
+          "column": "done",
+          "title": "organization editor",
+          "text": "Name, type, logo, logo brief. Same shell as the persona editor.",
+          "from": "editing contract, 24 Oct",
+          "tags": [
+            "editor"
+          ],
+          "links": [
+            {
+              "label": "code",
+              "url": "/slice-design/shared/ui/components/entity-previewers/organizations/Editor.tsx"
+            }
+          ],
+          "createdAt": "2026-10-23T18:00:00.000Z"
+        },
+        {
+          "id": "ed-goal",
+          "column": "done",
+          "title": "goal editor",
+          "text": "Uid, title, statement, group.",
+          "from": "editing contract, 24 Oct",
+          "tags": [
+            "editor"
+          ],
+          "links": [
+            {
+              "label": "code",
+              "url": "/slice-design/shared/ui/components/entity-previewers/goals/Editor.tsx"
+            }
+          ],
+          "createdAt": "2026-10-23T18:00:00.000Z"
+        },
+        {
+          "id": "ed-use-case",
+          "column": "done",
+          "title": "use case editor",
+          "text": "Uid, title, status, description, goal, preconditions, steps, assertions.",
+          "from": "editing contract, 24 Oct",
+          "tags": [
+            "editor"
+          ],
+          "links": [
+            {
+              "label": "code",
+              "url": "/slice-design/shared/ui/components/entity-previewers/use-cases/Editor.tsx"
+            }
+          ],
+          "createdAt": "2026-10-23T18:00:00.000Z"
+        },
+        {
+          "id": "ed-goal-group",
+          "column": "done",
+          "title": "goal group editor",
+          "text": "Uid, title, description.",
+          "from": "editing contract, 24 Oct",
+          "tags": [
+            "editor"
+          ],
+          "links": [
+            {
+              "label": "code",
+              "url": "/slice-design/shared/ui/components/entity-previewers/goal-groups/Editor.tsx"
+            }
+          ],
+          "createdAt": "2026-10-23T18:00:00.000Z"
+        },
+        {
+          "id": "ed-exploration",
+          "column": "done",
+          "title": "exploration editor",
+          "text": "Title, tags, spike, skin.",
+          "from": "editing contract, 24 Oct",
+          "tags": [
+            "editor"
+          ],
+          "links": [
+            {
+              "label": "code",
+              "url": "/slice-design/shared/ui/components/entity-previewers/explorations/Editor.tsx"
+            }
+          ],
+          "createdAt": "2026-10-23T18:00:00.000Z"
+        },
+        {
+          "id": "ed-canvas-note",
+          "column": "done",
+          "title": "canvas note editor",
+          "text": "Title, text, colour.",
+          "from": "editing contract, 24 Oct",
+          "tags": [
+            "editor"
+          ],
+          "links": [
+            {
+              "label": "code",
+              "url": "/slice-design/shared/ui/components/entity-previewers/canvas/note/Editor.tsx"
+            }
+          ],
+          "createdAt": "2026-10-23T18:00:00.000Z"
+        },
+        {
+          "id": "ed-canvas-edge",
+          "column": "done",
+          "title": "canvas edge label editor",
+          "text": "Title, description, note.",
+          "from": "editing contract, 24 Oct",
+          "tags": [
+            "editor"
+          ],
+          "links": [
+            {
+              "label": "code",
+              "url": "/slice-design/shared/ui/components/entity-previewers/canvas/edge/Editor.tsx"
+            }
+          ],
+          "createdAt": "2026-10-23T18:00:00.000Z"
+        },
+        {
+          "id": "p-canvas-card",
+          "column": "done",
+          "title": "canvas card",
+          "text": "Previewer of a diagram node: title, title-description and picture layouts; colour as stroke, tint or none; tooltip and edit on hover.",
+          "from": "canvas exploration",
+          "tags": [
+            "previewer",
+            "canvas"
+          ],
+          "links": [
+            {
+              "label": "code",
+              "url": "/slice-design/shared/ui/components/entity-previewers/canvas/card"
+            }
+          ],
+          "createdAt": "2026-10-23T18:00:00.000Z"
+        },
+        {
+          "id": "p-canvas-note",
+          "column": "done",
+          "title": "canvas note",
+          "text": "Previewer of a sticker: five sizes, same text size, ellipsis, click opens the whole note.",
+          "from": "canvas exploration",
+          "tags": [
+            "previewer",
+            "canvas"
+          ],
+          "links": [
+            {
+              "label": "code",
+              "url": "/slice-design/shared/ui/components/entity-previewers/canvas/note"
+            }
+          ],
+          "createdAt": "2026-10-23T18:00:00.000Z"
+        },
+        {
+          "id": "p-canvas-edge",
+          "column": "done",
+          "title": "canvas edge label",
+          "text": "Previewer of a connector label: dot or title, the rest on hover.",
+          "from": "canvas exploration",
+          "tags": [
+            "previewer",
+            "canvas"
+          ],
+          "links": [
+            {
+              "label": "code",
+              "url": "/slice-design/shared/ui/components/entity-previewers/canvas/edge"
+            }
+          ],
+          "createdAt": "2026-10-23T18:00:00.000Z"
+        },
+        {
+          "id": "o-entity-store",
+          "column": "done",
+          "title": "entity store",
+          "text": "One store for the whole tool: previewers fetch by kind and id, batched per tick, ahead of the scroll, live through the server stream. bound(kind, Previewer) and Observed.",
+          "from": "entity-store exploration v8",
+          "tags": [
+            "other"
+          ],
+          "links": [
+            {
+              "label": "code",
+              "url": "/slice-design/shared/ui/components/entity-store"
+            }
+          ],
+          "createdAt": "2026-10-23T18:00:00.000Z"
+        },
+        {
+          "id": "o-icon-picker",
+          "column": "done",
+          "title": "icon picker",
+          "text": "Library field holding one icon of one library; search over names and keywords; tabs when several libraries. Used by the canvas card editor.",
+          "from": "Daniel, 23 Oct",
+          "tags": [
+            "other",
+            "library"
+          ],
+          "links": [
+            {
+              "label": "library",
+              "url": "/slice-design/projects/PROWD/uxui?tab=design-system"
+            }
+          ],
+          "createdAt": "2026-10-23T18:00:00.000Z"
+        }
+      ]
+    }
+  },
+  {
+    "id": "pipeline",
+    "name": "Other columns, other colours: a release pipeline",
+    "data": {
+      "id": "pipeline",
+      "name": "release pipeline",
+      "columns": [
+        {
+          "id": "backlog",
+          "name": "backlog",
+          "tone": "#888"
+        },
+        {
+          "id": "dev",
+          "name": "development",
+          "tone": "#d9a03c"
+        },
+        {
+          "id": "staging",
+          "name": "staging",
+          "tone": "#c98a2a"
+        },
+        {
+          "id": "prod",
+          "name": "production",
+          "tone": "#2aa878"
+        },
+        {
+          "id": "rolled-back",
+          "name": "rolled back",
+          "tone": "#f7768e"
+        },
+        {
+          "id": "archived",
+          "name": "archived",
+          "tone": "#aaa"
+        }
+      ],
+      "cards": [
+        {
+          "id": "r1",
+          "column": "prod",
+          "title": "v2.13.0",
+          "tags": [
+            "release"
+          ],
+          "createdAt": "2026-10-20T10:00:00.000Z"
+        },
+        {
+          "id": "r2",
+          "column": "staging",
+          "title": "v2.14.0",
+          "text": "Waiting for the owner of staging.",
+          "tags": [
+            "release"
+          ],
+          "createdAt": "2026-10-22T10:00:00.000Z"
+        },
+        {
+          "id": "r3",
+          "column": "dev",
+          "title": "v2.15.0-rc1",
+          "tags": [
+            "release",
+            "rc"
+          ],
+          "createdAt": "2026-10-23T09:00:00.000Z"
+        },
+        {
+          "id": "r4",
+          "column": "backlog",
+          "title": "v2.16.0",
+          "dashed": true,
+          "text": "Not cut yet."
+        },
+        {
+          "id": "r5",
+          "column": "rolled-back",
+          "title": "v2.12.1",
+          "text": "A migration failed in production.",
+          "tags": [
+            "release",
+            "incident"
+          ],
+          "createdAt": "2026-10-15T10:00:00.000Z"
+        }
+      ]
+    }
+  },
+  {
+    "id": "small",
+    "name": "A small board, three columns",
+    "data": {
+      "id": "small",
+      "name": "a week",
+      "columns": [
+        {
+          "id": "todo",
+          "name": "to do",
+          "tone": "var(--accent, #7aa2f7)"
+        },
+        {
+          "id": "doing",
+          "name": "doing",
+          "tone": "var(--violet, #bb9af7)"
+        },
+        {
+          "id": "done",
+          "name": "done",
+          "tone": "var(--green, #9ece6a)"
+        }
+      ],
+      "cards": [
+        {
+          "id": "a",
+          "column": "todo",
+          "title": "Write the fixtures",
+          "tags": [
+            "cockpit"
+          ],
+          "createdAt": "2026-10-23T10:00:00.000Z"
+        },
+        {
+          "id": "b",
+          "column": "todo",
+          "title": "A note on the side",
+          "text": "Dashed: a note, not a thing to do.",
+          "dashed": true
+        },
+        {
+          "id": "c",
+          "column": "doing",
+          "title": "Kanban as a global component",
+          "text": "Pure: cards in, events out.",
+          "from": "Daniel, 23 Oct",
+          "tags": [
+            "other"
+          ],
+          "links": [
+            {
+              "label": "code",
+              "url": "/slice-design/shared/ui/components/kanban"
+            }
+          ],
+          "createdAt": "2026-10-23T12:00:00.000Z"
+        },
+        {
+          "id": "d",
+          "column": "done",
+          "title": "Collapse and expand per column",
+          "tags": [
+            "other"
+          ],
+          "createdAt": "2026-10-23T11:00:00.000Z"
+        }
+      ]
+    }
+  },
+  {
+    "id": "empty",
+    "name": "An empty board",
+    "data": {
+      "id": "empty",
+      "name": "empty",
+      "columns": [
+        {
+          "id": "agent",
+          "name": "agent candidates",
+          "tone": "var(--violet, #bb9af7)"
+        },
+        {
+          "id": "appreciated",
+          "name": "approved for later",
+          "tone": "var(--green, #9ece6a)"
+        },
+        {
+          "id": "todo",
+          "name": "to do",
+          "tone": "var(--accent, #7aa2f7)"
+        }
+      ],
+      "cards": []
+    }
+  }
+]

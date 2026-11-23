@@ -1,0 +1,440 @@
+[
+  {
+    "id": "5a10c001",
+    "version": 1,
+    "uiDataId": "ui-data-organizations",
+    "name": "default",
+    "title": "Organizations, the second page",
+    "worldId": "world-acme",
+    "t": 0,
+    "initialStoreState": {
+      "session": "u-samantha",
+      "activeOrganization": "o-platform"
+    },
+    "initialParams": {
+      "page": "2"
+    },
+    "recordedRequests": [
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/auth/session",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "user": {
+              "id": "u-samantha",
+              "profile": {
+                "name": "Samantha Reyes",
+                "image": null
+              },
+              "identifiers": [
+                {
+                  "type": "email",
+                  "value": "samantha.reyes@example.com"
+                }
+              ]
+            },
+            "session": {
+              "id": "session-samantha",
+              "userId": "u-samantha",
+              "activeOrganizationId": "o-platform",
+              "memberships": [
+                {
+                  "organizationId": "o-platform",
+                  "roles": [
+                    "owner"
+                  ]
+                }
+              ],
+              "aal": "aal1",
+              "methods": [
+                "password"
+              ],
+              "expiresAt": "2026-03-09T09:00:00.000Z"
+            }
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/types",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": [
+            {
+              "id": "client",
+              "label": "Client"
+            },
+            {
+              "id": "partner",
+              "label": "Partner"
+            },
+            {
+              "id": "supplier",
+              "label": "Supplier"
+            }
+          ]
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/me/creatable-organization-types",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": [
+            {
+              "id": "client",
+              "label": "Client"
+            },
+            {
+              "id": "partner",
+              "label": "Partner"
+            },
+            {
+              "id": "supplier",
+              "label": "Supplier"
+            }
+          ]
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations",
+          "query": {
+            "page": "2",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": {
+              "table": "organization",
+              "ids": [
+                "org-21",
+                "org-22",
+                "org-23",
+                "org-24",
+                "org-25",
+                "org-26",
+                "org-27",
+                "org-28",
+                "org-29",
+                "org-30",
+                "org-31",
+                "org-32",
+                "org-33",
+                "org-34",
+                "org-35",
+                "org-36",
+                "org-37",
+                "org-38",
+                "org-39",
+                "org-40"
+              ]
+            },
+            "total": 57
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "5a10c002",
+    "version": 1,
+    "uiDataId": "ui-data-organization-info",
+    "name": "default",
+    "title": "Borealis, its info",
+    "worldId": "world-acme",
+    "t": 0,
+    "initialStoreState": {
+      "session": "u-samantha",
+      "activeOrganization": "o-platform"
+    },
+    "initialParams": {
+      "organizationId": "abc123"
+    },
+    "recordedRequests": [
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/auth/session",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "user": {
+              "id": "u-samantha",
+              "profile": {
+                "name": "Samantha Reyes",
+                "image": null
+              },
+              "identifiers": [
+                {
+                  "type": "email",
+                  "value": "samantha.reyes@example.com"
+                }
+              ]
+            },
+            "session": {
+              "id": "session-samantha",
+              "userId": "u-samantha",
+              "activeOrganizationId": "o-platform",
+              "memberships": [
+                {
+                  "organizationId": "o-platform",
+                  "roles": [
+                    "owner"
+                  ]
+                }
+              ],
+              "aal": "aal1",
+              "methods": [
+                "password"
+              ],
+              "expiresAt": "2026-03-09T09:00:00.000Z"
+            }
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/abc123",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "abc123"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "PATCH",
+          "path": "/api/client/organizations/abc123",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "abc123"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "5a10c003",
+    "version": 1,
+    "uiDataId": "ui-data-organization-members",
+    "name": "default",
+    "title": "Borealis, its members",
+    "worldId": "world-acme",
+    "t": 0,
+    "initialStoreState": {
+      "session": "u-samantha",
+      "activeOrganization": "o-platform"
+    },
+    "initialParams": {
+      "organizationId": "abc123"
+    },
+    "recordedRequests": [
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/auth/session",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "user": {
+              "id": "u-samantha",
+              "profile": {
+                "name": "Samantha Reyes",
+                "image": null
+              },
+              "identifiers": [
+                {
+                  "type": "email",
+                  "value": "samantha.reyes@example.com"
+                }
+              ]
+            },
+            "session": {
+              "id": "session-samantha",
+              "userId": "u-samantha",
+              "activeOrganizationId": "o-platform",
+              "memberships": [
+                {
+                  "organizationId": "o-platform",
+                  "roles": [
+                    "owner"
+                  ]
+                }
+              ],
+              "aal": "aal1",
+              "methods": [
+                "password"
+              ],
+              "expiresAt": "2026-03-09T09:00:00.000Z"
+            }
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/abc123",
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "table": "organization",
+            "id": "abc123"
+          }
+        }
+      },
+      {
+        "request": {
+          "method": "GET",
+          "path": "/api/client/organizations/abc123/members",
+          "query": {
+            "page": "1",
+            "pageSize": "20"
+          },
+          "headers": {
+            "activeOrganization": "o-platform"
+          }
+        },
+        "response": {
+          "status": 200,
+          "body": {
+            "rows": [
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-abc123-ingrid"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-ingrid"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-ingrid"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-abc123-kwame"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-kwame"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-kwame"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-abc123-leila"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-leila"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-leila"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-abc123-rafael"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-rafael"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-rafael"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-abc123-yuki"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-yuki"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-yuki"
+                }
+              },
+              {
+                "member": {
+                  "table": "member",
+                  "id": "m-abc123-priya"
+                },
+                "profile": {
+                  "table": "user_profile",
+                  "id": "u-priya"
+                },
+                "contact": {
+                  "table": "user_contacts",
+                  "id": "c-priya"
+                }
+              }
+            ],
+            "total": 6
+          }
+        }
+      }
+    ]
+  }
+]

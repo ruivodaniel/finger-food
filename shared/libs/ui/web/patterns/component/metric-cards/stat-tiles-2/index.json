@@ -1,0 +1,171 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "stat-tiles-2",
+ "version": 1,
+ "surface": "web",
+ "measure": "md",
+ "root": {
+  "type": "Stack",
+  "props": {
+   "dir": "row",
+   "gap": 16
+  },
+  "children": [
+   {
+    "type": "Tile",
+    "props": {
+     "className": "flex-1 min-w-0"
+    },
+    "children": [
+     {
+      "type": "Stack",
+      "props": {
+       "dir": "col",
+       "gap": 6
+      },
+      "children": [
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--body",
+         "emphasis": "quiet",
+         "children": "New Customers"
+        }
+       },
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--numbers-large",
+         "children": "847"
+        }
+       },
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "align": "baseline",
+         "gap": 6
+        },
+        "children": [
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--body-small",
+           "status": "error"
+          },
+          "children": [
+           {
+            "type": "Icon",
+            "props": {
+             "name": "arrowDown",
+             "size": "xs"
+            }
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "children": " -8.2%"
+            }
+           }
+          ]
+         },
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--body-small",
+           "emphasis": "quiet",
+           "children": "vs last period"
+          }
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Tile",
+    "props": {
+     "className": "flex-1 min-w-0"
+    },
+    "children": [
+     {
+      "type": "Stack",
+      "props": {
+       "dir": "col",
+       "gap": 6
+      },
+      "children": [
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--body",
+         "emphasis": "quiet",
+         "children": "Churn Rate"
+        }
+       },
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--numbers-large",
+         "children": "2.4"
+        }
+       },
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "align": "baseline",
+         "gap": 6
+        },
+        "children": [
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--body-small",
+           "status": "error"
+          },
+          "children": [
+           {
+            "type": "Icon",
+            "props": {
+             "name": "arrowDown",
+             "size": "xs"
+            }
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "children": " -22.6%"
+            }
+           }
+          ]
+         },
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--body-small",
+           "emphasis": "quiet",
+           "children": "vs last period"
+          }
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

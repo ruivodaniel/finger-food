@@ -8,8 +8,7 @@
  * any bag exists and stays raw infrastructure.
  */
 
-import type { Ac } from "@libs/gated-scoped-ac";
-import type { ScopedAcRequestContext } from "../shared/scoped-ac";
+import type { Ac, ScopedAcRequestContext } from "@libs/gated-scoped-ac";
 import type { UserContactRepository } from "../repositories/user-contact.repository";
 import type {
   UomUserContactSelect,

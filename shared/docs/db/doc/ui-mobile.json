@@ -1,0 +1,175 @@
+{
+ "id": "doc/ui-mobile",
+ "kind": "doc",
+ "title": "Mobile library",
+ "status": "todo",
+ "subject": "ui",
+ "owner": "libs/ui",
+ "order": 8,
+ "tags": [
+  "ui",
+  "consumer",
+  "contributor",
+  "mobile"
+ ],
+ "paths": [
+  "shared/libs/ui"
+ ],
+ "summary": "The mobile UI library: React Native components on the same contract as the web library; how a theme reaches a component without a cascade; what a component owns; what the platform cannot do.",
+ "docId": "ui-mobile",
+ "doc": {
+  "axioms": [
+   {
+    "text": "The mobile library obeys the same law and the same table as the web library."
+   },
+   {
+    "text": "A mobile component reads its aspect from the theme and writes none of its own."
+   },
+   {
+    "text": "What the platform cannot do is stated, not worked around."
+   }
+  ],
+  "purpose": {
+   "intro": "This repo is a seed for many products, each with its own themes, on two platforms. One vocabulary and one table across web and mobile let a theme be authored once for both and a component be checked against the same row on both; where React Native has no cascade, the engine does at build time what the browser would do at run time."
+  },
+  "reference": [
+   {
+    "topic": "The contract",
+    "claims": [
+     {
+      "text": "A mobile component is one element of that table. It has the same name as its web twin and the same axis props: `emphasis`, `status`, `scale`, `state`. Its first line says which element it is and which web component, at which version, it mirrors."
+     },
+     {
+      "text": "The code is not shared. The web component renders HTML and is styled by CSS; this one renders React Native views and reads its style from the native theme."
+     },
+     {
+      "text": "One vocabulary (`emphasis`, `status`, `scale`, `state`, from `ui/types/axes.ts`) and one law (`ui/types/elements.ts`): a mobile component's props are typed from its row. A mobile theme is a `MobileTheme`: the same primitives, families, elements and cascade as a web theme, without what only the web has, with what only a phone has."
+     }
+    ],
+    "statement": "One table rules both libraries: `shared/libs/ui/types/elements.ts`. Each row is an element, with its family, the platforms it exists on, and the values it takes on each axis."
+   },
+   {
+    "topic": "How a theme reaches a component",
+    "claims": [],
+    "examples": [
+     {
+      "snippets": [
+       {
+        "code": "themes/<id>/v<n>/theme.ts          a MobileTheme, authored\n        │   mobile/theme-engine     (pnpm theme:build:mobile)\n        ▼\nthemes/<id>/v<n>/generated/<id>.native.json\n        │   ThemeProvider\n        ▼\nuseElement(\"button\", { emphasis, status, scale, states })  →  { view, text, color, icon }"
+       }
+      ]
+     }
+    ],
+    "statement": "The web engine turns a theme into CSS and the browser resolves the cascade. React Native has no cascade, so the mobile engine emits each rule as a *fragment*, in the order the cascade applies them, and `resolve` (in `src/theme/resolve.ts`) keeps the fragments whose axes match and merges them. The colour composition (tint, background alpha, `smart-bw`) is the web stylesheet's formula, computed in JavaScript."
+   },
+   {
+    "topic": "Reading the theme",
+    "claims": [
+     {
+      "text": "`ThemeProvider` takes a native theme (the `<id>.native.json` the mobile theme engine writes) and a colour mode."
+     },
+     {
+      "text": "`useElement(element, axes)` returns the element's style for its axes: `{ view, text, color, icon, extras }`."
+     },
+     {
+      "text": "`usePart(element, part, axes)` does the same for a surface inside an element (a list's row, a switch's thumb)."
+     },
+     {
+      "text": "`useType(level)` and `useColor(name)` read a typography level and a colour."
+     },
+     {
+      "text": "A component never writes a colour, a size or a spacing of its own."
+     }
+    ],
+    "statement": "A component is themed only by reading the theme. There is no cascade in React Native."
+   },
+   {
+    "topic": "What a component owns",
+    "claims": [
+     {
+      "text": "**Accessibility.** Role, state, label. A component without it is not done."
+     },
+     {
+      "text": "**Native props.** A component wraps a React Native component and passes its props through."
+     },
+     {
+      "text": "**Press feedback per platform.** iOS dims (`theme.press.opacityDim`), Android ripples (`theme.press.ripple`); both come from the theme. The `active` state restyles the element on both."
+     },
+     {
+      "text": "**Structure.** Row or column, what goes where. Never a colour, a size or a spacing."
+     }
+    ]
+   },
+   {
+    "topic": "States",
+    "claims": [],
+    "statement": "`active` (pressed), `focus`, `selected`, `disabled`, `loading` are shared with the web. `long-pressed` and `swiped` are mobile's. There is no `hover`. A component computes its states from what happens to it and also accepts `state` to force one."
+   },
+   {
+    "topic": "What React Native cannot do, and what stands in",
+    "claims": [],
+    "imagesAndDiagrams": [
+     {
+      "type": "ascii",
+      "value": "| The web has | Mobile does |\n|---|---|\n| The cascade | Fragments, resolved by `useElement` |\n| `:hover` | Nothing. `long-pressed` is the state for what a held press reveals |\n| Inherited text colour | A component passes its text style to its own text |\n| A stylesheet swapped at run time | A new `theme` or `mode` on the provider re-renders its consumers |"
+     }
+    ]
+   },
+   {
+    "topic": "Components",
+    "claims": [
+     {
+      "text": "Every interactive component sets its accessibility role and state, and passes the native props of the React Native component it wraps."
+     }
+    ],
+    "imagesAndDiagrams": [
+     {
+      "type": "ascii",
+      "value": "| Component | Element | Web twin |\n|---|---|---|\n| `Button` | `control--button` | Button |\n| `Card`, `CardHeader`, `CardContent`, `CardFooter` | `surface--card`, `--header`, `--content`, `--footer` | Card and its regions |\n| `Badge` | `surface--badge` | Badge |\n| `Avatar` | `surface--avatar` | Avatar |\n| `Input` | `field--input` | Input |\n| `PhoneInput` | `field--phone-input` | PhoneInput |\n| `Field`, `Label` | `surface--label`, `--field-description`, `--field-message` | Label and the field wrappers |\n| `ChoiceGroup` | `control-group--choice-group` with `control--toggle` | the choice group |\n| `Group` | `surface--group` | a titled section |\n| `EmptyState` | `surface--empty-state` | EmptyState |\n| `Icon` | `shape--icon` | Icon, same semantic names, same icon set (Lucide) |\n| `Text` | the typography levels, `type--<level>` | the `type--*` attribute |\n| `Stepper` | a composite of `button-group`, `button`, `button-group-text` | none: mobile's own |"
+     }
+    ],
+    "statement": "`Stack` is in `@libs/mobile-layouts`."
+   },
+   {
+    "topic": "Quick start",
+    "claims": [],
+    "examples": [
+     {
+      "snippets": [
+       {
+        "code": "import { ThemeProvider, Button, Card, Badge, Text } from \"@libs/mobile-components\";\nimport { Stack } from \"@libs/mobile-layouts\";\nimport theme from \"<themes>/bounx-mobile/v1/generated/bounx-mobile.native.json\";\n\n<ThemeProvider theme={theme} mode=\"light\">\n  <Card>\n    <Stack dir=\"row\" align=\"center\" justify=\"between\" gap={12}>\n      <Stack gap={4} size=\"fill\">\n        <Badge>Group session</Badge>\n        <Text type=\"heading4\">Junior Squad</Text>\n      </Stack>\n      <Button scale=\"sm\">Start</Button>\n    </Stack>\n  </Card>\n</ThemeProvider>",
+        "caption": "tsx"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "topic": "Not emitted on mobile",
+    "claims": [
+     {
+      "text": "Concepts, contextual overrides and rules (theme levels 4 to 6) are not emitted: they need a component's ancestry at run time."
+     },
+     {
+      "text": "Gradients, text effects and blur are not emitted; the engine lists what it skipped in the output's `unsupported`."
+     }
+    ]
+   }
+  ],
+  "review": {
+   "axioms": {
+    "state": "unreviewed"
+   },
+   "purpose": {
+    "state": "unreviewed"
+   },
+   "reference": {
+    "state": "unreviewed"
+   }
+  }
+ },
+ "audience": [
+  "seed-contributor",
+  "seed-consumer"
+ ]
+}

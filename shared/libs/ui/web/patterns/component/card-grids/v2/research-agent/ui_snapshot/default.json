@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-card-grids-research-agent-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-card-grids-research-agent",
+ "name": "default",
+ "title": "Card grids: research agent",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

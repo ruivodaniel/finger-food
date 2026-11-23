@@ -1,0 +1,92 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "title-row-warning",
+ "version": 1,
+ "surface": "web",
+ "measure": "md",
+ "root": {
+  "type": "Card",
+  "props": {
+   "className": "flex-1 min-w-56"
+  },
+  "children": [
+   {
+    "type": "Content",
+    "props": {},
+    "children": [
+     {
+      "type": "Stack",
+      "props": {
+       "dir": "col",
+       "gap": 6
+      },
+      "children": [
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "gap": 8,
+         "align": "center",
+         "justify": "between"
+        },
+        "children": [
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--heading4",
+           "status": "warning"
+          },
+          "children": [
+           {
+            "type": "Icon",
+            "props": {
+             "name": "warning",
+             "size": "sm"
+            }
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "children": " Storage almost full"
+            }
+           }
+          ]
+         },
+         {
+          "type": "Badge",
+          "props": {
+           "emphasis": "quiet",
+           "status": "warning",
+           "scale": "xs",
+           "children": "Warning"
+          }
+         }
+        ]
+       },
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--body-small",
+         "children": "92% of 50 GB used \u2014 uploads pause at 100%."
+        }
+       },
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--body-extra-small",
+         "emphasis": "quiet",
+         "children": "1 h ago"
+        }
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

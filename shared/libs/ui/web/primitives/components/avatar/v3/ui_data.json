@@ -1,0 +1,302 @@
+{
+ "id": "ui-data-primitive-avatar-v3",
+ "version": 3,
+ "uiNodeId": "ui-node-primitive-avatar-v3",
+ "kind": "component",
+ "name": "primitive-avatar",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "primitive-avatar",
+  "version": 3,
+  "surface": "web",
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "align": "center",
+    "scale": "2xl"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "scale"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Avatar",
+         "children": [
+          {
+           "type": "AvatarFallback",
+           "props": {
+            "children": "XS"
+           }
+          }
+         ],
+         "props": {
+          "scale": "xs"
+         }
+        },
+        {
+         "type": "Avatar",
+         "children": [
+          {
+           "type": "AvatarFallback",
+           "props": {
+            "children": "SM"
+           }
+          }
+         ],
+         "props": {
+          "scale": "sm"
+         }
+        },
+        {
+         "type": "Avatar",
+         "children": [
+          {
+           "type": "AvatarFallback",
+           "props": {
+            "children": "MD"
+           }
+          }
+         ],
+         "props": {
+          "scale": "md"
+         }
+        },
+        {
+         "type": "Avatar",
+         "children": [
+          {
+           "type": "AvatarFallback",
+           "props": {
+            "children": "LG"
+           }
+          }
+         ],
+         "props": {
+          "scale": "lg"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "fallback initials \u2014 scale=\"md\""
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Avatar",
+         "children": [
+          {
+           "type": "AvatarFallback",
+           "props": {
+            "children": "JD"
+           }
+          }
+         ],
+         "props": {
+          "scale": "md"
+         }
+        },
+        {
+         "type": "Avatar",
+         "children": [
+          {
+           "type": "AvatarFallback",
+           "props": {
+            "children": "PA"
+           }
+          }
+         ],
+         "props": {
+          "scale": "md"
+         }
+        },
+        {
+         "type": "Avatar",
+         "children": [
+          {
+           "type": "AvatarFallback",
+           "props": {
+            "children": "AB"
+           }
+          }
+         ],
+         "props": {
+          "scale": "md"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "fallback from the seed"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Avatar",
+         "props": {
+          "scale": "lg"
+         },
+         "children": [
+          {
+           "type": "AvatarFallback",
+           "props": {
+            "seed": "user-ines-carvalho",
+            "children": "IC"
+           }
+          }
+         ]
+        },
+        {
+         "type": "Avatar",
+         "props": {
+          "scale": "lg"
+         },
+         "children": [
+          {
+           "type": "AvatarFallback",
+           "props": {
+            "seed": "user-tomas-ferreira",
+            "children": "TF"
+           }
+          }
+         ]
+        },
+        {
+         "type": "Avatar",
+         "props": {
+          "scale": "lg"
+         },
+         "children": [
+          {
+           "type": "AvatarFallback",
+           "props": {
+            "seed": "user-aisha-khan",
+            "children": "AK"
+           }
+          }
+         ]
+        },
+        {
+         "type": "Avatar",
+         "props": {
+          "scale": "lg"
+         },
+         "children": [
+          {
+           "type": "AvatarFallback",
+           "props": {
+            "seed": "user-joao-pereira",
+            "children": "JP"
+           }
+          }
+         ]
+        },
+        {
+         "type": "Avatar",
+         "props": {
+          "scale": "lg"
+         },
+         "children": [
+          {
+           "type": "AvatarFallback",
+           "props": {
+            "seed": "user-lena-hoffmann",
+            "children": "LH"
+           }
+          }
+         ]
+        },
+        {
+         "type": "Avatar",
+         "props": {
+          "scale": "lg"
+         },
+         "children": [
+          {
+           "type": "AvatarFallback",
+           "props": {
+            "seed": "org-acme",
+            "children": "A"
+           }
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

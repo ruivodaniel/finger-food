@@ -1,0 +1,45 @@
+{
+ "id": "ui-data-pattern-layout-auth-page-authpage",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-layout-auth-page-authpage",
+ "kind": "component",
+ "name": "AuthPage",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "AuthPage",
+  "version": 1,
+  "surface": "web",
+  "slots": [
+   "mainContainer"
+  ],
+  "root": {
+   "type": "ShellNone",
+   "children": [
+    {
+     "type": "Page",
+     "props": {
+      "className": "flex-1 items-center justify-center"
+     },
+     "children": [
+      {
+       "type": "MainContainer",
+       "props": {
+        "scale": "xs",
+        "className": "flex flex-col items-center"
+       },
+       "children": [
+        {
+         "type": "Slot",
+         "props": {
+          "name": "mainContainer"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,199 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "figures-first",
+ "version": 1,
+ "surface": "web",
+ "measure": "lg",
+ "root": {
+  "type": "Stack",
+  "props": {
+   "dir": "col",
+   "gap": 0,
+   "concept": "hero",
+   "className": "w-full max-w-5xl"
+  },
+  "children": [
+   {
+    "type": "Card",
+    "props": {
+     "emphasis": "hero",
+     "className": "w-full"
+    },
+    "children": [
+     {
+      "type": "Content",
+      "children": [
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "col",
+         "gap": 40
+        },
+        "children": [
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "row",
+           "gap": 32,
+           "className": "w-full",
+           "concept": "stats"
+          },
+          "children": [
+           {
+            "type": "Stack",
+            "props": {
+             "dir": "col",
+             "gap": 2,
+             "size": "fill"
+            },
+            "children": [
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--numbers-extra-large",
+               "children": "24"
+              }
+             },
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--body-small",
+               "children": "Patterns approved",
+               "emphasis": "quiet"
+              }
+             }
+            ]
+           },
+           {
+            "type": "Stack",
+            "props": {
+             "dir": "col",
+             "gap": 2,
+             "size": "fill"
+            },
+            "children": [
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--numbers-extra-large",
+               "children": "3"
+              }
+             },
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--body-small",
+               "children": "Open reviews",
+               "emphasis": "quiet"
+              }
+             }
+            ]
+           },
+           {
+            "type": "Stack",
+            "props": {
+             "dir": "col",
+             "gap": 2,
+             "size": "fill"
+            },
+            "children": [
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--numbers-extra-large",
+               "children": "6"
+              }
+             },
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--body-small",
+               "children": "Members",
+               "emphasis": "quiet"
+              }
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "row",
+           "gap": 32,
+           "align": "center",
+           "className": "w-full pt-6"
+          },
+          "children": [
+           {
+            "type": "Stack",
+            "props": {
+             "dir": "col",
+             "gap": 8,
+             "size": "fill"
+            },
+            "children": [
+             {
+              "type": "Text",
+              "props": {
+               "as": "h2",
+               "element": "type--heading1",
+               "children": "Three screens are ready for review"
+              }
+             },
+             {
+              "type": "Text",
+              "props": {
+               "as": "p",
+               "element": "type--body",
+               "children": "The designer's last drop is merged; two patterns wait for your decision.",
+               "emphasis": "quiet"
+              }
+             }
+            ]
+           },
+           {
+            "type": "Stack",
+            "props": {
+             "dir": "col",
+             "gap": 8,
+             "size": "fixed",
+             "className": "w-48"
+            },
+            "children": [
+             {
+              "type": "Button",
+              "props": {
+               "emphasis": "secondary",
+               "children": "Review screens",
+               "className": "w-full"
+              }
+             },
+             {
+              "type": "Button",
+              "props": {
+               "emphasis": "tertiary",
+               "children": "Changelog",
+               "className": "w-full"
+              }
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

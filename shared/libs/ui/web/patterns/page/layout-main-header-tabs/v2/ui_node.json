@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-page-layout-main-header-tabs",
+ "version": 1,
+ "type": "screen",
+ "surface": "web",
+ "title": "Full height sidebar, main with header and tabs, expandable"
+}

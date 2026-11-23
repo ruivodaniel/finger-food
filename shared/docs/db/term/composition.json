@@ -1,0 +1,24 @@
+{
+ "id": "term/composition",
+ "kind": "term",
+ "title": "UI composition",
+ "status": "approved",
+ "subjects": [
+  "ui"
+ ],
+ "owner": "libs/ui",
+ "tags": [
+  "ui"
+ ],
+ "paths": [
+  "shared/libs/ui/web/layouts"
+ ],
+ "term": {
+  "def": "The act of building a UI out of several elements: primitives, components, patterns. Composition is the act, not an element of the library.",
+  "aliases": [
+   "composition",
+   "compose"
+  ],
+  "proposed": false
+ }
+}

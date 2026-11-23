@@ -1,0 +1,4716 @@
+[
+  {
+    "id": "organization-o-platform",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "o-platform",
+      "type": "platform",
+      "name": "Platform",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-01",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-01",
+      "type": "client",
+      "name": "Acme Corp",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-abc123",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "abc123",
+      "type": "partner",
+      "name": "Borealis Ltd",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-03",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-03",
+      "type": "supplier",
+      "name": "Cobalt Labs",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-04",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-04",
+      "type": "client",
+      "name": "Delta Group",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-05",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-05",
+      "type": "partner",
+      "name": "Ember Partners",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-06",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-06",
+      "type": "supplier",
+      "name": "Fathom Works",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-07",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-07",
+      "type": "client",
+      "name": "Granite Corp",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": "2026-02-01T10:00:00.000Z"
+    }
+  },
+  {
+    "id": "organization-org-08",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-08",
+      "type": "partner",
+      "name": "Harbor Logistics",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-09",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-09",
+      "type": "supplier",
+      "name": "Ivory Systems",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-10",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-10",
+      "type": "client",
+      "name": "Juniper Health",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-11",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-11",
+      "type": "partner",
+      "name": "Kestrel Aviation",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-12",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-12",
+      "type": "supplier",
+      "name": "Lumen Energy",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-13",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-13",
+      "type": "client",
+      "name": "Meridian Foods",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-14",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-14",
+      "type": "partner",
+      "name": "Nimbus Cloud",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-15",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-15",
+      "type": "supplier",
+      "name": "Orchard Retail",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-16",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-16",
+      "type": "client",
+      "name": "Pinnacle Build",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": "2026-02-01T10:00:00.000Z"
+    }
+  },
+  {
+    "id": "organization-org-17",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-17",
+      "type": "partner",
+      "name": "Quartz Mining",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-18",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-18",
+      "type": "supplier",
+      "name": "Redwood Capital",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-19",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-19",
+      "type": "client",
+      "name": "Solstice Media",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-20",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-20",
+      "type": "partner",
+      "name": "Tundra Freight",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-21",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-21",
+      "type": "supplier",
+      "name": "Umbra Security",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-22",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-22",
+      "type": "client",
+      "name": "Vertex Robotics",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-23",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-23",
+      "type": "partner",
+      "name": "Willow Care",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-24",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-24",
+      "type": "supplier",
+      "name": "Xenon Lighting",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-25",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-25",
+      "type": "client",
+      "name": "Yarrow Botanics",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": "2026-02-01T10:00:00.000Z"
+    }
+  },
+  {
+    "id": "organization-org-26",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-26",
+      "type": "partner",
+      "name": "Zephyr Travel",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-27",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-27",
+      "type": "supplier",
+      "name": "Alder Timber",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-28",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-28",
+      "type": "client",
+      "name": "Basalt Stone",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-29",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-29",
+      "type": "partner",
+      "name": "Cinder Coffee",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-30",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-30",
+      "type": "supplier",
+      "name": "Dune Textiles",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-31",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-31",
+      "type": "client",
+      "name": "Echo Audio",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-32",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-32",
+      "type": "partner",
+      "name": "Flint Tools",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-33",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-33",
+      "type": "supplier",
+      "name": "Gale Wind",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-34",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-34",
+      "type": "client",
+      "name": "Halo Optics",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": "2026-02-01T10:00:00.000Z"
+    }
+  },
+  {
+    "id": "organization-org-35",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-35",
+      "type": "partner",
+      "name": "Iris Design",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-36",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-36",
+      "type": "supplier",
+      "name": "Jade Imports",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-37",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-37",
+      "type": "client",
+      "name": "Kite Mobility",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-38",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-38",
+      "type": "partner",
+      "name": "Lark Education",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-39",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-39",
+      "type": "supplier",
+      "name": "Moss Gardens",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-40",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-40",
+      "type": "client",
+      "name": "Nova Pharma",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-41",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-41",
+      "type": "partner",
+      "name": "Onyx Motors",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-42",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-42",
+      "type": "supplier",
+      "name": "Pebble Games",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-43",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-43",
+      "type": "client",
+      "name": "Quill Publishing",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": "2026-02-01T10:00:00.000Z"
+    }
+  },
+  {
+    "id": "organization-org-44",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-44",
+      "type": "partner",
+      "name": "Raven Analytics",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-45",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-45",
+      "type": "supplier",
+      "name": "Sable Fashion",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-46",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-46",
+      "type": "client",
+      "name": "Thistle Dairy",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-47",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-47",
+      "type": "partner",
+      "name": "Urchin Marine",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-48",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-48",
+      "type": "supplier",
+      "name": "Vale Insurance",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-49",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-49",
+      "type": "client",
+      "name": "Wren Hospitality",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-50",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-50",
+      "type": "partner",
+      "name": "Yew Furniture",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-51",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-51",
+      "type": "supplier",
+      "name": "Zinc Metals",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-52",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-52",
+      "type": "client",
+      "name": "Aster Flowers",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": "2026-02-01T10:00:00.000Z"
+    }
+  },
+  {
+    "id": "organization-org-53",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-53",
+      "type": "partner",
+      "name": "Birch Paper",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-54",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-54",
+      "type": "supplier",
+      "name": "Cove Seafood",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-55",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-55",
+      "type": "client",
+      "name": "Drift Surf",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-56",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-56",
+      "type": "partner",
+      "name": "Elm Consulting",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "organization-org-57",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "organization",
+    "row": {
+      "id": "org-57",
+      "type": "supplier",
+      "name": "Fern Wellness",
+      "logo": null,
+      "metadata": {},
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "user-u-samantha",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "user",
+    "row": {
+      "id": "u-samantha",
+      "identityId": "identity-u-samantha",
+      "status": "active",
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "user-u-tomas",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "user",
+    "row": {
+      "id": "u-tomas",
+      "identityId": "identity-u-tomas",
+      "status": "active",
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "user-u-ingrid",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "user",
+    "row": {
+      "id": "u-ingrid",
+      "identityId": "identity-u-ingrid",
+      "status": "active",
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "user-u-kwame",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "user",
+    "row": {
+      "id": "u-kwame",
+      "identityId": "identity-u-kwame",
+      "status": "active",
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "user-u-leila",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "user",
+    "row": {
+      "id": "u-leila",
+      "identityId": "identity-u-leila",
+      "status": "active",
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "user-u-rafael",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "user",
+    "row": {
+      "id": "u-rafael",
+      "identityId": "identity-u-rafael",
+      "status": "active",
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "user-u-yuki",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "user",
+    "row": {
+      "id": "u-yuki",
+      "identityId": "identity-u-yuki",
+      "status": "active",
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "user-u-priya",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "user",
+    "row": {
+      "id": "u-priya",
+      "identityId": "identity-u-priya",
+      "status": "active",
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "user-u-oliver",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "user",
+    "row": {
+      "id": "u-oliver",
+      "identityId": "identity-u-oliver",
+      "status": "active",
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "user-u-chiara",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "user",
+    "row": {
+      "id": "u-chiara",
+      "identityId": "identity-u-chiara",
+      "status": "active",
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "user-u-mateus",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "user",
+    "row": {
+      "id": "u-mateus",
+      "identityId": "identity-u-mateus",
+      "status": "active",
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "user-u-noor",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "user",
+    "row": {
+      "id": "u-noor",
+      "identityId": "identity-u-noor",
+      "status": "active",
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "user_profile-u-samantha",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "user_profile",
+    "row": {
+      "userId": "u-samantha",
+      "name": "Samantha Reyes",
+      "image": null,
+      "data": {},
+      "updatedAt": "2026-03-02T09:00:00.000Z"
+    }
+  },
+  {
+    "id": "user_profile-u-tomas",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "user_profile",
+    "row": {
+      "userId": "u-tomas",
+      "name": "Tomás Albuquerque",
+      "image": null,
+      "data": {},
+      "updatedAt": "2026-03-02T09:00:00.000Z"
+    }
+  },
+  {
+    "id": "user_profile-u-ingrid",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "user_profile",
+    "row": {
+      "userId": "u-ingrid",
+      "name": "Ingrid Solberg",
+      "image": null,
+      "data": {},
+      "updatedAt": "2026-03-02T09:00:00.000Z"
+    }
+  },
+  {
+    "id": "user_profile-u-kwame",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "user_profile",
+    "row": {
+      "userId": "u-kwame",
+      "name": "Kwame Mensah",
+      "image": null,
+      "data": {},
+      "updatedAt": "2026-03-02T09:00:00.000Z"
+    }
+  },
+  {
+    "id": "user_profile-u-leila",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "user_profile",
+    "row": {
+      "userId": "u-leila",
+      "name": "Leila Haddad",
+      "image": null,
+      "data": {},
+      "updatedAt": "2026-03-02T09:00:00.000Z"
+    }
+  },
+  {
+    "id": "user_profile-u-rafael",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "user_profile",
+    "row": {
+      "userId": "u-rafael",
+      "name": "Rafael Monteiro",
+      "image": null,
+      "data": {},
+      "updatedAt": "2026-03-02T09:00:00.000Z"
+    }
+  },
+  {
+    "id": "user_profile-u-yuki",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "user_profile",
+    "row": {
+      "userId": "u-yuki",
+      "name": "Yuki Tanaka",
+      "image": null,
+      "data": {},
+      "updatedAt": "2026-03-02T09:00:00.000Z"
+    }
+  },
+  {
+    "id": "user_profile-u-priya",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "user_profile",
+    "row": {
+      "userId": "u-priya",
+      "name": "Priya Nair",
+      "image": null,
+      "data": {},
+      "updatedAt": "2026-03-02T09:00:00.000Z"
+    }
+  },
+  {
+    "id": "user_profile-u-oliver",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "user_profile",
+    "row": {
+      "userId": "u-oliver",
+      "name": "Oliver Bennett",
+      "image": null,
+      "data": {},
+      "updatedAt": "2026-03-02T09:00:00.000Z"
+    }
+  },
+  {
+    "id": "user_profile-u-chiara",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "user_profile",
+    "row": {
+      "userId": "u-chiara",
+      "name": "Chiara Russo",
+      "image": null,
+      "data": {},
+      "updatedAt": "2026-03-02T09:00:00.000Z"
+    }
+  },
+  {
+    "id": "user_profile-u-mateus",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "user_profile",
+    "row": {
+      "userId": "u-mateus",
+      "name": "Mateus Carvalho",
+      "image": null,
+      "data": {},
+      "updatedAt": "2026-03-02T09:00:00.000Z"
+    }
+  },
+  {
+    "id": "user_profile-u-noor",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "user_profile",
+    "row": {
+      "userId": "u-noor",
+      "name": "Noor Rahman",
+      "image": null,
+      "data": {},
+      "updatedAt": "2026-03-02T09:00:00.000Z"
+    }
+  },
+  {
+    "id": "user_contacts-c-samantha",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "user_contacts",
+    "row": {
+      "id": "c-samantha",
+      "userId": "u-samantha",
+      "contact": {
+        "label": "Work",
+        "type": "email",
+        "value": "samantha.reyes@example.com"
+      },
+      "isDefault": true,
+      "createdAt": "2026-03-02T09:00:00.000Z"
+    }
+  },
+  {
+    "id": "user_contacts-c-tomas",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "user_contacts",
+    "row": {
+      "id": "c-tomas",
+      "userId": "u-tomas",
+      "contact": {
+        "label": "Work",
+        "type": "email",
+        "value": "tomas.albuquerque@example.com"
+      },
+      "isDefault": true,
+      "createdAt": "2026-03-02T09:00:00.000Z"
+    }
+  },
+  {
+    "id": "user_contacts-c-ingrid",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "user_contacts",
+    "row": {
+      "id": "c-ingrid",
+      "userId": "u-ingrid",
+      "contact": {
+        "label": "Work",
+        "type": "email",
+        "value": "ingrid.solberg@example.com"
+      },
+      "isDefault": true,
+      "createdAt": "2026-03-02T09:00:00.000Z"
+    }
+  },
+  {
+    "id": "user_contacts-c-kwame",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "user_contacts",
+    "row": {
+      "id": "c-kwame",
+      "userId": "u-kwame",
+      "contact": {
+        "label": "Work",
+        "type": "email",
+        "value": "kwame.mensah@example.com"
+      },
+      "isDefault": true,
+      "createdAt": "2026-03-02T09:00:00.000Z"
+    }
+  },
+  {
+    "id": "user_contacts-c-leila",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "user_contacts",
+    "row": {
+      "id": "c-leila",
+      "userId": "u-leila",
+      "contact": {
+        "label": "Work",
+        "type": "email",
+        "value": "leila.haddad@example.com"
+      },
+      "isDefault": true,
+      "createdAt": "2026-03-02T09:00:00.000Z"
+    }
+  },
+  {
+    "id": "user_contacts-c-rafael",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "user_contacts",
+    "row": {
+      "id": "c-rafael",
+      "userId": "u-rafael",
+      "contact": {
+        "label": "Work",
+        "type": "email",
+        "value": "rafael.monteiro@example.com"
+      },
+      "isDefault": true,
+      "createdAt": "2026-03-02T09:00:00.000Z"
+    }
+  },
+  {
+    "id": "user_contacts-c-yuki",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "user_contacts",
+    "row": {
+      "id": "c-yuki",
+      "userId": "u-yuki",
+      "contact": {
+        "label": "Work",
+        "type": "email",
+        "value": "yuki.tanaka@example.com"
+      },
+      "isDefault": true,
+      "createdAt": "2026-03-02T09:00:00.000Z"
+    }
+  },
+  {
+    "id": "user_contacts-c-priya",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "user_contacts",
+    "row": {
+      "id": "c-priya",
+      "userId": "u-priya",
+      "contact": {
+        "label": "Work",
+        "type": "email",
+        "value": "priya.nair@example.com"
+      },
+      "isDefault": true,
+      "createdAt": "2026-03-02T09:00:00.000Z"
+    }
+  },
+  {
+    "id": "user_contacts-c-oliver",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "user_contacts",
+    "row": {
+      "id": "c-oliver",
+      "userId": "u-oliver",
+      "contact": {
+        "label": "Work",
+        "type": "email",
+        "value": "oliver.bennett@example.com"
+      },
+      "isDefault": true,
+      "createdAt": "2026-03-02T09:00:00.000Z"
+    }
+  },
+  {
+    "id": "user_contacts-c-chiara",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "user_contacts",
+    "row": {
+      "id": "c-chiara",
+      "userId": "u-chiara",
+      "contact": {
+        "label": "Work",
+        "type": "email",
+        "value": "chiara.russo@example.com"
+      },
+      "isDefault": true,
+      "createdAt": "2026-03-02T09:00:00.000Z"
+    }
+  },
+  {
+    "id": "user_contacts-c-mateus",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "user_contacts",
+    "row": {
+      "id": "c-mateus",
+      "userId": "u-mateus",
+      "contact": {
+        "label": "Work",
+        "type": "email",
+        "value": "mateus.carvalho@example.com"
+      },
+      "isDefault": true,
+      "createdAt": "2026-03-02T09:00:00.000Z"
+    }
+  },
+  {
+    "id": "user_contacts-c-noor",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "user_contacts",
+    "row": {
+      "id": "c-noor",
+      "userId": "u-noor",
+      "contact": {
+        "label": "Work",
+        "type": "email",
+        "value": "noor.rahman@example.com"
+      },
+      "isDefault": true,
+      "createdAt": "2026-03-02T09:00:00.000Z"
+    }
+  },
+  {
+    "id": "member-m-org-01-tomas",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-01-tomas",
+      "organizationId": "org-01",
+      "userId": "u-tomas",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-01-ingrid",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-01-ingrid",
+      "organizationId": "org-01",
+      "userId": "u-ingrid",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-01-kwame",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-01-kwame",
+      "organizationId": "org-01",
+      "userId": "u-kwame",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-abc123-ingrid",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-abc123-ingrid",
+      "organizationId": "abc123",
+      "userId": "u-ingrid",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-abc123-kwame",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-abc123-kwame",
+      "organizationId": "abc123",
+      "userId": "u-kwame",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-abc123-leila",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-abc123-leila",
+      "organizationId": "abc123",
+      "userId": "u-leila",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-abc123-rafael",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-abc123-rafael",
+      "organizationId": "abc123",
+      "userId": "u-rafael",
+      "roles": [
+        "member",
+        "billing"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-abc123-yuki",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-abc123-yuki",
+      "organizationId": "abc123",
+      "userId": "u-yuki",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-abc123-priya",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-abc123-priya",
+      "organizationId": "abc123",
+      "userId": "u-priya",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-03-kwame",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-03-kwame",
+      "organizationId": "org-03",
+      "userId": "u-kwame",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-03-leila",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-03-leila",
+      "organizationId": "org-03",
+      "userId": "u-leila",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-03-rafael",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-03-rafael",
+      "organizationId": "org-03",
+      "userId": "u-rafael",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-04-leila",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-04-leila",
+      "organizationId": "org-04",
+      "userId": "u-leila",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-04-rafael",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-04-rafael",
+      "organizationId": "org-04",
+      "userId": "u-rafael",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-04-yuki",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-04-yuki",
+      "organizationId": "org-04",
+      "userId": "u-yuki",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-05-rafael",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-05-rafael",
+      "organizationId": "org-05",
+      "userId": "u-rafael",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-05-yuki",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-05-yuki",
+      "organizationId": "org-05",
+      "userId": "u-yuki",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-05-priya",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-05-priya",
+      "organizationId": "org-05",
+      "userId": "u-priya",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-06-yuki",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-06-yuki",
+      "organizationId": "org-06",
+      "userId": "u-yuki",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-06-priya",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-06-priya",
+      "organizationId": "org-06",
+      "userId": "u-priya",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-06-oliver",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-06-oliver",
+      "organizationId": "org-06",
+      "userId": "u-oliver",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-07-priya",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-07-priya",
+      "organizationId": "org-07",
+      "userId": "u-priya",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-07-oliver",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-07-oliver",
+      "organizationId": "org-07",
+      "userId": "u-oliver",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-07-chiara",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-07-chiara",
+      "organizationId": "org-07",
+      "userId": "u-chiara",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-08-oliver",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-08-oliver",
+      "organizationId": "org-08",
+      "userId": "u-oliver",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-08-chiara",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-08-chiara",
+      "organizationId": "org-08",
+      "userId": "u-chiara",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-08-mateus",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-08-mateus",
+      "organizationId": "org-08",
+      "userId": "u-mateus",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-09-chiara",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-09-chiara",
+      "organizationId": "org-09",
+      "userId": "u-chiara",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-09-mateus",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-09-mateus",
+      "organizationId": "org-09",
+      "userId": "u-mateus",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-09-noor",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-09-noor",
+      "organizationId": "org-09",
+      "userId": "u-noor",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-10-mateus",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-10-mateus",
+      "organizationId": "org-10",
+      "userId": "u-mateus",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-10-noor",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-10-noor",
+      "organizationId": "org-10",
+      "userId": "u-noor",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-10-samantha",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-10-samantha",
+      "organizationId": "org-10",
+      "userId": "u-samantha",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-11-noor",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-11-noor",
+      "organizationId": "org-11",
+      "userId": "u-noor",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-11-samantha",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-11-samantha",
+      "organizationId": "org-11",
+      "userId": "u-samantha",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-11-tomas",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-11-tomas",
+      "organizationId": "org-11",
+      "userId": "u-tomas",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-12-samantha",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-12-samantha",
+      "organizationId": "org-12",
+      "userId": "u-samantha",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-12-tomas",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-12-tomas",
+      "organizationId": "org-12",
+      "userId": "u-tomas",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-12-ingrid",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-12-ingrid",
+      "organizationId": "org-12",
+      "userId": "u-ingrid",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-13-tomas",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-13-tomas",
+      "organizationId": "org-13",
+      "userId": "u-tomas",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-13-ingrid",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-13-ingrid",
+      "organizationId": "org-13",
+      "userId": "u-ingrid",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-13-kwame",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-13-kwame",
+      "organizationId": "org-13",
+      "userId": "u-kwame",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-14-ingrid",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-14-ingrid",
+      "organizationId": "org-14",
+      "userId": "u-ingrid",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-14-kwame",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-14-kwame",
+      "organizationId": "org-14",
+      "userId": "u-kwame",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-14-leila",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-14-leila",
+      "organizationId": "org-14",
+      "userId": "u-leila",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-15-kwame",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-15-kwame",
+      "organizationId": "org-15",
+      "userId": "u-kwame",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-15-leila",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-15-leila",
+      "organizationId": "org-15",
+      "userId": "u-leila",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-15-rafael",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-15-rafael",
+      "organizationId": "org-15",
+      "userId": "u-rafael",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-16-leila",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-16-leila",
+      "organizationId": "org-16",
+      "userId": "u-leila",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-16-rafael",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-16-rafael",
+      "organizationId": "org-16",
+      "userId": "u-rafael",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-16-yuki",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-16-yuki",
+      "organizationId": "org-16",
+      "userId": "u-yuki",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-17-rafael",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-17-rafael",
+      "organizationId": "org-17",
+      "userId": "u-rafael",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-17-yuki",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-17-yuki",
+      "organizationId": "org-17",
+      "userId": "u-yuki",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-17-priya",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-17-priya",
+      "organizationId": "org-17",
+      "userId": "u-priya",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-18-yuki",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-18-yuki",
+      "organizationId": "org-18",
+      "userId": "u-yuki",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-18-priya",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-18-priya",
+      "organizationId": "org-18",
+      "userId": "u-priya",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-18-oliver",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-18-oliver",
+      "organizationId": "org-18",
+      "userId": "u-oliver",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-19-priya",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-19-priya",
+      "organizationId": "org-19",
+      "userId": "u-priya",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-19-oliver",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-19-oliver",
+      "organizationId": "org-19",
+      "userId": "u-oliver",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-19-chiara",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-19-chiara",
+      "organizationId": "org-19",
+      "userId": "u-chiara",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-20-oliver",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-20-oliver",
+      "organizationId": "org-20",
+      "userId": "u-oliver",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-20-chiara",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-20-chiara",
+      "organizationId": "org-20",
+      "userId": "u-chiara",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-20-mateus",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-20-mateus",
+      "organizationId": "org-20",
+      "userId": "u-mateus",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-21-chiara",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-21-chiara",
+      "organizationId": "org-21",
+      "userId": "u-chiara",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-21-mateus",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-21-mateus",
+      "organizationId": "org-21",
+      "userId": "u-mateus",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-21-noor",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-21-noor",
+      "organizationId": "org-21",
+      "userId": "u-noor",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-22-mateus",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-22-mateus",
+      "organizationId": "org-22",
+      "userId": "u-mateus",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-22-noor",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-22-noor",
+      "organizationId": "org-22",
+      "userId": "u-noor",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-22-samantha",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-22-samantha",
+      "organizationId": "org-22",
+      "userId": "u-samantha",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-23-noor",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-23-noor",
+      "organizationId": "org-23",
+      "userId": "u-noor",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-23-samantha",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-23-samantha",
+      "organizationId": "org-23",
+      "userId": "u-samantha",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-23-tomas",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-23-tomas",
+      "organizationId": "org-23",
+      "userId": "u-tomas",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-24-samantha",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-24-samantha",
+      "organizationId": "org-24",
+      "userId": "u-samantha",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-24-tomas",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-24-tomas",
+      "organizationId": "org-24",
+      "userId": "u-tomas",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-24-ingrid",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-24-ingrid",
+      "organizationId": "org-24",
+      "userId": "u-ingrid",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-25-tomas",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-25-tomas",
+      "organizationId": "org-25",
+      "userId": "u-tomas",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-25-ingrid",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-25-ingrid",
+      "organizationId": "org-25",
+      "userId": "u-ingrid",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-25-kwame",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-25-kwame",
+      "organizationId": "org-25",
+      "userId": "u-kwame",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-26-ingrid",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-26-ingrid",
+      "organizationId": "org-26",
+      "userId": "u-ingrid",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-26-kwame",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-26-kwame",
+      "organizationId": "org-26",
+      "userId": "u-kwame",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-26-leila",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-26-leila",
+      "organizationId": "org-26",
+      "userId": "u-leila",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-27-kwame",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-27-kwame",
+      "organizationId": "org-27",
+      "userId": "u-kwame",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-27-leila",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-27-leila",
+      "organizationId": "org-27",
+      "userId": "u-leila",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-27-rafael",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-27-rafael",
+      "organizationId": "org-27",
+      "userId": "u-rafael",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-28-leila",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-28-leila",
+      "organizationId": "org-28",
+      "userId": "u-leila",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-28-rafael",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-28-rafael",
+      "organizationId": "org-28",
+      "userId": "u-rafael",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-28-yuki",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-28-yuki",
+      "organizationId": "org-28",
+      "userId": "u-yuki",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-29-rafael",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-29-rafael",
+      "organizationId": "org-29",
+      "userId": "u-rafael",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-29-yuki",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-29-yuki",
+      "organizationId": "org-29",
+      "userId": "u-yuki",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-29-priya",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-29-priya",
+      "organizationId": "org-29",
+      "userId": "u-priya",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-30-yuki",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-30-yuki",
+      "organizationId": "org-30",
+      "userId": "u-yuki",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-30-priya",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-30-priya",
+      "organizationId": "org-30",
+      "userId": "u-priya",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-30-oliver",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-30-oliver",
+      "organizationId": "org-30",
+      "userId": "u-oliver",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-31-priya",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-31-priya",
+      "organizationId": "org-31",
+      "userId": "u-priya",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-31-oliver",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-31-oliver",
+      "organizationId": "org-31",
+      "userId": "u-oliver",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-31-chiara",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-31-chiara",
+      "organizationId": "org-31",
+      "userId": "u-chiara",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-32-oliver",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-32-oliver",
+      "organizationId": "org-32",
+      "userId": "u-oliver",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-32-chiara",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-32-chiara",
+      "organizationId": "org-32",
+      "userId": "u-chiara",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-32-mateus",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-32-mateus",
+      "organizationId": "org-32",
+      "userId": "u-mateus",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-33-chiara",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-33-chiara",
+      "organizationId": "org-33",
+      "userId": "u-chiara",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-33-mateus",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-33-mateus",
+      "organizationId": "org-33",
+      "userId": "u-mateus",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-33-noor",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-33-noor",
+      "organizationId": "org-33",
+      "userId": "u-noor",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-34-mateus",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-34-mateus",
+      "organizationId": "org-34",
+      "userId": "u-mateus",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-34-noor",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-34-noor",
+      "organizationId": "org-34",
+      "userId": "u-noor",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-34-samantha",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-34-samantha",
+      "organizationId": "org-34",
+      "userId": "u-samantha",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-35-noor",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-35-noor",
+      "organizationId": "org-35",
+      "userId": "u-noor",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-35-samantha",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-35-samantha",
+      "organizationId": "org-35",
+      "userId": "u-samantha",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-35-tomas",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-35-tomas",
+      "organizationId": "org-35",
+      "userId": "u-tomas",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-36-samantha",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-36-samantha",
+      "organizationId": "org-36",
+      "userId": "u-samantha",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-36-tomas",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-36-tomas",
+      "organizationId": "org-36",
+      "userId": "u-tomas",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-36-ingrid",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-36-ingrid",
+      "organizationId": "org-36",
+      "userId": "u-ingrid",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-37-tomas",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-37-tomas",
+      "organizationId": "org-37",
+      "userId": "u-tomas",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-37-ingrid",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-37-ingrid",
+      "organizationId": "org-37",
+      "userId": "u-ingrid",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-37-kwame",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-37-kwame",
+      "organizationId": "org-37",
+      "userId": "u-kwame",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-38-ingrid",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-38-ingrid",
+      "organizationId": "org-38",
+      "userId": "u-ingrid",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-38-kwame",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-38-kwame",
+      "organizationId": "org-38",
+      "userId": "u-kwame",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-38-leila",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-38-leila",
+      "organizationId": "org-38",
+      "userId": "u-leila",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-39-kwame",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-39-kwame",
+      "organizationId": "org-39",
+      "userId": "u-kwame",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-39-leila",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-39-leila",
+      "organizationId": "org-39",
+      "userId": "u-leila",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-39-rafael",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-39-rafael",
+      "organizationId": "org-39",
+      "userId": "u-rafael",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-40-leila",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-40-leila",
+      "organizationId": "org-40",
+      "userId": "u-leila",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-40-rafael",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-40-rafael",
+      "organizationId": "org-40",
+      "userId": "u-rafael",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-40-yuki",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-40-yuki",
+      "organizationId": "org-40",
+      "userId": "u-yuki",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-41-rafael",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-41-rafael",
+      "organizationId": "org-41",
+      "userId": "u-rafael",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-41-yuki",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-41-yuki",
+      "organizationId": "org-41",
+      "userId": "u-yuki",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-41-priya",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-41-priya",
+      "organizationId": "org-41",
+      "userId": "u-priya",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-42-yuki",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-42-yuki",
+      "organizationId": "org-42",
+      "userId": "u-yuki",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-42-priya",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-42-priya",
+      "organizationId": "org-42",
+      "userId": "u-priya",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-42-oliver",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-42-oliver",
+      "organizationId": "org-42",
+      "userId": "u-oliver",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-43-priya",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-43-priya",
+      "organizationId": "org-43",
+      "userId": "u-priya",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-43-oliver",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-43-oliver",
+      "organizationId": "org-43",
+      "userId": "u-oliver",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-43-chiara",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-43-chiara",
+      "organizationId": "org-43",
+      "userId": "u-chiara",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-44-oliver",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-44-oliver",
+      "organizationId": "org-44",
+      "userId": "u-oliver",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-44-chiara",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-44-chiara",
+      "organizationId": "org-44",
+      "userId": "u-chiara",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-44-mateus",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-44-mateus",
+      "organizationId": "org-44",
+      "userId": "u-mateus",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-45-chiara",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-45-chiara",
+      "organizationId": "org-45",
+      "userId": "u-chiara",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-45-mateus",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-45-mateus",
+      "organizationId": "org-45",
+      "userId": "u-mateus",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-45-noor",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-45-noor",
+      "organizationId": "org-45",
+      "userId": "u-noor",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-46-mateus",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-46-mateus",
+      "organizationId": "org-46",
+      "userId": "u-mateus",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-46-noor",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-46-noor",
+      "organizationId": "org-46",
+      "userId": "u-noor",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-46-samantha",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-46-samantha",
+      "organizationId": "org-46",
+      "userId": "u-samantha",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-47-noor",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-47-noor",
+      "organizationId": "org-47",
+      "userId": "u-noor",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-47-samantha",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-47-samantha",
+      "organizationId": "org-47",
+      "userId": "u-samantha",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-47-tomas",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-47-tomas",
+      "organizationId": "org-47",
+      "userId": "u-tomas",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-48-samantha",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-48-samantha",
+      "organizationId": "org-48",
+      "userId": "u-samantha",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-48-tomas",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-48-tomas",
+      "organizationId": "org-48",
+      "userId": "u-tomas",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-48-ingrid",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-48-ingrid",
+      "organizationId": "org-48",
+      "userId": "u-ingrid",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-49-tomas",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-49-tomas",
+      "organizationId": "org-49",
+      "userId": "u-tomas",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-49-ingrid",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-49-ingrid",
+      "organizationId": "org-49",
+      "userId": "u-ingrid",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-49-kwame",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-49-kwame",
+      "organizationId": "org-49",
+      "userId": "u-kwame",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-50-ingrid",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-50-ingrid",
+      "organizationId": "org-50",
+      "userId": "u-ingrid",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-50-kwame",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-50-kwame",
+      "organizationId": "org-50",
+      "userId": "u-kwame",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-50-leila",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-50-leila",
+      "organizationId": "org-50",
+      "userId": "u-leila",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-51-kwame",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-51-kwame",
+      "organizationId": "org-51",
+      "userId": "u-kwame",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-51-leila",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-51-leila",
+      "organizationId": "org-51",
+      "userId": "u-leila",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-51-rafael",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-51-rafael",
+      "organizationId": "org-51",
+      "userId": "u-rafael",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-52-leila",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-52-leila",
+      "organizationId": "org-52",
+      "userId": "u-leila",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-52-rafael",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-52-rafael",
+      "organizationId": "org-52",
+      "userId": "u-rafael",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-52-yuki",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-52-yuki",
+      "organizationId": "org-52",
+      "userId": "u-yuki",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-53-rafael",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-53-rafael",
+      "organizationId": "org-53",
+      "userId": "u-rafael",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-53-yuki",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-53-yuki",
+      "organizationId": "org-53",
+      "userId": "u-yuki",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-53-priya",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-53-priya",
+      "organizationId": "org-53",
+      "userId": "u-priya",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-54-yuki",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-54-yuki",
+      "organizationId": "org-54",
+      "userId": "u-yuki",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-54-priya",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-54-priya",
+      "organizationId": "org-54",
+      "userId": "u-priya",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-54-oliver",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-54-oliver",
+      "organizationId": "org-54",
+      "userId": "u-oliver",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-55-priya",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-55-priya",
+      "organizationId": "org-55",
+      "userId": "u-priya",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-55-oliver",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-55-oliver",
+      "organizationId": "org-55",
+      "userId": "u-oliver",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-55-chiara",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-55-chiara",
+      "organizationId": "org-55",
+      "userId": "u-chiara",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-56-oliver",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-56-oliver",
+      "organizationId": "org-56",
+      "userId": "u-oliver",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-56-chiara",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-56-chiara",
+      "organizationId": "org-56",
+      "userId": "u-chiara",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-56-mateus",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-56-mateus",
+      "organizationId": "org-56",
+      "userId": "u-mateus",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-57-chiara",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-57-chiara",
+      "organizationId": "org-57",
+      "userId": "u-chiara",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-57-mateus",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-57-mateus",
+      "organizationId": "org-57",
+      "userId": "u-mateus",
+      "roles": [
+        "admin"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-org-57-noor",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-org-57-noor",
+      "organizationId": "org-57",
+      "userId": "u-noor",
+      "roles": [
+        "member"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "member-m-platform-samantha",
+    "worldId": "world-acme",
+    "t": 0,
+    "op": "insert",
+    "table": "member",
+    "row": {
+      "id": "m-platform-samantha",
+      "organizationId": "o-platform",
+      "userId": "u-samantha",
+      "roles": [
+        "owner"
+      ],
+      "createdAt": "2026-03-02T09:00:00.000Z",
+      "updatedAt": "2026-03-02T09:00:00.000Z",
+      "deletedAt": null
+    }
+  },
+  {
+    "id": "borealis-renamed",
+    "worldId": "world-acme",
+    "t": 1,
+    "op": "update",
+    "table": "organization",
+    "where": {
+      "id": "abc123"
+    },
+    "set": {
+      "name": "Borealis Group"
+    }
+  }
+]

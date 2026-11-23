@@ -1,0 +1,103 @@
+{
+ "id": "ui-data-pattern-component-container-8-popover",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-container-8-popover",
+ "kind": "component",
+ "name": "container-8-popover",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "container-8-popover",
+  "version": 1,
+  "surface": "web",
+  "state": {
+   "open": false
+  },
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "align": "center",
+    "justify": "center",
+    "size": "fill"
+   },
+   "children": [
+    {
+     "type": "Popover",
+     "props": {
+      "open": {
+       "bind": "state.open"
+      },
+      "data-testid": "container-example-menu"
+     },
+     "children": [
+      {
+       "type": "PopoverTrigger",
+       "props": {
+        "asChild": true
+       },
+       "children": [
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "secondary",
+          "children": "Open",
+          "data-testid": "c-popover-open-btn"
+         }
+        }
+       ]
+      },
+      {
+       "type": "PopoverContent",
+       "children": [
+        {
+         "type": "Content",
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col",
+            "scale": "sm"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--body",
+              "children": "What this is"
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--body-small",
+              "emphasis": "quiet",
+              "children": "A line or two that says more about it."
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "on": {
+      "openChange": [
+       {
+        "set": {
+         "state": "open",
+         "to": {
+          "bind": "event"
+         }
+        }
+       }
+      ]
+     }
+    }
+   ]
+  }
+ }
+}

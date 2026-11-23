@@ -1,7 +1,7 @@
 {
   "name": "@modules/user-organization-mgmt",
   "version": "0.1.0",
-  "description": "User & organization management — config-driven authentication, organizations, memberships, invitations, and legal consent",
+  "description": "User & organization management \u2014 config-driven authentication, organizations, memberships, invitations, and legal consent",
   "type": "module",
   "exports": {
     "./shared": {
@@ -35,7 +35,9 @@
   },
   "dependencies": {
     "@libs/gated-scoped-ac": "workspace:*",
-    "sanitize-html": "^2.17.4"
+    "sanitize-html": "^2.17.4",
+    "@libs/web-routing": "workspace:*",
+    "@modules/notifications": "workspace:*"
   },
   "peerDependencies": {
     "@hono/zod-validator": ">=0.4.0",
@@ -51,7 +53,9 @@
     "hono": "^4.12.17",
     "react": "^18.0.0 || ^19.0.0",
     "react-dom": "^18.0.0 || ^19.0.0",
-    "zod": "^4.4.3"
+    "zod": "^4.4.3",
+    "zustand": "^5.0.5",
+    "@modules/shared": "workspace:*"
   },
   "peerDependenciesMeta": {
     "@libs/web-components": {
@@ -79,6 +83,12 @@
       "optional": true
     },
     "react-dom": {
+      "optional": true
+    },
+    "zustand": {
+      "optional": true
+    },
+    "@modules/shared": {
       "optional": true
     }
   },

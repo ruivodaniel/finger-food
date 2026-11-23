@@ -1,27 +1,10 @@
 /**
- * Route contributions — the module's pages as data. The app mounts them under
- * its own layouts; the path here is where the seed hangs them.
+ * The route declaration — this slice's pages as a tree of nodes, as data (@libs/web-routing). The notification preferences
+ * page lives in the caller's settings, a section the user-organization-mgmt slice owns: that slice places the page in its tree
+ * (through this slice's web/index.ts). This slice declares no route of its own.
  */
+import type { RouteNode } from "@libs/web-routing";
 
-import { NotificationPreferencesPage } from "../pages/NotificationPreferencesPage";
-import type { RouteDefinition } from "./route-definition";
-
-export interface GetRoutesOptions {
-  /** Where the preferences screen lives (default /my/settings/notifications). */
-  preferencesPath?: string;
-}
-
-export function getNotificationsRoutes(
-  options: GetRoutesOptions = {},
-): RouteDefinition[] {
-  const { preferencesPath = "/my/settings/notifications" } = options;
-
-  return [
-    {
-      path: preferencesPath,
-      page: NotificationPreferencesPage,
-      access: "authenticated",
-      meta: { title: "Notifications" },
-    },
-  ];
+export function getNotificationsRoutes(): RouteNode[] {
+  return [];
 }

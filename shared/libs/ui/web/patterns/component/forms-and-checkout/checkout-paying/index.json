@@ -1,0 +1,462 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "checkout-paying",
+ "version": 1,
+ "surface": "web",
+ "measure": "md",
+ "state": {
+  "card": "visa-4242"
+ },
+ "root": {
+  "type": "Card",
+  "props": {
+   "className": "w-96"
+  },
+  "children": [
+   {
+    "type": "Header",
+    "props": {},
+    "children": [
+     {
+      "type": "Stack",
+      "props": {
+       "dir": "row",
+       "gap": 12,
+       "align": "center",
+       "justify": "between"
+      },
+      "children": [
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--heading4",
+         "children": "Checkout"
+        }
+       },
+       {
+        "type": "Button",
+        "props": {
+         "data-testid": "checkout-close-btn",
+         "buttonType": "icon",
+         "startIcon": "close",
+         "emphasis": "quiet",
+         "scale": "sm",
+         "aria-label": "Close"
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Content",
+    "props": {},
+    "children": [
+     {
+      "type": "Stack",
+      "props": {
+       "dir": "col",
+       "gap": 24
+      },
+      "children": [
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "col",
+         "gap": 12
+        },
+        "children": [
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "row",
+           "gap": 12,
+           "align": "start",
+           "justify": "between"
+          },
+          "children": [
+           {
+            "type": "Stack",
+            "props": {
+             "dir": "col",
+             "gap": 2
+            },
+            "children": [
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--body",
+               "children": "Starter"
+              }
+             },
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--body-small",
+               "emphasis": "quiet",
+               "children": "Billed annually"
+              }
+             }
+            ]
+           },
+           {
+            "type": "Stack",
+            "props": {
+             "dir": "col",
+             "gap": 2,
+             "align": "end"
+            },
+            "children": [
+             {
+              "type": "Stack",
+              "props": {
+               "dir": "row",
+               "gap": 4,
+               "align": "baseline"
+              },
+              "children": [
+               {
+                "type": "Text",
+                "props": {
+                 "as": "span",
+                 "element": "type--body-extra-small",
+                 "emphasis": "quiet",
+                 "children": "USD"
+                }
+               },
+               {
+                "type": "Text",
+                "props": {
+                 "as": "span",
+                 "element": "type--numbers",
+                 "children": "$40.00"
+                }
+               }
+              ]
+             },
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--body-small",
+               "emphasis": "quiet",
+               "children": "per month"
+              }
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "col",
+           "gap": 8
+          },
+          "children": [
+           {
+            "type": "Stack",
+            "props": {
+             "dir": "row",
+             "gap": 12,
+             "align": "baseline",
+             "justify": "between"
+            },
+            "children": [
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--body-small",
+               "emphasis": "quiet",
+               "children": "Subtotal"
+              }
+             },
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--numbers-small",
+               "emphasis": "quiet",
+               "children": "$40.00"
+              }
+             }
+            ]
+           },
+           {
+            "type": "Stack",
+            "props": {
+             "dir": "row",
+             "gap": 12,
+             "align": "baseline",
+             "justify": "between"
+            },
+            "children": [
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--body-small",
+               "emphasis": "quiet",
+               "children": "Tax"
+              }
+             },
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--numbers-small",
+               "emphasis": "quiet",
+               "children": "$5.00"
+              }
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "Separator",
+          "props": {}
+         },
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "row",
+           "gap": 12,
+           "align": "baseline",
+           "justify": "between"
+          },
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body",
+             "children": "Total Due Today"
+            }
+           },
+           {
+            "type": "Stack",
+            "props": {
+             "dir": "row",
+             "gap": 4,
+             "align": "baseline"
+            },
+            "children": [
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--body-extra-small",
+               "emphasis": "quiet",
+               "children": "USD"
+              }
+             },
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--numbers",
+               "children": "$45.00"
+              }
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "Card",
+        "props": {},
+        "children": [
+         {
+          "type": "Header",
+          "props": {},
+          "children": [
+           {
+            "type": "Button",
+            "props": {
+             "data-testid": "checkout-account-funds-btn",
+             "emphasis": "quiet",
+             "fill": true,
+             "buttonType": "text-icon",
+             "endIcon": "chevronUp",
+             "className": "justify-between",
+             "children": "Account Funds"
+            }
+           }
+          ]
+         },
+         {
+          "type": "Content",
+          "props": {},
+          "children": [
+           {
+            "type": "Stack",
+            "props": {
+             "dir": "col",
+             "gap": 12
+            },
+            "children": [
+             {
+              "type": "InputSelect",
+              "props": {
+               "data-testid": "checkout-saved-card-select",
+               "options": [
+                {
+                 "value": "visa-4242",
+                 "label": "Visa ··· 4242"
+                }
+               ],
+               "value": {
+                "bind": "state.card"
+               },
+               "clearable": false,
+               "aria-label": "Saved card"
+              },
+              "on": {
+               "change": [
+                {
+                 "set": {
+                  "state": "card",
+                  "to": {
+                   "bind": "event"
+                  }
+                 }
+                }
+               ]
+              }
+             },
+             {
+              "type": "Button",
+              "props": {
+               "data-testid": "checkout-pay-btn",
+               "emphasis": "primary",
+               "fill": true,
+               "children": "Pay $45.00"
+              }
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "gap": 12,
+         "align": "center"
+        },
+        "children": [
+         {
+          "type": "Separator",
+          "props": {
+           "className": "flex-1 min-w-0"
+          }
+         },
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--body-small",
+           "emphasis": "quiet",
+           "children": "or"
+          }
+         },
+         {
+          "type": "Separator",
+          "props": {
+           "className": "flex-1 min-w-0"
+          }
+         }
+        ]
+       },
+       {
+        "type": "Card",
+        "props": {},
+        "children": [
+         {
+          "type": "Header",
+          "props": {},
+          "children": [
+           {
+            "type": "Button",
+            "props": {
+             "data-testid": "checkout-add-source-btn",
+             "emphasis": "quiet",
+             "fill": true,
+             "buttonType": "text-icon",
+             "endIcon": "chevronUp",
+             "className": "justify-between",
+             "children": "Add a New Payment Source"
+            }
+           }
+          ]
+         },
+         {
+          "type": "Content",
+          "props": {},
+          "children": [
+           {
+            "type": "Stack",
+            "props": {
+             "dir": "col",
+             "gap": 8
+            },
+            "children": [
+             {
+              "type": "Button",
+              "props": {
+               "data-testid": "checkout-paypal-btn",
+               "emphasis": "primary",
+               "fill": true,
+               "children": "Pay with PayPal"
+              }
+             },
+             {
+              "type": "Button",
+              "props": {
+               "data-testid": "checkout-applepay-btn",
+               "emphasis": "primary",
+               "fill": true,
+               "children": "Pay with Apple Pay"
+              }
+             },
+             {
+              "type": "Button",
+              "props": {
+               "data-testid": "checkout-googlepay-btn",
+               "emphasis": "primary",
+               "fill": true,
+               "children": "Google Pay"
+              }
+             },
+             {
+              "type": "Button",
+              "props": {
+               "data-testid": "checkout-more-methods-btn",
+               "emphasis": "secondary",
+               "fill": true,
+               "children": "More Payment Methods"
+              }
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,107 @@
+{
+ "id": "ui-data-pattern-component-status-cards-header-band-error",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-status-cards-header-band-error",
+ "kind": "component",
+ "name": "header-band-error",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "header-band-error",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Card",
+   "props": {
+    "className": "flex-1 min-w-56"
+   },
+   "children": [
+    {
+     "type": "Header",
+     "props": {
+      "status": "error"
+     },
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "sm"
+       },
+       "children": [
+        {
+         "type": "Icon",
+         "props": {
+          "name": "error",
+          "size": "sm"
+         }
+        },
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--heading4",
+          "children": "Sync failed"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Content",
+     "props": {},
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body-small",
+        "children": "Connection timed out after 30 s; 3 changes were not saved."
+       }
+      }
+     ]
+    },
+    {
+     "type": "Footer",
+     "props": {
+      "className": "w-full"
+     },
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "between",
+        "className": "w-full",
+        "scale": "sm"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body-extra-small",
+          "emphasis": "quiet",
+          "children": "2 h ago"
+         }
+        },
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "secondary",
+          "scale": "sm",
+          "children": "Retry"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

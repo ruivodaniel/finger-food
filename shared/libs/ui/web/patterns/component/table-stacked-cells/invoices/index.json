@@ -1,0 +1,253 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "invoices",
+ "version": 1,
+ "surface": "web",
+ "measure": "lg",
+ "root": {
+  "type": "Table",
+  "props": {
+   "className": "w-full max-w-3xl"
+  },
+  "children": [
+   {
+    "type": "TableHeader",
+    "props": {},
+    "children": [
+     {
+      "type": "TableRow",
+      "props": {},
+      "children": [
+       {
+        "type": "TableHead",
+        "props": {
+         "children": "Invoice"
+        }
+       },
+       {
+        "type": "TableHead",
+        "props": {
+         "children": "Customer"
+        }
+       },
+       {
+        "type": "TableHead",
+        "props": {
+         "children": "Amount"
+        }
+       },
+       {
+        "type": "TableHead",
+        "props": {
+         "children": "Status"
+        }
+       },
+       {
+        "type": "TableHead",
+        "props": {
+         "children": "Due"
+        }
+       },
+       {
+        "type": "TableHead",
+        "props": {}
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "TableBody",
+    "props": {},
+    "children": [
+     {
+      "use": {
+       "component": "InvoiceRow",
+       "version": "latest"
+      },
+      "args": {
+       "number": "INV-2026-0142",
+       "issued": "Issued 1 Sep 2026",
+       "company": "Altar Design Systems",
+       "contact": "Inês Carvalho",
+       "amount": "€4,800.00",
+       "due": "15 Sep 2026",
+       "rel": "paid 12 Sep",
+       "status": "Paid"
+      }
+     },
+     {
+      "use": {
+       "component": "InvoiceRow",
+       "version": "latest"
+      },
+      "args": {
+       "number": "INV-2026-0141",
+       "issued": "Issued 28 Aug 2026",
+       "company": "Blueway Logistics",
+       "contact": "Nuno Baptista",
+       "amount": "€6,380.00",
+       "due": "16 Sep 2026",
+       "rel": "in 3 days",
+       "status": "Due"
+      }
+     },
+     {
+      "use": {
+       "component": "InvoiceRow",
+       "version": "latest"
+      },
+      "args": {
+       "number": "INV-2026-0140",
+       "issued": "Issued 20 Aug 2026",
+       "company": "Helm Works",
+       "contact": "Carla Reis",
+       "amount": "€1,240.00",
+       "due": "3 Sep 2026",
+       "rel": "10 days late",
+       "status": "Overdue"
+      }
+     },
+     {
+      "use": {
+       "component": "InvoiceRow",
+       "version": "latest"
+      },
+      "args": {
+       "number": "INV-2026-0139",
+       "issued": "Issued 18 Aug 2026",
+       "company": "Nordic Compliance AB",
+       "contact": "Erik Lund",
+       "amount": "€3,150.00",
+       "due": "1 Sep 2026",
+       "rel": "paid 30 Aug",
+       "status": "Paid"
+      }
+     },
+     {
+      "use": {
+       "component": "InvoiceRow",
+       "version": "latest"
+      },
+      "args": {
+       "number": "INV-2026-0138",
+       "issued": "Issued —",
+       "company": "Clerk Studio",
+       "contact": "Maya Ortiz",
+       "amount": "€920.00",
+       "due": "—",
+       "rel": "not sent",
+       "status": "Draft"
+      }
+     },
+     {
+      "use": {
+       "component": "InvoiceRow",
+       "version": "latest"
+      },
+      "args": {
+       "number": "INV-2026-0137",
+       "issued": "Issued 5 Aug 2026",
+       "company": "Loan Plans Ltd",
+       "contact": "Owen Price",
+       "amount": "€4,410.00",
+       "due": "19 Aug 2026",
+       "rel": "25 days late",
+       "status": "Overdue"
+      }
+     },
+     {
+      "use": {
+       "component": "InvoiceRow",
+       "version": "latest"
+      },
+      "args": {
+       "number": "INV-2026-0136",
+       "issued": "Issued 1 Aug 2026",
+       "company": "Nordic Compliance AB",
+       "contact": "Erik Lund",
+       "amount": "€3,150.00",
+       "due": "15 Aug 2026",
+       "rel": "paid 14 Aug",
+       "status": "Paid"
+      }
+     },
+     {
+      "type": "TableRow",
+      "props": {},
+      "children": [
+       {
+        "type": "TableCell",
+        "props": {},
+        "children": [
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--body-small",
+           "emphasis": "quiet",
+           "children": "7 invoices"
+          }
+         }
+        ]
+       },
+       {
+        "type": "TableCell",
+        "props": {},
+        "children": [
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--body-small",
+           "emphasis": "quiet",
+           "children": "3 paid · 1 due · 2 overdue · 1 draft"
+          }
+         }
+        ]
+       },
+       {
+        "type": "TableCell",
+        "props": {},
+        "children": [
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--numbers-small",
+           "children": "€24,050.00"
+          }
+         }
+        ]
+       },
+       {
+        "type": "TableCell",
+        "props": {}
+       },
+       {
+        "type": "TableCell",
+        "props": {},
+        "children": [
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--body-small",
+           "status": "error",
+           "children": "€5,650.00 overdue"
+          }
+         }
+        ]
+       },
+       {
+        "type": "TableCell",
+        "props": {}
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

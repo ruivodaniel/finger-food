@@ -1,0 +1,1257 @@
+{
+ "id": "ui-data-primitive-badge",
+ "version": 1,
+ "uiNodeId": "ui-node-primitive-badge",
+ "kind": "component",
+ "name": "primitive-badge",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "primitive-badge",
+  "version": 1,
+  "surface": "web",
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "align": "center",
+    "scale": "2xl"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "emphasis"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Badge",
+         "props": {
+          "emphasis": "hero",
+          "children": "hero"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "emphasis": "primary",
+          "children": "primary"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "emphasis": "secondary",
+          "children": "secondary"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "emphasis": "tertiary",
+          "children": "tertiary"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "emphasis": "quiet",
+          "children": "quiet"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "status"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Badge",
+         "props": {
+          "status": "neutral",
+          "children": "neutral"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "status": "info",
+          "children": "info"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "status": "success",
+          "children": "success"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "status": "warning",
+          "children": "warning"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "status": "error",
+          "children": "error"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "status": "destructive",
+          "children": "destructive"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "emphasis=\"hero\" \u00d7 status"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Badge",
+         "props": {
+          "emphasis": "hero",
+          "status": "neutral",
+          "children": "neutral"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "emphasis": "hero",
+          "status": "info",
+          "children": "info"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "emphasis": "hero",
+          "status": "success",
+          "children": "success"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "emphasis": "hero",
+          "status": "warning",
+          "children": "warning"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "emphasis": "hero",
+          "status": "error",
+          "children": "error"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "emphasis": "hero",
+          "status": "destructive",
+          "children": "destructive"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "emphasis=\"primary\" \u00d7 status"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Badge",
+         "props": {
+          "emphasis": "primary",
+          "status": "neutral",
+          "children": "neutral"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "emphasis": "primary",
+          "status": "info",
+          "children": "info"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "emphasis": "primary",
+          "status": "success",
+          "children": "success"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "emphasis": "primary",
+          "status": "warning",
+          "children": "warning"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "emphasis": "primary",
+          "status": "error",
+          "children": "error"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "emphasis": "primary",
+          "status": "destructive",
+          "children": "destructive"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "emphasis=\"secondary\" \u00d7 status"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Badge",
+         "props": {
+          "emphasis": "secondary",
+          "status": "neutral",
+          "children": "neutral"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "emphasis": "secondary",
+          "status": "info",
+          "children": "info"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "emphasis": "secondary",
+          "status": "success",
+          "children": "success"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "emphasis": "secondary",
+          "status": "warning",
+          "children": "warning"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "emphasis": "secondary",
+          "status": "error",
+          "children": "error"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "emphasis": "secondary",
+          "status": "destructive",
+          "children": "destructive"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "emphasis=\"tertiary\" \u00d7 status"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Badge",
+         "props": {
+          "emphasis": "tertiary",
+          "status": "neutral",
+          "children": "neutral"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "emphasis": "tertiary",
+          "status": "info",
+          "children": "info"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "emphasis": "tertiary",
+          "status": "success",
+          "children": "success"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "emphasis": "tertiary",
+          "status": "warning",
+          "children": "warning"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "emphasis": "tertiary",
+          "status": "error",
+          "children": "error"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "emphasis": "tertiary",
+          "status": "destructive",
+          "children": "destructive"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "emphasis=\"quiet\" \u00d7 status"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Badge",
+         "props": {
+          "emphasis": "quiet",
+          "status": "neutral",
+          "children": "neutral"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "emphasis": "quiet",
+          "status": "info",
+          "children": "info"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "emphasis": "quiet",
+          "status": "success",
+          "children": "success"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "emphasis": "quiet",
+          "status": "warning",
+          "children": "warning"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "emphasis": "quiet",
+          "status": "error",
+          "children": "error"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "emphasis": "quiet",
+          "status": "destructive",
+          "children": "destructive"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "state"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Badge",
+         "props": {
+          "children": "none"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "state": "hover",
+          "children": "hover"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "state": "active",
+          "children": "active"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "state": "focus",
+          "children": "focus"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "state": "selected",
+          "children": "selected"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "state": "disabled",
+          "children": "disabled"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "state \u00d7 status=\"success\""
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Badge",
+         "props": {
+          "status": "success",
+          "children": "none"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "status": "success",
+          "state": "hover",
+          "children": "hover"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "status": "success",
+          "state": "active",
+          "children": "active"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "status": "success",
+          "state": "focus",
+          "children": "focus"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "status": "success",
+          "state": "selected",
+          "children": "selected"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "status": "success",
+          "state": "disabled",
+          "children": "disabled"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "scale"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Badge",
+         "props": {
+          "scale": "3xs",
+          "status": "neutral",
+          "children": "3xs"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "scale": "2xs",
+          "status": "neutral",
+          "children": "2xs"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "scale": "xs",
+          "status": "neutral",
+          "children": "xs"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "scale": "sm",
+          "status": "neutral",
+          "children": "sm"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "scale": "md",
+          "status": "neutral",
+          "children": "md"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "scale": "lg",
+          "status": "neutral",
+          "children": "lg"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "scale": "xl",
+          "status": "neutral",
+          "children": "xl"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "scale": "2xl",
+          "status": "neutral",
+          "children": "2xl"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "scale": "3xl",
+          "status": "neutral",
+          "children": "3xl"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "icon \u2014 left (default) and right"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Badge",
+         "props": {
+          "showIcon": true,
+          "status": "success",
+          "children": "check"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "showIcon": true,
+          "iconName": "warning",
+          "status": "warning",
+          "children": "warning"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "showIcon": true,
+          "iconName": "loading",
+          "status": "info",
+          "children": "loading"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "showIcon": true,
+          "iconName": "tag",
+          "iconPosition": "right",
+          "children": "tag right"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "showIcon": true,
+          "iconName": "close",
+          "iconPosition": "right",
+          "emphasis": "secondary",
+          "children": "close right"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "icon \u00d7 scale"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Badge",
+         "props": {
+          "scale": "3xs",
+          "showIcon": true,
+          "status": "info",
+          "children": "3xs"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "scale": "2xs",
+          "showIcon": true,
+          "status": "info",
+          "children": "2xs"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "scale": "xs",
+          "showIcon": true,
+          "status": "info",
+          "children": "xs"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "scale": "sm",
+          "showIcon": true,
+          "status": "info",
+          "children": "sm"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "scale": "md",
+          "showIcon": true,
+          "status": "info",
+          "children": "md"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "scale": "lg",
+          "showIcon": true,
+          "status": "info",
+          "children": "lg"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "scale": "xl",
+          "showIcon": true,
+          "status": "info",
+          "children": "xl"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "scale": "2xl",
+          "showIcon": true,
+          "status": "info",
+          "children": "2xl"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "scale": "3xl",
+          "showIcon": true,
+          "status": "info",
+          "children": "3xl"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "the status dot \u2014 Badge scale=\"3xs\" concept=\"dot\", alone and inside a badge"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Badge",
+         "props": {
+          "scale": "3xs",
+          "concept": "dot",
+          "status": "neutral"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "scale": "3xs",
+          "concept": "dot",
+          "status": "info"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "scale": "3xs",
+          "concept": "dot",
+          "status": "success"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "scale": "3xs",
+          "concept": "dot",
+          "status": "warning"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "scale": "3xs",
+          "concept": "dot",
+          "status": "error"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "scale": "3xs",
+          "concept": "dot",
+          "status": "destructive"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "scale": "3xs",
+          "concept": "dot",
+          "emphasis": "quiet"
+         }
+        },
+        {
+         "type": "Badge",
+         "children": [
+          {
+           "type": "Badge",
+           "props": {
+            "scale": "3xs",
+            "concept": "dot",
+            "status": "neutral"
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "element": "type--body-extra-small",
+            "children": "neutral"
+           }
+          }
+         ],
+         "props": {
+          "status": "neutral",
+          "scale": "xs"
+         }
+        },
+        {
+         "type": "Badge",
+         "children": [
+          {
+           "type": "Badge",
+           "props": {
+            "scale": "3xs",
+            "concept": "dot",
+            "status": "info"
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "element": "type--body-extra-small",
+            "children": "info"
+           }
+          }
+         ],
+         "props": {
+          "status": "info",
+          "scale": "xs"
+         }
+        },
+        {
+         "type": "Badge",
+         "children": [
+          {
+           "type": "Badge",
+           "props": {
+            "scale": "3xs",
+            "concept": "dot",
+            "status": "success"
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "element": "type--body-extra-small",
+            "children": "success"
+           }
+          }
+         ],
+         "props": {
+          "status": "success",
+          "scale": "xs"
+         }
+        },
+        {
+         "type": "Badge",
+         "children": [
+          {
+           "type": "Badge",
+           "props": {
+            "scale": "3xs",
+            "concept": "dot",
+            "status": "warning"
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "element": "type--body-extra-small",
+            "children": "warning"
+           }
+          }
+         ],
+         "props": {
+          "status": "warning",
+          "scale": "xs"
+         }
+        },
+        {
+         "type": "Badge",
+         "children": [
+          {
+           "type": "Badge",
+           "props": {
+            "scale": "3xs",
+            "concept": "dot",
+            "status": "error"
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "element": "type--body-extra-small",
+            "children": "error"
+           }
+          }
+         ],
+         "props": {
+          "status": "error",
+          "scale": "xs"
+         }
+        },
+        {
+         "type": "Badge",
+         "children": [
+          {
+           "type": "Badge",
+           "props": {
+            "scale": "3xs",
+            "concept": "dot",
+            "status": "destructive"
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "element": "type--body-extra-small",
+            "children": "destructive"
+           }
+          }
+         ],
+         "props": {
+          "status": "destructive",
+          "scale": "xs"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "the icon \"dot\" \u2014 the Lucide glyph: a grain in an empty box; not the way to draw a dot"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Badge",
+         "props": {
+          "showIcon": true,
+          "iconName": "dot",
+          "status": "success",
+          "emphasis": "quiet",
+          "children": "Active"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

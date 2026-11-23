@@ -1,0 +1,10 @@
+/* the product's one-CSS recipe: fonts, tailwind's utilities, the one theme. The theme engine owns every visual property; nothing here carries a colour. */
+@import "@theme-fonts";
+@import "tailwindcss";
+@import "@theme";
+
+@source "../../../libs/ui/web/primitives";
+@source "../../../libs/ui/web/patterns";
+@source ".";
+
+html, body, #root { height: 100%; }

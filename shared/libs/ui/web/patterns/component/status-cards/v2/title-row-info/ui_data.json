@@ -1,0 +1,99 @@
+{
+ "id": "ui-data-pattern-component-status-cards-title-row-info",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-status-cards-title-row-info",
+ "kind": "component",
+ "name": "title-row-info",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "title-row-info",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Card",
+   "props": {
+    "className": "flex-1 min-w-56"
+   },
+   "children": [
+    {
+     "type": "Content",
+     "props": {},
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "scale": "sm"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "justify": "between",
+          "scale": "sm"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--heading4",
+            "status": "info"
+           },
+           "children": [
+            {
+             "type": "Icon",
+             "props": {
+              "name": "info",
+              "size": "sm"
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "children": " New version available"
+             }
+            }
+           ]
+          },
+          {
+           "type": "Badge",
+           "props": {
+            "emphasis": "quiet",
+            "status": "info",
+            "scale": "xs",
+            "children": "Info"
+           }
+          }
+         ]
+        },
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body-small",
+          "children": "v2.4 adds the Stack primitive and the tile theme block."
+         }
+        },
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body-extra-small",
+          "emphasis": "quiet",
+          "children": "Just now"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

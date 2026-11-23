@@ -22,7 +22,7 @@
  */
 
 import { randomUUID } from "node:crypto";
-import type { Public } from "@libs/gated-scoped-ac";
+import { PRIVATE, type Public, type ScopedAcRequestContext } from "@libs/gated-scoped-ac";
 
 import {
   factorKey,
@@ -85,8 +85,12 @@ export interface LoginResult {
 export interface AuthServiceDeps {
   authConfig: AuthAndRegistrationConfig;
   port: IdentityProviderPort;
-  userService: Pick<UserService, "findOrCreateByIdentityId" | "updateProfile">;
-  consentRecordService: Pick<ConsentRecordService, "recordConsent">;
+  userService: Pick<UserService, "findOrCreateByIdentityId" | "updateOwnProfile">;
+  consentRecordService: Pick<ConsentRecordService, "recordConsentScoped">;
+  /** The new user's AC context (no active org), built as the hydration
+   * middleware builds it, so registration writes as that user through the
+   * gate. */
+  scopedAcFor: (userId: string) => ScopedAcRequestContext;
   hooks: UserOrgMgmtHooks;
   errors: ModuleErrors;
   logger: ModuleLogger;
@@ -438,13 +442,26 @@ export class AuthService {
   ): Promise<string> {
     const user =
       await this.deps.userService.findOrCreateByIdentityId(identityId);
+    // The user row exists now, so the new user has an AC context: the name and
+    // the consent go through the gate as theirs.
+    const ac = this.deps.scopedAcFor(user.id);
 
-    try {
-      if (input.name) {
-        await this.deps.userService.updateProfile(user.id, {
+    // The name and the consent fail apart: a refused name never costs the
+    // consent, and each failure is logged by name.
+    if (input.name) {
+      try {
+        await this.deps.userService.updateOwnProfile(ac, PRIVATE, user.id, {
           name: input.name,
         });
+      } catch (error) {
+        this.deps.logger.error("registration name write failed", {
+          userId: user.id,
+          message: error instanceof Error ? error.message : "unknown",
+        });
       }
+    }
+
+    try {
       if (input.consents?.length) {
         const items = consentItemsOf(
           dedupeObligations(
@@ -454,7 +471,7 @@ export class AuthService {
           ),
         );
         if (items.length > 0) {
-          await this.deps.consentRecordService.recordConsent({
+          await this.deps.consentRecordService.recordConsentScoped(ac, PRIVATE, {
             userId: user.id,
             items,
             decisions: input.consents,
@@ -467,7 +484,7 @@ export class AuthService {
       }
     } catch (error) {
       // The account stands; the gate will ask again at /resolve.
-      this.deps.logger.error("registration side-writes failed", {
+      this.deps.logger.error("registration consent write failed", {
         userId: user.id,
         message: error instanceof Error ? error.message : "unknown",
       });

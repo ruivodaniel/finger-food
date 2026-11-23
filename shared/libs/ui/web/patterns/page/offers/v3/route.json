@@ -1,0 +1,7 @@
+{
+ "id": "route-pattern-page-offers",
+ "version": 1,
+ "surface": "web",
+ "path": "/patterns/page/offers",
+ "uiNodeId": "ui-node-pattern-page-offers"
+}

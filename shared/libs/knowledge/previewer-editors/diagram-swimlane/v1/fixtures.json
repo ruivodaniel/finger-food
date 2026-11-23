@@ -1,0 +1,1386 @@
+[
+ {
+  "id": "submit-form",
+  "name": "submit a form: three lanes, a decision of each kind, a back connector, a note",
+  "data": {
+   "id": "submit-form",
+   "name": "Submit a form",
+   "lanes": [
+    {
+     "id": "user",
+     "name": "USER"
+    },
+    {
+     "id": "system",
+     "name": "SYSTEM"
+    },
+    {
+     "id": "admin",
+     "name": "ADMIN"
+    }
+   ],
+   "nodes": [
+    {
+     "id": "start",
+     "kind": "start",
+     "lane": "user",
+     "order": 0
+    },
+    {
+     "id": "page",
+     "kind": "action",
+     "lane": "user",
+     "order": 1,
+     "text": "On public page"
+    },
+    {
+     "id": "fills",
+     "kind": "action",
+     "lane": "user",
+     "order": 2,
+     "text": "Fills form"
+    },
+    {
+     "id": "valid",
+     "kind": "only-one",
+     "lane": "system",
+     "order": 3
+    },
+    {
+     "id": "errors",
+     "kind": "action",
+     "lane": "user",
+     "order": 4,
+     "text": "Sees errors"
+    },
+    {
+     "id": "saves",
+     "kind": "action",
+     "lane": "system",
+     "order": 4,
+     "text": "Saves"
+    },
+    {
+     "id": "all",
+     "kind": "all",
+     "lane": "system",
+     "order": 5
+    },
+    {
+     "id": "conf",
+     "kind": "action",
+     "lane": "user",
+     "order": 6,
+     "text": "Sees confirmation"
+    },
+    {
+     "id": "notif",
+     "kind": "action",
+     "lane": "admin",
+     "order": 6,
+     "text": "Notified"
+    },
+    {
+     "id": "end",
+     "kind": "end",
+     "lane": "user",
+     "order": 7
+    },
+    {
+     "id": "note1",
+     "kind": "note",
+     "lane": "system",
+     "order": 3,
+     "attachedTo": "valid",
+     "note": {
+      "id": "note1",
+      "title": "Validation",
+      "text": "Every required field, and the email's format."
+     }
+    }
+   ],
+   "edges": [
+    {
+     "id": "start-page",
+     "from": "start",
+     "to": "page"
+    },
+    {
+     "id": "page-fills",
+     "from": "page",
+     "to": "fills"
+    },
+    {
+     "id": "fills-valid",
+     "from": "fills",
+     "to": "valid"
+    },
+    {
+     "id": "valid-errors",
+     "from": "valid",
+     "to": "errors",
+     "label": "no"
+    },
+    {
+     "id": "valid-saves",
+     "from": "valid",
+     "to": "saves",
+     "label": "yes"
+    },
+    {
+     "id": "errors-fills",
+     "from": "errors",
+     "to": "fills"
+    },
+    {
+     "id": "saves-all",
+     "from": "saves",
+     "to": "all"
+    },
+    {
+     "id": "all-conf",
+     "from": "all",
+     "to": "conf"
+    },
+    {
+     "id": "all-notif",
+     "from": "all",
+     "to": "notif"
+    },
+    {
+     "id": "conf-end",
+     "from": "conf",
+     "to": "end"
+    }
+   ]
+  }
+ },
+ {
+  "id": "small",
+  "name": "two lanes",
+  "data": {
+   "id": "small",
+   "name": "Two lanes",
+   "lanes": [
+    {
+     "id": "a",
+     "name": "CUSTOMER"
+    },
+    {
+     "id": "b",
+     "name": "SHOP"
+    }
+   ],
+   "nodes": [
+    {
+     "id": "s",
+     "kind": "start",
+     "lane": "a",
+     "order": 0
+    },
+    {
+     "id": "o",
+     "kind": "action",
+     "lane": "a",
+     "order": 1,
+     "text": "Orders"
+    },
+    {
+     "id": "p",
+     "kind": "action",
+     "lane": "b",
+     "order": 2,
+     "text": "Packs"
+    },
+    {
+     "id": "e",
+     "kind": "end",
+     "lane": "b",
+     "order": 3
+    }
+   ],
+   "edges": [
+    {
+     "id": "s-o",
+     "from": "s",
+     "to": "o"
+    },
+    {
+     "id": "o-p",
+     "from": "o",
+     "to": "p"
+    },
+    {
+     "id": "p-e",
+     "from": "p",
+     "to": "e"
+    }
+   ]
+  }
+ },
+ {
+  "id": "empty",
+  "name": "an empty diagram",
+  "data": {
+   "id": "empty",
+   "name": "Empty",
+   "lanes": [
+    {
+     "id": "a",
+     "name": "USER"
+    },
+    {
+     "id": "b",
+     "name": "SYSTEM"
+    }
+   ],
+   "nodes": [],
+   "edges": []
+  }
+ },
+ {
+  "id": "browse-orgs-prototype",
+  "name": "open a UI prototype, page 2, one organization: eight lanes, data and assets among them; a code snippet on a step for what is sent",
+  "data": {
+   "id": "browse-orgs-prototype",
+   "name": "A UI prototype",
+   "lanes": [
+    {
+     "id": "human",
+     "name": "HUMAN USER"
+    },
+    {
+     "id": "prev",
+     "name": "SCREEN PREVIEWER"
+    },
+    {
+     "id": "live",
+     "name": "LIVE SCREEN"
+    },
+    {
+     "id": "rt",
+     "name": "MOCK ROUTER"
+    },
+    {
+     "id": "tr",
+     "name": "TRANSLATOR"
+    },
+    {
+     "id": "sto",
+     "name": "MOCK STORE"
+    },
+    {
+     "id": "api",
+     "name": "MOCK API"
+    },
+    {
+     "id": "data",
+     "name": "DATA & ASSETS"
+    }
+   ],
+   "nodes": [
+    {
+     "id": "s0",
+     "kind": "start",
+     "lane": "human",
+     "order": 0
+    },
+    {
+     "id": "s1",
+     "kind": "action",
+     "lane": "human",
+     "order": 1,
+     "text": "Opens UI prototype b1c97273"
+    },
+    {
+     "id": "s2",
+     "kind": "action",
+     "lane": "prev",
+     "order": 2,
+     "text": "Asks for the UI prototype and its first route"
+    },
+    {
+     "id": "s3",
+     "kind": "action",
+     "lane": "data",
+     "order": 3,
+     "text": "Gives the UI prototype and the route"
+    },
+    {
+     "id": "s3c0",
+     "kind": "code",
+     "lane": "data",
+     "order": 3,
+     "attachedTo": "s3",
+     "language": "javascript",
+     "code": {
+      "id": "s3c0",
+      "code": "ui_prototype \"b1c97273\" = {\n  worldId: \"world:acme\",\n  t: 0,\n  initialUiDataId: \"organizations@4\",\n  initialStoreState: {\n    session: \"u-samantha\",\n    activeOrganization: \"o-platform\" },\n  initialParams: {},\n  recordedRequests: [ three ]\n}"
+     }
+    },
+    {
+     "id": "s3c1",
+     "kind": "code",
+     "lane": "data",
+     "order": 3,
+     "attachedTo": "s3",
+     "language": "javascript",
+     "code": {
+      "id": "s3c1",
+      "code": "ui_data  organizations@4  → uiNodeId: node:organizations\nui_node  node:organizations\nroute    { path: \"/organizations\",\n           uiNodeId: \"node:organizations\" }"
+     }
+    },
+    {
+     "id": "s4",
+     "kind": "action",
+     "lane": "prev",
+     "order": 4,
+     "text": "Builds the URL. Mounts the live screen at it"
+    },
+    {
+     "id": "s4c0",
+     "kind": "code",
+     "lane": "prev",
+     "order": 4,
+     "attachedTo": "s4",
+     "language": "javascript",
+     "code": {
+      "id": "s4c0",
+      "code": "prefix   /ui-prototype/b1c97273\nroute    /organizations\nparams   {}               // initialParams\nURL      /ui-prototype/b1c97273/organizations"
+     }
+    },
+    {
+     "id": "s5",
+     "kind": "action",
+     "lane": "live",
+     "order": 5,
+     "text": "Gives the path to the mock router"
+    },
+    {
+     "id": "s5c0",
+     "kind": "code",
+     "lane": "live",
+     "order": 5,
+     "attachedTo": "s5",
+     "language": "javascript",
+     "code": {
+      "id": "s5c0",
+      "code": "/organizations"
+     }
+    },
+    {
+     "id": "s6",
+     "kind": "action",
+     "lane": "rt",
+     "order": 6,
+     "text": "Asks for the route, its UI node, its UI document"
+    },
+    {
+     "id": "s7",
+     "kind": "action",
+     "lane": "data",
+     "order": 7,
+     "text": "Gives the route, the UI node, the UI document"
+    },
+    {
+     "id": "s7c0",
+     "kind": "code",
+     "lane": "data",
+     "order": 7,
+     "attachedTo": "s7",
+     "language": "javascript",
+     "code": {
+      "id": "s7c0",
+      "code": "route        { path: \"/organizations\",\n               uiNodeId: \"node:organizations\" }\nui_node      node:organizations\nui_data      organizations@4  (the UI document)"
+     }
+    },
+    {
+     "id": "s8",
+     "kind": "action",
+     "lane": "rt",
+     "order": 8,
+     "text": "Gives the translator the UI document"
+    },
+    {
+     "id": "s9",
+     "kind": "action",
+     "lane": "tr",
+     "order": 9,
+     "text": "Draws the UI document. Gives the screen"
+    },
+    {
+     "id": "s9c0",
+     "kind": "code",
+     "lane": "tr",
+     "order": 9,
+     "attachedTo": "s9",
+     "language": "javascript",
+     "code": {
+      "id": "s9c0",
+      "code": "draw(organizations@4, theme, component library)"
+     }
+    },
+    {
+     "id": "s10",
+     "kind": "action",
+     "lane": "live",
+     "order": 10,
+     "text": "Shows the screen"
+    },
+    {
+     "id": "s11",
+     "kind": "action",
+     "lane": "sto",
+     "order": 11,
+     "text": "Asks for the initial store state, by the id in the URL"
+    },
+    {
+     "id": "s12",
+     "kind": "action",
+     "lane": "data",
+     "order": 12,
+     "text": "Gives the initial store state"
+    },
+    {
+     "id": "s12c0",
+     "kind": "code",
+     "lane": "data",
+     "order": 12,
+     "attachedTo": "s12",
+     "language": "javascript",
+     "code": {
+      "id": "s12c0",
+      "code": "ui_prototype \"b1c97273\".initialStoreState = {\n  session: \"u-samantha\",\n  activeOrganization: \"o-platform\" }"
+     }
+    },
+    {
+     "id": "s13",
+     "kind": "action",
+     "lane": "live",
+     "order": 13,
+     "text": "Sends its request, with the owner in a header"
+    },
+    {
+     "id": "s13c0",
+     "kind": "code",
+     "lane": "live",
+     "order": 13,
+     "attachedTo": "s13",
+     "language": "javascript",
+     "code": {
+      "id": "s13c0",
+      "code": "GET /organizations?page=1&pageSize=20\nheaders: { activeOrganization: \"o-platform\",\n           uiPrototype: \"b1c97273\" }"
+     }
+    },
+    {
+     "id": "s14",
+     "kind": "action",
+     "lane": "api",
+     "order": 14,
+     "text": "Reads the owner. Asks for its recorded requests"
+    },
+    {
+     "id": "s15",
+     "kind": "action",
+     "lane": "data",
+     "order": 15,
+     "text": "Gives the recorded requests"
+    },
+    {
+     "id": "s15c0",
+     "kind": "code",
+     "lane": "data",
+     "order": 15,
+     "attachedTo": "s15",
+     "language": "javascript",
+     "code": {
+      "id": "s15c0",
+      "code": "recordedRequests: [\n  { request: {\n      method: \"GET\", path: \"/organizations\",\n      query: { page: \"1\", pageSize: \"20\" },\n      headers: { activeOrganization: \"o-platform\" } },\n    response: { status: 200, body: {\n      rows: { table: \"organization\", ids: [ 20 ids ] },\n      total: 57 } } },\n  { request: {\n      method: \"GET\", path: \"/organizations\",\n      query: { page: \"2\", pageSize: \"20\" },\n      headers: { activeOrganization: \"o-platform\" } },\n    response: { status: 200, body: {\n      rows: { table: \"organization\",\n              ids: [ 20 other ids ] },\n      total: 57 } } },\n  { request: {\n      method: \"GET\", path: \"/organizations/abc123\",\n      headers: { activeOrganization: \"o-platform\" } },\n    response: { status: 200, body: {\n      table: \"organization\", ids: [ \"abc123\" ] } } }\n]"
+     }
+    },
+    {
+     "id": "s16",
+     "kind": "action",
+     "lane": "api",
+     "order": 16,
+     "text": "Finds the same request. Asks for the rows it names"
+    },
+    {
+     "id": "s16c0",
+     "kind": "code",
+     "lane": "api",
+     "order": 16,
+     "attachedTo": "s16",
+     "language": "javascript",
+     "code": {
+      "id": "s16c0",
+      "code": "found: the first recorded request\nits response names:\n  { table: \"organization\", ids: [ 20 ids ] }\nworld: \"world:acme\", t: 0"
+     }
+    },
+    {
+     "id": "s17",
+     "kind": "action",
+     "lane": "data",
+     "order": 17,
+     "text": "Gives the rows of the world at the moment"
+    },
+    {
+     "id": "s17c0",
+     "kind": "code",
+     "lane": "data",
+     "order": 17,
+     "attachedTo": "s17",
+     "language": "javascript",
+     "code": {
+      "id": "s17c0",
+      "code": "world \"world:acme\" at t = 0\norganization where id in [ 20 ids ]\n→ 20 rows"
+     }
+    },
+    {
+     "id": "s18",
+     "kind": "action",
+     "lane": "api",
+     "order": 18,
+     "text": "Puts the rows in the response. Gives the response"
+    },
+    {
+     "id": "s18c0",
+     "kind": "code",
+     "lane": "api",
+     "order": 18,
+     "attachedTo": "s18",
+     "language": "javascript",
+     "code": {
+      "id": "s18c0",
+      "code": "response: { rows: [ 20 organizations ], total: 57 }"
+     }
+    },
+    {
+     "id": "s19",
+     "kind": "action",
+     "lane": "live",
+     "order": 19,
+     "text": "Shows the organizations, page 1"
+    },
+    {
+     "id": "s20",
+     "kind": "action",
+     "lane": "human",
+     "order": 20,
+     "text": "Clicks next page"
+    },
+    {
+     "id": "s21",
+     "kind": "action",
+     "lane": "live",
+     "order": 21,
+     "text": "Sets the page to 2. Sends its request"
+    },
+    {
+     "id": "s21c0",
+     "kind": "code",
+     "lane": "live",
+     "order": 21,
+     "attachedTo": "s21",
+     "language": "javascript",
+     "code": {
+      "id": "s21c0",
+      "code": "GET /organizations?page=2&pageSize=20\nheaders: { activeOrganization: \"o-platform\",\n           uiPrototype: \"b1c97273\" }"
+     }
+    },
+    {
+     "id": "s22",
+     "kind": "action",
+     "lane": "api",
+     "order": 22,
+     "text": "Finds the same request. Asks for the rows it names"
+    },
+    {
+     "id": "s22c0",
+     "kind": "code",
+     "lane": "api",
+     "order": 22,
+     "attachedTo": "s22",
+     "language": "javascript",
+     "code": {
+      "id": "s22c0",
+      "code": "found: the second recorded request\nits response names:\n  { table: \"organization\", ids: [ 20 other ids ] }"
+     }
+    },
+    {
+     "id": "s22c1",
+     "kind": "code",
+     "lane": "api",
+     "order": 22,
+     "attachedTo": "s22",
+     "language": "javascript",
+     "code": {
+      "id": "s22c1",
+      "code": "// if the request was not recorded:\nGET /organizations?page=34&pageSize=20\nclosest: the second recorded request (page 2)\nresponse: its response,\n  with the warning \"page=34 not matched\""
+     }
+    },
+    {
+     "id": "s23",
+     "kind": "action",
+     "lane": "data",
+     "order": 23,
+     "text": "Gives the rows of the world at the moment"
+    },
+    {
+     "id": "s23c0",
+     "kind": "code",
+     "lane": "data",
+     "order": 23,
+     "attachedTo": "s23",
+     "language": "javascript",
+     "code": {
+      "id": "s23c0",
+      "code": "world \"world:acme\" at t = 0\norganization where id in [ 20 other ids ]\n→ 20 rows"
+     }
+    },
+    {
+     "id": "s24",
+     "kind": "action",
+     "lane": "api",
+     "order": 24,
+     "text": "Puts the rows in the response. Gives the response"
+    },
+    {
+     "id": "s24c0",
+     "kind": "code",
+     "lane": "api",
+     "order": 24,
+     "attachedTo": "s24",
+     "language": "javascript",
+     "code": {
+      "id": "s24c0",
+      "code": "response: { rows: [ 20 other organizations ],\n            total: 57 }"
+     }
+    },
+    {
+     "id": "s25",
+     "kind": "action",
+     "lane": "live",
+     "order": 25,
+     "text": "Shows the organizations, page 2"
+    },
+    {
+     "id": "s26",
+     "kind": "action",
+     "lane": "human",
+     "order": 26,
+     "text": "Clicks the row of organization abc123"
+    },
+    {
+     "id": "s27",
+     "kind": "action",
+     "lane": "live",
+     "order": 27,
+     "text": "Navigates: gives the new path to the mock router"
+    },
+    {
+     "id": "s27c0",
+     "kind": "code",
+     "lane": "live",
+     "order": 27,
+     "attachedTo": "s27",
+     "language": "javascript",
+     "code": {
+      "id": "s27c0",
+      "code": "/organizations/abc123/info\n// the link in the page, written by the mock router:\n// /ui-prototype/b1c97273/organizations/abc123/info"
+     }
+    },
+    {
+     "id": "s28",
+     "kind": "action",
+     "lane": "rt",
+     "order": 28,
+     "text": "Asks for the route, its UI node, its UI document"
+    },
+    {
+     "id": "s29",
+     "kind": "action",
+     "lane": "data",
+     "order": 29,
+     "text": "Gives the route, the UI node, the UI document"
+    },
+    {
+     "id": "s29c0",
+     "kind": "code",
+     "lane": "data",
+     "order": 29,
+     "attachedTo": "s29",
+     "language": "javascript",
+     "code": {
+      "id": "s29c0",
+      "code": "route    { path: \"/organizations/:organizationId/info\",\n           uiNodeId: \"node:organization-info\" }\nui_node  node:organization-info\nui_data  organization-info@2  (the UI document)"
+     }
+    },
+    {
+     "id": "s30",
+     "kind": "action",
+     "lane": "rt",
+     "order": 30,
+     "text": "Gives the translator the document, the screen the id"
+    },
+    {
+     "id": "s30c0",
+     "kind": "code",
+     "lane": "rt",
+     "order": 30,
+     "attachedTo": "s30",
+     "language": "javascript",
+     "code": {
+      "id": "s30c0",
+      "code": "to the translator: organization-info@2\nto the screen:     organizationId = \"abc123\""
+     }
+    },
+    {
+     "id": "s31",
+     "kind": "action",
+     "lane": "tr",
+     "order": 31,
+     "text": "Draws the UI document. Gives the screen"
+    },
+    {
+     "id": "s31c0",
+     "kind": "code",
+     "lane": "tr",
+     "order": 31,
+     "attachedTo": "s31",
+     "language": "javascript",
+     "code": {
+      "id": "s31c0",
+      "code": "draw(organization-info@2, theme, component library)"
+     }
+    },
+    {
+     "id": "s32",
+     "kind": "action",
+     "lane": "live",
+     "order": 32,
+     "text": "Shows the screen"
+    },
+    {
+     "id": "s33",
+     "kind": "action",
+     "lane": "live",
+     "order": 33,
+     "text": "Sends its request, with the owner in a header"
+    },
+    {
+     "id": "s33c0",
+     "kind": "code",
+     "lane": "live",
+     "order": 33,
+     "attachedTo": "s33",
+     "language": "javascript",
+     "code": {
+      "id": "s33c0",
+      "code": "GET /organizations/abc123\nheaders: { activeOrganization: \"o-platform\",\n           uiPrototype: \"b1c97273\" }"
+     }
+    },
+    {
+     "id": "s34",
+     "kind": "action",
+     "lane": "api",
+     "order": 34,
+     "text": "Finds the same request. Asks for the row it names"
+    },
+    {
+     "id": "s34c0",
+     "kind": "code",
+     "lane": "api",
+     "order": 34,
+     "attachedTo": "s34",
+     "language": "javascript",
+     "code": {
+      "id": "s34c0",
+      "code": "found: the third recorded request\nits response names:\n  { table: \"organization\", ids: [ \"abc123\" ] }"
+     }
+    },
+    {
+     "id": "s34c1",
+     "kind": "code",
+     "lane": "api",
+     "order": 34,
+     "attachedTo": "s34",
+     "language": "javascript",
+     "code": {
+      "id": "s34c1",
+      "code": "// if no recorded request has that method and path:\nGET /organizations/xyz\nerror: \"no recorded request for\n        GET /organizations/xyz\""
+     }
+    },
+    {
+     "id": "s35",
+     "kind": "action",
+     "lane": "data",
+     "order": 35,
+     "text": "Gives the row of the world at the moment"
+    },
+    {
+     "id": "s35c0",
+     "kind": "code",
+     "lane": "data",
+     "order": 35,
+     "attachedTo": "s35",
+     "language": "javascript",
+     "code": {
+      "id": "s35c0",
+      "code": "world \"world:acme\" at t = 0\norganization where id = \"abc123\"\n→ 1 row"
+     }
+    },
+    {
+     "id": "s36",
+     "kind": "action",
+     "lane": "api",
+     "order": 36,
+     "text": "Puts the row in the response. Gives the response"
+    },
+    {
+     "id": "s36c0",
+     "kind": "code",
+     "lane": "api",
+     "order": 36,
+     "attachedTo": "s36",
+     "language": "javascript",
+     "code": {
+      "id": "s36c0",
+      "code": "response: { id: \"abc123\", name: \"Borealis Ltd\", … }"
+     }
+    },
+    {
+     "id": "s37",
+     "kind": "action",
+     "lane": "live",
+     "order": 37,
+     "text": "Shows organization abc123"
+    },
+    {
+     "id": "s38",
+     "kind": "end",
+     "lane": "live",
+     "order": 38
+    }
+   ],
+   "edges": [
+    {
+     "id": "s0>s1",
+     "from": "s0",
+     "to": "s1"
+    },
+    {
+     "id": "s1>s2",
+     "from": "s1",
+     "to": "s2"
+    },
+    {
+     "id": "s2>s3",
+     "from": "s2",
+     "to": "s3"
+    },
+    {
+     "id": "s3>s4",
+     "from": "s3",
+     "to": "s4"
+    },
+    {
+     "id": "s4>s5",
+     "from": "s4",
+     "to": "s5"
+    },
+    {
+     "id": "s5>s6",
+     "from": "s5",
+     "to": "s6"
+    },
+    {
+     "id": "s6>s7",
+     "from": "s6",
+     "to": "s7"
+    },
+    {
+     "id": "s7>s8",
+     "from": "s7",
+     "to": "s8"
+    },
+    {
+     "id": "s8>s9",
+     "from": "s8",
+     "to": "s9"
+    },
+    {
+     "id": "s9>s10",
+     "from": "s9",
+     "to": "s10"
+    },
+    {
+     "id": "s10>s11",
+     "from": "s10",
+     "to": "s11"
+    },
+    {
+     "id": "s11>s12",
+     "from": "s11",
+     "to": "s12"
+    },
+    {
+     "id": "s12>s13",
+     "from": "s12",
+     "to": "s13"
+    },
+    {
+     "id": "s13>s14",
+     "from": "s13",
+     "to": "s14"
+    },
+    {
+     "id": "s14>s15",
+     "from": "s14",
+     "to": "s15"
+    },
+    {
+     "id": "s15>s16",
+     "from": "s15",
+     "to": "s16"
+    },
+    {
+     "id": "s16>s17",
+     "from": "s16",
+     "to": "s17"
+    },
+    {
+     "id": "s17>s18",
+     "from": "s17",
+     "to": "s18"
+    },
+    {
+     "id": "s18>s19",
+     "from": "s18",
+     "to": "s19"
+    },
+    {
+     "id": "s19>s20",
+     "from": "s19",
+     "to": "s20"
+    },
+    {
+     "id": "s20>s21",
+     "from": "s20",
+     "to": "s21"
+    },
+    {
+     "id": "s21>s22",
+     "from": "s21",
+     "to": "s22"
+    },
+    {
+     "id": "s22>s23",
+     "from": "s22",
+     "to": "s23"
+    },
+    {
+     "id": "s23>s24",
+     "from": "s23",
+     "to": "s24"
+    },
+    {
+     "id": "s24>s25",
+     "from": "s24",
+     "to": "s25"
+    },
+    {
+     "id": "s25>s26",
+     "from": "s25",
+     "to": "s26"
+    },
+    {
+     "id": "s26>s27",
+     "from": "s26",
+     "to": "s27"
+    },
+    {
+     "id": "s27>s28",
+     "from": "s27",
+     "to": "s28"
+    },
+    {
+     "id": "s28>s29",
+     "from": "s28",
+     "to": "s29"
+    },
+    {
+     "id": "s29>s30",
+     "from": "s29",
+     "to": "s30"
+    },
+    {
+     "id": "s30>s31",
+     "from": "s30",
+     "to": "s31"
+    },
+    {
+     "id": "s31>s32",
+     "from": "s31",
+     "to": "s32"
+    },
+    {
+     "id": "s32>s33",
+     "from": "s32",
+     "to": "s33"
+    },
+    {
+     "id": "s33>s34",
+     "from": "s33",
+     "to": "s34"
+    },
+    {
+     "id": "s34>s35",
+     "from": "s34",
+     "to": "s35"
+    },
+    {
+     "id": "s35>s36",
+     "from": "s35",
+     "to": "s36"
+    },
+    {
+     "id": "s36>s37",
+     "from": "s36",
+     "to": "s37"
+    },
+    {
+     "id": "s37>s38",
+     "from": "s37",
+     "to": "s38"
+    }
+   ]
+  }
+ },
+ {
+  "id": "snapshot-as-image",
+  "name": "open a UI snapshot as a picture: a decision (the kept picture, or the camera), then two things at once (keep the pictures, give the picture)",
+  "data": {
+   "id": "snapshot-as-image",
+   "name": "A UI snapshot as a picture",
+   "lanes": [
+    {
+     "id": "human",
+     "name": "HUMAN USER"
+    },
+    {
+     "id": "prev",
+     "name": "SCREEN PREVIEWER"
+    },
+    {
+     "id": "pic",
+     "name": "PICTURE SERVICE"
+    },
+    {
+     "id": "cam",
+     "name": "CAMERA"
+    },
+    {
+     "id": "live",
+     "name": "LIVE SCREEN"
+    },
+    {
+     "id": "data",
+     "name": "DATA & ASSETS"
+    }
+   ],
+   "nodes": [
+    {
+     "id": "s0",
+     "kind": "start",
+     "lane": "human",
+     "order": 0
+    },
+    {
+     "id": "s1",
+     "kind": "action",
+     "lane": "human",
+     "order": 1,
+     "text": "Opens UI snapshot 09876576 as a picture"
+    },
+    {
+     "id": "s2",
+     "kind": "action",
+     "lane": "prev",
+     "order": 2,
+     "text": "In picture mode, asks for the picture"
+    },
+    {
+     "id": "s2c0",
+     "kind": "code",
+     "lane": "prev",
+     "order": 2,
+     "attachedTo": "s2",
+     "language": "javascript",
+     "code": {
+      "id": "s2c0",
+      "code": "{ uiSnapshot: \"09876576\",\n  device: { name: \"desktop\", width: 1440,\n            aspectRatio: \"16:9\" },\n  cut: \"fold\",\n  theme: \"sursum-light\", themeVersion: 14 }"
+     }
+    },
+    {
+     "id": "s3",
+     "kind": "action",
+     "lane": "pic",
+     "order": 3,
+     "text": "Asks for the picture it keeps for them"
+    },
+    {
+     "id": "s4",
+     "kind": "action",
+     "lane": "data",
+     "order": 4,
+     "text": "Gives the picture it keeps, or none"
+    },
+    {
+     "id": "s4c0",
+     "kind": "code",
+     "lane": "data",
+     "order": 4,
+     "attachedTo": "s4",
+     "language": "javascript",
+     "code": {
+      "id": "s4c0",
+      "code": "screen image where\n  uiSnapshot = \"09876576\" and device = \"desktop\"\n  and cut = \"fold\"\n  and theme = \"sursum-light\" and themeVersion = 14\n→ one picture, with the time it was taken; or none"
+     }
+    },
+    {
+     "id": "s5",
+     "kind": "only-one",
+     "lane": "pic",
+     "order": 5
+    },
+    {
+     "id": "s6",
+     "kind": "action",
+     "lane": "pic",
+     "order": 6,
+     "text": "Asks the camera for the pictures"
+    },
+    {
+     "id": "s6c0",
+     "kind": "code",
+     "lane": "pic",
+     "order": 6,
+     "attachedTo": "s6",
+     "language": "javascript",
+     "code": {
+      "id": "s6c0",
+      "code": "{ uiSnapshot: \"09876576\",\n  device: { name: \"desktop\", width: 1440,\n            aspectRatio: \"16:9\" },\n  theme: \"sursum-light\", themeVersion: 14 }"
+     }
+    },
+    {
+     "id": "s7",
+     "kind": "action",
+     "lane": "cam",
+     "order": 7,
+     "text": "Opens the live screen in a window of the device"
+    },
+    {
+     "id": "s7c0",
+     "kind": "code",
+     "lane": "cam",
+     "order": 7,
+     "attachedTo": "s7",
+     "language": "javascript",
+     "code": {
+      "id": "s7c0",
+      "code": "URL     /ui-snapshot/09876576?_theme=sursum-light@14\nwindow  1440 × 810        // width, width ÷ 16:9"
+     }
+    },
+    {
+     "id": "s8",
+     "kind": "action",
+     "lane": "live",
+     "order": 8,
+     "text": "Loads the page, as in the prototype tab"
+    },
+    {
+     "id": "s8c0",
+     "kind": "code",
+     "lane": "live",
+     "order": 8,
+     "attachedTo": "s8",
+     "language": "javascript",
+     "code": {
+      "id": "s8c0",
+      "code": "the mock router, the translator, the mock store and\nthe mock API do what they do in the prototype tab.\nThe owner in the header is the UI snapshot:\nheaders: { uiSnapshot: \"09876576\" }"
+     }
+    },
+    {
+     "id": "s9",
+     "kind": "action",
+     "lane": "cam",
+     "order": 9,
+     "text": "Waits the delay. Photographs both cuts"
+    },
+    {
+     "id": "s9c0",
+     "kind": "code",
+     "lane": "cam",
+     "order": 9,
+     "attachedTo": "s9",
+     "language": "javascript",
+     "code": {
+      "id": "s9c0",
+      "code": "delay  800 ms\nfold   the window, 1440 × 810\nfull   the whole page at that width, 1440 × 2310"
+     }
+    },
+    {
+     "id": "s10",
+     "kind": "action",
+     "lane": "cam",
+     "order": 10,
+     "text": "Gives the two pictures"
+    },
+    {
+     "id": "s11",
+     "kind": "all",
+     "lane": "pic",
+     "order": 11
+    },
+    {
+     "id": "s12",
+     "kind": "action",
+     "lane": "pic",
+     "order": 12,
+     "text": "Asks to keep the two pictures"
+    },
+    {
+     "id": "s13",
+     "kind": "action",
+     "lane": "data",
+     "order": 13,
+     "text": "Keeps the two pictures"
+    },
+    {
+     "id": "s13c0",
+     "kind": "code",
+     "lane": "data",
+     "order": 13,
+     "attachedTo": "s13",
+     "language": "javascript",
+     "code": {
+      "id": "s13c0",
+      "code": "screen image: two rows, cut \"fold\" and cut \"full\",\neach with uiSnapshot, device, theme, themeVersion,\nand the time it was taken"
+     }
+    },
+    {
+     "id": "s14",
+     "kind": "action",
+     "lane": "pic",
+     "order": 14,
+     "text": "Gives the picture that was asked"
+    },
+    {
+     "id": "s15",
+     "kind": "action",
+     "lane": "prev",
+     "order": 15,
+     "text": "Shows the picture"
+    },
+    {
+     "id": "s16",
+     "kind": "end",
+     "lane": "prev",
+     "order": 16
+    }
+   ],
+   "edges": [
+    {
+     "id": "s0>s1",
+     "from": "s0",
+     "to": "s1"
+    },
+    {
+     "id": "s1>s2",
+     "from": "s1",
+     "to": "s2"
+    },
+    {
+     "id": "s2>s3",
+     "from": "s2",
+     "to": "s3"
+    },
+    {
+     "id": "s3>s4",
+     "from": "s3",
+     "to": "s4"
+    },
+    {
+     "id": "s4>s5",
+     "from": "s4",
+     "to": "s5"
+    },
+    {
+     "id": "s5>s14",
+     "from": "s5",
+     "to": "s14",
+     "label": "kept, and the UI snapshot did not change since",
+     "side": "left"
+    },
+    {
+     "id": "s5>s6",
+     "from": "s5",
+     "to": "s6",
+     "label": "none, or the UI snapshot changed since"
+    },
+    {
+     "id": "s6>s7",
+     "from": "s6",
+     "to": "s7"
+    },
+    {
+     "id": "s7>s8",
+     "from": "s7",
+     "to": "s8"
+    },
+    {
+     "id": "s8>s9",
+     "from": "s8",
+     "to": "s9"
+    },
+    {
+     "id": "s9>s10",
+     "from": "s9",
+     "to": "s10"
+    },
+    {
+     "id": "s10>s11",
+     "from": "s10",
+     "to": "s11"
+    },
+    {
+     "id": "s11>s12",
+     "from": "s11",
+     "to": "s12"
+    },
+    {
+     "id": "s12>s13",
+     "from": "s12",
+     "to": "s13"
+    },
+    {
+     "id": "s11>s14",
+     "from": "s11",
+     "to": "s14",
+     "side": "left"
+    },
+    {
+     "id": "s14>s15",
+     "from": "s14",
+     "to": "s15"
+    },
+    {
+     "id": "s15>s16",
+     "from": "s15",
+     "to": "s16"
+    }
+   ]
+  }
+ }
+]

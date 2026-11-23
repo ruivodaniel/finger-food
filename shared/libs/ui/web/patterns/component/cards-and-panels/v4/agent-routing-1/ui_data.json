@@ -1,0 +1,296 @@
+{
+ "id": "ui-data-pattern-component-cards-and-panels-agent-routing-1-v3",
+ "version": 2,
+ "uiNodeId": "ui-node-pattern-component-cards-and-panels-agent-routing-1-v3",
+ "kind": "component",
+ "name": "agent-routing-1",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "agent-routing-1",
+  "version": 2,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Card",
+   "props": {},
+   "children": [
+    {
+     "type": "Header",
+     "props": {},
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "between"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "scale": "md"
+         },
+         "children": [
+          {
+           "type": "Avatar",
+           "props": {
+            "scale": "md"
+           },
+           "children": [
+            {
+             "type": "AvatarFallback",
+             "props": {},
+             "children": [
+              {
+               "type": "Icon",
+               "props": {
+                "name": "gitBranch",
+                "size": "sm"
+               }
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--heading4",
+            "children": "Agent Routing"
+           }
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Content",
+     "props": {},
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "col",
+          "scale": "sm"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-extra-small",
+            "emphasis": "quiet",
+            "children": "INPUT"
+           }
+          },
+          {
+           "type": "Tile",
+           "props": {
+            "emphasis": "quiet"
+           },
+           "children": [
+            {
+             "type": "Stack",
+             "props": {
+              "dir": "row",
+              "align": "center",
+              "wrap": true,
+              "scale": "sm"
+             },
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "as": "span",
+                "element": "type--body",
+                "children": "Help me"
+               }
+              },
+              {
+               "type": "Badge",
+               "props": {
+                "emphasis": "secondary",
+                "status": "info",
+                "children": "write"
+               }
+              },
+              {
+               "type": "Text",
+               "props": {
+                "as": "span",
+                "element": "type--body",
+                "children": "a"
+               }
+              },
+              {
+               "type": "Badge",
+               "props": {
+                "emphasis": "secondary",
+                "status": "info",
+                "children": "React"
+               }
+              },
+              {
+               "type": "Text",
+               "props": {
+                "as": "span",
+                "element": "type--body",
+                "children": "component for user"
+               }
+              },
+              {
+               "type": "Badge",
+               "props": {
+                "emphasis": "secondary",
+                "status": "info",
+                "children": "authentication"
+               }
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "end",
+          "scale": "lg"
+         },
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col",
+            "scale": "sm"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--body-extra-small",
+              "emphasis": "quiet",
+              "children": "PATTERN"
+             }
+            },
+            {
+             "type": "Chip",
+             "props": {
+              "emphasis": "secondary",
+              "status": "warning",
+              "closable": false,
+              "showIcon": true,
+              "iconName": "activity"
+             },
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "as": "span",
+                "element": "type--code",
+                "children": "write|React|authentication"
+               }
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "row",
+            "justify": "center",
+            "className": "w-24"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--body",
+              "emphasis": "quiet"
+             },
+             "children": [
+              {
+               "type": "Icon",
+               "props": {
+                "name": "arrowRight",
+                "size": "md"
+               }
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col",
+            "scale": "sm"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--body-extra-small",
+              "emphasis": "quiet",
+              "children": "TARGET AGENT"
+             }
+            },
+            {
+             "type": "Chip",
+             "props": {
+              "emphasis": "secondary",
+              "status": "success",
+              "closable": false,
+              "showIcon": true,
+              "iconName": "bot"
+             },
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "as": "span",
+                "children": "Code Agent"
+               }
+              },
+              {
+               "type": "Badge",
+               "props": {
+                "scale": "xs",
+                "status": "success",
+                "children": "92%"
+               }
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

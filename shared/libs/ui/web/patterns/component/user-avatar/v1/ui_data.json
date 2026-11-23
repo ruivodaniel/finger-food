@@ -1,0 +1,5747 @@
+{
+ "id": "ui-data-pattern-component-user-avatar",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-user-avatar",
+ "kind": "component",
+ "name": "user-avatar",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "user-avatar",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "size": "fill",
+    "scale": "xl"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "size": "fill",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body-extra-small",
+        "children": "image alone, five sizes, tooltip",
+        "emphasis": "quiet"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "wrap": true,
+        "size": "fill",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "detail": "ines@acme.test",
+          "roles": [
+           "Owner"
+          ],
+          "presence": "online",
+          "width": "hug",
+          "layout": "image",
+          "scale": "xs",
+          "tooltip": true
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "detail": "tomas@acme.test",
+          "roles": [
+           "Admin",
+           "Billing"
+          ],
+          "presence": "offline",
+          "width": "hug",
+          "layout": "image",
+          "scale": "sm",
+          "tooltip": true
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "detail": "aisha@acme.test",
+          "roles": [
+           "Member"
+          ],
+          "presence": "online",
+          "width": "hug",
+          "layout": "image",
+          "scale": "md",
+          "tooltip": true
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "detail": "joao@acme.test",
+          "roles": [
+           "Member"
+          ],
+          "presence": "offline",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "tooltip": true
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "detail": "lena@acme.test",
+          "roles": [
+           "Guest"
+          ],
+          "presence": "online",
+          "width": "hug",
+          "layout": "image",
+          "scale": "xl",
+          "tooltip": true
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "size": "fill",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body-extra-small",
+        "children": "image alone, presence",
+        "emphasis": "quiet"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "wrap": true,
+        "size": "fill",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "detail": "ines@acme.test",
+          "roles": [
+           "Owner"
+          ],
+          "presence": "online",
+          "width": "hug",
+          "layout": "image",
+          "scale": "md",
+          "showPresence": true,
+          "tooltip": true
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "detail": "tomas@acme.test",
+          "roles": [
+           "Admin",
+           "Billing"
+          ],
+          "presence": "offline",
+          "width": "hug",
+          "layout": "image",
+          "scale": "md",
+          "showPresence": true,
+          "tooltip": true
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "detail": "aisha@acme.test",
+          "roles": [
+           "Member"
+          ],
+          "presence": "online",
+          "width": "hug",
+          "layout": "image",
+          "scale": "md",
+          "showPresence": true,
+          "tooltip": true
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "detail": "joao@acme.test",
+          "roles": [
+           "Member"
+          ],
+          "presence": "offline",
+          "width": "hug",
+          "layout": "image",
+          "scale": "md",
+          "showPresence": true,
+          "tooltip": true
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "size": "fill",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body-extra-small",
+        "children": "image alone, with an image",
+        "emphasis": "quiet"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "wrap": true,
+        "size": "fill",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "detail": "ines@acme.test",
+          "roles": [
+           "Owner"
+          ],
+          "presence": "online",
+          "width": "hug",
+          "layout": "image",
+          "scale": "lg",
+          "image": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22320%22%20height%3D%22200%22%3E%3Crect%20width%3D%22320%22%20height%3D%22200%22%20fill%3D%22%235C5FEB%22%2F%3E%3Ccircle%20cx%3D%22240%22%20cy%3D%2260%22%20r%3D%2236%22%20fill%3D%22%23fff%22%20opacity%3D%22.8%22%2F%3E%3Cpath%20d%3D%22M0%20200%20L120%2080%20L200%20150%20L260%20110%20L320%20200Z%22%20fill%3D%22%230A0A18%22%20opacity%3D%22.6%22%2F%3E%3C%2Fsvg%3E",
+          "tooltip": true
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "size": "fill",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body-extra-small",
+        "children": "inline",
+        "emphasis": "quiet"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "wrap": true,
+        "size": "fill",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body",
+          "children": "Assigned to"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "detail": "tomas@acme.test",
+          "roles": [
+           "Admin",
+           "Billing"
+          ],
+          "presence": "offline",
+          "width": "hug",
+          "layout": "inline"
+         }
+        },
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body",
+          "children": "and reviewed by"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "detail": "aisha@acme.test",
+          "roles": [
+           "Member"
+          ],
+          "presence": "online",
+          "width": "hug",
+          "layout": "inline"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "size": "fill",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body-extra-small",
+        "children": "badge: small, medium, large",
+        "emphasis": "quiet"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "wrap": true,
+        "size": "fill",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "detail": "ines@acme.test",
+          "roles": [
+           "Owner"
+          ],
+          "presence": "online",
+          "width": "hug",
+          "layout": "badge",
+          "scale": "sm"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "detail": "tomas@acme.test",
+          "roles": [
+           "Admin",
+           "Billing"
+          ],
+          "presence": "offline",
+          "width": "hug",
+          "layout": "badge",
+          "scale": "md"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "detail": "aisha@acme.test",
+          "roles": [
+           "Member"
+          ],
+          "presence": "online",
+          "width": "hug",
+          "layout": "badge",
+          "scale": "lg"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "size": "fill",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body-extra-small",
+        "children": "row: name",
+        "emphasis": "quiet"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "wrap": true,
+        "size": "fill",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "detail": "ines@acme.test",
+          "roles": [
+           "Owner"
+          ],
+          "presence": "online",
+          "width": "hug",
+          "layout": "row",
+          "showName": true
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "size": "fill",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body-extra-small",
+        "children": "row: name, second line",
+        "emphasis": "quiet"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "wrap": true,
+        "size": "fill",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "detail": "tomas@acme.test",
+          "roles": [
+           "Admin",
+           "Billing"
+          ],
+          "presence": "offline",
+          "width": "hug",
+          "layout": "row",
+          "showName": true,
+          "showDetail": true
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "size": "fill",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body-extra-small",
+        "children": "row: name, second line, roles, presence",
+        "emphasis": "quiet"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "wrap": true,
+        "size": "fill",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "detail": "tomas@acme.test",
+          "roles": [
+           "Admin",
+           "Billing"
+          ],
+          "presence": "offline",
+          "width": "hug",
+          "layout": "row",
+          "showName": true,
+          "showDetail": true,
+          "showRoles": true,
+          "showPresence": true
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "size": "fill",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body-extra-small",
+        "children": "row: fill",
+        "emphasis": "quiet"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "align": "stretch",
+        "wrap": false,
+        "size": "fill",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "detail": "ines@acme.test",
+          "roles": [
+           "Owner"
+          ],
+          "presence": "online",
+          "width": "fill",
+          "layout": "row",
+          "showName": true,
+          "showDetail": true,
+          "showRoles": true,
+          "showPresence": true
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "detail": "tomas@acme.test",
+          "roles": [
+           "Admin",
+           "Billing"
+          ],
+          "presence": "offline",
+          "width": "fill",
+          "layout": "row",
+          "showName": true,
+          "showDetail": true,
+          "showRoles": true,
+          "showPresence": true
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "detail": "aisha@acme.test",
+          "roles": [
+           "Member"
+          ],
+          "presence": "online",
+          "width": "fill",
+          "layout": "row",
+          "showName": true,
+          "showDetail": true,
+          "showRoles": true,
+          "showPresence": true
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body-extra-small",
+        "children": "no image: initials, and each kind of generated picture",
+        "emphasis": "quiet"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "initials"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "initials",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "initials",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "initials",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "initials",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "initials",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "dicebear-initials"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-initials",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-initials",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-initials",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-initials",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-initials",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "beam"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "beam",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "beam",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "beam",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "beam",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "beam",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "dicebear-adventurer"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-adventurer",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-adventurer",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-adventurer",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-adventurer",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-adventurer",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "dicebear-adventurer-neutral"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-adventurer-neutral",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-adventurer-neutral",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-adventurer-neutral",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-adventurer-neutral",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-adventurer-neutral",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "dicebear-avataaars"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-avataaars",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-avataaars",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-avataaars",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-avataaars",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-avataaars",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "dicebear-avataaars-neutral"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-avataaars-neutral",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-avataaars-neutral",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-avataaars-neutral",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-avataaars-neutral",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-avataaars-neutral",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "dicebear-big-ears"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-big-ears",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-big-ears",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-big-ears",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-big-ears",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-big-ears",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "dicebear-big-ears-neutral"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-big-ears-neutral",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-big-ears-neutral",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-big-ears-neutral",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-big-ears-neutral",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-big-ears-neutral",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "dicebear-big-smile"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-big-smile",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-big-smile",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-big-smile",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-big-smile",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-big-smile",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "dicebear-bottts"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-bottts",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-bottts",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-bottts",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-bottts",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-bottts",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "dicebear-bottts-neutral"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-bottts-neutral",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-bottts-neutral",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-bottts-neutral",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-bottts-neutral",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-bottts-neutral",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "dicebear-croodles"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-croodles",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-croodles",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-croodles",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-croodles",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-croodles",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "dicebear-croodles-neutral"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-croodles-neutral",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-croodles-neutral",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-croodles-neutral",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-croodles-neutral",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-croodles-neutral",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "dicebear-dylan"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-dylan",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-dylan",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-dylan",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-dylan",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-dylan",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "dicebear-fun-emoji"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-fun-emoji",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-fun-emoji",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-fun-emoji",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-fun-emoji",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-fun-emoji",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "dicebear-lorelei"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-lorelei",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-lorelei",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-lorelei",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-lorelei",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-lorelei",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "dicebear-lorelei-neutral"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-lorelei-neutral",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-lorelei-neutral",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-lorelei-neutral",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-lorelei-neutral",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-lorelei-neutral",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "dicebear-micah"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-micah",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-micah",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-micah",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-micah",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-micah",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "dicebear-miniavs"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-miniavs",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-miniavs",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-miniavs",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-miniavs",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-miniavs",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "dicebear-notionists"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-notionists",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-notionists",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-notionists",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-notionists",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-notionists",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "dicebear-notionists-neutral"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-notionists-neutral",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-notionists-neutral",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-notionists-neutral",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-notionists-neutral",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-notionists-neutral",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "dicebear-open-peeps"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-open-peeps",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-open-peeps",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-open-peeps",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-open-peeps",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-open-peeps",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "dicebear-personas"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-personas",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-personas",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-personas",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-personas",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-personas",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "dicebear-pixel-art"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-pixel-art",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-pixel-art",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-pixel-art",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-pixel-art",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-pixel-art",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "dicebear-pixel-art-neutral"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-pixel-art-neutral",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-pixel-art-neutral",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-pixel-art-neutral",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-pixel-art-neutral",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-pixel-art-neutral",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "dicebear-thumbs"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-thumbs",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-thumbs",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-thumbs",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-thumbs",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-thumbs",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "dicebear-toon-head"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-toon-head",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-toon-head",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-toon-head",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-toon-head",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-toon-head",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "space-pebble"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-pebble",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-pebble",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-pebble",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-pebble",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-pebble",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "space-grunge"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-grunge",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-grunge",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-grunge",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-grunge",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-grunge",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "space-bored"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-bored",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-bored",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-bored",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-bored",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-bored",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "space-doodle"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-doodle",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-doodle",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-doodle",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-doodle",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-doodle",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "space-squiggle"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-squiggle",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-squiggle",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-squiggle",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-squiggle",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-squiggle",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "space-critter"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-critter",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-critter",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-critter",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-critter",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-critter",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "space-kendo"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-kendo",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-kendo",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-kendo",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-kendo",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-kendo",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "morphatar-organic"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "morphatar-organic",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "morphatar-organic",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "morphatar-organic",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "morphatar-organic",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "morphatar-organic",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "pixel"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "pixel",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "pixel",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "pixel",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "pixel",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "pixel",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "ring"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "ring",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "ring",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "ring",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "ring",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "ring",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "bauhaus"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "bauhaus",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "bauhaus",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "bauhaus",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "bauhaus",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "bauhaus",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "dicebear-identicon"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-identicon",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-identicon",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-identicon",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-identicon",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-identicon",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "dicebear-icons"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-icons",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-icons",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-icons",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-icons",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-icons",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "dicebear-rings"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-rings",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-rings",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-rings",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-rings",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-rings",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "dicebear-shapes"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-shapes",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-shapes",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-shapes",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-shapes",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-shapes",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "space-invader"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-invader",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-invader",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-invader",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-invader",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-invader",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "morphatar-geometric"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "morphatar-geometric",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "morphatar-geometric",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "morphatar-geometric",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "morphatar-geometric",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "morphatar-geometric",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "morphatar-pixel"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "morphatar-pixel",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "morphatar-pixel",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "morphatar-pixel",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "morphatar-pixel",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "morphatar-pixel",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "marble"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "marble",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "marble",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "marble",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "marble",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "marble",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "sunset"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "sunset",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "sunset",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "sunset",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "sunset",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "sunset",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "dicebear-glass"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-glass",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-glass",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-glass",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-glass",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "dicebear-glass",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "space-lumina"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-lumina",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-lumina",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-lumina",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-lumina",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-lumina",
+          "width": "hug"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "size": "fixed",
+          "concept": "example-label"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "space-triton"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-ines-carvalho",
+          "name": "Inês Carvalho",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-triton",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-tomas-ferreira",
+          "name": "Tomás Ferreira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-triton",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-aisha-khan",
+          "name": "Aisha Khan",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-triton",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-joao-pereira",
+          "name": "João Pereira",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-triton",
+          "width": "hug"
+         }
+        },
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": "user-lena-hoffmann",
+          "name": "Lena Hoffmann",
+          "layout": "image",
+          "scale": "lg",
+          "picture": "space-triton",
+          "width": "hug"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

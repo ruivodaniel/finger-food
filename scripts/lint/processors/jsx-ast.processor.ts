@@ -13,6 +13,7 @@
 import * as ts from "typescript";
 import type { LintViolation, Severity } from "../types.ts";
 import { getSourceFiles, readFile, pathMatchesPattern } from "../utils/files.ts";
+import { ANCHOR_TAGS, BUTTON_TAGS, SHELL_CHILDREN } from "../../../shared/libs/ui/rules/code.ts";
 
 // ── Config ──────────────────────────────────────────────────────────
 
@@ -63,33 +64,7 @@ function getLine(sourceFile: ts.SourceFile, node: ts.Node): number {
 
 // ── Tags that render as interactive elements ────────────────────────
 
-// Tags that are anchors or render as anchors
-const ANCHOR_TAGS = new Set(["a", "Link"]);
-
-// Tags that render as <button> or contain a <button> by default
-const BUTTON_TAGS = new Set([
-  "button",
-  "Button",
-  "SidebarMenuButton",
-  "DropdownMenuTrigger",
-  "DialogTrigger",
-  "PopoverTrigger",
-  "AlertDialogTrigger",
-  "SheetTrigger",
-  "CollapsibleTrigger",
-  "NavigationMenuTrigger",
-  "TabsTrigger",
-  "AccordionTrigger",
-  "ToggleGroupItem",
-  "Toggle",
-]);
-
-// Tags that indicate shell structure when children of a <div>
-const SHELL_CHILDREN = new Set([
-  "SidebarProvider",
-  "SidebarInset",
-  "main",
-]);
+// The lists live in the UI library: shared/libs/ui/rules/code.ts. This processor owns none of them.
 
 // ── Rule: no-anchor-button-nesting ──────────────────────────────────
 

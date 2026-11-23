@@ -1,0 +1,608 @@
+{
+ "id": "ui-data-primitive-input-group",
+ "version": 1,
+ "uiNodeId": "ui-node-primitive-input-group",
+ "kind": "component",
+ "name": "primitive-input-group",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "primitive-input-group",
+  "version": 1,
+  "surface": "web",
+  "state": {
+   "addon_left_value": "",
+   "addon_right_value": "",
+   "addon_button_value": "",
+   "scale_sm_value": "",
+   "scale_md_value": "",
+   "scale_lg_value": "",
+   "status_error_value": "",
+   "status_warning_value": "",
+   "status_success_value": ""
+  },
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "align": "center",
+    "scale": "2xl"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "text addon left"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Text",
+         "children": [
+          {
+           "type": "InputGroup",
+           "children": [
+            {
+             "type": "InputGroupAddon",
+             "children": [
+              {
+               "type": "InputGroupText",
+               "props": {
+                "children": "https://"
+               }
+              }
+             ]
+            },
+            {
+             "type": "Input",
+             "on": {
+              "change": [
+               {
+                "set": {
+                 "state": "addon_left_value",
+                 "to": {
+                  "bind": "event"
+                 }
+                }
+               }
+              ]
+             },
+             "props": {
+              "placeholder": "example.com",
+              "value": {
+               "bind": "state.addon_left_value"
+              },
+              "data-testid": "input-group-text-addon-left-1-input"
+             }
+            }
+           ]
+          }
+         ],
+         "props": {
+          "as": "div",
+          "style": {
+           "obj": {
+            "maxWidth": 320,
+            "width": "100%"
+           }
+          }
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "text addon right"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Text",
+         "children": [
+          {
+           "type": "InputGroup",
+           "children": [
+            {
+             "type": "Input",
+             "on": {
+              "change": [
+               {
+                "set": {
+                 "state": "addon_right_value",
+                 "to": {
+                  "bind": "event"
+                 }
+                }
+               }
+              ]
+             },
+             "props": {
+              "placeholder": "yoursite",
+              "value": {
+               "bind": "state.addon_right_value"
+              },
+              "data-testid": "input-group-text-addon-right-1-input"
+             }
+            },
+            {
+             "type": "InputGroupAddon",
+             "children": [
+              {
+               "type": "InputGroupText",
+               "props": {
+                "children": ".com"
+               }
+              }
+             ]
+            }
+           ]
+          }
+         ],
+         "props": {
+          "as": "div",
+          "style": {
+           "obj": {
+            "maxWidth": 320,
+            "width": "100%"
+           }
+          }
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "button addon"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Text",
+         "children": [
+          {
+           "type": "InputGroup",
+           "children": [
+            {
+             "type": "Input",
+             "on": {
+              "change": [
+               {
+                "set": {
+                 "state": "addon_button_value",
+                 "to": {
+                  "bind": "event"
+                 }
+                }
+               }
+              ]
+             },
+             "props": {
+              "placeholder": "Search...",
+              "value": {
+               "bind": "state.addon_button_value"
+              },
+              "data-testid": "input-group-button-addon-1-input"
+             }
+            },
+            {
+             "type": "InputGroupAddon",
+             "children": [
+              {
+               "type": "Button",
+               "props": {
+                "scale": "sm",
+                "children": "Go",
+                "data-testid": "input-group-button-addon-2-btn"
+               }
+              }
+             ]
+            }
+           ]
+          }
+         ],
+         "props": {
+          "as": "div",
+          "style": {
+           "obj": {
+            "maxWidth": 320,
+            "width": "100%"
+           }
+          }
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "scale"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Text",
+         "children": [
+          {
+           "type": "InputGroup",
+           "children": [
+            {
+             "type": "InputGroupAddon",
+             "children": [
+              {
+               "type": "InputGroupText",
+               "props": {
+                "children": "SM"
+               }
+              }
+             ]
+            },
+            {
+             "type": "Input",
+             "on": {
+              "change": [
+               {
+                "set": {
+                 "state": "scale_sm_value",
+                 "to": {
+                  "bind": "event"
+                 }
+                }
+               }
+              ]
+             },
+             "props": {
+              "scale": "sm",
+              "placeholder": "Small",
+              "value": {
+               "bind": "state.scale_sm_value"
+              },
+              "data-testid": "input-group-scale-1-input"
+             }
+            }
+           ]
+          },
+          {
+           "type": "InputGroup",
+           "children": [
+            {
+             "type": "InputGroupAddon",
+             "children": [
+              {
+               "type": "InputGroupText",
+               "props": {
+                "children": "MD"
+               }
+              }
+             ]
+            },
+            {
+             "type": "Input",
+             "on": {
+              "change": [
+               {
+                "set": {
+                 "state": "scale_md_value",
+                 "to": {
+                  "bind": "event"
+                 }
+                }
+               }
+              ]
+             },
+             "props": {
+              "scale": "md",
+              "placeholder": "Medium",
+              "value": {
+               "bind": "state.scale_md_value"
+              },
+              "data-testid": "input-group-scale-2-input"
+             }
+            }
+           ]
+          },
+          {
+           "type": "InputGroup",
+           "children": [
+            {
+             "type": "InputGroupAddon",
+             "children": [
+              {
+               "type": "InputGroupText",
+               "props": {
+                "children": "LG"
+               }
+              }
+             ]
+            },
+            {
+             "type": "Input",
+             "on": {
+              "change": [
+               {
+                "set": {
+                 "state": "scale_lg_value",
+                 "to": {
+                  "bind": "event"
+                 }
+                }
+               }
+              ]
+             },
+             "props": {
+              "scale": "lg",
+              "placeholder": "Large",
+              "value": {
+               "bind": "state.scale_lg_value"
+              },
+              "data-testid": "input-group-scale-3-input"
+             }
+            }
+           ]
+          }
+         ],
+         "props": {
+          "as": "div",
+          "className": "flex flex-col gap-2",
+          "style": {
+           "obj": {
+            "maxWidth": 320
+           }
+          }
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "status"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Text",
+         "children": [
+          {
+           "type": "InputGroup",
+           "children": [
+            {
+             "type": "InputGroupAddon",
+             "children": [
+              {
+               "type": "InputGroupText",
+               "props": {
+                "children": "@"
+               }
+              }
+             ]
+            },
+            {
+             "type": "Input",
+             "on": {
+              "change": [
+               {
+                "set": {
+                 "state": "status_error_value",
+                 "to": {
+                  "bind": "event"
+                 }
+                }
+               }
+              ]
+             },
+             "props": {
+              "scale": "md",
+              "status": "error",
+              "placeholder": "Error",
+              "value": {
+               "bind": "state.status_error_value"
+              },
+              "data-testid": "input-group-status-1-input"
+             }
+            }
+           ]
+          },
+          {
+           "type": "InputGroup",
+           "children": [
+            {
+             "type": "InputGroupAddon",
+             "children": [
+              {
+               "type": "InputGroupText",
+               "props": {
+                "children": "@"
+               }
+              }
+             ]
+            },
+            {
+             "type": "Input",
+             "on": {
+              "change": [
+               {
+                "set": {
+                 "state": "status_warning_value",
+                 "to": {
+                  "bind": "event"
+                 }
+                }
+               }
+              ]
+             },
+             "props": {
+              "scale": "md",
+              "status": "warning",
+              "placeholder": "Warning",
+              "value": {
+               "bind": "state.status_warning_value"
+              },
+              "data-testid": "input-group-status-2-input"
+             }
+            }
+           ]
+          },
+          {
+           "type": "InputGroup",
+           "children": [
+            {
+             "type": "InputGroupAddon",
+             "children": [
+              {
+               "type": "InputGroupText",
+               "props": {
+                "children": "@"
+               }
+              }
+             ]
+            },
+            {
+             "type": "Input",
+             "on": {
+              "change": [
+               {
+                "set": {
+                 "state": "status_success_value",
+                 "to": {
+                  "bind": "event"
+                 }
+                }
+               }
+              ]
+             },
+             "props": {
+              "scale": "md",
+              "status": "success",
+              "placeholder": "Success",
+              "value": {
+               "bind": "state.status_success_value"
+              },
+              "data-testid": "input-group-status-3-input"
+             }
+            }
+           ]
+          }
+         ],
+         "props": {
+          "as": "div",
+          "className": "flex flex-col gap-2",
+          "style": {
+           "obj": {
+            "maxWidth": 320
+           }
+          }
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

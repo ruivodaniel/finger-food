@@ -1,0 +1,129 @@
+{
+ "id": "doc/gated-scoped-ac-architecture",
+ "kind": "doc",
+ "title": "Architecture",
+ "status": "todo",
+ "subject": "gated-scoped-ac",
+ "owner": "libs/gated-scoped-ac",
+ "order": 2,
+ "tags": [
+  "gated-scoped-ac",
+  "contributor"
+ ],
+ "paths": [
+  "shared/libs/gated-scoped-ac"
+ ],
+ "summary": "Which file of the library owns which concern, how long each piece lives, and how one request passes from the access context to a query.",
+ "docId": "gated-scoped-ac-architecture",
+ "doc": {
+  "axioms": [
+   {
+    "text": "The engine is pure: it reads config and the bag and returns a [[scope]] or a verdict. It builds drizzle SQL fragments and never holds a connection."
+   },
+   {
+    "text": "The gate is the only module that touches the database handle, and its read, update and delete each require a scope of the matching entity and action."
+   },
+   {
+    "text": "Only the engine can mint a scope: the brand symbol is declared in `engine.ts` and exported nowhere."
+   },
+   {
+    "text": "Config is validated when it loads and when the engine is built. A request never meets a malformed rule."
+   }
+  ],
+  "purpose": {
+   "intro": "The library is two parts with nothing between them that could decide: an engine that resolves and a [[gated db]] that executes. This page maps the files to those parts and follows one request through them."
+  },
+  "reference": [
+   {
+    "topic": "Module layout",
+    "statement": "One file per concern, all under `src/`.",
+    "claims": [],
+    "examples": [
+     {
+      "snippets": [
+       {
+        "code": "shared/libs/gated-scoped-ac/src/\n├── index.ts          the public surface (the brand symbol is not on it)\n├── engine.ts         createAc: permissions + bag → Scope / Verdict; role → permission resolution; the brand\n├── gate.ts           createGatedDb: runs a Scope against the raw handle; gateDb(bag), gateDb.ungated()\n├── dsl.ts            the rule types: Action, Operand, Condition, Traversal, AccessRule, Permission, RoleNode\n├── config.ts         definePermissions, registerPermissions, registerForests, impliedRoles\n├── context.ts        ScopedAcRequestContext, ScopedAcBag: the per-request access context\n├── visibility.ts     PUBLIC / PRIVATE and isPrivate\n├── validate.ts       the ConfigValidator port and assertNoIssues\n└── adapters/\n    └── zod.ts        zodConfigValidator, exported as @libs/gated-scoped-ac/zod"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "topic": "Who imports whom",
+    "statement": "The imports run one way: the engine never depends on config, and only the adapter knows zod.",
+    "claims": [
+     {
+      "text": "`engine.ts` imports the DSL types and drizzle-orm, and no config. `config.ts` can therefore import the DSL types without a cycle."
+     },
+     {
+      "text": "`gate.ts` imports the engine's types and drizzle-orm. It calls the engine only through the injected `engine.allowCreate`, for the one write that has no scope to require."
+     },
+     {
+      "text": "`config.ts` imports `dsl.ts` and `validate.ts`. It holds no schema, so the check that needs a column (an `is` against an array or json column) runs in `createAc`, once, when the engine is built."
+     },
+     {
+      "text": "`context.ts` imports only the gate's and engine's types. Nothing under `src/` imports zod except `adapters/zod.ts`."
+     }
+    ]
+   },
+   {
+    "topic": "Lifetimes",
+    "statement": "The engine and the gate factory hold config, tables and a handle, and nothing that belongs to a request.",
+    "claims": [],
+    "imagesAndDiagrams": [
+     {
+      "type": "ascii",
+      "value": "| Piece | Built | Lives for |\n|---|---|---|\n| permission map, role list | when the config module loads (`registerPermissions`, `registerForests`) | the process |\n| engine | once, at app boot (`createAc`) | the process |\n| gate factory | once per database handle, at app boot (`createGatedDb`) | the process |\n| access context: bag, roles, permissions | once per request, by the app's hydration middleware | the request |\n| `gateDb(bag)` | per request; hydration puts one on the context | the request |\n| `Scope`, `Verdict` | per call to the engine | the call |"
+     }
+    ]
+   },
+   {
+    "topic": "How a request flows",
+    "statement": "Roles become permissions once, in hydration. Everything after it takes permissions, and the engine never sees a role at request time.",
+    "claims": [],
+    "examples": [
+     {
+      "snippets": [
+       {
+        "code": "session middleware verifies the caller\n  └─ hydration builds the bag, unions the baseline roles with the active membership's,\n     engine.resolveEffectivePermissions(roles, bag) → permissions\n     gatedDb(bag)                                   → gateDb\n       └─ stores { bag, roles, permissions, gateDb } as `scopedAc`\n            │\n            ▼\n  read     service     engine.resolveRead(permissions, \"meteor\", bag)          → Scope<\"meteor\", \"read\">\n           repository  gateDb.read(\"meteor\", scope).where(…).rows()            → the admitted rows\n  update   service     engine.allowUpdate(permissions, \"meteor\", patch, bag)    → Verdict on the columns\n                       engine.resolveUpdate(permissions, \"meteor\", bag)        → Scope<\"meteor\", \"update\">\n           repository  gateDb.update(\"meteor\", scope, id, patch)               → the row, or null\n  create   repository  gateDb.create(\"meteor\", permissions, values)            → the row, or null"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "topic": "What the public surface hides",
+    "statement": "`index.ts` exports what a caller needs, and nothing that would let one forge or skip a decision.",
+    "claims": [
+     {
+      "text": "The brand symbol. A `Scope` is a type carrying it, and only `engine.ts` casts a value to that type, so a scope cannot be built anywhere else."
+     },
+     {
+      "text": "The role walk. Callers get `resolveEffectivePermissions(roles, bag)`; the forest search behind it is internal."
+     },
+     {
+      "text": "Path resolution and operator compilation. A caller hands over a bag and reads back a scope or a verdict; how `$session.user.id` is walked and how `has` becomes SQL stays in the engine."
+     },
+     {
+      "text": "`assertNoIssues`, the helper `config.ts` uses to turn a validator's issues into a boot error."
+     }
+    ]
+   }
+  ],
+  "review": {
+   "axioms": {
+    "state": "unreviewed"
+   },
+   "purpose": {
+    "state": "unreviewed"
+   },
+   "reference": {
+    "state": "unreviewed"
+   }
+  },
+  "converted": true
+ },
+ "audience": [
+  "seed-contributor"
+ ]
+}

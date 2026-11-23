@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-status-cards-title-row-info-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-status-cards-title-row-info",
+ "name": "default",
+ "title": "Status cards: title row info",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

@@ -1,0 +1,439 @@
+{
+  "id": "ui-data-organization-info",
+  "version": 1,
+  "uiNodeId": "node-organization-info",
+  "kind": "page",
+  "name": "organization-info",
+  "document": {
+    "kind": "page",
+    "schemaVersion": 1,
+    "name": "organization-info",
+    "version": 1,
+    "params": [
+      "organizationId"
+    ],
+    "data": {
+      "session": {
+        "source": "GET /api/auth/session"
+      },
+      "org": {
+        "source": "GET /api/client/organizations/:organizationId",
+        "params": {
+          "organizationId": {
+            "bind": "calc.orgId"
+          }
+        },
+        "when": {
+          "exists": {
+            "bind": "calc.orgId"
+          }
+        }
+      }
+    },
+    "state": {
+      "name": "",
+      "edited": false,
+      "saving": false,
+      "error": null
+    },
+    "calc": {
+      "orgId": {
+        "if": [
+          {
+            "eq": [
+              {
+                "bind": "organizationId"
+              },
+              "current"
+            ]
+          },
+          {
+            "bind": "data.session.session.activeOrganizationId"
+          },
+          {
+            "bind": "organizationId"
+          }
+        ]
+      },
+      "name": {
+        "if": [
+          {
+            "bind": "state.edited"
+          },
+          {
+            "bind": "state.name"
+          },
+          {
+            "if": [
+              {
+                "exists": {
+                  "bind": "data.org.name"
+                }
+              },
+              {
+                "bind": "data.org.name"
+              },
+              ""
+            ]
+          }
+        ]
+      },
+      "nameChanged": {
+        "and": [
+          {
+            "bind": "state.edited"
+          },
+          {
+            "exists": {
+              "bind": "state.name"
+            }
+          },
+          {
+            "ne": [
+              {
+                "bind": "state.name"
+              },
+              {
+                "bind": "data.org.name"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "root": {
+      "use": {
+        "component": "organization-layout",
+        "version": "latest"
+      },
+      "args": {
+        "organizationId": {
+          "bind": "organizationId"
+        },
+        "section": "info"
+      },
+      "slots": {
+        "main": [
+          {
+            "type": "Stack",
+            "props": {
+              "dir": "col",
+              "gap": 24,
+              "data-testid": "org-info-page"
+            },
+            "children": [
+              {
+                "type": "EmptyState",
+                "props": {
+                  "emphasis": "quiet",
+                  "data-testid": "no-active-org",
+                  "icon": {
+                    "type": "Icon",
+                    "props": {
+                      "name": "building"
+                    }
+                  },
+                  "title": "No active organization",
+                  "description": "You're not in any organization yet — create or join one from Organizations."
+                },
+                "when": {
+                  "and": [
+                    {
+                      "eq": [
+                        {
+                          "bind": "organizationId"
+                        },
+                        "current"
+                      ]
+                    },
+                    {
+                      "exists": {
+                        "bind": "data.session.session"
+                      }
+                    },
+                    {
+                      "not": {
+                        "exists": {
+                          "bind": "calc.orgId"
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "Fragment",
+                "children": [
+                  {
+                    "type": "Text",
+                    "props": {
+                      "element": "type--body-small",
+                      "children": "The organization's logo and name, as its members see them. Changes apply when you save.",
+                      "emphasis": "quiet"
+                    }
+                  },
+                  {
+                    "type": "Card",
+                    "props": {
+                      "data-testid": "org-info-card"
+                    },
+                    "children": [
+                      {
+                        "type": "Form",
+                        "props": {
+                          "data-testid": "org-info-form"
+                        },
+                        "children": [
+                          {
+                            "type": "Header",
+                            "children": [
+                              {
+                                "type": "Stack",
+                                "props": {
+                                  "dir": "col",
+                                  "gap": 2
+                                },
+                                "children": [
+                                  {
+                                    "type": "Text",
+                                    "props": {
+                                      "element": "type--heading4",
+                                      "children": "Details",
+                                      "as": "h2"
+                                    }
+                                  },
+                                  {
+                                    "type": "Text",
+                                    "props": {
+                                      "element": "type--body-small",
+                                      "children": "The logo and the name shown across the platform.",
+                                      "emphasis": "quiet"
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "Content",
+                            "children": [
+                              {
+                                "type": "Stack",
+                                "props": {
+                                  "dir": "col",
+                                  "gap": 12
+                                },
+                                "children": [
+                                  {
+                                    "type": "Stack",
+                                    "props": {
+                                      "dir": "row",
+                                      "gap": 16,
+                                      "align": "center"
+                                    },
+                                    "children": [
+                                      {
+                                        "type": "Label",
+                                        "props": {
+                                          "children": "Logo"
+                                        }
+                                      },
+                                      {
+                                        "type": "AvatarUploadField",
+                                        "props": {
+                                          "data-testid": "org-info-logo-input",
+                                          "value": {
+                                            "bind": "data.org.logo"
+                                          },
+                                          "fallback": {
+                                            "initials": {
+                                              "bind": "data.org.name"
+                                            }
+                                          },
+                                          "uploadLabel": "Change logo",
+                                          "disabled": {
+                                            "or": [
+                                              {
+                                                "bind": "state.saving"
+                                              },
+                                              {
+                                                "not": {
+                                                  "exists": {
+                                                    "bind": "data.org"
+                                                  }
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "Stack",
+                                    "props": {
+                                      "dir": "row",
+                                      "gap": 16,
+                                      "align": "center"
+                                    },
+                                    "children": [
+                                      {
+                                        "type": "Label",
+                                        "props": {
+                                          "htmlFor": "org-info-name",
+                                          "children": "Name"
+                                        }
+                                      },
+                                      {
+                                        "type": "Input",
+                                        "props": {
+                                          "id": "org-info-name",
+                                          "data-testid": "org-info-name-input",
+                                          "value": {
+                                            "bind": "calc.name"
+                                          },
+                                          "position": "fill"
+                                        },
+                                        "on": {
+                                          "change": [
+                                            {
+                                              "set": {
+                                                "state": "name",
+                                                "to": {
+                                                  "bind": "event"
+                                                }
+                                              }
+                                            },
+                                            {
+                                              "set": {
+                                                "state": "edited",
+                                                "to": true
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "Alert",
+                                    "props": {
+                                      "status": "error",
+                                      "data-testid": "org-info-error"
+                                    },
+                                    "children": [
+                                      {
+                                        "type": "AlertDescription",
+                                        "props": {
+                                          "children": {
+                                            "bind": "state.error"
+                                          }
+                                        }
+                                      }
+                                    ],
+                                    "when": {
+                                      "exists": {
+                                        "bind": "state.error"
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "Footer",
+                            "props": {
+                              "position": "fill"
+                            },
+                            "children": [
+                              {
+                                "type": "Stack",
+                                "props": {
+                                  "dir": "row",
+                                  "justify": "end",
+                                  "gap": 8,
+                                  "size": "fill"
+                                },
+                                "children": [
+                                  {
+                                    "type": "Button",
+                                    "props": {
+                                      "data-testid": "org-info-save",
+                                      "type": "submit",
+                                      "disabled": {
+                                        "or": [
+                                          {
+                                            "bind": "state.saving"
+                                          },
+                                          {
+                                            "not": {
+                                              "bind": "calc.nameChanged"
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      "children": "Save"
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ],
+                        "on": {
+                          "submit": [
+                            {
+                              "set": {
+                                "state": "error",
+                                "to": null
+                              }
+                            },
+                            {
+                              "dispatch": {
+                                "action": "PATCH /api/client/organizations/:organizationId",
+                                "args": {
+                                  "organizationId": {
+                                    "bind": "calc.orgId"
+                                  },
+                                  "name": {
+                                    "bind": "state.name"
+                                  }
+                                },
+                                "pending": "saving",
+                                "else": [
+                                  {
+                                    "set": {
+                                      "state": "error",
+                                      "to": {
+                                        "bind": "error"
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "when": {
+                  "exists": {
+                    "bind": "calc.orgId"
+                  }
+                }
+              }
+            ],
+            "when": {
+              "exists": {
+                "bind": "data.session.session"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,343 @@
+{
+ "id": "ui-data-pattern-component-financial-kpi-cards-executive-strip",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-financial-kpi-cards-executive-strip",
+ "kind": "component",
+ "name": "executive-strip",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "executive-strip",
+  "version": 1,
+  "surface": "web",
+  "measure": "lg",
+  "root": {
+   "type": "Card",
+   "props": {
+    "className": "w-full",
+    "style": {
+     "obj": {
+      "minWidth": 960
+     }
+    }
+   },
+   "children": [
+    {
+     "type": "Content",
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "stretch"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "col",
+          "size": "fill",
+          "scale": "xs"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-extra-small",
+            "emphasis": "quiet",
+            "children": "Sales"
+           }
+          },
+          {
+           "type": "DataNumber",
+           "props": {
+            "value": 274000000000,
+            "config": {
+             "mode": {
+              "kind": "fixedScale",
+              "scale": "billion",
+              "n": 2
+             },
+             "locale": "en-GB"
+            },
+            "symbol": "USD",
+            "scale": "md"
+           }
+          },
+          {
+           "type": "DataNumber",
+           "props": {
+            "value": 5.5,
+            "config": {
+             "mode": {
+              "kind": "fixedScale",
+              "scale": "unit",
+              "n": 1
+             },
+             "locale": "en-GB",
+             "representation": {
+              "kind": "percentage",
+              "input": "points"
+             }
+            },
+            "trend": "arrowUp",
+            "status": "success",
+            "scale": "sm"
+           }
+          }
+         ]
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "col",
+          "size": "fill",
+          "style": {
+           "obj": {
+            "borderLeft": "1px solid var(--color-gray-200)"
+           }
+          },
+          "scale": "xs"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-extra-small",
+            "emphasis": "quiet",
+            "children": "Gross income"
+           }
+          },
+          {
+           "type": "DataNumber",
+           "props": {
+            "value": 104440000000,
+            "config": {
+             "mode": {
+              "kind": "fixedScale",
+              "scale": "billion",
+              "n": 2
+             },
+             "locale": "en-GB"
+            },
+            "symbol": "USD",
+            "scale": "md"
+           }
+          },
+          {
+           "type": "DataNumber",
+           "props": {
+            "value": 3.1,
+            "config": {
+             "mode": {
+              "kind": "fixedScale",
+              "scale": "unit",
+              "n": 1
+             },
+             "locale": "en-GB",
+             "representation": {
+              "kind": "percentage",
+              "input": "points"
+             }
+            },
+            "trend": "arrowUp",
+            "status": "success",
+            "scale": "sm"
+           }
+          }
+         ]
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "col",
+          "size": "fill",
+          "style": {
+           "obj": {
+            "borderLeft": "1px solid var(--color-gray-200)"
+           }
+          },
+          "scale": "xs"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-extra-small",
+            "emphasis": "quiet",
+            "children": "EBIT"
+           }
+          },
+          {
+           "type": "DataNumber",
+           "props": {
+            "value": 60550000000,
+            "config": {
+             "mode": {
+              "kind": "fixedScale",
+              "scale": "billion",
+              "n": 2
+             },
+             "locale": "en-GB"
+            },
+            "symbol": "USD",
+            "scale": "md"
+           }
+          },
+          {
+           "type": "DataNumber",
+           "props": {
+            "value": -1.2,
+            "config": {
+             "mode": {
+              "kind": "fixedScale",
+              "scale": "unit",
+              "n": 1
+             },
+             "locale": "en-GB",
+             "representation": {
+              "kind": "percentage",
+              "input": "points"
+             }
+            },
+            "trend": "arrowDown",
+            "status": "warning",
+            "scale": "sm"
+           }
+          }
+         ]
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "col",
+          "size": "fill",
+          "style": {
+           "obj": {
+            "borderLeft": "1px solid var(--color-gray-200)"
+           }
+          },
+          "scale": "xs"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-extra-small",
+            "emphasis": "quiet",
+            "children": "Net income"
+           }
+          },
+          {
+           "type": "DataNumber",
+           "props": {
+            "value": 57410000000,
+            "config": {
+             "mode": {
+              "kind": "fixedScale",
+              "scale": "billion",
+              "n": 2
+             },
+             "locale": "en-GB"
+            },
+            "symbol": "USD",
+            "scale": "md"
+           }
+          },
+          {
+           "type": "DataNumber",
+           "props": {
+            "value": -4.0,
+            "config": {
+             "mode": {
+              "kind": "fixedScale",
+              "scale": "unit",
+              "n": 1
+             },
+             "locale": "en-GB",
+             "representation": {
+              "kind": "percentage",
+              "input": "points"
+             }
+            },
+            "trend": "arrowDown",
+            "status": "error",
+            "scale": "sm",
+            "emphasis": "hero"
+           }
+          }
+         ]
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "col",
+          "size": "fill",
+          "style": {
+           "obj": {
+            "borderLeft": "1px solid var(--color-gray-200)"
+           }
+          },
+          "scale": "xs"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-extra-small",
+            "emphasis": "quiet",
+            "children": "Cash"
+           }
+          },
+          {
+           "type": "DataNumber",
+           "props": {
+            "value": 69830000000,
+            "config": {
+             "mode": {
+              "kind": "fixedScale",
+              "scale": "billion",
+              "n": 2
+             },
+             "locale": "en-GB"
+            },
+            "symbol": "USD",
+            "scale": "md"
+           }
+          },
+          {
+           "type": "DataNumber",
+           "props": {
+            "value": 8.2,
+            "config": {
+             "mode": {
+              "kind": "fixedScale",
+              "scale": "unit",
+              "n": 1
+             },
+             "locale": "en-GB",
+             "representation": {
+              "kind": "percentage",
+              "input": "points"
+             }
+            },
+            "trend": "arrowUp",
+            "status": "success",
+            "scale": "sm"
+           }
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

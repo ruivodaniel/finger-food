@@ -1,0 +1,605 @@
+{
+  "id": "ui-data-organization-members",
+  "version": 1,
+  "uiNodeId": "node-organization-members",
+  "kind": "page",
+  "name": "organization-members",
+  "document": {
+    "kind": "page",
+    "schemaVersion": 1,
+    "name": "organization-members",
+    "version": 1,
+    "params": [
+      "organizationId",
+      "page"
+    ],
+    "data": {
+      "session": {
+        "source": "GET /api/auth/session"
+      },
+      "org": {
+        "source": "GET /api/client/organizations/:organizationId",
+        "params": {
+          "organizationId": {
+            "bind": "calc.orgId"
+          }
+        },
+        "when": {
+          "exists": {
+            "bind": "calc.orgId"
+          }
+        }
+      },
+      "members": {
+        "source": "GET /api/client/organizations/:organizationId/members",
+        "params": {
+          "organizationId": {
+            "bind": "calc.orgId"
+          },
+          "search": {
+            "bind": "state.search"
+          },
+          "page": {
+            "bind": "calc.page"
+          },
+          "pageSize": 20
+        },
+        "when": {
+          "exists": {
+            "bind": "calc.orgId"
+          }
+        },
+        "placeholderData": "keepPreviousData"
+      }
+    },
+    "state": {
+      "search": ""
+    },
+    "calc": {
+      "orgId": {
+        "if": [
+          {
+            "eq": [
+              {
+                "bind": "organizationId"
+              },
+              "current"
+            ]
+          },
+          {
+            "bind": "data.session.session.activeOrganizationId"
+          },
+          {
+            "bind": "organizationId"
+          }
+        ]
+      },
+      "page": {
+        "if": [
+          {
+            "exists": {
+              "bind": "page"
+            }
+          },
+          {
+            "mul": [
+              {
+                "bind": "page"
+              },
+              1
+            ]
+          },
+          1
+        ]
+      },
+      "rows": {
+        "if": [
+          {
+            "exists": {
+              "bind": "data.members.rows"
+            }
+          },
+          {
+            "bind": "data.members.rows"
+          },
+          []
+        ]
+      },
+      "total": {
+        "if": [
+          {
+            "exists": {
+              "bind": "data.members.total"
+            }
+          },
+          {
+            "bind": "data.members.total"
+          },
+          0
+        ]
+      },
+      "here": {
+        "concat": [
+          "/organizations/",
+          {
+            "bind": "organizationId"
+          },
+          "/members"
+        ]
+      }
+    },
+    "root": {
+      "use": {
+        "component": "organization-layout",
+        "version": "latest"
+      },
+      "args": {
+        "organizationId": {
+          "bind": "organizationId"
+        },
+        "section": "members"
+      },
+      "slots": {
+        "main": [
+          {
+            "type": "Stack",
+            "props": {
+              "dir": "col",
+              "gap": 24,
+              "data-testid": "org-members-page"
+            },
+            "children": [
+              {
+                "type": "EmptyState",
+                "props": {
+                  "emphasis": "quiet",
+                  "data-testid": "no-active-org",
+                  "icon": {
+                    "type": "Icon",
+                    "props": {
+                      "name": "building"
+                    }
+                  },
+                  "title": "No active organization",
+                  "description": "You're not in any organization yet — create or join one from Organizations."
+                },
+                "when": {
+                  "and": [
+                    {
+                      "eq": [
+                        {
+                          "bind": "organizationId"
+                        },
+                        "current"
+                      ]
+                    },
+                    {
+                      "exists": {
+                        "bind": "data.session.session"
+                      }
+                    },
+                    {
+                      "not": {
+                        "exists": {
+                          "bind": "calc.orgId"
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "Fragment",
+                "children": [
+                  {
+                    "type": "Text",
+                    "props": {
+                      "element": "type--body-small",
+                      "children": "The organization's members and their roles. Search by name.",
+                      "emphasis": "quiet"
+                    }
+                  },
+                  {
+                    "type": "Card",
+                    "children": [
+                      {
+                        "type": "Content",
+                        "children": [
+                          {
+                            "type": "Stack",
+                            "props": {
+                              "dir": "col",
+                              "gap": 16
+                            },
+                            "children": [
+                              {
+                                "type": "Stack",
+                                "props": {
+                                  "dir": "row",
+                                  "align": "center",
+                                  "justify": "between",
+                                  "gap": 12,
+                                  "wrap": true
+                                },
+                                "children": [
+                                  {
+                                    "type": "Stack",
+                                    "props": {
+                                      "dir": "row",
+                                      "align": "center",
+                                      "gap": 12
+                                    },
+                                    "children": [
+                                      {
+                                        "type": "Input",
+                                        "props": {
+                                          "data-testid": "members-search-input",
+                                          "value": {
+                                            "bind": "state.search"
+                                          },
+                                          "placeholder": "Search by name"
+                                        },
+                                        "on": {
+                                          "change": [
+                                            {
+                                              "set": {
+                                                "state": "search",
+                                                "to": {
+                                                  "bind": "event"
+                                                }
+                                              }
+                                            },
+                                            {
+                                              "when": {
+                                                "ne": [
+                                                  {
+                                                    "bind": "calc.page"
+                                                  },
+                                                  1
+                                                ]
+                                              },
+                                              "do": [
+                                                {
+                                                  "navigate": {
+                                                    "to": {
+                                                      "bind": "calc.here"
+                                                    }
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "EmptyState",
+                                "props": {
+                                  "emphasis": "quiet",
+                                  "data-testid": "members-empty",
+                                  "icon": {
+                                    "type": "Icon",
+                                    "props": {
+                                      "name": "users"
+                                    }
+                                  },
+                                  "title": "No members match",
+                                  "description": "Try another name, or clear the search."
+                                },
+                                "when": {
+                                  "eq": [
+                                    {
+                                      "count": {
+                                        "bind": "calc.rows"
+                                      }
+                                    },
+                                    0
+                                  ]
+                                }
+                              },
+                              {
+                                "type": "Table",
+                                "props": {
+                                  "data-testid": "members-table"
+                                },
+                                "children": [
+                                  {
+                                    "type": "TableHeader",
+                                    "children": [
+                                      {
+                                        "type": "TableRow",
+                                        "children": [
+                                          {
+                                            "type": "TableHead",
+                                            "props": {
+                                              "children": "Member"
+                                            }
+                                          },
+                                          {
+                                            "type": "TableHead",
+                                            "props": {
+                                              "children": "Roles"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "TableBody",
+                                    "children": [
+                                      {
+                                        "type": "TableRow",
+                                        "props": {
+                                          "data-testid": {
+                                            "concat": [
+                                              "member-",
+                                              {
+                                                "bind": "m.member.userId"
+                                              }
+                                            ]
+                                          }
+                                        },
+                                        "children": [
+                                          {
+                                            "type": "TableCell",
+                                            "children": [
+                                              {
+                                                "type": "Stack",
+                                                "props": {
+                                                  "dir": "row",
+                                                  "align": "center",
+                                                  "gap": 10
+                                                },
+                                                "children": [
+                                                  {
+                                                    "type": "Avatar",
+                                                    "props": {
+                                                      "scale": "sm"
+                                                    },
+                                                    "children": [
+                                                      {
+                                                        "type": "AvatarImage",
+                                                        "props": {
+                                                          "src": {
+                                                            "bind": "m.profile.image"
+                                                          },
+                                                          "alt": ""
+                                                        },
+                                                        "when": {
+                                                          "exists": {
+                                                            "bind": "m.profile.image"
+                                                          }
+                                                        }
+                                                      },
+                                                      {
+                                                        "type": "AvatarFallback",
+                                                        "props": {
+                                                          "children": {
+                                                            "initials": {
+                                                              "if": [
+                                                                {
+                                                                  "exists": {
+                                                                    "bind": "m.profile.name"
+                                                                  }
+                                                                },
+                                                                {
+                                                                  "bind": "m.profile.name"
+                                                                },
+                                                                {
+                                                                  "if": [
+                                                                    {
+                                                                      "exists": {
+                                                                        "bind": "m.contact.contact.value"
+                                                                      }
+                                                                    },
+                                                                    {
+                                                                      "bind": "m.contact.contact.value"
+                                                                    },
+                                                                    {
+                                                                      "bind": "m.member.userId"
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    ]
+                                                  },
+                                                  {
+                                                    "type": "Stack",
+                                                    "props": {
+                                                      "dir": "col",
+                                                      "gap": 2,
+                                                      "size": "fill"
+                                                    },
+                                                    "children": [
+                                                      {
+                                                        "type": "Text",
+                                                        "props": {
+                                                          "element": "type--body",
+                                                          "children": {
+                                                            "if": [
+                                                              {
+                                                                "exists": {
+                                                                  "bind": "m.profile.name"
+                                                                }
+                                                              },
+                                                              {
+                                                                "bind": "m.profile.name"
+                                                              },
+                                                              {
+                                                                "if": [
+                                                                  {
+                                                                    "exists": {
+                                                                      "bind": "m.contact.contact.value"
+                                                                    }
+                                                                  },
+                                                                  {
+                                                                    "bind": "m.contact.contact.value"
+                                                                  },
+                                                                  {
+                                                                    "bind": "m.member.userId"
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
+                                                          }
+                                                        }
+                                                      },
+                                                      {
+                                                        "type": "Text",
+                                                        "props": {
+                                                          "element": "type--body-extra-small",
+                                                          "children": {
+                                                            "if": [
+                                                              {
+                                                                "exists": {
+                                                                  "bind": "m.contact.contact.value"
+                                                                }
+                                                              },
+                                                              {
+                                                                "bind": "m.contact.contact.value"
+                                                              },
+                                                              "—"
+                                                            ]
+                                                          },
+                                                          "emphasis": "quiet",
+                                                          "data-testid": {
+                                                            "concat": [
+                                                              "member-",
+                                                              {
+                                                                "bind": "m.member.userId"
+                                                              },
+                                                              "-contact"
+                                                            ]
+                                                          }
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "type": "TableCell",
+                                            "children": [
+                                              {
+                                                "type": "Stack",
+                                                "props": {
+                                                  "dir": "row",
+                                                  "align": "center",
+                                                  "gap": 4,
+                                                  "wrap": true,
+                                                  "data-testid": {
+                                                    "concat": [
+                                                      "member-",
+                                                      {
+                                                        "bind": "m.member.userId"
+                                                      },
+                                                      "-roles"
+                                                    ]
+                                                  }
+                                                },
+                                                "children": [
+                                                  {
+                                                    "type": "Badge",
+                                                    "props": {
+                                                      "emphasis": "quiet",
+                                                      "children": {
+                                                        "bind": "role"
+                                                      }
+                                                    },
+                                                    "repeat": {
+                                                      "each": "m.member.roles",
+                                                      "as": "role"
+                                                    }
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ],
+                                        "repeat": {
+                                          "each": "calc.rows",
+                                          "as": "m"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "when": {
+                                  "gt": [
+                                    {
+                                      "count": {
+                                        "bind": "calc.rows"
+                                      }
+                                    },
+                                    0
+                                  ]
+                                }
+                              },
+                              {
+                                "type": "ListPagination",
+                                "props": {
+                                  "query": {
+                                    "page": {
+                                      "bind": "calc.page"
+                                    },
+                                    "pageSize": 20
+                                  },
+                                  "total": {
+                                    "bind": "calc.total"
+                                  }
+                                },
+                                "on": {
+                                  "pageChange": [
+                                    {
+                                      "navigate": {
+                                        "to": {
+                                          "concat": [
+                                            {
+                                              "bind": "calc.here"
+                                            },
+                                            "?page=",
+                                            {
+                                              "bind": "event"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "when": {
+                  "exists": {
+                    "bind": "calc.orgId"
+                  }
+                }
+              }
+            ],
+            "when": {
+              "exists": {
+                "bind": "data.session.session"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

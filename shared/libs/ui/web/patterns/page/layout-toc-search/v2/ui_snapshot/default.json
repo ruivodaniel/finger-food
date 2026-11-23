@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-page-layout-toc-search-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-page-layout-toc-search",
+ "name": "default",
+ "title": "Table of contents with search",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

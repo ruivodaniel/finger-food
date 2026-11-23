@@ -1,0 +1,80 @@
+{
+ "id": "ui-data-pattern-component-top-nav-compact",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-top-nav-compact",
+ "kind": "component",
+ "name": "compact",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "compact",
+  "version": 1,
+  "surface": "web",
+  "measure": "xl",
+  "root": {
+   "type": "ShellNav",
+   "props": {
+    "className": "w-80"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "row",
+      "align": "center",
+      "justify": "between",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "sm"
+       },
+       "children": [
+        {
+         "type": "Button",
+         "props": {
+          "buttonType": "icon",
+          "startIcon": "menu",
+          "emphasis": "quiet",
+          "aria-label": "Open navigation"
+         }
+        },
+        {
+         "type": "Tile",
+         "props": {
+          "emphasis": "quiet",
+          "className": "p-1"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-extra-small",
+            "emphasis": "quiet",
+            "children": "Platform logo"
+           }
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "Button",
+       "props": {
+        "emphasis": "quiet",
+        "buttonType": "icon",
+        "startIcon": "user",
+        "aria-label": "Account menu: Samantha Reyes"
+       }
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

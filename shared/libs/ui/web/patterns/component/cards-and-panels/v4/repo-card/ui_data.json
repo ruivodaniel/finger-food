@@ -1,0 +1,157 @@
+{
+ "id": "ui-data-pattern-component-cards-and-panels-repo-card-v3",
+ "version": 2,
+ "uiNodeId": "ui-node-pattern-component-cards-and-panels-repo-card-v3",
+ "kind": "component",
+ "name": "repo-card",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "repo-card",
+  "version": 2,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Card",
+   "props": {
+    "className": "w-full max-w-2xl"
+   },
+   "children": [
+    {
+     "type": "Content",
+     "props": {},
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--heading4",
+          "className": "inline-flex items-center gap-2"
+         },
+         "children": [
+          {
+           "type": "Icon",
+           "props": {
+            "name": "book",
+            "size": "md"
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "children": "shadcn-ui/ui"
+           }
+          }
+         ]
+        },
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body",
+          "emphasis": "quiet",
+          "children": "Beautifully designed components that you can copy and paste into your apps."
+         }
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "wrap": true,
+          "scale": "lg"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "emphasis": "quiet",
+            "className": "inline-flex items-center gap-2"
+           },
+           "children": [
+            {
+             "type": "Icon",
+             "props": {
+              "name": "dot",
+              "size": "sm"
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "children": "TypeScript"
+             }
+            }
+           ]
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "emphasis": "quiet",
+            "className": "inline-flex items-center gap-2"
+           },
+           "children": [
+            {
+             "type": "Icon",
+             "props": {
+              "name": "star",
+              "size": "sm"
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "children": "104.7K"
+             }
+            }
+           ]
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "emphasis": "quiet",
+            "className": "inline-flex items-center gap-2"
+           },
+           "children": [
+            {
+             "type": "Icon",
+             "props": {
+              "name": "gitBranch",
+              "size": "sm"
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "children": "6.2K"
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

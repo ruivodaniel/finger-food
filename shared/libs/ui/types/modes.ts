@@ -1,47 +1,26 @@
 // ============================================================
 // MODES — cross-cutting modifiers
-// Transform resolved values across all cascade levels.
+// Transform resolved values across all cascade levels. Inferred from the theme schema.
 // ============================================================
+import type { z } from 'zod';
+import type * as S from './schema/primitives';
 
-import type { PrimitiveColorRef, ThemeColorsDerivation } from './primitives';
-import type { GrayStep } from './derivations';
+export type ColorModeAnchorRef = z.infer<typeof S.ColorModeAnchorRef>;
+export type ColorModePreset = z.infer<typeof S.ColorModePreset>;
+export type ThemeColorScheme = z.infer<typeof S.ThemeColorScheme>;
 
-/**
- * Only tokens that do NOT depend on --background/--foreground.
- * Derived grays (`gray-50`..`gray-950`) are excluded because they
- * are computed from these anchors — using them here would be circular.
- *
- * Raw hex values (e.g. `#1a1a1a`) are allowed for full control.
- */
-export type ColorModeAnchorRef =
-  | PrimitiveColorRef
-  | `gray-pure-${GrayStep}`
-  | `#${string}`;
-
-export type ColorModePreset = {
-  background: ColorModeAnchorRef;
-  foreground: ColorModeAnchorRef;
-  derivation: ThemeColorsDerivation;
-};
-
-export type ThemeColorScheme = Record<string, ColorModePreset>;
- 
 export const DensityE = {
   Compact: 'compact',
   Default: 'default',
   Spacious: 'spacious',
 } as const;
-export type Density = (typeof DensityE)[keyof typeof DensityE];
+export type Density = z.infer<typeof S.Density>;
 
 export const TextSizeE = {
   Small: 'small',
   Default: 'default',
   Large: 'large',
 } as const;
-export type TextSize = (typeof TextSizeE)[keyof typeof TextSizeE];
+export type TextSize = z.infer<typeof S.TextSize>;
 
-export type ThemeModes = {
-  colorScheme: ThemeColorScheme;
-  density?: Density;
-  textSize?: TextSize;
-};
+export type ThemeModes = z.infer<typeof S.ThemeModes>;

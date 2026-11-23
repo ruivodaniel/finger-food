@@ -1,0 +1,107 @@
+{
+ "id": "ui-data-pattern-component-list-rows-agent-status-1",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-list-rows-agent-status-1",
+ "kind": "component",
+ "name": "agent-status-1",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "agent-status-1",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Card",
+   "props": {
+    "concept": "thinking"
+   },
+   "children": [
+    {
+     "type": "Content",
+     "props": {},
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Avatar",
+         "props": {
+          "scale": "lg",
+          "status": "success"
+         },
+         "children": [
+          {
+           "type": "AvatarFallback",
+           "props": {},
+           "children": [
+            {
+             "type": "Icon",
+             "props": {
+              "name": "bot"
+             }
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "col",
+          "size": "fill",
+          "scale": "xs"
+         },
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "row",
+            "align": "center",
+            "scale": "md"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--heading4",
+              "children": "Research Agent"
+             }
+            },
+            {
+             "type": "Badge",
+             "props": {
+              "children": "Thinking",
+              "status": "info",
+              "concept": "thinking",
+              "showIcon": true,
+              "iconName": "activity"
+             }
+            }
+           ]
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "emphasis": "quiet",
+            "children": "Analyzing search results and extracting relevant information…"
+           }
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

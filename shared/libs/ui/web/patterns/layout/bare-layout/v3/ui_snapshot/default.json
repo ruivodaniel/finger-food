@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-layout-bare-layout-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-layout-bare-layout",
+ "name": "default",
+ "title": "Bare layout",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

@@ -1,0 +1,601 @@
+{
+ "id": "ui-data-pattern-component-organization-switcher-organizationswitcher",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-organization-switcher-organizationswitcher",
+ "kind": "component",
+ "name": "OrganizationSwitcher",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "OrganizationSwitcher",
+  "version": 1,
+  "surface": "web",
+  "params": [
+   "organizations",
+   "activeId",
+   "showType",
+   "compact",
+   "trigger"
+  ],
+  "emits": [
+   "change"
+  ],
+  "root": {
+   "type": "DropdownMenu",
+   "children": [
+    {
+     "type": "DropdownMenuTrigger",
+     "props": {
+      "asChild": true
+     },
+     "children": [
+      {
+       "type": "Button",
+       "props": {
+        "emphasis": "secondary",
+        "aria-label": {
+         "first": [
+          {
+           "pluck": [
+            {
+             "filter": [
+              {
+               "bind": "organizations"
+              },
+              {
+               "eq": [
+                {
+                 "bind": "item.id"
+                },
+                {
+                 "bind": "activeId"
+                }
+               ]
+              }
+             ]
+            },
+            "name"
+           ]
+          }
+         ]
+        },
+        "data-testid": "organization-switcher"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "scale": "sm"
+         },
+         "children": [
+          {
+           "use": {
+            "component": "OrganizationAvatar",
+            "version": "latest"
+           },
+           "args": {
+            "id": {
+             "bind": "activeId"
+            },
+            "name": {
+             "first": [
+              {
+               "pluck": [
+                {
+                 "filter": [
+                  {
+                   "bind": "organizations"
+                  },
+                  {
+                   "eq": [
+                    {
+                     "bind": "item.id"
+                    },
+                    {
+                     "bind": "activeId"
+                    }
+                   ]
+                  }
+                 ]
+                },
+                "name"
+               ]
+              }
+             ]
+            },
+            "image": {
+             "first": [
+              {
+               "pluck": [
+                {
+                 "filter": [
+                  {
+                   "bind": "organizations"
+                  },
+                  {
+                   "eq": [
+                    {
+                     "bind": "item.id"
+                    },
+                    {
+                     "bind": "activeId"
+                    }
+                   ]
+                  }
+                 ]
+                },
+                "image"
+               ]
+              }
+             ]
+            },
+            "scale": "sm",
+            "layout": "image",
+            "width": "hug"
+           }
+          },
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col",
+            "align": "start"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--body",
+              "children": {
+               "first": [
+                {
+                 "pluck": [
+                  {
+                   "filter": [
+                    {
+                     "bind": "organizations"
+                    },
+                    {
+                     "eq": [
+                      {
+                       "bind": "item.id"
+                      },
+                      {
+                       "bind": "activeId"
+                      }
+                     ]
+                    }
+                   ]
+                  },
+                  "name"
+                 ]
+                }
+               ]
+              },
+              "position": "clip"
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--body-extra-small",
+              "children": {
+               "first": [
+                {
+                 "pluck": [
+                  {
+                   "filter": [
+                    {
+                     "bind": "organizations"
+                    },
+                    {
+                     "eq": [
+                      {
+                       "bind": "item.id"
+                      },
+                      {
+                       "bind": "activeId"
+                      }
+                     ]
+                    }
+                   ]
+                  },
+                  "type"
+                 ]
+                }
+               ]
+              },
+              "emphasis": "quiet"
+             },
+             "when": {
+              "and": [
+               {
+                "bind": "showType"
+               },
+               {
+                "exists": [
+                 {
+                  "first": [
+                   {
+                    "pluck": [
+                     {
+                      "filter": [
+                       {
+                        "bind": "organizations"
+                       },
+                       {
+                        "eq": [
+                         {
+                          "bind": "item.id"
+                         },
+                         {
+                          "bind": "activeId"
+                         }
+                        ]
+                       }
+                      ]
+                     },
+                     "type"
+                    ]
+                   }
+                  ]
+                 }
+                ]
+               }
+              ]
+             }
+            }
+           ],
+           "when": {
+            "not": [
+             {
+              "bind": "compact"
+             }
+            ]
+           }
+          },
+          {
+           "type": "Icon",
+           "props": {
+            "name": "chevronDown",
+            "scale": "sm"
+           },
+           "when": {
+            "not": [
+             {
+              "bind": "compact"
+             }
+            ]
+           }
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "when": {
+      "not": [
+       {
+        "eq": [
+         {
+          "bind": "trigger"
+         },
+         "sidebar"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "type": "DropdownMenuTrigger",
+     "props": {
+      "asChild": true
+     },
+     "children": [
+      {
+       "type": "SidebarMenuButton",
+       "props": {
+        "emphasis": "primary",
+        "tooltip": {
+         "first": [
+          {
+           "pluck": [
+            {
+             "filter": [
+              {
+               "bind": "organizations"
+              },
+              {
+               "eq": [
+                {
+                 "bind": "item.id"
+                },
+                {
+                 "bind": "activeId"
+                }
+               ]
+              }
+             ]
+            },
+            "name"
+           ]
+          }
+         ]
+        },
+        "data-testid": "organization-switcher"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "scale": "sm",
+          "size": "fill",
+          "justify": "center"
+         },
+         "children": [
+          {
+           "use": {
+            "component": "OrganizationAvatar",
+            "version": "latest"
+           },
+           "args": {
+            "id": {
+             "bind": "activeId"
+            },
+            "name": {
+             "first": [
+              {
+               "pluck": [
+                {
+                 "filter": [
+                  {
+                   "bind": "organizations"
+                  },
+                  {
+                   "eq": [
+                    {
+                     "bind": "item.id"
+                    },
+                    {
+                     "bind": "activeId"
+                    }
+                   ]
+                  }
+                 ]
+                },
+                "name"
+               ]
+              }
+             ]
+            },
+            "image": {
+             "first": [
+              {
+               "pluck": [
+                {
+                 "filter": [
+                  {
+                   "bind": "organizations"
+                  },
+                  {
+                   "eq": [
+                    {
+                     "bind": "item.id"
+                    },
+                    {
+                     "bind": "activeId"
+                    }
+                   ]
+                  }
+                 ]
+                },
+                "image"
+               ]
+              }
+             ]
+            },
+            "scale": "sm",
+            "layout": "image",
+            "width": "hug"
+           }
+          },
+          {
+           "type": "SidebarWhen",
+           "props": {
+            "state": "expanded"
+           },
+           "children": [
+            {
+             "type": "Stack",
+             "props": {
+              "dir": "col",
+              "align": "start",
+              "size": "fill"
+             },
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "as": "span",
+                "element": "type--body",
+                "children": {
+                 "first": [
+                  {
+                   "pluck": [
+                    {
+                     "filter": [
+                      {
+                       "bind": "organizations"
+                      },
+                      {
+                       "eq": [
+                        {
+                         "bind": "item.id"
+                        },
+                        {
+                         "bind": "activeId"
+                        }
+                       ]
+                      }
+                     ]
+                    },
+                    "name"
+                   ]
+                  }
+                 ]
+                },
+                "position": "clip"
+               }
+              },
+              {
+               "type": "Text",
+               "props": {
+                "as": "span",
+                "element": "type--body-extra-small",
+                "children": {
+                 "first": [
+                  {
+                   "pluck": [
+                    {
+                     "filter": [
+                      {
+                       "bind": "organizations"
+                      },
+                      {
+                       "eq": [
+                        {
+                         "bind": "item.id"
+                        },
+                        {
+                         "bind": "activeId"
+                        }
+                       ]
+                      }
+                     ]
+                    },
+                    "type"
+                   ]
+                  }
+                 ]
+                },
+                "emphasis": "quiet"
+               },
+               "when": {
+                "and": [
+                 {
+                  "bind": "showType"
+                 },
+                 {
+                  "exists": [
+                   {
+                    "first": [
+                     {
+                      "pluck": [
+                       {
+                        "filter": [
+                         {
+                          "bind": "organizations"
+                         },
+                         {
+                          "eq": [
+                           {
+                            "bind": "item.id"
+                           },
+                           {
+                            "bind": "activeId"
+                           }
+                          ]
+                         }
+                        ]
+                       },
+                       "type"
+                      ]
+                     }
+                    ]
+                   }
+                  ]
+                 }
+                ]
+               }
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "SidebarWhen",
+           "props": {
+            "state": "expanded"
+           },
+           "children": [
+            {
+             "type": "Icon",
+             "props": {
+              "name": "chevronDown",
+              "scale": "sm"
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "when": {
+      "eq": [
+       {
+        "bind": "trigger"
+       },
+       "sidebar"
+      ]
+     }
+    },
+    {
+     "type": "DropdownMenuContent",
+     "props": {
+      "align": "start"
+     },
+     "children": [
+      {
+       "use": {
+        "component": "OrganizationItems",
+        "version": "latest"
+       },
+       "args": {
+        "organizations": {
+         "bind": "organizations"
+        },
+        "activeId": {
+         "bind": "activeId"
+        },
+        "showType": {
+         "bind": "showType"
+        }
+       },
+       "on": {
+        "change": [
+         {
+          "emit": {
+           "event": "change",
+           "payload": {
+            "id": {
+             "bind": "event.id"
+            }
+           }
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,1309 @@
+{
+ "id": "ui-data-primitive-input-select",
+ "version": 1,
+ "uiNodeId": "ui-node-primitive-input-select",
+ "kind": "component",
+ "name": "primitive-input-select",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "primitive-input-select",
+  "version": 1,
+  "surface": "web",
+  "state": {
+   "single_none_value": null,
+   "single_in_list_value": null,
+   "single_as_input_value": null,
+   "multiple_none_value": [],
+   "multiple_in_list_value": [],
+   "multiple_as_input_value": [],
+   "rich_value": null,
+   "async_value": null,
+   "creatable_value": [
+    "apple"
+   ],
+   "status_error_value": null,
+   "status_warning_value": null,
+   "status_success_value": null,
+   "state_disabled_value": "apple",
+   "state_not_clearable_value": "banana",
+   "scale_sm_value": null,
+   "scale_md_value": null,
+   "scale_lg_value": null
+  },
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "align": "center",
+    "scale": "sm"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "single · no search / search in-list / search as-input"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "children": [
+          {
+           "type": "InputSelect",
+           "on": {
+            "change": [
+             {
+              "set": {
+               "state": "single_none_value",
+               "to": {
+                "bind": "event"
+               }
+              }
+             }
+            ]
+           },
+           "props": {
+            "options": [
+             {
+              "obj": {
+               "value": "apple",
+               "label": "Apple"
+              }
+             },
+             {
+              "obj": {
+               "value": "banana",
+               "label": "Banana"
+              }
+             },
+             {
+              "obj": {
+               "value": "cherry",
+               "label": "Cherry"
+              }
+             },
+             {
+              "obj": {
+               "value": "date",
+               "label": "Date"
+              }
+             },
+             {
+              "obj": {
+               "value": "elderberry",
+               "label": "Elderberry"
+              }
+             },
+             {
+              "obj": {
+               "value": "fig",
+               "label": "Fig",
+               "disabled": true
+              }
+             }
+            ],
+            "placeholder": "Pick a fruit",
+            "value": {
+             "bind": "state.single_none_value"
+            },
+            "data-testid": "input-select-single-no-search-search-in-list-search-a-1-select"
+           }
+          },
+          {
+           "type": "InputSelect",
+           "on": {
+            "change": [
+             {
+              "set": {
+               "state": "single_in_list_value",
+               "to": {
+                "bind": "event"
+               }
+              }
+             }
+            ]
+           },
+           "props": {
+            "options": [
+             {
+              "obj": {
+               "value": "apple",
+               "label": "Apple"
+              }
+             },
+             {
+              "obj": {
+               "value": "banana",
+               "label": "Banana"
+              }
+             },
+             {
+              "obj": {
+               "value": "cherry",
+               "label": "Cherry"
+              }
+             },
+             {
+              "obj": {
+               "value": "date",
+               "label": "Date"
+              }
+             },
+             {
+              "obj": {
+               "value": "elderberry",
+               "label": "Elderberry"
+              }
+             },
+             {
+              "obj": {
+               "value": "fig",
+               "label": "Fig",
+               "disabled": true
+              }
+             }
+            ],
+            "search": "in-list",
+            "placeholder": "Pick a fruit",
+            "value": {
+             "bind": "state.single_in_list_value"
+            },
+            "data-testid": "input-select-single-no-search-search-in-list-search-a-2-select"
+           }
+          },
+          {
+           "type": "InputSelect",
+           "on": {
+            "change": [
+             {
+              "set": {
+               "state": "single_as_input_value",
+               "to": {
+                "bind": "event"
+               }
+              }
+             }
+            ]
+           },
+           "props": {
+            "options": [
+             {
+              "obj": {
+               "value": "apple",
+               "label": "Apple"
+              }
+             },
+             {
+              "obj": {
+               "value": "banana",
+               "label": "Banana"
+              }
+             },
+             {
+              "obj": {
+               "value": "cherry",
+               "label": "Cherry"
+              }
+             },
+             {
+              "obj": {
+               "value": "date",
+               "label": "Date"
+              }
+             },
+             {
+              "obj": {
+               "value": "elderberry",
+               "label": "Elderberry"
+              }
+             },
+             {
+              "obj": {
+               "value": "fig",
+               "label": "Fig",
+               "disabled": true
+              }
+             }
+            ],
+            "search": "as-input",
+            "placeholder": "Type a fruit",
+            "value": {
+             "bind": "state.single_as_input_value"
+            },
+            "data-testid": "input-select-single-no-search-search-in-list-search-a-3-select"
+           }
+          }
+         ],
+         "props": {
+          "as": "div"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "multiple · no search / search in-list / search as-input"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "children": [
+          {
+           "type": "InputSelect",
+           "on": {
+            "change": [
+             {
+              "set": {
+               "state": "multiple_none_value",
+               "to": {
+                "bind": "event"
+               }
+              }
+             }
+            ]
+           },
+           "props": {
+            "options": [
+             {
+              "obj": {
+               "value": "apple",
+               "label": "Apple"
+              }
+             },
+             {
+              "obj": {
+               "value": "banana",
+               "label": "Banana"
+              }
+             },
+             {
+              "obj": {
+               "value": "cherry",
+               "label": "Cherry"
+              }
+             },
+             {
+              "obj": {
+               "value": "date",
+               "label": "Date"
+              }
+             },
+             {
+              "obj": {
+               "value": "elderberry",
+               "label": "Elderberry"
+              }
+             },
+             {
+              "obj": {
+               "value": "fig",
+               "label": "Fig",
+               "disabled": true
+              }
+             }
+            ],
+            "placeholder": "Pick fruits",
+            "multiple": true,
+            "value": {
+             "bind": "state.multiple_none_value"
+            },
+            "data-testid": "input-select-multiple-no-search-search-in-list-search-1-select"
+           }
+          },
+          {
+           "type": "InputSelect",
+           "on": {
+            "change": [
+             {
+              "set": {
+               "state": "multiple_in_list_value",
+               "to": {
+                "bind": "event"
+               }
+              }
+             }
+            ]
+           },
+           "props": {
+            "options": [
+             {
+              "obj": {
+               "value": "apple",
+               "label": "Apple"
+              }
+             },
+             {
+              "obj": {
+               "value": "banana",
+               "label": "Banana"
+              }
+             },
+             {
+              "obj": {
+               "value": "cherry",
+               "label": "Cherry"
+              }
+             },
+             {
+              "obj": {
+               "value": "date",
+               "label": "Date"
+              }
+             },
+             {
+              "obj": {
+               "value": "elderberry",
+               "label": "Elderberry"
+              }
+             },
+             {
+              "obj": {
+               "value": "fig",
+               "label": "Fig",
+               "disabled": true
+              }
+             }
+            ],
+            "search": "in-list",
+            "placeholder": "Pick fruits",
+            "multiple": true,
+            "value": {
+             "bind": "state.multiple_in_list_value"
+            },
+            "data-testid": "input-select-multiple-no-search-search-in-list-search-2-select"
+           }
+          },
+          {
+           "type": "InputSelect",
+           "on": {
+            "change": [
+             {
+              "set": {
+               "state": "multiple_as_input_value",
+               "to": {
+                "bind": "event"
+               }
+              }
+             }
+            ]
+           },
+           "props": {
+            "options": [
+             {
+              "obj": {
+               "value": "apple",
+               "label": "Apple"
+              }
+             },
+             {
+              "obj": {
+               "value": "banana",
+               "label": "Banana"
+              }
+             },
+             {
+              "obj": {
+               "value": "cherry",
+               "label": "Cherry"
+              }
+             },
+             {
+              "obj": {
+               "value": "date",
+               "label": "Date"
+              }
+             },
+             {
+              "obj": {
+               "value": "elderberry",
+               "label": "Elderberry"
+              }
+             },
+             {
+              "obj": {
+               "value": "fig",
+               "label": "Fig",
+               "disabled": true
+              }
+             }
+            ],
+            "search": "as-input",
+            "placeholder": "Type fruits",
+            "multiple": true,
+            "value": {
+             "bind": "state.multiple_as_input_value"
+            },
+            "data-testid": "input-select-multiple-no-search-search-in-list-search-3-select"
+           }
+          }
+         ],
+         "props": {
+          "as": "div"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "rich options · icon, description, groups, keywords"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "children": [
+          {
+           "type": "InputSelect",
+           "on": {
+            "change": [
+             {
+              "set": {
+               "state": "rich_value",
+               "to": {
+                "bind": "event"
+               }
+              }
+             }
+            ]
+           },
+           "props": {
+            "options": [
+             {
+              "obj": {
+               "value": "eu-west",
+               "label": "Europe West",
+               "description": "Dublin, 3 zones",
+               "icon": "network",
+               "group": "Europe"
+              }
+             },
+             {
+              "obj": {
+               "value": "eu-central",
+               "label": "Europe Central",
+               "description": "Frankfurt, 3 zones",
+               "icon": "network",
+               "group": "Europe"
+              }
+             },
+             {
+              "obj": {
+               "value": "us-east",
+               "label": "US East",
+               "description": "Virginia, 6 zones",
+               "icon": "network",
+               "group": "Americas"
+              }
+             },
+             {
+              "obj": {
+               "value": "us-west",
+               "label": "US West",
+               "description": "Oregon, 4 zones",
+               "icon": "network",
+               "group": "Americas"
+              }
+             },
+             {
+              "obj": {
+               "value": "ap-south",
+               "label": "Asia Pacific South",
+               "description": "Mumbai, 3 zones",
+               "icon": "network",
+               "group": "Asia",
+               "keywords": [
+                "india"
+               ]
+              }
+             }
+            ],
+            "search": "in-list",
+            "placeholder": "Region",
+            "value": {
+             "bind": "state.rich_value"
+            },
+            "data-testid": "input-select-rich-options-icon-description-groups-key-1-select"
+           }
+          }
+         ],
+         "props": {
+          "as": "div"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "multiple · creatable, maxSelected 3, one value preset"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "children": [
+          {
+           "type": "InputSelect",
+           "on": {
+            "change": [
+             {
+              "set": {
+               "state": "creatable_value",
+               "to": {
+                "bind": "event"
+               }
+              }
+             }
+            ]
+           },
+           "props": {
+            "multiple": true,
+            "options": [
+             {
+              "obj": {
+               "value": "apple",
+               "label": "Apple"
+              }
+             },
+             {
+              "obj": {
+               "value": "banana",
+               "label": "Banana"
+              }
+             },
+             {
+              "obj": {
+               "value": "cherry",
+               "label": "Cherry"
+              }
+             },
+             {
+              "obj": {
+               "value": "date",
+               "label": "Date"
+              }
+             },
+             {
+              "obj": {
+               "value": "elderberry",
+               "label": "Elderberry"
+              }
+             },
+             {
+              "obj": {
+               "value": "fig",
+               "label": "Fig",
+               "disabled": true
+              }
+             }
+            ],
+            "search": "as-input",
+            "creatable": true,
+            "maxSelected": 3,
+            "value": {
+             "bind": "state.creatable_value"
+            },
+            "placeholder": "Type or create",
+            "data-testid": "input-select-multiple-creatable-maxselected-3-one-val-1-select"
+           }
+          }
+         ],
+         "props": {
+          "as": "div"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "status · error, warning, success"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "children": [
+          {
+           "type": "InputSelect",
+           "on": {
+            "change": [
+             {
+              "set": {
+               "state": "status_error_value",
+               "to": {
+                "bind": "event"
+               }
+              }
+             }
+            ]
+           },
+           "props": {
+            "options": [
+             {
+              "obj": {
+               "value": "apple",
+               "label": "Apple"
+              }
+             },
+             {
+              "obj": {
+               "value": "banana",
+               "label": "Banana"
+              }
+             },
+             {
+              "obj": {
+               "value": "cherry",
+               "label": "Cherry"
+              }
+             },
+             {
+              "obj": {
+               "value": "date",
+               "label": "Date"
+              }
+             },
+             {
+              "obj": {
+               "value": "elderberry",
+               "label": "Elderberry"
+              }
+             },
+             {
+              "obj": {
+               "value": "fig",
+               "label": "Fig",
+               "disabled": true
+              }
+             }
+            ],
+            "status": "error",
+            "placeholder": "Error",
+            "value": {
+             "bind": "state.status_error_value"
+            },
+            "data-testid": "input-select-status-error-warning-success-1-select"
+           }
+          },
+          {
+           "type": "InputSelect",
+           "on": {
+            "change": [
+             {
+              "set": {
+               "state": "status_warning_value",
+               "to": {
+                "bind": "event"
+               }
+              }
+             }
+            ]
+           },
+           "props": {
+            "options": [
+             {
+              "obj": {
+               "value": "apple",
+               "label": "Apple"
+              }
+             },
+             {
+              "obj": {
+               "value": "banana",
+               "label": "Banana"
+              }
+             },
+             {
+              "obj": {
+               "value": "cherry",
+               "label": "Cherry"
+              }
+             },
+             {
+              "obj": {
+               "value": "date",
+               "label": "Date"
+              }
+             },
+             {
+              "obj": {
+               "value": "elderberry",
+               "label": "Elderberry"
+              }
+             },
+             {
+              "obj": {
+               "value": "fig",
+               "label": "Fig",
+               "disabled": true
+              }
+             }
+            ],
+            "status": "warning",
+            "placeholder": "Warning",
+            "value": {
+             "bind": "state.status_warning_value"
+            },
+            "data-testid": "input-select-status-error-warning-success-2-select"
+           }
+          },
+          {
+           "type": "InputSelect",
+           "on": {
+            "change": [
+             {
+              "set": {
+               "state": "status_success_value",
+               "to": {
+                "bind": "event"
+               }
+              }
+             }
+            ]
+           },
+           "props": {
+            "options": [
+             {
+              "obj": {
+               "value": "apple",
+               "label": "Apple"
+              }
+             },
+             {
+              "obj": {
+               "value": "banana",
+               "label": "Banana"
+              }
+             },
+             {
+              "obj": {
+               "value": "cherry",
+               "label": "Cherry"
+              }
+             },
+             {
+              "obj": {
+               "value": "date",
+               "label": "Date"
+              }
+             },
+             {
+              "obj": {
+               "value": "elderberry",
+               "label": "Elderberry"
+              }
+             },
+             {
+              "obj": {
+               "value": "fig",
+               "label": "Fig",
+               "disabled": true
+              }
+             }
+            ],
+            "status": "success",
+            "placeholder": "Success",
+            "value": {
+             "bind": "state.status_success_value"
+            },
+            "data-testid": "input-select-status-error-warning-success-3-select"
+           }
+          }
+         ],
+         "props": {
+          "as": "div"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "state · disabled, not clearable"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "children": [
+          {
+           "type": "InputSelect",
+           "on": {
+            "change": [
+             {
+              "set": {
+               "state": "state_disabled_value",
+               "to": {
+                "bind": "event"
+               }
+              }
+             }
+            ]
+           },
+           "props": {
+            "options": [
+             {
+              "obj": {
+               "value": "apple",
+               "label": "Apple"
+              }
+             },
+             {
+              "obj": {
+               "value": "banana",
+               "label": "Banana"
+              }
+             },
+             {
+              "obj": {
+               "value": "cherry",
+               "label": "Cherry"
+              }
+             },
+             {
+              "obj": {
+               "value": "date",
+               "label": "Date"
+              }
+             },
+             {
+              "obj": {
+               "value": "elderberry",
+               "label": "Elderberry"
+              }
+             },
+             {
+              "obj": {
+               "value": "fig",
+               "label": "Fig",
+               "disabled": true
+              }
+             }
+            ],
+            "disabled": true,
+            "value": {
+             "bind": "state.state_disabled_value"
+            },
+            "data-testid": "input-select-state-disabled-not-clearable-1-select"
+           }
+          },
+          {
+           "type": "InputSelect",
+           "on": {
+            "change": [
+             {
+              "set": {
+               "state": "state_not_clearable_value",
+               "to": {
+                "bind": "event"
+               }
+              }
+             }
+            ]
+           },
+           "props": {
+            "options": [
+             {
+              "obj": {
+               "value": "apple",
+               "label": "Apple"
+              }
+             },
+             {
+              "obj": {
+               "value": "banana",
+               "label": "Banana"
+              }
+             },
+             {
+              "obj": {
+               "value": "cherry",
+               "label": "Cherry"
+              }
+             },
+             {
+              "obj": {
+               "value": "date",
+               "label": "Date"
+              }
+             },
+             {
+              "obj": {
+               "value": "elderberry",
+               "label": "Elderberry"
+              }
+             },
+             {
+              "obj": {
+               "value": "fig",
+               "label": "Fig",
+               "disabled": true
+              }
+             }
+            ],
+            "clearable": false,
+            "value": {
+             "bind": "state.state_not_clearable_value"
+            },
+            "data-testid": "input-select-state-disabled-not-clearable-2-select"
+           }
+          }
+         ],
+         "props": {
+          "as": "div"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "scale"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "children": [
+          {
+           "type": "InputSelect",
+           "on": {
+            "change": [
+             {
+              "set": {
+               "state": "scale_sm_value",
+               "to": {
+                "bind": "event"
+               }
+              }
+             }
+            ]
+           },
+           "props": {
+            "options": [
+             {
+              "obj": {
+               "value": "apple",
+               "label": "Apple"
+              }
+             },
+             {
+              "obj": {
+               "value": "banana",
+               "label": "Banana"
+              }
+             },
+             {
+              "obj": {
+               "value": "cherry",
+               "label": "Cherry"
+              }
+             },
+             {
+              "obj": {
+               "value": "date",
+               "label": "Date"
+              }
+             },
+             {
+              "obj": {
+               "value": "elderberry",
+               "label": "Elderberry"
+              }
+             },
+             {
+              "obj": {
+               "value": "fig",
+               "label": "Fig",
+               "disabled": true
+              }
+             }
+            ],
+            "scale": "sm",
+            "placeholder": "Small",
+            "value": {
+             "bind": "state.scale_sm_value"
+            },
+            "data-testid": "input-select-scale-1-select"
+           }
+          },
+          {
+           "type": "InputSelect",
+           "on": {
+            "change": [
+             {
+              "set": {
+               "state": "scale_md_value",
+               "to": {
+                "bind": "event"
+               }
+              }
+             }
+            ]
+           },
+           "props": {
+            "options": [
+             {
+              "obj": {
+               "value": "apple",
+               "label": "Apple"
+              }
+             },
+             {
+              "obj": {
+               "value": "banana",
+               "label": "Banana"
+              }
+             },
+             {
+              "obj": {
+               "value": "cherry",
+               "label": "Cherry"
+              }
+             },
+             {
+              "obj": {
+               "value": "date",
+               "label": "Date"
+              }
+             },
+             {
+              "obj": {
+               "value": "elderberry",
+               "label": "Elderberry"
+              }
+             },
+             {
+              "obj": {
+               "value": "fig",
+               "label": "Fig",
+               "disabled": true
+              }
+             }
+            ],
+            "scale": "md",
+            "placeholder": "Medium",
+            "value": {
+             "bind": "state.scale_md_value"
+            },
+            "data-testid": "input-select-scale-2-select"
+           }
+          },
+          {
+           "type": "InputSelect",
+           "on": {
+            "change": [
+             {
+              "set": {
+               "state": "scale_lg_value",
+               "to": {
+                "bind": "event"
+               }
+              }
+             }
+            ]
+           },
+           "props": {
+            "options": [
+             {
+              "obj": {
+               "value": "apple",
+               "label": "Apple"
+              }
+             },
+             {
+              "obj": {
+               "value": "banana",
+               "label": "Banana"
+              }
+             },
+             {
+              "obj": {
+               "value": "cherry",
+               "label": "Cherry"
+              }
+             },
+             {
+              "obj": {
+               "value": "date",
+               "label": "Date"
+              }
+             },
+             {
+              "obj": {
+               "value": "elderberry",
+               "label": "Elderberry"
+              }
+             },
+             {
+              "obj": {
+               "value": "fig",
+               "label": "Fig",
+               "disabled": true
+              }
+             }
+            ],
+            "scale": "lg",
+            "placeholder": "Large",
+            "value": {
+             "bind": "state.scale_lg_value"
+            },
+            "data-testid": "input-select-scale-3-select"
+           }
+          }
+         ],
+         "props": {
+          "as": "div"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

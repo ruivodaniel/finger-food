@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-card-grids-referenced-sources-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-card-grids-referenced-sources",
+ "name": "default",
+ "title": "Card grids: referenced sources",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

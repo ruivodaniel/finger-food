@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-primitive-file-upload",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "File upload"
+}

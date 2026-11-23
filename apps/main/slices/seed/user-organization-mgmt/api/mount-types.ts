@@ -4,7 +4,7 @@
 
 import type { Hono, MiddlewareHandler } from "hono";
 import type { NodePgDatabase } from "drizzle-orm/node-postgres";
-import type { Ac, GatedDb, SchemaTables } from "@libs/gated-scoped-ac";
+import type { Ac, GatedDb, GatedDbFactory, SchemaTables } from "@libs/gated-scoped-ac";
 
 import type {
   AuthAndRegistrationConfig,
@@ -22,15 +22,13 @@ import type { OrganizationService } from "./services/organization.service";
 import type { MembershipService } from "./services/membership.service";
 import type { InvitationService } from "./services/invitation.service";
 import type { SessionService } from "./services/session.service";
+import type { UserProfileService } from "./services/user-profile.service";
 import type { UserService } from "./services/user.service";
 import type { ModuleErrors, ModuleLogger } from "./shared/module-errors";
 import type { StoragePort } from "./shared/storage-port";
 import type { UserOrgMgmtEnv } from "./types";
 
 export interface MountUserOrgApiOptions {
-  /** Drizzle database instance (the app's — module tables flow in via ./models). */
-  db: NodePgDatabase<Record<string, unknown>>;
-
   /** Id factory for domain rows (cuid2 in the seed). */
   createId: () => string;
 
@@ -42,11 +40,12 @@ export interface MountUserOrgApiOptions {
   engine: Ac;
 
   /**
-   * The gated-db factory (createGatedDb): bag -> the per-request DB handle. The
-   * app owns the raw db handle + entity->table map; the module receives the
-   * sealed factory and never sees either (AC37).
+   * The gated-db factory (createGatedDb over the app's drizzle db): bag -> the
+   * per-request DB handle, plus its one ungated path, `ungated()`. The module's
+   * only way to the database — it is never handed the raw db. The app owns the
+   * raw handle + entity->table map (AC37).
    */
-  gatedDb: (bag: unknown) => GatedDb<SchemaTables>;
+  gatedDb: GatedDbFactory<SchemaTables, NodePgDatabase<Record<string, unknown>>>;
 
   /**
    * Roles every authenticated user always holds (the account baseline). The app
@@ -67,8 +66,12 @@ export interface MountUserOrgApiOptions {
    */
   preferences: PreferencesPolicy;
 
-  /** The identity provider (the app builds it: the local provider, or any adapter of the port). */
-  identityProvider: IdentityProviderPort;
+  /** Identity provider connection. */
+  kratos: {
+    publicUrl: string;
+    adminUrl: string;
+    schemaId?: string;
+  };
 
   /**
    * Object storage for avatar/org-logo uploads (the app injects its provider,
@@ -82,6 +85,12 @@ export interface MountUserOrgApiOptions {
     name?: string;
     domain?: string;
     secure?: boolean;
+  };
+
+  /** Courier SMS webhook — shared secret + the app's SMS transport. */
+  courierSms?: {
+    secret: string;
+    send: (to: string, text: string) => void | Promise<void>;
   };
 
   /** Which social providers are actually enabled (env-derived). */
@@ -145,7 +154,7 @@ export interface MountUserOrgApiResult {
   /** 428 enforcement on domain requests. Mount after sessionMiddleware. */
   gateMiddleware: MiddlewareHandler<UserOrgMgmtEnv>;
 
-  /** Server-side service handles for non-HTTP callers (seeds, hooks). */
+  /** Server-side service handles for non-HTTP callers (seeds, hooks, other slices). */
   services: {
     auth: AuthService;
     session: SessionService;
@@ -154,6 +163,7 @@ export interface MountUserOrgApiResult {
     legalDocument: LegalDocumentService;
     consentRecord: ConsentRecordService;
     organization: OrganizationService;
+    userProfile: UserProfileService;
     membership: MembershipService;
     invitation: InvitationService;
   };

@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-user-organization-menu-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-user-organization-menu",
+ "name": "default",
+ "title": "User and organization menu",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

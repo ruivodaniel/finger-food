@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-primitive-chart-default",
+ "version": 1,
+ "uiDataId": "ui-data-primitive-chart",
+ "name": "default",
+ "title": "Chart, its cases",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

@@ -1,0 +1,19 @@
+{
+ "id": "term/leaf-adapter",
+ "kind": "term",
+ "title": "leaf adapter",
+ "status": "approved",
+ "subjects": [
+  "main"
+ ],
+ "owner": "main/core",
+ "tags": [
+  "architecture"
+ ],
+ "paths": [],
+ "term": {
+  "def": "An abstract interface a [[slice]] declares for a swappable capability (toast, i18n); the app injects the concrete implementation at mount.",
+  "aliases": [],
+  "proposed": true
+ }
+}

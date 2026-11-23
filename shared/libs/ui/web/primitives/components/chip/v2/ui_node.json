@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-primitive-chip",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Chip"
+}

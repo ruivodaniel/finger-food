@@ -1,0 +1,24 @@
+{
+ "id": "doc/skill-build-a-primitive",
+ "kind": "doc",
+ "title": "build a primitive",
+ "status": "todo",
+ "subject": "skills",
+ "owner": "skills/seed-contributor/libs-ui",
+ "tags": [
+  "skills",
+  "seed-contributor",
+  "libs-ui"
+ ],
+ "paths": [],
+ "summary": "",
+ "docId": "skill-build-a-primitive",
+ "doc": {
+  "axioms": [],
+  "purpose": {},
+  "reference": []
+ },
+ "audience": [
+  "seed-contributor"
+ ]
+}

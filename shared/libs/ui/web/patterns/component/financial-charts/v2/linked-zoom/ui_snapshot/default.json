@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-financial-charts-linked-zoom-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-financial-charts-linked-zoom",
+ "name": "default",
+ "title": "Financial charts: linked zoom",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

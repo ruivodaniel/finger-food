@@ -1,0 +1,33 @@
+[
+  {
+    "id": "route-organizations",
+    "version": 1,
+    "surface": "web",
+    "path": "/organizations",
+    "uiNodeId": "node-organizations",
+    "parentId": "route-sidebar-shell"
+  },
+  {
+    "id": "route-organization-info",
+    "version": 1,
+    "surface": "web",
+    "path": "/organizations/:organizationId/info",
+    "uiNodeId": "node-organization-info",
+    "parentId": "route-sidebar-shell"
+  },
+  {
+    "id": "route-organization-members",
+    "version": 1,
+    "surface": "web",
+    "path": "/organizations/:organizationId/members",
+    "uiNodeId": "node-organization-members",
+    "parentId": "route-sidebar-shell"
+  },
+  {
+    "id": "route-sidebar-shell",
+    "version": 1,
+    "surface": "web",
+    "path": "/",
+    "uiNodeId": "node-sidebar-shell"
+  }
+]

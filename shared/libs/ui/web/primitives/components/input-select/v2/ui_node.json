@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-primitive-input-select",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Input select"
+}

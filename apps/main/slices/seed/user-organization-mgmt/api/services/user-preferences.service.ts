@@ -12,9 +12,8 @@
  * also when the policy narrowed after a choice was stored.
  */
 
-import type { Ac } from "@libs/gated-scoped-ac";
+import type { Ac, ScopedAcRequestContext } from "@libs/gated-scoped-ac";
 import { COUNTRIES, CURRENCIES, isLocale, isTimezone } from "@libs/value-types";
-import type { ScopedAcRequestContext } from "../shared/scoped-ac";
 import type { ModuleErrors } from "../shared/module-errors";
 import type { UomUserPreferencesSelect } from "../models/user-preferences.model";
 import type {

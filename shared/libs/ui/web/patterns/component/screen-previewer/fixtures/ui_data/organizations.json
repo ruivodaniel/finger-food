@@ -1,0 +1,764 @@
+{
+  "id": "ui-data-organizations",
+  "version": 1,
+  "uiNodeId": "node-organizations",
+  "kind": "page",
+  "name": "organizations-directory",
+  "document": {
+    "kind": "page",
+    "schemaVersion": 1,
+    "name": "organizations-directory",
+    "version": 1,
+    "params": [
+      "page"
+    ],
+    "data": {
+      "session": {
+        "source": "GET /api/auth/session"
+      },
+      "directory": {
+        "source": "GET /api/client/organizations",
+        "params": {
+          "search": {
+            "bind": "state.search"
+          },
+          "type": {
+            "bind": "calc.type"
+          },
+          "status": {
+            "bind": "calc.status"
+          },
+          "page": {
+            "bind": "calc.page"
+          },
+          "pageSize": 20
+        },
+        "when": {
+          "exists": {
+            "bind": "data.session.session"
+          }
+        },
+        "placeholderData": "keepPreviousData"
+      },
+      "orgTypes": {
+        "source": "GET /api/client/organizations/types",
+        "when": {
+          "exists": {
+            "bind": "data.session.session"
+          }
+        }
+      },
+      "creatableTypes": {
+        "source": "GET /api/client/me/creatable-organization-types",
+        "when": {
+          "exists": {
+            "bind": "data.session.session"
+          }
+        }
+      }
+    },
+    "state": {
+      "search": "",
+      "type": "all",
+      "status": "all"
+    },
+    "calc": {
+      "page": {
+        "if": [
+          {
+            "exists": {
+              "bind": "page"
+            }
+          },
+          {
+            "mul": [
+              {
+                "bind": "page"
+              },
+              1
+            ]
+          },
+          1
+        ]
+      },
+      "type": {
+        "if": [
+          {
+            "eq": [
+              {
+                "bind": "state.type"
+              },
+              "all"
+            ]
+          },
+          null,
+          {
+            "bind": "state.type"
+          }
+        ]
+      },
+      "status": {
+        "if": [
+          {
+            "eq": [
+              {
+                "bind": "state.status"
+              },
+              "all"
+            ]
+          },
+          null,
+          {
+            "bind": "state.status"
+          }
+        ]
+      },
+      "rows": {
+        "if": [
+          {
+            "exists": {
+              "bind": "data.directory.rows"
+            }
+          },
+          {
+            "bind": "data.directory.rows"
+          },
+          []
+        ]
+      },
+      "total": {
+        "if": [
+          {
+            "exists": {
+              "bind": "data.directory.total"
+            }
+          },
+          {
+            "bind": "data.directory.total"
+          },
+          0
+        ]
+      },
+      "types": {
+        "if": [
+          {
+            "exists": {
+              "bind": "data.orgTypes"
+            }
+          },
+          {
+            "bind": "data.orgTypes"
+          },
+          []
+        ]
+      },
+      "typeOptions": {
+        "prepend": [
+          {
+            "value": "all",
+            "label": "All types"
+          },
+          {
+            "map": [
+              {
+                "bind": "calc.types"
+              },
+              {
+                "value": {
+                  "bind": "item.id"
+                },
+                "label": {
+                  "bind": "item.label"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "activeOrgId": {
+        "bind": "data.session.session.activeOrganizationId"
+      }
+    },
+    "root": {
+      "use": {
+        "component": "standalone-layout",
+        "version": "latest"
+      },
+      "args": {
+        "icon": "building",
+        "title": "Organizations"
+      },
+      "slots": {
+        "main": [
+          {
+            "type": "Stack",
+            "props": {
+              "dir": "col",
+              "gap": 24,
+              "data-testid": "organizations-directory-page"
+            },
+            "children": [
+              {
+                "type": "Text",
+                "props": {
+                  "element": "type--body-small",
+                  "children": "The organizations your active organization can see. Open one to view its details and members.",
+                  "emphasis": "quiet"
+                }
+              },
+              {
+                "type": "Card",
+                "children": [
+                  {
+                    "type": "Content",
+                    "children": [
+                      {
+                        "type": "Stack",
+                        "props": {
+                          "dir": "col",
+                          "gap": 16
+                        },
+                        "children": [
+                          {
+                            "type": "Stack",
+                            "props": {
+                              "dir": "col",
+                              "gap": 12,
+                              "data-testid": "organizations-filter"
+                            },
+                            "children": [
+                              {
+                                "type": "Stack",
+                                "props": {
+                                  "dir": "row"
+                                },
+                                "children": [
+                                  {
+                                    "type": "Tabs",
+                                    "props": {
+                                      "value": {
+                                        "bind": "state.status"
+                                      }
+                                    },
+                                    "children": [
+                                      {
+                                        "type": "TabsList",
+                                        "children": [
+                                          {
+                                            "type": "TabsTrigger",
+                                            "props": {
+                                              "value": "all",
+                                              "data-testid": "org-filter-all",
+                                              "children": "All"
+                                            }
+                                          },
+                                          {
+                                            "type": "TabsTrigger",
+                                            "props": {
+                                              "value": "active",
+                                              "data-testid": "org-filter-active",
+                                              "children": "Active"
+                                            }
+                                          },
+                                          {
+                                            "type": "TabsTrigger",
+                                            "props": {
+                                              "value": "inactive",
+                                              "data-testid": "org-filter-inactive",
+                                              "children": "Inactive"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    ],
+                                    "on": {
+                                      "valueChange": [
+                                        {
+                                          "set": {
+                                            "state": "status",
+                                            "to": {
+                                              "bind": "event"
+                                            }
+                                          }
+                                        },
+                                        {
+                                          "when": {
+                                            "ne": [
+                                              {
+                                                "bind": "calc.page"
+                                              },
+                                              1
+                                            ]
+                                          },
+                                          "do": [
+                                            {
+                                              "navigate": {
+                                                "to": "/organizations"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "Stack",
+                                "props": {
+                                  "dir": "row",
+                                  "align": "center",
+                                  "justify": "between",
+                                  "gap": 12
+                                },
+                                "children": [
+                                  {
+                                    "type": "Stack",
+                                    "props": {
+                                      "dir": "row",
+                                      "align": "center",
+                                      "gap": 12
+                                    },
+                                    "children": [
+                                      {
+                                        "type": "Input",
+                                        "props": {
+                                          "data-testid": "org-filter-search-input",
+                                          "value": {
+                                            "bind": "state.search"
+                                          },
+                                          "placeholder": "Search by name"
+                                        },
+                                        "on": {
+                                          "change": [
+                                            {
+                                              "set": {
+                                                "state": "search",
+                                                "to": {
+                                                  "bind": "event"
+                                                }
+                                              }
+                                            },
+                                            {
+                                              "when": {
+                                                "ne": [
+                                                  {
+                                                    "bind": "calc.page"
+                                                  },
+                                                  1
+                                                ]
+                                              },
+                                              "do": [
+                                                {
+                                                  "navigate": {
+                                                    "to": "/organizations"
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      {
+                                        "type": "InputSelect",
+                                        "props": {
+                                          "data-testid": "org-filter-type-select",
+                                          "aria-label": "Type",
+                                          "placeholder": "Type",
+                                          "clearable": false,
+                                          "value": {
+                                            "bind": "state.type"
+                                          },
+                                          "options": {
+                                            "bind": "calc.typeOptions"
+                                          }
+                                        },
+                                        "on": {
+                                          "change": [
+                                            {
+                                              "set": {
+                                                "state": "type",
+                                                "to": {
+                                                  "if": [
+                                                    {
+                                                      "exists": {
+                                                        "bind": "event"
+                                                      }
+                                                    },
+                                                    {
+                                                      "bind": "event"
+                                                    },
+                                                    "all"
+                                                  ]
+                                                }
+                                              }
+                                            },
+                                            {
+                                              "when": {
+                                                "ne": [
+                                                  {
+                                                    "bind": "calc.page"
+                                                  },
+                                                  1
+                                                ]
+                                              },
+                                              "do": [
+                                                {
+                                                  "navigate": {
+                                                    "to": "/organizations"
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "EmptyState",
+                            "props": {
+                              "emphasis": "quiet",
+                              "data-testid": "organizations-empty",
+                              "icon": {
+                                "type": "Icon",
+                                "props": {
+                                  "name": "building"
+                                }
+                              },
+                              "title": "No organizations match",
+                              "description": "Change the status, the search or the type to see more."
+                            },
+                            "when": {
+                              "eq": [
+                                {
+                                  "count": {
+                                    "bind": "calc.rows"
+                                  }
+                                },
+                                0
+                              ]
+                            }
+                          },
+                          {
+                            "type": "Table",
+                            "props": {
+                              "data-testid": "organizations-table"
+                            },
+                            "children": [
+                              {
+                                "type": "TableHeader",
+                                "children": [
+                                  {
+                                    "type": "TableRow",
+                                    "children": [
+                                      {
+                                        "type": "TableHead",
+                                        "props": {
+                                          "children": "Organization"
+                                        }
+                                      },
+                                      {
+                                        "type": "TableHead",
+                                        "props": {
+                                          "children": "Status"
+                                        }
+                                      },
+                                      {
+                                        "type": "TableHead"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "TableBody",
+                                "children": [
+                                  {
+                                    "type": "TableRow",
+                                    "props": {
+                                      "data-testid": {
+                                        "concat": [
+                                          "org-row-",
+                                          {
+                                            "bind": "org.id"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    "children": [
+                                      {
+                                        "type": "TableCell",
+                                        "children": [
+                                          {
+                                            "type": "Stack",
+                                            "props": {
+                                              "dir": "row",
+                                              "align": "center",
+                                              "gap": 10
+                                            },
+                                            "children": [
+                                              {
+                                                "type": "Avatar",
+                                                "props": {
+                                                  "scale": "sm"
+                                                },
+                                                "children": [
+                                                  {
+                                                    "type": "AvatarImage",
+                                                    "props": {
+                                                      "src": {
+                                                        "bind": "org.logo"
+                                                      },
+                                                      "alt": ""
+                                                    },
+                                                    "when": {
+                                                      "exists": {
+                                                        "bind": "org.logo"
+                                                      }
+                                                    }
+                                                  },
+                                                  {
+                                                    "type": "AvatarFallback",
+                                                    "props": {
+                                                      "children": {
+                                                        "initials": {
+                                                          "bind": "org.name"
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "type": "Stack",
+                                                "props": {
+                                                  "dir": "col",
+                                                  "gap": 2,
+                                                  "size": "fill"
+                                                },
+                                                "children": [
+                                                  {
+                                                    "type": "Text",
+                                                    "props": {
+                                                      "element": "type--body",
+                                                      "children": {
+                                                        "bind": "org.name"
+                                                      }
+                                                    }
+                                                  },
+                                                  {
+                                                    "type": "Text",
+                                                    "props": {
+                                                      "element": "type--body-extra-small",
+                                                      "children": {
+                                                        "first": {
+                                                          "pluck": [
+                                                            {
+                                                              "filter": [
+                                                                {
+                                                                  "bind": "calc.types"
+                                                                },
+                                                                {
+                                                                  "eq": [
+                                                                    {
+                                                                      "bind": "item.id"
+                                                                    },
+                                                                    {
+                                                                      "bind": "org.type"
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            },
+                                                            "label"
+                                                          ]
+                                                        }
+                                                      },
+                                                      "emphasis": "quiet"
+                                                    }
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "type": "TableCell",
+                                        "children": [
+                                          {
+                                            "type": "Badge",
+                                            "props": {
+                                              "emphasis": "quiet",
+                                              "status": {
+                                                "if": [
+                                                  {
+                                                    "exists": {
+                                                      "bind": "org.deletedAt"
+                                                    }
+                                                  },
+                                                  "neutral",
+                                                  "success"
+                                                ]
+                                              },
+                                              "children": {
+                                                "if": [
+                                                  {
+                                                    "exists": {
+                                                      "bind": "org.deletedAt"
+                                                    }
+                                                  },
+                                                  "inactive",
+                                                  "active"
+                                                ]
+                                              }
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "type": "TableCell",
+                                        "children": [
+                                          {
+                                            "type": "Stack",
+                                            "props": {
+                                              "dir": "row",
+                                              "justify": "end",
+                                              "size": "fill"
+                                            },
+                                            "children": [
+                                              {
+                                                "type": "Button",
+                                                "props": {
+                                                  "data-testid": {
+                                                    "concat": [
+                                                      "org-row-",
+                                                      {
+                                                        "bind": "org.id"
+                                                      },
+                                                      "-enter-btn"
+                                                    ]
+                                                  },
+                                                  "buttonType": "icon",
+                                                  "startIcon": "arrowRight",
+                                                  "emphasis": "secondary",
+                                                  "scale": "sm",
+                                                  "aria-label": {
+                                                    "concat": [
+                                                      "Open ",
+                                                      {
+                                                        "bind": "org.name"
+                                                      }
+                                                    ]
+                                                  }
+                                                },
+                                                "on": {
+                                                  "click": [
+                                                    {
+                                                      "navigate": {
+                                                        "to": {
+                                                          "concat": [
+                                                            "/organizations/",
+                                                            {
+                                                              "if": [
+                                                                {
+                                                                  "eq": [
+                                                                    {
+                                                                      "bind": "org.id"
+                                                                    },
+                                                                    {
+                                                                      "bind": "calc.activeOrgId"
+                                                                    }
+                                                                  ]
+                                                                },
+                                                                "current",
+                                                                {
+                                                                  "bind": "org.id"
+                                                                }
+                                                              ]
+                                                            },
+                                                            "/info"
+                                                          ]
+                                                        }
+                                                      }
+                                                    }
+                                                  ]
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ],
+                                    "repeat": {
+                                      "each": "calc.rows",
+                                      "as": "org"
+                                    }
+                                  }
+                                ]
+                              }
+                            ],
+                            "when": {
+                              "gt": [
+                                {
+                                  "count": {
+                                    "bind": "calc.rows"
+                                  }
+                                },
+                                0
+                              ]
+                            }
+                          },
+                          {
+                            "type": "ListPagination",
+                            "props": {
+                              "query": {
+                                "page": {
+                                  "bind": "calc.page"
+                                },
+                                "pageSize": 20
+                              },
+                              "total": {
+                                "bind": "calc.total"
+                              }
+                            },
+                            "on": {
+                              "pageChange": [
+                                {
+                                  "navigate": {
+                                    "to": {
+                                      "concat": [
+                                        "/organizations?page=",
+                                        {
+                                          "bind": "event"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "when": {
+              "exists": {
+                "bind": "data.session.session"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

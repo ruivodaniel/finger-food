@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-component-compact-card",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Compact card"
+}

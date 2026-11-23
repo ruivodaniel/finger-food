@@ -10,8 +10,8 @@ const globalControls: ControlSet = {
   sourceGlobs: [
     "configs/**/*.{ts,tsx}",
     "shared/contracts/**/*.{ts,tsx}",
-    "apps/main/shared/api/src/**/*.{ts,tsx}",
-    "apps/main/shared/web/src/**/*.{ts,tsx}",
+    "apps/main/core/api/src/**/*.{ts,tsx}",
+    "apps/main/core/web/src/**/*.{ts,tsx}",
   ],
 
   "import-export": [
@@ -88,7 +88,7 @@ const globalControls: ControlSet = {
       severity: "warn",
       direction: "import",
       allow: false,
-      from: "apps/main/shared/web/**",
+      from: "apps/main/core/web/**",
       to: "@prowd/scoped-ac",
       description: "Frontend must not import scoped-ac. Use availability-check.",
       message: "Use @libs/availability-check for frontend access checks.",
@@ -519,7 +519,7 @@ const userOrgMgmtControls: ControlSet = {
           reason: "Module owns these schemas.",
         },
         {
-          in: "apps/main/shared/api/src/models/better-auth/**",
+          in: "apps/main/core/api/src/models/better-auth/**",
           reason: "BetterAuth schemas managed at app level during migration.",
           terms: ["user", "session", "account", "verification"],
         },

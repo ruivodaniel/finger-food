@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-primitive-remote-image-default",
+ "version": 1,
+ "uiDataId": "ui-data-primitive-remote-image",
+ "name": "default",
+ "title": "Remote image, its cases",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

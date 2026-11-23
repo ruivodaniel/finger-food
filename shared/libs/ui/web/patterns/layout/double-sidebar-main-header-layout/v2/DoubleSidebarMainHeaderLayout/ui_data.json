@@ -1,0 +1,119 @@
+{
+ "id": "ui-data-pattern-layout-double-sidebar-main-header-layout-doublesidebarmainheaderlayout",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-layout-double-sidebar-main-header-layout-doublesidebarmainheaderlayout",
+ "kind": "component",
+ "name": "DoubleSidebarMainHeaderLayout",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "DoubleSidebarMainHeaderLayout",
+  "version": 1,
+  "surface": "web",
+  "params": [
+   "away"
+  ],
+  "emits": [
+   "scrollDirection"
+  ],
+  "slots": [
+   "pageLeftSidebar",
+   "mainHeader",
+   "secondMainHeader",
+   "mainBody"
+  ],
+  "root": {
+   "type": "Page",
+   "children": [
+    {
+     "type": "PageBody",
+     "children": [
+      {
+       "type": "PageLeftSidebar",
+       "props": {
+        "away": {
+         "bind": "away.pageLeftSidebar"
+        }
+       },
+       "children": [
+        {
+         "type": "Slot",
+         "props": {
+          "name": "pageLeftSidebar"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Main",
+       "children": [
+        {
+         "type": "MainHeader",
+         "props": {
+          "away": {
+           "bind": "away.mainHeader"
+          }
+         },
+         "children": [
+          {
+           "type": "Slot",
+           "props": {
+            "name": "mainHeader"
+           }
+          }
+         ]
+        },
+        {
+         "type": "SecondMainHeader",
+         "props": {
+          "away": {
+           "bind": "away.secondMainHeader"
+          }
+         },
+         "children": [
+          {
+           "type": "Slot",
+           "props": {
+            "name": "secondMainHeader"
+           }
+          }
+         ]
+        },
+        {
+         "type": "MainContent",
+         "children": [
+          {
+           "type": "MainBody",
+           "on": {
+            "scrollDirection": [
+             {
+              "emit": {
+               "event": "scrollDirection",
+               "payload": {
+                "direction": {
+                 "bind": "event"
+                }
+               }
+              }
+             }
+            ]
+           },
+           "children": [
+            {
+             "type": "Slot",
+             "props": {
+              "name": "mainBody"
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

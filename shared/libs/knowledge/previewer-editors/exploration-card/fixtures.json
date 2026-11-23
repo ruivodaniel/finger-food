@@ -1,0 +1,69 @@
+[
+  {
+    "id": "feed",
+    "name": "the feed",
+    "data": {
+      "id": "feed",
+      "title": "The feed",
+      "description": "one loader: folds the world, feeds the storage, the API and the router, mounts the document",
+      "note": "A snapshot, a play's step and a component fixture are the same call: the feed knows no asker.",
+      "icon": "layers",
+      "color": "brand-1"
+    }
+  },
+  {
+    "id": "snapshot",
+    "name": "a ui_snapshot",
+    "data": {
+      "id": "snapshot",
+      "title": "A ui_snapshot",
+      "description": "a frame at rest",
+      "note": "The row carries the document, the theme, the world at a moment, the storage, the fixtures and the entities. Address: /render/<id>.",
+      "icon": "image",
+      "color": "brand-2"
+    }
+  },
+  {
+    "id": "today",
+    "name": "today, to be removed",
+    "data": {
+      "id": "today",
+      "title": "Today",
+      "description": "two half-frames",
+      "note": "The snapshot previewer sets part of the frame and the play the rest.",
+      "icon": "warning",
+      "color": "flat-red"
+    }
+  },
+  {
+    "id": "long",
+    "name": "a long title",
+    "data": {
+      "id": "long",
+      "title": "The route table is the sitemap of the frame's surface",
+      "description": "patterns, params, the index rule",
+      "icon": "gitBranch",
+      "color": "flat-green"
+    }
+  },
+  {
+    "id": "acme",
+    "name": "with an image",
+    "data": {
+      "id": "acme",
+      "title": "Acme Corp",
+      "description": "a company of the world",
+      "note": "A card with an image: it fills the square. A persona or an organization is drawn by its own previewer, never by a canvas card; this is the shape for anything else that has a picture.",
+      "image": "/slice-design-files/blobs/by-id/29888e17-0414-4539-b807-9d2e24d58a34",
+      "color": "flat-orange"
+    }
+  },
+  {
+    "id": "plain",
+    "name": "title only, no colour",
+    "data": {
+      "id": "plain",
+      "title": "mockRouter"
+    }
+  }
+]

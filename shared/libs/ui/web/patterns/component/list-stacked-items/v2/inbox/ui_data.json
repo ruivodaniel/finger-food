@@ -1,0 +1,190 @@
+{
+ "id": "ui-data-pattern-component-list-stacked-items-inbox",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-list-stacked-items-inbox",
+ "kind": "component",
+ "name": "inbox",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "inbox",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "List",
+   "props": {
+    "className": "w-full max-w-2xl"
+   },
+   "children": [
+    {
+     "use": {
+      "component": "MailRow",
+      "version": "latest"
+     },
+     "args": {
+      "initials": "IC",
+      "from": "Inês Carvalho",
+      "time": "09:12",
+      "subject": "Q3 roadmap review",
+      "preview": "Attaching the deck we discussed — the sequencing on slide 4 changed."
+     },
+     "slots": {
+      "badge": [
+       {
+        "type": "Badge",
+        "props": {
+         "status": "info",
+         "scale": "xs",
+         "children": "New"
+        }
+       }
+      ],
+      "action": [
+       {
+        "type": "ListItemAction",
+        "props": {},
+        "children": [
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--body-small",
+           "emphasis": "quiet"
+          },
+          "children": [
+           {
+            "type": "Icon",
+            "props": {
+             "name": "file",
+             "size": "sm"
+            }
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "use": {
+      "component": "MailRow",
+      "version": "latest"
+     },
+     "args": {
+      "initials": "S",
+      "from": "Stripe",
+      "time": "08:40",
+      "subject": "Your invoice INV-2026-0142 is paid",
+      "preview": "€4,800.00 was received for Altar Design Systems. No action needed."
+     },
+     "slots": {
+      "badge": [
+       {
+        "type": "Badge",
+        "props": {
+         "status": "info",
+         "scale": "xs",
+         "children": "New"
+        }
+       }
+      ]
+     }
+    },
+    {
+     "use": {
+      "component": "MailRow",
+      "version": "latest"
+     },
+     "args": {
+      "initials": "TF",
+      "from": "Tomás Ferreira",
+      "time": "Yesterday",
+      "subject": "Re: catalog patterns",
+      "preview": "The tile seam question — I think the theme owns it, agreed. Two more…"
+     }
+    },
+    {
+     "use": {
+      "component": "MailRow",
+      "version": "latest"
+     },
+     "args": {
+      "initials": "G",
+      "from": "GitHub",
+      "time": "Yesterday",
+      "subject": "[OmniChord-26] 3 pull requests await your review",
+      "preview": "stack primitive · card-with-tiles · pattern fixtures"
+     }
+    },
+    {
+     "use": {
+      "component": "MailRow",
+      "version": "latest"
+     },
+     "args": {
+      "initials": "MS",
+      "from": "Marta Silva",
+      "time": "Mon",
+      "subject": "Onboarding flow — copy pass",
+      "preview": "Rewrote the empty states; the terms line is still too long for mobile."
+     },
+     "slots": {
+      "action": [
+       {
+        "type": "ListItemAction",
+        "props": {},
+        "children": [
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--body-small",
+           "emphasis": "quiet"
+          },
+          "children": [
+           {
+            "type": "Icon",
+            "props": {
+             "name": "file",
+             "size": "sm"
+            }
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "use": {
+      "component": "MailRow",
+      "version": "latest"
+     },
+     "args": {
+      "initials": "L",
+      "from": "Linear",
+      "time": "Mon",
+      "subject": "Weekly digest",
+      "preview": "14 issues closed, 6 created. Cycle 32 ends Friday."
+     }
+    },
+    {
+     "use": {
+      "component": "MailRow",
+      "version": "latest"
+     },
+     "args": {
+      "initials": "SM",
+      "from": "Sofia Mendes",
+      "time": "Sun",
+      "subject": "Persona anchors",
+      "preview": "Ruled: personas anchor on the org, not the role. Doc updated."
+     }
+    }
+   ]
+  }
+ }
+}

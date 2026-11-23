@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-page-layout-table-in-fixed-box-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-page-layout-table-in-fixed-box",
+ "name": "default",
+ "title": "Table: a table in a fixed box, the rows scroll inside it",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

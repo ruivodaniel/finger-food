@@ -1,0 +1,25 @@
+{
+  "files": [],
+  "references": [{ "path": "./tsconfig.app.json" }, { "path": "./tsconfig.node.json" }],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@configs/theme": ["../../../../shared/configs/theme/index.ts"],
+      "@libs/ui-types": ["../../../../shared/libs/ui/types/index.ts"],
+      "@libs/theme-engine": ["../../../../shared/libs/ui/theme-engine/web/index.ts"],
+      "@libs/theme-engine/*": ["../../../../shared/libs/ui/theme-engine/web/*"],
+      "@libs/themes/*": ["../../../../shared/libs/ui/themes/*"],
+      "@configs/access-control": ["../../../../shared/configs/access-control/index.ts"],
+      "@configs/access-control/*": ["../../../../shared/configs/access-control/*"],
+      "@configs/brand": ["../../../../shared/configs/brand/index.ts"],
+      "@configs/brand/*": ["../../../../shared/configs/brand/*"],
+      "@configs/list-query": ["../../../../shared/configs/libs/list-query/index.ts"],
+      "@configs/user-organization-mgmt": ["../../../../shared/configs/user-organization-mgmt/index.ts"],
+      "@configs/user-organization-mgmt/*": ["../../../../shared/configs/user-organization-mgmt/*"],
+      "@configs/ops-tickets": ["../../../../shared/configs/ops-tickets/index.ts"],
+      "@configs/ops-tickets/*": ["../../../../shared/configs/ops-tickets/*"],
+
+    }
+  }
+}

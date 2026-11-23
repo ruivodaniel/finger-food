@@ -1,0 +1,39 @@
+{
+ "id": "ui-data-pattern-component-timelines-and-agenda-app-bar",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-timelines-and-agenda-app-bar",
+ "kind": "component",
+ "name": "app-bar",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "app-bar",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "row",
+    "align": "center",
+    "scale": "md"
+   },
+   "children": [
+    {
+     "type": "Icon",
+     "props": {
+      "name": "menu"
+     }
+    },
+    {
+     "type": "Text",
+     "props": {
+      "as": "span",
+      "element": "type--heading3",
+      "children": "Blueway"
+     }
+    }
+   ]
+  }
+ }
+}

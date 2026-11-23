@@ -1,0 +1,291 @@
+{
+  "id": "ui-data-organization-layout",
+  "version": 1,
+  "uiNodeId": "node-organization-layout",
+  "kind": "component",
+  "name": "organization-layout",
+  "document": {
+    "kind": "component",
+    "schemaVersion": 1,
+    "name": "organization-layout",
+    "version": 1,
+    "params": [
+      "organizationId",
+      "section"
+    ],
+    "slots": [
+      "main"
+    ],
+    "data": {
+      "session": {
+        "source": "GET /api/auth/session"
+      },
+      "org": {
+        "source": "GET /api/client/organizations/:organizationId",
+        "params": {
+          "organizationId": {
+            "bind": "calc.orgId"
+          }
+        },
+        "when": {
+          "exists": {
+            "bind": "calc.orgId"
+          }
+        }
+      }
+    },
+    "calc": {
+      "orgId": {
+        "if": [
+          {
+            "eq": [
+              {
+                "bind": "organizationId"
+              },
+              "current"
+            ]
+          },
+          {
+            "bind": "data.session.session.activeOrganizationId"
+          },
+          {
+            "bind": "organizationId"
+          }
+        ]
+      }
+    },
+    "root": {
+      "type": "DoubleSidebarLayout",
+      "props": {
+        "scale": "md",
+        "pageHeaderContent": {
+          "use": {
+            "component": "title-header",
+            "version": "latest"
+          },
+          "args": {
+            "icon": "building",
+            "title": {
+              "if": [
+                {
+                  "exists": {
+                    "bind": "data.org.name"
+                  }
+                },
+                {
+                  "bind": "data.org.name"
+                },
+                "Organization"
+              ]
+            },
+            "titleTestId": "org-frame-title"
+          }
+        },
+        "pageLeftSidebarContent": {
+          "type": "Text",
+          "props": {
+            "as": "nav",
+            "data-testid": "org-section-nav",
+            "element": "control-group--sidebar"
+          },
+          "children": [
+            {
+              "type": "Stack",
+              "props": {
+                "dir": "col",
+                "gap": 4,
+                "pad": 16
+              },
+              "children": [
+                {
+                  "type": "Text",
+                  "props": {
+                    "as": "a",
+                    "href": {
+                      "concat": [
+                        "/organizations/",
+                        {
+                          "bind": "organizationId"
+                        },
+                        "/info"
+                      ]
+                    },
+                    "data-testid": "org-nav-info-link",
+                    "aria-current": {
+                      "if": [
+                        {
+                          "eq": [
+                            {
+                              "bind": "section"
+                            },
+                            "info"
+                          ]
+                        },
+                        "page",
+                        null
+                      ]
+                    },
+                    "element": "control--sidebar-item",
+                    "state": {
+                      "if": [
+                        {
+                          "eq": [
+                            {
+                              "bind": "section"
+                            },
+                            "info"
+                          ]
+                        },
+                        "selected",
+                        null
+                      ]
+                    }
+                  },
+                  "children": [
+                    {
+                      "type": "Icon",
+                      "props": {
+                        "name": "info",
+                        "scale": "sm"
+                      }
+                    },
+                    {
+                      "type": "Text",
+                      "props": {
+                        "children": "Info"
+                      }
+                    }
+                  ],
+                  "on": {
+                    "click": [
+                      {
+                        "when": {
+                          "ne": [
+                            {
+                              "bind": "section"
+                            },
+                            "info"
+                          ]
+                        },
+                        "do": [
+                          {
+                            "navigate": {
+                              "to": {
+                                "concat": [
+                                  "/organizations/",
+                                  {
+                                    "bind": "organizationId"
+                                  },
+                                  "/info"
+                                ]
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "Text",
+                  "props": {
+                    "as": "a",
+                    "href": {
+                      "concat": [
+                        "/organizations/",
+                        {
+                          "bind": "organizationId"
+                        },
+                        "/members"
+                      ]
+                    },
+                    "data-testid": "org-nav-members-link",
+                    "aria-current": {
+                      "if": [
+                        {
+                          "eq": [
+                            {
+                              "bind": "section"
+                            },
+                            "members"
+                          ]
+                        },
+                        "page",
+                        null
+                      ]
+                    },
+                    "element": "control--sidebar-item",
+                    "state": {
+                      "if": [
+                        {
+                          "eq": [
+                            {
+                              "bind": "section"
+                            },
+                            "members"
+                          ]
+                        },
+                        "selected",
+                        null
+                      ]
+                    }
+                  },
+                  "children": [
+                    {
+                      "type": "Icon",
+                      "props": {
+                        "name": "users",
+                        "scale": "sm"
+                      }
+                    },
+                    {
+                      "type": "Text",
+                      "props": {
+                        "children": "Members"
+                      }
+                    }
+                  ],
+                  "on": {
+                    "click": [
+                      {
+                        "when": {
+                          "ne": [
+                            {
+                              "bind": "section"
+                            },
+                            "members"
+                          ]
+                        },
+                        "do": [
+                          {
+                            "navigate": {
+                              "to": {
+                                "concat": [
+                                  "/organizations/",
+                                  {
+                                    "bind": "organizationId"
+                                  },
+                                  "/members"
+                                ]
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "mainContainerContent": {
+          "type": "Slot",
+          "props": {
+            "name": "main"
+          }
+        }
+      }
+    }
+  }
+}

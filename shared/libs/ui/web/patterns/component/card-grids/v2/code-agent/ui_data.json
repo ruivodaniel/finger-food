@@ -1,0 +1,176 @@
+{
+ "id": "ui-data-pattern-component-card-grids-code-agent",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-card-grids-code-agent",
+ "kind": "component",
+ "name": "code-agent",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "code-agent",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Card",
+   "props": {},
+   "children": [
+    {
+     "type": "Content",
+     "props": {},
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "start",
+          "justify": "between",
+          "scale": "md"
+         },
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "row",
+            "align": "center",
+            "scale": "md"
+           },
+           "children": [
+            {
+             "type": "Avatar",
+             "props": {
+              "scale": "md"
+             },
+             "children": [
+              {
+               "type": "AvatarFallback",
+               "props": {},
+               "children": [
+                {
+                 "type": "Icon",
+                 "props": {
+                  "name": "bot",
+                  "size": "sm"
+                 }
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "Stack",
+             "props": {
+              "dir": "col",
+              "scale": "2xs"
+             },
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "as": "span",
+                "element": "type--heading4",
+                "children": "Code Agent"
+               }
+              },
+              {
+               "type": "Text",
+               "props": {
+                "as": "span",
+                "element": "type--code",
+                "emphasis": "quiet",
+                "children": "claude-sonnet-4-20250514"
+               }
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "Badge",
+           "props": {
+            "emphasis": "quiet",
+            "status": "info"
+           },
+           "children": [
+            {
+             "type": "Badge",
+             "props": {
+              "scale": "3xs",
+              "concept": "dot",
+              "status": "info"
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--body-extra-small",
+              "children": "Busy"
+             }
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body",
+          "emphasis": "quiet",
+          "children": "Writes, reviews, and refactors code across multiple languages"
+         }
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "wrap": true,
+          "scale": "sm"
+         },
+         "children": [
+          {
+           "type": "Chip",
+           "props": {
+            "emphasis": "tertiary",
+            "scale": "sm",
+            "closable": false,
+            "children": "Code Generation"
+           }
+          },
+          {
+           "type": "Chip",
+           "props": {
+            "emphasis": "tertiary",
+            "scale": "sm",
+            "closable": false,
+            "children": "Debugging"
+           }
+          },
+          {
+           "type": "Chip",
+           "props": {
+            "emphasis": "tertiary",
+            "scale": "sm",
+            "closable": false,
+            "children": "Refactoring"
+           }
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

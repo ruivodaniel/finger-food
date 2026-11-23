@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-component-top-navigation-2-inline-entries",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Top navigation 2: every entry in the bar; user menu only"
+}

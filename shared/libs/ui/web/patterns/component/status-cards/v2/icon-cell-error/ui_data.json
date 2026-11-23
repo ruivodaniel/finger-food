@@ -1,0 +1,90 @@
+{
+ "id": "ui-data-pattern-component-status-cards-icon-cell-error",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-status-cards-icon-cell-error",
+ "kind": "component",
+ "name": "icon-cell-error",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "icon-cell-error",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Card",
+   "props": {
+    "className": "flex-1 min-w-56"
+   },
+   "children": [
+    {
+     "type": "Content",
+     "props": {},
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "start",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Tile",
+         "props": {
+          "status": "error",
+          "className": "flex-none p-2"
+         },
+         "children": [
+          {
+           "type": "Icon",
+           "props": {
+            "name": "error",
+            "size": "sm"
+           }
+          }
+         ]
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "col",
+          "size": "fill",
+          "scale": "xs"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--heading4",
+            "children": "Sync failed"
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "Connection timed out after 30 s; 3 changes were not saved."
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-extra-small",
+            "emphasis": "quiet",
+            "children": "2 h ago"
+           }
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

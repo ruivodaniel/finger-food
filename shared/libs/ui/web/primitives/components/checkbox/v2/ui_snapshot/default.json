@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-primitive-checkbox-default",
+ "version": 1,
+ "uiDataId": "ui-data-primitive-checkbox",
+ "name": "default",
+ "title": "Checkbox, its cases",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

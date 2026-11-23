@@ -1,0 +1,269 @@
+[
+  {
+    "type": "dependency",
+    "from": "apps/open-api/src/lib/http.ts",
+    "to": "apps/main/slices/seed/user-organization-mgmt/api/shared/scoped-ac.ts",
+    "unresolvedTo": "../../../main/slices/seed/user-organization-mgmt/api/shared/scoped-ac",
+    "dependencyTypes": [
+      "local",
+      "type-only",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "outside-reaches-slice-through-public-surface"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "apps/open-api/src/main-api-services.ts",
+    "to": "apps/main/slices/seed/user-organization-mgmt/api/repositories/membership.repository.ts",
+    "unresolvedTo": "../../main/slices/seed/user-organization-mgmt/api/repositories/membership.repository",
+    "dependencyTypes": [
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "outside-reaches-slice-through-public-surface"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "apps/open-api/src/main-api-services.ts",
+    "to": "apps/main/slices/seed/user-organization-mgmt/api/repositories/organization.repository.ts",
+    "unresolvedTo": "../../main/slices/seed/user-organization-mgmt/api/repositories/organization.repository",
+    "dependencyTypes": [
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "outside-reaches-slice-through-public-surface"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "apps/open-api/src/main-api-services.ts",
+    "to": "apps/main/slices/seed/user-organization-mgmt/api/repositories/user.repository.ts",
+    "unresolvedTo": "../../main/slices/seed/user-organization-mgmt/api/repositories/user.repository",
+    "dependencyTypes": [
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "outside-reaches-slice-through-public-surface"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "apps/open-api/src/main-api-services.ts",
+    "to": "apps/main/slices/seed/user-organization-mgmt/api/services/membership.service.ts",
+    "unresolvedTo": "../../main/slices/seed/user-organization-mgmt/api/services/membership.service",
+    "dependencyTypes": [
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "outside-reaches-slice-through-public-surface"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "apps/open-api/src/main-api-services.ts",
+    "to": "apps/main/slices/seed/user-organization-mgmt/api/services/organization.service.ts",
+    "unresolvedTo": "../../main/slices/seed/user-organization-mgmt/api/services/organization.service",
+    "dependencyTypes": [
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "outside-reaches-slice-through-public-surface"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "apps/open-api/src/middlewares/acting-session.ts",
+    "to": "apps/main/slices/seed/user-organization-mgmt/api/middlewares/create-scoped-ac-middleware.ts",
+    "unresolvedTo": "../../../main/slices/seed/user-organization-mgmt/api/middlewares/create-scoped-ac-middleware",
+    "dependencyTypes": [
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "outside-reaches-slice-through-public-surface"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "shared/libs/ui/web/patterns/component/canvas-erd/index.tsx",
+    "to": "apps/main/slices/seed/user-organization-mgmt/api/models/consent-record.model.ts",
+    "unresolvedTo": "../../../../../../../apps/main/slices/seed/user-organization-mgmt/api/models/consent-record.model",
+    "dependencyTypes": [
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "outside-reaches-slice-through-public-surface"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "shared/libs/ui/web/patterns/component/canvas-erd/index.tsx",
+    "to": "apps/main/slices/seed/user-organization-mgmt/api/models/invitation.model.ts",
+    "unresolvedTo": "../../../../../../../apps/main/slices/seed/user-organization-mgmt/api/models/invitation.model",
+    "dependencyTypes": [
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "outside-reaches-slice-through-public-surface"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "shared/libs/ui/web/patterns/component/canvas-erd/index.tsx",
+    "to": "apps/main/slices/seed/user-organization-mgmt/api/models/legal.model.ts",
+    "unresolvedTo": "../../../../../../../apps/main/slices/seed/user-organization-mgmt/api/models/legal.model",
+    "dependencyTypes": [
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "outside-reaches-slice-through-public-surface"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "shared/libs/ui/web/patterns/component/canvas-erd/index.tsx",
+    "to": "apps/main/slices/seed/user-organization-mgmt/api/models/membership.model.ts",
+    "unresolvedTo": "../../../../../../../apps/main/slices/seed/user-organization-mgmt/api/models/membership.model",
+    "dependencyTypes": [
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "outside-reaches-slice-through-public-surface"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "shared/libs/ui/web/patterns/component/canvas-erd/index.tsx",
+    "to": "apps/main/slices/seed/user-organization-mgmt/api/models/organization.model.ts",
+    "unresolvedTo": "../../../../../../../apps/main/slices/seed/user-organization-mgmt/api/models/organization.model",
+    "dependencyTypes": [
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "outside-reaches-slice-through-public-surface"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "shared/libs/ui/web/patterns/component/canvas-erd/index.tsx",
+    "to": "apps/main/slices/seed/user-organization-mgmt/api/models/user.model.ts",
+    "unresolvedTo": "../../../../../../../apps/main/slices/seed/user-organization-mgmt/api/models/user.model",
+    "dependencyTypes": [
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "outside-reaches-slice-through-public-surface"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "shared/libs/ui/web/patterns/component/canvas-erd/index.tsx",
+    "to": "apps/main/slices/seed/user-organization-mgmt/api/models/consent-record.model.ts",
+    "unresolvedTo": "../../../../../../../apps/main/slices/seed/user-organization-mgmt/api/models/consent-record.model",
+    "dependencyTypes": [
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "shared-imports-no-app"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "shared/libs/ui/web/patterns/component/canvas-erd/index.tsx",
+    "to": "apps/main/slices/seed/user-organization-mgmt/api/models/invitation.model.ts",
+    "unresolvedTo": "../../../../../../../apps/main/slices/seed/user-organization-mgmt/api/models/invitation.model",
+    "dependencyTypes": [
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "shared-imports-no-app"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "shared/libs/ui/web/patterns/component/canvas-erd/index.tsx",
+    "to": "apps/main/slices/seed/user-organization-mgmt/api/models/legal.model.ts",
+    "unresolvedTo": "../../../../../../../apps/main/slices/seed/user-organization-mgmt/api/models/legal.model",
+    "dependencyTypes": [
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "shared-imports-no-app"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "shared/libs/ui/web/patterns/component/canvas-erd/index.tsx",
+    "to": "apps/main/slices/seed/user-organization-mgmt/api/models/membership.model.ts",
+    "unresolvedTo": "../../../../../../../apps/main/slices/seed/user-organization-mgmt/api/models/membership.model",
+    "dependencyTypes": [
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "shared-imports-no-app"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "shared/libs/ui/web/patterns/component/canvas-erd/index.tsx",
+    "to": "apps/main/slices/seed/user-organization-mgmt/api/models/organization.model.ts",
+    "unresolvedTo": "../../../../../../../apps/main/slices/seed/user-organization-mgmt/api/models/organization.model",
+    "dependencyTypes": [
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "shared-imports-no-app"
+    }
+  },
+  {
+    "type": "dependency",
+    "from": "shared/libs/ui/web/patterns/component/canvas-erd/index.tsx",
+    "to": "apps/main/slices/seed/user-organization-mgmt/api/models/user.model.ts",
+    "unresolvedTo": "../../../../../../../apps/main/slices/seed/user-organization-mgmt/api/models/user.model",
+    "dependencyTypes": [
+      "local",
+      "import"
+    ],
+    "rule": {
+      "severity": "error",
+      "name": "shared-imports-no-app"
+    }
+  }
+]

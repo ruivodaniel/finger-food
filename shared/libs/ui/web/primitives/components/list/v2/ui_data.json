@@ -1,0 +1,309 @@
+{
+ "id": "ui-data-primitive-list",
+ "version": 1,
+ "uiNodeId": "ui-node-primitive-list",
+ "kind": "component",
+ "name": "primitive-list",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "primitive-list",
+  "version": 1,
+  "surface": "web",
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "align": "center",
+    "scale": "2xl"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "basic"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "List",
+         "children": [
+          {
+           "type": "ListItem",
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "element": "type--body",
+              "children": "Alice Johnson"
+             }
+            },
+            {
+             "type": "Badge",
+             "props": {
+              "status": "success",
+              "scale": "sm",
+              "children": "Active"
+             }
+            }
+           ],
+           "props": {
+            "className": "justify-between"
+           }
+          },
+          {
+           "type": "ListItem",
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "element": "type--body",
+              "children": "Bob Smith"
+             }
+            },
+            {
+             "type": "Badge",
+             "props": {
+              "status": "neutral",
+              "scale": "sm",
+              "children": "Invited"
+             }
+            }
+           ],
+           "props": {
+            "className": "justify-between"
+           }
+          },
+          {
+           "type": "ListItem",
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "element": "type--body",
+              "children": "Carol White"
+             }
+            },
+            {
+             "type": "Badge",
+             "props": {
+              "status": "warning",
+              "scale": "sm",
+              "children": "Pending"
+             }
+            }
+           ],
+           "props": {
+            "className": "justify-between"
+           }
+          }
+         ],
+         "props": {
+          "style": {
+           "obj": {
+            "maxWidth": 400
+           }
+          }
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "with avatar"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "List",
+         "children": [
+          {
+           "type": "ListItem",
+           "children": [
+            {
+             "type": "ListItemIcon",
+             "children": [
+              {
+               "type": "Avatar",
+               "children": [
+                {
+                 "type": "AvatarFallback",
+                 "props": {
+                  "children": "AJ"
+                 }
+                }
+               ],
+               "props": {
+                "scale": "sm"
+               }
+              }
+             ]
+            },
+            {
+             "type": "ListItemContent",
+             "children": [
+              {
+               "type": "ListItemTitle",
+               "children": [
+                {
+                 "type": "Text",
+                 "props": {
+                  "element": "type--body",
+                  "children": "Alice Johnson"
+                 }
+                }
+               ]
+              },
+              {
+               "type": "ListItemDescription",
+               "children": [
+                {
+                 "type": "Text",
+                 "props": {
+                  "element": "type--body-small",
+                  "emphasis": "quiet",
+                  "children": "alice@example.com"
+                 }
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "Badge",
+             "props": {
+              "status": "success",
+              "scale": "sm",
+              "className": "ml-auto",
+              "children": "Active"
+             }
+            }
+           ],
+           "props": {
+            "className": "gap-3"
+           }
+          },
+          {
+           "type": "ListItem",
+           "children": [
+            {
+             "type": "ListItemIcon",
+             "children": [
+              {
+               "type": "Avatar",
+               "children": [
+                {
+                 "type": "AvatarFallback",
+                 "props": {
+                  "children": "BS"
+                 }
+                }
+               ],
+               "props": {
+                "scale": "sm"
+               }
+              }
+             ]
+            },
+            {
+             "type": "ListItemContent",
+             "children": [
+              {
+               "type": "ListItemTitle",
+               "children": [
+                {
+                 "type": "Text",
+                 "props": {
+                  "element": "type--body",
+                  "children": "Bob Smith"
+                 }
+                }
+               ]
+              },
+              {
+               "type": "ListItemDescription",
+               "children": [
+                {
+                 "type": "Text",
+                 "props": {
+                  "element": "type--body-small",
+                  "emphasis": "quiet",
+                  "children": "bob@example.com"
+                 }
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "Badge",
+             "props": {
+              "status": "neutral",
+              "scale": "sm",
+              "className": "ml-auto",
+              "children": "Invited"
+             }
+            }
+           ],
+           "props": {
+            "className": "gap-3"
+           }
+          }
+         ],
+         "props": {
+          "style": {
+           "obj": {
+            "maxWidth": 400
+           }
+          }
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

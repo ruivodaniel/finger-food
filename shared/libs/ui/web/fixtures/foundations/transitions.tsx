@@ -1,5 +1,5 @@
-import { FixtureBody, Row, Token } from "../_chrome";
-import { useThemeVars, withPrefix } from "../_theme-vars";
+import { FixtureBody, Row, Token } from "../../lib/_chrome";
+import { useThemeVars, withPrefix } from "../../lib/_theme-vars";
 
 /** Transitions — durations and timing functions. Hover a box to see it move with its own value. */
 export default function TransitionsFixture() {

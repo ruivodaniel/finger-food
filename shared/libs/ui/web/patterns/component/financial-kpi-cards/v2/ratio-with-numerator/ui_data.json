@@ -1,0 +1,122 @@
+{
+ "id": "ui-data-pattern-component-financial-kpi-cards-ratio-with-numerator",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-financial-kpi-cards-ratio-with-numerator",
+ "kind": "component",
+ "name": "ratio-with-numerator",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "ratio-with-numerator",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Card",
+   "props": {
+    "style": {
+     "obj": {
+      "width": 360
+     }
+    }
+   },
+   "children": [
+    {
+     "type": "Content",
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "scale": "sm"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body-small",
+          "emphasis": "quiet",
+          "children": "Return on average assets"
+         }
+        },
+        {
+         "type": "DataNumber",
+         "props": {
+          "value": 14.8,
+          "config": {
+           "mode": {
+            "kind": "fixedScale",
+            "scale": "unit",
+            "n": 1
+           },
+           "locale": "en-GB",
+           "representation": {
+            "kind": "percentage",
+            "input": "points"
+           }
+          },
+          "scale": "xl"
+         }
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "baseline",
+          "scale": "sm"
+         },
+         "children": [
+          {
+           "type": "DataNumber",
+           "props": {
+            "value": 81410000000,
+            "config": {
+             "mode": {
+              "kind": "fixedScale",
+              "scale": "billion",
+              "n": 2
+             },
+             "locale": "en-GB"
+            },
+            "symbol": "USD",
+            "scale": "sm",
+            "emphasis": "quiet"
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-extra-small",
+            "emphasis": "quiet",
+            "children": "/"
+           }
+          },
+          {
+           "type": "DataNumber",
+           "props": {
+            "value": 550070000000,
+            "config": {
+             "mode": {
+              "kind": "fixedScale",
+              "scale": "billion",
+              "n": 2
+             },
+             "locale": "en-GB"
+            },
+            "symbol": "USD",
+            "scale": "sm",
+            "emphasis": "quiet"
+           }
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

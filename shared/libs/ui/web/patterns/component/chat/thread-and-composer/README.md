@@ -1,0 +1,1 @@
+#1 · thread + composer — Message bubbles (Tile, emphasis='secondary' mine · 'quiet' theirs) over a Stack; a fixed Composer (Textarea + primary Button) below, no Separator needed (the two Stacks read as regions on their own)

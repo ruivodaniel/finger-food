@@ -1,0 +1,18 @@
+{
+  "id": "term/registry",
+  "kind": "term",
+  "title": "registry",
+  "status": "converted",
+  "subjects": [
+    "docs"
+  ],
+  "owner": "documentation",
+  "tags": [
+    "docs"
+  ],
+  "paths": [],
+  "term": {
+    "def": "The global list of locations, each pointing at its map. It holds no content.",
+    "aliases": []
+  }
+}

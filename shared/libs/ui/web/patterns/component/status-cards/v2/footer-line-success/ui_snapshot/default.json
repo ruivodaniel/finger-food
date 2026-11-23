@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-status-cards-footer-line-success-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-status-cards-footer-line-success",
+ "name": "default",
+ "title": "Status cards: footer line success",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

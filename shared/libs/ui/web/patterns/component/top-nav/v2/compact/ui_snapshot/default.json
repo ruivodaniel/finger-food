@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-top-nav-compact-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-top-nav-compact",
+ "name": "default",
+ "title": "Top nav: compact",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

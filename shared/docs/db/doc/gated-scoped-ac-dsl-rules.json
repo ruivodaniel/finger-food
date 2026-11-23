@@ -1,0 +1,234 @@
+{
+ "id": "doc/gated-scoped-ac-dsl-rules",
+ "kind": "doc",
+ "title": "DSL Rules",
+ "status": "todo",
+ "subject": "gated-scoped-ac",
+ "owner": "libs/gated-scoped-ac",
+ "order": 3,
+ "tags": [
+  "gated-scoped-ac",
+  "consumer"
+ ],
+ "paths": [
+  "shared/libs/gated-scoped-ac"
+ ],
+ "summary": "How to write what the engine reads: permissions, the three rule slots, the four operators, traversals and role forests, and what the loaders refuse.",
+ "docId": "gated-scoped-ac-dsl-rules",
+ "doc": {
+  "axioms": [
+   {
+    "text": "A [[permission]] is a leaf: one entity, its actions, an optional field list, and the rules that narrow them."
+   },
+   {
+    "text": "A role is a branch of a [[role forest]]. It carries permissions and other roles, and holding it grants everything beneath it."
+   },
+   {
+    "text": "A condition is one subject, one operator and one operand. Nothing is inferred."
+   },
+   {
+    "text": "Config enters the engine through `registerPermissions` and `registerForests`, which refuse a malformed config when it loads."
+   }
+  ],
+  "purpose": {
+   "intro": "The shape `@libs/gated-scoped-ac` accepts for permissions, rules and roles, and what each part compiles to.",
+   "note": "Why the DSL is shaped this way (AC23 to AC35) is in [[access-control|Access Control]]. The app's config is `shared/configs/access-control/index.ts`."
+  },
+  "reference": [
+   {
+    "topic": "A permission",
+    "statement": "`definePermissions` takes a list of permissions and types each one by its actions.",
+    "claims": [],
+    "examples": [
+     {
+      "snippets": [
+       {
+        "code": "definePermissions([\n  {\n    name: \"manage_own_profile\",\n    entity: \"user_profile\",\n    actions: [\"read\", \"update\", \"delete\"],\n    rules: [\n      {\n        context: [],\n        target: [{ field: \"user_profile.userId\", has: { bag: \"$session.user.id\" } }],\n      },\n    ],\n  },\n]);"
+       }
+      ]
+     }
+    ],
+    "imagesAndDiagrams": [
+     {
+      "type": "ascii",
+      "value": "| Field | Meaning |\n|---|---|\n| `name` | unique across the whole config; `registerPermissions` throws on a duplicate |\n| `entity` | a key of the `tables` map the app passes to `createAc` |\n| `actions` | any of `create`, `read`, `update`, `delete` |\n| `fields` | the columns read returns and update may write; absent or empty means every column |\n| `rules` | OR-ed; a caller is granted what any rule that passes its context grants |"
+     }
+    ]
+   },
+   {
+    "topic": "Rules combine by OR",
+    "statement": "Rules and permissions widen what a caller gets; conditions within a slot narrow it.",
+    "claims": [
+     {
+      "text": "Rules in a permission are OR-ed, and so are the permissions a caller holds: every rule whose context passes adds its target to the scope."
+     },
+     {
+      "text": "A permission with `rules: []` grants nothing: the engine only collects rules that pass their context, and there are none. Every row is one rule with nothing in it: `rules: [{ context: [], target: [] }]`."
+     },
+     {
+      "text": "Field lists union across the permissions that contribute, and one contributing permission with no list means every column."
+     }
+    ]
+   },
+   {
+    "topic": "Three slots",
+    "statement": "A rule is `{ context, target, payload? }`. Conditions within a slot are AND-ed, and each slot reads from one place.",
+    "claims": [
+     {
+      "text": "**context**: `bag:` conditions, checked in memory against the [[access context]] before anything else. A rule whose context fails is dropped. A context condition naming a `field:` never passes."
+     },
+     {
+      "text": "**target**: `field:` conditions, compiled to SQL against the entity's rows. An empty target means every row. `registerPermissions` refuses a target condition with no `field:`."
+     },
+     {
+      "text": "**payload**: `bag:` conditions on the row being created, read as `$requestBody.*`. Create-only: `registerPermissions` refuses a payload on a permission whose actions are anything but `[\"create\"]`, and a payload condition with no `bag:`."
+     },
+     {
+      "text": "A create carries no target. `definePermissions` makes one a type error, and `registerPermissions` throws on it."
+     }
+    ],
+    "examples": [
+     {
+      "title": "A create gated on the row it writes",
+      "snippets": [
+       {
+        "code": "{\n  name: \"create_company_organization\",\n  entity: \"organization\",\n  actions: [\"create\"],\n  rules: [\n    {\n      context: [],\n      target: [],\n      payload: [{ bag: \"$requestBody.type\", is: { value: \"company\" } }],\n    },\n  ],\n}"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "topic": "Conditions and operators",
+    "statement": "A condition names a subject, then exactly one of four operators with its operand.",
+    "claims": [
+     {
+      "text": "**Subject.** `field: \"entity.column\"` is a column of the rows being filtered. `bag: \"$session.user.id\"` is a value in the [[access context]]; the leading `$` is dropped and the dotted path walked."
+     },
+     {
+      "text": "**Operand.** `{ bag: \"$…\" }` for a path into the context, or `{ value: … }` for a string, number or boolean."
+     },
+     {
+      "text": "**Operators.** `is`, `isNot`, `has`, `hasNot`, and no others. In memory, `has` is membership when the subject is an array and equality otherwise; `is` is always equality."
+     },
+     {
+      "text": "`has` never means substring: a string is compared whole."
+     },
+     {
+      "text": "A `bag:` path that is unset or null fails the condition under every operator, negations included. See [[gated-scoped-ac-security|Security]]."
+     }
+    ],
+    "imagesAndDiagrams": [
+     {
+      "title": "What each operator compiles to on a target",
+      "type": "ascii",
+      "value": "| Operator | On a single-value column | On an array or json column |\n|---|---|---|\n| `is` | `column = value` | refused when the engine is built |\n| `isNot` | `column IS DISTINCT FROM value`, so a NULL column matches | refused when the engine is built |\n| `has` | `column = value` | `value = ANY(column)`, or `column @> value::jsonb` |\n| `hasNot` | `column IS NULL OR NOT (column = value)` | `column IS NULL OR NOT (…)` |\n| any, with `value` unset or null | the rule is dropped | the rule is dropped |"
+     }
+    ]
+   },
+   {
+    "topic": "Traversals",
+    "statement": "A condition with `join` follows a value into another entity and filters there. What it compiles to depends on its subject.",
+    "claims": [
+     {
+      "text": "A `field:` subject (in a target) is a column of the filtered rows, so it compiles to `id IN (SELECT id FROM <entity> JOIN <join> ON <field> = <join>.<on> WHERE …)`."
+     },
+     {
+      "text": "A `bag:` subject (in a payload) is one value out of the context, so it compiles to a single existence check on `<join>`, run by the gate before the insert. An absent value denies."
+     },
+     {
+      "text": "`on` names the far-side column when it isn't `id`, as for a table keyed by its parent. Leave it out and the join lands on `id`."
+     },
+     {
+      "text": "`where` is one condition or a list of them, AND-ed, each naming a column of the joined entity. One hop only: a `where` condition cannot join again."
+     },
+     {
+      "text": "A traversal must be the only condition in its slot. Only the first one would be compiled, and anything beside it dropped, so `registerPermissions` refuses the config instead. Put further conditions in its `where`, or split them across rules."
+     }
+    ],
+    "examples": [
+     {
+      "title": "A lock on one of the active company's meteors",
+      "snippets": [
+       {
+        "code": "target: [\n  {\n    field: \"document_lock.documentId\",\n    join: \"meteor\",\n    where: { field: \"meteor.organizationId\", has: { bag: \"$session.organization.id\" } },\n  },\n]"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "topic": "Role forests",
+    "statement": "Roles are declared as `RoleNode` trees: `{ role, permissions?, children? }`.",
+    "claims": [
+     {
+      "text": "`accountBaseline` is the forest of user roles any signed-in caller can hold. `forests[orgType]` is the forest of the organization type the caller acts in, read from the bag at `orgTypePath`."
+     },
+     {
+      "text": "A role grants its own `permissions` and those of every role beneath it. A branch may carry none of its own and exist only to imply its children."
+     },
+     {
+      "text": "A forest grants nothing by itself: a permission is collected only from a role the caller holds, and which roles that is, the app's hydration decides."
+     },
+     {
+      "text": "Role names are unique across every forest. `registerForests` throws on a duplicate and returns the flat list of roles."
+     },
+     {
+      "text": "`impliedRoles(assigned, forests)` returns the roles a set of roles implies, for a caller that gates on roles rather than on a verdict, such as navigation. It searches the forests it is given."
+     }
+    ],
+    "examples": [
+     {
+      "snippets": [
+       {
+        "code": "const companyForest: RoleNode[] = [\n  {\n    role: \"company_owner\",\n    children: [\n      {\n        role: \"company_manager\",\n        permissions: [\"update_organization_company\", \"manage_members_company\"],\n        children: [\n          { role: \"company_standard\", permissions: [\"read_organization_company\", \"read_meteor_company\"] },\n        ],\n      },\n      { role: \"company_billing\", permissions: [\"read_organization_company\", \"manage_billing_company\"] },\n    ],\n  },\n];\n\nexport const forests: Record<string, RoleNode[]> = { company: companyForest };"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "topic": "Loading the config",
+    "statement": "The config module runs the loaders at import, so a bad config fails the app's boot.",
+    "claims": [
+     {
+      "text": "`registerPermissions(lists, validator?)` merges the lists into a map by name. It throws on a duplicate name, a create with a target, a target condition with no `field:`, a slot holding a traversal beside other conditions, and a payload that is not on a create-only permission or has a condition with no `bag:`."
+     },
+     {
+      "text": "`registerForests({ accountBaseline, forests }, validator?)` throws on a role name used twice and returns `{ roles }`."
+     },
+     {
+      "text": "`validator` is optional: pass `zodConfigValidator()` from `@libs/gated-scoped-ac/zod` when the config does not come from type-checked TypeScript."
+     },
+     {
+      "text": "`createAc` adds one check of its own, because it is the first place that has the tables: `is` or `isNot` against an array or json column throws."
+     }
+    ],
+    "examples": [
+     {
+      "snippets": [
+       {
+        "code": "export const permissions = registerPermissions([\n  accountBaselinePermissions,\n  companyPermissions,\n  creditsPermissions,\n]);\nexport const { roles } = registerForests({ accountBaseline, forests });\nexport const accessControlConfig = { permissions, accountBaseline, forests };"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "review": {
+   "axioms": {
+    "state": "unreviewed"
+   },
+   "purpose": {
+    "state": "unreviewed"
+   },
+   "reference": {
+    "state": "unreviewed"
+   }
+  },
+  "converted": true
+ },
+ "audience": [
+  "seed-consumer"
+ ]
+}

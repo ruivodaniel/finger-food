@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-primitive-file-upload-default",
+ "version": 1,
+ "uiDataId": "ui-data-primitive-file-upload",
+ "name": "default",
+ "title": "File upload, its cases",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

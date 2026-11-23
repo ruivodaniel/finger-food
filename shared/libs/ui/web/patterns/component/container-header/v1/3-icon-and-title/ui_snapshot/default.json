@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-container-header-3-icon-and-title-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-container-header-3-icon-and-title",
+ "name": "default",
+ "title": "Container header 3: an icon, then the title",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

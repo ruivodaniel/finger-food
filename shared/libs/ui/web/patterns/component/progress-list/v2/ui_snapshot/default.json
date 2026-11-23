@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-progress-list-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-progress-list",
+ "name": "default",
+ "title": "Progress list",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

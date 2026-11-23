@@ -1,0 +1,20 @@
+# The payment slice's part of the local stack: the Stripe listener. Stripe cannot call a laptop, so this receives the
+# sandbox's events and forwards them to the API running on the host. An app that mounts the payment slice includes this
+# file from its own compose file; an app without payments does not, and nothing of Stripe is left in it.
+#
+# It reads STRIPE_SECRET_KEY from the app's .env (the shared development sandbox's key, test mode). The listener signs
+# with the sandbox's secret, the same for every developer: STRIPE_WEBHOOK_SECRET and STRIPE_CONNECT_WEBHOOK_SECRET.
+services:
+  stripe-listener:
+    image: stripe/stripe-cli:v1.55.12
+    restart: unless-stopped
+    environment:
+      STRIPE_API_KEY: ${STRIPE_SECRET_KEY:-}
+      STRIPE_DEVICE_NAME: local-dev
+    command: >
+      listen
+      --events checkout.session.completed,checkout.session.async_payment_succeeded,invoice.paid,customer.subscription.created,customer.subscription.updated,customer.subscription.deleted,charge.refunded,charge.dispute.funds_withdrawn,charge.dispute.funds_reinstated,account.updated
+      --forward-to ${STRIPE_FORWARD_HOST:-host.docker.internal:3000}/api/webhooks/stripe
+      --forward-connect-to ${STRIPE_FORWARD_HOST:-host.docker.internal:3000}/api/webhooks/stripe/connect
+    extra_hosts:
+      - "host.docker.internal:host-gateway" # the API runs on the host

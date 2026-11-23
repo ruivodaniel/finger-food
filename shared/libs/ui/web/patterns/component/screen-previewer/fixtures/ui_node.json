@@ -1,0 +1,51 @@
+[
+  {
+    "id": "node-organizations",
+    "version": 1,
+    "type": "screen",
+    "surface": "web",
+    "title": "Organizations"
+  },
+  {
+    "id": "node-organization-info",
+    "version": 1,
+    "type": "screen",
+    "surface": "web",
+    "title": "Organization info"
+  },
+  {
+    "id": "node-organization-members",
+    "version": 1,
+    "type": "screen",
+    "surface": "web",
+    "title": "Organization members"
+  },
+  {
+    "id": "node-organization-layout",
+    "version": 1,
+    "type": "component",
+    "surface": "web",
+    "title": "Organization layout"
+  },
+  {
+    "id": "node-title-header",
+    "version": 1,
+    "type": "component",
+    "surface": "web",
+    "title": "Title header"
+  },
+  {
+    "id": "node-standalone-layout",
+    "version": 1,
+    "type": "component",
+    "surface": "web",
+    "title": "Standalone layout"
+  },
+  {
+    "id": "node-sidebar-shell",
+    "version": 1,
+    "type": "component",
+    "surface": "web",
+    "title": "Sidebar shell"
+  }
+]

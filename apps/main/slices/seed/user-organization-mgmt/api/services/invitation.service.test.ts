@@ -325,7 +325,7 @@ describe("invitation accept", () => {
   it("lax match — any owned email accepts, membership seated, no auto-verify", async () => {
     const { org, inv } = await inviteInto("company", "invited@test.dev");
     const joiner = await makeUser(t, "invited@test.dev");
-    await t.service.accept(PRIVATE, joiner.userId, inv.id);
+    await t.service.accept(testAc(joiner.userId), PRIVATE, inv.id);
 
     const member = await t.membershipRepo.findByOrgIdAndUserId(
       PRIVATE,
@@ -350,7 +350,7 @@ describe("invitation accept", () => {
     const owner = (await t.invitationRepo.findByIds(PRIVATE, [inv.id]))[0]!
       .inviterId;
 
-    await t.service.accept(PRIVATE, joiner.userId, inv.id);
+    await t.service.accept(testAc(joiner.userId), PRIVATE, inv.id);
 
     expect(t.accepted).toEqual([
       {
@@ -369,7 +369,7 @@ describe("invitation accept", () => {
     const { inv } = await inviteInto("company", "invited@test.dev");
     const joiner = await makeUser(t, "invited@test.dev");
 
-    await t.service.accept(PRIVATE, joiner.userId, inv.id);
+    await t.service.accept(testAc(joiner.userId), PRIVATE, inv.id);
 
     expect(t.accepted[0]?.accepterName).toBeNull();
   });
@@ -379,7 +379,7 @@ describe("invitation accept", () => {
     const joiner = await makeUser(t, "different@test.dev");
 
     await expect(
-      t.service.accept(PRIVATE, joiner.userId, inv.id),
+      t.service.accept(testAc(joiner.userId), PRIVATE, inv.id),
     ).rejects.toThrow();
 
     expect(t.accepted).toEqual([]);
@@ -388,7 +388,7 @@ describe("invitation accept", () => {
   it("strict match — a different owned email is rejected", async () => {
     const { inv } = await inviteInto("platform_admin", "exact@test.dev");
     const joiner = await makeUser(t, "different@test.dev");
-    await expect(t.service.accept(PRIVATE, joiner.userId, inv.id)).rejects.toThrow(
+    await expect(t.service.accept(testAc(joiner.userId), PRIVATE, inv.id)).rejects.toThrow(
       /different address/,
     );
   });
@@ -396,7 +396,7 @@ describe("invitation accept", () => {
   it("strict match — the exact owned email accepts", async () => {
     const { org, inv } = await inviteInto("platform_admin", "exact@test.dev");
     const joiner = await makeUser(t, "exact@test.dev");
-    await t.service.accept(PRIVATE, joiner.userId, inv.id);
+    await t.service.accept(testAc(joiner.userId), PRIVATE, inv.id);
     expect(
       await t.membershipRepo.findByOrgIdAndUserId(
       PRIVATE,
@@ -409,7 +409,7 @@ describe("invitation accept", () => {
   it("cross-org isolation — user B cannot accept user A's strict invitation", async () => {
     const { inv } = await inviteInto("platform_admin", "alice@test.dev");
     const bob = await makeUser(t, "bob@test.dev");
-    await expect(t.service.accept(PRIVATE, bob.userId, inv.id)).rejects.toThrow(
+    await expect(t.service.accept(testAc(bob.userId), PRIVATE, inv.id)).rejects.toThrow(
       /different address/,
     );
   });
@@ -417,10 +417,49 @@ describe("invitation accept", () => {
   it("rejects an already-accepted invitation", async () => {
     const { inv } = await inviteInto("company", "invited@test.dev");
     const joiner = await makeUser(t, "invited@test.dev");
-    await t.service.accept(PRIVATE, joiner.userId, inv.id);
-    await expect(t.service.accept(PRIVATE, joiner.userId, inv.id)).rejects.toThrow(
+    await t.service.accept(testAc(joiner.userId), PRIVATE, inv.id);
+    await expect(t.service.accept(testAc(joiner.userId), PRIVATE, inv.id)).rejects.toThrow(
       /no longer pending/,
     );
+  });
+
+  // A race: the service reads the invitation as pending, and a concurrent
+  // write moves it before the service writes its own status.
+  async function pendingReadButMovedTo(
+    invitationId: string,
+    status: "accepted" | "rejected",
+  ) {
+    const stored = (await t.invitationRepo.findByIds(PRIVATE, [invitationId]))[0]!;
+    const pendingSnapshot = { ...stored };
+    stored.status = status;
+    t.invitationRepo.findByIds = async () => [pendingSnapshot];
+    return stored;
+  }
+
+  it("an accept that loses the race to a reject seats nobody", async () => {
+    const { org, inv } = await inviteInto("company", "invited@test.dev");
+    const joiner = await makeUser(t, "invited@test.dev");
+    const stored = await pendingReadButMovedTo(inv.id, "rejected");
+
+    await expect(
+      t.service.accept(testAc(joiner.userId), PRIVATE, inv.id),
+    ).rejects.toThrow(/no longer pending/);
+    expect(
+      await t.membershipRepo.findByOrgIdAndUserId(PRIVATE, org.id, joiner.userId),
+    ).toBeNull();
+    expect(stored.status).toBe("rejected");
+    expect(t.accepted).toEqual([]);
+  });
+
+  it("a reject that loses the race to an accept leaves it accepted", async () => {
+    const { inv } = await inviteInto("company", "invited@test.dev");
+    const joiner = await makeUser(t, "invited@test.dev");
+    const stored = await pendingReadButMovedTo(inv.id, "accepted");
+
+    await expect(
+      t.service.reject(PRIVATE, joiner.userId, inv.id),
+    ).rejects.toThrow(/no longer pending/);
+    expect(stored.status).toBe("accepted");
   });
 
   it("published join consent — accept without decisions is a 400, nothing seated", async () => {
@@ -432,7 +471,7 @@ describe("invitation accept", () => {
       contentHtml: "<p>t</p>",
     });
     const joiner = await makeUser(t, "invited@test.dev");
-    await expect(t.service.accept(PRIVATE, joiner.userId, inv.id)).rejects.toThrow(
+    await expect(t.service.accept(testAc(joiner.userId), PRIVATE, inv.id)).rejects.toThrow(
       /termsAndConditions/,
     );
     expect(
@@ -454,7 +493,7 @@ describe("invitation accept", () => {
       contentHtml: "<p>t</p>",
     });
     const joiner = await makeUser(t, "invited@test.dev");
-    await t.service.accept(PRIVATE, joiner.userId, inv.id, [
+    await t.service.accept(testAc(joiner.userId), PRIVATE, inv.id, [
       { type: "termsAndConditions", accepted: true },
     ]);
     expect(
@@ -476,7 +515,7 @@ describe("invitation accept", () => {
   it("unpublished join consent — accept proceeds, consent waived", async () => {
     const { org, inv } = await inviteInto("company", "invited@test.dev");
     const joiner = await makeUser(t, "invited@test.dev");
-    await t.service.accept(PRIVATE, joiner.userId, inv.id);
+    await t.service.accept(testAc(joiner.userId), PRIVATE, inv.id);
     expect(
       await t.membershipRepo.findByOrgIdAndUserId(
       PRIVATE,

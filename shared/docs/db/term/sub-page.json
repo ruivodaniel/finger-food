@@ -1,0 +1,20 @@
+{
+ "id": "term/sub-page",
+ "kind": "term",
+ "title": "sub-page",
+ "status": "approved",
+ "subjects": [
+  "main",
+  "ui"
+ ],
+ "owner": "main/core",
+ "tags": [
+  "ui"
+ ],
+ "paths": [],
+ "term": {
+  "def": "A page that fills `main` inside a [[section]], rather than the whole [[page]] region.",
+  "aliases": [],
+  "proposed": true
+ }
+}

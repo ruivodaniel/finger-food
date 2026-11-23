@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-page-layout-toc-crud-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-page-layout-toc-crud",
+ "name": "default",
+ "title": "Table of contents with create, rename, delete",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

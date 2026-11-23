@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-metric-cards-feature-cards-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-metric-cards-feature-cards",
+ "name": "default",
+ "title": "Metric cards: feature cards",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

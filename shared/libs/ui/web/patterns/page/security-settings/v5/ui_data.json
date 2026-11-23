@@ -1,0 +1,912 @@
+{
+ "id": "ui-data-pattern-page-security-settings",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-page-security-settings",
+ "kind": "page",
+ "name": "security-settings",
+ "document": {
+  "kind": "page",
+  "schemaVersion": 1,
+  "name": "security-settings",
+  "version": 1,
+  "surface": "web",
+  "state": {
+   "open": false,
+   "current": "manage-organization",
+   "org": "org-acme-corp",
+   "mode": "light",
+   "section": "security"
+  },
+  "root": {
+   "use": {
+    "component": "SideNavigationScreen",
+    "version": "latest"
+   },
+   "args": {
+    "open": {
+     "bind": "state.open"
+    },
+    "current": {
+     "bind": "state.current"
+    },
+    "org": {
+     "bind": "state.org"
+    },
+    "mode": {
+     "bind": "state.mode"
+    },
+    "expand": "overlay",
+    "account": "separate",
+    "withOrganizations": false,
+    "withModes": false,
+    "toggleAt": "top",
+    "backLabel": "PROWD"
+   },
+   "on": {
+    "openChange": [
+     {
+      "set": {
+       "state": "open",
+       "to": {
+        "bind": "event.open"
+       }
+      }
+     }
+    ],
+    "navigate": [
+     {
+      "set": {
+       "state": "current",
+       "to": {
+        "bind": "event.id"
+       }
+      }
+     }
+    ],
+    "organizationChange": [
+     {
+      "set": {
+       "state": "org",
+       "to": {
+        "bind": "event.id"
+       }
+      }
+     }
+    ],
+    "modeChange": [
+     {
+      "set": {
+       "state": "mode",
+       "to": {
+        "bind": "event.id"
+       }
+      }
+     }
+    ],
+    "back": [
+     {
+      "set": {
+       "state": "current",
+       "to": "back"
+      }
+     }
+    ]
+   },
+   "slots": {
+    "children": [
+     {
+      "use": {
+       "component": "DoubleSidebarLayout",
+       "version": "latest"
+      },
+      "args": {
+       "scale": "sm"
+      },
+      "slots": {
+       "pageHeader": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "scale": "sm"
+         },
+         "children": [
+          {
+           "type": "Icon",
+           "props": {
+            "name": "settings",
+            "size": "md"
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--heading3",
+            "children": "Settings"
+           }
+          }
+         ]
+        }
+       ],
+       "mainContainer": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "col",
+          "data-testid": "security-page",
+          "scale": "lg"
+         },
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col",
+            "scale": "xs"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "as": "h2",
+              "element": "type--heading3",
+              "children": "Security"
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--body-small",
+              "children": "Two-factor authentication for your account, and the devices signed in to it.",
+              "emphasis": "quiet"
+             }
+            }
+           ]
+          },
+          {
+           "type": "Card",
+           "children": [
+            {
+             "type": "Content",
+             "children": [
+              {
+               "type": "Stack",
+               "props": {
+                "dir": "col",
+                "scale": "lg"
+               },
+               "children": [
+                {
+                 "type": "Stack",
+                 "props": {
+                  "dir": "col",
+                  "scale": "md"
+                 },
+                 "children": [
+                  {
+                   "type": "Text",
+                   "props": {
+                    "as": "h2",
+                    "element": "type--heading4",
+                    "children": "Two-factor authentication"
+                   }
+                  },
+                  {
+                   "type": "Text",
+                   "props": {
+                    "as": "p",
+                    "element": "type--body-small",
+                    "data-testid": "security-2fa-on"
+                   },
+                   "children": [
+                    {
+                     "type": "Text",
+                     "props": {
+                      "as": "span",
+                      "element": "type--body-small",
+                      "children": "Two-factor authentication is "
+                     }
+                    },
+                    {
+                     "type": "Text",
+                     "props": {
+                      "as": "strong",
+                      "children": "on"
+                     }
+                    },
+                    {
+                     "type": "Text",
+                     "props": {
+                      "as": "span",
+                      "element": "type--body-small",
+                      "children": ". Protected areas ask each session for a code from your authenticator app."
+                     }
+                    }
+                   ]
+                  },
+                  {
+                   "type": "Stack",
+                   "props": {
+                    "dir": "row",
+                    "scale": "sm"
+                   },
+                   "children": [
+                    {
+                     "type": "Button",
+                     "props": {
+                      "type": "button",
+                      "data-testid": "security-regenerate-btn",
+                      "children": "Regenerate backup codes",
+                      "emphasis": "secondary"
+                     }
+                    },
+                    {
+                     "type": "Button",
+                     "props": {
+                      "type": "button",
+                      "data-testid": "security-disable-btn",
+                      "children": "Turn off",
+                      "emphasis": "secondary",
+                      "status": "destructive"
+                     }
+                    }
+                   ]
+                  }
+                 ]
+                },
+                {
+                 "type": "Stack",
+                 "props": {
+                  "dir": "col",
+                  "scale": "md"
+                 },
+                 "children": [
+                  {
+                   "type": "Text",
+                   "props": {
+                    "as": "h2",
+                    "element": "type--heading4",
+                    "children": "Signed-in devices"
+                   }
+                  },
+                  {
+                   "type": "Stack",
+                   "props": {
+                    "dir": "col",
+                    "scale": "md"
+                   },
+                   "children": [
+                    {
+                     "type": "Stack",
+                     "props": {
+                      "dir": "row",
+                      "align": "center",
+                      "justify": "between",
+                      "data-testid": "security-device-macbook",
+                      "scale": "md"
+                     },
+                     "children": [
+                      {
+                       "type": "Stack",
+                       "props": {
+                        "dir": "col",
+                        "scale": "xs"
+                       },
+                       "children": [
+                        {
+                         "type": "Text",
+                         "props": {
+                          "as": "span",
+                          "element": "type--body",
+                          "children": "MacBook Pro, Chrome"
+                         }
+                        },
+                        {
+                         "type": "Text",
+                         "props": {
+                          "as": "span",
+                          "element": "type--body-small",
+                          "children": "Lisbon, Portugal - active now",
+                          "emphasis": "quiet"
+                         }
+                        }
+                       ]
+                      },
+                      {
+                       "type": "Badge",
+                       "props": {
+                        "scale": "xs",
+                        "children": "This device"
+                       }
+                      }
+                     ]
+                    },
+                    {
+                     "type": "Stack",
+                     "props": {
+                      "dir": "row",
+                      "align": "center",
+                      "justify": "between",
+                      "data-testid": "security-device-iphone",
+                      "scale": "md"
+                     },
+                     "children": [
+                      {
+                       "type": "Stack",
+                       "props": {
+                        "dir": "col",
+                        "scale": "xs"
+                       },
+                       "children": [
+                        {
+                         "type": "Text",
+                         "props": {
+                          "as": "span",
+                          "element": "type--body",
+                          "children": "iPhone 15, Safari"
+                         }
+                        },
+                        {
+                         "type": "Text",
+                         "props": {
+                          "as": "span",
+                          "element": "type--body-small",
+                          "children": "Lisbon, Portugal - 2 hours ago",
+                          "emphasis": "quiet"
+                         }
+                        }
+                       ]
+                      }
+                     ]
+                    },
+                    {
+                     "type": "Stack",
+                     "props": {
+                      "dir": "row",
+                      "align": "center",
+                      "justify": "between",
+                      "data-testid": "security-device-ipad",
+                      "scale": "md"
+                     },
+                     "children": [
+                      {
+                       "type": "Stack",
+                       "props": {
+                        "dir": "col",
+                        "scale": "xs"
+                       },
+                       "children": [
+                        {
+                         "type": "Text",
+                         "props": {
+                          "as": "span",
+                          "element": "type--body",
+                          "children": "iPad Air, Safari"
+                         }
+                        },
+                        {
+                         "type": "Text",
+                         "props": {
+                          "as": "span",
+                          "element": "type--body-small",
+                          "children": "Porto, Portugal - 3 days ago",
+                          "emphasis": "quiet"
+                         }
+                        }
+                       ]
+                      }
+                     ]
+                    },
+                    {
+                     "type": "Stack",
+                     "props": {
+                      "dir": "row",
+                      "align": "center",
+                      "justify": "between",
+                      "data-testid": "security-device-windows",
+                      "scale": "md"
+                     },
+                     "children": [
+                      {
+                       "type": "Stack",
+                       "props": {
+                        "dir": "col",
+                        "scale": "xs"
+                       },
+                       "children": [
+                        {
+                         "type": "Text",
+                         "props": {
+                          "as": "span",
+                          "element": "type--body",
+                          "children": "Windows desktop, Firefox"
+                         }
+                        },
+                        {
+                         "type": "Text",
+                         "props": {
+                          "as": "span",
+                          "element": "type--body-small",
+                          "children": "Madrid, Spain - 12 days ago",
+                          "emphasis": "quiet"
+                         }
+                        }
+                       ]
+                      }
+                     ]
+                    }
+                   ]
+                  },
+                  {
+                   "type": "Stack",
+                   "props": {
+                    "dir": "col",
+                    "scale": "md"
+                   },
+                   "children": [
+                    {
+                     "type": "Text",
+                     "props": {
+                      "as": "p",
+                      "element": "type--body-small",
+                      "children": "See something you don't recognize? Sign out everywhere else \u2014 this device stays signed in."
+                     }
+                    },
+                    {
+                     "type": "Stack",
+                     "props": {
+                      "dir": "row",
+                      "scale": "sm"
+                     },
+                     "children": [
+                      {
+                       "type": "Button",
+                       "props": {
+                        "type": "button",
+                        "data-testid": "security-sign-out-others-btn",
+                        "children": "Sign out of all other devices",
+                        "emphasis": "secondary"
+                       }
+                      }
+                     ]
+                    }
+                   ]
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "as": "a",
+              "href": "/my/settings/profile",
+              "element": "type--link",
+              "data-testid": "security-profile-link",
+              "children": "Profile \u2192"
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ],
+       "pageLeftSidebar": [
+        {
+         "type": "SidebarProvider",
+         "props": {
+          "open": true
+         },
+         "children": [
+          {
+           "type": "Sidebar",
+           "props": {
+            "collapsible": "none"
+           },
+           "children": [
+            {
+             "type": "SidebarContent",
+             "children": [
+              {
+               "type": "SidebarGroup",
+               "children": [
+                {
+                 "type": "SidebarMenu",
+                 "children": [
+                  {
+                   "type": "SidebarMenuItem",
+                   "children": [
+                    {
+                     "type": "SidebarMenuButton",
+                     "props": {
+                      "emphasis": "primary",
+                      "state": {
+                       "if": [
+                        {
+                         "eq": [
+                          {
+                           "bind": "state.section"
+                          },
+                          "account"
+                         ]
+                        },
+                        "selected"
+                       ]
+                      },
+                      "data-testid": "settings-nav-account-link"
+                     },
+                     "children": [
+                      {
+                       "type": "Stack",
+                       "props": {
+                        "dir": "row",
+                        "align": "center",
+                        "scale": "sm"
+                       },
+                       "children": [
+                        {
+                         "type": "Icon",
+                         "props": {
+                          "name": "mail"
+                         }
+                        },
+                        {
+                         "type": "Text",
+                         "props": {
+                          "as": "p",
+                          "element": "type--body",
+                          "children": "Account"
+                         }
+                        }
+                       ]
+                      }
+                     ],
+                     "on": {
+                      "click": [
+                       {
+                        "set": {
+                         "state": "section",
+                         "to": "account"
+                        }
+                       }
+                      ]
+                     }
+                    }
+                   ]
+                  },
+                  {
+                   "type": "SidebarMenuItem",
+                   "children": [
+                    {
+                     "type": "SidebarMenuButton",
+                     "props": {
+                      "emphasis": "primary",
+                      "state": {
+                       "if": [
+                        {
+                         "eq": [
+                          {
+                           "bind": "state.section"
+                          },
+                          "profile"
+                         ]
+                        },
+                        "selected"
+                       ]
+                      },
+                      "data-testid": "settings-nav-profile-link"
+                     },
+                     "children": [
+                      {
+                       "type": "Stack",
+                       "props": {
+                        "dir": "row",
+                        "align": "center",
+                        "scale": "sm"
+                       },
+                       "children": [
+                        {
+                         "type": "Icon",
+                         "props": {
+                          "name": "user"
+                         }
+                        },
+                        {
+                         "type": "Text",
+                         "props": {
+                          "as": "p",
+                          "element": "type--body",
+                          "children": "Profile"
+                         }
+                        }
+                       ]
+                      }
+                     ],
+                     "on": {
+                      "click": [
+                       {
+                        "set": {
+                         "state": "section",
+                         "to": "profile"
+                        }
+                       }
+                      ]
+                     }
+                    }
+                   ]
+                  },
+                  {
+                   "type": "SidebarMenuItem",
+                   "children": [
+                    {
+                     "type": "SidebarMenuButton",
+                     "props": {
+                      "emphasis": "primary",
+                      "state": {
+                       "if": [
+                        {
+                         "eq": [
+                          {
+                           "bind": "state.section"
+                          },
+                          "security"
+                         ]
+                        },
+                        "selected"
+                       ]
+                      },
+                      "data-testid": "settings-nav-security-link"
+                     },
+                     "children": [
+                      {
+                       "type": "Stack",
+                       "props": {
+                        "dir": "row",
+                        "align": "center",
+                        "scale": "sm"
+                       },
+                       "children": [
+                        {
+                         "type": "Icon",
+                         "props": {
+                          "name": "lock"
+                         }
+                        },
+                        {
+                         "type": "Text",
+                         "props": {
+                          "as": "p",
+                          "element": "type--body",
+                          "children": "Security"
+                         }
+                        }
+                       ]
+                      }
+                     ],
+                     "on": {
+                      "click": [
+                       {
+                        "set": {
+                         "state": "section",
+                         "to": "security"
+                        }
+                       }
+                      ]
+                     }
+                    }
+                   ]
+                  },
+                  {
+                   "type": "SidebarMenuItem",
+                   "children": [
+                    {
+                     "type": "SidebarMenuButton",
+                     "props": {
+                      "emphasis": "primary",
+                      "state": {
+                       "if": [
+                        {
+                         "eq": [
+                          {
+                           "bind": "state.section"
+                          },
+                          "legal"
+                         ]
+                        },
+                        "selected"
+                       ]
+                      },
+                      "data-testid": "settings-nav-legal-link"
+                     },
+                     "children": [
+                      {
+                       "type": "Stack",
+                       "props": {
+                        "dir": "row",
+                        "align": "center",
+                        "scale": "sm"
+                       },
+                       "children": [
+                        {
+                         "type": "Icon",
+                         "props": {
+                          "name": "bookOpen"
+                         }
+                        },
+                        {
+                         "type": "Text",
+                         "props": {
+                          "as": "p",
+                          "element": "type--body",
+                          "children": "Legal agreements"
+                         }
+                        }
+                       ]
+                      }
+                     ],
+                     "on": {
+                      "click": [
+                       {
+                        "set": {
+                         "state": "section",
+                         "to": "legal"
+                        }
+                       }
+                      ]
+                     }
+                    }
+                   ]
+                  },
+                  {
+                   "type": "SidebarMenuItem",
+                   "children": [
+                    {
+                     "type": "SidebarMenuButton",
+                     "props": {
+                      "emphasis": "primary",
+                      "state": {
+                       "if": [
+                        {
+                         "eq": [
+                          {
+                           "bind": "state.section"
+                          },
+                          "preferences"
+                         ]
+                        },
+                        "selected"
+                       ]
+                      },
+                      "data-testid": "settings-nav-preferences-link"
+                     },
+                     "children": [
+                      {
+                       "type": "Stack",
+                       "props": {
+                        "dir": "row",
+                        "align": "center",
+                        "scale": "sm"
+                       },
+                       "children": [
+                        {
+                         "type": "Icon",
+                         "props": {
+                          "name": "settings"
+                         }
+                        },
+                        {
+                         "type": "Text",
+                         "props": {
+                          "as": "p",
+                          "element": "type--body",
+                          "children": "Preferences"
+                         }
+                        }
+                       ]
+                      }
+                     ],
+                     "on": {
+                      "click": [
+                       {
+                        "set": {
+                         "state": "section",
+                         "to": "preferences"
+                        }
+                       }
+                      ]
+                     }
+                    }
+                   ]
+                  },
+                  {
+                   "type": "SidebarMenuItem",
+                   "children": [
+                    {
+                     "type": "SidebarMenuButton",
+                     "props": {
+                      "emphasis": "primary",
+                      "state": {
+                       "if": [
+                        {
+                         "eq": [
+                          {
+                           "bind": "state.section"
+                          },
+                          "notifications"
+                         ]
+                        },
+                        "selected"
+                       ]
+                      },
+                      "data-testid": "settings-nav-notifications-link"
+                     },
+                     "children": [
+                      {
+                       "type": "Stack",
+                       "props": {
+                        "dir": "row",
+                        "align": "center",
+                        "scale": "sm"
+                       },
+                       "children": [
+                        {
+                         "type": "Icon",
+                         "props": {
+                          "name": "bell"
+                         }
+                        },
+                        {
+                         "type": "Text",
+                         "props": {
+                          "as": "p",
+                          "element": "type--body",
+                          "children": "Notifications"
+                         }
+                        }
+                       ]
+                      }
+                     ],
+                     "on": {
+                      "click": [
+                       {
+                        "set": {
+                         "state": "section",
+                         "to": "notifications"
+                        }
+                       }
+                      ]
+                     }
+                    }
+                   ]
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     }
+    ]
+   }
+  }
+ }
+}

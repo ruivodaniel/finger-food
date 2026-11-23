@@ -1,0 +1,443 @@
+{
+ "id": "ui-data-pattern-component-forms-and-checkout-create-your-account",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-forms-and-checkout-create-your-account",
+ "kind": "component",
+ "name": "create-your-account",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "create-your-account",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Card",
+   "props": {
+    "className": "w-96"
+   },
+   "children": [
+    {
+     "type": "Content",
+     "props": {},
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "col",
+          "align": "center",
+          "scale": "md"
+         },
+         "children": [
+          {
+           "type": "Avatar",
+           "props": {
+            "scale": "lg"
+           },
+           "children": [
+            {
+             "type": "AvatarFallback",
+             "props": {},
+             "children": [
+              {
+               "type": "Icon",
+               "props": {
+                "name": "circle"
+               }
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col",
+            "align": "center",
+            "scale": "xs"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "as": "h1",
+              "element": "type--heading3",
+              "children": "Create your account"
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "p",
+              "element": "type--body",
+              "emphasis": "quiet",
+              "children": "Welcome! Please fill in the details to get started."
+             }
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "scale": "md"
+         },
+         "children": [
+          {
+           "type": "Button",
+           "props": {
+            "data-testid": "form-signup-google-btn",
+            "emphasis": "secondary",
+            "className": "flex-1 min-w-0",
+            "children": "Google"
+           }
+          },
+          {
+           "type": "Button",
+           "props": {
+            "data-testid": "form-signup-github-btn",
+            "emphasis": "secondary",
+            "className": "flex-1 min-w-0",
+            "children": "GitHub"
+           }
+          }
+         ]
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "scale": "md"
+         },
+         "children": [
+          {
+           "type": "Separator",
+           "props": {
+            "className": "flex-1 min-w-0"
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "emphasis": "quiet",
+            "children": "or"
+           }
+          },
+          {
+           "type": "Separator",
+           "props": {
+            "className": "flex-1 min-w-0"
+           }
+          }
+         ]
+        },
+        {
+         "type": "Form",
+         "props": {
+          "data-testid": "form-signup-form"
+         },
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col",
+            "scale": "md"
+           },
+           "children": [
+            {
+             "type": "Stack",
+             "props": {
+              "dir": "row",
+              "scale": "md"
+             },
+             "children": [
+              {
+               "type": "Stack",
+               "props": {
+                "dir": "col",
+                "className": "flex-1 min-w-0"
+               },
+               "children": [
+                {
+                 "type": "Stack",
+                 "props": {
+                  "dir": "row",
+                  "align": "center",
+                  "justify": "between",
+                  "scale": "sm"
+                 },
+                 "children": [
+                  {
+                   "type": "Label",
+                   "props": {
+                    "children": "First name"
+                   }
+                  },
+                  {
+                   "type": "Text",
+                   "props": {
+                    "as": "span",
+                    "element": "type--body-small",
+                    "emphasis": "quiet",
+                    "children": "Optional"
+                   }
+                  }
+                 ]
+                },
+                {
+                 "type": "Input",
+                 "props": {
+                  "data-testid": "form-signup-first-name-input"
+                 }
+                }
+               ]
+              },
+              {
+               "type": "Stack",
+               "props": {
+                "dir": "col",
+                "className": "flex-1 min-w-0"
+               },
+               "children": [
+                {
+                 "type": "Stack",
+                 "props": {
+                  "dir": "row",
+                  "align": "center",
+                  "justify": "between",
+                  "scale": "sm"
+                 },
+                 "children": [
+                  {
+                   "type": "Label",
+                   "props": {
+                    "children": "Last name"
+                   }
+                  },
+                  {
+                   "type": "Text",
+                   "props": {
+                    "as": "span",
+                    "element": "type--body-small",
+                    "emphasis": "quiet",
+                    "children": "Optional"
+                   }
+                  }
+                 ]
+                },
+                {
+                 "type": "Input",
+                 "props": {
+                  "data-testid": "form-signup-last-name-input"
+                 }
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "Stack",
+             "props": {
+              "dir": "col"
+             },
+             "children": [
+              {
+               "type": "Label",
+               "props": {
+                "children": "Username"
+               }
+              },
+              {
+               "type": "Input",
+               "props": {
+                "data-testid": "form-signup-username-input"
+               }
+              }
+             ]
+            },
+            {
+             "type": "Stack",
+             "props": {
+              "dir": "col"
+             },
+             "children": [
+              {
+               "type": "Label",
+               "props": {
+                "children": "Email address"
+               }
+              },
+              {
+               "type": "Input",
+               "props": {
+                "type": "email",
+                "data-testid": "form-signup-email-input"
+               }
+              }
+             ]
+            },
+            {
+             "type": "Stack",
+             "props": {
+              "dir": "col"
+             },
+             "children": [
+              {
+               "type": "Label",
+               "props": {
+                "children": "Phone number"
+               }
+              },
+              {
+               "type": "PhoneInput",
+               "props": {
+                "data-testid": "form-signup-phone-input",
+                "countryOptions": [
+                 {
+                  "code": "US",
+                  "dialingCode": "1",
+                  "flag": "🇺🇸",
+                  "name": "United States"
+                 },
+                 {
+                  "code": "GB",
+                  "dialingCode": "44",
+                  "flag": "🇬🇧",
+                  "name": "United Kingdom"
+                 },
+                 {
+                  "code": "PT",
+                  "dialingCode": "351",
+                  "flag": "🇵🇹",
+                  "name": "Portugal"
+                 }
+                ],
+                "defaultCountryCode": "US",
+                "placeholder": "",
+                "value": ""
+               }
+              }
+             ]
+            },
+            {
+             "type": "Stack",
+             "props": {
+              "dir": "col"
+             },
+             "children": [
+              {
+               "type": "Label",
+               "props": {
+                "children": "Password"
+               }
+              },
+              {
+               "type": "Input",
+               "props": {
+                "type": "password",
+                "data-testid": "form-signup-password-input"
+               }
+              }
+             ]
+            },
+            {
+             "type": "Button",
+             "props": {
+              "data-testid": "form-signup-continue-btn",
+              "type": "submit",
+              "emphasis": "primary",
+              "fill": true,
+              "buttonType": "text-icon",
+              "endIcon": "arrowRight",
+              "children": "Continue"
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Footer",
+     "props": {},
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "align": "center",
+        "className": "w-full",
+        "scale": "sm"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "scale": "xs"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "emphasis": "quiet",
+            "children": "Already have an account?"
+           }
+          },
+          {
+           "type": "Button",
+           "props": {
+            "data-testid": "form-signup-signin-btn",
+            "asChild": true,
+            "emphasis": "quiet",
+            "scale": "sm"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "as": "a",
+              "href": "#",
+              "data-testid": "form-signup-signin-link",
+              "children": "Sign in"
+             }
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body-extra-small",
+          "emphasis": "quiet",
+          "children": "Secured by Clerk"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-container-header-5-with-tabs-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-container-header-5-with-tabs",
+ "name": "default",
+ "title": "Container header 5: the tabs stand in a second header that says the concept tabs",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

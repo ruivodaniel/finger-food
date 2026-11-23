@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-chat-thread-and-composer-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-chat-thread-and-composer",
+ "name": "default",
+ "title": "Chat: thread and composer",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

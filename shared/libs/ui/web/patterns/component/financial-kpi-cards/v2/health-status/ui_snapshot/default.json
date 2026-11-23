@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-financial-kpi-cards-health-status-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-financial-kpi-cards-health-status",
+ "name": "default",
+ "title": "Financial kpi cards: health status",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-page-layout-second-nav-bar",
+ "version": 1,
+ "type": "screen",
+ "surface": "web",
+ "title": "Second navigation bar"
+}

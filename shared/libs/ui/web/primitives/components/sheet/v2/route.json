@@ -1,0 +1,7 @@
+{
+ "id": "route-primitive-sheet",
+ "version": 1,
+ "surface": "web",
+ "path": "/primitives/sheet",
+ "uiNodeId": "ui-node-primitive-sheet"
+}

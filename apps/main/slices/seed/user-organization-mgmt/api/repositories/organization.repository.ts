@@ -15,6 +15,7 @@ import {
   uomOrganization,
   type UomOrganizationSelect,
 } from "../models/organization.model";
+import { containing } from "../shared/like-pattern";
 
 export interface FindAllOrganizationsQuery {
   search?: string;
@@ -39,17 +40,30 @@ export interface OrganizationPatch {
 }
 
 export interface OrganizationRepository {
-  /** AC42: reached only via `organizationService.create` (a private write). */
+  /** Gated insert — the gate takes the create verdict; null when denied.
+   * AC42: reached only via `organizationService.create` (a private write). */
   create(
     visibility: Private,
     input: CreateOrganizationRecord,
-  ): Promise<UomOrganizationSelect>;
+    permissions: Iterable<string>,
+    gateDb: GatedDb<SchemaTables>,
+  ): Promise<UomOrganizationSelect | null>;
   /** Bulk lookup — want one? pass `[id]` and read the first row. Ungated narrow
    * accessor (org facts for other services); the gated read is `findByIdsScoped`.
    * AC42: Public — `organizationService.getOrg` is reached by the public
    * invitation capability view (`getPublicView`), so this leaf must accept a
    * public flow too. */
   findByIds(visibility: Public, ids: string[]): Promise<UomOrganizationSelect[]>;
+  /** Name search over the live orgs the engine's read Scope admits,
+   * name-ordered, at most `limit`. Only the id and the name come back. AC42:
+   * private-only surface. */
+  searchByName(
+    visibility: Private,
+    search: string,
+    limit: number,
+    scope: Scope<"organization", "read">,
+    gateDb: GatedDb<SchemaTables>,
+  ): Promise<Array<{ id: string; name: string }>>;
   /** Gated bulk lookup — the same by-id read, but the engine's read Scope admits
    * the rows and the gated handle executes it (the getById surface). AC42:
    * private — only the authenticated `getById` reaches this. */
@@ -63,8 +77,8 @@ export interface OrganizationRepository {
    * only from the private `create` flow. */
   countByType(visibility: Private, type: string): Promise<number>;
   /** Directory listing — name search + type filter, paginated, name-ordered.
-   * The engine's read Scope admits the org ids; the display query composes over
-   * them (search/type/status/pagination). AC42: private-only surface. */
+   * Entirely under the engine's read Scope: the filters narrow it, the page
+   * and the total are taken through it. AC42: private-only surface. */
   findAll(
     visibility: Private,
     query: FindAllOrganizationsQuery,
@@ -106,7 +120,9 @@ export class DrizzleOrganizationRepository implements OrganizationRepository {
   async create(
     visibility: Private,
     input: CreateOrganizationRecord,
-  ): Promise<UomOrganizationSelect> {
+    permissions: Iterable<string>,
+    gateDb: GatedDb<SchemaTables>,
+  ): Promise<UomOrganizationSelect | null> {
     void visibility; // leaf — the demand was enforced at the caller
     const now = new Date();
     const row = {
@@ -119,8 +135,10 @@ export class DrizzleOrganizationRepository implements OrganizationRepository {
       updatedAt: now,
       deletedAt: null,
     };
-    await this.deps.db.insert(uomOrganization).values(row);
-    return row;
+    // The gate runs the verdict and inserts; null ⇒ refused, and the service
+    // decides what that means.
+    const inserted = await gateDb.create("organization", permissions, row);
+    return (inserted as UomOrganizationSelect | null) ?? null;
   }
 
   async findByIds(
@@ -135,6 +153,31 @@ export class DrizzleOrganizationRepository implements OrganizationRepository {
       .where(
         and(inArray(uomOrganization.id, ids), isNull(uomOrganization.deletedAt)),
       );
+  }
+
+  async searchByName(
+    visibility: Private,
+    search: string,
+    limit: number,
+    scope: Scope<"organization", "read">,
+    gateDb: GatedDb<SchemaTables>,
+  ): Promise<Array<{ id: string; name: string }>> {
+    void visibility; // leaf
+    // The read Scope is the access boundary; the name match and live rows
+    // narrow it (AC12).
+    const rows = (await gateDb
+      .read("organization", scope)
+      .where(
+        and(
+          ilike(uomOrganization.name, containing(search)),
+          isNull(uomOrganization.deletedAt),
+        )!,
+      )
+      .orderBy(asc(uomOrganization.name))
+      .limit(limit)
+      .rows()) as UomOrganizationSelect[];
+    // The gated read can't pick columns, so the row stops here.
+    return rows.map((org) => ({ id: org.id, name: org.name }));
   }
 
   async findByIdsScoped(
@@ -177,17 +220,10 @@ export class DrizzleOrganizationRepository implements OrganizationRepository {
     gateDb: GatedDb<SchemaTables>,
   ): Promise<{ rows: UomOrganizationSelect[]; total: number }> {
     void visibility; // leaf
-    // The engine's read Scope decides which orgs are visible; the directory
-    // query composes over those ids. Materialize the admitted ids through the
-    // gated handle, then run the display filters (search/type/status) +
-    // pagination against them — identical WHERE for list + count (API5).
-    const admitted = (await gateDb.read("organization", scope).rows()) as {
-      id: string;
-    }[];
-    const admittedIds = admitted.map((r) => r.id);
-    if (admittedIds.length === 0) return { rows: [], total: 0 };
-    const where = and(
-      inArray(uomOrganization.id, admittedIds),
+    // The engine's read Scope decides which orgs are visible; the display
+    // filters (search/type/status) narrow it (AND), and the page and the total
+    // are both taken through it — identical WHERE for list + count (API5).
+    const filters = and(
       isNull(uomOrganization.deletedAt),
       query.search
         ? ilike(uomOrganization.name, `%${query.search}%`)
@@ -198,19 +234,17 @@ export class DrizzleOrganizationRepository implements OrganizationRepository {
           ? sql`coalesce(${uomOrganization.metadata}->>'status', 'active') = 'active'`
           : sql`${uomOrganization.metadata}->>'status' = ${query.status}`
         : undefined,
-    );
-    const [counted] = await this.deps.db
-      .select({ value: count() })
-      .from(uomOrganization)
-      .where(where);
-    const rows = await this.deps.db
-      .select()
-      .from(uomOrganization)
-      .where(where)
-      .orderBy(asc(uomOrganization.name))
-      .limit(query.pageSize)
-      .offset((query.page - 1) * query.pageSize);
-    return { rows, total: counted?.value ?? 0 };
+    )!;
+    const admitted = () => gateDb.read("organization", scope).where(filters);
+    const [rows, total] = await Promise.all([
+      admitted()
+        .orderBy(asc(uomOrganization.name))
+        .limit(query.pageSize)
+        .offset((query.page - 1) * query.pageSize)
+        .rows(),
+      admitted().count(),
+    ]);
+    return { rows: rows as UomOrganizationSelect[], total };
   }
 
   async update(

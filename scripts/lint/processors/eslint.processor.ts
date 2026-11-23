@@ -63,7 +63,8 @@ export async function processEslintControls(
         parser: tseslint.parser,
         parserOptions: {
           tsconfigRootDir: ctx.rootDir,
-          project: path.resolve(ctx.rootDir, "tsconfig.base.json"),
+          // the base config without the folders the lint ignores (see the file)
+          project: path.resolve(ctx.rootDir, "scripts/lint/tsconfig.eslint.json"),
         },
       },
       rules: globalRules,

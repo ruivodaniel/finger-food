@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-component-table-stacked-cells-regions-stackedhead",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "StackedHead"
+}

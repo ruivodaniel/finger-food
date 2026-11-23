@@ -1,5 +1,5 @@
-import { FixtureBody, Mode, Ramp, Row, Swatch, Token } from "../_chrome";
-import { matching, modeColumns, useThemeVars } from "../_theme-vars";
+import { FixtureBody, Mode, Ramp, Row, Swatch, Token } from "../../lib/_chrome";
+import { matching, modeColumns, useThemeVars } from "../../lib/_theme-vars";
 
 /**
  * Color derivations — what the engine computes from the anchors and the

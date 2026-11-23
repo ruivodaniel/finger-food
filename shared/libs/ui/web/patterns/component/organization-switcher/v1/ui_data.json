@@ -1,0 +1,258 @@
+{
+ "id": "ui-data-pattern-component-organization-switcher",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-organization-switcher",
+ "kind": "component",
+ "name": "organization-switcher",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "organization-switcher",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "state": {
+   "active": "org-acme-corp"
+  },
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "size": "fill",
+    "scale": "xl"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "size": "fill",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body-extra-small",
+        "children": "name",
+        "emphasis": "quiet"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "wrap": true,
+        "size": "fill",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "use": {
+          "component": "OrganizationSwitcher",
+          "version": "latest"
+         },
+         "args": {
+          "organizations": [
+           {
+            "id": "org-acme-corp",
+            "name": "Acme Corp",
+            "type": "Company"
+           },
+           {
+            "id": "org-harbour-lettings",
+            "name": "Harbour Lettings",
+            "type": "Agency"
+           },
+           {
+            "id": "org-northwind-traders",
+            "name": "Northwind Traders",
+            "type": "Company"
+           },
+           {
+            "id": "org-mill-street-studio",
+            "name": "Mill Street Studio",
+            "type": "Freelancer"
+           }
+          ],
+          "activeId": {
+           "bind": "state.active"
+          }
+         },
+         "on": {
+          "change": [
+           {
+            "set": {
+             "state": "active",
+             "to": {
+              "bind": "event.id"
+             }
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "size": "fill",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body-extra-small",
+        "children": "name and type",
+        "emphasis": "quiet"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "wrap": true,
+        "size": "fill",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "use": {
+          "component": "OrganizationSwitcher",
+          "version": "latest"
+         },
+         "args": {
+          "organizations": [
+           {
+            "id": "org-acme-corp",
+            "name": "Acme Corp",
+            "type": "Company"
+           },
+           {
+            "id": "org-harbour-lettings",
+            "name": "Harbour Lettings",
+            "type": "Agency"
+           },
+           {
+            "id": "org-northwind-traders",
+            "name": "Northwind Traders",
+            "type": "Company"
+           },
+           {
+            "id": "org-mill-street-studio",
+            "name": "Mill Street Studio",
+            "type": "Freelancer"
+           }
+          ],
+          "activeId": {
+           "bind": "state.active"
+          },
+          "showType": true
+         },
+         "on": {
+          "change": [
+           {
+            "set": {
+             "state": "active",
+             "to": {
+              "bind": "event.id"
+             }
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "size": "fill",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body-extra-small",
+        "children": "compact: the logo alone",
+        "emphasis": "quiet"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "wrap": true,
+        "size": "fill",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "use": {
+          "component": "OrganizationSwitcher",
+          "version": "latest"
+         },
+         "args": {
+          "organizations": [
+           {
+            "id": "org-acme-corp",
+            "name": "Acme Corp",
+            "type": "Company"
+           },
+           {
+            "id": "org-harbour-lettings",
+            "name": "Harbour Lettings",
+            "type": "Agency"
+           },
+           {
+            "id": "org-northwind-traders",
+            "name": "Northwind Traders",
+            "type": "Company"
+           },
+           {
+            "id": "org-mill-street-studio",
+            "name": "Mill Street Studio",
+            "type": "Freelancer"
+           }
+          ],
+          "activeId": {
+           "bind": "state.active"
+          },
+          "compact": true
+         },
+         "on": {
+          "change": [
+           {
+            "set": {
+             "state": "active",
+             "to": {
+              "bind": "event.id"
+             }
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

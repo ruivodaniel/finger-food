@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-forms-and-checkout-create-your-account-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-forms-and-checkout-create-your-account",
+ "name": "default",
+ "title": "Forms and checkout: create your account",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

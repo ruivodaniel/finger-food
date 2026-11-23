@@ -1,0 +1,98 @@
+{
+ "id": "ui-data-pattern-component-side-navigation-6-floating-compressed",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-side-navigation-6-floating-compressed",
+ "kind": "component",
+ "name": "side-navigation-6-floating-compressed",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "side-navigation-6-floating-compressed",
+  "version": 1,
+  "surface": "web",
+  "state": {
+   "open": false,
+   "current": "dashboard",
+   "org": "org-acme-corp",
+   "mode": "light"
+  },
+  "root": {
+   "use": {
+    "component": "SideNavigationScreen",
+    "version": "latest"
+   },
+   "args": {
+    "open": {
+     "bind": "state.open"
+    },
+    "current": {
+     "bind": "state.current"
+    },
+    "org": {
+     "bind": "state.org"
+    },
+    "mode": {
+     "bind": "state.mode"
+    },
+    "text": "The sidebar floats and is compressed: its zone has padding on both axes, so it is inset and shorter than the page.",
+    "expand": "overlay",
+    "account": "separate",
+    "withOrganizations": true,
+    "withModes": true,
+    "zoneConcept": "sidebar-zone-floating-compressed",
+    "sidebarConcept": "sidebar-floating-compressed",
+    "toggleAt": "none"
+   },
+   "on": {
+    "openChange": [
+     {
+      "set": {
+       "state": "open",
+       "to": {
+        "bind": "event.open"
+       }
+      }
+     }
+    ],
+    "navigate": [
+     {
+      "set": {
+       "state": "current",
+       "to": {
+        "bind": "event.id"
+       }
+      }
+     }
+    ],
+    "organizationChange": [
+     {
+      "set": {
+       "state": "org",
+       "to": {
+        "bind": "event.id"
+       }
+      }
+     }
+    ],
+    "modeChange": [
+     {
+      "set": {
+       "state": "mode",
+       "to": {
+        "bind": "event.id"
+       }
+      }
+     }
+    ],
+    "back": [
+     {
+      "set": {
+       "state": "current",
+       "to": "back"
+      }
+     }
+    ]
+   }
+  }
+ }
+}

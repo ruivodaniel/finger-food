@@ -1,0 +1,629 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "file-diffs",
+ "version": 1,
+ "surface": "web",
+ "measure": "md",
+ "root": {
+  "type": "List",
+  "props": {
+   "className": "w-full max-w-2xl"
+  },
+  "children": [
+   {
+    "type": "ListItem",
+    "props": {
+     "state": "selected",
+     "className": "gap-3"
+    },
+    "children": [
+     {
+      "type": "ListItemIcon",
+      "props": {},
+      "children": [
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--body",
+         "emphasis": "quiet"
+        },
+        "children": [
+         {
+          "type": "Icon",
+          "props": {
+           "name": "code",
+           "size": "sm"
+          }
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "ListItemContent",
+      "props": {},
+      "children": [
+       {
+        "type": "ListItemTitle",
+        "props": {},
+        "children": [
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--code",
+           "children": "preview.tsx"
+          }
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "ListItemAction",
+      "props": {},
+      "children": [
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "gap": 12,
+         "align": "center"
+        },
+        "children": [
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "row",
+           "gap": 2,
+           "align": "baseline"
+          },
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body",
+             "status": "success",
+             "children": "+16"
+            }
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body",
+             "status": "error",
+             "children": "−0"
+            }
+           }
+          ]
+         },
+         {
+          "type": "Icon",
+          "props": {
+           "name": "chevronRight",
+           "size": "sm"
+          }
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "ListItem",
+    "props": {
+     "className": "gap-3"
+    },
+    "children": [
+     {
+      "type": "ListItemIcon",
+      "props": {},
+      "children": [
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--body",
+         "emphasis": "quiet"
+        },
+        "children": [
+         {
+          "type": "Icon",
+          "props": {
+           "name": "code",
+           "size": "sm"
+          }
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "ListItemContent",
+      "props": {},
+      "children": [
+       {
+        "type": "ListItemTitle",
+        "props": {},
+        "children": [
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--code",
+           "children": "index.ts"
+          }
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "ListItemAction",
+      "props": {},
+      "children": [
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "gap": 12,
+         "align": "center"
+        },
+        "children": [
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "row",
+           "gap": 2,
+           "align": "baseline"
+          },
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body",
+             "status": "success",
+             "children": "+1"
+            }
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body",
+             "status": "error",
+             "children": "−0"
+            }
+           }
+          ]
+         },
+         {
+          "type": "Icon",
+          "props": {
+           "name": "chevronRight",
+           "size": "sm"
+          }
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "ListItem",
+    "props": {
+     "className": "gap-3"
+    },
+    "children": [
+     {
+      "type": "ListItemIcon",
+      "props": {},
+      "children": [
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--body",
+         "emphasis": "quiet"
+        },
+        "children": [
+         {
+          "type": "Icon",
+          "props": {
+           "name": "code",
+           "size": "sm"
+          }
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "ListItemContent",
+      "props": {},
+      "children": [
+       {
+        "type": "ListItemTitle",
+        "props": {},
+        "children": [
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--code",
+           "children": "input.tsx"
+          }
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "ListItemAction",
+      "props": {},
+      "children": [
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "gap": 12,
+         "align": "center"
+        },
+        "children": [
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "row",
+           "gap": 2,
+           "align": "baseline"
+          },
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body",
+             "status": "success",
+             "children": "+14"
+            }
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body",
+             "status": "error",
+             "children": "−1"
+            }
+           }
+          ]
+         },
+         {
+          "type": "Icon",
+          "props": {
+           "name": "chevronRight",
+           "size": "sm"
+          }
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "ListItem",
+    "props": {
+     "className": "gap-3"
+    },
+    "children": [
+     {
+      "type": "ListItemIcon",
+      "props": {},
+      "children": [
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--body",
+         "emphasis": "quiet"
+        },
+        "children": [
+         {
+          "type": "Icon",
+          "props": {
+           "name": "code",
+           "size": "sm"
+          }
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "ListItemContent",
+      "props": {},
+      "children": [
+       {
+        "type": "ListItemTitle",
+        "props": {},
+        "children": [
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--code",
+           "children": "main.tsx"
+          }
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "ListItemAction",
+      "props": {},
+      "children": [
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "gap": 12,
+         "align": "center"
+        },
+        "children": [
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "row",
+           "gap": 2,
+           "align": "baseline"
+          },
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body",
+             "status": "success",
+             "children": "+7"
+            }
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body",
+             "status": "error",
+             "children": "−2"
+            }
+           }
+          ]
+         },
+         {
+          "type": "Icon",
+          "props": {
+           "name": "chevronRight",
+           "size": "sm"
+          }
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "ListItem",
+    "props": {
+     "className": "gap-3"
+    },
+    "children": [
+     {
+      "type": "ListItemIcon",
+      "props": {},
+      "children": [
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--body",
+         "emphasis": "quiet"
+        },
+        "children": [
+         {
+          "type": "Icon",
+          "props": {
+           "name": "code",
+           "size": "sm"
+          }
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "ListItemContent",
+      "props": {},
+      "children": [
+       {
+        "type": "ListItemTitle",
+        "props": {},
+        "children": [
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--code",
+           "children": "routes.ts"
+          }
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "ListItemAction",
+      "props": {},
+      "children": [
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "gap": 12,
+         "align": "center"
+        },
+        "children": [
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "row",
+           "gap": 2,
+           "align": "baseline"
+          },
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body",
+             "status": "success",
+             "children": "+21"
+            }
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body",
+             "status": "error",
+             "children": "−47"
+            }
+           }
+          ]
+         },
+         {
+          "type": "Icon",
+          "props": {
+           "name": "chevronRight",
+           "size": "sm"
+          }
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "ListItem",
+    "props": {
+     "className": "gap-3"
+    },
+    "children": [
+     {
+      "type": "ListItemIcon",
+      "props": {},
+      "children": [
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--body",
+         "emphasis": "quiet"
+        },
+        "children": [
+         {
+          "type": "Icon",
+          "props": {
+           "name": "code",
+           "size": "sm"
+          }
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "ListItemContent",
+      "props": {},
+      "children": [
+       {
+        "type": "ListItemTitle",
+        "props": {},
+        "children": [
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--code",
+           "children": "step-screen.tsx"
+          }
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "ListItemAction",
+      "props": {},
+      "children": [
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "gap": 12,
+         "align": "center"
+        },
+        "children": [
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "row",
+           "gap": 2,
+           "align": "baseline"
+          },
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body",
+             "status": "success",
+             "children": "+10"
+            }
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body",
+             "status": "error",
+             "children": "−4"
+            }
+           }
+          ]
+         },
+         {
+          "type": "Icon",
+          "props": {
+           "name": "chevronRight",
+           "size": "sm"
+          }
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

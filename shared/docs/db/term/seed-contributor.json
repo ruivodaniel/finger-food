@@ -1,0 +1,19 @@
+{
+ "id": "term/seed-contributor",
+ "kind": "term",
+ "title": "seed contributor",
+ "status": "approved",
+ "subjects": [
+  "docs"
+ ],
+ "owner": "documentation",
+ "tags": [
+  "docs",
+  "audience"
+ ],
+ "paths": [],
+ "term": {
+  "def": "Whoever authors the seed: the core, the seed slices, the libraries and their primitives, patterns and engines, the infrastructure, the documentation system. The audience of the documents that say how the seed is built inside. One of the three audiences: [[seed contributor]], [[seed consumer]], [[product contributor]]; every document and every skill group names its audience.",
+  "aliases": []
+ }
+}

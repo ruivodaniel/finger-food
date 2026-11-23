@@ -1,0 +1,7 @@
+{
+ "id": "route-pattern-page-security-settings",
+ "version": 1,
+ "surface": "web",
+ "path": "/patterns/page/security-settings",
+ "uiNodeId": "ui-node-pattern-page-security-settings"
+}

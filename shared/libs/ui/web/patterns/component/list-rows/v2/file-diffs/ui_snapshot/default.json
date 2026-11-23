@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-list-rows-file-diffs-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-list-rows-file-diffs",
+ "name": "default",
+ "title": "List rows: file diffs",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

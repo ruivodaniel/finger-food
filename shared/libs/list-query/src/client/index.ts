@@ -34,5 +34,6 @@ export {
 
 export {
   ListPagination,
+  listPaginationSchema,
   type ListPaginationProps,
 } from "./list-pagination";

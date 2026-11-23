@@ -1,5 +1,5 @@
-import { FixtureBody, Row, Token } from "../_chrome";
-import { useThemeVars, withPrefix } from "../_theme-vars";
+import { FixtureBody, Row, Token } from "../../lib/_chrome";
+import { useThemeVars, withPrefix } from "../../lib/_theme-vars";
 
 /** Border widths — every `border-width-*` variable as a stroke. */
 export default function BordersFixture() {

@@ -1,0 +1,528 @@
+{
+ "id": "ui-data-primitive-toggle",
+ "version": 1,
+ "uiNodeId": "ui-node-primitive-toggle",
+ "kind": "component",
+ "name": "primitive-toggle",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "primitive-toggle",
+  "version": 1,
+  "surface": "web",
+  "state": {
+   "emphasis_hero_pressed": true,
+   "emphasis_primary_pressed": true,
+   "emphasis_secondary_pressed": true,
+   "emphasis_tertiary_pressed": true,
+   "emphasis_quiet_pressed": true,
+   "status_neutral_pressed": true,
+   "status_success_pressed": true,
+   "status_warning_pressed": true,
+   "status_error_pressed": true,
+   "scale_xs_pressed": true,
+   "scale_sm_pressed": true,
+   "scale_md_pressed": true,
+   "scale_lg_pressed": true,
+   "scale_xl_pressed": true,
+   "group_value": []
+  },
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "align": "center",
+    "scale": "2xl"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "emphasis"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Toggle",
+         "on": {
+          "pressedChange": [
+           {
+            "set": {
+             "state": "emphasis_hero_pressed",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "emphasis": "hero",
+          "pressed": {
+           "bind": "state.emphasis_hero_pressed"
+          },
+          "children": "Hero",
+          "data-testid": "toggle-emphasis-1-btn"
+         }
+        },
+        {
+         "type": "Toggle",
+         "on": {
+          "pressedChange": [
+           {
+            "set": {
+             "state": "emphasis_primary_pressed",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "emphasis": "primary",
+          "pressed": {
+           "bind": "state.emphasis_primary_pressed"
+          },
+          "children": "Primary",
+          "data-testid": "toggle-emphasis-2-btn"
+         }
+        },
+        {
+         "type": "Toggle",
+         "on": {
+          "pressedChange": [
+           {
+            "set": {
+             "state": "emphasis_secondary_pressed",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "emphasis": "secondary",
+          "pressed": {
+           "bind": "state.emphasis_secondary_pressed"
+          },
+          "children": "Secondary",
+          "data-testid": "toggle-emphasis-3-btn"
+         }
+        },
+        {
+         "type": "Toggle",
+         "on": {
+          "pressedChange": [
+           {
+            "set": {
+             "state": "emphasis_tertiary_pressed",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "emphasis": "tertiary",
+          "pressed": {
+           "bind": "state.emphasis_tertiary_pressed"
+          },
+          "children": "Tertiary",
+          "data-testid": "toggle-emphasis-4-btn"
+         }
+        },
+        {
+         "type": "Toggle",
+         "on": {
+          "pressedChange": [
+           {
+            "set": {
+             "state": "emphasis_quiet_pressed",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "emphasis": "quiet",
+          "pressed": {
+           "bind": "state.emphasis_quiet_pressed"
+          },
+          "children": "Quiet",
+          "data-testid": "toggle-emphasis-5-btn"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "status"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Toggle",
+         "on": {
+          "pressedChange": [
+           {
+            "set": {
+             "state": "status_neutral_pressed",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "status": "neutral",
+          "pressed": {
+           "bind": "state.status_neutral_pressed"
+          },
+          "children": "Neutral",
+          "data-testid": "toggle-status-1-btn"
+         }
+        },
+        {
+         "type": "Toggle",
+         "on": {
+          "pressedChange": [
+           {
+            "set": {
+             "state": "status_success_pressed",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "status": "success",
+          "pressed": {
+           "bind": "state.status_success_pressed"
+          },
+          "children": "Success",
+          "data-testid": "toggle-status-2-btn"
+         }
+        },
+        {
+         "type": "Toggle",
+         "on": {
+          "pressedChange": [
+           {
+            "set": {
+             "state": "status_warning_pressed",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "status": "warning",
+          "pressed": {
+           "bind": "state.status_warning_pressed"
+          },
+          "children": "Warning",
+          "data-testid": "toggle-status-3-btn"
+         }
+        },
+        {
+         "type": "Toggle",
+         "on": {
+          "pressedChange": [
+           {
+            "set": {
+             "state": "status_error_pressed",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "status": "error",
+          "pressed": {
+           "bind": "state.status_error_pressed"
+          },
+          "children": "Error",
+          "data-testid": "toggle-status-4-btn"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "scale"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Toggle",
+         "on": {
+          "pressedChange": [
+           {
+            "set": {
+             "state": "scale_xs_pressed",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "scale": "xs",
+          "pressed": {
+           "bind": "state.scale_xs_pressed"
+          },
+          "children": "XS",
+          "data-testid": "toggle-scale-1-btn"
+         }
+        },
+        {
+         "type": "Toggle",
+         "on": {
+          "pressedChange": [
+           {
+            "set": {
+             "state": "scale_sm_pressed",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "scale": "sm",
+          "pressed": {
+           "bind": "state.scale_sm_pressed"
+          },
+          "children": "SM",
+          "data-testid": "toggle-scale-2-btn"
+         }
+        },
+        {
+         "type": "Toggle",
+         "on": {
+          "pressedChange": [
+           {
+            "set": {
+             "state": "scale_md_pressed",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "scale": "md",
+          "pressed": {
+           "bind": "state.scale_md_pressed"
+          },
+          "children": "MD",
+          "data-testid": "toggle-scale-3-btn"
+         }
+        },
+        {
+         "type": "Toggle",
+         "on": {
+          "pressedChange": [
+           {
+            "set": {
+             "state": "scale_lg_pressed",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "scale": "lg",
+          "pressed": {
+           "bind": "state.scale_lg_pressed"
+          },
+          "children": "LG",
+          "data-testid": "toggle-scale-4-btn"
+         }
+        },
+        {
+         "type": "Toggle",
+         "on": {
+          "pressedChange": [
+           {
+            "set": {
+             "state": "scale_xl_pressed",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "scale": "xl",
+          "pressed": {
+           "bind": "state.scale_xl_pressed"
+          },
+          "children": "XL",
+          "data-testid": "toggle-scale-5-btn"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "group"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "ToggleGroup",
+         "children": [
+          {
+           "type": "ToggleGroupItem",
+           "props": {
+            "value": "bold",
+            "children": "Bold"
+           }
+          },
+          {
+           "type": "ToggleGroupItem",
+           "props": {
+            "value": "italic",
+            "children": "Italic"
+           }
+          },
+          {
+           "type": "ToggleGroupItem",
+           "props": {
+            "value": "underline",
+            "children": "Underline"
+           }
+          }
+         ],
+         "on": {
+          "valueChange": [
+           {
+            "set": {
+             "state": "group_value",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "type": "multiple",
+          "value": {
+           "bind": "state.group_value"
+          },
+          "data-testid": "toggle-group-1-card"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

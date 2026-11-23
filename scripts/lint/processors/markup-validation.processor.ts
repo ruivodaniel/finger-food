@@ -2,7 +2,7 @@
 // Validates element= and layout= attributes against the programmatic
 // dictionary in conventions.ts. Flags any value not in the valid set.
 //
-// Source of truth: shared/libs/ui/web/theme-engine/conventions.ts
+// Source of truth: shared/libs/ui/theme-engine/web/conventions.ts
 // which exports VALID_ELEMENT_VALUES, VALID_LAYOUT_VALUES, VALID_AXIS_VALUES.
 
 import * as fs from "fs";
@@ -24,7 +24,7 @@ async function loadDictionary(rootDir: string): Promise<{
   layouts: Set<string>;
   axes: Record<string, Set<string>>;
 } | null> {
-  const conventionsPath = path.join(rootDir, "shared/libs/ui/web/theme-engine/conventions.ts");
+  const conventionsPath = path.join(rootDir, "shared/libs/ui/theme-engine/web/conventions.ts");
   try {
     const mod = await import(conventionsPath);
     return {
@@ -59,7 +59,7 @@ export async function processMarkupValidationControls(
   // Scan all .tsx files in web code (slices + the web shell)
   const patterns = [
     "apps/main/slices/*/*/web/**/*.tsx",
-    "apps/main/shared/web/src/**/*.tsx",
+    "apps/main/core/web/src/**/*.tsx",
   ];
 
   const files: string[] = [];

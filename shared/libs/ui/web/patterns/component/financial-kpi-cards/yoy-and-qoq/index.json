@@ -1,0 +1,144 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "yoy-and-qoq",
+ "version": 1,
+ "surface": "web",
+ "measure": "md",
+ "root": {
+  "type": "Card",
+  "props": {
+   "style": {
+    "width": 360
+   }
+  },
+  "children": [
+   {
+    "type": "Content",
+    "children": [
+     {
+      "type": "Stack",
+      "props": {
+       "dir": "col",
+       "gap": 10
+      },
+      "children": [
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--body-small",
+         "emphasis": "quiet",
+         "children": "Net income"
+        }
+       },
+       {
+        "type": "DataNumber",
+        "props": {
+         "value": 21450000000,
+         "config": {
+          "mode": {
+           "kind": "fixedScale",
+           "scale": "billion",
+           "n": 2
+          },
+          "locale": "en-GB"
+         },
+         "symbol": "USD",
+         "scale": "xl"
+        }
+       },
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "gap": 24
+        },
+        "children": [
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "col",
+           "gap": 2
+          },
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body-extra-small",
+             "emphasis": "quiet",
+             "children": "YoY"
+            }
+           },
+           {
+            "type": "DataNumber",
+            "props": {
+             "value": 11.3,
+             "config": {
+              "mode": {
+               "kind": "fixedScale",
+               "scale": "unit",
+               "n": 1
+              },
+              "locale": "en-GB",
+              "representation": {
+               "kind": "percentage",
+               "input": "points"
+              }
+             },
+             "trend": "arrowUp",
+             "status": "success",
+             "scale": "sm"
+            }
+           }
+          ]
+         },
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "col",
+           "gap": 2
+          },
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body-extra-small",
+             "emphasis": "quiet",
+             "children": "QoQ"
+            }
+           },
+           {
+            "type": "DataNumber",
+            "props": {
+             "value": -2.1,
+             "config": {
+              "mode": {
+               "kind": "fixedScale",
+               "scale": "unit",
+               "n": 1
+              },
+              "locale": "en-GB",
+              "representation": {
+               "kind": "percentage",
+               "input": "points"
+              }
+             },
+             "trend": "arrowDown",
+             "status": "warning",
+             "scale": "sm"
+            }
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

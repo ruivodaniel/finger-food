@@ -1,0 +1,128 @@
+{
+ "id": "ui-data-pattern-component-container-header-3-icon-and-title",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-container-header-3-icon-and-title",
+ "kind": "component",
+ "name": "container-header-3-icon-and-title",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "container-header-3-icon-and-title",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Card",
+   "children": [
+    {
+     "type": "Header",
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "between"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "scale": "sm"
+         },
+         "children": [
+          {
+           "type": "Icon",
+           "props": {
+            "name": "file"
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--heading3",
+            "children": "Title"
+           }
+          }
+         ]
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "scale": "sm"
+         },
+         "children": [
+          {
+           "type": "Button",
+           "props": {
+            "scale": "sm",
+            "emphasis": "secondary",
+            "children": "Action",
+            "data-testid": "ch-icon-first-action-btn"
+           }
+          },
+          {
+           "type": "Button",
+           "props": {
+            "scale": "sm",
+            "emphasis": "primary",
+            "children": "Action",
+            "data-testid": "ch-icon-second-action-btn"
+           }
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Content",
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "scale": "sm"
+       },
+       "children": [
+        {
+         "type": "Skeleton",
+         "props": {
+          "scale": "sm"
+         }
+        },
+        {
+         "type": "Skeleton",
+         "props": {
+          "scale": "sm"
+         }
+        },
+        {
+         "type": "Skeleton",
+         "props": {
+          "scale": "sm"
+         }
+        },
+        {
+         "type": "Skeleton",
+         "props": {
+          "scale": "sm"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "props": {
+    "concept": "container-example"
+   }
+  }
+ }
+}

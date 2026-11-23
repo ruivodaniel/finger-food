@@ -1,0 +1,167 @@
+{
+ "id": "ui-data-pattern-component-card-grids-research-agent",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-card-grids-research-agent",
+ "kind": "component",
+ "name": "research-agent",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "research-agent",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Card",
+   "props": {},
+   "children": [
+    {
+     "type": "Content",
+     "props": {},
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "start",
+          "justify": "between",
+          "scale": "md"
+         },
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "row",
+            "align": "center",
+            "scale": "md"
+           },
+           "children": [
+            {
+             "type": "Avatar",
+             "props": {
+              "scale": "md"
+             },
+             "children": [
+              {
+               "type": "AvatarFallback",
+               "props": {},
+               "children": [
+                {
+                 "type": "Icon",
+                 "props": {
+                  "name": "bot",
+                  "size": "sm"
+                 }
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "Stack",
+             "props": {
+              "dir": "col",
+              "scale": "2xs"
+             },
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "as": "span",
+                "element": "type--heading4",
+                "children": "Research Agent"
+               }
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "Badge",
+           "props": {
+            "emphasis": "quiet",
+            "status": "success"
+           },
+           "children": [
+            {
+             "type": "Badge",
+             "props": {
+              "scale": "3xs",
+              "concept": "dot",
+              "status": "success"
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--body-extra-small",
+              "children": "Active"
+             }
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body",
+          "emphasis": "quiet",
+          "children": "Searches the web, reads documentation, and gathers information"
+         }
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "wrap": true,
+          "scale": "sm"
+         },
+         "children": [
+          {
+           "type": "Chip",
+           "props": {
+            "emphasis": "tertiary",
+            "scale": "sm",
+            "closable": false,
+            "children": "Web Search"
+           }
+          },
+          {
+           "type": "Chip",
+           "props": {
+            "emphasis": "tertiary",
+            "scale": "sm",
+            "closable": false,
+            "children": "Document Reading"
+           }
+          },
+          {
+           "type": "Chip",
+           "props": {
+            "emphasis": "tertiary",
+            "scale": "sm",
+            "closable": false,
+            "children": "Summarization"
+           }
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

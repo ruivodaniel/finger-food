@@ -1,0 +1,462 @@
+{
+ "id": "ui-data-primitive-stack",
+ "version": 1,
+ "uiNodeId": "ui-node-primitive-stack",
+ "kind": "component",
+ "name": "primitive-stack",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "primitive-stack",
+  "version": 1,
+  "surface": "web",
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "align": "center",
+    "scale": "2xl"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "children": [
+      {
+       "type": "Stack",
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "element": "type--body-extra-small",
+          "emphasis": "quiet",
+          "children": "direction — a row, and a column (same component, dir=\"row\" | \"col\")"
+         }
+        },
+        {
+         "type": "Stack",
+         "children": [
+          {
+           "type": "Stack",
+           "children": [
+            {
+             "type": "Card",
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "element": "type--body-small",
+                "children": "one"
+               }
+              }
+             ],
+             "props": {
+              "className": "p-3 flex-1 min-w-0"
+             }
+            },
+            {
+             "type": "Card",
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "element": "type--body-small",
+                "children": "two"
+               }
+              }
+             ],
+             "props": {
+              "className": "p-3 flex-1 min-w-0"
+             }
+            },
+            {
+             "type": "Card",
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "element": "type--body-small",
+                "children": "three"
+               }
+              }
+             ],
+             "props": {
+              "className": "p-3 flex-1 min-w-0"
+             }
+            }
+           ],
+           "props": {
+            "dir": "row",
+            "className": "w-80",
+            "scale": "md"
+           }
+          },
+          {
+           "type": "Stack",
+           "children": [
+            {
+             "type": "Card",
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "element": "type--body-small",
+                "children": "one"
+               }
+              }
+             ],
+             "props": {
+              "className": "p-3 "
+             }
+            },
+            {
+             "type": "Card",
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "element": "type--body-small",
+                "children": "two"
+               }
+              }
+             ],
+             "props": {
+              "className": "p-3 "
+             }
+            },
+            {
+             "type": "Card",
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "element": "type--body-small",
+                "children": "three"
+               }
+              }
+             ],
+             "props": {
+              "className": "p-3 "
+             }
+            }
+           ],
+           "props": {
+            "dir": "col",
+            "className": "w-40",
+            "scale": "md"
+           }
+          }
+         ],
+         "props": {
+          "dir": "row",
+          "align": "start",
+          "scale": "lg"
+         }
+        }
+       ],
+       "props": {
+        "dir": "col",
+        "scale": "md"
+       }
+      },
+      {
+       "type": "Stack",
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "element": "type--body-extra-small",
+          "emphasis": "quiet",
+          "children": "sizing — hug · fill · fixed (the child decides how it takes space)"
+         }
+        },
+        {
+         "type": "Stack",
+         "children": [
+          {
+           "type": "Card",
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "element": "type--body-small",
+              "children": "hug"
+             }
+            }
+           ],
+           "props": {
+            "className": "p-3 flex-none"
+           }
+          },
+          {
+           "type": "Card",
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "element": "type--body-small",
+              "children": "fill — grows to eat the leftover space"
+             }
+            }
+           ],
+           "props": {
+            "className": "p-3 flex-1 min-w-0"
+           }
+          },
+          {
+           "type": "Card",
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "element": "type--body-small",
+              "children": "fixed · w-28"
+             }
+            }
+           ],
+           "props": {
+            "className": "p-3 flex-none w-28"
+           }
+          }
+         ],
+         "props": {
+          "dir": "row",
+          "className": "w-full max-w-xl",
+          "scale": "md"
+         }
+        }
+       ],
+       "props": {
+        "dir": "col",
+        "scale": "md"
+       }
+      },
+      {
+       "type": "Stack",
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "element": "type--body-extra-small",
+          "emphasis": "quiet",
+          "children": "nesting — a column of a row of fills, holding a stack (no new concept)"
+         }
+        },
+        {
+         "type": "Stack",
+         "children": [
+          {
+           "type": "Card",
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "element": "type--body-small",
+              "children": "header · hug height"
+             }
+            }
+           ],
+           "props": {
+            "className": "p-3 flex-none"
+           }
+          },
+          {
+           "type": "Stack",
+           "children": [
+            {
+             "type": "Stack",
+             "children": [
+              {
+               "type": "Card",
+               "children": [
+                {
+                 "type": "Text",
+                 "props": {
+                  "element": "type--body-small",
+                  "children": "left · a"
+                 }
+                }
+               ],
+               "props": {
+                "className": "p-3 flex-none"
+               }
+              },
+              {
+               "type": "Card",
+               "children": [
+                {
+                 "type": "Text",
+                 "props": {
+                  "element": "type--body-small",
+                  "children": "left · b (fills the rest)"
+                 }
+                }
+               ],
+               "props": {
+                "className": "p-3 flex-1 min-h-0"
+               }
+              }
+             ],
+             "props": {
+              "dir": "col",
+              "size": "fill",
+              "scale": "md"
+             }
+            },
+            {
+             "type": "Card",
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "element": "type--body-small",
+                "children": "right (fills)"
+               }
+              }
+             ],
+             "props": {
+              "className": "p-3 flex-1 min-w-0"
+             }
+            }
+           ],
+           "props": {
+            "dir": "row",
+            "size": "fill",
+            "scale": "md"
+           }
+          },
+          {
+           "type": "Card",
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "element": "type--body-small",
+              "children": "footer · hug height"
+             }
+            }
+           ],
+           "props": {
+            "className": "p-3 flex-none"
+           }
+          }
+         ],
+         "props": {
+          "dir": "col",
+          "className": "w-full max-w-xl h-56",
+          "scale": "md"
+         }
+        }
+       ],
+       "props": {
+        "dir": "col",
+        "scale": "md"
+       }
+      },
+      {
+       "type": "Stack",
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "element": "type--body-extra-small",
+          "emphasis": "quiet",
+          "children": "wrap — a cluster that flows onto the next line"
+         }
+        },
+        {
+         "type": "Stack",
+         "children": [
+          {
+           "type": "Badge",
+           "props": {
+            "emphasis": "secondary",
+            "children": "design"
+           }
+          },
+          {
+           "type": "Badge",
+           "props": {
+            "emphasis": "secondary",
+            "children": "system"
+           }
+          },
+          {
+           "type": "Badge",
+           "props": {
+            "emphasis": "secondary",
+            "children": "auto"
+           }
+          },
+          {
+           "type": "Badge",
+           "props": {
+            "emphasis": "secondary",
+            "children": "layout"
+           }
+          },
+          {
+           "type": "Badge",
+           "props": {
+            "emphasis": "secondary",
+            "children": "stack"
+           }
+          },
+          {
+           "type": "Badge",
+           "props": {
+            "emphasis": "secondary",
+            "children": "row"
+           }
+          },
+          {
+           "type": "Badge",
+           "props": {
+            "emphasis": "secondary",
+            "children": "column"
+           }
+          },
+          {
+           "type": "Badge",
+           "props": {
+            "emphasis": "secondary",
+            "children": "gap"
+           }
+          },
+          {
+           "type": "Badge",
+           "props": {
+            "emphasis": "secondary",
+            "children": "fill"
+           }
+          },
+          {
+           "type": "Badge",
+           "props": {
+            "emphasis": "secondary",
+            "children": "hug"
+           }
+          }
+         ],
+         "props": {
+          "dir": "row",
+          "wrap": true,
+          "className": "w-80",
+          "scale": "sm"
+         }
+        }
+       ],
+       "props": {
+        "dir": "col",
+        "scale": "md"
+       }
+      }
+     ],
+     "props": {
+      "dir": "col",
+      "scale": "xl"
+     }
+    }
+   ]
+  }
+ }
+}

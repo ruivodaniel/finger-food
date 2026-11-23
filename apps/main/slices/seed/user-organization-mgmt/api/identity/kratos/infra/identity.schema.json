@@ -1,0 +1,123 @@
+{
+  "$id": "https://prowd/schemas/identity.default.v1.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Default identity",
+  "description": "Trait union mirroring the IDENTIFIERS catalog of the auth-config DSL (email/phone as traits; google/apple arrive as OIDC credentials). Multiple identifiers of the same type use fixed slots (email/email_2/email_3, phone/phone_2) \u2014 every slot is a full login identifier; slot assignment is an adapter detail. No trait is required here: which identifiers a registration must present is contextual and enforced by the app's auth flows, not by this schema. Adding OPTIONAL traits is a compatible change; anything else requires a new versioned $id plus an identity migration.",
+  "type": "object",
+  "properties": {
+    "traits": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "format": "email",
+          "title": "Email",
+          "ory.sh/kratos": {
+            "credentials": {
+              "password": {
+                "identifier": true
+              },
+              "code": {
+                "identifier": true,
+                "via": "email"
+              }
+            },
+            "verification": {
+              "via": "email"
+            },
+            "recovery": {
+              "via": "email"
+            }
+          }
+        },
+        "email_2": {
+          "type": "string",
+          "format": "email",
+          "title": "Email (2)",
+          "ory.sh/kratos": {
+            "credentials": {
+              "password": {
+                "identifier": true
+              },
+              "code": {
+                "identifier": true,
+                "via": "email"
+              }
+            },
+            "verification": {
+              "via": "email"
+            },
+            "recovery": {
+              "via": "email"
+            }
+          }
+        },
+        "email_3": {
+          "type": "string",
+          "format": "email",
+          "title": "Email (3)",
+          "ory.sh/kratos": {
+            "credentials": {
+              "password": {
+                "identifier": true
+              },
+              "code": {
+                "identifier": true,
+                "via": "email"
+              }
+            },
+            "verification": {
+              "via": "email"
+            },
+            "recovery": {
+              "via": "email"
+            }
+          }
+        },
+        "phone": {
+          "type": "string",
+          "format": "tel",
+          "title": "Phone",
+          "ory.sh/kratos": {
+            "credentials": {
+              "code": {
+                "identifier": true,
+                "via": "sms"
+              }
+            },
+            "verification": {
+              "via": "sms"
+            },
+            "recovery": {
+              "via": "sms"
+            }
+          }
+        },
+        "phone_2": {
+          "type": "string",
+          "format": "tel",
+          "title": "Phone (2)",
+          "ory.sh/kratos": {
+            "credentials": {
+              "code": {
+                "identifier": true,
+                "via": "sms"
+              }
+            },
+            "verification": {
+              "via": "sms"
+            },
+            "recovery": {
+              "via": "sms"
+            }
+          }
+        },
+        "name": {
+          "type": "string",
+          "title": "Name"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

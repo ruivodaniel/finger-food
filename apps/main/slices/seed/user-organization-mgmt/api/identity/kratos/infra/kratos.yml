@@ -1,0 +1,163 @@
+# Ory Kratos — identity provider configuration (single source; deployed
+# environments override only URLs/secrets/OIDC via env vars).
+#
+# The app backend is the only Kratos client: it drives API-native self-service
+# flows server-side and issues its own session cookie. Ports: 4433 public,
+# 4434 admin (admin must never be published in deployed environments).
+
+version: v1.3.1
+
+dsn: postgres://postgres:postgres@postgres:5432/kratos?sslmode=disable
+
+serve:
+  public:
+    base_url: http://localhost:4433/
+    cors:
+      enabled: false # only the app backend talks to Kratos
+  admin:
+    base_url: http://kratos:4434/
+
+identity:
+  default_schema_id: default-v1
+  schemas:
+    - id: default-v1
+      url: file:///etc/config/kratos/identity.schema.json
+
+selfservice:
+  default_browser_return_url: http://localhost:5173/
+
+  methods:
+    password:
+      enabled: true
+      config:
+        min_password_length: 8
+        identifier_similarity_check_enabled: false
+        haveibeenpwned_enabled: false
+    code:
+      enabled: true
+      # code is used for verification/recovery AND as a passwordless login
+      # factor (phone/email OTP), per the product auth config
+      passwordless_enabled: true
+    totp:
+      enabled: true
+      config:
+        issuer: Prowd
+    # one-time backup codes — the lost-authenticator escape hatch for 2FA
+    lookup_secret:
+      enabled: true
+    # OIDC (google/apple) is enabled per environment via env overrides
+    # (SELFSERVICE_METHODS_OIDC_*) — never in this checked-in file.
+    oidc:
+      enabled: false
+
+  flows:
+    registration:
+      enabled: true
+      lifespan: 30m
+      after:
+        password:
+          hooks:
+            - hook: session # issue the session token at registration
+            # surface the auto-created verification flow in continue_with so
+            # the backend reuses it — without this it starts a second flow
+            # and the user receives two competing code emails
+            - hook: show_verification_ui
+        code:
+          hooks:
+            - hook: session # code registrations get a session too
+    login:
+      lifespan: 30m
+    verification:
+      enabled: true
+      use: code
+      lifespan: 30m
+    recovery:
+      enabled: true
+      use: code
+      lifespan: 30m
+    settings:
+      # TOTP enrollment / password change run through settings flows driven by
+      # the app backend right after a factor was proven
+      privileged_session_max_age: 15m
+      required_aal: highest_available
+
+session:
+  lifespan: 168h # 7 days
+  whoami:
+    # the app's gate decides where AAL2 is demanded (config-scoped per
+    # membership role) — Kratos answers whoami for AAL1 sessions
+    required_aal: aal1
+
+courier:
+  smtp:
+    connection_uri: smtp://test:test@maildev:1025/?disable_starttls=true
+  # Code-only verification mail — the default template also carries a
+  # browser-flow link, which has no home here: the app backend drives
+  # API-native flows and the app UI collects the code.
+  templates:
+    verification_code:
+      valid:
+        email:
+          body:
+            html: file:///etc/config/kratos/templates/verification_code.valid.email.body.gotmpl
+            plaintext: file:///etc/config/kratos/templates/verification_code.valid.email.body.plaintext.gotmpl
+    # v1.3.1 ships no built-in SMS template for registration codes —
+    # without this, code registrations via sms 500 ("Expected sms template")
+    registration_code:
+      valid:
+        email:
+          body:
+            html: file:///etc/config/kratos/templates/registration_code.valid.email.body.plaintext.gotmpl
+            plaintext: file:///etc/config/kratos/templates/registration_code.valid.email.body.plaintext.gotmpl
+        sms:
+          body:
+            plaintext: file:///etc/config/kratos/templates/registration_code.valid.sms.body.plaintext.gotmpl
+    # recovery codes over sms need an explicit template too (same v26 rule)
+    recovery_code:
+      valid:
+        email:
+          body:
+            html: file:///etc/config/kratos/templates/recovery_code.valid.email.body.plaintext.gotmpl
+            plaintext: file:///etc/config/kratos/templates/recovery_code.valid.email.body.plaintext.gotmpl
+        sms:
+          body:
+            plaintext: file:///etc/config/kratos/templates/recovery_code.valid.sms.body.plaintext.gotmpl
+  channels:
+    - id: sms
+      type: http
+      request_config:
+        # delivered by the app backend's transport layer (SMS-Dev in dev,
+        # Twilio in prod) — Kratos never holds SMS provider credentials
+        url: http://host.docker.internal:3005/api/auth/courier/sms
+        method: POST
+        headers:
+          Content-Type: application/json
+          # must match the app's courier secret (KRATOS_COURIER_SMS_SECRET;
+          # dev default) — the webhook 403s everything else
+          X-Courier-Secret: dev-courier-secret
+        body: file:///etc/config/kratos/sms-body.jsonnet
+
+# API-native flows report post-flow transitions (recovery → settings, incl.
+# the session token) via `continue_with` instead of browser redirects.
+feature_flags:
+  use_continue_with_transitions: true
+
+log:
+  level: info
+  format: text
+  leak_sensitive_values: false
+
+# Dev-only secrets — deployed environments MUST override via SECRETS_* env vars.
+secrets:
+  cookie:
+    - PLEASE-CHANGE-ME-I-AM-VERY-INSECURE
+  cipher:
+    - 32-LONG-SECRET-NOT-SECURE-AT-ALL
+
+ciphers:
+  algorithm: xchacha20-poly1305
+
+hashers:
+  algorithm: bcrypt
+  bcrypt:
+    cost: 8 # dev-friendly; deployed environments override to >=12

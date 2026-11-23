@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-primitive-dialog-default",
+ "version": 1,
+ "uiDataId": "ui-data-primitive-dialog",
+ "name": "default",
+ "title": "Dialog, its cases",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

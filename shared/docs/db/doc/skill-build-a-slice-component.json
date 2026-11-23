@@ -1,0 +1,24 @@
+{
+ "id": "doc/skill-build-a-slice-component",
+ "kind": "doc",
+ "title": "build a slice component",
+ "status": "todo",
+ "subject": "skills",
+ "owner": "skills/seed-consumer/all-slices",
+ "tags": [
+  "skills",
+  "seed-consumer",
+  "all-slices"
+ ],
+ "paths": [],
+ "summary": "",
+ "docId": "skill-build-a-slice-component",
+ "doc": {
+  "axioms": [],
+  "purpose": {},
+  "reference": []
+ },
+ "audience": [
+  "seed-consumer"
+ ]
+}

@@ -1,0 +1,31 @@
+{
+  "name": "@libs/web-layouts",
+  "version": "0.1.0",
+  "description": "The layout primitives (the regions, by zone) and the layout patterns the package ships",
+  "type": "module",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "exports": {
+    ".": {
+      "types": "./index.ts",
+      "import": "./index.ts"
+    }
+  },
+  "files": [
+    "."
+  ],
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0",
+    "tailwindcss": "^3.0.0 || ^4.0.0"
+  },
+  "dependencies": {
+    "@libs/web-components": "workspace:*",
+    "@tanstack/react-virtual": "^3.14.26",
+    "clsx": "^2.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0 || ^19.0.0",
+    "typescript": "^5.0.0"
+  }
+}

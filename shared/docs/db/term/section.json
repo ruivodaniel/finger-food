@@ -1,0 +1,20 @@
+{
+ "id": "term/section",
+ "kind": "term",
+ "title": "section",
+ "status": "approved",
+ "subjects": [
+  "main",
+  "ui"
+ ],
+ "owner": "main/core",
+ "tags": [
+  "ui"
+ ],
+ "paths": [],
+ "term": {
+  "def": "A [[page]] whose `left-sidebar` navigates its [[sub-page|sub-pages]] — Settings, for example.",
+  "aliases": [],
+  "proposed": true
+ }
+}

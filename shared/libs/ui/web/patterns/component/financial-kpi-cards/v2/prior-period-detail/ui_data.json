@@ -1,0 +1,186 @@
+{
+ "id": "ui-data-pattern-component-financial-kpi-cards-prior-period-detail",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-financial-kpi-cards-prior-period-detail",
+ "kind": "component",
+ "name": "prior-period-detail",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "prior-period-detail",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Card",
+   "props": {
+    "style": {
+     "obj": {
+      "width": 360
+     }
+    }
+   },
+   "children": [
+    {
+     "type": "Content",
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "scale": "sm"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body-small",
+          "emphasis": "quiet",
+          "children": "EBITDA"
+         }
+        },
+        {
+         "type": "DataNumber",
+         "props": {
+          "value": 76120000000,
+          "config": {
+           "mode": {
+            "kind": "fixedScale",
+            "scale": "billion",
+            "n": 2
+           },
+           "locale": "en-GB"
+          },
+          "symbol": "USD",
+          "scale": "xl"
+         }
+        },
+        {
+         "type": "Separator"
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "col",
+          "scale": "xs"
+         },
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "row",
+            "justify": "between"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--body-extra-small",
+              "emphasis": "quiet",
+              "children": "Prior year"
+             }
+            },
+            {
+             "type": "DataNumber",
+             "props": {
+              "value": 69830000000,
+              "config": {
+               "mode": {
+                "kind": "fixedScale",
+                "scale": "billion",
+                "n": 2
+               },
+               "locale": "en-GB"
+              },
+              "symbol": "USD",
+              "scale": "sm"
+             }
+            }
+           ]
+          },
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "row",
+            "justify": "between"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--body-extra-small",
+              "emphasis": "quiet",
+              "children": "Change"
+             }
+            },
+            {
+             "type": "DataNumber",
+             "props": {
+              "value": 6290000000,
+              "config": {
+               "mode": {
+                "kind": "fixedScale",
+                "scale": "billion",
+                "n": 2
+               },
+               "locale": "en-GB"
+              },
+              "symbol": "USD",
+              "scale": "sm",
+              "trend": "arrowUp",
+              "status": "success"
+             }
+            }
+           ]
+          },
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "row",
+            "justify": "between"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--body-extra-small",
+              "emphasis": "quiet",
+              "children": "Relative"
+             }
+            },
+            {
+             "type": "DataNumber",
+             "props": {
+              "value": 9.0,
+              "config": {
+               "mode": {
+                "kind": "fixedScale",
+                "scale": "unit",
+                "n": 1
+               },
+               "locale": "en-GB",
+               "representation": {
+                "kind": "percentage",
+                "input": "points"
+               }
+              },
+              "scale": "sm",
+              "status": "success"
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

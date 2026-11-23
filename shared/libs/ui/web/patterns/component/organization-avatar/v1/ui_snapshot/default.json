@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-organization-avatar-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-organization-avatar",
+ "name": "default",
+ "title": "Organization avatar",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

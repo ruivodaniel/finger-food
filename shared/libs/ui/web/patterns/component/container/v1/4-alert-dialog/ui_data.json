@@ -1,0 +1,128 @@
+{
+ "id": "ui-data-pattern-component-container-4-alert-dialog",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-container-4-alert-dialog",
+ "kind": "component",
+ "name": "container-4-alert-dialog",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "container-4-alert-dialog",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "state": {
+   "open": false
+  },
+  "root": {
+   "type": "AlertDialog",
+   "children": [
+    {
+     "type": "AlertDialogTrigger",
+     "children": [
+      {
+       "type": "Button",
+       "props": {
+        "emphasis": "secondary",
+        "children": "Open",
+        "data-testid": "c-alert-open-btn"
+       }
+      }
+     ],
+     "props": {
+      "asChild": true
+     }
+    },
+    {
+     "type": "AlertDialogContent",
+     "children": [
+      {
+       "type": "Header",
+       "children": [
+        {
+         "type": "AlertDialogTitle",
+         "props": {
+          "children": "Are you sure?"
+         }
+        },
+        {
+         "type": "AlertDialogDescription",
+         "props": {
+          "children": "One line that says what will happen."
+         }
+        }
+       ]
+      },
+      {
+       "type": "Footer",
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "justify": "between"
+         },
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "row",
+            "align": "center"
+           },
+           "children": [
+            {
+             "type": "AlertDialogCancel",
+             "props": {
+              "children": "Cancel",
+              "data-testid": "c-alert-cancel-btn"
+             }
+            }
+           ]
+          },
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "row",
+            "align": "center"
+           },
+           "children": [
+            {
+             "type": "AlertDialogAction",
+             "props": {
+              "children": "Delete",
+              "data-testid": "c-alert-delete-btn"
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "props": {
+      "status": "neutral"
+     }
+    }
+   ],
+   "on": {
+    "openChange": [
+     {
+      "set": {
+       "state": "open",
+       "to": {
+        "bind": "event"
+       }
+      }
+     }
+    ]
+   },
+   "props": {
+    "open": {
+     "bind": "state.open"
+    }
+   }
+  }
+ }
+}

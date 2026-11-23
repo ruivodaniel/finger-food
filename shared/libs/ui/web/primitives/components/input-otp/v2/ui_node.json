@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-primitive-input-otp",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Input otp"
+}

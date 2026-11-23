@@ -1,0 +1,250 @@
+{
+ "id": "ui-data-pattern-component-card-with-tiles-two-by-two-tiles",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-card-with-tiles-two-by-two-tiles",
+ "kind": "component",
+ "name": "two-by-two-tiles",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "two-by-two-tiles",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Card",
+   "props": {
+    "className": "w-96"
+   },
+   "children": [
+    {
+     "type": "Content",
+     "props": {},
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "scale": "md"
+         },
+         "children": [
+          {
+           "type": "Tile",
+           "props": {
+            "emphasis": "hero",
+            "className": "flex-1 min-w-0"
+           },
+           "children": [
+            {
+             "type": "Stack",
+             "props": {
+              "dir": "col",
+              "scale": "sm"
+             },
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "as": "span",
+                "element": "type--body-small",
+                "children": "Revenue"
+               }
+              },
+              {
+               "type": "Stack",
+               "props": {
+                "dir": "row",
+                "align": "baseline",
+                "scale": "sm"
+               },
+               "children": [
+                {
+                 "type": "Text",
+                 "props": {
+                  "as": "span",
+                  "element": "type--numbers-large",
+                  "children": "$48.2k"
+                 }
+                },
+                {
+                 "type": "Badge",
+                 "props": {
+                  "status": "success",
+                  "children": "+12%"
+                 }
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "Tile",
+           "props": {
+            "className": "flex-1 min-w-0"
+           },
+           "children": [
+            {
+             "type": "Stack",
+             "props": {
+              "dir": "col",
+              "scale": "sm"
+             },
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "as": "span",
+                "element": "type--body-small",
+                "children": "Orders"
+               }
+              },
+              {
+               "type": "Stack",
+               "props": {
+                "dir": "row",
+                "align": "baseline",
+                "scale": "sm"
+               },
+               "children": [
+                {
+                 "type": "Text",
+                 "props": {
+                  "as": "span",
+                  "element": "type--numbers-large",
+                  "children": "1,092"
+                 }
+                },
+                {
+                 "type": "Badge",
+                 "props": {
+                  "status": "success",
+                  "children": "+4%"
+                 }
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "scale": "md"
+         },
+         "children": [
+          {
+           "type": "Tile",
+           "props": {
+            "className": "flex-1 min-w-0"
+           },
+           "children": [
+            {
+             "type": "Stack",
+             "props": {
+              "dir": "col",
+              "scale": "sm"
+             },
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "as": "span",
+                "element": "type--body-small",
+                "children": "Avg. order"
+               }
+              },
+              {
+               "type": "Stack",
+               "props": {
+                "dir": "row",
+                "align": "baseline",
+                "scale": "sm"
+               },
+               "children": [
+                {
+                 "type": "Text",
+                 "props": {
+                  "as": "span",
+                  "element": "type--numbers-large",
+                  "children": "$44.10"
+                 }
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "Tile",
+           "props": {
+            "className": "flex-1 min-w-0"
+           },
+           "children": [
+            {
+             "type": "Stack",
+             "props": {
+              "dir": "col",
+              "scale": "sm"
+             },
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "as": "span",
+                "element": "type--body-small",
+                "children": "Refunds"
+               }
+              },
+              {
+               "type": "Stack",
+               "props": {
+                "dir": "row",
+                "align": "baseline",
+                "scale": "sm"
+               },
+               "children": [
+                {
+                 "type": "Text",
+                 "props": {
+                  "as": "span",
+                  "element": "type--numbers-large",
+                  "children": "1.8%"
+                 }
+                },
+                {
+                 "type": "Badge",
+                 "props": {
+                  "status": "error",
+                  "children": "+0.2%"
+                 }
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

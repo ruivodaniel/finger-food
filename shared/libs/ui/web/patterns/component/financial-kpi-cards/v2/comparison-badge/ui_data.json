@@ -1,0 +1,102 @@
+{
+ "id": "ui-data-pattern-component-financial-kpi-cards-comparison-badge",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-financial-kpi-cards-comparison-badge",
+ "kind": "component",
+ "name": "comparison-badge",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "comparison-badge",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Card",
+   "props": {
+    "style": {
+     "obj": {
+      "width": 360
+     }
+    }
+   },
+   "children": [
+    {
+     "type": "Content",
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "between",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "col",
+          "scale": "xs"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "emphasis": "quiet",
+            "children": "Gross margin"
+           }
+          },
+          {
+           "type": "DataNumber",
+           "props": {
+            "value": 41.2,
+            "config": {
+             "mode": {
+              "kind": "fixedScale",
+              "scale": "unit",
+              "n": 1
+             },
+             "locale": "en-GB",
+             "representation": {
+              "kind": "percentage",
+              "input": "points"
+             }
+            },
+            "scale": "lg"
+           }
+          }
+         ]
+        },
+        {
+         "type": "DataNumber",
+         "props": {
+          "value": 1.8,
+          "config": {
+           "mode": {
+            "kind": "fixedScale",
+            "scale": "unit",
+            "n": 1
+           },
+           "locale": "en-GB",
+           "representation": {
+            "kind": "percentage",
+            "input": "points"
+           }
+          },
+          "trend": "arrowUp",
+          "status": "success",
+          "emphasis": "primary",
+          "scale": "sm"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

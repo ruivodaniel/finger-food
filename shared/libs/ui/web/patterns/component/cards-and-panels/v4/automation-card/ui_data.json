@@ -1,0 +1,217 @@
+{
+ "id": "ui-data-pattern-component-cards-and-panels-automation-card-v3",
+ "version": 2,
+ "uiNodeId": "ui-node-pattern-component-cards-and-panels-automation-card-v3",
+ "kind": "component",
+ "name": "automation-card",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "automation-card",
+  "version": 2,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Card",
+   "props": {
+    "className": "w-full max-w-2xl"
+   },
+   "children": [
+    {
+     "type": "Content",
+     "props": {},
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "scale": "sm"
+         },
+         "children": [
+          {
+           "type": "Avatar",
+           "props": {
+            "scale": "md"
+           },
+           "children": [
+            {
+             "type": "AvatarFallback",
+             "props": {},
+             "children": [
+              {
+               "type": "Icon",
+               "props": {
+                "name": "layers",
+                "size": "sm"
+               }
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "Avatar",
+           "props": {
+            "scale": "md"
+           },
+           "children": [
+            {
+             "type": "AvatarFallback",
+             "props": {},
+             "children": [
+              {
+               "type": "Icon",
+               "props": {
+                "name": "fileText",
+                "size": "sm"
+               }
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "Avatar",
+           "props": {
+            "scale": "md"
+           },
+           "children": [
+            {
+             "type": "AvatarFallback",
+             "props": {},
+             "children": [
+              {
+               "type": "Icon",
+               "props": {
+                "name": "hash",
+                "size": "sm"
+               }
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "col",
+          "scale": "sm"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--heading3",
+            "children": "Daily Engineering Report"
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body",
+            "emphasis": "quiet",
+            "children": "Automated summary of high-priority Linear issues posted to Notion and Slack."
+           }
+          }
+         ]
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "end",
+          "justify": "between",
+          "scale": "md"
+         },
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col",
+            "scale": "sm"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--body-small",
+              "emphasis": "quiet",
+              "className": "inline-flex items-center gap-2"
+             },
+             "children": [
+              {
+               "type": "Icon",
+               "props": {
+                "name": "activity",
+                "size": "sm"
+               }
+              },
+              {
+               "type": "Text",
+               "props": {
+                "as": "span",
+                "children": "9:00 AM Daily"
+               }
+              }
+             ]
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--body-small",
+              "emphasis": "quiet",
+              "className": "inline-flex items-center gap-2"
+             },
+             "children": [
+              {
+               "type": "Icon",
+               "props": {
+                "name": "refresh",
+                "size": "sm"
+               }
+              },
+              {
+               "type": "Text",
+               "props": {
+                "as": "span",
+                "children": "1.2K runs"
+               }
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "Button",
+           "props": {
+            "emphasis": "primary",
+            "scale": "lg",
+            "buttonType": "text-icon",
+            "endIcon": "activity",
+            "children": "Create"
+           }
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

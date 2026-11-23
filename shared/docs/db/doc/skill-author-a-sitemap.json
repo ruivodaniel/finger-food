@@ -1,0 +1,24 @@
+{
+ "id": "doc/skill-author-a-sitemap",
+ "kind": "doc",
+ "title": "author a sitemap",
+ "status": "todo",
+ "subject": "skills",
+ "owner": "skills/product-contributor/product-design",
+ "tags": [
+  "skills",
+  "product-contributor",
+  "product-design"
+ ],
+ "paths": [],
+ "summary": "",
+ "docId": "skill-author-a-sitemap",
+ "doc": {
+  "axioms": [],
+  "purpose": {},
+  "reference": []
+ },
+ "audience": [
+  "product-contributor"
+ ]
+}

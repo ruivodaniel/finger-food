@@ -1,0 +1,224 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "row-of-tiles",
+ "version": 1,
+ "surface": "web",
+ "measure": "md",
+ "root": {
+  "type": "Card",
+  "props": {
+   "className": "w-full max-w-2xl"
+  },
+  "children": [
+   {
+    "type": "Content",
+    "props": {},
+    "children": [
+     {
+      "type": "Stack",
+      "props": {
+       "dir": "row",
+       "gap": 12
+      },
+      "children": [
+       {
+        "type": "Tile",
+        "props": {
+         "className": "flex-1 min-w-0"
+        },
+        "children": [
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "col",
+           "gap": 6
+          },
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body-small",
+             "children": "Compliance rate"
+            }
+           },
+           {
+            "type": "Stack",
+            "props": {
+             "dir": "row",
+             "align": "baseline",
+             "gap": 8
+            },
+            "children": [
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--numbers-large",
+               "children": "98%"
+              }
+             },
+             {
+              "type": "Badge",
+              "props": {
+               "status": "success",
+               "children": "+8.3%"
+              }
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "Tile",
+        "props": {
+         "className": "flex-1 min-w-0"
+        },
+        "children": [
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "col",
+           "gap": 6
+          },
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body-small",
+             "children": "Sent"
+            }
+           },
+           {
+            "type": "Stack",
+            "props": {
+             "dir": "row",
+             "align": "baseline",
+             "gap": 8
+            },
+            "children": [
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--numbers-large",
+               "children": "1,204"
+              }
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "Tile",
+        "props": {
+         "className": "flex-1 min-w-0"
+        },
+        "children": [
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "col",
+           "gap": 6
+          },
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body-small",
+             "children": "Opened"
+            }
+           },
+           {
+            "type": "Stack",
+            "props": {
+             "dir": "row",
+             "align": "baseline",
+             "gap": 8
+            },
+            "children": [
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--numbers-large",
+               "children": "867"
+              }
+             },
+             {
+              "type": "Badge",
+              "props": {
+               "status": "error",
+               "children": "−1.4%"
+              }
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "Tile",
+        "props": {
+         "className": "flex-1 min-w-0"
+        },
+        "children": [
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "col",
+           "gap": 6
+          },
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body-small",
+             "children": "Bounced"
+            }
+           },
+           {
+            "type": "Stack",
+            "props": {
+             "dir": "row",
+             "align": "baseline",
+             "gap": 8
+            },
+            "children": [
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--numbers-large",
+               "children": "2.1%"
+              }
+             },
+             {
+              "type": "Badge",
+              "props": {
+               "status": "error",
+               "children": "+0.3%"
+              }
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

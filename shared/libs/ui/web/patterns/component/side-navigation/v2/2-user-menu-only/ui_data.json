@@ -1,0 +1,97 @@
+{
+ "id": "ui-data-pattern-component-side-navigation-2-user-menu-only",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-side-navigation-2-user-menu-only",
+ "kind": "component",
+ "name": "side-navigation-2-user-menu-only",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "side-navigation-2-user-menu-only",
+  "version": 1,
+  "surface": "web",
+  "state": {
+   "open": false,
+   "current": "dashboard",
+   "org": "org-acme-corp",
+   "mode": "light"
+  },
+  "root": {
+   "use": {
+    "component": "SideNavigationScreen",
+    "version": "latest"
+   },
+   "args": {
+    "open": {
+     "bind": "state.open"
+    },
+    "current": {
+     "bind": "state.current"
+    },
+    "org": {
+     "bind": "state.org"
+    },
+    "mode": {
+     "bind": "state.mode"
+    },
+    "text": "No organizations and no colour mode. Hover the rail: the navigation opens over the page, which keeps its size.",
+    "expand": "overlay",
+    "account": "separate",
+    "withOrganizations": false,
+    "withModes": false,
+    "toggleAt": "top",
+    "backLabel": "PROWD"
+   },
+   "on": {
+    "openChange": [
+     {
+      "set": {
+       "state": "open",
+       "to": {
+        "bind": "event.open"
+       }
+      }
+     }
+    ],
+    "navigate": [
+     {
+      "set": {
+       "state": "current",
+       "to": {
+        "bind": "event.id"
+       }
+      }
+     }
+    ],
+    "organizationChange": [
+     {
+      "set": {
+       "state": "org",
+       "to": {
+        "bind": "event.id"
+       }
+      }
+     }
+    ],
+    "modeChange": [
+     {
+      "set": {
+       "state": "mode",
+       "to": {
+        "bind": "event.id"
+       }
+      }
+     }
+    ],
+    "back": [
+     {
+      "set": {
+       "state": "current",
+       "to": "back"
+      }
+     }
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-status-cards-whole-card-success-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-status-cards-whole-card-success",
+ "name": "default",
+ "title": "Status cards: whole card success",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

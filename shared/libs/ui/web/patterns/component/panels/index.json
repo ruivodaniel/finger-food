@@ -1,0 +1,540 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "panels",
+ "version": 1,
+ "surface": "web",
+ "measure": "md",
+ "state": {
+  "openSimple": false,
+  "openHeaderFooter": false,
+  "openWithTabs": false,
+  "tab": "tab1"
+ },
+ "root": {
+  "type": "Card",
+  "props": {
+   "position": "fill"
+  },
+  "children": [
+   {
+    "type": "Content",
+    "children": [
+     {
+      "type": "Stack",
+      "props": {
+       "dir": "row",
+       "gap": 12,
+       "wrap": true,
+       "align": "center"
+      },
+      "children": [
+       {
+        "type": "Sheet",
+        "props": {
+         "open": {
+          "bind": "state.openSimple"
+         }
+        },
+        "children": [
+         {
+          "type": "SheetTrigger",
+          "props": {
+           "asChild": true
+          },
+          "children": [
+           {
+            "type": "Button",
+            "props": {
+             "emphasis": "secondary",
+             "children": "Open panel simple"
+            }
+           }
+          ]
+         },
+         {
+          "type": "SheetContent",
+          "props": {},
+          "children": [
+           {
+            "type": "Content",
+            "props": {},
+            "children": [
+             {
+              "type": "Text",
+              "props": {
+               "as": "p",
+               "element": "type--body-small",
+               "emphasis": "quiet",
+               "children": "Panel content goes here…"
+              }
+             }
+            ]
+           }
+          ]
+         }
+        ],
+        "on": {
+         "openChange": [
+          {
+           "set": {
+            "state": "openSimple",
+            "to": {
+             "bind": "event"
+            }
+           }
+          }
+         ]
+        }
+       },
+       {
+        "type": "Sheet",
+        "props": {
+         "open": {
+          "bind": "state.openHeaderFooter"
+         }
+        },
+        "children": [
+         {
+          "type": "SheetTrigger",
+          "props": {
+           "asChild": true
+          },
+          "children": [
+           {
+            "type": "Button",
+            "props": {
+             "data-testid": "panel-header-footer-open-btn",
+             "emphasis": "secondary",
+             "children": "Open panel header footer"
+            }
+           }
+          ]
+         },
+         {
+          "type": "SheetContent",
+          "props": {},
+          "children": [
+           {
+            "type": "Header",
+            "props": {},
+            "children": [
+             {
+              "type": "SheetTitle",
+              "props": {
+               "children": "Panel title"
+              }
+             },
+             {
+              "type": "SheetDescription",
+              "props": {
+               "children": "Optional description text goes here."
+              }
+             }
+            ]
+           },
+           {
+            "type": "Content",
+            "props": {
+             "overflow": {
+              "y": "scroll"
+             }
+            },
+            "children": [
+             {
+              "type": "Text",
+              "props": {
+               "as": "p",
+               "element": "type--body-small",
+               "emphasis": "quiet",
+               "children": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              }
+             },
+             {
+              "type": "Text",
+              "props": {
+               "as": "p",
+               "element": "type--body-small",
+               "emphasis": "quiet",
+               "children": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+              }
+             },
+             {
+              "type": "Text",
+              "props": {
+               "as": "p",
+               "element": "type--body-small",
+               "emphasis": "quiet",
+               "children": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."
+              }
+             },
+             {
+              "type": "Text",
+              "props": {
+               "as": "p",
+               "element": "type--body-small",
+               "emphasis": "quiet",
+               "children": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit."
+              }
+             },
+             {
+              "type": "Text",
+              "props": {
+               "as": "p",
+               "element": "type--body-small",
+               "emphasis": "quiet",
+               "children": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+              }
+             },
+             {
+              "type": "Text",
+              "props": {
+               "as": "p",
+               "element": "type--body-small",
+               "emphasis": "quiet",
+               "children": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam."
+              }
+             }
+            ]
+           },
+           {
+            "type": "Footer",
+            "props": {},
+            "children": [
+             {
+              "type": "Stack",
+              "props": {
+               "dir": "row",
+               "justify": "between",
+               "align": "center"
+              },
+              "children": [
+               {
+                "type": "SheetClose",
+                "props": {
+                 "asChild": true
+                },
+                "children": [
+                 {
+                  "type": "Button",
+                  "props": {
+                   "emphasis": "secondary",
+                   "children": "Cancel"
+                  }
+                 }
+                ]
+               },
+               {
+                "type": "Button",
+                "props": {
+                 "emphasis": "primary",
+                 "children": "Save"
+                }
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ],
+        "on": {
+         "openChange": [
+          {
+           "set": {
+            "state": "openHeaderFooter",
+            "to": {
+             "bind": "event"
+            }
+           }
+          }
+         ]
+        }
+       },
+       {
+        "type": "Sheet",
+        "props": {
+         "open": {
+          "bind": "state.openWithTabs"
+         }
+        },
+        "children": [
+         {
+          "type": "SheetTrigger",
+          "props": {
+           "asChild": true
+          },
+          "children": [
+           {
+            "type": "Button",
+            "props": {
+             "emphasis": "secondary",
+             "children": "Open panel with tabs"
+            }
+           }
+          ]
+         },
+         {
+          "type": "SheetContent",
+          "props": {},
+          "children": [
+           {
+            "type": "Header",
+            "props": {},
+            "children": [
+             {
+              "type": "SheetTitle",
+              "props": {
+               "children": "Panel title"
+              }
+             }
+            ]
+           },
+           {
+            "type": "Tabs",
+            "props": {
+             "value": {
+              "bind": "state.tab"
+             }
+            },
+            "children": [
+             {
+              "type": "TabsList",
+              "props": {},
+              "children": [
+               {
+                "type": "TabsTrigger",
+                "props": {
+                 "value": "tab1",
+                 "children": "Tab 1"
+                }
+               },
+               {
+                "type": "TabsTrigger",
+                "props": {
+                 "value": "tab2",
+                 "children": "Tab 2"
+                }
+               },
+               {
+                "type": "TabsTrigger",
+                "props": {
+                 "value": "tab3",
+                 "children": "Tab 3"
+                }
+               }
+              ]
+             },
+             {
+              "type": "TabsContent",
+              "props": {
+               "value": "tab1",
+               "asChild": true
+              },
+              "children": [
+               {
+                "type": "Content",
+                "props": {
+                 "overflow": {
+                  "y": "scroll"
+                 }
+                },
+                "children": [
+                 {
+                  "type": "Text",
+                  "props": {
+                   "as": "p",
+                   "element": "type--body-small",
+                   "emphasis": "quiet",
+                   "children": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                  }
+                 },
+                 {
+                  "type": "Text",
+                  "props": {
+                   "as": "p",
+                   "element": "type--body-small",
+                   "emphasis": "quiet",
+                   "children": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                  }
+                 },
+                 {
+                  "type": "Text",
+                  "props": {
+                   "as": "p",
+                   "element": "type--body-small",
+                   "emphasis": "quiet",
+                   "children": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."
+                  }
+                 },
+                 {
+                  "type": "Text",
+                  "props": {
+                   "as": "p",
+                   "element": "type--body-small",
+                   "emphasis": "quiet",
+                   "children": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit."
+                  }
+                 },
+                 {
+                  "type": "Text",
+                  "props": {
+                   "as": "p",
+                   "element": "type--body-small",
+                   "emphasis": "quiet",
+                   "children": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+                  }
+                 },
+                 {
+                  "type": "Text",
+                  "props": {
+                   "as": "p",
+                   "element": "type--body-small",
+                   "emphasis": "quiet",
+                   "children": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam."
+                  }
+                 }
+                ]
+               }
+              ]
+             },
+             {
+              "type": "TabsContent",
+              "props": {
+               "value": "tab2",
+               "asChild": true
+              },
+              "children": [
+               {
+                "type": "Content",
+                "props": {
+                 "overflow": {
+                  "y": "scroll"
+                 }
+                },
+                "children": [
+                 {
+                  "type": "Text",
+                  "props": {
+                   "as": "p",
+                   "element": "type--body-small",
+                   "emphasis": "quiet",
+                   "children": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                  }
+                 },
+                 {
+                  "type": "Text",
+                  "props": {
+                   "as": "p",
+                   "element": "type--body-small",
+                   "emphasis": "quiet",
+                   "children": "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur."
+                  }
+                 }
+                ]
+               }
+              ]
+             },
+             {
+              "type": "TabsContent",
+              "props": {
+               "value": "tab3",
+               "asChild": true
+              },
+              "children": [
+               {
+                "type": "Content",
+                "props": {
+                 "overflow": {
+                  "y": "scroll"
+                 }
+                },
+                "children": [
+                 {
+                  "type": "Text",
+                  "props": {
+                   "as": "p",
+                   "element": "type--body-small",
+                   "emphasis": "quiet",
+                   "children": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium."
+                  }
+                 }
+                ]
+               }
+              ]
+             }
+            ],
+            "on": {
+             "valueChange": [
+              {
+               "set": {
+                "state": "tab",
+                "to": {
+                 "bind": "event"
+                }
+               }
+              }
+             ]
+            }
+           },
+           {
+            "type": "Footer",
+            "props": {},
+            "children": [
+             {
+              "type": "Stack",
+              "props": {
+               "dir": "row",
+               "justify": "between",
+               "align": "center"
+              },
+              "children": [
+               {
+                "type": "SheetClose",
+                "props": {
+                 "asChild": true
+                },
+                "children": [
+                 {
+                  "type": "Button",
+                  "props": {
+                   "emphasis": "secondary",
+                   "children": "Cancel"
+                  }
+                 }
+                ]
+               },
+               {
+                "type": "Button",
+                "props": {
+                 "emphasis": "primary",
+                 "children": "Save"
+                }
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ],
+        "on": {
+         "openChange": [
+          {
+           "set": {
+            "state": "openWithTabs",
+            "to": {
+             "bind": "event"
+            }
+           }
+          }
+         ]
+        }
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

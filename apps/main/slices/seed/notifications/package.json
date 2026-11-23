@@ -1,7 +1,7 @@
 {
   "name": "@modules/notifications",
   "version": "0.1.0",
-  "description": "Notifications — message types, typed templates, preference-aware queueing, durable delivery, and the in-app inbox",
+  "description": "Notifications \u2014 message types, typed templates, preference-aware queueing, durable delivery, and the in-app inbox",
   "type": "module",
   "exports": {
     "./shared": {
@@ -33,7 +33,8 @@
     "test:watch": "vitest"
   },
   "dependencies": {
-    "nodemailer": "^7.0.12"
+    "nodemailer": "^7.0.12",
+    "@libs/web-routing": "workspace:*"
   },
   "peerDependencies": {
     "@hono/zod-validator": ">=0.4.0",

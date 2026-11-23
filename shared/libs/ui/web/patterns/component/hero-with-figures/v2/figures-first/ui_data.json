@@ -1,0 +1,205 @@
+{
+ "id": "ui-data-pattern-component-hero-with-figures-figures-first",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-hero-with-figures-figures-first",
+ "kind": "component",
+ "name": "figures-first",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "figures-first",
+  "version": 1,
+  "surface": "web",
+  "measure": "lg",
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "concept": "hero",
+    "className": "w-full max-w-5xl"
+   },
+   "children": [
+    {
+     "type": "Card",
+     "props": {
+      "emphasis": "hero",
+      "className": "w-full"
+     },
+     "children": [
+      {
+       "type": "Content",
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "col",
+          "scale": "2xl"
+         },
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "row",
+            "className": "w-full",
+            "concept": "stats",
+            "scale": "xl"
+           },
+           "children": [
+            {
+             "type": "Stack",
+             "props": {
+              "dir": "col",
+              "size": "fill",
+              "scale": "2xs"
+             },
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "as": "span",
+                "element": "type--numbers-extra-large",
+                "children": "24"
+               }
+              },
+              {
+               "type": "Text",
+               "props": {
+                "as": "span",
+                "element": "type--body-small",
+                "children": "Patterns approved",
+                "emphasis": "quiet"
+               }
+              }
+             ]
+            },
+            {
+             "type": "Stack",
+             "props": {
+              "dir": "col",
+              "size": "fill",
+              "scale": "2xs"
+             },
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "as": "span",
+                "element": "type--numbers-extra-large",
+                "children": "3"
+               }
+              },
+              {
+               "type": "Text",
+               "props": {
+                "as": "span",
+                "element": "type--body-small",
+                "children": "Open reviews",
+                "emphasis": "quiet"
+               }
+              }
+             ]
+            },
+            {
+             "type": "Stack",
+             "props": {
+              "dir": "col",
+              "size": "fill",
+              "scale": "2xs"
+             },
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "as": "span",
+                "element": "type--numbers-extra-large",
+                "children": "6"
+               }
+              },
+              {
+               "type": "Text",
+               "props": {
+                "as": "span",
+                "element": "type--body-small",
+                "children": "Members",
+                "emphasis": "quiet"
+               }
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "row",
+            "align": "center",
+            "className": "w-full pt-6",
+            "scale": "xl"
+           },
+           "children": [
+            {
+             "type": "Stack",
+             "props": {
+              "dir": "col",
+              "size": "fill",
+              "scale": "sm"
+             },
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "as": "h2",
+                "element": "type--heading1",
+                "children": "Three screens are ready for review"
+               }
+              },
+              {
+               "type": "Text",
+               "props": {
+                "as": "p",
+                "element": "type--body",
+                "children": "The designer's last drop is merged; two patterns wait for your decision.",
+                "emphasis": "quiet"
+               }
+              }
+             ]
+            },
+            {
+             "type": "Stack",
+             "props": {
+              "dir": "col",
+              "size": "fixed",
+              "className": "w-48",
+              "scale": "sm"
+             },
+             "children": [
+              {
+               "type": "Button",
+               "props": {
+                "emphasis": "secondary",
+                "children": "Review screens",
+                "className": "w-full"
+               }
+              },
+              {
+               "type": "Button",
+               "props": {
+                "emphasis": "tertiary",
+                "children": "Changelog",
+                "className": "w-full"
+               }
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,893 @@
+{
+ "id": "ui-data-pattern-component-user-menu-usermenu",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-user-menu-usermenu",
+ "kind": "component",
+ "name": "UserMenu",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "UserMenu",
+  "version": 1,
+  "surface": "web",
+  "params": [
+   "user",
+   "items",
+   "modes",
+   "mode",
+   "modeLayout",
+   "modeLabel",
+   "modeIcon",
+   "detail",
+   "title",
+   "compact",
+   "trigger",
+   "customPicture",
+   "header",
+   "manageLabel",
+   "itemsLabel",
+   "triggerIcon"
+  ],
+  "emits": [
+   "modeChange",
+   "select",
+   "signOut"
+  ],
+  "slots": [
+   "top",
+   "picture"
+  ],
+  "root": {
+   "type": "DropdownMenu",
+   "children": [
+    {
+     "type": "DropdownMenuTrigger",
+     "props": {
+      "asChild": true
+     },
+     "children": [
+      {
+       "type": "Button",
+       "props": {
+        "emphasis": "secondary",
+        "aria-label": {
+         "bind": "user.name"
+        },
+        "data-testid": "user-menu"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "scale": "sm"
+         },
+         "children": [
+          {
+           "use": {
+            "component": "NamedAvatar",
+            "version": "latest"
+           },
+           "args": {
+            "id": {
+             "bind": "user.id"
+            },
+            "name": {
+             "bind": "user.name"
+            },
+            "image": {
+             "bind": "user.image"
+            },
+            "scale": "sm",
+            "layout": "image",
+            "width": "hug"
+           },
+           "when": {
+            "not": [
+             {
+              "bind": "customPicture"
+             }
+            ]
+           }
+          },
+          {
+           "type": "Slot",
+           "props": {
+            "name": "picture"
+           },
+           "when": {
+            "bind": "customPicture"
+           }
+          },
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col",
+            "align": "start"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--body",
+              "children": {
+               "if": [
+                {
+                 "exists": [
+                  {
+                   "bind": "title"
+                  }
+                 ]
+                },
+                {
+                 "bind": "title"
+                },
+                {
+                 "bind": "user.name"
+                }
+               ]
+              },
+              "position": "clip"
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--body-extra-small",
+              "children": {
+               "bind": "detail"
+              },
+              "emphasis": "quiet",
+              "position": "clip"
+             },
+             "when": {
+              "exists": [
+               {
+                "bind": "detail"
+               }
+              ]
+             }
+            }
+           ],
+           "when": {
+            "not": [
+             {
+              "bind": "compact"
+             }
+            ]
+           }
+          },
+          {
+           "type": "Icon",
+           "props": {
+            "name": {
+             "if": [
+              {
+               "exists": [
+                {
+                 "bind": "triggerIcon"
+                }
+               ]
+              },
+              {
+               "bind": "triggerIcon"
+              },
+              "moreVertical"
+             ]
+            },
+            "scale": "sm"
+           },
+           "when": {
+            "not": [
+             {
+              "bind": "compact"
+             }
+            ]
+           }
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "when": {
+      "not": [
+       {
+        "eq": [
+         {
+          "bind": "trigger"
+         },
+         "sidebar"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "type": "DropdownMenuTrigger",
+     "props": {
+      "asChild": true
+     },
+     "children": [
+      {
+       "type": "SidebarMenuButton",
+       "props": {
+        "emphasis": "primary",
+        "tooltip": {
+         "bind": "user.name"
+        },
+        "data-testid": "user-menu"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "scale": "sm",
+          "size": "fill",
+          "justify": "center"
+         },
+         "children": [
+          {
+           "use": {
+            "component": "NamedAvatar",
+            "version": "latest"
+           },
+           "args": {
+            "id": {
+             "bind": "user.id"
+            },
+            "name": {
+             "bind": "user.name"
+            },
+            "image": {
+             "bind": "user.image"
+            },
+            "scale": "sm",
+            "layout": "image",
+            "width": "hug"
+           },
+           "when": {
+            "not": [
+             {
+              "bind": "customPicture"
+             }
+            ]
+           }
+          },
+          {
+           "type": "SidebarWhen",
+           "props": {
+            "state": "expanded"
+           },
+           "children": [
+            {
+             "type": "Slot",
+             "props": {
+              "name": "picture"
+             },
+             "when": {
+              "bind": "customPicture"
+             }
+            }
+           ]
+          },
+          {
+           "type": "SidebarWhen",
+           "props": {
+            "state": "expanded"
+           },
+           "children": [
+            {
+             "type": "Stack",
+             "props": {
+              "dir": "col",
+              "align": "start",
+              "size": "fill"
+             },
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "as": "span",
+                "element": "type--body",
+                "children": {
+                 "if": [
+                  {
+                   "exists": [
+                    {
+                     "bind": "title"
+                    }
+                   ]
+                  },
+                  {
+                   "bind": "title"
+                  },
+                  {
+                   "bind": "user.name"
+                  }
+                 ]
+                },
+                "position": "clip"
+               }
+              },
+              {
+               "type": "Text",
+               "props": {
+                "as": "span",
+                "element": "type--body-extra-small",
+                "children": {
+                 "bind": "detail"
+                },
+                "emphasis": "quiet",
+                "position": "clip"
+               },
+               "when": {
+                "exists": [
+                 {
+                  "bind": "detail"
+                 }
+                ]
+               }
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "SidebarWhen",
+           "props": {
+            "state": "expanded"
+           },
+           "children": [
+            {
+             "type": "Icon",
+             "props": {
+              "name": {
+               "if": [
+                {
+                 "exists": [
+                  {
+                   "bind": "triggerIcon"
+                  }
+                 ]
+                },
+                {
+                 "bind": "triggerIcon"
+                },
+                "moreVertical"
+               ]
+              },
+              "scale": "sm"
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "when": {
+      "eq": [
+       {
+        "bind": "trigger"
+       },
+       "sidebar"
+      ]
+     }
+    },
+    {
+     "type": "DropdownMenuContent",
+     "props": {
+      "align": "start"
+     },
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "concept": "menu-header",
+        "size": "fill"
+       },
+       "children": [
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": {
+           "bind": "user.id"
+          },
+          "name": {
+           "bind": "user.name"
+          },
+          "image": {
+           "bind": "user.image"
+          },
+          "layout": "row",
+          "width": "fill",
+          "detail": {
+           "bind": "user.email"
+          },
+          "showName": true,
+          "showDetail": true
+         }
+        }
+       ],
+       "when": {
+        "eq": [
+         {
+          "bind": "header"
+         },
+         "compact"
+        ]
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "align": "center",
+        "scale": "sm",
+        "concept": "menu-header"
+       },
+       "children": [
+        {
+         "use": {
+          "component": "NamedAvatar",
+          "version": "latest"
+         },
+         "args": {
+          "id": {
+           "bind": "user.id"
+          },
+          "name": {
+           "bind": "user.name"
+          },
+          "image": {
+           "bind": "user.image"
+          },
+          "layout": "image",
+          "scale": "xl",
+          "width": "hug"
+         }
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "col",
+          "align": "center",
+          "scale": "3xs"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--heading4",
+            "children": {
+             "bind": "user.name"
+            }
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": {
+             "bind": "user.email"
+            },
+            "emphasis": "quiet"
+           },
+           "when": {
+            "exists": [
+             {
+              "bind": "user.email"
+             }
+            ]
+           }
+          }
+         ]
+        },
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "secondary",
+          "scale": "sm",
+          "data-testid": "user-menu-manage-btn",
+          "children": {
+           "bind": "manageLabel"
+          }
+         },
+         "when": {
+          "exists": [
+           {
+            "bind": "manageLabel"
+           }
+          ]
+         },
+         "on": {
+          "click": [
+           {
+            "emit": {
+             "event": "select",
+             "payload": {
+              "id": "account"
+             }
+            }
+           }
+          ]
+         }
+        }
+       ],
+       "when": {
+        "eq": [
+         {
+          "bind": "header"
+         },
+         "large"
+        ]
+       }
+      },
+      {
+       "type": "Separator",
+       "when": {
+        "in": [
+         {
+          "bind": "header"
+         },
+         [
+          "compact",
+          "large"
+         ]
+        ]
+       }
+      },
+      {
+       "type": "Slot",
+       "props": {
+        "name": "top"
+       }
+      },
+      {
+       "type": "DropdownMenuLabel",
+       "when": {
+        "exists": [
+         {
+          "bind": "itemsLabel"
+         }
+        ]
+       },
+       "props": {
+        "children": {
+         "bind": "itemsLabel"
+        }
+       }
+      },
+      {
+       "type": "DropdownMenuItem",
+       "props": {
+        "data-testid": {
+         "concat": [
+          "user-menu-",
+          {
+           "bind": "entry.id"
+          },
+          "-menu"
+         ]
+        }
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "scale": "sm"
+         },
+         "children": [
+          {
+           "type": "Icon",
+           "props": {
+            "name": {
+             "bind": "entry.icon"
+            }
+           }
+          },
+          {
+           "type": "Stack",
+           "props": {
+            "size": "fill"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--body",
+              "children": {
+               "bind": "entry.label"
+              }
+             }
+            }
+           ]
+          },
+          {
+           "type": "Badge",
+           "props": {
+            "status": "info",
+            "children": {
+             "bind": "entry.count"
+            }
+           },
+           "when": {
+            "gt": [
+             {
+              "bind": "entry.count"
+             },
+             0
+            ]
+           }
+          }
+         ]
+        }
+       ],
+       "on": {
+        "select": [
+         {
+          "emit": {
+           "event": "select",
+           "payload": {
+            "id": {
+             "bind": "entry.id"
+            }
+           }
+          }
+         }
+        ]
+       },
+       "repeat": {
+        "each": "items",
+        "as": "entry"
+       }
+      },
+      {
+       "type": "DropdownMenuItem",
+       "props": {
+        "keepOpen": true,
+        "data-testid": "user-menu-mode-select"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "scale": "sm"
+         },
+         "children": [
+          {
+           "type": "Icon",
+           "props": {
+            "name": {
+             "bind": "modeIcon"
+            }
+           }
+          },
+          {
+           "type": "Stack",
+           "props": {
+            "size": "fill"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--body",
+              "children": {
+               "bind": "modeLabel"
+              }
+             }
+            }
+           ]
+          },
+          {
+           "type": "Switch",
+           "props": {
+            "checked": {
+             "eq": [
+              {
+               "bind": "mode"
+              },
+              {
+               "bind": "modes.1.id"
+              }
+             ]
+            },
+            "aria-label": {
+             "bind": "modeLabel"
+            }
+           }
+          }
+         ]
+        }
+       ],
+       "when": {
+        "and": [
+         {
+          "gt": [
+           {
+            "count": [
+             {
+              "bind": "modes"
+             }
+            ]
+           },
+           0
+          ]
+         },
+         {
+          "eq": [
+           {
+            "bind": "modeLayout"
+           },
+           "switch"
+          ]
+         }
+        ]
+       },
+       "on": {
+        "select": [
+         {
+          "emit": {
+           "event": "modeChange",
+           "payload": {
+            "id": {
+             "if": [
+              {
+               "eq": [
+                {
+                 "bind": "mode"
+                },
+                {
+                 "bind": "modes.0.id"
+                }
+               ]
+              },
+              {
+               "bind": "modes.1.id"
+              },
+              {
+               "bind": "modes.0.id"
+              }
+             ]
+            }
+           }
+          }
+         }
+        ]
+       }
+      },
+      {
+       "type": "DropdownMenuItem",
+       "props": {
+        "keepOpen": true,
+        "data-testid": "user-menu-mode-select"
+       },
+       "children": [
+        {
+         "type": "Icon",
+         "props": {
+          "name": {
+           "bind": "modeIcon"
+          }
+         }
+        },
+        {
+         "use": {
+          "component": "ModeControl",
+          "version": "latest"
+         },
+         "args": {
+          "modes": {
+           "bind": "modes"
+          },
+          "value": {
+           "bind": "mode"
+          },
+          "layout": "drop",
+          "label": {
+           "bind": "modeLabel"
+          }
+         },
+         "on": {
+          "change": [
+           {
+            "emit": {
+             "event": "modeChange",
+             "payload": {
+              "id": {
+               "bind": "event.id"
+              }
+             }
+            }
+           }
+          ]
+         }
+        }
+       ],
+       "when": {
+        "and": [
+         {
+          "gt": [
+           {
+            "count": [
+             {
+              "bind": "modes"
+             }
+            ]
+           },
+           0
+          ]
+         },
+         {
+          "not": [
+           {
+            "eq": [
+             {
+              "bind": "modeLayout"
+             },
+             "switch"
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      },
+      {
+       "type": "DropdownMenuItem",
+       "props": {
+        "data-testid": "user-menu-sign-out-btn"
+       },
+       "children": [
+        {
+         "type": "Icon",
+         "props": {
+          "name": "logout"
+         }
+        },
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body",
+          "children": "Sign out"
+         }
+        }
+       ],
+       "on": {
+        "select": [
+         {
+          "emit": {
+           "event": "signOut",
+           "payload": {}
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-component-container-header-1-title-and-actions",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Container header 1: a title at the left, the actions at the right (default)"
+}

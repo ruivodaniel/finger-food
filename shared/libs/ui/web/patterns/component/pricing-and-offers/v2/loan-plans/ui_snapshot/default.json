@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-pricing-and-offers-loan-plans-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-pricing-and-offers-loan-plans",
+ "name": "default",
+ "title": "Pricing and offers: loan plans",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

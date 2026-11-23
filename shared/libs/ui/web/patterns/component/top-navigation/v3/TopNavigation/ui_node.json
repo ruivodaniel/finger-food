@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-component-top-navigation-topnavigation",
+ "version": 1,
+ "type": "navigation",
+ "surface": "web",
+ "title": "TopNavigation"
+}

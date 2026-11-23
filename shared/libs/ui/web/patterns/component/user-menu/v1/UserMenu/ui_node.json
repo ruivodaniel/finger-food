@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-component-user-menu-usermenu",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "UserMenu"
+}

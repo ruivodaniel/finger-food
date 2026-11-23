@@ -1,0 +1,23 @@
+{
+ "id": "term/component-stacking",
+ "kind": "term",
+ "title": "component stacking",
+ "status": "approved",
+ "subjects": [
+  "ui"
+ ],
+ "owner": "libs/ui",
+ "tags": [
+  "ui"
+ ],
+ "paths": [
+  "shared/libs/ui/web/layouts"
+ ],
+ "term": {
+  "def": "Composing the inside of a component with Stack: stacks inside stacks. The word for everything that is not the page's layout.",
+  "aliases": [
+   "stacking"
+  ],
+  "proposed": false
+ }
+}

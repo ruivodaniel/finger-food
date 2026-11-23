@@ -1,0 +1,369 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "file-list",
+ "version": 1,
+ "surface": "web",
+ "measure": "md",
+ "root": {
+  "type": "List",
+  "props": {
+   "className": "w-full max-w-2xl"
+  },
+  "children": [
+   {
+    "type": "ListItem",
+    "props": {
+     "className": "gap-4"
+    },
+    "children": [
+     {
+      "type": "ListItemIcon",
+      "props": {},
+      "children": [
+       {
+        "type": "Tile",
+        "props": {
+         "emphasis": "quiet",
+         "className": "w-20 h-20 items-center justify-center"
+        },
+        "children": [
+         {
+          "type": "Icon",
+          "props": {
+           "name": "image",
+           "size": "lg"
+          }
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "ListItemContent",
+      "props": {},
+      "children": [
+       {
+        "type": "ListItemTitle",
+        "props": {},
+        "children": [
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--body-large",
+           "children": "profile-photo.jpg"
+          }
+         }
+        ]
+       },
+       {
+        "type": "ListItemDescription",
+        "props": {},
+        "children": [
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--body-small",
+           "emphasis": "quiet",
+           "children": "2.34 MB · JPEG"
+          }
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "ListItemAction",
+      "props": {},
+      "children": [
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "gap": 8,
+         "align": "center"
+        },
+        "children": [
+         {
+          "type": "Button",
+          "props": {
+           "buttonType": "icon",
+           "startIcon": "copy",
+           "emphasis": "quiet",
+           "scale": "sm",
+           "aria-label": "copy"
+          }
+         },
+         {
+          "type": "Button",
+          "props": {
+           "buttonType": "icon",
+           "startIcon": "download",
+           "emphasis": "quiet",
+           "scale": "sm",
+           "aria-label": "download"
+          }
+         },
+         {
+          "type": "Button",
+          "props": {
+           "buttonType": "icon",
+           "startIcon": "externalLink",
+           "emphasis": "quiet",
+           "scale": "sm",
+           "aria-label": "externalLink"
+          }
+         },
+         {
+          "type": "Button",
+          "props": {
+           "buttonType": "icon",
+           "startIcon": "close",
+           "emphasis": "quiet",
+           "scale": "sm",
+           "aria-label": "remove"
+          }
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "ListItem",
+    "props": {
+     "className": "gap-4"
+    },
+    "children": [
+     {
+      "type": "ListItemIcon",
+      "props": {},
+      "children": [
+       {
+        "type": "Tile",
+        "props": {
+         "emphasis": "quiet",
+         "className": "w-20 h-20 items-center justify-center"
+        },
+        "children": [
+         {
+          "type": "Icon",
+          "props": {
+           "name": "fileText",
+           "size": "lg"
+          }
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "ListItemContent",
+      "props": {},
+      "children": [
+       {
+        "type": "ListItemTitle",
+        "props": {},
+        "children": [
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--body-large",
+           "children": "document.pdf"
+          }
+         }
+        ]
+       },
+       {
+        "type": "ListItemDescription",
+        "props": {},
+        "children": [
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--body-small",
+           "emphasis": "quiet",
+           "children": "1 MB · PDF"
+          }
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "ListItemAction",
+      "props": {},
+      "children": [
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "gap": 8,
+         "align": "center"
+        },
+        "children": [
+         {
+          "type": "Button",
+          "props": {
+           "buttonType": "icon",
+           "startIcon": "copy",
+           "emphasis": "quiet",
+           "scale": "sm",
+           "aria-label": "copy"
+          }
+         },
+         {
+          "type": "Button",
+          "props": {
+           "buttonType": "icon",
+           "startIcon": "download",
+           "emphasis": "quiet",
+           "scale": "sm",
+           "aria-label": "download"
+          }
+         },
+         {
+          "type": "Button",
+          "props": {
+           "buttonType": "icon",
+           "startIcon": "externalLink",
+           "emphasis": "quiet",
+           "scale": "sm",
+           "aria-label": "externalLink"
+          }
+         },
+         {
+          "type": "Button",
+          "props": {
+           "buttonType": "icon",
+           "startIcon": "close",
+           "emphasis": "quiet",
+           "scale": "sm",
+           "aria-label": "remove"
+          }
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "ListItem",
+    "props": {
+     "className": "gap-4"
+    },
+    "children": [
+     {
+      "type": "ListItemIcon",
+      "props": {},
+      "children": [
+       {
+        "type": "Tile",
+        "props": {
+         "emphasis": "quiet",
+         "className": "w-20 h-20 items-center justify-center"
+        },
+        "children": [
+         {
+          "type": "Icon",
+          "props": {
+           "name": "file",
+           "size": "lg"
+          }
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "ListItemContent",
+      "props": {},
+      "children": [
+       {
+        "type": "ListItemTitle",
+        "props": {},
+        "children": [
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--body-large",
+           "children": "presentation.mp4"
+          }
+         }
+        ]
+       },
+       {
+        "type": "ListItemDescription",
+        "props": {},
+        "children": [
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--body-small",
+           "emphasis": "quiet",
+           "children": "15 MB · MP4"
+          }
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "ListItemAction",
+      "props": {},
+      "children": [
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "gap": 8,
+         "align": "center"
+        },
+        "children": [
+         {
+          "type": "Button",
+          "props": {
+           "buttonType": "icon",
+           "startIcon": "copy",
+           "emphasis": "quiet",
+           "scale": "sm",
+           "aria-label": "copy"
+          }
+         },
+         {
+          "type": "Button",
+          "props": {
+           "buttonType": "icon",
+           "startIcon": "download",
+           "emphasis": "quiet",
+           "scale": "sm",
+           "aria-label": "download"
+          }
+         },
+         {
+          "type": "Button",
+          "props": {
+           "buttonType": "icon",
+           "startIcon": "externalLink",
+           "emphasis": "quiet",
+           "scale": "sm",
+           "aria-label": "externalLink"
+          }
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,7 @@
+{
+ "id": "route-pattern-layout-single-sidebar-tabs-layout",
+ "version": 1,
+ "surface": "web",
+ "path": "/patterns/layout/single-sidebar-tabs-layout",
+ "uiNodeId": "ui-node-pattern-layout-single-sidebar-tabs-layout"
+}

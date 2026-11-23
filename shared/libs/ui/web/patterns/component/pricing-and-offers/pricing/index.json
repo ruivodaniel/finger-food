@@ -1,0 +1,661 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "pricing",
+ "version": 1,
+ "surface": "web",
+ "measure": "lg",
+ "root": {
+  "type": "Stack",
+  "props": {
+   "dir": "row",
+   "gap": 24,
+   "align": "stretch",
+   "className": "w-full max-w-4xl"
+  },
+  "children": [
+   {
+    "type": "Card",
+    "props": {
+     "className": "flex-1 min-w-0"
+    },
+    "children": [
+     {
+      "type": "Content",
+      "props": {},
+      "children": [
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "col",
+         "gap": 24,
+         "size": "fill"
+        },
+        "children": [
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "col",
+           "gap": 6
+          },
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--heading3",
+             "children": "Free"
+            }
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body",
+             "emphasis": "quiet",
+             "children": "For hobbyists and side projects"
+            }
+           }
+          ]
+         },
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "row",
+           "align": "baseline",
+           "gap": 4
+          },
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--numbers-extra-large",
+             "children": "Free"
+            }
+           }
+          ]
+         },
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "col",
+           "gap": 12,
+           "size": "fill"
+          },
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body"
+            },
+            "children": [
+             {
+              "type": "Icon",
+              "props": {
+               "name": "check",
+               "size": "sm"
+              }
+             },
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "children": " Up to 3 projects"
+              }
+             }
+            ]
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body"
+            },
+            "children": [
+             {
+              "type": "Icon",
+              "props": {
+               "name": "check",
+               "size": "sm"
+              }
+             },
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "children": " Basic analytics"
+              }
+             }
+            ]
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body"
+            },
+            "children": [
+             {
+              "type": "Icon",
+              "props": {
+               "name": "check",
+               "size": "sm"
+              }
+             },
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "children": " Community support"
+              }
+             }
+            ]
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body",
+             "state": "disabled"
+            },
+            "children": [
+             {
+              "type": "Icon",
+              "props": {
+               "name": "check",
+               "size": "sm"
+              }
+             },
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "children": " Custom domain"
+              }
+             }
+            ]
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body",
+             "state": "disabled"
+            },
+            "children": [
+             {
+              "type": "Icon",
+              "props": {
+               "name": "check",
+               "size": "sm"
+              }
+             },
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "children": " Priority support"
+              }
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "Button",
+          "props": {
+           "emphasis": "secondary",
+           "fill": true,
+           "children": "Get Started"
+          }
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Card",
+    "props": {
+     "className": "flex-1 min-w-0",
+     "emphasis": "primary"
+    },
+    "children": [
+     {
+      "type": "Content",
+      "props": {},
+      "children": [
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "col",
+         "gap": 24,
+         "size": "fill"
+        },
+        "children": [
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "row",
+           "justify": "center"
+          },
+          "children": [
+           {
+            "type": "Badge",
+            "props": {
+             "emphasis": "hero",
+             "showIcon": true,
+             "iconName": "star",
+             "children": "Most Popular"
+            }
+           }
+          ]
+         },
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "col",
+           "gap": 6
+          },
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--heading3",
+             "children": "Pro"
+            }
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body",
+             "emphasis": "quiet",
+             "children": "For professionals and growing teams"
+            }
+           }
+          ]
+         },
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "row",
+           "align": "baseline",
+           "gap": 4
+          },
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--numbers-extra-large",
+             "children": "$29"
+            }
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body-large",
+             "emphasis": "quiet",
+             "children": "/mo"
+            }
+           }
+          ]
+         },
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "col",
+           "gap": 12,
+           "size": "fill"
+          },
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body"
+            },
+            "children": [
+             {
+              "type": "Icon",
+              "props": {
+               "name": "check",
+               "size": "sm"
+              }
+             },
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "children": " Unlimited projects"
+              }
+             }
+            ]
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body"
+            },
+            "children": [
+             {
+              "type": "Icon",
+              "props": {
+               "name": "check",
+               "size": "sm"
+              }
+             },
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "children": " Advanced analytics"
+              }
+             }
+            ]
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body"
+            },
+            "children": [
+             {
+              "type": "Icon",
+              "props": {
+               "name": "check",
+               "size": "sm"
+              }
+             },
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "children": " Priority support"
+              }
+             }
+            ]
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body"
+            },
+            "children": [
+             {
+              "type": "Icon",
+              "props": {
+               "name": "check",
+               "size": "sm"
+              }
+             },
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "children": " Custom domain"
+              }
+             }
+            ]
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body"
+            },
+            "children": [
+             {
+              "type": "Icon",
+              "props": {
+               "name": "check",
+               "size": "sm"
+              }
+             },
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "children": " API access"
+              }
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "Button",
+          "props": {
+           "emphasis": "primary",
+           "fill": true,
+           "children": "Start Free Trial"
+          }
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Card",
+    "props": {
+     "className": "flex-1 min-w-0"
+    },
+    "children": [
+     {
+      "type": "Content",
+      "props": {},
+      "children": [
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "col",
+         "gap": 24,
+         "size": "fill"
+        },
+        "children": [
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "col",
+           "gap": 6
+          },
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--heading3",
+             "children": "Enterprise"
+            }
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body",
+             "emphasis": "quiet",
+             "children": "For large organizations"
+            }
+           }
+          ]
+         },
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "row",
+           "align": "baseline",
+           "gap": 4
+          },
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--numbers-extra-large",
+             "children": "$99"
+            }
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body-large",
+             "emphasis": "quiet",
+             "children": "/mo"
+            }
+           }
+          ]
+         },
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "col",
+           "gap": 12,
+           "size": "fill"
+          },
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body"
+            },
+            "children": [
+             {
+              "type": "Icon",
+              "props": {
+               "name": "check",
+               "size": "sm"
+              }
+             },
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "children": " Everything in Pro"
+              }
+             }
+            ]
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body"
+            },
+            "children": [
+             {
+              "type": "Icon",
+              "props": {
+               "name": "check",
+               "size": "sm"
+              }
+             },
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "children": " SSO & SAML"
+              }
+             }
+            ]
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body"
+            },
+            "children": [
+             {
+              "type": "Icon",
+              "props": {
+               "name": "check",
+               "size": "sm"
+              }
+             },
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "children": " Dedicated support"
+              }
+             }
+            ]
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body"
+            },
+            "children": [
+             {
+              "type": "Icon",
+              "props": {
+               "name": "check",
+               "size": "sm"
+              }
+             },
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "children": " Custom integrations"
+              }
+             }
+            ]
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body"
+            },
+            "children": [
+             {
+              "type": "Icon",
+              "props": {
+               "name": "check",
+               "size": "sm"
+              }
+             },
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "children": " SLA guarantee"
+              }
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "Button",
+          "props": {
+           "emphasis": "secondary",
+           "fill": true,
+           "children": "Contact Sales"
+          }
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

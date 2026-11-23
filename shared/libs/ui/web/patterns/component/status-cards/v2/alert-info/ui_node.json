@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-component-status-cards-alert-info",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Status cards: alert info"
+}

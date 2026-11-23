@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-primitive-data-number-v2-default",
+ "version": 1,
+ "uiDataId": "ui-data-primitive-data-number-v2",
+ "name": "default",
+ "title": "Data number, its cases",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

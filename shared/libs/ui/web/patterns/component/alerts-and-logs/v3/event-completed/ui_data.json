@@ -1,0 +1,153 @@
+{
+ "id": "ui-data-pattern-component-alerts-and-logs-event-completed-v3",
+ "version": 2,
+ "uiNodeId": "ui-node-pattern-component-alerts-and-logs-event-completed-v3",
+ "kind": "component",
+ "name": "event-completed",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "event-completed",
+  "version": 2,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Card",
+   "props": {},
+   "children": [
+    {
+     "type": "Content",
+     "props": {},
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "justify": "between",
+          "align": "center",
+          "scale": "md"
+         },
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "row",
+            "align": "center",
+            "scale": "md"
+           },
+           "children": [
+            {
+             "type": "Badge",
+             "props": {
+              "status": "success",
+              "emphasis": "secondary",
+              "scale": "lg",
+              "aria-label": "Completed",
+              "showIcon": true,
+              "iconName": "check"
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--heading4",
+              "status": "success",
+              "children": "Completed"
+             }
+            }
+           ]
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--code",
+            "emphasis": "quiet",
+            "children": "msg_xyz7..."
+           }
+          }
+         ]
+        },
+        {
+         "type": "Text",
+         "props": {
+          "as": "code",
+          "element": "type--code",
+          "children": "{\"report\": \"daily_analytics\"}"
+         }
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "wrap": true,
+          "scale": "md"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "emphasis": "quiet"
+           },
+           "children": [
+            {
+             "type": "Icon",
+             "props": {
+              "name": "calendar",
+              "size": "xs"
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "children": " 11 Feb, 15:15"
+             }
+            }
+           ]
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "emphasis": "quiet"
+           },
+           "children": [
+            {
+             "type": "Icon",
+             "props": {
+              "name": "check",
+              "size": "xs"
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "children": " 11 Feb, 16:15"
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

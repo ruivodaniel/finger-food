@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-organization-switcher-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-organization-switcher",
+ "name": "default",
+ "title": "Organization switcher",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

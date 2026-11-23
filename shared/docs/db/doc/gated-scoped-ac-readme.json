@@ -1,0 +1,120 @@
+{
+ "id": "doc/gated-scoped-ac-readme",
+ "kind": "doc",
+ "title": "@libs/gated-scoped-ac",
+ "status": "todo",
+ "subject": "gated-scoped-ac",
+ "owner": "libs/gated-scoped-ac",
+ "order": 1,
+ "tags": [
+  "gated-scoped-ac"
+ ],
+ "paths": [
+  "shared/libs/gated-scoped-ac"
+ ],
+ "summary": "Scoped access control as a library: an engine that turns a caller's permissions into scopes and verdicts, and a gated db that reaches the database only through them.",
+ "docId": "gated-scoped-ac-readme",
+ "doc": {
+  "axioms": [],
+  "purpose": {
+   "intro": "The library behind [[access-control|Access Control]]. Rules are declared as config; for each request an engine turns the caller's permissions into a [[scope]] or a verdict, and the [[gated db]] reaches the database only with one. These pages are the library's reference: its surface, how an app wires it, how a slice calls it, and how it works inside.",
+   "points": [
+    "**The engine** (`createAc`) resolves read, update and delete scopes and the create and update verdicts. It is pure: it builds drizzle SQL fragments and never holds a connection.",
+    "**The gate** (`createGatedDb`) owns the database handle. Its read, update and delete each take a scope of the matching entity and action, so a query that skips access control does not compile.",
+    "**The config loaders** (`definePermissions`, `registerPermissions`, `registerForests`) type and validate permissions and [[role forest|role forests]] when the config loads.",
+    "**The [[access context]]** (`ScopedAcRequestContext`) is the value an app builds once per request and every layer below reads."
+   ],
+   "note": "The principles and their AC ids are in [[access-control|Access Control]]. These pages describe the code in `shared/libs/gated-scoped-ac/src`."
+  },
+  "reference": [
+   {
+    "topic": "The public surface",
+    "statement": "Everything is imported from `@libs/gated-scoped-ac`, the zod adapter from `@libs/gated-scoped-ac/zod`. The brand symbol that marks a scope is not exported.",
+    "claims": [
+     {
+      "text": "Types: `Ac`, `AcConfig`, `Scope`, `Verdict`, `ExistsProbe`, `IdSubquery`, `SchemaTables`, `AnyTable` (engine); `GateDeps`, `GatedDb`, `GatedDbFactory` (gate); `Public`, `Private`; `ConfigValidator`, `Issue`; and the DSL types `Action`, `Operand`, `Compare`, `Condition`, `DirectCondition`, `Traversal`, `JoinWhere`, `AccessRule`, `CreateRule`, `Permission`, `PermissionDef`, `PermissionDefs`, `LoosePermissionDef`, `PermissionMap`, `RoleNode`, `Role`, `OrgType`."
+     }
+    ],
+    "imagesAndDiagrams": [
+     {
+      "type": "ascii",
+      "value": "| Export | File | What it is |\n|---|---|---|\n| `createAc` | `engine.ts` | the engine: scopes and verdicts for a caller's permissions |\n| `createGatedDb` | `gate.ts` | the gate: `gateDb(bag)` per request, `gateDb.ungated()` for the named exceptions |\n| `definePermissions`, `registerPermissions`, `registerForests`, `impliedRoles` | `config.ts` | the typed builder and the loaders that validate config |\n| `ScopedAcRequestContext`, `ScopedAcBag` | `context.ts` | the per-request access context |\n| `PUBLIC`, `PRIVATE`, `isPrivate` | `visibility.ts` | the public and private tokens |\n| `ConfigValidator`, `Issue` | `validate.ts` | the validation port |\n| `zodConfigValidator` | `adapters/zod.ts` | the zod adapter, at `@libs/gated-scoped-ac/zod` |"
+     }
+    ]
+   },
+   {
+    "topic": "Dependencies",
+    "statement": "One runtime dependency, one optional peer, and nothing from the app.",
+    "claims": [
+     {
+      "text": "`drizzle-orm` is the one runtime dependency: the engine builds drizzle `sql` fragments and the gate runs drizzle queries on the handle it is given."
+     },
+     {
+      "text": "`zod` is an optional peer, loaded only by `@libs/gated-scoped-ac/zod`. Importing the library's root never pulls it in."
+     },
+     {
+      "text": "No web framework, no auth provider and no app module: the app's middleware builds the [[access context]] and hands the library what it needs."
+     }
+    ]
+   },
+   {
+    "topic": "The pages",
+    "statement": "In reading order; each stands on its own.",
+    "claims": [
+     {
+      "text": "[[gated-scoped-ac-architecture|Architecture]]: which file owns what, what lives how long, how a request passes through."
+     },
+     {
+      "text": "[[gated-scoped-ac-dsl-rules|DSL rules]]: permissions, conditions, traversals and role forests as the loaders accept them."
+     },
+     {
+      "text": "[[gated-scoped-ac-bag|Access context]]: the bag, the permissions and the per-request handle, and how paths resolve against them."
+     },
+     {
+      "text": "[[gated-scoped-ac-mount|Mount]]: building the engine and the gate once, and the hydration that builds the context per request."
+     },
+     {
+      "text": "[[gated-scoped-ac-ac-patterns|AC patterns]]: what a service and a repository call for each of create, read, update and delete."
+     },
+     {
+      "text": "[[gated-scoped-ac-security|Security]]: what the library guarantees, and what it trusts the app with."
+     },
+     {
+      "text": "[[gated-scoped-ac-internals|Internals]]: how the engine compiles rules and how the gate assembles and runs them."
+     },
+     {
+      "text": "[[gated-scoped-ac-troubleshooting|Troubleshooting]]: the errors the library throws, and why a read comes back empty."
+     }
+    ]
+   },
+   {
+    "topic": "Tests",
+    "statement": "`shared/libs/gated-scoped-ac/test/` runs the real engine and gate against PGlite, with a fixture schema (organization, user, membership, note, note_share, note_comment and a view) and its own config.",
+    "claims": [
+     {
+      "text": "`behavior`: reads, writes and denials per persona. `operators`: the four operators on single-value, array and json columns. `traversal`: joins and the far-side column. `payload`: create rules on the row being written. `implied-roles`, `zod-adapter`, and `types.test-d.ts` for what must not compile."
+     },
+     {
+      "text": "Run them with `pnpm --dir shared/libs/gated-scoped-ac test`; the type tests with `test:types`."
+     }
+    ]
+   }
+  ],
+  "review": {
+   "axioms": {
+    "state": "unreviewed"
+   },
+   "purpose": {
+    "state": "unreviewed"
+   },
+   "reference": {
+    "state": "unreviewed"
+   }
+  },
+  "converted": true
+ },
+ "audience": [
+  "seed-contributor",
+  "seed-consumer"
+ ]
+}

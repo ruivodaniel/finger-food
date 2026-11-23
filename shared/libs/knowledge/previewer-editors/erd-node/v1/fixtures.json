@@ -1,0 +1,610 @@
+[
+  {
+    "id": "use_case",
+    "name": "use_case",
+    "data": {
+      "name": "use_case",
+      "source": "designed",
+      "description": "one permutation of the intention through time",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "pk": true,
+          "notNull": true,
+          "unique": false
+        },
+        {
+          "name": "goalId",
+          "type": "uuid",
+          "pk": false,
+          "notNull": true,
+          "unique": false,
+          "fk": {
+            "table": "goal",
+            "column": "id"
+          }
+        },
+        {
+          "name": "active",
+          "type": "boolean",
+          "pk": false,
+          "notNull": true,
+          "unique": false
+        },
+        {
+          "name": "version",
+          "type": "text",
+          "pk": false,
+          "notNull": true,
+          "unique": false
+        },
+        {
+          "name": "createdAt",
+          "type": "text",
+          "pk": false,
+          "notNull": false,
+          "unique": false
+        },
+        {
+          "name": "updatedAt",
+          "type": "text",
+          "pk": false,
+          "notNull": false,
+          "unique": false
+        },
+        {
+          "name": "rationale",
+          "type": "text",
+          "pk": false,
+          "notNull": false,
+          "unique": false
+        },
+        {
+          "name": "kind",
+          "type": "text",
+          "pk": false,
+          "notNull": true,
+          "unique": false
+        },
+        {
+          "name": "uid",
+          "type": "text",
+          "pk": false,
+          "notNull": true,
+          "unique": false
+        },
+        {
+          "name": "slug",
+          "type": "text",
+          "pk": false,
+          "notNull": false,
+          "unique": false
+        },
+        {
+          "name": "title",
+          "type": "text",
+          "pk": false,
+          "notNull": true,
+          "unique": false
+        },
+        {
+          "name": "status",
+          "type": "text",
+          "pk": false,
+          "notNull": false,
+          "unique": false
+        },
+        {
+          "name": "description",
+          "type": "text",
+          "pk": false,
+          "notNull": false,
+          "unique": false
+        },
+        {
+          "name": "preconditions",
+          "type": "jsonb",
+          "pk": false,
+          "notNull": false,
+          "unique": false
+        },
+        {
+          "name": "assertions",
+          "type": "text[]",
+          "pk": false,
+          "notNull": false,
+          "unique": false
+        },
+        {
+          "name": "stepOrder",
+          "type": "uuid[]",
+          "pk": false,
+          "notNull": false,
+          "unique": false
+        }
+      ],
+      "indexes": [],
+      "pointsTo": [
+        "goal"
+      ],
+      "kind": "table",
+      "checks": []
+    }
+  },
+  {
+    "id": "ui_node",
+    "name": "ui_node",
+    "data": {
+      "name": "ui_node",
+      "source": "designed",
+      "description": "A node of the UI: a page, sheet, modal, toast, component or path-only segment. It shows UI snapshots through ui_node_snapshot.",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "pk": true,
+          "notNull": true,
+          "unique": false
+        },
+        {
+          "name": "sliceId",
+          "type": "uuid",
+          "pk": false,
+          "notNull": false,
+          "unique": false,
+          "fk": {
+            "table": "slice",
+            "column": "id"
+          }
+        },
+        {
+          "name": "projectId",
+          "type": "uuid",
+          "pk": false,
+          "notNull": false,
+          "unique": false,
+          "fk": {
+            "table": "project",
+            "column": "id"
+          }
+        },
+        {
+          "name": "active",
+          "type": "boolean",
+          "pk": false,
+          "notNull": true,
+          "unique": false
+        },
+        {
+          "name": "version",
+          "type": "text",
+          "pk": false,
+          "notNull": true,
+          "unique": false
+        },
+        {
+          "name": "createdAt",
+          "type": "text",
+          "pk": false,
+          "notNull": false,
+          "unique": false
+        },
+        {
+          "name": "updatedAt",
+          "type": "text",
+          "pk": false,
+          "notNull": false,
+          "unique": false
+        },
+        {
+          "name": "rationale",
+          "type": "text",
+          "pk": false,
+          "notNull": false,
+          "unique": false
+        },
+        {
+          "name": "type",
+          "type": "ui_node_type",
+          "pk": false,
+          "notNull": false,
+          "unique": false,
+          "enum": {
+            "name": "ui_node_type",
+            "values": [
+              "screen",
+              "sheet",
+              "modal",
+              "toast",
+              "component",
+              "path-only"
+            ]
+          }
+        },
+        {
+          "name": "shared",
+          "type": "boolean",
+          "pk": false,
+          "notNull": false,
+          "unique": false
+        },
+        {
+          "name": "surface",
+          "type": "ui_node_surface",
+          "pk": false,
+          "notNull": false,
+          "unique": false,
+          "enum": {
+            "name": "ui_node_surface",
+            "values": [
+              "web",
+              "mobile"
+            ]
+          }
+        },
+        {
+          "name": "path",
+          "type": "text",
+          "pk": false,
+          "notNull": false,
+          "unique": false
+        },
+        {
+          "name": "title",
+          "type": "text",
+          "pk": false,
+          "notNull": false,
+          "unique": false
+        },
+        {
+          "name": "legacyCapabilities",
+          "type": "jsonb",
+          "pk": false,
+          "notNull": false,
+          "unique": false
+        },
+        {
+          "name": "description",
+          "type": "text",
+          "pk": false,
+          "notNull": false,
+          "unique": false
+        },
+        {
+          "name": "access",
+          "type": "ui_node_access",
+          "pk": false,
+          "notNull": false,
+          "unique": false,
+          "enum": {
+            "name": "ui_node_access",
+            "values": [
+              "public",
+              "auth"
+            ]
+          }
+        },
+        {
+          "name": "root",
+          "type": "boolean",
+          "pk": false,
+          "notNull": false,
+          "unique": false
+        },
+        {
+          "name": "parentId",
+          "type": "uuid",
+          "pk": false,
+          "notNull": false,
+          "unique": false,
+          "fk": {
+            "table": "ui_node",
+            "column": "id"
+          }
+        }
+      ],
+      "indexes": [],
+      "pointsTo": [
+        "project",
+        "slice",
+        "ui_node"
+      ],
+      "kind": "table",
+      "checks": []
+    }
+  },
+  {
+    "id": "goal_group",
+    "name": "goal_group",
+    "data": {
+      "name": "goal_group",
+      "source": "designed",
+      "description": "a group of goals. The model keeps it inline in the goals file, with the ordered list of its goals' uids.",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "pk": true,
+          "notNull": true,
+          "unique": false
+        },
+        {
+          "name": "sliceId",
+          "type": "uuid",
+          "pk": false,
+          "notNull": true,
+          "unique": false,
+          "fk": {
+            "table": "slice",
+            "column": "id"
+          }
+        },
+        {
+          "name": "uid",
+          "type": "text",
+          "pk": false,
+          "notNull": true,
+          "unique": false
+        },
+        {
+          "name": "slug",
+          "type": "text",
+          "pk": false,
+          "notNull": false,
+          "unique": false
+        },
+        {
+          "name": "title",
+          "type": "text",
+          "pk": false,
+          "notNull": true,
+          "unique": false
+        },
+        {
+          "name": "description",
+          "type": "text",
+          "pk": false,
+          "notNull": false,
+          "unique": false
+        },
+        {
+          "name": "goalOrder",
+          "type": "uuid[]",
+          "pk": false,
+          "notNull": false,
+          "unique": false
+        }
+      ],
+      "indexes": [],
+      "pointsTo": [
+        "slice"
+      ],
+      "kind": "table",
+      "checks": []
+    }
+  },
+  {
+    "id": "wide",
+    "name": "image_generation (21 fields)",
+    "data": {
+      "name": "image_generation",
+      "source": "designed",
+      "description": "The ImageGeneration of the tool's entity model, held by the ImageGenerations file.",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "pk": true,
+          "notNull": true,
+          "unique": false
+        },
+        {
+          "name": "active",
+          "type": "boolean",
+          "pk": false,
+          "notNull": true,
+          "unique": false
+        },
+        {
+          "name": "version",
+          "type": "text",
+          "pk": false,
+          "notNull": true,
+          "unique": false
+        },
+        {
+          "name": "createdAt",
+          "type": "text",
+          "pk": false,
+          "notNull": false,
+          "unique": false
+        },
+        {
+          "name": "updatedAt",
+          "type": "text",
+          "pk": false,
+          "notNull": false,
+          "unique": false
+        },
+        {
+          "name": "rationale",
+          "type": "text",
+          "pk": false,
+          "notNull": false,
+          "unique": false
+        },
+        {
+          "name": "intent",
+          "type": "uuid",
+          "pk": false,
+          "notNull": true,
+          "unique": false,
+          "fk": {
+            "table": "image_intent",
+            "column": "id"
+          }
+        },
+        {
+          "name": "imageGroup",
+          "type": "text",
+          "pk": false,
+          "notNull": false,
+          "unique": false
+        },
+        {
+          "name": "folder",
+          "type": "jsonb",
+          "pk": false,
+          "notNull": true,
+          "unique": false
+        },
+        {
+          "name": "inputs",
+          "type": "jsonb",
+          "pk": false,
+          "notNull": true,
+          "unique": false
+        },
+        {
+          "name": "style",
+          "type": "jsonb",
+          "pk": false,
+          "notNull": true,
+          "unique": false
+        },
+        {
+          "name": "colors",
+          "type": "jsonb",
+          "pk": false,
+          "notNull": true,
+          "unique": false
+        },
+        {
+          "name": "ideas",
+          "type": "text[]",
+          "pk": false,
+          "notNull": true,
+          "unique": false
+        },
+        {
+          "name": "chosenIdea",
+          "type": "text",
+          "pk": false,
+          "notNull": true,
+          "unique": false
+        },
+        {
+          "name": "images",
+          "type": "jsonb",
+          "pk": false,
+          "notNull": true,
+          "unique": false
+        },
+        {
+          "name": "status",
+          "type": "text",
+          "pk": false,
+          "notNull": true,
+          "unique": false
+        },
+        {
+          "name": "error",
+          "type": "text",
+          "pk": false,
+          "notNull": false,
+          "unique": false
+        },
+        {
+          "name": "liked",
+          "type": "boolean",
+          "pk": false,
+          "notNull": false,
+          "unique": false
+        },
+        {
+          "name": "archived",
+          "type": "boolean",
+          "pk": false,
+          "notNull": false,
+          "unique": false
+        },
+        {
+          "name": "subject",
+          "type": "jsonb",
+          "pk": false,
+          "notNull": false,
+          "unique": false
+        },
+        {
+          "name": "mode",
+          "type": "text",
+          "pk": false,
+          "notNull": false,
+          "unique": false
+        }
+      ],
+      "indexes": [],
+      "pointsTo": [
+        "image_intent"
+      ],
+      "kind": "table",
+      "checks": []
+    }
+  },
+  {
+    "id": "new",
+    "name": "New table (name only)",
+    "data": {
+      "name": "new_table",
+      "source": "designed",
+      "fields": [],
+      "indexes": [],
+      "pointsTo": [],
+      "kind": "table",
+      "checks": []
+    }
+  },
+  {
+    "id": "long",
+    "name": "Long names",
+    "data": {
+      "name": "organization_membership_invitation_consent_acceptance_record",
+      "source": "designed",
+      "description": "A very long description that keeps going to see where the text is cut and whether the card holds when the words do not fit in a single line.",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "pk": true,
+          "notNull": true,
+          "unique": false
+        },
+        {
+          "name": "organization_membership_invitation_identifier",
+          "type": "uuid",
+          "pk": false,
+          "notNull": true,
+          "unique": false,
+          "fk": {
+            "table": "organization_membership_invitation",
+            "column": "id"
+          }
+        },
+        {
+          "name": "accepted_at_the_end_of_the_registration_flow",
+          "type": "timestamp with time zone",
+          "pk": false,
+          "notNull": false,
+          "unique": false
+        }
+      ],
+      "indexes": [],
+      "pointsTo": [
+        "organization_membership_invitation"
+      ],
+      "kind": "table",
+      "checks": []
+    }
+  }
+]

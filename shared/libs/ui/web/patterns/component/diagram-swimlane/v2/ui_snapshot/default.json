@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-diagram-swimlane-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-diagram-swimlane",
+ "name": "default",
+ "title": "Diagram swimlane",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

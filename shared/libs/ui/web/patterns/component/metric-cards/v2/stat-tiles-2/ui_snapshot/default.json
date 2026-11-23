@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-metric-cards-stat-tiles-2-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-metric-cards-stat-tiles-2",
+ "name": "default",
+ "title": "Metric cards: stat tiles 2",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

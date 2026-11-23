@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-component-container-4-alert-dialog",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Container 4: the alert dialog: a title, a line, back out at the left, go forward at the right"
+}

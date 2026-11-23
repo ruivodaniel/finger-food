@@ -6,12 +6,11 @@
  * and the delete-scope probe (AC5/AC6/AC9/AC10).
  */
 
-import { PRIVATE, type Ac, type Private } from "@libs/gated-scoped-ac";
+import { PRIVATE, type Ac, type Private, type ScopedAcRequestContext } from "@libs/gated-scoped-ac";
 import type {
   AuthAndRegistrationConfig,
   OrgLifecycleEntry,
 } from "../../shared/auth-config/types";
-import type { ScopedAcRequestContext } from "../shared/scoped-ac";
 import type {
   MemberListView,
   MembershipFacts,

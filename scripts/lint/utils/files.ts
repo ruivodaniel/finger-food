@@ -216,7 +216,7 @@ export function resolvePackageToPath(importPath: string): string | null {
   // @seed/notifications        → apps/main/slices/seed/notifications   (target)
   // @product/digest            → apps/main/slices/product/digest       (target)
   // @libs/storage              → shared/libs/storage
-  // @configs/user-organization-mgmt → configs/user-organization-mgmt
+  // @configs/user-organization-mgmt → shared/configs/user-organization-mgmt
 
   const slicePrefix = (prefix: string, tier: "seed" | "product") => {
     const pkgName = importPath.slice(prefix.length).split("/")[0];
@@ -239,14 +239,14 @@ export function resolvePackageToPath(importPath: string): string | null {
 
   if (importPath.startsWith("@configs/")) {
     const pkgName = importPath.slice("@configs/".length).split("/")[0];
-    return `configs/${pkgName}`;
+    return `shared/configs/${pkgName}`;
   }
 
   if (importPath.startsWith("@apps/")) {
     const appName = importPath.slice("@apps/".length).split("/")[0];
     // @apps/api and @apps/web-main are main's shells; the rest are top-level apps.
-    if (appName === "api") return "apps/main/shared/api";
-    if (appName === "web-main") return "apps/main/shared/web";
+    if (appName === "api") return "apps/main/core/api";
+    if (appName === "web-main") return "apps/main/core/web";
     return `apps/${appName}`;
   }
 

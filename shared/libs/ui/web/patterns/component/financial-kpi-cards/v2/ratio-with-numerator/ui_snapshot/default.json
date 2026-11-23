@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-financial-kpi-cards-ratio-with-numerator-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-financial-kpi-cards-ratio-with-numerator",
+ "name": "default",
+ "title": "Financial kpi cards: ratio with numerator",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

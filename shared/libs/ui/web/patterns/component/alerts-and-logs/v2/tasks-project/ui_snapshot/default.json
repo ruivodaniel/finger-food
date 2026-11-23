@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-alerts-and-logs-tasks-project-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-alerts-and-logs-tasks-project",
+ "name": "default",
+ "title": "Alerts and logs: tasks project",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

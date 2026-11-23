@@ -1,0 +1,79 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "alert-info",
+ "version": 1,
+ "surface": "web",
+ "measure": "md",
+ "root": {
+  "type": "Card",
+  "props": {
+   "status": "info",
+   "className": "flex-1 min-w-56",
+   "concept": "alert"
+  },
+  "children": [
+   {
+    "type": "Header",
+    "props": {},
+    "children": [
+     {
+      "type": "Icon",
+      "props": {
+       "name": "info"
+      }
+     },
+     {
+      "type": "Text",
+      "props": {
+       "as": "p",
+       "element": "type--heading4",
+       "children": "New version available"
+      }
+     }
+    ]
+   },
+   {
+    "type": "Content",
+    "props": {},
+    "children": [
+     {
+      "type": "Text",
+      "props": {
+       "as": "p",
+       "element": "type--body-small",
+       "emphasis": "quiet",
+       "children": "v2.4 adds the Stack primitive and the tile theme block."
+      }
+     },
+     {
+      "type": "Stack",
+      "props": {
+       "dir": "row",
+       "gap": 8
+      },
+      "children": [
+       {
+        "type": "Button",
+        "props": {
+         "emphasis": "secondary",
+         "status": "info",
+         "scale": "sm",
+         "children": "See what's new"
+        }
+       },
+       {
+        "type": "Button",
+        "props": {
+         "emphasis": "quiet",
+         "scale": "sm",
+         "children": "Dismiss"
+        }
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

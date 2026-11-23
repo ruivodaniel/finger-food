@@ -1,0 +1,104 @@
+{
+ "id": "ui-data-pattern-component-financial-kpi-cards-basis-points",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-financial-kpi-cards-basis-points",
+ "kind": "component",
+ "name": "basis-points",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "basis-points",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Card",
+   "props": {
+    "style": {
+     "obj": {
+      "width": 320
+     }
+    }
+   },
+   "children": [
+    {
+     "type": "Content",
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "scale": "sm"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body-small",
+          "emphasis": "quiet",
+          "children": "Yield to worst"
+         }
+        },
+        {
+         "type": "DataNumber",
+         "props": {
+          "value": 8.55,
+          "config": {
+           "mode": {
+            "kind": "fixedScale",
+            "scale": "unit",
+            "n": 2
+           },
+           "locale": "en-GB",
+           "representation": {
+            "kind": "percentage",
+            "input": "points"
+           }
+          },
+          "scale": "xl"
+         }
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "baseline",
+          "scale": "sm"
+         },
+         "children": [
+          {
+           "type": "DataNumber",
+           "props": {
+            "value": 158,
+            "config": {
+             "mode": {
+              "kind": "full"
+             },
+             "locale": "en-GB"
+            },
+            "symbol": "bps",
+            "trend": "arrowUp",
+            "status": "success",
+            "scale": "sm"
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-extra-small",
+            "emphasis": "quiet",
+            "children": "today"
+           }
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

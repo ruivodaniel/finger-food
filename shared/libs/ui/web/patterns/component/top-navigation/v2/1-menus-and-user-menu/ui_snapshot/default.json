@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-top-navigation-1-menus-and-user-menu-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-top-navigation-1-menus-and-user-menu",
+ "name": "default",
+ "title": "Top navigation 1: the groups as drop-downs; the organization switcher and the user menu at the right",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

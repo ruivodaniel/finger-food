@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-sidebar-with-tabs-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-sidebar-with-tabs",
+ "name": "default",
+ "title": "Sidebar with tabs",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

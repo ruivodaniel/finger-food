@@ -1,9 +1,9 @@
 // Shared route utilities — caller resolution and request metadata.
 
 import type { Context } from "hono";
+import type { ScopedAcRequestContext } from "@libs/gated-scoped-ac";
 import type { ScopedAcEnv, UserOrgMgmtEnv } from "../types";
 import type { UomUserSelect } from "../models/user.model";
-import type { ScopedAcRequestContext } from "../shared/scoped-ac";
 import type { ModuleErrors } from "../shared/module-errors";
 
 /** The authenticated caller — set by the session middleware, never by input. */

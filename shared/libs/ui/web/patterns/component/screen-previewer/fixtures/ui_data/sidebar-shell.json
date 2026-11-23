@@ -1,0 +1,521 @@
+{
+  "id": "ui-data-sidebar-shell",
+  "version": 1,
+  "uiNodeId": "node-sidebar-shell",
+  "kind": "component",
+  "name": "sidebar-shell",
+  "document": {
+    "kind": "component",
+    "schemaVersion": 1,
+    "name": "sidebar-shell",
+    "version": 1,
+    "params": [
+      "path"
+    ],
+    "slots": [
+      "outlet"
+    ],
+    "data": {
+      "session": {
+        "source": "GET /api/auth/session"
+      }
+    },
+    "root": {
+      "type": "ShellSideNav",
+      "children": [
+        {
+          "type": "ShellNav",
+          "children": [
+            {
+              "type": "SidebarProvider",
+              "props": {
+                "className": "h-full",
+                "defaultOpen": true
+              },
+              "children": [
+                {
+                  "type": "Sidebar",
+                  "props": {
+                    "collapsible": "icon",
+                    "peek": true,
+                    "data-testid": "account-sidebar"
+                  },
+                  "children": [
+                    {
+                      "type": "SidebarHeader",
+                      "children": [
+                        {
+                          "type": "Stack",
+                          "props": {
+                            "dir": "col",
+                            "gap": 2
+                          },
+                          "children": [
+                            {
+                              "type": "Stack",
+                              "props": {
+                                "dir": "row",
+                                "align": "center",
+                                "justify": "between",
+                                "gap": 4,
+                                "className": "w-full px-2"
+                              },
+                              "children": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "element": "type--body-small",
+                                    "children": "Seed",
+                                    "emphasis": "quiet"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "SidebarContent",
+                      "children": [
+                        {
+                          "type": "SidebarGroup",
+                          "children": [
+                            {
+                              "type": "SidebarMenu",
+                              "children": [
+                                {
+                                  "type": "SidebarMenuItem",
+                                  "children": [
+                                    {
+                                      "type": "SidebarMenuButton",
+                                      "props": {
+                                        "asChild": true,
+                                        "tooltip": "Home",
+                                        "emphasis": "primary",
+                                        "concept": "main-nav-item"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "Text",
+                                          "props": {
+                                            "as": "a",
+                                            "href": "/",
+                                            "data-testid": "nav-dashboard-link",
+                                            "aria-current": {
+                                              "if": [
+                                                {
+                                                  "eq": [
+                                                    {
+                                                      "bind": "path"
+                                                    },
+                                                    "/"
+                                                  ]
+                                                },
+                                                "page",
+                                                null
+                                              ]
+                                            },
+                                            "state": {
+                                              "if": [
+                                                {
+                                                  "eq": [
+                                                    {
+                                                      "bind": "path"
+                                                    },
+                                                    "/"
+                                                  ]
+                                                },
+                                                "selected",
+                                                null
+                                              ]
+                                            }
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "Icon",
+                                              "props": {
+                                                "name": "home",
+                                                "scale": "sm"
+                                              }
+                                            },
+                                            {
+                                              "type": "Text",
+                                              "props": {
+                                                "className": "flex-1 truncate",
+                                                "children": "Home"
+                                              }
+                                            }
+                                          ],
+                                          "on": {
+                                            "click": [
+                                              {
+                                                "navigate": {
+                                                  "to": "/"
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "SidebarMenuItem",
+                                  "children": [
+                                    {
+                                      "type": "SidebarMenuButton",
+                                      "props": {
+                                        "asChild": true,
+                                        "tooltip": "Assistant",
+                                        "emphasis": "primary",
+                                        "concept": "main-nav-item"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "Text",
+                                          "props": {
+                                            "as": "a",
+                                            "href": "/chat",
+                                            "data-testid": "nav-assistant-link",
+                                            "aria-current": {
+                                              "if": [
+                                                {
+                                                  "eq": [
+                                                    {
+                                                      "bind": "path"
+                                                    },
+                                                    "/chat"
+                                                  ]
+                                                },
+                                                "page",
+                                                null
+                                              ]
+                                            },
+                                            "state": {
+                                              "if": [
+                                                {
+                                                  "eq": [
+                                                    {
+                                                      "bind": "path"
+                                                    },
+                                                    "/chat"
+                                                  ]
+                                                },
+                                                "selected",
+                                                null
+                                              ]
+                                            }
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "Icon",
+                                              "props": {
+                                                "name": "bot",
+                                                "scale": "sm"
+                                              }
+                                            },
+                                            {
+                                              "type": "Text",
+                                              "props": {
+                                                "className": "flex-1 truncate",
+                                                "children": "Assistant"
+                                              }
+                                            }
+                                          ],
+                                          "on": {
+                                            "click": [
+                                              {
+                                                "navigate": {
+                                                  "to": "/chat"
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "SidebarMenuItem",
+                                  "children": [
+                                    {
+                                      "type": "SidebarMenuButton",
+                                      "props": {
+                                        "asChild": true,
+                                        "tooltip": "Organizations",
+                                        "emphasis": "primary",
+                                        "concept": "main-nav-item"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "Text",
+                                          "props": {
+                                            "as": "a",
+                                            "href": "/organizations",
+                                            "data-testid": "nav-organizations-link",
+                                            "aria-current": {
+                                              "if": [
+                                                {
+                                                  "eq": [
+                                                    {
+                                                      "bind": "path"
+                                                    },
+                                                    "/organizations"
+                                                  ]
+                                                },
+                                                "page",
+                                                null
+                                              ]
+                                            },
+                                            "state": {
+                                              "if": [
+                                                {
+                                                  "eq": [
+                                                    {
+                                                      "bind": "path"
+                                                    },
+                                                    "/organizations"
+                                                  ]
+                                                },
+                                                "selected",
+                                                null
+                                              ]
+                                            }
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "Icon",
+                                              "props": {
+                                                "name": "users",
+                                                "scale": "sm"
+                                              }
+                                            },
+                                            {
+                                              "type": "Text",
+                                              "props": {
+                                                "className": "flex-1 truncate",
+                                                "children": "Organizations"
+                                              }
+                                            }
+                                          ],
+                                          "on": {
+                                            "click": [
+                                              {
+                                                "navigate": {
+                                                  "to": "/organizations"
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "SidebarMenuItem",
+                                  "children": [
+                                    {
+                                      "type": "SidebarMenuButton",
+                                      "props": {
+                                        "asChild": true,
+                                        "tooltip": "Meteors",
+                                        "emphasis": "primary",
+                                        "concept": "main-nav-item"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "Text",
+                                          "props": {
+                                            "as": "a",
+                                            "href": "/meteors",
+                                            "data-testid": "nav-meteors-link",
+                                            "aria-current": {
+                                              "if": [
+                                                {
+                                                  "eq": [
+                                                    {
+                                                      "bind": "path"
+                                                    },
+                                                    "/meteors"
+                                                  ]
+                                                },
+                                                "page",
+                                                null
+                                              ]
+                                            },
+                                            "state": {
+                                              "if": [
+                                                {
+                                                  "eq": [
+                                                    {
+                                                      "bind": "path"
+                                                    },
+                                                    "/meteors"
+                                                  ]
+                                                },
+                                                "selected",
+                                                null
+                                              ]
+                                            }
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "Icon",
+                                              "props": {
+                                                "name": "star",
+                                                "scale": "sm"
+                                              }
+                                            },
+                                            {
+                                              "type": "Text",
+                                              "props": {
+                                                "className": "flex-1 truncate",
+                                                "children": "Meteors"
+                                              }
+                                            }
+                                          ],
+                                          "on": {
+                                            "click": [
+                                              {
+                                                "navigate": {
+                                                  "to": "/meteors"
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "SidebarFooter",
+                      "children": [
+                        {
+                          "type": "SidebarMenu",
+                          "children": [
+                            {
+                              "type": "SidebarMenuItem",
+                              "children": [
+                                {
+                                  "type": "SidebarMenuButton",
+                                  "props": {
+                                    "tooltip": {
+                                      "if": [
+                                        {
+                                          "exists": {
+                                            "bind": "data.session.user.profile.name"
+                                          }
+                                        },
+                                        {
+                                          "bind": "data.session.user.profile.name"
+                                        },
+                                        "Account"
+                                      ]
+                                    },
+                                    "emphasis": "primary",
+                                    "data-testid": "sidebar-user-menu"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "Avatar",
+                                      "props": {
+                                        "scale": "sm"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "AvatarImage",
+                                          "props": {
+                                            "src": {
+                                              "bind": "data.session.user.profile.image"
+                                            },
+                                            "alt": ""
+                                          },
+                                          "when": {
+                                            "exists": {
+                                              "bind": "data.session.user.profile.image"
+                                            }
+                                          }
+                                        },
+                                        {
+                                          "type": "AvatarFallback",
+                                          "props": {
+                                            "children": {
+                                              "initials": {
+                                                "if": [
+                                                  {
+                                                    "exists": {
+                                                      "bind": "data.session.user.profile.name"
+                                                    }
+                                                  },
+                                                  {
+                                                    "bind": "data.session.user.profile.name"
+                                                  },
+                                                  "Account"
+                                                ]
+                                              }
+                                            }
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "Text",
+                                      "props": {
+                                        "className": "flex-1 truncate",
+                                        "children": {
+                                          "if": [
+                                            {
+                                              "exists": {
+                                                "bind": "data.session.user.profile.name"
+                                              }
+                                            },
+                                            {
+                                              "bind": "data.session.user.profile.name"
+                                            },
+                                            "Account"
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "type": "Icon",
+                                      "props": {
+                                        "name": "moreVertical",
+                                        "scale": "sm"
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "Slot",
+          "props": {
+            "name": "outlet"
+          }
+        }
+      ]
+    }
+  }
+}

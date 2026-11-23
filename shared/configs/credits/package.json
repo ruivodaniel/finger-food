@@ -1,0 +1,9 @@
+{
+  "name": "@configs/credits",
+  "type": "module",
+  "private": true,
+  "main": "./index.ts",
+  "peerDependencies": {
+    "@modules/credits": "workspace:*"
+  }
+}

@@ -1,0 +1,74 @@
+{
+ "id": "ui-data-pattern-component-top-navigation-3-user-and-organization-menu",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-top-navigation-3-user-and-organization-menu",
+ "kind": "component",
+ "name": "top-navigation-3-user-and-organization-menu",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "top-navigation-3-user-and-organization-menu",
+  "version": 1,
+  "surface": "web",
+  "state": {
+   "current": "dashboard",
+   "org": "org-acme-corp",
+   "mode": "light"
+  },
+  "root": {
+   "use": {
+    "component": "TopNavigationScreen",
+    "version": "latest"
+   },
+   "args": {
+    "current": {
+     "bind": "state.current"
+    },
+    "org": {
+     "bind": "state.org"
+    },
+    "mode": {
+     "bind": "state.mode"
+    },
+    "text": "The user and the organizations share one menu at the right.",
+    "groupsAs": "menus",
+    "account": "combined",
+    "withOrganizations": true,
+    "withModes": true,
+    "unread": -1
+   },
+   "on": {
+    "navigate": [
+     {
+      "set": {
+       "state": "current",
+       "to": {
+        "bind": "event.id"
+       }
+      }
+     }
+    ],
+    "organizationChange": [
+     {
+      "set": {
+       "state": "org",
+       "to": {
+        "bind": "event.id"
+       }
+      }
+     }
+    ],
+    "modeChange": [
+     {
+      "set": {
+       "state": "mode",
+       "to": {
+        "bind": "event.id"
+       }
+      }
+     }
+    ]
+   }
+  }
+ }
+}

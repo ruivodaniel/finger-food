@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-primitive-collapsible-default",
+ "version": 1,
+ "uiDataId": "ui-data-primitive-collapsible",
+ "name": "default",
+ "title": "Collapsible, its cases",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

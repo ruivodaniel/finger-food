@@ -1,0 +1,268 @@
+{
+ "id": "ui-data-pattern-page-layout-main-only",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-page-layout-main-only",
+ "kind": "page",
+ "name": "layout-main-only",
+ "document": {
+  "kind": "page",
+  "schemaVersion": 1,
+  "name": "layout-main-only",
+  "version": 1,
+  "surface": "web",
+  "state": {
+   "open": false,
+   "current": "dashboard",
+   "org": "org-acme-corp",
+   "mode": "light",
+   "query": ""
+  },
+  "root": {
+   "use": {
+    "component": "SideNavigationScreen",
+    "version": "latest"
+   },
+   "args": {
+    "open": {
+     "bind": "state.open"
+    },
+    "current": {
+     "bind": "state.current"
+    },
+    "org": {
+     "bind": "state.org"
+    },
+    "mode": {
+     "bind": "state.mode"
+    },
+    "expand": "overlay",
+    "account": "separate",
+    "withOrganizations": false,
+    "withModes": false,
+    "toggleAt": "top",
+    "backLabel": "PROWD"
+   },
+   "on": {
+    "openChange": [
+     {
+      "set": {
+       "state": "open",
+       "to": {
+        "bind": "event.open"
+       }
+      }
+     }
+    ],
+    "navigate": [
+     {
+      "set": {
+       "state": "current",
+       "to": {
+        "bind": "event.id"
+       }
+      }
+     }
+    ],
+    "organizationChange": [
+     {
+      "set": {
+       "state": "org",
+       "to": {
+        "bind": "event.id"
+       }
+      }
+     }
+    ],
+    "modeChange": [
+     {
+      "set": {
+       "state": "mode",
+       "to": {
+        "bind": "event.id"
+       }
+      }
+     }
+    ],
+    "back": [
+     {
+      "set": {
+       "state": "current",
+       "to": "back"
+      }
+     }
+    ]
+   },
+   "slots": {
+    "children": [
+     {
+      "use": {
+       "component": "BareLayout",
+       "version": "latest"
+      },
+      "slots": {
+       "mainContainer": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "col",
+          "scale": "xl"
+         },
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col",
+            "scale": "md"
+           },
+           "children": [
+            {
+             "type": "Stack",
+             "props": {
+              "dir": "row",
+              "align": "center",
+              "justify": "between",
+              "size": "fill"
+             },
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "as": "span",
+                "element": "type--heading3",
+                "children": "Invoices"
+               }
+              },
+              {
+               "type": "Button",
+               "props": {
+                "scale": "sm",
+                "children": "New invoice",
+                "emphasis": "primary",
+                "data-testid": "layout-main-only-new-invoice-btn"
+               }
+              }
+             ]
+            },
+            {
+             "type": "Stack",
+             "props": {
+              "dir": "row",
+              "align": "center",
+              "scale": "sm"
+             },
+             "children": [
+              {
+               "type": "Input",
+               "props": {
+                "type": "search",
+                "value": {
+                 "bind": "state.query"
+                },
+                "placeholder": "Search invoices\u2026",
+                "startIcon": {
+                 "type": "Icon",
+                 "props": {
+                  "name": "search"
+                 }
+                },
+                "data-testid": "layout-main-only-search-invoices-input"
+               },
+               "on": {
+                "change": [
+                 {
+                  "set": {
+                   "state": "query",
+                   "to": {
+                    "bind": "event"
+                   }
+                  }
+                 }
+                ]
+               }
+              },
+              {
+               "type": "Button",
+               "props": {
+                "scale": "sm",
+                "children": "Filter",
+                "emphasis": "secondary",
+                "buttonType": "icon-text",
+                "startIcon": "filter",
+                "data-testid": "layout-main-only-filter-btn"
+               }
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "Card",
+           "children": [
+            {
+             "type": "Content",
+             "children": [
+              {
+               "type": "Stack",
+               "props": {
+                "dir": "col",
+                "scale": "md"
+               },
+               "children": [
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "sm"
+                 }
+                },
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "md"
+                 }
+                },
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "md"
+                 }
+                },
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "md"
+                 }
+                },
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "md"
+                 }
+                },
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "md"
+                 }
+                },
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "md"
+                 }
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     }
+    ]
+   }
+  }
+ }
+}

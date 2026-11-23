@@ -1,0 +1,201 @@
+{
+ "id": "ui-data-pattern-component-mode-control-modecontrol",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-mode-control-modecontrol",
+ "kind": "component",
+ "name": "ModeControl",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "ModeControl",
+  "version": 1,
+  "surface": "web",
+  "params": [
+   "modes",
+   "value",
+   "layout",
+   "showLabels",
+   "label"
+  ],
+  "emits": ["change"],
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "row",
+    "align": "center"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "row",
+      "scale": "sm",
+      "align": "center"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body-small",
+        "children": {
+         "bind": "modes.0.label"
+        },
+        "emphasis": {
+         "if": [
+          {
+           "eq": [
+            {
+             "bind": "value"
+            },
+            {
+             "bind": "modes.1.id"
+            }
+           ]
+          },
+          "quiet"
+         ]
+        }
+       },
+       "when": {
+        "bind": "showLabels"
+       }
+      },
+      {
+       "type": "Switch",
+       "props": {
+        "checked": {
+         "eq": [
+          {
+           "bind": "value"
+          },
+          {
+           "bind": "modes.1.id"
+          }
+         ]
+        },
+        "aria-label": {
+         "bind": "label"
+        },
+        "data-testid": "mode-control-switch"
+       },
+       "on": {
+        "checkedChange": [
+         {
+          "emit": {
+           "event": "change",
+           "payload": {
+            "id": {
+             "if": [
+              {
+               "bind": "event"
+              },
+              {
+               "bind": "modes.1.id"
+              },
+              {
+               "bind": "modes.0.id"
+              }
+             ]
+            }
+           }
+          }
+         }
+        ]
+       }
+      },
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body-small",
+        "children": {
+         "bind": "modes.1.label"
+        },
+        "emphasis": {
+         "if": [
+          {
+           "eq": [
+            {
+             "bind": "value"
+            },
+            {
+             "bind": "modes.1.id"
+            }
+           ]
+          },
+          null,
+          "quiet"
+         ]
+        }
+       },
+       "when": {
+        "bind": "showLabels"
+       }
+      }
+     ],
+     "when": {
+      "eq": [
+       {
+        "bind": "layout"
+       },
+       "switch"
+      ]
+     }
+    },
+    {
+     "type": "InputSelect",
+     "props": {
+      "clearable": false,
+      "value": {
+       "bind": "value"
+      },
+      "options": {
+       "map": [
+        {
+         "bind": "modes"
+        },
+        {
+         "obj": {
+          "value": {
+           "bind": "item.id"
+          },
+          "label": {
+           "bind": "item.label"
+          }
+         }
+        }
+       ]
+      },
+      "aria-label": {
+       "bind": "label"
+      },
+      "data-testid": "mode-control-select"
+     },
+     "when": {
+      "eq": [
+       {
+        "bind": "layout"
+       },
+       "drop"
+      ]
+     },
+     "on": {
+      "change": [
+       {
+        "emit": {
+         "event": "change",
+         "payload": {
+          "id": {
+           "bind": "event"
+          }
+         }
+        }
+       }
+      ]
+     }
+    }
+   ]
+  }
+ }
+}

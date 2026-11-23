@@ -1,5 +1,5 @@
-import { FixtureBody, Mode, Row, Swatch } from "../_chrome";
-import { matching, modeColumns, useThemeVars } from "../_theme-vars";
+import { FixtureBody, Mode, Row, Swatch } from "../../lib/_chrome";
+import { matching, modeColumns, useThemeVars } from "../../lib/_theme-vars";
 
 /**
  * Color primitives — the tokens a theme declares directly, per color mode.
@@ -11,7 +11,7 @@ const GROUPS: { label: string; re: RegExp }[] = [
   { label: "main", re: /^color-main-/ },
   { label: "brand", re: /^color-brand-\d+$/ },
   { label: "status", re: /^color-status-(success|info|warning|error)$/ },
-  { label: "flat", re: /^color-flat-/ },
+  { label: "content", re: /^color-content-/ },
   { label: "semantic", re: /^color-(primary|secondary|accent|muted|destructive|success|background|foreground|border|input|ring)(-foreground)?$/ },
   { label: "charts", re: /^color-chart-/ },
   { label: "sidebar (legacy bridge)", re: /^color-sidebar/ },

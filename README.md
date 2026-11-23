@@ -23,8 +23,8 @@ Prerequisites: [Node.js](https://nodejs.org) ≥ 22.16 · [pnpm](https://pnpm.io
 pnpm install
 
 # 2. Environment — local defaults work as-is, no editing needed
-cp apps/main/shared/api/.env.example apps/main/shared/api/.env
-cp apps/main/shared/web/.env.example apps/main/shared/web/.env
+cp apps/main/core/api/.env.example apps/main/core/api/.env
+cp apps/main/core/web/.env.example apps/main/core/web/.env
 
 # 3. Infrastructure + database (Docker services, migrations, seed)
 pnpm run setup
@@ -37,7 +37,7 @@ seeds an admin account.
 
 ### Seeded system admin
 
-Local dev credentials (defined in `apps/main/shared/api/scripts/seed-db.ts`):
+Local dev credentials (defined in `apps/main/core/api/scripts/seed-db.ts`):
 
 | | |
 |---|---|
@@ -47,6 +47,24 @@ Local dev credentials (defined in `apps/main/shared/api/scripts/seed-db.ts`):
 
 TOTP cannot be seeded, so the first login is gated (HTTP 428): you land in the
 `/resolve` wizard, which walks you through enrolling an authenticator.
+
+### Ollama (the assistant's model)
+
+The assistant answers with a local model, served by [Ollama](https://ollama.com):
+
+```bash
+# 1. Install
+brew install ollama
+
+# 2. Start the server (keep it running)
+ollama serve
+
+# 3. In a new terminal, pull the chat model
+ollama pull qwen3:8b
+```
+
+`apps/orchestrator/setup.sh` pulls the same model, plus `qwen2.5vl:3b`, which
+transcribes scanned pages.
 
 ### Run
 
@@ -62,13 +80,13 @@ Optional processes:
 ```bash
 pnpm run dev:workers    # queue consumers — only needed when QUEUE_MODE=redis (local default is inline)
 pnpm run dev:trigger    # Trigger.dev tasks (optional)
-pnpm run dev:mobile     # Expo (custom dev client — see apps/main/shared/mobile/README.md)
+pnpm run dev:mobile     # Expo (custom dev client — see apps/main/core/mobile/README.md)
 pnpm --dir apps/api run smsdev   # local SMS inbox for OTP flows
 ```
 
 ### Doker / Local services
 
-Manage Docker separately with `pnpm run docker:up` / `pnpm run docker:down`.
+Manage Docker separately, one command per server: `pnpm docker:up:main`, `pnpm docker:up:orchestrator`, `pnpm docker:up:open-api`, or all three with `pnpm docker:up:all`. The same with `docker:down:`. What a slice needs (Kratos, the Stripe listener) lives in that slice and is included by the server's compose file.
 
 | Service | Where | Purpose |
 |---------|-------|---------|
@@ -104,7 +122,7 @@ Manage Docker separately with `pnpm run docker:up` / `pnpm run docker:down`.
 | Architecture rules & standards | [docs/](docs/) — see [docs/README.md](docs/README.md) to run the viewer |
 | Documentation index | [INDEX.md](INDEX.md) |
 | Shared layer | [shared/README.md](shared/README.md) |
-| API | [apps/main/shared/api/README.md](apps/main/shared/api/README.md) |
-| Frontend | [apps/main/shared/web/README.md](apps/main/shared/web/README.md) |
+| API | [apps/main/core/api/README.md](apps/main/core/api/README.md) |
+| Frontend | [apps/main/core/web/README.md](apps/main/core/web/README.md) |
 | Workers & job queue | [apps/workers/README.md](apps/workers/README.md) |
 | Product configs | [configs/README.md](configs/README.md) |

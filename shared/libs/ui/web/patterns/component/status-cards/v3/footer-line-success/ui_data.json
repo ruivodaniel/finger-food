@@ -1,0 +1,107 @@
+{
+ "id": "ui-data-pattern-component-status-cards-footer-line-success",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-status-cards-footer-line-success",
+ "kind": "component",
+ "name": "footer-line-success",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "footer-line-success",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Card",
+   "props": {
+    "className": "flex-1 min-w-56"
+   },
+   "children": [
+    {
+     "type": "Content",
+     "props": {},
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "scale": "xs"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--heading4",
+          "children": "Payment received"
+         }
+        },
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body-small",
+          "children": "€4,800.00 from Altar Design Systems for INV-2026-0142."
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Footer",
+     "props": {
+      "status": "success",
+      "className": "w-full"
+     },
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "between",
+        "className": "w-full",
+        "scale": "sm"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body-small"
+         },
+         "children": [
+          {
+           "type": "Icon",
+           "props": {
+            "name": "success",
+            "size": "xs"
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "children": " Success · 12 min ago"
+           }
+          }
+         ]
+        },
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "secondary",
+          "status": "success",
+          "scale": "sm",
+          "children": "View invoice"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

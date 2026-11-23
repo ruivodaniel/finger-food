@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-alerts-and-logs-event-processing-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-alerts-and-logs-event-processing",
+ "name": "default",
+ "title": "Alerts and logs: event processing",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

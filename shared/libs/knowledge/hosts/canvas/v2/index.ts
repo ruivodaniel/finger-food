@@ -1,0 +1,10 @@
+export * from "./canvas-registration";
+export * from "./template";
+export * from "./document";
+export * from "./properties/handles";
+export * from "./properties/size";
+export * from "./properties/highlight";
+export { Canvas, type CanvasProps } from "./Canvas";
+export { canvasOwnKinds } from "./nodes";
+export * from "./templates";
+export type { Selection } from "./tools/rules";

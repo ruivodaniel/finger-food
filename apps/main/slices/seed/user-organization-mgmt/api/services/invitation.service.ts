@@ -7,12 +7,11 @@
  * resolved read scopes); accept/reject stay identifier-matched (UOM2/UOM5).
  */
 
-import { PRIVATE, type Ac, type Private, type Public } from "@libs/gated-scoped-ac";
+import { PRIVATE, type Ac, type Private, type Public, type ScopedAcRequestContext } from "@libs/gated-scoped-ac";
 import type {
   AuthAndRegistrationConfig,
   OrgLifecycleEntry,
 } from "../../shared/auth-config/types";
-import type { ScopedAcRequestContext } from "../shared/scoped-ac";
 import { inviteChannelsFor } from "../shared/invite-channels";
 import type {
   InvitationPublicView,
@@ -49,7 +48,7 @@ export interface InvitationServiceDeps {
   userService: Pick<UserService, "identityIdOf" | "getProfile">;
   port: IdentityProviderPort;
   legalDocumentService: Pick<LegalDocumentService, "itemsWithDocuments">;
-  consentRecordService: Pick<ConsentRecordService, "recordConsent">;
+  consentRecordService: Pick<ConsentRecordService, "recordConsentScoped">;
   orgConfig: OrgLifecycleEntry[];
   authConfig: AuthAndRegistrationConfig;
   delivery?: InvitationDelivery;
@@ -74,7 +73,9 @@ export class InvitationService {
     // Create gates on a verdict (AC9, AC33) — there is no row to scope. The
     // rule's context answers "may the caller invite in this org context at
     // all"; its payload is checked against the invitation about to be written
-    // (`$requestBody`), so the config decides which org it may be for.
+    // (`$requestBody`), so the config decides which org it may be for. This is
+    // the cheap early refusal; the gate takes the same verdict again on the row
+    // it inserts.
     const verdict = this.deps.engine.allowCreate(ac.permissions, "invitation", {
       ...ac.bag,
       requestBody: { organizationId: orgId, ...input },
@@ -105,14 +106,23 @@ export class InvitationService {
     const expiresInSeconds =
       entry.join.invitation.expiresInSeconds ??
       DEFAULT_INVITATION_EXPIRES_SECONDS;
-    const invitation = await this.deps.invitationRepo.create(visibility, {
-      organizationId: orgId,
-      email: input.email ?? null,
-      phone: input.phone ?? null,
-      roles: input.roles,
-      inviterId: inviterUserId,
-      expiresAt: new Date(Date.now() + expiresInSeconds * 1000),
-    });
+    const invitation = await this.deps.invitationRepo.create(
+      visibility,
+      {
+        organizationId: orgId,
+        email: input.email ?? null,
+        phone: input.phone ?? null,
+        roles: input.roles,
+        inviterId: inviterUserId,
+        expiresAt: new Date(Date.now() + expiresInSeconds * 1000),
+      },
+      ac.permissions,
+      ac.gateDb,
+    );
+    // null ⇒ the gate refused the insert (verdict or payload probe).
+    if (!invitation) {
+      throw this.deps.errors.forbidden("cannot invite members");
+    }
     await this.deliver(visibility, invitation, org.name, entry.label, inviterUserId);
     return toView(invitation);
   }
@@ -281,18 +291,19 @@ export class InvitationService {
     };
   }
 
-  /** Signed-in accept — match strictness enforced, org consent recorded.
+  /** Signed-in accept — match strictness enforced, org consent recorded (gated).
    * AC42: private. The identifier-matching internals (`findPendingInvitation`,
    * `ownedIdentifiers`, `identifierMatches`) and the raw accept/reject write
    * stay token-less (rule 5); `membershipService.addMember` is threaded
    * normally. */
   async accept(
+    ac: ScopedAcRequestContext,
     visibility: Private,
-    userId: string,
     invitationId: string,
     consents?: ConsentDecision[],
     meta?: { ipAddress?: string; userAgent?: string },
   ): Promise<void> {
+    const userId = ac.bag.session.user.id;
     const { invitation, entry, org } =
       await this.findPendingInvitation(invitationId);
 
@@ -304,7 +315,7 @@ export class InvitationService {
     }
 
     if (entry.join?.legalConsent?.length) {
-      await this.deps.consentRecordService.recordConsent({
+      await this.deps.consentRecordService.recordConsentScoped(ac, visibility, {
         userId,
         items: entry.join.legalConsent,
         decisions: consents ?? [],
@@ -314,16 +325,23 @@ export class InvitationService {
       });
     }
 
+    // Claim the invitation before seating: the write moves it only while it is
+    // still pending, so an accept that lost a race (to a reject, a revoke or a
+    // second accept) seats nobody. Consent goes first so a missing mandatory
+    // consent refuses without using the invitation up.
+    const claimed = await this.deps.invitationRepo.update(
+      invitation.id,
+      "accepted",
+      userId,
+    );
+    if (!claimed) {
+      throw this.deps.errors.badRequest("invitation is no longer pending");
+    }
     await this.deps.membershipService.addMember(
       visibility,
       invitation.organizationId,
       userId,
       invitation.roles,
-    );
-    await this.deps.invitationRepo.update(
-      invitation.id,
-      "accepted",
-      userId,
     );
     await this.emitAccepted(invitation, org.name, userId);
   }
@@ -342,11 +360,14 @@ export class InvitationService {
         "this invitation was sent to a different address",
       );
     }
-    await this.deps.invitationRepo.update(
+    const rejected = await this.deps.invitationRepo.update(
       invitation.id,
       "rejected",
       userId,
     );
+    if (!rejected) {
+      throw this.deps.errors.badRequest("invitation is no longer pending");
+    }
   }
 
   // ── internals ──────────────────────────────────────────────────────────────

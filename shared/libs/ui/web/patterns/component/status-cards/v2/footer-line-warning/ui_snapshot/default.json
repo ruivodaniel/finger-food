@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-status-cards-footer-line-warning-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-status-cards-footer-line-warning",
+ "name": "default",
+ "title": "Status cards: footer line warning",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

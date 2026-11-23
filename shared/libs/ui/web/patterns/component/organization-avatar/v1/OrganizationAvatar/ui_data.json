@@ -1,0 +1,530 @@
+{
+ "id": "ui-data-pattern-component-organization-avatar-organizationavatar",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-organization-avatar-organizationavatar",
+ "kind": "component",
+ "name": "OrganizationAvatar",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "OrganizationAvatar",
+  "version": 1,
+  "surface": "web",
+  "params": [
+   "id",
+   "name",
+   "image",
+   "type",
+   "layout",
+   "scale",
+   "width",
+   "showName",
+   "showType",
+   "tooltip",
+   "picture"
+  ],
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "row",
+    "align": "center",
+    "size": {
+     "if": [
+      {
+       "eq": [
+        {
+         "bind": "width"
+        },
+        "fill"
+       ]
+      },
+      "fill",
+      "hug"
+     ]
+    }
+   },
+   "children": [
+    {
+     "type": "Avatar",
+     "props": {
+      "scale": {
+       "bind": "scale"
+      },
+      "concept": "organization-logo"
+     },
+     "children": [
+      {
+       "type": "AvatarImage",
+       "props": {
+        "src": {
+         "bind": "image"
+        },
+        "alt": ""
+       },
+       "when": {
+        "exists": [
+         {
+          "bind": "image"
+         }
+        ]
+       }
+      },
+      {
+       "type": "AvatarFallback",
+       "props": {
+        "seed": {
+         "bind": "id"
+        },
+        "picture": {
+         "bind": "picture"
+        },
+        "children": {
+         "initials": [
+          {
+           "bind": "name"
+          }
+         ]
+        }
+       }
+      }
+     ],
+     "when": {
+      "and": [
+       {
+        "eq": [
+         {
+          "bind": "layout"
+         },
+         "image"
+        ]
+       },
+       {
+        "not": [
+         {
+          "bind": "tooltip"
+         }
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "type": "TooltipProvider",
+     "props": {
+      "delayDuration": 150
+     },
+     "children": [
+      {
+       "type": "Tooltip",
+       "children": [
+        {
+         "type": "TooltipTrigger",
+         "props": {
+          "asChild": true
+         },
+         "children": [
+          {
+           "type": "Avatar",
+           "props": {
+            "scale": {
+             "bind": "scale"
+            },
+            "concept": "organization-logo"
+           },
+           "children": [
+            {
+             "type": "AvatarImage",
+             "props": {
+              "src": {
+               "bind": "image"
+              },
+              "alt": ""
+             },
+             "when": {
+              "exists": [
+               {
+                "bind": "image"
+               }
+              ]
+             }
+            },
+            {
+             "type": "AvatarFallback",
+             "props": {
+              "seed": {
+               "bind": "id"
+              },
+              "picture": {
+               "bind": "picture"
+              },
+              "children": {
+               "initials": [
+                {
+                 "bind": "name"
+                }
+               ]
+              }
+             }
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "TooltipContent",
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col",
+            "scale": "2xs"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--body-small",
+              "children": {
+               "bind": "name"
+              }
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--body-extra-small",
+              "children": {
+               "bind": "type"
+              },
+              "emphasis": "quiet"
+             },
+             "when": {
+              "exists": [
+               {
+                "bind": "type"
+               }
+              ]
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "when": {
+      "and": [
+       {
+        "eq": [
+         {
+          "bind": "layout"
+         },
+         "image"
+        ]
+       },
+       {
+        "bind": "tooltip"
+       }
+      ]
+     }
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "row",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "2xs",
+        "concept": "organization-logo"
+       },
+       "children": [
+        {
+         "type": "AvatarImage",
+         "props": {
+          "src": {
+           "bind": "image"
+          },
+          "alt": ""
+         },
+         "when": {
+          "exists": [
+           {
+            "bind": "image"
+           }
+          ]
+         }
+        },
+        {
+         "type": "AvatarFallback",
+         "props": {
+          "seed": {
+           "bind": "id"
+          },
+          "picture": {
+           "bind": "picture"
+          },
+          "children": {
+           "initials": [
+            {
+             "bind": "name"
+            }
+           ]
+          }
+         }
+        }
+       ]
+      },
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body",
+        "children": {
+         "bind": "name"
+        }
+       }
+      },
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body",
+        "children": {
+         "bind": "type"
+        },
+        "emphasis": "quiet"
+       },
+       "when": {
+        "and": [
+         {
+          "bind": "showType"
+         },
+         {
+          "exists": [
+           {
+            "bind": "type"
+           }
+          ]
+         }
+        ]
+       }
+      }
+     ],
+     "when": {
+      "eq": [
+       {
+        "bind": "layout"
+       },
+       "inline"
+      ]
+     }
+    },
+    {
+     "type": "Badge",
+     "props": {
+      "emphasis": "quiet",
+      "scale": {
+       "bind": "scale"
+      }
+     },
+     "children": [
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "2xs",
+        "concept": "organization-logo"
+       },
+       "children": [
+        {
+         "type": "AvatarImage",
+         "props": {
+          "src": {
+           "bind": "image"
+          },
+          "alt": ""
+         },
+         "when": {
+          "exists": [
+           {
+            "bind": "image"
+           }
+          ]
+         }
+        },
+        {
+         "type": "AvatarFallback",
+         "props": {
+          "seed": {
+           "bind": "id"
+          },
+          "picture": {
+           "bind": "picture"
+          },
+          "children": {
+           "initials": [
+            {
+             "bind": "name"
+            }
+           ]
+          }
+         }
+        }
+       ]
+      },
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body-extra-small",
+        "children": {
+         "bind": "name"
+        }
+       }
+      }
+     ],
+     "when": {
+      "eq": [
+       {
+        "bind": "layout"
+       },
+       "badge"
+      ]
+     }
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "row",
+      "align": "center",
+      "size": {
+       "if": [
+        {
+         "eq": [
+          {
+           "bind": "width"
+          },
+          "fill"
+         ]
+        },
+        "fill",
+        "hug"
+       ]
+      },
+      "scale": "md"
+     },
+     "children": [
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "md",
+        "concept": "organization-logo"
+       },
+       "children": [
+        {
+         "type": "AvatarImage",
+         "props": {
+          "src": {
+           "bind": "image"
+          },
+          "alt": ""
+         },
+         "when": {
+          "exists": [
+           {
+            "bind": "image"
+           }
+          ]
+         }
+        },
+        {
+         "type": "AvatarFallback",
+         "props": {
+          "seed": {
+           "bind": "id"
+          },
+          "picture": {
+           "bind": "picture"
+          },
+          "children": {
+           "initials": [
+            {
+             "bind": "name"
+            }
+           ]
+          }
+         }
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "size": "fill",
+        "scale": "2xs"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body",
+          "children": {
+           "bind": "name"
+          },
+          "position": "clip"
+         },
+         "when": {
+          "bind": "showName"
+         }
+        },
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body-extra-small",
+          "children": {
+           "bind": "type"
+          },
+          "emphasis": "quiet",
+          "position": "clip"
+         },
+         "when": {
+          "and": [
+           {
+            "bind": "showType"
+           },
+           {
+            "exists": [
+             {
+              "bind": "type"
+             }
+            ]
+           }
+          ]
+         }
+        }
+       ]
+      }
+     ],
+     "when": {
+      "eq": [
+       {
+        "bind": "layout"
+       },
+       "row"
+      ]
+     }
+    }
+   ]
+  }
+ }
+}

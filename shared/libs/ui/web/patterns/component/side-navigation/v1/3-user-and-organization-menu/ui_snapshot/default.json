@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-side-navigation-3-user-and-organization-menu-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-side-navigation-3-user-and-organization-menu",
+ "name": "default",
+ "title": "Side navigation 3: one menu for the user and the organization; colour mode; expands inline",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-list-stacked-items-orders-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-list-stacked-items-orders",
+ "name": "default",
+ "title": "List stacked items: orders",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

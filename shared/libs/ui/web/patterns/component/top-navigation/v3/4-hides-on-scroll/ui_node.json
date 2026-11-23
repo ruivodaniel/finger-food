@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-component-top-navigation-4-hides-on-scroll",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Top navigation 4: the bar leaves on scroll down and returns on scroll up"
+}

@@ -1,0 +1,369 @@
+{
+ "id": "ui-data-pattern-component-activity",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-activity",
+ "kind": "component",
+ "name": "activity",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "activity",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Card",
+   "props": {
+    "className": "w-full max-w-md"
+   },
+   "children": [
+    {
+     "type": "Header",
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "h3",
+        "element": "type--heading2",
+        "children": "Activity"
+       }
+      }
+     ]
+    },
+    {
+     "type": "Content",
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "concept": "timeline",
+        "className": "w-full",
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "stretch",
+          "className": "w-full",
+          "scale": "md"
+         },
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col",
+            "align": "center",
+            "size": "fixed",
+            "className": "w-6 self-stretch pt-1"
+           },
+           "children": [
+            {
+             "type": "Badge",
+             "props": {
+              "scale": "3xs",
+              "concept": "dot",
+              "status": "success"
+             }
+            },
+            {
+             "type": "Separator",
+             "props": {
+              "orientation": "vertical",
+              "className": "flex-1 self-center"
+             }
+            }
+           ]
+          },
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col",
+            "size": "fill",
+            "scale": "xs"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--body-small"
+             },
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "as": "strong",
+                "element": "type--body-small",
+                "children": "Valuation received"
+               }
+              },
+              {
+               "type": "Text",
+               "props": {
+                "as": "span",
+                "element": "type--body-small",
+                "children": " for 14 Clifton Road: £420,000."
+               }
+              }
+             ]
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--body-extra-small",
+              "children": "Today, 09:12",
+              "emphasis": "quiet"
+             }
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "stretch",
+          "className": "w-full",
+          "scale": "md"
+         },
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col",
+            "align": "center",
+            "size": "fixed",
+            "className": "w-6 self-stretch pt-1"
+           },
+           "children": [
+            {
+             "type": "Badge",
+             "props": {
+              "scale": "3xs",
+              "concept": "dot",
+              "status": "warning"
+             }
+            },
+            {
+             "type": "Separator",
+             "props": {
+              "orientation": "vertical",
+              "className": "flex-1 self-center"
+             }
+            }
+           ]
+          },
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col",
+            "size": "fill",
+            "scale": "xs"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--body-small"
+             },
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "as": "strong",
+                "element": "type--body-small",
+                "children": "Documents requested"
+               }
+              },
+              {
+               "type": "Text",
+               "props": {
+                "as": "span",
+                "element": "type--body-small",
+                "children": " — last 2 years of company accounts."
+               }
+              }
+             ]
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--body-extra-small",
+              "children": "Yesterday, 16:40",
+              "emphasis": "quiet"
+             }
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "stretch",
+          "className": "w-full",
+          "scale": "md"
+         },
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col",
+            "align": "center",
+            "size": "fixed",
+            "className": "w-6 self-stretch pt-1"
+           },
+           "children": [
+            {
+             "type": "Badge",
+             "props": {
+              "scale": "3xs",
+              "concept": "dot",
+              "status": "info"
+             }
+            },
+            {
+             "type": "Separator",
+             "props": {
+              "orientation": "vertical",
+              "className": "flex-1 self-center"
+             }
+            }
+           ]
+          },
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col",
+            "size": "fill",
+            "scale": "xs"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--body-small"
+             },
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "as": "strong",
+                "element": "type--body-small",
+                "children": "Tomas Berger"
+               }
+              },
+              {
+               "type": "Text",
+               "props": {
+                "as": "span",
+                "element": "type--body-small",
+                "children": " commented on 8 Harbour Lane."
+               }
+              }
+             ]
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--body-extra-small",
+              "children": "Yesterday, 11:05",
+              "emphasis": "quiet"
+             }
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "stretch",
+          "className": "w-full",
+          "scale": "md"
+         },
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col",
+            "align": "center",
+            "size": "fixed",
+            "className": "w-6 self-stretch pt-1"
+           },
+           "children": [
+            {
+             "type": "Badge",
+             "props": {
+              "scale": "3xs",
+              "concept": "dot",
+              "emphasis": "quiet"
+             }
+            }
+           ]
+          },
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col",
+            "size": "fill",
+            "scale": "xs"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--body-small"
+             },
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "as": "strong",
+                "element": "type--body-small",
+                "children": "Rates refreshed"
+               }
+              },
+              {
+               "type": "Text",
+               "props": {
+                "as": "span",
+                "element": "type--body-small",
+                "children": " across 42 lenders."
+               }
+              }
+             ]
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--body-extra-small",
+              "children": "Mon, 06:00",
+              "emphasis": "quiet"
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

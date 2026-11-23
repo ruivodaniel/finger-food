@@ -1,0 +1,107 @@
+{
+ "id": "ui-data-pattern-component-status-cards-header-band-warning",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-status-cards-header-band-warning",
+ "kind": "component",
+ "name": "header-band-warning",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "header-band-warning",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Card",
+   "props": {
+    "className": "flex-1 min-w-56"
+   },
+   "children": [
+    {
+     "type": "Header",
+     "props": {
+      "status": "warning"
+     },
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "scale": "sm"
+       },
+       "children": [
+        {
+         "type": "Icon",
+         "props": {
+          "name": "warning",
+          "size": "sm"
+         }
+        },
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--heading4",
+          "children": "Storage almost full"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Content",
+     "props": {},
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body-small",
+        "children": "92% of 50 GB used — uploads pause at 100%."
+       }
+      }
+     ]
+    },
+    {
+     "type": "Footer",
+     "props": {
+      "className": "w-full"
+     },
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "between",
+        "className": "w-full",
+        "scale": "sm"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body-extra-small",
+          "emphasis": "quiet",
+          "children": "1 h ago"
+         }
+        },
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "secondary",
+          "scale": "sm",
+          "children": "Manage storage"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-layout-single-sidebar-tabs-layout-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-layout-single-sidebar-tabs-layout",
+ "name": "default",
+ "title": "Single sidebar layout with tabs",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

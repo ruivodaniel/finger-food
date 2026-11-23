@@ -1,0 +1,24 @@
+{
+ "id": "doc/skill-author-personas",
+ "kind": "doc",
+ "title": "author personas",
+ "status": "todo",
+ "subject": "skills",
+ "owner": "skills/product-contributor/product-design",
+ "tags": [
+  "skills",
+  "product-contributor",
+  "product-design"
+ ],
+ "paths": [],
+ "summary": "",
+ "docId": "skill-author-personas",
+ "doc": {
+  "axioms": [],
+  "purpose": {},
+  "reference": []
+ },
+ "audience": [
+  "product-contributor"
+ ]
+}

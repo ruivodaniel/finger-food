@@ -1,0 +1,59 @@
+# Ory Kratos — the module's identity provider, shipped with the module so a
+# product that drops user-organization-mgmt carries no Kratos residue.
+#
+# The host app pulls this in from its own compose file:
+#
+#   include:
+#     - ../slices/seed/user-organization-mgmt/api/identity/kratos/infra/docker-compose.kratos.yml
+#
+# Fragment contract (what the host project must provide):
+#   - a `postgres` service on the project network (or override KRATOS_DB_HOST /
+#     KRATOS_DSN). Kratos keeps its own database on that instance; the one-shot
+#     init service creates it and polls until postgres answers, so no
+#     cross-file depends_on is needed — but start postgres alongside:
+#     `docker compose up -d postgres kratos`.
+#   - env overrides in deployed environments: KRATOS_DSN, SECRETS_* and the
+#     courier settings (see kratos.yml).
+#
+# The image version is part of the adapter's contract — the kratos adapter
+# (../kratos-identity-provider.ts) is contract-tested against it. Bump them
+# together.
+
+services:
+  kratos-db-init:
+    image: postgres:17.5
+    entrypoint: ["bash", "/init-kratos-db.sh"]
+    environment:
+      PGHOST: ${KRATOS_DB_HOST:-postgres}
+      PGUSER: ${KRATOS_DB_USER:-postgres}
+      PGPASSWORD: ${KRATOS_DB_PASSWORD:-postgres}
+    volumes:
+      - ./init-kratos-db.sh:/init-kratos-db.sh:ro
+
+  kratos-migrate:
+    image: oryd/kratos:v26.2.0
+    depends_on:
+      kratos-db-init:
+        condition: service_completed_successfully
+    command: migrate sql -e --yes
+    environment:
+      DSN: ${KRATOS_DSN:-postgres://postgres:postgres@postgres:5432/kratos?sslmode=disable}
+    volumes:
+      - .:/etc/config/kratos:ro
+
+  kratos:
+    image: oryd/kratos:v26.2.0
+    restart: unless-stopped
+    depends_on:
+      kratos-migrate:
+        condition: service_completed_successfully
+    command: serve -c /etc/config/kratos/kratos.yml --dev --watch-courier
+    ports:
+      - "4433:4433" # public API
+      - "4434:4434" # admin API — dev-only exposure, never published when deployed
+    environment:
+      DSN: ${KRATOS_DSN:-postgres://postgres:postgres@postgres:5432/kratos?sslmode=disable}
+    extra_hosts:
+      - "host.docker.internal:host-gateway" # courier SMS webhook → the app backend
+    volumes:
+      - .:/etc/config/kratos:ro

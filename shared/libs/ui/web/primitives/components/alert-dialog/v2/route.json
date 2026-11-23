@@ -1,0 +1,7 @@
+{
+ "id": "route-primitive-alert-dialog",
+ "version": 1,
+ "surface": "web",
+ "path": "/primitives/alert-dialog",
+ "uiNodeId": "ui-node-primitive-alert-dialog"
+}

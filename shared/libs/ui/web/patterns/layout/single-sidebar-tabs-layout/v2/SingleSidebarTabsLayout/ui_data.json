@@ -1,0 +1,113 @@
+{
+ "id": "ui-data-pattern-layout-single-sidebar-tabs-layout-singlesidebartabslayout",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-layout-single-sidebar-tabs-layout-singlesidebartabslayout",
+ "kind": "component",
+ "name": "SingleSidebarTabsLayout",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "SingleSidebarTabsLayout",
+  "version": 1,
+  "surface": "web",
+  "params": [
+   "scale",
+   "away"
+  ],
+  "emits": [
+   "scrollDirection"
+  ],
+  "slots": [
+   "pageHeader",
+   "secondPageHeader",
+   "mainContainer"
+  ],
+  "root": {
+   "type": "Page",
+   "children": [
+    {
+     "type": "PageHeader",
+     "props": {
+      "away": {
+       "bind": "away.pageHeader"
+      }
+     },
+     "children": [
+      {
+       "type": "Slot",
+       "props": {
+        "name": "pageHeader"
+       }
+      }
+     ]
+    },
+    {
+     "type": "SecondPageHeader",
+     "props": {
+      "away": {
+       "bind": "away.secondPageHeader"
+      }
+     },
+     "children": [
+      {
+       "type": "Slot",
+       "props": {
+        "name": "secondPageHeader"
+       }
+      }
+     ]
+    },
+    {
+     "type": "PageBody",
+     "children": [
+      {
+       "type": "Main",
+       "children": [
+        {
+         "type": "MainContent",
+         "children": [
+          {
+           "type": "MainBody",
+           "on": {
+            "scrollDirection": [
+             {
+              "emit": {
+               "event": "scrollDirection",
+               "payload": {
+                "direction": {
+                 "bind": "event"
+                }
+               }
+              }
+             }
+            ]
+           },
+           "children": [
+            {
+             "type": "MainContainer",
+             "props": {
+              "scale": {
+               "bind": "scale"
+              }
+             },
+             "children": [
+              {
+               "type": "Slot",
+               "props": {
+                "name": "mainContainer"
+               }
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

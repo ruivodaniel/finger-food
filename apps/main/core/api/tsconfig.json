@@ -1,0 +1,34 @@
+{
+  "extends": "../../../../tsconfig.base.json",
+  "compilerOptions": {
+    "strict": true,
+    "verbatimModuleSyntax": true,
+    "skipLibCheck": true,
+    "composite": false,
+    "declaration": false,
+    "declarationMap": false,
+    "types": ["node", "vitest/globals"],
+    "jsx": "react-jsx",
+    "jsxImportSource": "hono/jsx",
+    "lib": ["ES2023", "dom"],
+    "outDir": "./dist",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@configs/access-control": ["../../../../shared/configs/access-control/index.ts"],
+      "@configs/access-control/*": ["../../../../shared/configs/access-control/*"],
+      "@configs/credits": ["../../../../shared/configs/credits/index.ts"],
+      "@configs/credits/*": ["../../../../shared/configs/credits/*"],
+      "@configs/notifications": ["../../../../shared/configs/notifications/index.ts"],
+      "@configs/notifications/*": ["../../../../shared/configs/notifications/*"],
+      "@configs/payment": ["../../../../shared/configs/payment/index.ts"],
+      "@configs/payment/*": ["../../../../shared/configs/payment/*"],
+      "@configs/product":["../../../../shared/configs/product/index.ts"],
+      "@configs/product/*": ["../../../../shared/configs/product/*"],
+      "@configs/user-organization-mgmt": ["../../../../shared/configs/user-organization-mgmt/index.ts"],
+      "@configs/user-organization-mgmt/*": ["../../../../shared/configs/user-organization-mgmt/*"]
+    }
+  },
+  "include": ["src/**/*", "__test__/**/*", "../../../../shared/configs/**/*.ts", "../shared/**/*.ts"],
+  "exclude": ["node_modules"]
+}

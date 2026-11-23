@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-status-cards-alert-success-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-status-cards-alert-success",
+ "name": "default",
+ "title": "Status cards: alert success",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

@@ -1,0 +1,511 @@
+{
+ "id": "ui-data-pattern-page-layout-sidebar-footer",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-page-layout-sidebar-footer",
+ "kind": "page",
+ "name": "layout-sidebar-footer",
+ "document": {
+  "kind": "page",
+  "schemaVersion": 1,
+  "name": "layout-sidebar-footer",
+  "version": 1,
+  "surface": "web",
+  "state": {
+   "open": false,
+   "current": "dashboard",
+   "org": "org-acme-corp",
+   "mode": "light",
+   "section": "account"
+  },
+  "root": {
+   "use": {
+    "component": "SideNavigationScreen",
+    "version": "latest"
+   },
+   "args": {
+    "open": {
+     "bind": "state.open"
+    },
+    "current": {
+     "bind": "state.current"
+    },
+    "org": {
+     "bind": "state.org"
+    },
+    "mode": {
+     "bind": "state.mode"
+    },
+    "expand": "overlay",
+    "account": "separate",
+    "withOrganizations": false,
+    "withModes": false,
+    "toggleAt": "top",
+    "backLabel": "PROWD"
+   },
+   "on": {
+    "openChange": [
+     {
+      "set": {
+       "state": "open",
+       "to": {
+        "bind": "event.open"
+       }
+      }
+     }
+    ],
+    "navigate": [
+     {
+      "set": {
+       "state": "current",
+       "to": {
+        "bind": "event.id"
+       }
+      }
+     }
+    ],
+    "organizationChange": [
+     {
+      "set": {
+       "state": "org",
+       "to": {
+        "bind": "event.id"
+       }
+      }
+     }
+    ],
+    "modeChange": [
+     {
+      "set": {
+       "state": "mode",
+       "to": {
+        "bind": "event.id"
+       }
+      }
+     }
+    ],
+    "back": [
+     {
+      "set": {
+       "state": "current",
+       "to": "back"
+      }
+     }
+    ]
+   },
+   "slots": {
+    "children": [
+     {
+      "use": {
+       "component": "DoubleSidebarFooterLayout",
+       "version": "latest"
+      },
+      "args": {
+       "scale": "md"
+      },
+      "slots": {
+       "pageHeader": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "justify": "between",
+          "size": "fill"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--heading3",
+            "children": "Account setup"
+           }
+          }
+         ]
+        }
+       ],
+       "pageLeftSidebar": [
+        {
+         "type": "SidebarProvider",
+         "props": {
+          "open": true
+         },
+         "children": [
+          {
+           "type": "Sidebar",
+           "props": {
+            "collapsible": "none"
+           },
+           "children": [
+            {
+             "type": "SidebarContent",
+             "children": [
+              {
+               "type": "SidebarGroup",
+               "children": [
+                {
+                 "type": "SidebarMenu",
+                 "children": [
+                  {
+                   "type": "SidebarMenuItem",
+                   "children": [
+                    {
+                     "type": "SidebarMenuButton",
+                     "props": {
+                      "emphasis": "primary",
+                      "state": {
+                       "if": [
+                        {
+                         "eq": [
+                          {
+                           "bind": "state.section"
+                          },
+                          "account"
+                         ]
+                        },
+                        "selected"
+                       ]
+                      },
+                      "data-testid": "layout-sidebar-footer-account-link"
+                     },
+                     "children": [
+                      {
+                       "type": "Stack",
+                       "props": {
+                        "dir": "row",
+                        "align": "center",
+                        "scale": "sm"
+                       },
+                       "children": [
+                        {
+                         "type": "Icon",
+                         "props": {
+                          "name": "user"
+                         }
+                        },
+                        {
+                         "type": "Text",
+                         "props": {
+                          "as": "p",
+                          "element": "type--body",
+                          "children": "Account"
+                         }
+                        }
+                       ]
+                      }
+                     ],
+                     "on": {
+                      "click": [
+                       {
+                        "set": {
+                         "state": "section",
+                         "to": "account"
+                        }
+                       }
+                      ]
+                     }
+                    }
+                   ]
+                  },
+                  {
+                   "type": "SidebarMenuItem",
+                   "children": [
+                    {
+                     "type": "SidebarMenuButton",
+                     "props": {
+                      "emphasis": "primary",
+                      "state": {
+                       "if": [
+                        {
+                         "eq": [
+                          {
+                           "bind": "state.section"
+                          },
+                          "profile"
+                         ]
+                        },
+                        "selected"
+                       ]
+                      },
+                      "data-testid": "layout-sidebar-footer-profile-link"
+                     },
+                     "children": [
+                      {
+                       "type": "Stack",
+                       "props": {
+                        "dir": "row",
+                        "align": "center",
+                        "scale": "sm"
+                       },
+                       "children": [
+                        {
+                         "type": "Icon",
+                         "props": {
+                          "name": "fileText"
+                         }
+                        },
+                        {
+                         "type": "Text",
+                         "props": {
+                          "as": "p",
+                          "element": "type--body",
+                          "children": "Profile"
+                         }
+                        }
+                       ]
+                      }
+                     ],
+                     "on": {
+                      "click": [
+                       {
+                        "set": {
+                         "state": "section",
+                         "to": "profile"
+                        }
+                       }
+                      ]
+                     }
+                    }
+                   ]
+                  },
+                  {
+                   "type": "SidebarMenuItem",
+                   "children": [
+                    {
+                     "type": "SidebarMenuButton",
+                     "props": {
+                      "emphasis": "primary",
+                      "state": {
+                       "if": [
+                        {
+                         "eq": [
+                          {
+                           "bind": "state.section"
+                          },
+                          "notifications"
+                         ]
+                        },
+                        "selected"
+                       ]
+                      },
+                      "data-testid": "layout-sidebar-footer-notifications-link"
+                     },
+                     "children": [
+                      {
+                       "type": "Stack",
+                       "props": {
+                        "dir": "row",
+                        "align": "center",
+                        "scale": "sm"
+                       },
+                       "children": [
+                        {
+                         "type": "Icon",
+                         "props": {
+                          "name": "bell"
+                         }
+                        },
+                        {
+                         "type": "Text",
+                         "props": {
+                          "as": "p",
+                          "element": "type--body",
+                          "children": "Notifications"
+                         }
+                        }
+                       ]
+                      }
+                     ],
+                     "on": {
+                      "click": [
+                       {
+                        "set": {
+                         "state": "section",
+                         "to": "notifications"
+                        }
+                       }
+                      ]
+                     }
+                    }
+                   ]
+                  },
+                  {
+                   "type": "SidebarMenuItem",
+                   "children": [
+                    {
+                     "type": "SidebarMenuButton",
+                     "props": {
+                      "emphasis": "primary",
+                      "state": {
+                       "if": [
+                        {
+                         "eq": [
+                          {
+                           "bind": "state.section"
+                          },
+                          "billing"
+                         ]
+                        },
+                        "selected"
+                       ]
+                      },
+                      "data-testid": "layout-sidebar-footer-billing-link"
+                     },
+                     "children": [
+                      {
+                       "type": "Stack",
+                       "props": {
+                        "dir": "row",
+                        "align": "center",
+                        "scale": "sm"
+                       },
+                       "children": [
+                        {
+                         "type": "Icon",
+                         "props": {
+                          "name": "briefcase"
+                         }
+                        },
+                        {
+                         "type": "Text",
+                         "props": {
+                          "as": "p",
+                          "element": "type--body",
+                          "children": "Billing"
+                         }
+                        }
+                       ]
+                      }
+                     ],
+                     "on": {
+                      "click": [
+                       {
+                        "set": {
+                         "state": "section",
+                         "to": "billing"
+                        }
+                       }
+                      ]
+                     }
+                    }
+                   ]
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ],
+       "mainContainer": [
+        {
+         "type": "Card",
+         "children": [
+          {
+           "type": "Content",
+           "children": [
+            {
+             "type": "Stack",
+             "props": {
+              "dir": "col",
+              "scale": "md"
+             },
+             "children": [
+              {
+               "type": "Skeleton",
+               "props": {
+                "scale": "sm"
+               }
+              },
+              {
+               "type": "Skeleton",
+               "props": {
+                "scale": "md"
+               }
+              },
+              {
+               "type": "Skeleton",
+               "props": {
+                "scale": "md"
+               }
+              },
+              {
+               "type": "Skeleton",
+               "props": {
+                "scale": "md"
+               }
+              },
+              {
+               "type": "Skeleton",
+               "props": {
+                "scale": "md"
+               }
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ],
+       "pageFooter": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "justify": "between",
+          "size": "fill"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "3 changes not saved",
+            "emphasis": "quiet"
+           }
+          },
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "row",
+            "align": "center",
+            "scale": "sm"
+           },
+           "children": [
+            {
+             "type": "Button",
+             "props": {
+              "scale": "sm",
+              "children": "Discard",
+              "emphasis": "tertiary",
+              "data-testid": "layout-sidebar-footer-discard-btn"
+             }
+            },
+            {
+             "type": "Button",
+             "props": {
+              "scale": "sm",
+              "children": "Save",
+              "emphasis": "primary",
+              "data-testid": "layout-sidebar-footer-save-btn"
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     }
+    ]
+   }
+  }
+ }
+}

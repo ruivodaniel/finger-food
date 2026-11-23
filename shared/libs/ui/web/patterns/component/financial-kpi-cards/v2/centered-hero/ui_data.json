@@ -1,0 +1,83 @@
+{
+ "id": "ui-data-pattern-component-financial-kpi-cards-centered-hero",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-financial-kpi-cards-centered-hero",
+ "kind": "component",
+ "name": "centered-hero",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "centered-hero",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Card",
+   "props": {
+    "style": {
+     "obj": {
+      "width": 360
+     }
+    }
+   },
+   "children": [
+    {
+     "type": "Content",
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "align": "center",
+        "style": {
+         "obj": {
+          "textAlign": "center"
+         }
+        },
+        "scale": "sm"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body-small",
+          "emphasis": "quiet",
+          "children": "Free cash flow to equity"
+         }
+        },
+        {
+         "type": "DataNumber",
+         "props": {
+          "value": 34460000000,
+          "config": {
+           "mode": {
+            "kind": "fixedScale",
+            "scale": "billion",
+            "n": 2
+           },
+           "locale": "en-GB"
+          },
+          "symbol": "USD",
+          "scale": "xl",
+          "emphasis": "primary",
+          "status": "success"
+         }
+        },
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body-extra-small",
+          "emphasis": "quiet",
+          "children": "Fiscal year 2025"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

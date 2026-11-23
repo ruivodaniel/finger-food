@@ -1,0 +1,183 @@
+{
+ "id": "ui-data-pattern-component-diagram-mermaid",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-diagram-mermaid",
+ "kind": "component",
+ "name": "diagram-mermaid",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "diagram-mermaid",
+  "version": 1,
+  "surface": "web",
+  "state": {
+   "submit_form_edit": {
+    "id": "submit-form",
+    "text": "sequenceDiagram\n  actor User\n  participant Web as Web app\n  participant API\n  participant DB as Database\n  User->>Web: submit form\n  activate Web\n  Web->>API: POST /forms\n  activate API\n  API->>API: validate\n  alt valid\n    API->>DB: insert\n    DB-->>API: row\n    API-->>Web: 201 created\n  else invalid\n    API-->>Web: 422 errors\n  end\n  deactivate API\n  Web-->>User: confirmation, or the errors\n  deactivate Web\n  loop every minute\n    Web->>API: GET /status\n    API-->>Web: status\n  end\n  Note over User,Web: the form stays open until the status is final\n  User->>Web: close\n  Web->>API: DELETE /session\n  API-->>Web: 204\n  Web-->>User: signed out"
+   },
+   "submit_form_view": {
+    "id": "submit-form",
+    "text": "sequenceDiagram\n  actor User\n  participant Web as Web app\n  participant API\n  participant DB as Database\n  User->>Web: submit form\n  activate Web\n  Web->>API: POST /forms\n  activate API\n  API->>API: validate\n  alt valid\n    API->>DB: insert\n    DB-->>API: row\n    API-->>Web: 201 created\n  else invalid\n    API-->>Web: 422 errors\n  end\n  deactivate API\n  Web-->>User: confirmation, or the errors\n  deactivate Web\n  loop every minute\n    Web->>API: GET /status\n    API-->>Web: status\n  end\n  Note over User,Web: the form stays open until the status is final\n  User->>Web: close\n  Web->>API: DELETE /session\n  API-->>Web: 204\n  Web-->>User: signed out"
+   },
+   "flow_edit": {
+    "id": "flow",
+    "text": "flowchart LR\n  A[Draft] --> B{Reviewed?}\n  B -- yes --> C[Published]\n  B -- no --> A"
+   }
+  },
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "style": {
+     "obj": {
+      "width": 1200
+     }
+    },
+    "scale": "xl"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-small",
+        "emphasis": "quiet",
+        "children": "editable: type or paste the text on the left, the drawing follows; scroll the drawing down and the participants stay"
+       }
+      },
+      {
+       "type": "Text",
+       "props": {
+        "as": "div",
+        "style": {
+         "obj": {
+          "height": 460
+         }
+        }
+       },
+       "children": [
+        {
+         "type": "DiagramMermaid",
+         "props": {
+          "data": {
+           "bind": "state.submit_form_edit"
+          },
+          "data-testid": "diagram-mermaid-submit-form-edit-editor"
+         },
+         "on": {
+          "submit": [
+           {
+            "set": {
+             "state": "submit_form_edit",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-small",
+        "emphasis": "quiet",
+        "children": "not editable: the drawing alone, the participants staying"
+       }
+      },
+      {
+       "type": "Text",
+       "props": {
+        "as": "div",
+        "style": {
+         "obj": {
+          "height": 320
+         }
+        }
+       },
+       "children": [
+        {
+         "type": "DiagramMermaid",
+         "props": {
+          "data": {
+           "bind": "state.submit_form_view"
+          },
+          "data-testid": "diagram-mermaid-submit-form-view-editor"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-small",
+        "emphasis": "quiet",
+        "children": "any diagram of the engine draws; one without participants has no header that stays"
+       }
+      },
+      {
+       "type": "Text",
+       "props": {
+        "as": "div",
+        "style": {
+         "obj": {
+          "height": 300
+         }
+        }
+       },
+       "children": [
+        {
+         "type": "DiagramMermaid",
+         "props": {
+          "data": {
+           "bind": "state.flow_edit"
+          },
+          "data-testid": "diagram-mermaid-flow-edit-editor"
+         },
+         "on": {
+          "submit": [
+           {
+            "set": {
+             "state": "flow_edit",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

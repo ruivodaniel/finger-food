@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-component-form-feedback",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Form feedback"
+}

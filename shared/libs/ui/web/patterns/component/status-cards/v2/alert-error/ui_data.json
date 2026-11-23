@@ -1,0 +1,86 @@
+{
+ "id": "ui-data-pattern-component-status-cards-alert-error",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-status-cards-alert-error",
+ "kind": "component",
+ "name": "alert-error",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "alert-error",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Card",
+   "props": {
+    "status": "error",
+    "className": "flex-1 min-w-56",
+    "concept": "alert"
+   },
+   "children": [
+    {
+     "type": "Header",
+     "props": {},
+     "children": [
+      {
+       "type": "Icon",
+       "props": {
+        "name": "error"
+       }
+      },
+      {
+       "type": "Text",
+       "props": {
+        "as": "p",
+        "element": "type--heading4",
+        "children": "Sync failed"
+       }
+      }
+     ]
+    },
+    {
+     "type": "Content",
+     "props": {},
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "p",
+        "element": "type--body-small",
+        "emphasis": "quiet",
+        "children": "Connection timed out after 30 s; 3 changes were not saved."
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "scale": "sm"
+       },
+       "children": [
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "secondary",
+          "status": "error",
+          "scale": "sm",
+          "children": "Retry"
+         }
+        },
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "quiet",
+          "scale": "sm",
+          "children": "Dismiss"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

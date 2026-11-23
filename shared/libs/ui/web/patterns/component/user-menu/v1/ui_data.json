@@ -1,0 +1,919 @@
+{
+ "id": "ui-data-pattern-component-user-menu",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-user-menu",
+ "kind": "component",
+ "name": "user-menu",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "user-menu",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "state": {
+   "last": "nothing yet",
+   "a": "light",
+   "b": "light",
+   "c": "light",
+   "d": "system",
+   "e": "light",
+   "f": "light",
+   "g": "light",
+   "h": "light"
+  },
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "size": "fill",
+    "scale": "xl"
+   },
+   "children": [
+    {
+     "type": "Text",
+     "props": {
+      "as": "span",
+      "element": "type--body-extra-small",
+      "children": {
+       "concat": [
+        "last chosen: ",
+        {
+         "bind": "state.last"
+        }
+       ]
+      },
+      "emphasis": "quiet"
+     }
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "size": "fill",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body-extra-small",
+        "children": "name",
+        "emphasis": "quiet"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "wrap": true,
+        "size": "fill",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "use": {
+          "component": "UserMenu",
+          "version": "latest"
+         },
+         "args": {
+          "user": {
+           "id": "user-ines-carvalho",
+           "name": "Inês Carvalho",
+           "email": "ines@acme.test"
+          },
+          "items": [
+           {
+            "id": "settings",
+            "label": "Settings",
+            "icon": "settings"
+           },
+           {
+            "id": "my-memberships",
+            "label": "My memberships",
+            "icon": "briefcase"
+           },
+           {
+            "id": "my-invitations",
+            "label": "My invitations",
+            "icon": "inbox",
+            "count": 2
+           }
+          ],
+          "modes": [
+           {
+            "id": "light",
+            "label": "Light"
+           },
+           {
+            "id": "dark",
+            "label": "Dark"
+           }
+          ],
+          "mode": {
+           "bind": "state.a"
+          },
+          "modeLayout": "switch",
+          "modeLabel": "Dark mode",
+          "modeIcon": "palette"
+         },
+         "on": {
+          "modeChange": [
+           {
+            "set": {
+             "state": "a",
+             "to": {
+              "bind": "event.id"
+             }
+            }
+           }
+          ],
+          "select": [
+           {
+            "set": {
+             "state": "last",
+             "to": {
+              "bind": "event.id"
+             }
+            }
+           }
+          ],
+          "signOut": [
+           {
+            "set": {
+             "state": "last",
+             "to": "sign-out"
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "size": "fill",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body-extra-small",
+        "children": "name and email",
+        "emphasis": "quiet"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "wrap": true,
+        "size": "fill",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "use": {
+          "component": "UserMenu",
+          "version": "latest"
+         },
+         "args": {
+          "user": {
+           "id": "user-ines-carvalho",
+           "name": "Inês Carvalho",
+           "email": "ines@acme.test"
+          },
+          "items": [
+           {
+            "id": "settings",
+            "label": "Settings",
+            "icon": "settings"
+           },
+           {
+            "id": "my-memberships",
+            "label": "My memberships",
+            "icon": "briefcase"
+           },
+           {
+            "id": "my-invitations",
+            "label": "My invitations",
+            "icon": "inbox",
+            "count": 2
+           }
+          ],
+          "modes": [
+           {
+            "id": "light",
+            "label": "Light"
+           },
+           {
+            "id": "dark",
+            "label": "Dark"
+           }
+          ],
+          "mode": {
+           "bind": "state.b"
+          },
+          "modeLayout": "switch",
+          "modeLabel": "Dark mode",
+          "modeIcon": "palette",
+          "detail": "ines@acme.test"
+         },
+         "on": {
+          "modeChange": [
+           {
+            "set": {
+             "state": "b",
+             "to": {
+              "bind": "event.id"
+             }
+            }
+           }
+          ],
+          "select": [
+           {
+            "set": {
+             "state": "last",
+             "to": {
+              "bind": "event.id"
+             }
+            }
+           }
+          ],
+          "signOut": [
+           {
+            "set": {
+             "state": "last",
+             "to": "sign-out"
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "size": "fill",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body-extra-small",
+        "children": "compact: the picture alone",
+        "emphasis": "quiet"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "wrap": true,
+        "size": "fill",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "use": {
+          "component": "UserMenu",
+          "version": "latest"
+         },
+         "args": {
+          "user": {
+           "id": "user-ines-carvalho",
+           "name": "Inês Carvalho",
+           "email": "ines@acme.test"
+          },
+          "items": [
+           {
+            "id": "settings",
+            "label": "Settings",
+            "icon": "settings"
+           },
+           {
+            "id": "my-memberships",
+            "label": "My memberships",
+            "icon": "briefcase"
+           },
+           {
+            "id": "my-invitations",
+            "label": "My invitations",
+            "icon": "inbox",
+            "count": 2
+           }
+          ],
+          "modes": [
+           {
+            "id": "light",
+            "label": "Light"
+           },
+           {
+            "id": "dark",
+            "label": "Dark"
+           }
+          ],
+          "mode": {
+           "bind": "state.c"
+          },
+          "modeLayout": "switch",
+          "modeLabel": "Dark mode",
+          "modeIcon": "palette",
+          "compact": true
+         },
+         "on": {
+          "modeChange": [
+           {
+            "set": {
+             "state": "c",
+             "to": {
+              "bind": "event.id"
+             }
+            }
+           }
+          ],
+          "select": [
+           {
+            "set": {
+             "state": "last",
+             "to": {
+              "bind": "event.id"
+             }
+            }
+           }
+          ],
+          "signOut": [
+           {
+            "set": {
+             "state": "last",
+             "to": "sign-out"
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "size": "fill",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body-extra-small",
+        "children": "mode as a drop, three modes",
+        "emphasis": "quiet"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "wrap": true,
+        "size": "fill",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "use": {
+          "component": "UserMenu",
+          "version": "latest"
+         },
+         "args": {
+          "user": {
+           "id": "user-ines-carvalho",
+           "name": "Inês Carvalho",
+           "email": "ines@acme.test"
+          },
+          "items": [
+           {
+            "id": "settings",
+            "label": "Settings",
+            "icon": "settings"
+           },
+           {
+            "id": "my-memberships",
+            "label": "My memberships",
+            "icon": "briefcase"
+           },
+           {
+            "id": "my-invitations",
+            "label": "My invitations",
+            "icon": "inbox",
+            "count": 2
+           }
+          ],
+          "modes": [
+           {
+            "id": "light",
+            "label": "Light"
+           },
+           {
+            "id": "dark",
+            "label": "Dark"
+           },
+           {
+            "id": "system",
+            "label": "System"
+           }
+          ],
+          "mode": {
+           "bind": "state.d"
+          },
+          "modeLayout": "drop",
+          "modeLabel": "Color mode",
+          "modeIcon": "palette"
+         },
+         "on": {
+          "modeChange": [
+           {
+            "set": {
+             "state": "d",
+             "to": {
+              "bind": "event.id"
+             }
+            }
+           }
+          ],
+          "select": [
+           {
+            "set": {
+             "state": "last",
+             "to": {
+              "bind": "event.id"
+             }
+            }
+           }
+          ],
+          "signOut": [
+           {
+            "set": {
+             "state": "last",
+             "to": "sign-out"
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "size": "fill",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body-extra-small",
+        "children": "no modes",
+        "emphasis": "quiet"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "wrap": true,
+        "size": "fill",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "use": {
+          "component": "UserMenu",
+          "version": "latest"
+         },
+         "args": {
+          "user": {
+           "id": "user-ines-carvalho",
+           "name": "Inês Carvalho",
+           "email": "ines@acme.test"
+          },
+          "items": [
+           {
+            "id": "settings",
+            "label": "Settings",
+            "icon": "settings"
+           },
+           {
+            "id": "my-memberships",
+            "label": "My memberships",
+            "icon": "briefcase"
+           },
+           {
+            "id": "my-invitations",
+            "label": "My invitations",
+            "icon": "inbox",
+            "count": 2
+           }
+          ],
+          "modes": [],
+          "mode": {
+           "bind": "state.e"
+          },
+          "modeLayout": "switch",
+          "modeLabel": "Dark mode",
+          "modeIcon": "palette"
+         },
+         "on": {
+          "modeChange": [
+           {
+            "set": {
+             "state": "e",
+             "to": {
+              "bind": "event.id"
+             }
+            }
+           }
+          ],
+          "select": [
+           {
+            "set": {
+             "state": "last",
+             "to": {
+              "bind": "event.id"
+             }
+            }
+           }
+          ],
+          "signOut": [
+           {
+            "set": {
+             "state": "last",
+             "to": "sign-out"
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "size": "fill",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body-extra-small",
+        "children": "the user's identity at the top of the menu, compact",
+        "emphasis": "quiet"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "wrap": true,
+        "size": "fill",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "use": {
+          "component": "UserMenu",
+          "version": "latest"
+         },
+         "args": {
+          "user": {
+           "id": "user-ines-carvalho",
+           "name": "Inês Carvalho",
+           "email": "ines@acme.test"
+          },
+          "items": [
+           {
+            "id": "settings",
+            "label": "Settings",
+            "icon": "settings"
+           },
+           {
+            "id": "my-memberships",
+            "label": "My memberships",
+            "icon": "briefcase"
+           },
+           {
+            "id": "my-invitations",
+            "label": "My invitations",
+            "icon": "inbox",
+            "count": 2
+           }
+          ],
+          "modes": [
+           {
+            "id": "light",
+            "label": "Light"
+           },
+           {
+            "id": "dark",
+            "label": "Dark"
+           }
+          ],
+          "mode": {
+           "bind": "state.f"
+          },
+          "modeLayout": "switch",
+          "modeLabel": "Dark mode",
+          "modeIcon": "palette",
+          "header": "compact"
+         },
+         "on": {
+          "modeChange": [
+           {
+            "set": {
+             "state": "f",
+             "to": {
+              "bind": "event.id"
+             }
+            }
+           }
+          ],
+          "select": [
+           {
+            "set": {
+             "state": "last",
+             "to": {
+              "bind": "event.id"
+             }
+            }
+           }
+          ],
+          "signOut": [
+           {
+            "set": {
+             "state": "last",
+             "to": "sign-out"
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "size": "fill",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body-extra-small",
+        "children": "the identity large, with a manage account button",
+        "emphasis": "quiet"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "wrap": true,
+        "size": "fill",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "use": {
+          "component": "UserMenu",
+          "version": "latest"
+         },
+         "args": {
+          "user": {
+           "id": "user-ines-carvalho",
+           "name": "Inês Carvalho",
+           "email": "ines@acme.test"
+          },
+          "items": [
+           {
+            "id": "settings",
+            "label": "Settings",
+            "icon": "settings"
+           },
+           {
+            "id": "my-memberships",
+            "label": "My memberships",
+            "icon": "briefcase"
+           },
+           {
+            "id": "my-invitations",
+            "label": "My invitations",
+            "icon": "inbox",
+            "count": 2
+           }
+          ],
+          "modes": [
+           {
+            "id": "light",
+            "label": "Light"
+           },
+           {
+            "id": "dark",
+            "label": "Dark"
+           }
+          ],
+          "mode": {
+           "bind": "state.g"
+          },
+          "modeLayout": "switch",
+          "modeLabel": "Dark mode",
+          "modeIcon": "palette",
+          "header": "large",
+          "manageLabel": "Manage account"
+         },
+         "on": {
+          "modeChange": [
+           {
+            "set": {
+             "state": "g",
+             "to": {
+              "bind": "event.id"
+             }
+            }
+           }
+          ],
+          "select": [
+           {
+            "set": {
+             "state": "last",
+             "to": {
+              "bind": "event.id"
+             }
+            }
+           }
+          ],
+          "signOut": [
+           {
+            "set": {
+             "state": "last",
+             "to": "sign-out"
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "size": "fill",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body-extra-small",
+        "children": "compact identity, a label over the entries, the up and down chevron",
+        "emphasis": "quiet"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "wrap": true,
+        "size": "fill",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "use": {
+          "component": "UserMenu",
+          "version": "latest"
+         },
+         "args": {
+          "user": {
+           "id": "user-ines-carvalho",
+           "name": "Inês Carvalho",
+           "email": "ines@acme.test"
+          },
+          "items": [
+           {
+            "id": "settings",
+            "label": "Settings",
+            "icon": "settings"
+           },
+           {
+            "id": "my-memberships",
+            "label": "My memberships",
+            "icon": "briefcase"
+           },
+           {
+            "id": "my-invitations",
+            "label": "My invitations",
+            "icon": "inbox",
+            "count": 2
+           }
+          ],
+          "modes": [
+           {
+            "id": "light",
+            "label": "Light"
+           },
+           {
+            "id": "dark",
+            "label": "Dark"
+           }
+          ],
+          "mode": {
+           "bind": "state.h"
+          },
+          "modeLayout": "switch",
+          "modeLabel": "Dark mode",
+          "modeIcon": "palette",
+          "header": "compact",
+          "itemsLabel": "Account",
+          "triggerIcon": "chevronsUpDown"
+         },
+         "on": {
+          "modeChange": [
+           {
+            "set": {
+             "state": "h",
+             "to": {
+              "bind": "event.id"
+             }
+            }
+           }
+          ],
+          "select": [
+           {
+            "set": {
+             "state": "last",
+             "to": {
+              "bind": "event.id"
+             }
+            }
+           }
+          ],
+          "signOut": [
+           {
+            "set": {
+             "state": "last",
+             "to": "sign-out"
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

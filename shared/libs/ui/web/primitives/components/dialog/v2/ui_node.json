@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-primitive-dialog",
+ "version": 1,
+ "type": "screen",
+ "surface": "web",
+ "title": "Dialog"
+}

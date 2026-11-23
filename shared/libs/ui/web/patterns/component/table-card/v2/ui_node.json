@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-component-table-card",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Table card"
+}

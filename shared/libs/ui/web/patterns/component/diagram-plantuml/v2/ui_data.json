@@ -1,0 +1,183 @@
+{
+ "id": "ui-data-pattern-component-diagram-plantuml",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-diagram-plantuml",
+ "kind": "component",
+ "name": "diagram-plantuml",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "diagram-plantuml",
+  "version": 1,
+  "surface": "web",
+  "state": {
+   "submit_form_edit": {
+    "id": "submit-form",
+    "text": "@startuml\nactor User\nparticipant \"Web app\" as Web\nparticipant API\ndatabase Database as DB\nUser -> Web : submit form\nactivate Web\nWeb -> API : POST /forms\nactivate API\nAPI -> API : validate\nalt valid\n  API -> DB : insert\n  DB --> API : row\n  API --> Web : 201 created\nelse invalid\n  API --> Web : 422 errors\nend\ndeactivate API\nWeb --> User : confirmation, or the errors\ndeactivate Web\nloop every minute\n  Web -> API : GET /status\n  API --> Web : status\nend\nnote over User, Web : the form stays open until the status is final\nUser -> Web : close\nWeb -> API : DELETE /session\nAPI --> Web : 204\nWeb --> User : signed out\n@enduml"
+   },
+   "submit_form_view": {
+    "id": "submit-form",
+    "text": "@startuml\nactor User\nparticipant \"Web app\" as Web\nparticipant API\ndatabase Database as DB\nUser -> Web : submit form\nactivate Web\nWeb -> API : POST /forms\nactivate API\nAPI -> API : validate\nalt valid\n  API -> DB : insert\n  DB --> API : row\n  API --> Web : 201 created\nelse invalid\n  API --> Web : 422 errors\nend\ndeactivate API\nWeb --> User : confirmation, or the errors\ndeactivate Web\nloop every minute\n  Web -> API : GET /status\n  API --> Web : status\nend\nnote over User, Web : the form stays open until the status is final\nUser -> Web : close\nWeb -> API : DELETE /session\nAPI --> Web : 204\nWeb --> User : signed out\n@enduml"
+   },
+   "classes_edit": {
+    "id": "classes",
+    "text": "@startuml\nclass Order {\n  +id: string\n  +total(): number\n}\nclass Line {\n  +quantity: number\n}\nOrder \"1\" *-- \"many\" Line\n@enduml"
+   }
+  },
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "style": {
+     "obj": {
+      "width": 1200
+     }
+    },
+    "scale": "xl"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-small",
+        "emphasis": "quiet",
+        "children": "editable: type or paste the text on the left, the drawing follows; scroll the drawing down and the participants stay"
+       }
+      },
+      {
+       "type": "Text",
+       "props": {
+        "as": "div",
+        "style": {
+         "obj": {
+          "height": 460
+         }
+        }
+       },
+       "children": [
+        {
+         "type": "DiagramPlantuml",
+         "props": {
+          "data": {
+           "bind": "state.submit_form_edit"
+          },
+          "data-testid": "diagram-plantuml-submit-form-edit-editor"
+         },
+         "on": {
+          "submit": [
+           {
+            "set": {
+             "state": "submit_form_edit",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-small",
+        "emphasis": "quiet",
+        "children": "not editable: the drawing alone, the participants staying"
+       }
+      },
+      {
+       "type": "Text",
+       "props": {
+        "as": "div",
+        "style": {
+         "obj": {
+          "height": 320
+         }
+        }
+       },
+       "children": [
+        {
+         "type": "DiagramPlantuml",
+         "props": {
+          "data": {
+           "bind": "state.submit_form_view"
+          },
+          "data-testid": "diagram-plantuml-submit-form-view-editor"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-small",
+        "emphasis": "quiet",
+        "children": "any diagram of the engine draws; one without participants has no header that stays"
+       }
+      },
+      {
+       "type": "Text",
+       "props": {
+        "as": "div",
+        "style": {
+         "obj": {
+          "height": 300
+         }
+        }
+       },
+       "children": [
+        {
+         "type": "DiagramPlantuml",
+         "props": {
+          "data": {
+           "bind": "state.classes_edit"
+          },
+          "data-testid": "diagram-plantuml-classes-edit-editor"
+         },
+         "on": {
+          "submit": [
+           {
+            "set": {
+             "state": "classes_edit",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

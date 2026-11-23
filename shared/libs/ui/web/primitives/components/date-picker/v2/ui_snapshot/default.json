@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-primitive-date-picker-default",
+ "version": 1,
+ "uiDataId": "ui-data-primitive-date-picker",
+ "name": "default",
+ "title": "Date picker, its cases",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

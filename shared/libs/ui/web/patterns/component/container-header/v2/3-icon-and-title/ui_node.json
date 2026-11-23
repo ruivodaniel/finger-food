@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-component-container-header-3-icon-and-title",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Container header 3: an icon, then the title"
+}

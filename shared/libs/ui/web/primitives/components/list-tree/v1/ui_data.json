@@ -1,0 +1,1822 @@
+{
+ "id": "ui-data-primitive-list-tree",
+ "version": 1,
+ "uiNodeId": "ui-node-primitive-list-tree",
+ "kind": "component",
+ "name": "primitive-list-tree",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "primitive-list-tree",
+  "version": 1,
+  "surface": "web",
+  "state": {
+   "lines_indent_items": [
+    {
+     "id": "mon-projet",
+     "title": "mon-projet",
+     "children": [
+      {
+       "id": "package",
+       "title": "package.json"
+      },
+      {
+       "id": "public",
+       "title": "public",
+       "children": [
+        {
+         "id": "favicon",
+         "title": "favicon.ico"
+        }
+       ]
+      },
+      {
+       "id": "readme",
+       "title": "README.md"
+      },
+      {
+       "id": "src",
+       "title": "src",
+       "children": [
+        {
+         "id": "index",
+         "title": "index.js"
+        },
+        {
+         "id": "styles",
+         "title": "styles.css"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "docs",
+     "title": "docs",
+     "children": [
+      {
+       "id": "intro",
+       "title": "intro.md",
+       "note": "A longer entry: a row can hold anything, and the line beside it goes on through every row below the gap."
+      },
+      {
+       "id": "api",
+       "title": "api.md"
+      }
+     ]
+    },
+    {
+     "id": "license",
+     "title": "LICENSE"
+    }
+   ],
+   "lines_indent_selected": "readme",
+   "lines_anchor_top_items": [
+    {
+     "id": "mon-projet",
+     "title": "mon-projet",
+     "children": [
+      {
+       "id": "package",
+       "title": "package.json"
+      },
+      {
+       "id": "public",
+       "title": "public",
+       "children": [
+        {
+         "id": "favicon",
+         "title": "favicon.ico"
+        }
+       ]
+      },
+      {
+       "id": "readme",
+       "title": "README.md"
+      },
+      {
+       "id": "src",
+       "title": "src",
+       "children": [
+        {
+         "id": "index",
+         "title": "index.js"
+        },
+        {
+         "id": "styles",
+         "title": "styles.css"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "docs",
+     "title": "docs",
+     "children": [
+      {
+       "id": "intro",
+       "title": "intro.md",
+       "note": "A longer entry: a row can hold anything, and the line beside it goes on through every row below the gap."
+      },
+      {
+       "id": "api",
+       "title": "api.md"
+      }
+     ]
+    },
+    {
+     "id": "license",
+     "title": "LICENSE"
+    }
+   ],
+   "lines_anchor_top_selected": "readme",
+   "indent_only_items": [
+    {
+     "id": "mon-projet",
+     "title": "mon-projet",
+     "children": [
+      {
+       "id": "package",
+       "title": "package.json"
+      },
+      {
+       "id": "public",
+       "title": "public",
+       "children": [
+        {
+         "id": "favicon",
+         "title": "favicon.ico"
+        }
+       ]
+      },
+      {
+       "id": "readme",
+       "title": "README.md"
+      },
+      {
+       "id": "src",
+       "title": "src",
+       "children": [
+        {
+         "id": "index",
+         "title": "index.js"
+        },
+        {
+         "id": "styles",
+         "title": "styles.css"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "docs",
+     "title": "docs",
+     "children": [
+      {
+       "id": "intro",
+       "title": "intro.md",
+       "note": "A longer entry: a row can hold anything, and the line beside it goes on through every row below the gap."
+      },
+      {
+       "id": "api",
+       "title": "api.md"
+      }
+     ]
+    },
+    {
+     "id": "license",
+     "title": "LICENSE"
+    }
+   ],
+   "indent_only_selected": "readme",
+   "no_indent_items": [
+    {
+     "id": "mon-projet",
+     "title": "mon-projet",
+     "children": [
+      {
+       "id": "package",
+       "title": "package.json"
+      },
+      {
+       "id": "public",
+       "title": "public",
+       "children": [
+        {
+         "id": "favicon",
+         "title": "favicon.ico"
+        }
+       ]
+      },
+      {
+       "id": "readme",
+       "title": "README.md"
+      },
+      {
+       "id": "src",
+       "title": "src",
+       "children": [
+        {
+         "id": "index",
+         "title": "index.js"
+        },
+        {
+         "id": "styles",
+         "title": "styles.css"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "docs",
+     "title": "docs",
+     "children": [
+      {
+       "id": "intro",
+       "title": "intro.md",
+       "note": "A longer entry: a row can hold anything, and the line beside it goes on through every row below the gap."
+      },
+      {
+       "id": "api",
+       "title": "api.md"
+      }
+     ]
+    },
+    {
+     "id": "license",
+     "title": "LICENSE"
+    }
+   ],
+   "no_indent_selected": "readme",
+   "reorderable_lines_items": [
+    {
+     "id": "mon-projet",
+     "title": "mon-projet",
+     "children": [
+      {
+       "id": "package",
+       "title": "package.json"
+      },
+      {
+       "id": "public",
+       "title": "public",
+       "children": [
+        {
+         "id": "favicon",
+         "title": "favicon.ico"
+        }
+       ]
+      },
+      {
+       "id": "readme",
+       "title": "README.md"
+      },
+      {
+       "id": "src",
+       "title": "src",
+       "children": [
+        {
+         "id": "index",
+         "title": "index.js"
+        },
+        {
+         "id": "styles",
+         "title": "styles.css"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "docs",
+     "title": "docs",
+     "children": [
+      {
+       "id": "intro",
+       "title": "intro.md",
+       "note": "A longer entry: a row can hold anything, and the line beside it goes on through every row below the gap."
+      },
+      {
+       "id": "api",
+       "title": "api.md"
+      }
+     ]
+    },
+    {
+     "id": "license",
+     "title": "LICENSE"
+    }
+   ],
+   "reorderable_lines_selected": "readme",
+   "expand_single_items": [
+    {
+     "id": "mon-projet",
+     "title": "mon-projet",
+     "children": [
+      {
+       "id": "package",
+       "title": "package.json"
+      },
+      {
+       "id": "public",
+       "title": "public",
+       "children": [
+        {
+         "id": "favicon",
+         "title": "favicon.ico"
+        }
+       ]
+      },
+      {
+       "id": "readme",
+       "title": "README.md"
+      },
+      {
+       "id": "src",
+       "title": "src",
+       "children": [
+        {
+         "id": "index",
+         "title": "index.js"
+        },
+        {
+         "id": "styles",
+         "title": "styles.css"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "docs",
+     "title": "docs",
+     "children": [
+      {
+       "id": "intro",
+       "title": "intro.md",
+       "note": "A longer entry: a row can hold anything, and the line beside it goes on through every row below the gap."
+      },
+      {
+       "id": "api",
+       "title": "api.md"
+      }
+     ]
+    },
+    {
+     "id": "license",
+     "title": "LICENSE"
+    }
+   ],
+   "expand_single_selected": "readme",
+   "expand_per_level_items": [
+    {
+     "id": "mon-projet",
+     "title": "mon-projet",
+     "children": [
+      {
+       "id": "package",
+       "title": "package.json"
+      },
+      {
+       "id": "public",
+       "title": "public",
+       "children": [
+        {
+         "id": "favicon",
+         "title": "favicon.ico"
+        }
+       ]
+      },
+      {
+       "id": "readme",
+       "title": "README.md"
+      },
+      {
+       "id": "src",
+       "title": "src",
+       "children": [
+        {
+         "id": "index",
+         "title": "index.js"
+        },
+        {
+         "id": "styles",
+         "title": "styles.css"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "docs",
+     "title": "docs",
+     "children": [
+      {
+       "id": "intro",
+       "title": "intro.md",
+       "note": "A longer entry: a row can hold anything, and the line beside it goes on through every row below the gap."
+      },
+      {
+       "id": "api",
+       "title": "api.md"
+      }
+     ]
+    },
+    {
+     "id": "license",
+     "title": "LICENSE"
+    }
+   ],
+   "expand_per_level_selected": "readme",
+   "toggle_on_click_items": [
+    {
+     "id": "mon-projet",
+     "title": "mon-projet",
+     "children": [
+      {
+       "id": "package",
+       "title": "package.json"
+      },
+      {
+       "id": "public",
+       "title": "public",
+       "children": [
+        {
+         "id": "favicon",
+         "title": "favicon.ico"
+        }
+       ]
+      },
+      {
+       "id": "readme",
+       "title": "README.md"
+      },
+      {
+       "id": "src",
+       "title": "src",
+       "children": [
+        {
+         "id": "index",
+         "title": "index.js"
+        },
+        {
+         "id": "styles",
+         "title": "styles.css"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "docs",
+     "title": "docs",
+     "children": [
+      {
+       "id": "intro",
+       "title": "intro.md",
+       "note": "A longer entry: a row can hold anything, and the line beside it goes on through every row below the gap."
+      },
+      {
+       "id": "api",
+       "title": "api.md"
+      }
+     ]
+    },
+    {
+     "id": "license",
+     "title": "LICENSE"
+    }
+   ],
+   "toggle_on_click_selected": "readme",
+   "toggle_level_1_items": [
+    {
+     "id": "mon-projet",
+     "title": "mon-projet",
+     "children": [
+      {
+       "id": "package",
+       "title": "package.json"
+      },
+      {
+       "id": "public",
+       "title": "public",
+       "children": [
+        {
+         "id": "favicon",
+         "title": "favicon.ico"
+        }
+       ]
+      },
+      {
+       "id": "readme",
+       "title": "README.md"
+      },
+      {
+       "id": "src",
+       "title": "src",
+       "children": [
+        {
+         "id": "index",
+         "title": "index.js"
+        },
+        {
+         "id": "styles",
+         "title": "styles.css"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "docs",
+     "title": "docs",
+     "children": [
+      {
+       "id": "intro",
+       "title": "intro.md",
+       "note": "A longer entry: a row can hold anything, and the line beside it goes on through every row below the gap."
+      },
+      {
+       "id": "api",
+       "title": "api.md"
+      }
+     ]
+    },
+    {
+     "id": "license",
+     "title": "LICENSE"
+    }
+   ],
+   "toggle_level_1_selected": "readme",
+   "not_collapsible_items": [
+    {
+     "id": "mon-projet",
+     "title": "mon-projet",
+     "children": [
+      {
+       "id": "package",
+       "title": "package.json"
+      },
+      {
+       "id": "public",
+       "title": "public",
+       "children": [
+        {
+         "id": "favicon",
+         "title": "favicon.ico"
+        }
+       ]
+      },
+      {
+       "id": "readme",
+       "title": "README.md"
+      },
+      {
+       "id": "src",
+       "title": "src",
+       "children": [
+        {
+         "id": "index",
+         "title": "index.js"
+        },
+        {
+         "id": "styles",
+         "title": "styles.css"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "docs",
+     "title": "docs",
+     "children": [
+      {
+       "id": "intro",
+       "title": "intro.md",
+       "note": "A longer entry: a row can hold anything, and the line beside it goes on through every row below the gap."
+      },
+      {
+       "id": "api",
+       "title": "api.md"
+      }
+     ]
+    },
+    {
+     "id": "license",
+     "title": "LICENSE"
+    }
+   ],
+   "not_collapsible_selected": "readme",
+   "disabled_items": [
+    {
+     "id": "mon-projet",
+     "title": "mon-projet",
+     "children": [
+      {
+       "id": "package",
+       "title": "package.json"
+      },
+      {
+       "id": "public",
+       "title": "public",
+       "children": [
+        {
+         "id": "favicon",
+         "title": "favicon.ico"
+        }
+       ]
+      },
+      {
+       "id": "readme",
+       "title": "README.md"
+      },
+      {
+       "id": "src",
+       "title": "src",
+       "children": [
+        {
+         "id": "index",
+         "title": "index.js"
+        },
+        {
+         "id": "styles",
+         "title": "styles.css"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "docs",
+     "title": "docs",
+     "children": [
+      {
+       "id": "intro",
+       "title": "intro.md",
+       "note": "A longer entry: a row can hold anything, and the line beside it goes on through every row below the gap."
+      },
+      {
+       "id": "api",
+       "title": "api.md"
+      }
+     ]
+    },
+    {
+     "id": "license",
+     "title": "LICENSE"
+    }
+   ],
+   "disabled_selected": "readme"
+  },
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "scale": "2xl"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "lines · indent"
+       }
+      },
+      {
+       "type": "ListTree",
+       "on": {
+        "itemsChange": [
+         {
+          "set": {
+           "state": "lines_indent_items",
+           "to": {
+            "bind": "event"
+           }
+          }
+         }
+        ],
+        "select": [
+         {
+          "set": {
+           "state": "lines_indent_selected",
+           "to": {
+            "bind": "event.id"
+           }
+          }
+         }
+        ]
+       },
+       "props": {
+        "items": {
+         "bind": "state.lines_indent_items"
+        },
+        "selectedId": {
+         "bind": "state.lines_indent_selected"
+        },
+        "lines": true,
+        "renderNode": {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "scale": "sm",
+          "align": "center"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "children": {
+             "bind": "ctx.handle"
+            }
+           }
+          },
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "children": {
+               "bind": "item.title"
+              }
+             }
+            },
+            {
+             "type": "Text",
+             "when": {
+              "exists": [
+               {
+                "bind": "item.note"
+               }
+              ]
+             },
+             "props": {
+              "as": "small",
+              "children": {
+               "bind": "item.note"
+              }
+             }
+            }
+           ]
+          }
+         ]
+        },
+        "data-testid": "list-tree-lines-indent-menu"
+       }
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "lines · anchor top · tall rows"
+       }
+      },
+      {
+       "type": "ListTree",
+       "on": {
+        "itemsChange": [
+         {
+          "set": {
+           "state": "lines_anchor_top_items",
+           "to": {
+            "bind": "event"
+           }
+          }
+         }
+        ],
+        "select": [
+         {
+          "set": {
+           "state": "lines_anchor_top_selected",
+           "to": {
+            "bind": "event.id"
+           }
+          }
+         }
+        ]
+       },
+       "props": {
+        "items": {
+         "bind": "state.lines_anchor_top_items"
+        },
+        "selectedId": {
+         "bind": "state.lines_anchor_top_selected"
+        },
+        "lines": true,
+        "anchor": "top",
+        "renderNode": {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "scale": "sm",
+          "align": "center"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "children": {
+             "bind": "ctx.handle"
+            }
+           }
+          },
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "children": {
+               "bind": "item.title"
+              }
+             }
+            },
+            {
+             "type": "Text",
+             "when": {
+              "exists": [
+               {
+                "bind": "item.note"
+               }
+              ]
+             },
+             "props": {
+              "as": "small",
+              "children": {
+               "bind": "item.note"
+              }
+             }
+            }
+           ]
+          }
+         ]
+        },
+        "data-testid": "list-tree-lines-anchor-top-menu"
+       }
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "indent only"
+       }
+      },
+      {
+       "type": "ListTree",
+       "on": {
+        "itemsChange": [
+         {
+          "set": {
+           "state": "indent_only_items",
+           "to": {
+            "bind": "event"
+           }
+          }
+         }
+        ],
+        "select": [
+         {
+          "set": {
+           "state": "indent_only_selected",
+           "to": {
+            "bind": "event.id"
+           }
+          }
+         }
+        ]
+       },
+       "props": {
+        "items": {
+         "bind": "state.indent_only_items"
+        },
+        "selectedId": {
+         "bind": "state.indent_only_selected"
+        },
+        "renderNode": {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "scale": "sm",
+          "align": "center"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "children": {
+             "bind": "ctx.handle"
+            }
+           }
+          },
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "children": {
+               "bind": "item.title"
+              }
+             }
+            },
+            {
+             "type": "Text",
+             "when": {
+              "exists": [
+               {
+                "bind": "item.note"
+               }
+              ]
+             },
+             "props": {
+              "as": "small",
+              "children": {
+               "bind": "item.note"
+              }
+             }
+            }
+           ]
+          }
+         ]
+        },
+        "data-testid": "list-tree-indent-only-menu"
+       }
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "no indent (the caller turns depth into heading levels)"
+       }
+      },
+      {
+       "type": "ListTree",
+       "on": {
+        "itemsChange": [
+         {
+          "set": {
+           "state": "no_indent_items",
+           "to": {
+            "bind": "event"
+           }
+          }
+         }
+        ],
+        "select": [
+         {
+          "set": {
+           "state": "no_indent_selected",
+           "to": {
+            "bind": "event.id"
+           }
+          }
+         }
+        ]
+       },
+       "props": {
+        "items": {
+         "bind": "state.no_indent_items"
+        },
+        "selectedId": {
+         "bind": "state.no_indent_selected"
+        },
+        "indent": false,
+        "renderNode": {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "scale": "sm",
+          "align": "center"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "children": {
+             "bind": "ctx.handle"
+            }
+           }
+          },
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "children": {
+               "bind": "item.title"
+              }
+             }
+            },
+            {
+             "type": "Text",
+             "when": {
+              "exists": [
+               {
+                "bind": "item.note"
+               }
+              ]
+             },
+             "props": {
+              "as": "small",
+              "children": {
+               "bind": "item.note"
+              }
+             }
+            }
+           ]
+          }
+         ]
+        },
+        "data-testid": "list-tree-no-indent-menu"
+       }
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "reorderable · lines"
+       }
+      },
+      {
+       "type": "ListTree",
+       "on": {
+        "itemsChange": [
+         {
+          "set": {
+           "state": "reorderable_lines_items",
+           "to": {
+            "bind": "event"
+           }
+          }
+         }
+        ],
+        "select": [
+         {
+          "set": {
+           "state": "reorderable_lines_selected",
+           "to": {
+            "bind": "event.id"
+           }
+          }
+         }
+        ]
+       },
+       "props": {
+        "items": {
+         "bind": "state.reorderable_lines_items"
+        },
+        "selectedId": {
+         "bind": "state.reorderable_lines_selected"
+        },
+        "lines": true,
+        "reorderable": true,
+        "renderNode": {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "scale": "sm",
+          "align": "center"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "children": {
+             "bind": "ctx.handle"
+            }
+           }
+          },
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "children": {
+               "bind": "item.title"
+              }
+             }
+            },
+            {
+             "type": "Text",
+             "when": {
+              "exists": [
+               {
+                "bind": "item.note"
+               }
+              ]
+             },
+             "props": {
+              "as": "small",
+              "children": {
+               "bind": "item.note"
+              }
+             }
+            }
+           ]
+          }
+         ]
+        },
+        "data-testid": "list-tree-reorderable-lines-menu"
+       }
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "expand single (every level): opening a row closes its open siblings"
+       }
+      },
+      {
+       "type": "ListTree",
+       "on": {
+        "itemsChange": [
+         {
+          "set": {
+           "state": "expand_single_items",
+           "to": {
+            "bind": "event"
+           }
+          }
+         }
+        ],
+        "select": [
+         {
+          "set": {
+           "state": "expand_single_selected",
+           "to": {
+            "bind": "event.id"
+           }
+          }
+         }
+        ]
+       },
+       "props": {
+        "items": {
+         "bind": "state.expand_single_items"
+        },
+        "selectedId": {
+         "bind": "state.expand_single_selected"
+        },
+        "lines": true,
+        "expand": "single",
+        "renderNode": {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "scale": "sm",
+          "align": "center"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "children": {
+             "bind": "ctx.handle"
+            }
+           }
+          },
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "children": {
+               "bind": "item.title"
+              }
+             }
+            },
+            {
+             "type": "Text",
+             "when": {
+              "exists": [
+               {
+                "bind": "item.note"
+               }
+              ]
+             },
+             "props": {
+              "as": "small",
+              "children": {
+               "bind": "item.note"
+              }
+             }
+            }
+           ]
+          }
+         ]
+        },
+        "data-testid": "list-tree-expand-single-menu"
+       }
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "expand per level: level 1 single, level 2 multiple"
+       }
+      },
+      {
+       "type": "ListTree",
+       "on": {
+        "itemsChange": [
+         {
+          "set": {
+           "state": "expand_per_level_items",
+           "to": {
+            "bind": "event"
+           }
+          }
+         }
+        ],
+        "select": [
+         {
+          "set": {
+           "state": "expand_per_level_selected",
+           "to": {
+            "bind": "event.id"
+           }
+          }
+         }
+        ]
+       },
+       "props": {
+        "items": {
+         "bind": "state.expand_per_level_items"
+        },
+        "selectedId": {
+         "bind": "state.expand_per_level_selected"
+        },
+        "lines": true,
+        "expand": [
+         "single",
+         "multiple"
+        ],
+        "renderNode": {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "scale": "sm",
+          "align": "center"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "children": {
+             "bind": "ctx.handle"
+            }
+           }
+          },
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "children": {
+               "bind": "item.title"
+              }
+             }
+            },
+            {
+             "type": "Text",
+             "when": {
+              "exists": [
+               {
+                "bind": "item.note"
+               }
+              ]
+             },
+             "props": {
+              "as": "small",
+              "children": {
+               "bind": "item.note"
+              }
+             }
+            }
+           ]
+          }
+         ]
+        },
+        "data-testid": "list-tree-expand-per-level-menu"
+       }
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "toggleOnClick (every level)"
+       }
+      },
+      {
+       "type": "ListTree",
+       "on": {
+        "itemsChange": [
+         {
+          "set": {
+           "state": "toggle_on_click_items",
+           "to": {
+            "bind": "event"
+           }
+          }
+         }
+        ],
+        "select": [
+         {
+          "set": {
+           "state": "toggle_on_click_selected",
+           "to": {
+            "bind": "event.id"
+           }
+          }
+         }
+        ]
+       },
+       "props": {
+        "items": {
+         "bind": "state.toggle_on_click_items"
+        },
+        "selectedId": {
+         "bind": "state.toggle_on_click_selected"
+        },
+        "lines": true,
+        "toggleOnClick": true,
+        "renderNode": {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "scale": "sm",
+          "align": "center"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "children": {
+             "bind": "ctx.handle"
+            }
+           }
+          },
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "children": {
+               "bind": "item.title"
+              }
+             }
+            },
+            {
+             "type": "Text",
+             "when": {
+              "exists": [
+               {
+                "bind": "item.note"
+               }
+              ]
+             },
+             "props": {
+              "as": "small",
+              "children": {
+               "bind": "item.note"
+              }
+             }
+            }
+           ]
+          }
+         ]
+        },
+        "data-testid": "list-tree-toggle-on-click-menu"
+       }
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "toggleOnClick: level 1 only · expand single"
+       }
+      },
+      {
+       "type": "ListTree",
+       "on": {
+        "itemsChange": [
+         {
+          "set": {
+           "state": "toggle_level_1_items",
+           "to": {
+            "bind": "event"
+           }
+          }
+         }
+        ],
+        "select": [
+         {
+          "set": {
+           "state": "toggle_level_1_selected",
+           "to": {
+            "bind": "event.id"
+           }
+          }
+         }
+        ]
+       },
+       "props": {
+        "items": {
+         "bind": "state.toggle_level_1_items"
+        },
+        "selectedId": {
+         "bind": "state.toggle_level_1_selected"
+        },
+        "lines": true,
+        "toggleOnClick": [
+         true,
+         false
+        ],
+        "expand": "single",
+        "renderNode": {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "scale": "sm",
+          "align": "center"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "children": {
+             "bind": "ctx.handle"
+            }
+           }
+          },
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "children": {
+               "bind": "item.title"
+              }
+             }
+            },
+            {
+             "type": "Text",
+             "when": {
+              "exists": [
+               {
+                "bind": "item.note"
+               }
+              ]
+             },
+             "props": {
+              "as": "small",
+              "children": {
+               "bind": "item.note"
+              }
+             }
+            }
+           ]
+          }
+         ]
+        },
+        "data-testid": "list-tree-toggle-level-1-menu"
+       }
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "not collapsible"
+       }
+      },
+      {
+       "type": "ListTree",
+       "on": {
+        "itemsChange": [
+         {
+          "set": {
+           "state": "not_collapsible_items",
+           "to": {
+            "bind": "event"
+           }
+          }
+         }
+        ],
+        "select": [
+         {
+          "set": {
+           "state": "not_collapsible_selected",
+           "to": {
+            "bind": "event.id"
+           }
+          }
+         }
+        ]
+       },
+       "props": {
+        "items": {
+         "bind": "state.not_collapsible_items"
+        },
+        "selectedId": {
+         "bind": "state.not_collapsible_selected"
+        },
+        "lines": true,
+        "collapsible": false,
+        "renderNode": {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "scale": "sm",
+          "align": "center"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "children": {
+             "bind": "ctx.handle"
+            }
+           }
+          },
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "children": {
+               "bind": "item.title"
+              }
+             }
+            },
+            {
+             "type": "Text",
+             "when": {
+              "exists": [
+               {
+                "bind": "item.note"
+               }
+              ]
+             },
+             "props": {
+              "as": "small",
+              "children": {
+               "bind": "item.note"
+              }
+             }
+            }
+           ]
+          }
+         ]
+        },
+        "data-testid": "list-tree-not-collapsible-menu"
+       }
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "disabled"
+       }
+      },
+      {
+       "type": "ListTree",
+       "on": {
+        "itemsChange": [
+         {
+          "set": {
+           "state": "disabled_items",
+           "to": {
+            "bind": "event"
+           }
+          }
+         }
+        ],
+        "select": [
+         {
+          "set": {
+           "state": "disabled_selected",
+           "to": {
+            "bind": "event.id"
+           }
+          }
+         }
+        ]
+       },
+       "props": {
+        "items": {
+         "bind": "state.disabled_items"
+        },
+        "selectedId": {
+         "bind": "state.disabled_selected"
+        },
+        "lines": true,
+        "reorderable": true,
+        "disabled": true,
+        "renderNode": {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "scale": "sm",
+          "align": "center"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "children": {
+             "bind": "ctx.handle"
+            }
+           }
+          },
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "children": {
+               "bind": "item.title"
+              }
+             }
+            },
+            {
+             "type": "Text",
+             "when": {
+              "exists": [
+               {
+                "bind": "item.note"
+               }
+              ]
+             },
+             "props": {
+              "as": "small",
+              "children": {
+               "bind": "item.note"
+              }
+             }
+            }
+           ]
+          }
+         ]
+        },
+        "data-testid": "list-tree-disabled-menu"
+       }
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

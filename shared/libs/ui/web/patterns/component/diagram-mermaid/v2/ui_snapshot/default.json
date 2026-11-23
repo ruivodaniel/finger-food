@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-diagram-mermaid-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-diagram-mermaid",
+ "name": "default",
+ "title": "Diagram mermaid",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

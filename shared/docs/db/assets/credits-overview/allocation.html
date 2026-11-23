@@ -1,0 +1,101 @@
+<figure style="margin:0">
+<svg viewBox="0 0 980 912" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;font-family:Inter,system-ui,sans-serif" role="img" aria-label="Activity diagram: an owner sets a member allocation and a member spends under it">
+  <defs>
+    <marker id="ad-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#5c6f80"/></marker>
+    <marker id="ad-arrow-ev" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#635bff"/></marker>
+  </defs>
+  <style>
+    .ad-lane  { fill:#faf8f3; stroke:#e6dfd2; stroke-width:1; }
+    .ad-lane2 { fill:#fffdf8; stroke:#e6dfd2; stroke-width:1; }
+    .ad-sep   { stroke:#e6dfd2; stroke-width:1; }
+    .ad-head  { font-size:11.5px; fill:#8c8478; letter-spacing:.08em; text-anchor:middle; }
+    .ad-act   { fill:#ffffff; stroke:#8c8478; stroke-width:1.1; }
+    .ad-stripe{ fill:#f1f0ff; stroke:#635bff; stroke-width:1.1; }
+    .ad-dec   { fill:#f3ead6; stroke:#a9752a; stroke-width:1.1; }
+    .ad-stop  { fill:#fbecea; stroke:#c0504d; stroke-width:1.1; }
+    .ad-t     { font-size:13px; fill:#1b1813; text-anchor:middle; }
+    .ad-m     { font-size:11.5px; fill:#8c8478; text-anchor:middle; }
+    .ad-flow  { fill:none; stroke:#5c6f80; stroke-width:1.4; marker-end:url(#ad-arrow); }
+    .ad-ev    { stroke:#635bff; stroke-dasharray:5 4; marker-end:url(#ad-arrow-ev); }
+    .ad-lbl   { font-size:11px; fill:#5c6f80; font-style:italic; }
+    .ad-note  { font-size:12px; fill:#5c6f80; }
+    .ad-dot   { fill:#1b1813; }
+    .ad-ring  { fill:none; stroke:#1b1813; stroke-width:1.5; }
+  </style>
+
+  <rect x="10" y="10" width="320" height="842" class="ad-lane"/>
+  <rect x="330" y="10" width="320" height="842" class="ad-lane2"/>
+  <rect x="650" y="10" width="320" height="842" class="ad-lane"/>
+  <text x="170" y="34" class="ad-head">OWNER</text>
+  <text x="490" y="34" class="ad-head">CREDITS SLICE</text>
+  <text x="810" y="34" class="ad-head">MEMBER</text>
+  <line x1="10" y1="50" x2="970" y2="50" class="ad-sep"/>
+
+  <circle cx="170" cy="92" r="9" class="ad-dot"/>
+  <path d="M170 101 V142" class="ad-flow"/>
+
+  <rect x="45" y="142" width="250" height="44" rx="10" class="ad-act"/>
+  <text x="170" y="160" class="ad-t">Set a rule</text>
+  <text x="170" y="177" class="ad-m">an amount per day, week or month</text>
+  <path d="M170 186 V214" class="ad-flow"/>
+
+  <rect x="45" y="214" width="250" height="44" rx="10" class="ad-act"/>
+  <text x="170" y="232" class="ad-t">Choose how it works</text>
+  <text x="170" y="249" class="ad-m">top up or replace &#183; services &#183; who</text>
+  <path d="M170 258 V272 H490 V286" class="ad-flow"/>
+
+  <polygon points="365,308 490,286 615,308 490,330" class="ad-dec"/>
+  <text x="490" y="312" class="ad-t">Org type may create?</text>
+  <path d="M365 308 H295" class="ad-flow"/>
+  <text x="322" y="301" class="ad-lbl">no</text>
+
+  <rect x="45" y="286" width="250" height="44" rx="10" class="ad-act"/>
+  <text x="170" y="304" class="ad-t">Rule spends bought credits</text>
+  <text x="170" y="321" class="ad-m">what the organization holds</text>
+
+  <path d="M490 330 V358" class="ad-flow"/>
+  <text x="498" y="349" class="ad-lbl">yes</text>
+  <rect x="365" y="358" width="250" height="44" rx="10" class="ad-act"/>
+  <text x="490" y="376" class="ad-t">Rule creates its credits</text>
+  <text x="490" y="393" class="ad-m">one lot per period, issued once</text>
+
+  <path d="M170 330 V416 H810 V430" class="ad-flow"/>
+  <path d="M490 402 V416 H810 V430" class="ad-flow"/>
+
+  <rect x="685" y="430" width="250" height="44" rx="10" class="ad-act"/>
+  <text x="810" y="448" class="ad-t">Acts in the app</text>
+  <text x="810" y="465" class="ad-m">e.g. creates a meteor</text>
+  <path d="M810 474 V488 H490 V502" class="ad-flow"/>
+
+  <rect x="365" y="502" width="250" height="44" rx="10" class="ad-act"/>
+  <text x="490" y="520" class="ad-t">Bring the count up to date</text>
+  <text x="490" y="537" class="ad-m">issue what is due, once</text>
+  <path d="M490 546 V574" class="ad-flow"/>
+
+  <polygon points="365,596 490,574 615,596 490,618" class="ad-dec"/>
+  <text x="490" y="600" class="ad-t">Amount left?</text>
+  <path d="M615 596 H685" class="ad-flow"/>
+  <text x="642" y="589" class="ad-lbl">no</text>
+
+  <rect x="685" y="574" width="250" height="44" rx="10" class="ad-stop"/>
+  <text x="810" y="592" class="ad-t">Stopped: 402 allocation</text>
+  <text x="810" y="609" class="ad-m">whatever else the org holds</text>
+  <path d="M810 618 V657" class="ad-flow"/>
+  <circle cx="810" cy="668" r="11" class="ad-ring"/><circle cx="810" cy="668" r="6" class="ad-dot"/>
+
+  <path d="M490 618 V646" class="ad-flow"/>
+  <text x="498" y="637" class="ad-lbl">yes</text>
+  <rect x="365" y="646" width="250" height="44" rx="10" class="ad-act"/>
+  <text x="490" y="664" class="ad-t">Charge as usual</text>
+  <text x="490" y="681" class="ad-m">as in Spend credits</text>
+  <path d="M490 690 V704 H810 V718" class="ad-flow"/>
+
+  <rect x="685" y="718" width="250" height="44" rx="10" class="ad-act"/>
+  <text x="810" y="745" class="ad-t">Action done</text>
+  <path d="M810 762 V801" class="ad-flow"/>
+  <circle cx="810" cy="812" r="11" class="ad-ring"/><circle cx="810" cy="812" r="6" class="ad-dot"/>
+
+  <text x="10" y="878" class="ad-note">Replace: the amount minus what was spent this period. Top up: the amount for every period since the rule began, minus what was spent since.</text>
+  <text x="10" y="896" class="ad-note">A rule with no member covers every member without one of their own. Personal credits have no rules.</text>
+</svg>
+</figure>

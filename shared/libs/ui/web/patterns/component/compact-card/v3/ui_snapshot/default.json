@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-compact-card-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-compact-card",
+ "name": "default",
+ "title": "Compact card",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

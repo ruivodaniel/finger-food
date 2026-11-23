@@ -6,12 +6,12 @@
  * allowUpdate verdicts plus resolved read scopes (AC5/AC6/AC9).
  */
 
-import type { Ac, Private, Public } from "@libs/gated-scoped-ac";
+import type { Ac, Private, Public, ScopedAcRequestContext } from "@libs/gated-scoped-ac";
+import type { UserOrgMgmtHooks } from "../../shared/types/hooks";
 import type {
   AuthAndRegistrationConfig,
   OrgLifecycleEntry,
 } from "../../shared/auth-config/types";
-import type { ScopedAcRequestContext } from "../shared/scoped-ac";
 import type {
   OrganizationDirectoryListView,
   OrganizationView,
@@ -35,7 +35,7 @@ import type { MembershipService } from "./membership.service";
 export interface OrganizationServiceDeps {
   orgRepo: OrganizationRepository;
   membershipService: Pick<MembershipService, "addMember">;
-  consentRecordService: Pick<ConsentRecordService, "recordConsent">;
+  consentRecordService: Pick<ConsentRecordService, "recordConsentScoped">;
   /** The config-bound engine (AC37: injected, never constructed here). Mints the
    * read/update Scopes the repo executes and the create/update verdicts. */
   engine: Pick<
@@ -47,6 +47,8 @@ export interface OrganizationServiceDeps {
   authConfig: AuthAndRegistrationConfig;
   errors: ModuleErrors;
   logger: ModuleLogger;
+  /** Guarded at mount: a consumer's failure costs a log line, never the creator's response. */
+  hooks?: Pick<UserOrgMgmtHooks, "onOrganizationCreated">;
 }
 
 export class OrganizationService {
@@ -64,13 +66,15 @@ export class OrganizationService {
     meta?: { ipAddress?: string; userAgent?: string },
   ): Promise<OrganizationView> {
     const userId = ac.bag.session.user.id;
-    // Create gates on the parent-context verdict (AC9, AC33): create rules carry
-    // no target, so this only answers "may this caller found an org at all".
-    const verdict = this.deps.engine.allowCreate(
-      ac.permissions,
-      "organization",
-      ac.bag,
-    );
+    // Create gates on a verdict (AC9, AC33): create rules carry no target. Each
+    // org type has its own create permission, whose payload reads the type about
+    // to be written, so this answers "may this caller found an org of this
+    // type". This is the cheap early refusal; the gate takes the verdict again
+    // on the row it inserts.
+    const verdict = this.deps.engine.allowCreate(ac.permissions, "organization", {
+      ...ac.bag,
+      requestBody: { type: input.type },
+    });
     if (!verdict.allow) {
       throw this.deps.errors.forbidden(
         verdict.reason ?? "cannot create organization",
@@ -99,7 +103,7 @@ export class OrganizationService {
     const ownership = orgTypeConfig.creation.ownership;
     const creatorIsOwner = ownership?.mode.includes("creator") ?? false;
     if (ownership?.legalConsent?.length && creatorIsOwner) {
-      await this.deps.consentRecordService.recordConsent({
+      await this.deps.consentRecordService.recordConsentScoped(ac, visibility, {
         userId,
         items: ownership.legalConsent,
         decisions: input.consents ?? [],
@@ -109,17 +113,31 @@ export class OrganizationService {
       });
     }
 
-    const org = await this.deps.orgRepo.create(visibility, {
-      type: input.type,
-      name: input.name,
-      logo: input.logo,
-      metadata: input.metadata,
-    });
+    const org = await this.deps.orgRepo.create(
+      visibility,
+      {
+        type: input.type,
+        name: input.name,
+        logo: input.logo,
+        metadata: input.metadata,
+      },
+      ac.permissions,
+      ac.gateDb,
+    );
+    // null ⇒ the gate refused the insert.
+    if (!org) {
+      throw this.deps.errors.forbidden("cannot create organization");
+    }
     if (ownership && creatorIsOwner) {
       await this.deps.membershipService.addMember(visibility, org.id, userId, [
         ownership.membershipOwnerRole,
       ]);
     }
+    await this.deps.hooks?.onOrganizationCreated?.({
+      organizationId: org.id,
+      orgType: org.type,
+      creatorUserId: userId,
+    });
     return this.toView(org);
   }
 
@@ -227,13 +245,23 @@ export class OrganizationService {
     );
   }
 
-  /** The org types a user may found — user-actor lifecycle entries. Which types
-   * are creatable is a business/config concern (UOM17); the permission to create
-   * at all is the account baseline, gated per caller in `create`. */
-  creatableTypes(visibility: Private): Array<{ id: string; label: string }> {
+  /** The org types this caller may found: user-actor lifecycle entries (UOM17)
+   * whose create permission admits the caller for that type — the same verdict
+   * `create` takes. */
+  creatableTypes(
+    ac: ScopedAcRequestContext,
+    visibility: Private,
+  ): Array<{ id: string; label: string }> {
     void visibility; // no repo/service call to thread into — config only
     return this.deps.orgConfig
       .filter((entry) => entry.creation.actor === "user")
+      .filter(
+        (entry) =>
+          this.deps.engine.allowCreate(ac.permissions, "organization", {
+            ...ac.bag,
+            requestBody: { type: entry.orgType },
+          }).allow,
+      )
       .map((entry) => ({ id: entry.orgType, label: entry.label }));
   }
 
@@ -308,6 +336,41 @@ export class OrganizationService {
     const org = await this.getOrg(visibility, orgId);
     if (!org) throw this.deps.errors.notFound("organization not found");
     return org;
+  }
+
+  /** Names of the live orgs among `ids`, keyed by id — what another slice shows
+   * for an org it holds only the id of (credits, payment). A deleted or unknown
+   * id is left out. AC42: Public — the Marketplace names its vendors. */
+  async namesByIds(
+    visibility: Public,
+    ids: string[],
+  ): Promise<Map<string, string>> {
+    const rows = await this.deps.orgRepo.findByIds(visibility, ids);
+    return new Map(rows.map((org) => [org.id, org.name]));
+  }
+
+  /** Live orgs whose name contains `search`, name-ordered — only the orgs the
+   * caller's read rules admit. AC42: Private. */
+  async searchByName(
+    ac: ScopedAcRequestContext,
+    visibility: Private,
+    search: string,
+    limit: number,
+  ): Promise<Array<{ id: string; name: string }>> {
+    // Read pass-through (AC5): the engine resolves the read Scope, the repo
+    // executes it.
+    const scope = this.deps.engine.resolveRead(
+      ac.permissions,
+      "organization",
+      ac.bag,
+    );
+    return this.deps.orgRepo.searchByName(
+      visibility,
+      search,
+      limit,
+      scope,
+      ac.gateDb,
+    );
   }
 
   /** The org type's lifecycle rules — an unknown type is a 400. */

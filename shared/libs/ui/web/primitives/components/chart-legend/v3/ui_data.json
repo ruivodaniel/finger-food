@@ -1,0 +1,367 @@
+{
+ "id": "ui-data-primitive-chart-legend",
+ "version": 1,
+ "uiNodeId": "ui-node-primitive-chart-legend",
+ "kind": "component",
+ "name": "primitive-chart-legend",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "primitive-chart-legend",
+  "version": 1,
+  "surface": "web",
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "align": "center",
+    "scale": "2xl"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "row (default) above the chart \u2014 click toggles a series, hover highlights it"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "children": [
+          {
+           "type": "ChartLegend",
+           "props": {
+            "for": "lg1"
+           }
+          },
+          {
+           "type": "Chart",
+           "props": {
+            "id": "lg1",
+            "kind": "line",
+            "categories": [
+             "Jan",
+             "Feb",
+             "Mar",
+             "Apr",
+             "May",
+             "Jun"
+            ],
+            "series": [
+             {
+              "obj": {
+               "key": "a",
+               "name": "Revenue",
+               "data": [
+                120,
+                132,
+                101,
+                134,
+                90,
+                230
+               ]
+              }
+             },
+             {
+              "obj": {
+               "key": "b",
+               "name": "Cost",
+               "data": [
+                80,
+                92,
+                71,
+                94,
+                60,
+                120
+               ]
+              }
+             },
+             {
+              "obj": {
+               "key": "c",
+               "name": "Margin",
+               "status": "success",
+               "data": [
+                40,
+                40,
+                30,
+                40,
+                30,
+                110
+               ]
+              }
+             }
+            ],
+            "height": 180
+           }
+          }
+         ],
+         "props": {
+          "dir": "col",
+          "style": {
+           "obj": {
+            "width": 560
+           }
+          },
+          "scale": "sm"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "column beside the chart, with the last value"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "children": [
+          {
+           "type": "Chart",
+           "props": {
+            "id": "lg2",
+            "kind": "column",
+            "categories": [
+             "Jan",
+             "Feb",
+             "Mar",
+             "Apr",
+             "May",
+             "Jun"
+            ],
+            "series": [
+             {
+              "obj": {
+               "key": "a",
+               "name": "Revenue",
+               "data": [
+                120,
+                132,
+                101,
+                134,
+                90,
+                230
+               ]
+              }
+             },
+             {
+              "obj": {
+               "key": "b",
+               "name": "Cost",
+               "data": [
+                80,
+                92,
+                71,
+                94,
+                60,
+                120
+               ]
+              }
+             },
+             {
+              "obj": {
+               "key": "c",
+               "name": "Margin",
+               "status": "success",
+               "data": [
+                40,
+                40,
+                30,
+                40,
+                30,
+                110
+               ]
+              }
+             }
+            ],
+            "height": 180,
+            "style": {
+             "obj": {
+              "flex": 1
+             }
+            }
+           }
+          },
+          {
+           "type": "ChartLegend",
+           "props": {
+            "for": "lg2",
+            "layout": "column",
+            "values": "last"
+           }
+          }
+         ],
+         "props": {
+          "dir": "row",
+          "align": "start",
+          "style": {
+           "obj": {
+            "width": 560
+           }
+          },
+          "scale": "lg"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "not interactive, small"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "children": [
+          {
+           "type": "Chart",
+           "props": {
+            "id": "lg3",
+            "kind": "area",
+            "categories": [
+             "Jan",
+             "Feb",
+             "Mar",
+             "Apr",
+             "May",
+             "Jun"
+            ],
+            "series": [
+             {
+              "obj": {
+               "key": "a",
+               "name": "Revenue",
+               "data": [
+                120,
+                132,
+                101,
+                134,
+                90,
+                230
+               ]
+              }
+             },
+             {
+              "obj": {
+               "key": "b",
+               "name": "Cost",
+               "data": [
+                80,
+                92,
+                71,
+                94,
+                60,
+                120
+               ]
+              }
+             },
+             {
+              "obj": {
+               "key": "c",
+               "name": "Margin",
+               "status": "success",
+               "data": [
+                40,
+                40,
+                30,
+                40,
+                30,
+                110
+               ]
+              }
+             }
+            ],
+            "height": 160
+           }
+          },
+          {
+           "type": "ChartLegend",
+           "props": {
+            "for": "lg3",
+            "interactive": false,
+            "scale": "sm"
+           }
+          }
+         ],
+         "props": {
+          "dir": "col",
+          "style": {
+           "obj": {
+            "width": 560
+           }
+          },
+          "scale": "sm"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

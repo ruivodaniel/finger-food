@@ -1,0 +1,107 @@
+{
+ "id": "ui-data-pattern-component-status-cards-footer-line-warning",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-status-cards-footer-line-warning",
+ "kind": "component",
+ "name": "footer-line-warning",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "footer-line-warning",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Card",
+   "props": {
+    "className": "flex-1 min-w-56"
+   },
+   "children": [
+    {
+     "type": "Content",
+     "props": {},
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "scale": "xs"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--heading4",
+          "children": "Storage almost full"
+         }
+        },
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body-small",
+          "children": "92% of 50 GB used — uploads pause at 100%."
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Footer",
+     "props": {
+      "status": "warning",
+      "className": "w-full"
+     },
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "between",
+        "className": "w-full",
+        "scale": "sm"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body-small"
+         },
+         "children": [
+          {
+           "type": "Icon",
+           "props": {
+            "name": "warning",
+            "size": "xs"
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "children": " Warning · 1 h ago"
+           }
+          }
+         ]
+        },
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "secondary",
+          "status": "warning",
+          "scale": "sm",
+          "children": "Manage storage"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

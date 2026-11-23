@@ -1,0 +1,622 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "table-card",
+ "version": 1,
+ "surface": "web",
+ "measure": "lg",
+ "root": {
+  "type": "Card",
+  "props": {
+   "className": "w-full max-w-3xl"
+  },
+  "children": [
+   {
+    "type": "Header",
+    "children": [
+     {
+      "type": "Stack",
+      "props": {
+       "dir": "row",
+       "gap": 12,
+       "justify": "between",
+       "align": "center",
+       "className": "w-full"
+      },
+      "children": [
+       {
+        "type": "Text",
+        "props": {
+         "as": "h3",
+         "element": "type--heading2",
+         "children": "Properties"
+        }
+       },
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "gap": 12,
+         "align": "center"
+        },
+        "children": [
+         {
+          "type": "Button",
+          "props": {
+           "emphasis": "secondary",
+           "scale": "sm",
+           "buttonType": "text-icon",
+           "endIcon": "chevronDown",
+           "children": "All lenders"
+          }
+         },
+         {
+          "type": "Button",
+          "props": {
+           "emphasis": "quiet",
+           "scale": "sm",
+           "children": "View all"
+          }
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Table",
+    "props": {
+     "className": "w-full"
+    },
+    "children": [
+     {
+      "type": "TableHeader",
+      "children": [
+       {
+        "type": "TableRow",
+        "children": [
+         {
+          "type": "TableHead",
+          "props": {
+           "children": "Property"
+          }
+         },
+         {
+          "type": "TableHead",
+          "props": {
+           "children": "Value"
+          }
+         },
+         {
+          "type": "TableHead",
+          "props": {
+           "children": "Rent / mo"
+          }
+         },
+         {
+          "type": "TableHead",
+          "props": {
+           "children": "Rate"
+          }
+         },
+         {
+          "type": "TableHead",
+          "props": {
+           "className": "text-right",
+           "children": "Status"
+          }
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "TableBody",
+      "children": [
+       {
+        "type": "TableRow",
+        "children": [
+         {
+          "type": "TableCell",
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "strong",
+             "element": "type--body",
+             "children": "14 Clifton Road"
+            }
+           }
+          ]
+         },
+         {
+          "type": "TableCell",
+          "props": {
+           "children": "£420,000"
+          }
+         },
+         {
+          "type": "TableCell",
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body",
+             "children": "£1,850",
+             "emphasis": "quiet"
+            }
+           }
+          ]
+         },
+         {
+          "type": "TableCell",
+          "props": {
+           "children": "4.19%"
+          }
+         },
+         {
+          "type": "TableCell",
+          "props": {
+           "className": "text-right"
+          },
+          "children": [
+           {
+            "type": "Badge",
+            "props": {
+             "status": "success",
+             "scale": "xs"
+            },
+            "children": [
+             {
+              "type": "Badge",
+              "props": {
+               "scale": "3xs",
+               "concept": "dot",
+               "status": "success"
+              }
+             },
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--body-extra-small",
+               "children": "Eligible"
+              }
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "TableRow",
+        "props": {
+         "state": "selected"
+        },
+        "children": [
+         {
+          "type": "TableCell",
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "strong",
+             "element": "type--body",
+             "children": "8 Harbour Lane"
+            }
+           }
+          ]
+         },
+         {
+          "type": "TableCell",
+          "props": {
+           "children": "£385,000"
+          }
+         },
+         {
+          "type": "TableCell",
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body",
+             "children": "£1,620",
+             "emphasis": "quiet"
+            }
+           }
+          ]
+         },
+         {
+          "type": "TableCell",
+          "props": {
+           "children": "4.32%"
+          }
+         },
+         {
+          "type": "TableCell",
+          "props": {
+           "className": "text-right"
+          },
+          "children": [
+           {
+            "type": "Badge",
+            "props": {
+             "status": "info",
+             "scale": "xs"
+            },
+            "children": [
+             {
+              "type": "Badge",
+              "props": {
+               "scale": "3xs",
+               "concept": "dot",
+               "status": "info"
+              }
+             },
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--body-extra-small",
+               "children": "In progress"
+              }
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "TableRow",
+        "children": [
+         {
+          "type": "TableCell",
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "strong",
+             "element": "type--body",
+             "children": "22 Mill Street"
+            }
+           }
+          ]
+         },
+         {
+          "type": "TableCell",
+          "props": {
+           "children": "£510,000"
+          }
+         },
+         {
+          "type": "TableCell",
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body",
+             "children": "£2,100",
+             "emphasis": "quiet"
+            }
+           }
+          ]
+         },
+         {
+          "type": "TableCell",
+          "props": {
+           "children": "4.45%"
+          }
+         },
+         {
+          "type": "TableCell",
+          "props": {
+           "className": "text-right"
+          },
+          "children": [
+           {
+            "type": "Badge",
+            "props": {
+             "status": "warning",
+             "scale": "xs"
+            },
+            "children": [
+             {
+              "type": "Badge",
+              "props": {
+               "scale": "3xs",
+               "concept": "dot",
+               "status": "warning"
+              }
+             },
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--body-extra-small",
+               "children": "Needs review"
+              }
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "TableRow",
+        "children": [
+         {
+          "type": "TableCell",
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "strong",
+             "element": "type--body",
+             "children": "3 Orchard Close"
+            }
+           }
+          ]
+         },
+         {
+          "type": "TableCell",
+          "props": {
+           "children": "£295,000"
+          }
+         },
+         {
+          "type": "TableCell",
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body",
+             "children": "£1,280",
+             "emphasis": "quiet"
+            }
+           }
+          ]
+         },
+         {
+          "type": "TableCell",
+          "props": {
+           "children": "4.60%"
+          }
+         },
+         {
+          "type": "TableCell",
+          "props": {
+           "className": "text-right"
+          },
+          "children": [
+           {
+            "type": "Badge",
+            "props": {
+             "status": "success",
+             "scale": "xs"
+            },
+            "children": [
+             {
+              "type": "Badge",
+              "props": {
+               "scale": "3xs",
+               "concept": "dot",
+               "status": "success"
+              }
+             },
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--body-extra-small",
+               "children": "Eligible"
+              }
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "TableRow",
+        "children": [
+         {
+          "type": "TableCell",
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "strong",
+             "element": "type--body",
+             "children": "41 Station Approach"
+            }
+           }
+          ]
+         },
+         {
+          "type": "TableCell",
+          "props": {
+           "children": "£230,000"
+          }
+         },
+         {
+          "type": "TableCell",
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body",
+             "children": "£600",
+             "emphasis": "quiet"
+            }
+           }
+          ]
+         },
+         {
+          "type": "TableCell",
+          "props": {
+           "children": "—"
+          }
+         },
+         {
+          "type": "TableCell",
+          "props": {
+           "className": "text-right"
+          },
+          "children": [
+           {
+            "type": "Badge",
+            "props": {
+             "status": "error",
+             "scale": "xs"
+            },
+            "children": [
+             {
+              "type": "Badge",
+              "props": {
+               "scale": "3xs",
+               "concept": "dot",
+               "status": "error"
+              }
+             },
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--body-extra-small",
+               "children": "Not eligible"
+              }
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Footer",
+    "children": [
+     {
+      "type": "Stack",
+      "props": {
+       "dir": "row",
+       "gap": 12,
+       "justify": "between",
+       "align": "center",
+       "className": "w-full"
+      },
+      "children": [
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--body-small",
+         "emphasis": "quiet"
+        },
+        "children": [
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--body-small",
+           "children": "Showing "
+          }
+         },
+         {
+          "type": "Text",
+          "props": {
+           "as": "strong",
+           "element": "type--body-small",
+           "children": "1–5"
+          }
+         },
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--body-small",
+           "children": " of "
+          }
+         },
+         {
+          "type": "Text",
+          "props": {
+           "as": "strong",
+           "element": "type--body-small",
+           "children": "5"
+          }
+         }
+        ]
+       },
+       {
+        "type": "Pagination",
+        "children": [
+         {
+          "type": "PaginationContent",
+          "children": [
+           {
+            "type": "PaginationItem",
+            "children": [
+             {
+              "type": "Button",
+              "props": {
+               "emphasis": "secondary",
+               "scale": "sm",
+               "buttonType": "icon",
+               "startIcon": "chevronLeft",
+               "aria-label": "Previous"
+              }
+             }
+            ]
+           },
+           {
+            "type": "PaginationItem",
+            "children": [
+             {
+              "type": "PaginationLink",
+              "props": {
+               "isActive": true,
+               "children": "1"
+              }
+             }
+            ]
+           },
+           {
+            "type": "PaginationItem",
+            "children": [
+             {
+              "type": "Button",
+              "props": {
+               "emphasis": "secondary",
+               "scale": "sm",
+               "buttonType": "icon",
+               "startIcon": "chevronRight",
+               "aria-label": "Next"
+              }
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

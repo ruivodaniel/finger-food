@@ -64,15 +64,15 @@ export const wireframeStrokeMobileTheme: MobileTheme = {
       combined: [
         { where: { state: "disabled" }, partialSurface: { interior: { opacity: 0.45 } } },
         // status on a surface: a pale fill of its colour, text in the colour
-        { where: { status: "error" }, partialSurface: { tint: "status-error", interior: { background: "status-error-light", foreground: "status-error" }, boundary: { border: { color: "status-error-light" } } } },
-        { where: { status: "success" }, partialSurface: { tint: "status-success", interior: { background: "status-success-light", foreground: "status-success" }, boundary: { border: { color: "status-success-light" } } } },
-        { where: { status: "warning" }, partialSurface: { tint: "status-warning", interior: { background: "status-warning-light", foreground: "status-warning-dark" }, boundary: { border: { color: "status-warning-light" } } } },
-        { where: { status: "info" }, partialSurface: { tint: "brand-1", interior: { background: "brand-1-light", foreground: "brand-1-dark" }, boundary: { border: { color: "brand-1-light" } } } },
+        { where: { status: "error" }, partialSurface: { tint: "status-error", interior: { background: "background", foreground: "status-error" }, boundary: { border: { color: "transparent" } } } },
+        { where: { status: "success" }, partialSurface: { tint: "status-success", interior: { background: "background", foreground: "status-success" }, boundary: { border: { color: "transparent" } } } },
+        { where: { status: "warning" }, partialSurface: { tint: "status-warning", interior: { background: "background", foreground: "status-warning" }, boundary: { border: { color: "transparent" } } } },
+        { where: { status: "info" }, partialSurface: { tint: "brand-1", interior: { background: "background", foreground: "brand-1" }, boundary: { border: { color: "transparent" } } } },
         { where: { emphasis: "hero" }, partialSurface: { interior: { background: "brand-2", foreground: "smart-bw" }, boundary: { border: { color: "brand-2" } } } },
         { where: { emphasis: "quiet" }, partialSurface: { interior: { background: "transparent", foreground: "gray-600" }, boundary: { border: { color: "transparent" } } } },
         // a surface that can be pressed (a card that opens something)
         { where: { state: "active" }, partialSurface: { interior: { background: "gray-100" } } },
-        { where: { state: "selected" }, partialSurface: { interior: { background: "brand-1-light" }, boundary: { border: { color: "brand-1" } } } },
+        { where: { state: "selected" }, partialSurface: { tint: "brand-1", interior: { background: "background" }, boundary: { border: { color: "brand-1" } } } },
       ],
     },
 
@@ -111,7 +111,7 @@ export const wireframeStrokeMobileTheme: MobileTheme = {
         boundary: { border: { bottom: { width: "thin", style: "solid", color: "gray-100" } } },
         combined: [
           { where: { state: "active" }, partialSurface: { interior: { background: "gray-100" } } },
-          { where: { state: "selected" }, partialSurface: { interior: { background: "brand-1-light" } } },
+          { where: { state: "selected" }, partialSurface: { tint: "brand-1", interior: { background: "background" } } },
         ],
       },
       separator: { height: "1px", surface: { interior: { background: "gray-100" } } },
@@ -143,8 +143,8 @@ export const wireframeStrokeMobileTheme: MobileTheme = {
           { where: { status: "error" }, partialSurface: { tint: "status-error", interior: { foreground: "status-error" }, boundary: { border: { color: "status-error" } } } },
           { where: { status: "destructive" }, partialSurface: { tint: "status-error", interior: { foreground: "status-error" }, boundary: { border: { color: "status-error" } } } },
           { where: { status: "success" }, partialSurface: { tint: "status-success", interior: { foreground: "status-success" }, boundary: { border: { color: "status-success" } } } },
-          { where: { status: "warning" }, partialSurface: { tint: "status-warning", interior: { foreground: "status-warning-dark" }, boundary: { border: { color: "status-warning" } } } },
-          { where: { status: "info" }, partialSurface: { tint: "brand-1", interior: { foreground: "brand-1-dark" }, boundary: { border: { color: "brand-1" } } } },
+          { where: { status: "warning" }, partialSurface: { tint: "status-warning", interior: { foreground: "status-warning" }, boundary: { border: { color: "status-warning" } } } },
+          { where: { status: "info" }, partialSurface: { tint: "brand-1", interior: { foreground: "brand-1" }, boundary: { border: { color: "brand-1" } } } },
           // filled + status: the fill takes the status colour
           { where: { emphasis: "primary", status: "error" }, partialSurface: { interior: { background: "tint", foreground: "smart-bw" }, boundary: { border: { color: "transparent" } } } },
           { where: { emphasis: "primary", status: "destructive" }, partialSurface: { interior: { background: "tint", foreground: "smart-bw" }, boundary: { border: { color: "transparent" } } } },
@@ -153,11 +153,11 @@ export const wireframeStrokeMobileTheme: MobileTheme = {
           { where: { emphasis: "primary", status: "info" }, partialSurface: { interior: { background: "tint", foreground: "smart-bw" }, boundary: { border: { color: "transparent" } } } },
           // states — pressed is `active`; there is no hover
           { where: { state: "active" }, partialSurface: { interior: { background: "gray-100" } } },
-          { where: { emphasis: "primary", state: "active" }, partialSurface: { interior: { background: "brand-1-dark", foreground: "smart-bw" } } },
+          { where: { emphasis: "primary", state: "active" }, partialSurface: { interior: { background: "brand-1", foreground: "smart-bw" } } },
           { where: { emphasis: "hero", state: "active" }, partialSurface: { interior: { background: "brand-1", foreground: "smart-bw" } } },
-          { where: { emphasis: "tertiary", state: "active" }, partialSurface: { interior: { background: "brand-1-light", foreground: "brand-1-dark" } } },
+          { where: { emphasis: "tertiary", state: "active" }, partialSurface: { tint: "brand-1", interior: { background: "background", foreground: "brand-1" } } },
           { where: { emphasis: "quiet", state: "active" }, partialSurface: { interior: { background: "gray-100", foreground: "foreground" } } },
-          { where: { state: "selected" }, partialSurface: { interior: { background: "brand-1-light", foreground: "brand-1-dark" }, boundary: { border: { color: "brand-1" } } } },
+          { where: { state: "selected" }, partialSurface: { tint: "brand-1", interior: { background: "background", foreground: "brand-1" }, boundary: { border: { color: "brand-1" } } } },
           { where: { state: "focus" }, partialSurface: { boundary: { border: { color: "brand-1" } } } },
           { where: { state: "disabled" }, partialSurface: { interior: { opacity: 0.45 } } },
           { where: { state: "loading" }, partialSurface: { interior: { opacity: 0.7 } } },
@@ -188,7 +188,7 @@ export const wireframeStrokeMobileTheme: MobileTheme = {
         combined: [
           { where: { status: "error" }, partialSurface: { interior: { background: "transparent", foreground: "status-error" }, boundary: { border: { color: "transparent" } } } },
           { where: { status: "success" }, partialSurface: { interior: { background: "transparent", foreground: "status-success" }, boundary: { border: { color: "transparent" } } } },
-          { where: { status: "warning" }, partialSurface: { interior: { background: "transparent", foreground: "status-warning-dark" }, boundary: { border: { color: "transparent" } } } },
+          { where: { status: "warning" }, partialSurface: { interior: { background: "transparent", foreground: "status-warning" }, boundary: { border: { color: "transparent" } } } },
         ],
       },
     },
@@ -232,8 +232,8 @@ export const wireframeStrokeMobileTheme: MobileTheme = {
       },
     },
     avatar: {
-      surface: {
-        interior: { background: "brand-1-light", foreground: "brand-1-dark", padding: {}, childAlign: { horizontal: "center", vertical: "center" } },
+      surface: { tint: "brand-1",
+        interior: { background: "background", foreground: "brand-1", padding: {}, childAlign: { horizontal: "center", vertical: "center" } },
         boundary: { border: { width: "none" }, radius: { all: "full" } },
         defaultTypography: { typographyType: "bodySmall" },
       },
@@ -263,7 +263,7 @@ export const wireframeStrokeMobileTheme: MobileTheme = {
         combined: [
           { where: { position: "last" }, partialSurface: { boundary: { border: { bottom: { width: "none" } } } } },
           { where: { state: "active" }, partialSurface: { interior: { background: "gray-100" } } },
-          { where: { state: "selected" }, partialSurface: { interior: { background: "brand-1-light", foreground: "brand-1-dark" } } },
+          { where: { state: "selected" }, partialSurface: { tint: "brand-1", interior: { background: "background", foreground: "brand-1" } } },
           { where: { status: "error" }, partialSurface: { interior: { foreground: "status-error" } } },
           { where: { status: "destructive" }, partialSurface: { interior: { foreground: "status-error" } } },
           { where: { state: "disabled" }, partialSurface: { interior: { opacity: 0.45 } } },

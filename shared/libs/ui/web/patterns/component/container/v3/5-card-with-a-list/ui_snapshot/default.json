@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-container-5-card-with-a-list-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-container-5-card-with-a-list",
+ "name": "default",
+ "title": "Container 5: a card with a list: the list stands inside the content, in from the edges of the card",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

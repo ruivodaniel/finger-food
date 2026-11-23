@@ -1,5 +1,5 @@
-import { FixtureBody, Row, Token } from "../_chrome";
-import { useThemeVars, withPrefix } from "../_theme-vars";
+import { FixtureBody, Row, Token } from "../../lib/_chrome";
+import { useThemeVars, withPrefix } from "../../lib/_theme-vars";
 
 /** Radius — every `radius-*` variable on the same box. */
 export default function RadiusFixture() {

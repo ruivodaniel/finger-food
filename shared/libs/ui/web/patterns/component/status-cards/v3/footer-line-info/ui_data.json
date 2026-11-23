@@ -1,0 +1,107 @@
+{
+ "id": "ui-data-pattern-component-status-cards-footer-line-info",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-status-cards-footer-line-info",
+ "kind": "component",
+ "name": "footer-line-info",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "footer-line-info",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Card",
+   "props": {
+    "className": "flex-1 min-w-56"
+   },
+   "children": [
+    {
+     "type": "Content",
+     "props": {},
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "scale": "xs"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--heading4",
+          "children": "New version available"
+         }
+        },
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body-small",
+          "children": "v2.4 adds the Stack primitive and the tile theme block."
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Footer",
+     "props": {
+      "status": "info",
+      "className": "w-full"
+     },
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "between",
+        "className": "w-full",
+        "scale": "sm"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body-small"
+         },
+         "children": [
+          {
+           "type": "Icon",
+           "props": {
+            "name": "info",
+            "size": "xs"
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "children": " Info · Just now"
+           }
+          }
+         ]
+        },
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "secondary",
+          "status": "info",
+          "scale": "sm",
+          "children": "See what's new"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-component-side-navigation-7-notifications-in-footer",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Side navigation 7: the notifications entry in the footer; the same place expanded and collapsed; expands inline"
+}

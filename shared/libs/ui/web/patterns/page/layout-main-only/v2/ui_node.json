@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-page-layout-main-only",
+ "version": 1,
+ "type": "screen",
+ "surface": "web",
+ "title": "Main only, title block in the content"
+}

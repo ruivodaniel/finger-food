@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-component-container-footer-1-back-out-and-go-forward",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Container footer 1: back out at the left, go forward at the right (default)"
+}

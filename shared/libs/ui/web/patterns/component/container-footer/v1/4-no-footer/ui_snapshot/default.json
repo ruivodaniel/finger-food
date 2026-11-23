@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-container-footer-4-no-footer-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-container-footer-4-no-footer",
+ "name": "default",
+ "title": "Container footer 4: no footer",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

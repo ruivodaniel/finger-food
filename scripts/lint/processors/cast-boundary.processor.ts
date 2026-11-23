@@ -51,9 +51,9 @@ const ALWAYS_EXEMPT: string[] = [
   "**/*.spec.ts",
   "**/*.spec.tsx",
   "**/__proof__/**",
-  "apps/main/shared/web/src/routes/sandbox/**",
+  "apps/main/core/web/src/routes/sandbox/**",
   "apps/main/slices/seed/notifications/**",
-  "apps/main/shared/mobile/**",
+  "apps/main/core/mobile/**",
 ];
 
 export async function processCastBoundaryControls(

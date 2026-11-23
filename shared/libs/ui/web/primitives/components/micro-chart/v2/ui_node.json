@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-primitive-micro-chart",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Micro chart"
+}

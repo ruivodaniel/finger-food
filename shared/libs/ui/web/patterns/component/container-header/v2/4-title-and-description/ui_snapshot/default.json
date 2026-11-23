@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-container-header-4-title-and-description-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-container-header-4-title-and-description",
+ "name": "default",
+ "title": "Container header 4: a title and a description",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

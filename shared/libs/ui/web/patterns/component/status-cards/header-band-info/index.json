@@ -1,0 +1,100 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "header-band-info",
+ "version": 1,
+ "surface": "web",
+ "measure": "md",
+ "root": {
+  "type": "Card",
+  "props": {
+   "className": "flex-1 min-w-56"
+  },
+  "children": [
+   {
+    "type": "Header",
+    "props": {
+     "status": "info"
+    },
+    "children": [
+     {
+      "type": "Stack",
+      "props": {
+       "dir": "row",
+       "gap": 8,
+       "align": "center"
+      },
+      "children": [
+       {
+        "type": "Icon",
+        "props": {
+         "name": "info",
+         "size": "sm"
+        }
+       },
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--heading4",
+         "children": "New version available"
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Content",
+    "props": {},
+    "children": [
+     {
+      "type": "Text",
+      "props": {
+       "as": "span",
+       "element": "type--body-small",
+       "children": "v2.4 adds the Stack primitive and the tile theme block."
+      }
+     }
+    ]
+   },
+   {
+    "type": "Footer",
+    "props": {
+     "className": "w-full"
+    },
+    "children": [
+     {
+      "type": "Stack",
+      "props": {
+       "dir": "row",
+       "gap": 8,
+       "align": "center",
+       "justify": "between",
+       "className": "w-full"
+      },
+      "children": [
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--body-extra-small",
+         "emphasis": "quiet",
+         "children": "Just now"
+        }
+       },
+       {
+        "type": "Button",
+        "props": {
+         "emphasis": "secondary",
+         "scale": "sm",
+         "children": "See what's new"
+        }
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-top-navigation-4-hides-on-scroll-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-top-navigation-4-hides-on-scroll",
+ "name": "default",
+ "title": "Top navigation 4: the bar leaves on scroll down and returns on scroll up",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

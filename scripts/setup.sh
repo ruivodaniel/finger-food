@@ -6,13 +6,13 @@ echo ""
 
 # 1. Start infrastructure (Postgres, Maildev, LocalStack)
 echo "Starting Docker services..."
-docker compose -f apps/main/shared/api/docker-compose.yml up -d --wait
+docker compose -f apps/main/core/api/docker-compose.yml up -d --wait
 echo "✓ Docker services running"
 echo ""
 
 # 2. Run migrations + seed
 echo "Running database migrations and seed..."
-pnpm --dir apps/main/shared/api run db:seed -- -y
+pnpm --dir apps/main/core/api run db:seed -- -y
 echo "✓ Database ready"
 echo ""
 

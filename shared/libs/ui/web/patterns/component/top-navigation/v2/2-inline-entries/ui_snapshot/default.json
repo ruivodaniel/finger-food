@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-top-navigation-2-inline-entries-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-top-navigation-2-inline-entries",
+ "name": "default",
+ "title": "Top navigation 2: every entry in the bar; user menu only",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

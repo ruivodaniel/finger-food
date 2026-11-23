@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-primitive-tabs-default",
+ "version": 1,
+ "uiDataId": "ui-data-primitive-tabs",
+ "name": "default",
+ "title": "Tabs, its cases",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

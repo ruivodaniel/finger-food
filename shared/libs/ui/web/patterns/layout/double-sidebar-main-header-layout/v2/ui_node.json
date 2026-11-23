@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-layout-double-sidebar-main-header-layout",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Double sidebar layout with the main's own header"
+}

@@ -1,5 +1,5 @@
-import { FixtureBody, Row, Token } from "../_chrome";
-import { useThemeVars, withPrefix } from "../_theme-vars";
+import { FixtureBody, Row, Token } from "../../lib/_chrome";
+import { useThemeVars, withPrefix } from "../../lib/_theme-vars";
 
 /** Spacing — every `spacing-*` variable as a bar of its own length. */
 export default function SpacingFixture() {

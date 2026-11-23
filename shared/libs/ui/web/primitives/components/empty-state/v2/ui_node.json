@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-primitive-empty-state",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Empty state"
+}

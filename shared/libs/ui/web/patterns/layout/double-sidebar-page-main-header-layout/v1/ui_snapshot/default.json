@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-layout-double-sidebar-page-main-header-layout-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-layout-double-sidebar-page-main-header-layout",
+ "name": "default",
+ "title": "Double sidebar layout with a page header and the main's own header",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

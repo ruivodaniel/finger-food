@@ -1,0 +1,736 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "content-safety",
+ "version": 1,
+ "surface": "web",
+ "measure": "md",
+ "root": {
+  "type": "Card",
+  "props": {
+   "className": "w-full max-w-2xl"
+  },
+  "children": [
+   {
+    "type": "Header",
+    "props": {},
+    "children": [
+     {
+      "type": "Stack",
+      "props": {
+       "dir": "row",
+       "gap": 12,
+       "align": "center"
+      },
+      "children": [
+       {
+        "type": "Tile",
+        "props": {
+         "status": "warning",
+         "className": "items-center justify-center"
+        },
+        "children": [
+         {
+          "type": "Icon",
+          "props": {
+           "name": "warning"
+          }
+         }
+        ]
+       },
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "col",
+         "gap": 2
+        },
+        "children": [
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--heading4",
+           "children": "Content Safety"
+          }
+         },
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "row",
+           "gap": 8,
+           "align": "baseline"
+          },
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body-small",
+             "status": "warning",
+             "children": "2 modified"
+            }
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body-small",
+             "status": "success",
+             "children": "4 approved"
+            }
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "Content",
+    "props": {},
+    "children": [
+     {
+      "type": "List",
+      "props": {
+       "className": "w-full"
+      },
+      "children": [
+       {
+        "type": "ListItem",
+        "props": {
+         "status": "success",
+         "className": "gap-3"
+        },
+        "children": [
+         {
+          "type": "ListItemIcon",
+          "props": {},
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body",
+             "status": "success"
+            },
+            "children": [
+             {
+              "type": "Icon",
+              "props": {
+               "name": "success",
+               "size": "sm"
+              }
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "ListItemContent",
+          "props": {},
+          "children": [
+           {
+            "type": "Stack",
+            "props": {
+             "dir": "row",
+             "gap": 12,
+             "align": "center"
+            },
+            "children": [
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--body-large",
+               "children": "PII Detection"
+              }
+             },
+             {
+              "type": "Badge",
+              "props": {
+               "children": "Approved",
+               "emphasis": "quiet",
+               "status": "success"
+              }
+             },
+             {
+              "type": "Chip",
+              "props": {
+               "children": "Output",
+               "emphasis": "tertiary",
+               "scale": "sm",
+               "closable": false
+              }
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "ListItemAction",
+          "props": {},
+          "children": [
+           {
+            "type": "Stack",
+            "props": {
+             "dir": "row",
+             "gap": 12,
+             "align": "center"
+            },
+            "children": [
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--numbers-small",
+               "emphasis": "quiet",
+               "children": "98%"
+              }
+             },
+             {
+              "type": "Icon",
+              "props": {
+               "name": "chevronDown",
+               "size": "sm"
+              }
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "ListItem",
+        "props": {
+         "status": "success",
+         "className": "gap-3"
+        },
+        "children": [
+         {
+          "type": "ListItemIcon",
+          "props": {},
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body",
+             "status": "success"
+            },
+            "children": [
+             {
+              "type": "Icon",
+              "props": {
+               "name": "success",
+               "size": "sm"
+              }
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "ListItemContent",
+          "props": {},
+          "children": [
+           {
+            "type": "Stack",
+            "props": {
+             "dir": "row",
+             "gap": 12,
+             "align": "center"
+            },
+            "children": [
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--body-large",
+               "children": "Toxicity Filter"
+              }
+             },
+             {
+              "type": "Badge",
+              "props": {
+               "children": "Approved",
+               "emphasis": "quiet",
+               "status": "success"
+              }
+             },
+             {
+              "type": "Chip",
+              "props": {
+               "children": "Output",
+               "emphasis": "tertiary",
+               "scale": "sm",
+               "closable": false
+              }
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "ListItemAction",
+          "props": {},
+          "children": [
+           {
+            "type": "Stack",
+            "props": {
+             "dir": "row",
+             "gap": 12,
+             "align": "center"
+            },
+            "children": [
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--numbers-small",
+               "emphasis": "quiet",
+               "children": "95%"
+              }
+             },
+             {
+              "type": "Icon",
+              "props": {
+               "name": "chevronDown",
+               "size": "sm"
+              }
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "ListItem",
+        "props": {
+         "status": "warning",
+         "className": "gap-3"
+        },
+        "children": [
+         {
+          "type": "ListItemIcon",
+          "props": {},
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body",
+             "status": "warning"
+            },
+            "children": [
+             {
+              "type": "Icon",
+              "props": {
+               "name": "warning",
+               "size": "sm"
+              }
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "ListItemContent",
+          "props": {},
+          "children": [
+           {
+            "type": "Stack",
+            "props": {
+             "dir": "row",
+             "gap": 12,
+             "align": "center"
+            },
+            "children": [
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--body-large",
+               "children": "Factual Accuracy"
+              }
+             },
+             {
+              "type": "Badge",
+              "props": {
+               "children": "Modified",
+               "emphasis": "quiet",
+               "status": "warning"
+              }
+             },
+             {
+              "type": "Chip",
+              "props": {
+               "children": "Output",
+               "emphasis": "tertiary",
+               "scale": "sm",
+               "closable": false
+              }
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "ListItemAction",
+          "props": {},
+          "children": [
+           {
+            "type": "Stack",
+            "props": {
+             "dir": "row",
+             "gap": 12,
+             "align": "center"
+            },
+            "children": [
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--numbers-small",
+               "emphasis": "quiet",
+               "children": "72%"
+              }
+             },
+             {
+              "type": "Icon",
+              "props": {
+               "name": "chevronDown",
+               "size": "sm"
+              }
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "ListItem",
+        "props": {
+         "status": "success",
+         "className": "gap-3"
+        },
+        "children": [
+         {
+          "type": "ListItemIcon",
+          "props": {},
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body",
+             "status": "success"
+            },
+            "children": [
+             {
+              "type": "Icon",
+              "props": {
+               "name": "success",
+               "size": "sm"
+              }
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "ListItemContent",
+          "props": {},
+          "children": [
+           {
+            "type": "Stack",
+            "props": {
+             "dir": "row",
+             "gap": 12,
+             "align": "center"
+            },
+            "children": [
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--body-large",
+               "children": "Prompt Injection"
+              }
+             },
+             {
+              "type": "Badge",
+              "props": {
+               "children": "Approved",
+               "emphasis": "quiet",
+               "status": "success"
+              }
+             },
+             {
+              "type": "Chip",
+              "props": {
+               "children": "Input",
+               "emphasis": "tertiary",
+               "scale": "sm",
+               "closable": false
+              }
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "ListItemAction",
+          "props": {},
+          "children": [
+           {
+            "type": "Stack",
+            "props": {
+             "dir": "row",
+             "gap": 12,
+             "align": "center"
+            },
+            "children": [
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--numbers-small",
+               "emphasis": "quiet",
+               "children": "99%"
+              }
+             },
+             {
+              "type": "Icon",
+              "props": {
+               "name": "chevronDown",
+               "size": "sm"
+              }
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "ListItem",
+        "props": {
+         "status": "success",
+         "className": "gap-3"
+        },
+        "children": [
+         {
+          "type": "ListItemIcon",
+          "props": {},
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body",
+             "status": "success"
+            },
+            "children": [
+             {
+              "type": "Icon",
+              "props": {
+               "name": "success",
+               "size": "sm"
+              }
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "ListItemContent",
+          "props": {},
+          "children": [
+           {
+            "type": "Stack",
+            "props": {
+             "dir": "row",
+             "gap": 12,
+             "align": "center"
+            },
+            "children": [
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--body-large",
+               "children": "Output Length"
+              }
+             },
+             {
+              "type": "Badge",
+              "props": {
+               "children": "Approved",
+               "emphasis": "quiet",
+               "status": "success"
+              }
+             },
+             {
+              "type": "Chip",
+              "props": {
+               "children": "Output",
+               "emphasis": "tertiary",
+               "scale": "sm",
+               "closable": false
+              }
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "ListItemAction",
+          "props": {},
+          "children": [
+           {
+            "type": "Stack",
+            "props": {
+             "dir": "row",
+             "gap": 12,
+             "align": "center"
+            },
+            "children": [
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--numbers-small",
+               "emphasis": "quiet",
+               "children": "100%"
+              }
+             },
+             {
+              "type": "Icon",
+              "props": {
+               "name": "chevronDown",
+               "size": "sm"
+              }
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "ListItem",
+        "props": {
+         "status": "warning",
+         "className": "gap-3"
+        },
+        "children": [
+         {
+          "type": "ListItemIcon",
+          "props": {},
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body",
+             "status": "warning"
+            },
+            "children": [
+             {
+              "type": "Icon",
+              "props": {
+               "name": "warning",
+               "size": "sm"
+              }
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "ListItemContent",
+          "props": {},
+          "children": [
+           {
+            "type": "Stack",
+            "props": {
+             "dir": "row",
+             "gap": 12,
+             "align": "center"
+            },
+            "children": [
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--body-large",
+               "children": "PII Redaction"
+              }
+             },
+             {
+              "type": "Badge",
+              "props": {
+               "children": "Modified",
+               "emphasis": "quiet",
+               "status": "warning"
+              }
+             },
+             {
+              "type": "Chip",
+              "props": {
+               "children": "Output",
+               "emphasis": "tertiary",
+               "scale": "sm",
+               "closable": false
+              }
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "ListItemAction",
+          "props": {},
+          "children": [
+           {
+            "type": "Stack",
+            "props": {
+             "dir": "row",
+             "gap": 12,
+             "align": "center"
+            },
+            "children": [
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--numbers-small",
+               "emphasis": "quiet",
+               "children": "97%"
+              }
+             },
+             {
+              "type": "Icon",
+              "props": {
+               "name": "chevronDown",
+               "size": "sm"
+              }
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

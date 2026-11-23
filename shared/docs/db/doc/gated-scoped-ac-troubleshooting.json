@@ -1,0 +1,120 @@
+{
+ "id": "doc/gated-scoped-ac-troubleshooting",
+ "kind": "doc",
+ "title": "Troubleshooting",
+ "status": "todo",
+ "subject": "gated-scoped-ac",
+ "owner": "libs/gated-scoped-ac",
+ "order": 9,
+ "tags": [
+  "gated-scoped-ac",
+  "consumer"
+ ],
+ "paths": [
+  "shared/libs/gated-scoped-ac"
+ ],
+ "summary": "The errors the library throws and what each means, why a read or a write comes back empty, and how to see what a scope compiled to.",
+ "docId": "gated-scoped-ac-troubleshooting",
+ "doc": {
+  "axioms": [],
+  "purpose": {
+   "intro": "A denial never throws, so a wrong rule looks like an empty list or a 403 with nothing in the logs. This page starts from what you see and works back to the rule, the bag or the wiring."
+  },
+  "reference": [
+   {
+    "topic": "Errors at boot",
+    "statement": "Thrown when the config module loads or when `createAc` runs. The app does not start until they are fixed.",
+    "claims": [],
+    "imagesAndDiagrams": [
+     {
+      "type": "ascii",
+      "value": "| Message starts with | Cause | Fix |\n|---|---|---|\n| `Duplicate permission name` | two permissions share a name | rename one; names are global |\n| `Duplicate role` | a role name appears twice across the forests | give the per-org-type role its own name |\n| `… has a target on a create action` | a create rule carries a target | move the condition to `payload` |\n| `… a target condition must name a column` | a target condition has `bag:` and no `field:` | a context fact goes in `context` |\n| `… a payload condition must read the access context` | a payload condition has `field:` | read the row being written as `bag: \"$requestBody.<column>\"` |\n| `… a target that joins must hold exactly that one condition` (or `a payload that joins …`) | a traversal shares its slot | fold the others into its `where`, or split them into rules |\n| `… carries a payload on actions […]` | a payload on a permission that is not create-only | give the create its own permission |\n| `` … `is` on \"<field>\" — that column holds a array `` (or `json`) | `is`/`isNot` against a collection column | use `has`/`hasNot` |\n| `Invalid permission …` / `Invalid role …` | the validator passed to the loader found a bad shape | the lines under it give the path |"
+     }
+    ]
+   },
+   {
+    "topic": "Errors at request time",
+    "statement": "These surface as a 500. They are wiring or config mistakes, never denials.",
+    "claims": [],
+    "imagesAndDiagrams": [
+     {
+      "type": "ascii",
+      "value": "| Message | Cause | Fix |\n|---|---|---|\n| `Unknown entity: \"<name>\"` | a permission or a call names an entity missing from `tables` | add the table to the app's map, or fix the name |\n| `Unknown column: \"<entity>.<column>\"` | a condition, or a traversal's `on`, names a column the table does not have | fix the rule; the name is the drizzle property, not the SQL column |\n| `Condition has no operator …` | a condition carries none of `is`, `isNot`, `has`, `hasNot` | add one |\n| `` `is` needs a single-value column `` | `is`/`isNot` against a collection column inside a payload traversal's `where`, which the boot check does not walk | use `has` |"
+     }
+    ]
+   },
+   {
+    "topic": "A read comes back empty",
+    "statement": "Work down the two stages: does a permission apply, then does its target admit the row.",
+    "claims": [
+     {
+      "text": "Is the permission in `ac.permissions`? If not, the caller does not hold a role that carries it in the forest that applies. With no active organization only `accountBaseline` is searched, and the forest is chosen by `$session.organization.type`."
+     },
+     {
+      "text": "Does the permission name this entity and this action? A `read` permission does nothing for `resolveUpdate`."
+     },
+     {
+      "text": "Does it have a rule? `rules: []` grants nothing. Every row is `rules: [{ context: [], target: [] }]`."
+     },
+     {
+      "text": "Does the context pass? A literal that does not match the org type, or a context path that is unset or null, drops the rule. A negation drops it too: with no active organization, \"org type isNot X\" fails."
+     },
+     {
+      "text": "Does the target's bag path hold a value? A rule whose operand is unset or null matches no row: a rule reading `$session.user.email` never matches, since hydration puts no email in the bag."
+     },
+     {
+      "text": "For a traversal, is `on` right? A table keyed by its parent joins on that column, not `id`."
+     }
+    ]
+   },
+   {
+    "topic": "A write comes back null or 403",
+    "statement": "A write is refused in one of three places: the columns, the row, or the create verdict.",
+    "claims": [
+     {
+      "text": "**403 before any query, naming fields:** `allowUpdate` refused a column. The permission's field list lacks it, or the service passed columns it sets itself (an `updatedAt`) instead of the caller's patch."
+     },
+     {
+      "text": "**Update or delete returns `null`:** the scope admits no row with that id. Check the rule, and for a table keyed by something other than `id`, check `idColumns` in the gate's deps."
+     },
+     {
+      "text": "**Create returns `null`:** no create permission passed its context, or the payload denied. The payload reads `$requestBody`, which the gate sets to the inserted values, so a field it reads must be among them. A payload traversal also needs its parent row to exist and match."
+     }
+    ]
+   },
+   {
+    "topic": "Seeing what a scope compiled to",
+    "statement": "Four ways to look inside a decision, cheapest first.",
+    "claims": [
+     {
+      "text": "Log `ac.roles` and `ac.permissions` for the request: most surprises are a role or a permission that is not there."
+     },
+     {
+      "text": "Read the verdicts' `reason`: `allowCreate` and `allowUpdate` say which entity, and for an update which fields."
+     },
+     {
+      "text": "`rows()` returns the drizzle query before it runs, so `gateDb.read(entity, scope).rows().toSQL()` prints the SQL and parameters, the visibility channels and traversal sub-queries included."
+     },
+     {
+      "text": "To pin a rule down, add a case to the library's own tests: `test/fixture/config.ts` holds a config, and `hydrate` in `test/fixture/db.ts` builds a bag for any persona."
+     }
+    ]
+   }
+  ],
+  "review": {
+   "axioms": {
+    "state": "unreviewed"
+   },
+   "purpose": {
+    "state": "unreviewed"
+   },
+   "reference": {
+    "state": "unreviewed"
+   }
+  },
+  "converted": true
+ },
+ "audience": [
+  "seed-consumer"
+ ]
+}

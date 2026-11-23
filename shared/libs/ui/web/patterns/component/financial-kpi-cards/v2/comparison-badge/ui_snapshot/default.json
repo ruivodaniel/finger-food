@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-financial-kpi-cards-comparison-badge-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-financial-kpi-cards-comparison-badge",
+ "name": "default",
+ "title": "Financial kpi cards: comparison badge",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

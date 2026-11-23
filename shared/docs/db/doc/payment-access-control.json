@@ -1,0 +1,106 @@
+{
+ "id": "doc/payment-access-control",
+ "kind": "doc",
+ "title": "Payment access control",
+ "status": "converted",
+ "subject": "payment",
+ "owner": "main/slices/payment",
+ "order": 3,
+ "tags": [
+  "payment",
+  "access control"
+ ],
+ "paths": [
+  "shared/configs/access-control/index.ts",
+  "apps/main/slices/seed/payment"
+ ],
+ "summary": "Who can pay, buy and sell: the payment rules in the access-control DSL, the Manage Billing role, and who holds what.",
+ "docId": "payment-access-control",
+ "doc": {
+  "axioms": [],
+  "purpose": {
+   "intro": "Who can pay, buy and sell is decided in the access-control DSL, `shared/configs/access-control/index.ts`, never by checks in the slice. The slice asks the engine for a verdict on its two entities: `payment_account` and `product`. The payment ledger and purchases belong to an account, so a read or a write on them is proven on the account first. A company's money is held by a role, Manage Billing."
+  },
+  "reference": [
+   {
+    "topic": "The rules",
+    "statement": "As written in the config.",
+    "claims": [],
+    "examples": [
+     {
+      "snippets": [
+       {
+        "caption": "typescript",
+        "code": "const paymentPermissions = definePermissions([\n  {\n    // A person manages their own payment account (plan, bundles, portal).\n    name: \"manage_own_billing\",\n    entity: \"payment_account\",\n    actions: [\"read\", \"update\"],\n    rules: [\n      {\n        context: [],\n        target: [{ field: \"payment_account.userId\", has: { bag: \"$session.user.id\" } }],\n      },\n    ],\n  },\n  {\n    // The company's money: plan, bundles, payments, purchases, selling.\n    name: \"manage_billing_company\",\n    entity: \"payment_account\",\n    actions: [\"read\", \"update\"],\n    rules: [\n      {\n        context: [IN_COMPANY],\n        target: [{ field: \"payment_account.organizationId\", has: { bag: \"$session.organization.id\" } }],\n      },\n    ],\n  },\n  {\n    name: \"create_product_company\",\n    entity: \"product\",\n    actions: [\"create\"],\n    rules: [{ context: [IN_COMPANY], target: [] }],\n  },\n  {\n    name: \"manage_products_company\",\n    entity: \"product\",\n    actions: [\"read\", \"update\"],\n    rules: [\n      {\n        context: [IN_COMPANY],\n        target: [{ field: \"product.organizationId\", has: { bag: \"$session.organization.id\" } }],\n      },\n    ],\n  },\n]);"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "topic": "The Manage Billing role",
+    "statement": "Manage Billing (`company_billing`) sits beside Manager under the company Owner, so a company can hand its money to someone without handing them the roster. It also carries the standard reads, because a billing manager must see the members to set their allocations. The Owner holds everything its children hold.",
+    "claims": [],
+    "examples": [
+     {
+      "snippets": [
+       {
+        "caption": "typescript",
+        "code": "// everyone signed in\n{ role: \"authenticated\", permissions: [/* … */ \"manage_own_billing\" /* … */] }\n\n// company: Owner › Manager | Manage Billing\n{\n  role: \"company_owner\",\n  children: [\n    { role: \"company_manager\", /* the roster; its child is company_standard */ },\n    {\n      role: \"company_billing\",\n      permissions: [\n        \"read_organization_company\",\n        \"list_members_company\",\n        \"manage_billing_company\",\n        \"manage_credits_company\",\n        \"create_product_company\",\n        \"manage_products_company\",\n      ],\n    },\n  ],\n}\n\n// the label members are assigned by\n{ value: \"company_billing\", label: \"Manage Billing\",\n  description: \"Manage company billing — plan, credits, allowances, purchases and selling\" }"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "topic": "Who can do what",
+    "statement": "The same rules, read as people and pages.",
+    "claims": [
+     {
+      "text": "**Everyone signed in** manages their own billing, in Settings: plan, bundles, the Customer Portal, their purchases (`manage_own_billing`). Buying on the Marketplace with no organization active buys as the person."
+     },
+     {
+      "text": "**In a company**, the Owner and Manage Billing manage the company's plan, bundles, payments and purchases (`manage_billing_company`), its credits ([[credits-access-control|credits access control]]), and selling: onboarding, the Express dashboard, products (`create_product_company`, `manage_products_company`). Another vendor's products are invisible and refused."
+     },
+     {
+      "text": "**Managers and Standard members** have no billing: the sidebar doesn't show them Billing, the billing page tells them so, and they cannot buy for the company. What they may spend is on Credits, which every member sees."
+     },
+     {
+      "text": "**Musical projects and the platform admin organization** hold no payment permission today: they don't buy plans or bundles and don't sell. Who may sell is also limited by the catalog's `marketplace.sellerOrgTypes`."
+     },
+     {
+      "text": "**How the slice asks:** billing reads resolve a read scope on `payment_account`; buying, checkout and selling need an update verdict on it; creating a product is the create verdict on `product`, editing one the update verdict. Webhooks have no session and write without an access context."
+     }
+    ]
+   },
+   {
+    "topic": "Changing who can do what",
+    "statement": "Edit the DSL, never the slice's services.",
+    "claims": [
+     {
+      "text": "**Let musical projects buy:** add `manage_billing_musical_project` (entity `payment_account`, context `IN_MUSICAL_PROJECT`, the organization as target) and give it to `musical_project_owner`."
+     },
+     {
+      "text": "**Let another organization type sell:** add it to `marketplace.sellerOrgTypes` in [[payment-catalog|the payment catalog]], then add `create_product_<type>` and `manage_products_<type>` and give them to the role that holds its billing."
+     }
+    ]
+   }
+  ],
+  "review": {
+   "axioms": {
+    "state": "unreviewed"
+   },
+   "purpose": {
+    "state": "unreviewed"
+   },
+   "reference": {
+    "state": "unreviewed"
+   }
+  },
+  "converted": true
+ },
+ "audience": [
+  "seed-contributor",
+  "seed-consumer"
+ ]
+}

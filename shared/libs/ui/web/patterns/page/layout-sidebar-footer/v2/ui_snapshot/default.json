@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-page-layout-sidebar-footer-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-page-layout-sidebar-footer",
+ "name": "default",
+ "title": "Sidebar and footer",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

@@ -216,7 +216,7 @@ describe("legal-document service", () => {
   });
 
   it("authoringCatalog derives platform + org-type scopes from the configs", async () => {
-    const catalog = service.authoringCatalog(AUTHOR, PRIVATE);
+    const catalog = service.authoringCatalog(PRIVATE);
     const platform = catalog.find((s) => s.orgTypeId === null);
     expect(platform?.label).toBe("Platform");
     expect(platform?.types).toContain("termsAndConditions");

@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-financial-tables-securities-with-sparklines-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-financial-tables-securities-with-sparklines",
+ "name": "default",
+ "title": "Securities with sparklines",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

@@ -11,7 +11,7 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { ELEMENTS, type Family } from '../types/elements';
 import { EMPHASIS, STATUS, STATE, SCALE } from '../types/axes';
-import { elementSelector } from '../web/theme-engine/conventions';
+import { elementSelector } from '../theme-engine/web/conventions';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const DOC = resolve(HERE, '../docs/consumer/developer/markup-dictionary.md');

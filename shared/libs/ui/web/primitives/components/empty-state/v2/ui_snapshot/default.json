@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-primitive-empty-state-default",
+ "version": 1,
+ "uiDataId": "ui-data-primitive-empty-state",
+ "name": "default",
+ "title": "Empty state, its cases",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

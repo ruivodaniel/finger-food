@@ -1,8 +1,8 @@
 // THE PAYLOAD SLOT — gating a create on the parent the new row points at.
 //
 // "Append a comment only to a note I authored, or that is shared with me." The
-// note id arrives in the REQUEST BODY, which the consumer's middleware puts on
-// the bag as `requestBody`; the rule reaches it with the `bag:` subject the DSL
+// note id arrives in the REQUEST BODY, the row being written, which the gate puts
+// on the bag as `requestBody`; the rule reaches it with the `bag:` subject the DSL
 // already had. No new value source, no new operand.
 //
 // This is the song / song-slice case with the fixture's names.
@@ -134,6 +134,44 @@ describe("create gated on the parent", () => {
   // unconstrained query that would match every parent row.
   test("a MISSING parent id in the body denies — it never matches everything", async () => {
     expect(await append("naruto", {})).toBeNull();
+    expect(await commentCount()).toBe(0);
+  });
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+// The gate takes the verdict on the row it inserts: `values` become the
+// `requestBody` the payload reads, whatever the caller's bag carries.
+describe("the gate reads the payload off the row it inserts", () => {
+  const insert = async (
+    userId: string,
+    bag: Record<string, unknown>,
+    values: Record<string, unknown>,
+  ) => {
+    const ac = engine();
+    const gate = createGatedDb<typeof tables>(db, { tables, engine: ac });
+    const perms = ac.resolveEffectivePermissions(["commenter"], bag);
+    return gate(bag).create("note_comment", perms, {
+      id: `c-${userId}-${values.noteId}`,
+      authorUserId: userId,
+      body: "hello",
+      ...values,
+    });
+  };
+  const sessionOnly = (userId: string) => {
+    const { requestBody: _none, ...bag } = bagFor(userId, {});
+    return bag;
+  };
+
+  test("a bag with no requestBody (the middleware's) is enough — the row supplies it", async () => {
+    const row = await insert("naruto", sessionOnly("naruto"), { noteId: "note-3" });
+    expect(row).not.toBeNull();
+    expect(await commentCount()).toBe(1);
+  });
+
+  test("a requestBody on the bag is not trusted: the row's parent decides", async () => {
+    // the bag names naruto's own note-3, the row is for kakashi's note-1
+    const bag = bagFor("naruto", { noteId: "note-3" });
+    expect(await insert("naruto", bag, { noteId: "note-1" })).toBeNull();
     expect(await commentCount()).toBe(0);
   });
 });

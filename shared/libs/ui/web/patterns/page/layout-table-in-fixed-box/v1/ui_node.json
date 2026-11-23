@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-page-layout-table-in-fixed-box",
+ "version": 1,
+ "type": "screen",
+ "surface": "web",
+ "title": "Table: a table in a fixed box, the rows scroll inside it"
+}

@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-component-sidebar-with-tabs",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Sidebar with tabs"
+}

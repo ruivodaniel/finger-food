@@ -1,0 +1,1133 @@
+{
+ "id": "ui-data-pattern-component-user-organization-menu",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-user-organization-menu",
+ "kind": "component",
+ "name": "user-organization-menu",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "user-organization-menu",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "state": {
+   "last": "nothing yet",
+   "org": "org-acme-corp",
+   "a": "light",
+   "b": "light",
+   "c": "system",
+   "d": "light",
+   "e": "light",
+   "f": "light",
+   "g": "light"
+  },
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "size": "fill",
+    "scale": "xl"
+   },
+   "children": [
+    {
+     "type": "Text",
+     "props": {
+      "as": "span",
+      "element": "type--body-extra-small",
+      "children": {
+       "concat": [
+        "last chosen: ",
+        {
+         "bind": "state.last"
+        }
+       ]
+      },
+      "emphasis": "quiet"
+     }
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "size": "fill",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body-extra-small",
+        "children": "the user, the organization under the name",
+        "emphasis": "quiet"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "wrap": true,
+        "size": "fill",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "use": {
+          "component": "UserOrganizationMenu",
+          "version": "latest"
+         },
+         "args": {
+          "user": {
+           "id": "user-ines-carvalho",
+           "name": "Inês Carvalho",
+           "email": "ines@acme.test"
+          },
+          "items": [
+           {
+            "id": "settings",
+            "label": "Settings",
+            "icon": "settings"
+           },
+           {
+            "id": "my-memberships",
+            "label": "My memberships",
+            "icon": "briefcase"
+           },
+           {
+            "id": "my-invitations",
+            "label": "My invitations",
+            "icon": "inbox",
+            "count": 2
+           }
+          ],
+          "organizations": [
+           {
+            "id": "org-acme-corp",
+            "name": "Acme Corp",
+            "type": "Company"
+           },
+           {
+            "id": "org-harbour-lettings",
+            "name": "Harbour Lettings",
+            "type": "Agency"
+           },
+           {
+            "id": "org-northwind-traders",
+            "name": "Northwind Traders",
+            "type": "Company"
+           }
+          ],
+          "activeId": {
+           "bind": "state.org"
+          },
+          "modes": [
+           {
+            "id": "light",
+            "label": "Light"
+           },
+           {
+            "id": "dark",
+            "label": "Dark"
+           }
+          ],
+          "mode": {
+           "bind": "state.a"
+          },
+          "modeLayout": "switch",
+          "modeLabel": "Dark mode",
+          "modeIcon": "palette"
+         },
+         "on": {
+          "organizationChange": [
+           {
+            "set": {
+             "state": "org",
+             "to": {
+              "bind": "event.id"
+             }
+            }
+           }
+          ],
+          "organizationAdd": [
+           {
+            "set": {
+             "state": "last",
+             "to": "add organization"
+            }
+           }
+          ],
+          "modeChange": [
+           {
+            "set": {
+             "state": "a",
+             "to": {
+              "bind": "event.id"
+             }
+            }
+           }
+          ],
+          "select": [
+           {
+            "set": {
+             "state": "last",
+             "to": {
+              "bind": "event.id"
+             }
+            }
+           }
+          ],
+          "signOut": [
+           {
+            "set": {
+             "state": "last",
+             "to": "sign-out"
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "size": "fill",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body-extra-small",
+        "children": "the picture is the active organization's logo: the organization first, the user under it",
+        "emphasis": "quiet"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "wrap": true,
+        "size": "fill",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "use": {
+          "component": "UserOrganizationMenu",
+          "version": "latest"
+         },
+         "args": {
+          "user": {
+           "id": "user-ines-carvalho",
+           "name": "Inês Carvalho",
+           "email": "ines@acme.test"
+          },
+          "items": [
+           {
+            "id": "settings",
+            "label": "Settings",
+            "icon": "settings"
+           },
+           {
+            "id": "my-memberships",
+            "label": "My memberships",
+            "icon": "briefcase"
+           },
+           {
+            "id": "my-invitations",
+            "label": "My invitations",
+            "icon": "inbox",
+            "count": 2
+           }
+          ],
+          "organizations": [
+           {
+            "id": "org-acme-corp",
+            "name": "Acme Corp",
+            "type": "Company"
+           },
+           {
+            "id": "org-harbour-lettings",
+            "name": "Harbour Lettings",
+            "type": "Agency"
+           },
+           {
+            "id": "org-northwind-traders",
+            "name": "Northwind Traders",
+            "type": "Company"
+           }
+          ],
+          "activeId": {
+           "bind": "state.org"
+          },
+          "modes": [
+           {
+            "id": "light",
+            "label": "Light"
+           },
+           {
+            "id": "dark",
+            "label": "Dark"
+           }
+          ],
+          "mode": {
+           "bind": "state.b"
+          },
+          "modeLayout": "switch",
+          "modeLabel": "Dark mode",
+          "modeIcon": "palette",
+          "picture": "organization"
+         },
+         "on": {
+          "organizationChange": [
+           {
+            "set": {
+             "state": "org",
+             "to": {
+              "bind": "event.id"
+             }
+            }
+           }
+          ],
+          "organizationAdd": [
+           {
+            "set": {
+             "state": "last",
+             "to": "add organization"
+            }
+           }
+          ],
+          "modeChange": [
+           {
+            "set": {
+             "state": "b",
+             "to": {
+              "bind": "event.id"
+             }
+            }
+           }
+          ],
+          "select": [
+           {
+            "set": {
+             "state": "last",
+             "to": {
+              "bind": "event.id"
+             }
+            }
+           }
+          ],
+          "signOut": [
+           {
+            "set": {
+             "state": "last",
+             "to": "sign-out"
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "size": "fill",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body-extra-small",
+        "children": "organizations as a menu of their own (ten organizations); mode as a drop, three modes",
+        "emphasis": "quiet"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "wrap": true,
+        "size": "fill",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "use": {
+          "component": "UserOrganizationMenu",
+          "version": "latest"
+         },
+         "args": {
+          "user": {
+           "id": "user-ines-carvalho",
+           "name": "Inês Carvalho",
+           "email": "ines@acme.test"
+          },
+          "items": [
+           {
+            "id": "settings",
+            "label": "Settings",
+            "icon": "settings"
+           },
+           {
+            "id": "my-memberships",
+            "label": "My memberships",
+            "icon": "briefcase"
+           },
+           {
+            "id": "my-invitations",
+            "label": "My invitations",
+            "icon": "inbox",
+            "count": 2
+           }
+          ],
+          "organizations": [
+           {
+            "id": "org-acme-corp",
+            "name": "Acme Corp",
+            "type": "Company"
+           },
+           {
+            "id": "org-harbour-lettings",
+            "name": "Harbour Lettings",
+            "type": "Agency"
+           },
+           {
+            "id": "org-northwind-traders",
+            "name": "Northwind Traders",
+            "type": "Company"
+           },
+           {
+            "id": "org-mill-street-studio",
+            "name": "Mill Street Studio",
+            "type": "Freelancer"
+           },
+           {
+            "id": "org-clifton-partners",
+            "name": "Clifton Partners",
+            "type": "Partnership"
+           },
+           {
+            "id": "org-orchard-close-homes",
+            "name": "Orchard Close Homes",
+            "type": "Agency"
+           },
+           {
+            "id": "org-blue-harbour-ltd",
+            "name": "Blue Harbour Ltd",
+            "type": "Company"
+           },
+           {
+            "id": "org-stonebridge-group",
+            "name": "Stonebridge Group",
+            "type": "Company"
+           },
+           {
+            "id": "org-fernhill-estates",
+            "name": "Fernhill Estates",
+            "type": "Agency"
+           },
+           {
+            "id": "org-kestrel-works",
+            "name": "Kestrel Works",
+            "type": "Freelancer"
+           }
+          ],
+          "activeId": {
+           "bind": "state.org"
+          },
+          "modes": [
+           {
+            "id": "light",
+            "label": "Light"
+           },
+           {
+            "id": "dark",
+            "label": "Dark"
+           },
+           {
+            "id": "system",
+            "label": "System"
+           }
+          ],
+          "mode": {
+           "bind": "state.c"
+          },
+          "modeLayout": "drop",
+          "modeLabel": "Color mode",
+          "modeIcon": "palette",
+          "organizationsAs": "menu"
+         },
+         "on": {
+          "organizationChange": [
+           {
+            "set": {
+             "state": "org",
+             "to": {
+              "bind": "event.id"
+             }
+            }
+           }
+          ],
+          "organizationAdd": [
+           {
+            "set": {
+             "state": "last",
+             "to": "add organization"
+            }
+           }
+          ],
+          "modeChange": [
+           {
+            "set": {
+             "state": "c",
+             "to": {
+              "bind": "event.id"
+             }
+            }
+           }
+          ],
+          "select": [
+           {
+            "set": {
+             "state": "last",
+             "to": {
+              "bind": "event.id"
+             }
+            }
+           }
+          ],
+          "signOut": [
+           {
+            "set": {
+             "state": "last",
+             "to": "sign-out"
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "size": "fill",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body-extra-small",
+        "children": "compact: the picture alone",
+        "emphasis": "quiet"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "wrap": true,
+        "size": "fill",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "use": {
+          "component": "UserOrganizationMenu",
+          "version": "latest"
+         },
+         "args": {
+          "user": {
+           "id": "user-ines-carvalho",
+           "name": "Inês Carvalho",
+           "email": "ines@acme.test"
+          },
+          "items": [
+           {
+            "id": "settings",
+            "label": "Settings",
+            "icon": "settings"
+           },
+           {
+            "id": "my-memberships",
+            "label": "My memberships",
+            "icon": "briefcase"
+           },
+           {
+            "id": "my-invitations",
+            "label": "My invitations",
+            "icon": "inbox",
+            "count": 2
+           }
+          ],
+          "organizations": [
+           {
+            "id": "org-acme-corp",
+            "name": "Acme Corp",
+            "type": "Company"
+           },
+           {
+            "id": "org-harbour-lettings",
+            "name": "Harbour Lettings",
+            "type": "Agency"
+           },
+           {
+            "id": "org-northwind-traders",
+            "name": "Northwind Traders",
+            "type": "Company"
+           }
+          ],
+          "activeId": {
+           "bind": "state.org"
+          },
+          "modes": [
+           {
+            "id": "light",
+            "label": "Light"
+           },
+           {
+            "id": "dark",
+            "label": "Dark"
+           }
+          ],
+          "mode": {
+           "bind": "state.d"
+          },
+          "modeLayout": "switch",
+          "modeLabel": "Dark mode",
+          "modeIcon": "palette",
+          "compact": true
+         },
+         "on": {
+          "organizationChange": [
+           {
+            "set": {
+             "state": "org",
+             "to": {
+              "bind": "event.id"
+             }
+            }
+           }
+          ],
+          "organizationAdd": [
+           {
+            "set": {
+             "state": "last",
+             "to": "add organization"
+            }
+           }
+          ],
+          "modeChange": [
+           {
+            "set": {
+             "state": "d",
+             "to": {
+              "bind": "event.id"
+             }
+            }
+           }
+          ],
+          "select": [
+           {
+            "set": {
+             "state": "last",
+             "to": {
+              "bind": "event.id"
+             }
+            }
+           }
+          ],
+          "signOut": [
+           {
+            "set": {
+             "state": "last",
+             "to": "sign-out"
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "size": "fill",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body-extra-small",
+        "children": "the organization's logo outside, the user's identity compact inside, labels, add organization",
+        "emphasis": "quiet"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "wrap": true,
+        "size": "fill",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "use": {
+          "component": "UserOrganizationMenu",
+          "version": "latest"
+         },
+         "args": {
+          "user": {
+           "id": "user-ines-carvalho",
+           "name": "Inês Carvalho",
+           "email": "ines@acme.test"
+          },
+          "items": [
+           {
+            "id": "settings",
+            "label": "Settings",
+            "icon": "settings"
+           },
+           {
+            "id": "my-memberships",
+            "label": "My memberships",
+            "icon": "briefcase"
+           },
+           {
+            "id": "my-invitations",
+            "label": "My invitations",
+            "icon": "inbox",
+            "count": 2
+           }
+          ],
+          "organizations": [
+           {
+            "id": "org-acme-corp",
+            "name": "Acme Corp",
+            "type": "Company"
+           },
+           {
+            "id": "org-harbour-lettings",
+            "name": "Harbour Lettings",
+            "type": "Agency"
+           },
+           {
+            "id": "org-northwind-traders",
+            "name": "Northwind Traders",
+            "type": "Company"
+           }
+          ],
+          "activeId": {
+           "bind": "state.org"
+          },
+          "modes": [
+           {
+            "id": "light",
+            "label": "Light"
+           },
+           {
+            "id": "dark",
+            "label": "Dark"
+           }
+          ],
+          "mode": {
+           "bind": "state.e"
+          },
+          "modeLayout": "switch",
+          "modeLabel": "Dark mode",
+          "modeIcon": "palette",
+          "picture": "organization",
+          "header": "compact",
+          "organizationsLabel": "Organizations",
+          "itemsLabel": "Account",
+          "addLabel": "Add organization",
+          "triggerIcon": "chevronsUpDown"
+         },
+         "on": {
+          "organizationChange": [
+           {
+            "set": {
+             "state": "org",
+             "to": {
+              "bind": "event.id"
+             }
+            }
+           }
+          ],
+          "organizationAdd": [
+           {
+            "set": {
+             "state": "last",
+             "to": "add organization"
+            }
+           }
+          ],
+          "modeChange": [
+           {
+            "set": {
+             "state": "e",
+             "to": {
+              "bind": "event.id"
+             }
+            }
+           }
+          ],
+          "select": [
+           {
+            "set": {
+             "state": "last",
+             "to": {
+              "bind": "event.id"
+             }
+            }
+           }
+          ],
+          "signOut": [
+           {
+            "set": {
+             "state": "last",
+             "to": "sign-out"
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "size": "fill",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body-extra-small",
+        "children": "the user's identity large inside, with a manage account button",
+        "emphasis": "quiet"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "wrap": true,
+        "size": "fill",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "use": {
+          "component": "UserOrganizationMenu",
+          "version": "latest"
+         },
+         "args": {
+          "user": {
+           "id": "user-ines-carvalho",
+           "name": "Inês Carvalho",
+           "email": "ines@acme.test"
+          },
+          "items": [
+           {
+            "id": "settings",
+            "label": "Settings",
+            "icon": "settings"
+           },
+           {
+            "id": "my-memberships",
+            "label": "My memberships",
+            "icon": "briefcase"
+           },
+           {
+            "id": "my-invitations",
+            "label": "My invitations",
+            "icon": "inbox",
+            "count": 2
+           }
+          ],
+          "organizations": [
+           {
+            "id": "org-acme-corp",
+            "name": "Acme Corp",
+            "type": "Company"
+           },
+           {
+            "id": "org-harbour-lettings",
+            "name": "Harbour Lettings",
+            "type": "Agency"
+           },
+           {
+            "id": "org-northwind-traders",
+            "name": "Northwind Traders",
+            "type": "Company"
+           }
+          ],
+          "activeId": {
+           "bind": "state.org"
+          },
+          "modes": [
+           {
+            "id": "light",
+            "label": "Light"
+           },
+           {
+            "id": "dark",
+            "label": "Dark"
+           }
+          ],
+          "mode": {
+           "bind": "state.f"
+          },
+          "modeLayout": "switch",
+          "modeLabel": "Dark mode",
+          "modeIcon": "palette",
+          "picture": "organization",
+          "header": "large",
+          "manageLabel": "Manage account",
+          "organizationsLabel": "Organizations",
+          "itemsLabel": "Account",
+          "addLabel": "Add organization",
+          "triggerIcon": "chevronsUpDown"
+         },
+         "on": {
+          "organizationChange": [
+           {
+            "set": {
+             "state": "org",
+             "to": {
+              "bind": "event.id"
+             }
+            }
+           }
+          ],
+          "organizationAdd": [
+           {
+            "set": {
+             "state": "last",
+             "to": "add organization"
+            }
+           }
+          ],
+          "modeChange": [
+           {
+            "set": {
+             "state": "f",
+             "to": {
+              "bind": "event.id"
+             }
+            }
+           }
+          ],
+          "select": [
+           {
+            "set": {
+             "state": "last",
+             "to": {
+              "bind": "event.id"
+             }
+            }
+           }
+          ],
+          "signOut": [
+           {
+            "set": {
+             "state": "last",
+             "to": "sign-out"
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "size": "fill",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body-extra-small",
+        "children": "the user outside, labels and add organization",
+        "emphasis": "quiet"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "wrap": true,
+        "size": "fill",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "use": {
+          "component": "UserOrganizationMenu",
+          "version": "latest"
+         },
+         "args": {
+          "user": {
+           "id": "user-ines-carvalho",
+           "name": "Inês Carvalho",
+           "email": "ines@acme.test"
+          },
+          "items": [
+           {
+            "id": "settings",
+            "label": "Settings",
+            "icon": "settings"
+           },
+           {
+            "id": "my-memberships",
+            "label": "My memberships",
+            "icon": "briefcase"
+           },
+           {
+            "id": "my-invitations",
+            "label": "My invitations",
+            "icon": "inbox",
+            "count": 2
+           }
+          ],
+          "organizations": [
+           {
+            "id": "org-acme-corp",
+            "name": "Acme Corp",
+            "type": "Company"
+           },
+           {
+            "id": "org-harbour-lettings",
+            "name": "Harbour Lettings",
+            "type": "Agency"
+           },
+           {
+            "id": "org-northwind-traders",
+            "name": "Northwind Traders",
+            "type": "Company"
+           }
+          ],
+          "activeId": {
+           "bind": "state.org"
+          },
+          "modes": [
+           {
+            "id": "light",
+            "label": "Light"
+           },
+           {
+            "id": "dark",
+            "label": "Dark"
+           }
+          ],
+          "mode": {
+           "bind": "state.g"
+          },
+          "modeLayout": "switch",
+          "modeLabel": "Dark mode",
+          "modeIcon": "palette",
+          "organizationsLabel": "Organizations",
+          "itemsLabel": "Account",
+          "addLabel": "Add organization",
+          "triggerIcon": "chevronsUpDown"
+         },
+         "on": {
+          "organizationChange": [
+           {
+            "set": {
+             "state": "org",
+             "to": {
+              "bind": "event.id"
+             }
+            }
+           }
+          ],
+          "organizationAdd": [
+           {
+            "set": {
+             "state": "last",
+             "to": "add organization"
+            }
+           }
+          ],
+          "modeChange": [
+           {
+            "set": {
+             "state": "g",
+             "to": {
+              "bind": "event.id"
+             }
+            }
+           }
+          ],
+          "select": [
+           {
+            "set": {
+             "state": "last",
+             "to": {
+              "bind": "event.id"
+             }
+            }
+           }
+          ],
+          "signOut": [
+           {
+            "set": {
+             "state": "last",
+             "to": "sign-out"
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-mode-control-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-mode-control",
+ "name": "default",
+ "title": "Mode control",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

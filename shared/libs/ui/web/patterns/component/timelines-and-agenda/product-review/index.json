@@ -1,0 +1,57 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "product-review",
+ "version": 1,
+ "surface": "web",
+ "measure": "md",
+ "root": {
+  "type": "Card",
+  "props": {
+   "status": "success"
+  },
+  "children": [
+   {
+    "type": "Content",
+    "props": {},
+    "children": [
+     {
+      "type": "Stack",
+      "props": {
+       "dir": "col",
+       "gap": 4
+      },
+      "children": [
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--heading4",
+         "children": "Product Review"
+        }
+       },
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--body",
+         "emphasis": "quiet",
+         "children": "2:00 PM - 3:00 PM"
+        }
+       },
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--body-small",
+         "emphasis": "quiet",
+         "children": "Conference Room A"
+        }
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

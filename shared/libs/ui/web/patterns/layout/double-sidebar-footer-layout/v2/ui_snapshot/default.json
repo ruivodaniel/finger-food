@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-layout-double-sidebar-footer-layout-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-layout-double-sidebar-footer-layout",
+ "name": "default",
+ "title": "Double sidebar layout with a page footer",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

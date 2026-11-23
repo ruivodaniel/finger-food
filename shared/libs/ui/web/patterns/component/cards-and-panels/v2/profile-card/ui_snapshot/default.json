@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-cards-and-panels-profile-card-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-cards-and-panels-profile-card",
+ "name": "default",
+ "title": "Cards and panels: profile card",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

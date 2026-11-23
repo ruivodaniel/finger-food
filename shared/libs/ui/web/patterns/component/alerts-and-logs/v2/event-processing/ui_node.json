@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-component-alerts-and-logs-event-processing",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Alerts and logs: event processing"
+}

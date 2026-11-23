@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-alerts-and-logs-error-alert-collapsed-default-v3",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-alerts-and-logs-error-alert-collapsed-v3",
+ "name": "default",
+ "title": "Alerts and logs: error alert collapsed",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

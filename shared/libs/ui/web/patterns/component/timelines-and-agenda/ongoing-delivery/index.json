@@ -1,0 +1,415 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "ongoing-delivery",
+ "version": 1,
+ "surface": "web",
+ "measure": "md",
+ "root": {
+  "type": "Stack",
+  "props": {
+   "dir": "col",
+   "gap": 16,
+   "className": "w-full max-w-lg"
+  },
+  "children": [
+   {
+    "type": "Text",
+    "props": {
+     "as": "span",
+     "element": "type--heading3",
+     "children": "Ongoing Delivery"
+    }
+   },
+   {
+    "type": "Card",
+    "props": {},
+    "children": [
+     {
+      "type": "Header",
+      "props": {},
+      "children": [
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "gap": 16,
+         "justify": "between",
+         "align": "start"
+        },
+        "children": [
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "col",
+           "gap": 4
+          },
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body-small",
+             "emphasis": "quiet",
+             "children": "Shipment number"
+            }
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--heading4",
+             "children": "PD-202411200146"
+            }
+           },
+           {
+            "type": "Stack",
+            "props": {
+             "dir": "row",
+             "gap": 8,
+             "align": "center"
+            },
+            "children": [
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--body-small",
+               "emphasis": "quiet",
+               "children": "19-11-2024 02:45 PM"
+              }
+             },
+             {
+              "type": "Badge",
+              "props": {
+               "status": "info",
+               "children": "On the way to deliver"
+              }
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--body",
+           "emphasis": "quiet"
+          },
+          "children": [
+           {
+            "type": "Icon",
+            "props": {
+             "name": "package",
+             "size": "lg"
+            }
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "Content",
+      "props": {},
+      "children": [
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "col",
+         "gap": 16
+        },
+        "children": [
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "row",
+           "gap": 12,
+           "align": "start"
+          },
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body",
+             "emphasis": "quiet"
+            },
+            "children": [
+             {
+              "type": "Icon",
+              "props": {
+               "name": "circle",
+               "size": "sm"
+              }
+             }
+            ]
+           },
+           {
+            "type": "Stack",
+            "props": {
+             "dir": "col",
+             "gap": 6,
+             "size": "fill"
+            },
+            "children": [
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--heading4",
+               "children": "Raju Textile"
+              }
+             },
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--body-small",
+               "emphasis": "quiet",
+               "children": "15, Nerhu Street, Pallipalayam, Namakkal - 652396"
+              }
+             },
+             {
+              "type": "Stack",
+              "props": {
+               "dir": "row",
+               "gap": 4,
+               "align": "baseline"
+              },
+              "children": [
+               {
+                "type": "Text",
+                "props": {
+                 "as": "span",
+                 "element": "type--body-small",
+                 "emphasis": "quiet",
+                 "children": "Contact on"
+                }
+               },
+               {
+                "type": "Text",
+                "props": {
+                 "as": "span",
+                 "element": "type--body-small",
+                 "children": "Raju | +919874563210"
+                }
+               }
+              ]
+             },
+             {
+              "type": "Card",
+              "props": {
+               "emphasis": "quiet"
+              },
+              "children": [
+               {
+                "type": "Content",
+                "props": {},
+                "children": [
+                 {
+                  "type": "Stack",
+                  "props": {
+                   "dir": "row",
+                   "gap": 12,
+                   "justify": "between",
+                   "align": "center"
+                  },
+                  "children": [
+                   {
+                    "type": "Stack",
+                    "props": {
+                     "dir": "col",
+                     "gap": 2
+                    },
+                    "children": [
+                     {
+                      "type": "Text",
+                      "props": {
+                       "as": "span",
+                       "element": "type--body-small",
+                       "children": "Package 1"
+                      }
+                     },
+                     {
+                      "type": "Text",
+                      "props": {
+                       "as": "span",
+                       "element": "type--body-small",
+                       "emphasis": "quiet",
+                       "children": "Notebooks | \u20b9200"
+                      }
+                     }
+                    ]
+                   },
+                   {
+                    "type": "Button",
+                    "props": {
+                     "emphasis": "quiet",
+                     "scale": "sm",
+                     "children": "Pickup package",
+                     "data-testid": "stop-0-action-btn"
+                    }
+                   }
+                  ]
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "row",
+           "gap": 12,
+           "align": "start"
+          },
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body",
+             "emphasis": "primary"
+            },
+            "children": [
+             {
+              "type": "Icon",
+              "props": {
+               "name": "mapPin",
+               "size": "sm"
+              }
+             }
+            ]
+           },
+           {
+            "type": "Stack",
+            "props": {
+             "dir": "col",
+             "gap": 6,
+             "size": "fill"
+            },
+            "children": [
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--heading4",
+               "children": "Home"
+              }
+             },
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--body-small",
+               "emphasis": "quiet",
+               "children": "145, Kovil Street, Pallipalayam, Namakkal - 652396"
+              }
+             },
+             {
+              "type": "Stack",
+              "props": {
+               "dir": "row",
+               "gap": 4,
+               "align": "baseline"
+              },
+              "children": [
+               {
+                "type": "Text",
+                "props": {
+                 "as": "span",
+                 "element": "type--body-small",
+                 "emphasis": "quiet",
+                 "children": "Contact on"
+                }
+               },
+               {
+                "type": "Text",
+                "props": {
+                 "as": "span",
+                 "element": "type--body-small",
+                 "children": "Raju | +919874563210"
+                }
+               }
+              ]
+             },
+             {
+              "type": "Card",
+              "props": {
+               "emphasis": "quiet"
+              },
+              "children": [
+               {
+                "type": "Content",
+                "props": {},
+                "children": [
+                 {
+                  "type": "Stack",
+                  "props": {
+                   "dir": "row",
+                   "gap": 12,
+                   "justify": "between",
+                   "align": "center"
+                  },
+                  "children": [
+                   {
+                    "type": "Stack",
+                    "props": {
+                     "dir": "col",
+                     "gap": 2
+                    },
+                    "children": [
+                     {
+                      "type": "Text",
+                      "props": {
+                       "as": "span",
+                       "element": "type--body-small",
+                       "children": "Package 1"
+                      }
+                     },
+                     {
+                      "type": "Text",
+                      "props": {
+                       "as": "span",
+                       "element": "type--body-small",
+                       "emphasis": "quiet",
+                       "children": "Notebooks | \u20b9200"
+                      }
+                     }
+                    ]
+                   },
+                   {
+                    "type": "Button",
+                    "props": {
+                     "emphasis": "quiet",
+                     "scale": "sm",
+                     "children": "Delivery package",
+                     "data-testid": "stop-1-action-btn"
+                    }
+                   }
+                  ]
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

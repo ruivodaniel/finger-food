@@ -212,7 +212,7 @@ describe("organization creation", () => {
 describe("creatableTypes", () => {
   it("returns only user-actor types (developer-only excluded)", () => {
     const { service } = build();
-    const ids = service.creatableTypes(PRIVATE).map((t) => t.id);
+    const ids = service.creatableTypes(testAc("user_1"), PRIVATE).map((t) => t.id);
     expect(ids).toEqual(["company", "platform_admin"]);
     expect(ids).not.toContain("system_admin");
   });

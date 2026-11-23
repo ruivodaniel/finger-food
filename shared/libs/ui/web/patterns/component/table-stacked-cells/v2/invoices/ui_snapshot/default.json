@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-table-stacked-cells-invoices-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-table-stacked-cells-invoices",
+ "name": "default",
+ "title": "Table stacked cells: invoices",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

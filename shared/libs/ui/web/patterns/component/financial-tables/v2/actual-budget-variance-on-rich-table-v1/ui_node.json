@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-component-financial-tables-actual-budget-variance-on-rich-table-v1",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "The same document, with the rich table pinned to version 1: it does not know a cell said as data"
+}

@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-financial-kpi-cards-yoy-and-qoq-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-financial-kpi-cards-yoy-and-qoq",
+ "name": "default",
+ "title": "Financial kpi cards: yoy and qoq",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

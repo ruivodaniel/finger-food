@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-primitive-table-default",
+ "version": 1,
+ "uiDataId": "ui-data-primitive-table",
+ "name": "default",
+ "title": "Table, its cases",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

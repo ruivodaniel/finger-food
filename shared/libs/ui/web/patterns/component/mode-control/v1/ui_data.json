@@ -1,0 +1,459 @@
+{
+ "id": "ui-data-pattern-component-mode-control",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-mode-control",
+ "kind": "component",
+ "name": "mode-control",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "mode-control",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "state": {
+   "a": "light",
+   "b": "light",
+   "c": "light",
+   "d": "system",
+   "e": "editor"
+  },
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "scale": "xl",
+    "size": "fill"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "scale": "sm",
+      "size": "fill"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body-extra-small",
+        "children": "switch, two modes, with their names",
+        "emphasis": "quiet"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "scale": "md",
+        "align": "center",
+        "wrap": true,
+        "size": "fill"
+       },
+       "children": [
+        {
+         "use": {
+          "component": "ModeControl",
+          "version": "latest"
+         },
+         "args": {
+          "modes": [
+           {
+            "id": "light",
+            "label": "Light"
+           },
+           {
+            "id": "dark",
+            "label": "Dark"
+           }
+          ],
+          "value": {
+           "bind": "state.a"
+          },
+          "label": "Mode",
+          "layout": "switch",
+          "showLabels": true
+         },
+         "on": {
+          "change": [
+           {
+            "set": {
+             "state": "a",
+             "to": {
+              "bind": "event.id"
+             }
+            }
+           }
+          ]
+         }
+        },
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body-extra-small",
+          "children": {
+           "concat": [
+            "chosen: ",
+            {
+             "bind": "state.a"
+            }
+           ]
+          },
+          "emphasis": "quiet"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "scale": "sm",
+      "size": "fill"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body-extra-small",
+        "children": "switch, two modes, alone",
+        "emphasis": "quiet"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "scale": "md",
+        "align": "center",
+        "wrap": true,
+        "size": "fill"
+       },
+       "children": [
+        {
+         "use": {
+          "component": "ModeControl",
+          "version": "latest"
+         },
+         "args": {
+          "modes": [
+           {
+            "id": "light",
+            "label": "Light"
+           },
+           {
+            "id": "dark",
+            "label": "Dark"
+           }
+          ],
+          "value": {
+           "bind": "state.b"
+          },
+          "label": "Mode",
+          "layout": "switch"
+         },
+         "on": {
+          "change": [
+           {
+            "set": {
+             "state": "b",
+             "to": {
+              "bind": "event.id"
+             }
+            }
+           }
+          ]
+         }
+        },
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body-extra-small",
+          "children": {
+           "concat": [
+            "chosen: ",
+            {
+             "bind": "state.b"
+            }
+           ]
+          },
+          "emphasis": "quiet"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "scale": "sm",
+      "size": "fill"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body-extra-small",
+        "children": "drop, two modes",
+        "emphasis": "quiet"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "scale": "md",
+        "align": "center",
+        "wrap": true,
+        "size": "fill"
+       },
+       "children": [
+        {
+         "use": {
+          "component": "ModeControl",
+          "version": "latest"
+         },
+         "args": {
+          "modes": [
+           {
+            "id": "light",
+            "label": "Light"
+           },
+           {
+            "id": "dark",
+            "label": "Dark"
+           }
+          ],
+          "value": {
+           "bind": "state.c"
+          },
+          "label": "Mode",
+          "layout": "drop"
+         },
+         "on": {
+          "change": [
+           {
+            "set": {
+             "state": "c",
+             "to": {
+              "bind": "event.id"
+             }
+            }
+           }
+          ]
+         }
+        },
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body-extra-small",
+          "children": {
+           "concat": [
+            "chosen: ",
+            {
+             "bind": "state.c"
+            }
+           ]
+          },
+          "emphasis": "quiet"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "scale": "sm",
+      "size": "fill"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body-extra-small",
+        "children": "drop, three modes",
+        "emphasis": "quiet"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "scale": "md",
+        "align": "center",
+        "wrap": true,
+        "size": "fill"
+       },
+       "children": [
+        {
+         "use": {
+          "component": "ModeControl",
+          "version": "latest"
+         },
+         "args": {
+          "modes": [
+           {
+            "id": "light",
+            "label": "Light"
+           },
+           {
+            "id": "dark",
+            "label": "Dark"
+           },
+           {
+            "id": "system",
+            "label": "System"
+           }
+          ],
+          "value": {
+           "bind": "state.d"
+          },
+          "label": "Mode",
+          "layout": "drop"
+         },
+         "on": {
+          "change": [
+           {
+            "set": {
+             "state": "d",
+             "to": {
+              "bind": "event.id"
+             }
+            }
+           }
+          ]
+         }
+        },
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body-extra-small",
+          "children": {
+           "concat": [
+            "chosen: ",
+            {
+             "bind": "state.d"
+            }
+           ]
+          },
+          "emphasis": "quiet"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "scale": "sm",
+      "size": "fill"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body-extra-small",
+        "children": "drop, five modes",
+        "emphasis": "quiet"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "scale": "md",
+        "align": "center",
+        "wrap": true,
+        "size": "fill"
+       },
+       "children": [
+        {
+         "use": {
+          "component": "ModeControl",
+          "version": "latest"
+         },
+         "args": {
+          "modes": [
+           {
+            "id": "viewer",
+            "label": "Viewer"
+           },
+           {
+            "id": "commenter",
+            "label": "Commenter"
+           },
+           {
+            "id": "editor",
+            "label": "Editor"
+           },
+           {
+            "id": "reviewer",
+            "label": "Reviewer"
+           },
+           {
+            "id": "admin",
+            "label": "Admin"
+           }
+          ],
+          "value": {
+           "bind": "state.e"
+          },
+          "label": "Mode",
+          "layout": "drop"
+         },
+         "on": {
+          "change": [
+           {
+            "set": {
+             "state": "e",
+             "to": {
+              "bind": "event.id"
+             }
+            }
+           }
+          ]
+         }
+        },
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body-extra-small",
+          "children": {
+           "concat": [
+            "chosen: ",
+            {
+             "bind": "state.e"
+            }
+           ]
+          },
+          "emphasis": "quiet"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

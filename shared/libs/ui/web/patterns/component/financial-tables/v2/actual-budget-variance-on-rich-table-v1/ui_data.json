@@ -1,0 +1,296 @@
+{
+ "id": "ui-data-pattern-component-financial-tables-actual-budget-variance-on-rich-table-v1",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-financial-tables-actual-budget-variance-on-rich-table-v1",
+ "kind": "component",
+ "name": "actual-budget-variance-on-rich-table-v1",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "actual-budget-variance-on-rich-table-v1",
+  "version": 1,
+  "surface": "web",
+  "root": {
+   "type": "Card",
+   "props": {
+    "style": {
+     "obj": {
+      "width": 620
+     }
+    }
+   },
+   "children": [
+    {
+     "type": "Content",
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "scale": "sm"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "justify": "between",
+          "align": "baseline"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "element": "type--body-small",
+            "emphasis": "quiet",
+            "children": "Operating expenses \u00b7 FY"
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "element": "type--body-extra-small",
+            "emphasis": "quiet",
+            "children": "USD millions"
+           }
+          }
+         ]
+        },
+        {
+         "type": "RichTable",
+         "props": {
+          "columns": [
+           {
+            "obj": {
+             "key": "line",
+             "name": "Line",
+             "width": 140
+            }
+           },
+           {
+            "obj": {
+             "key": "actual",
+             "name": "Actual",
+             "type": "number",
+             "width": 110,
+             "cell": {
+              "obj": {
+               "component": "DataNumber",
+               "align": "end",
+               "props": {
+                "obj": {
+                 "config": {
+                  "obj": {
+                   "mode": {
+                    "obj": {
+                     "kind": "fixedScale",
+                     "scale": "million",
+                     "n": 0
+                    }
+                   },
+                   "locale": "en-GB"
+                  }
+                 },
+                 "scale": "sm",
+                 "monospace": true
+                }
+               },
+               "from": {
+                "obj": {
+                 "value": "actual"
+                }
+               }
+              }
+             }
+            }
+           },
+           {
+            "obj": {
+             "key": "budget",
+             "name": "Budget",
+             "type": "number",
+             "width": 110,
+             "cell": {
+              "obj": {
+               "component": "DataNumber",
+               "align": "end",
+               "props": {
+                "obj": {
+                 "config": {
+                  "obj": {
+                   "mode": {
+                    "obj": {
+                     "kind": "fixedScale",
+                     "scale": "million",
+                     "n": 0
+                    }
+                   },
+                   "locale": "en-GB"
+                  }
+                 },
+                 "scale": "sm",
+                 "monospace": true,
+                 "emphasis": "quiet"
+                }
+               },
+               "from": {
+                "obj": {
+                 "value": "budget"
+                }
+               }
+              }
+             }
+            }
+           },
+           {
+            "obj": {
+             "key": "variance",
+             "name": "Variance",
+             "type": "number",
+             "width": 110,
+             "cell": {
+              "obj": {
+               "component": "DataNumber",
+               "align": "end",
+               "props": {
+                "obj": {
+                 "config": {
+                  "obj": {
+                   "mode": {
+                    "obj": {
+                     "kind": "fixedScale",
+                     "scale": "million",
+                     "n": 0
+                    }
+                   },
+                   "locale": "en-GB",
+                   "negative": "parentheses"
+                  }
+                 },
+                 "scale": "sm",
+                 "monospace": true
+                }
+               },
+               "from": {
+                "obj": {
+                 "value": "variance",
+                 "status": "status"
+                }
+               }
+              }
+             }
+            }
+           },
+           {
+            "obj": {
+             "key": "rel",
+             "name": "%",
+             "type": "number",
+             "width": 100,
+             "cell": {
+              "obj": {
+               "component": "DataNumber",
+               "align": "end",
+               "props": {
+                "obj": {
+                 "config": {
+                  "obj": {
+                   "mode": {
+                    "obj": {
+                     "kind": "fixedScale",
+                     "scale": "unit",
+                     "n": 1
+                    }
+                   },
+                   "locale": "en-GB",
+                   "representation": {
+                    "obj": {
+                     "kind": "percentage",
+                     "input": "points"
+                    }
+                   }
+                  }
+                 },
+                 "scale": "sm",
+                 "monospace": true
+                }
+               },
+               "from": {
+                "obj": {
+                 "value": "rel",
+                 "status": "status",
+                 "trend": "trend"
+                }
+               }
+              }
+             }
+            }
+           }
+          ],
+          "source": {
+           "obj": {
+            "kind": "authored",
+            "rows": [
+             {
+              "obj": {
+               "id": 1,
+               "line": "Personnel",
+               "actual": 18420000000.0,
+               "budget": 18000000000.0,
+               "variance": 420000000.0,
+               "rel": 2.3333,
+               "status": "error",
+               "trend": "arrowUp"
+              }
+             },
+             {
+              "obj": {
+               "id": 2,
+               "line": "Marketing",
+               "actual": 6140000000.0,
+               "budget": 7200000000.0,
+               "variance": -1060000000.0,
+               "rel": -14.7222,
+               "status": "success",
+               "trend": "arrowDown"
+              }
+             },
+             {
+              "obj": {
+               "id": 3,
+               "line": "R&D",
+               "actual": 11890000000.0,
+               "budget": 11500000000.0,
+               "variance": 390000000.0,
+               "rel": 3.3913,
+               "status": "error",
+               "trend": "arrowUp"
+              }
+             },
+             {
+              "obj": {
+               "id": 4,
+               "line": "G&A",
+               "actual": 4210000000.0,
+               "budget": 4300000000.0,
+               "variance": -90000000.0,
+               "rel": -2.093,
+               "status": "success",
+               "trend": "arrowDown"
+              }
+             }
+            ]
+           }
+          },
+          "editable": false,
+          "height": 220
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

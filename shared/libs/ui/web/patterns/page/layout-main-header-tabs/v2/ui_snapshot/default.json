@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-page-layout-main-header-tabs-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-page-layout-main-header-tabs",
+ "name": "default",
+ "title": "Full height sidebar, main with header and tabs, expandable",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

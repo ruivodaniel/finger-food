@@ -1,0 +1,7 @@
+{
+ "id": "route-primitive-dialog",
+ "version": 1,
+ "surface": "web",
+ "path": "/primitives/dialog",
+ "uiNodeId": "ui-node-primitive-dialog"
+}

@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-tabs-simple-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-tabs-simple",
+ "name": "default",
+ "title": "Tabs simple",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

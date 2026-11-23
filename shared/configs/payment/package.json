@@ -1,0 +1,9 @@
+{
+  "name": "@configs/payment",
+  "type": "module",
+  "private": true,
+  "main": "./index.ts",
+  "peerDependencies": {
+    "@modules/payment": "workspace:*"
+  }
+}

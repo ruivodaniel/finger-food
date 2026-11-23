@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-page-layout-toc-filters-1-page-header-second-page-header-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-page-layout-toc-filters-1-page-header-second-page-header",
+ "name": "default",
+ "title": "Page header, second page header, then page left sidebar and main",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

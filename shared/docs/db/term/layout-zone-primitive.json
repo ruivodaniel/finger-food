@@ -1,0 +1,24 @@
+{
+ "id": "term/layout-zone-primitive",
+ "kind": "term",
+ "title": "layout zone primitive",
+ "status": "approved",
+ "subjects": [
+  "ui"
+ ],
+ "owner": "libs/ui",
+ "tags": [
+  "ui"
+ ],
+ "paths": [
+  "shared/libs/ui/web/primitives/layouts"
+ ],
+ "term": {
+  "def": "A region of a page, emitting one `layout=\"\u2026\"` region: page, page header, main, main container, the sidebars, main body. Holds container zones. A layout is what a pattern composes out of layout zone primitives; the zone is not the layout.",
+  "aliases": [
+   "layout primitive",
+   "region"
+  ],
+  "proposed": true
+ }
+}

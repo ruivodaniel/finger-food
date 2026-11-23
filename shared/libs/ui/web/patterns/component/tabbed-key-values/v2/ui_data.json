@@ -1,0 +1,635 @@
+{
+ "id": "ui-data-pattern-component-tabbed-key-values",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-tabbed-key-values",
+ "kind": "component",
+ "name": "tabbed-key-values",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "tabbed-key-values",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Card",
+   "props": {
+    "className": "w-full max-w-md"
+   },
+   "children": [
+    {
+     "type": "Header",
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "justify": "between",
+        "align": "center",
+        "className": "w-full",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "as": "h3",
+          "element": "type--heading2",
+          "children": "14 Clifton Road"
+         }
+        },
+        {
+         "type": "Badge",
+         "props": {
+          "status": "success",
+          "scale": "xs"
+         },
+         "children": [
+          {
+           "type": "Badge",
+           "props": {
+            "scale": "3xs",
+            "concept": "dot",
+            "status": "success"
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-extra-small",
+            "children": "Eligible"
+           }
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Content",
+     "children": [
+      {
+       "type": "Tabs",
+       "props": {
+        "defaultValue": "mortgage",
+        "className": "w-full"
+       },
+       "children": [
+        {
+         "type": "TabsList",
+         "children": [
+          {
+           "type": "TabsTrigger",
+           "props": {
+            "value": "mortgage",
+            "children": "Mortgage"
+           }
+          },
+          {
+           "type": "TabsTrigger",
+           "props": {
+            "value": "tenancy",
+            "children": "Tenancy"
+           }
+          },
+          {
+           "type": "TabsTrigger",
+           "props": {
+            "value": "documents",
+            "children": "Documents"
+           }
+          }
+         ]
+        },
+        {
+         "type": "TabsContent",
+         "props": {
+          "value": "mortgage"
+         },
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col",
+            "concept": "keyValues",
+            "className": "w-full"
+           },
+           "children": [
+            {
+             "type": "List",
+             "props": {
+              "className": "w-full"
+             },
+             "children": [
+              {
+               "type": "ListItem",
+               "props": {
+                "className": "w-full"
+               },
+               "children": [
+                {
+                 "type": "Stack",
+                 "props": {
+                  "dir": "row",
+                  "justify": "between",
+                  "align": "baseline",
+                  "className": "w-full",
+                  "scale": "md"
+                 },
+                 "children": [
+                  {
+                   "type": "Text",
+                   "props": {
+                    "as": "span",
+                    "element": "type--body-small",
+                    "children": "Lender",
+                    "emphasis": "quiet"
+                   }
+                  },
+                  {
+                   "type": "Text",
+                   "props": {
+                    "as": "strong",
+                    "element": "type--body-small",
+                    "children": "Barclays"
+                   }
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "type": "ListItem",
+               "props": {
+                "className": "w-full"
+               },
+               "children": [
+                {
+                 "type": "Stack",
+                 "props": {
+                  "dir": "row",
+                  "justify": "between",
+                  "align": "baseline",
+                  "className": "w-full",
+                  "scale": "md"
+                 },
+                 "children": [
+                  {
+                   "type": "Text",
+                   "props": {
+                    "as": "span",
+                    "element": "type--body-small",
+                    "children": "Product",
+                    "emphasis": "quiet"
+                   }
+                  },
+                  {
+                   "type": "Text",
+                   "props": {
+                    "as": "strong",
+                    "element": "type--body-small",
+                    "children": "Portfolio Fixed 5 Year"
+                   }
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "type": "ListItem",
+               "props": {
+                "className": "w-full"
+               },
+               "children": [
+                {
+                 "type": "Stack",
+                 "props": {
+                  "dir": "row",
+                  "justify": "between",
+                  "align": "baseline",
+                  "className": "w-full",
+                  "scale": "md"
+                 },
+                 "children": [
+                  {
+                   "type": "Text",
+                   "props": {
+                    "as": "span",
+                    "element": "type--body-small",
+                    "children": "Rate",
+                    "emphasis": "quiet"
+                   }
+                  },
+                  {
+                   "type": "Text",
+                   "props": {
+                    "as": "strong",
+                    "element": "type--body-small",
+                    "children": "4.19% until Sept 2031"
+                   }
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "type": "ListItem",
+               "props": {
+                "className": "w-full"
+               },
+               "children": [
+                {
+                 "type": "Stack",
+                 "props": {
+                  "dir": "row",
+                  "justify": "between",
+                  "align": "baseline",
+                  "className": "w-full",
+                  "scale": "md"
+                 },
+                 "children": [
+                  {
+                   "type": "Text",
+                   "props": {
+                    "as": "span",
+                    "element": "type--body-small",
+                    "children": "Balance",
+                    "emphasis": "quiet"
+                   }
+                  },
+                  {
+                   "type": "Text",
+                   "props": {
+                    "as": "strong",
+                    "element": "type--body-small",
+                    "children": "£315,000"
+                   }
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "type": "ListItem",
+               "props": {
+                "className": "w-full"
+               },
+               "children": [
+                {
+                 "type": "Stack",
+                 "props": {
+                  "dir": "row",
+                  "justify": "between",
+                  "align": "baseline",
+                  "className": "w-full",
+                  "scale": "md"
+                 },
+                 "children": [
+                  {
+                   "type": "Text",
+                   "props": {
+                    "as": "span",
+                    "element": "type--body-small",
+                    "children": "Next payment",
+                    "emphasis": "quiet"
+                   }
+                  },
+                  {
+                   "type": "Text",
+                   "props": {
+                    "as": "strong",
+                    "element": "type--body-small",
+                    "children": "1 Nov · £1,166"
+                   }
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "TabsContent",
+         "props": {
+          "value": "tenancy"
+         },
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col",
+            "concept": "keyValues",
+            "className": "w-full"
+           },
+           "children": [
+            {
+             "type": "List",
+             "props": {
+              "className": "w-full"
+             },
+             "children": [
+              {
+               "type": "ListItem",
+               "props": {
+                "className": "w-full"
+               },
+               "children": [
+                {
+                 "type": "Stack",
+                 "props": {
+                  "dir": "row",
+                  "justify": "between",
+                  "align": "baseline",
+                  "className": "w-full",
+                  "scale": "md"
+                 },
+                 "children": [
+                  {
+                   "type": "Text",
+                   "props": {
+                    "as": "span",
+                    "element": "type--body-small",
+                    "children": "Tenant",
+                    "emphasis": "quiet"
+                   }
+                  },
+                  {
+                   "type": "Text",
+                   "props": {
+                    "as": "strong",
+                    "element": "type--body-small",
+                    "children": "J. & M. Okafor"
+                   }
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "type": "ListItem",
+               "props": {
+                "className": "w-full"
+               },
+               "children": [
+                {
+                 "type": "Stack",
+                 "props": {
+                  "dir": "row",
+                  "justify": "between",
+                  "align": "baseline",
+                  "className": "w-full",
+                  "scale": "md"
+                 },
+                 "children": [
+                  {
+                   "type": "Text",
+                   "props": {
+                    "as": "span",
+                    "element": "type--body-small",
+                    "children": "Rent",
+                    "emphasis": "quiet"
+                   }
+                  },
+                  {
+                   "type": "Text",
+                   "props": {
+                    "as": "strong",
+                    "element": "type--body-small",
+                    "children": "£1,850 / month"
+                   }
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "type": "ListItem",
+               "props": {
+                "className": "w-full"
+               },
+               "children": [
+                {
+                 "type": "Stack",
+                 "props": {
+                  "dir": "row",
+                  "justify": "between",
+                  "align": "baseline",
+                  "className": "w-full",
+                  "scale": "md"
+                 },
+                 "children": [
+                  {
+                   "type": "Text",
+                   "props": {
+                    "as": "span",
+                    "element": "type--body-small",
+                    "children": "Term",
+                    "emphasis": "quiet"
+                   }
+                  },
+                  {
+                   "type": "Text",
+                   "props": {
+                    "as": "strong",
+                    "element": "type--body-small",
+                    "children": "12 months from 1 Mar 2026"
+                   }
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "type": "ListItem",
+               "props": {
+                "className": "w-full"
+               },
+               "children": [
+                {
+                 "type": "Stack",
+                 "props": {
+                  "dir": "row",
+                  "justify": "between",
+                  "align": "baseline",
+                  "className": "w-full",
+                  "scale": "md"
+                 },
+                 "children": [
+                  {
+                   "type": "Text",
+                   "props": {
+                    "as": "span",
+                    "element": "type--body-small",
+                    "children": "Deposit",
+                    "emphasis": "quiet"
+                   }
+                  },
+                  {
+                   "type": "Text",
+                   "props": {
+                    "as": "strong",
+                    "element": "type--body-small",
+                    "children": "£2,130 · protected"
+                   }
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "TabsContent",
+         "props": {
+          "value": "documents"
+         },
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col",
+            "concept": "keyValues",
+            "className": "w-full"
+           },
+           "children": [
+            {
+             "type": "List",
+             "props": {
+              "className": "w-full"
+             },
+             "children": [
+              {
+               "type": "ListItem",
+               "props": {
+                "className": "w-full"
+               },
+               "children": [
+                {
+                 "type": "Stack",
+                 "props": {
+                  "dir": "row",
+                  "justify": "between",
+                  "align": "baseline",
+                  "className": "w-full",
+                  "scale": "md"
+                 },
+                 "children": [
+                  {
+                   "type": "Text",
+                   "props": {
+                    "as": "span",
+                    "element": "type--body-small",
+                    "children": "Valuation",
+                    "emphasis": "quiet"
+                   }
+                  },
+                  {
+                   "type": "Text",
+                   "props": {
+                    "as": "strong",
+                    "element": "type--body-small",
+                    "children": "Received 30 Oct"
+                   }
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "type": "ListItem",
+               "props": {
+                "className": "w-full"
+               },
+               "children": [
+                {
+                 "type": "Stack",
+                 "props": {
+                  "dir": "row",
+                  "justify": "between",
+                  "align": "baseline",
+                  "className": "w-full",
+                  "scale": "md"
+                 },
+                 "children": [
+                  {
+                   "type": "Text",
+                   "props": {
+                    "as": "span",
+                    "element": "type--body-small",
+                    "children": "Company accounts",
+                    "emphasis": "quiet"
+                   }
+                  },
+                  {
+                   "type": "Text",
+                   "props": {
+                    "as": "strong",
+                    "element": "type--body-small",
+                    "children": "Requested"
+                   }
+                  }
+                 ]
+                }
+               ]
+              },
+              {
+               "type": "ListItem",
+               "props": {
+                "className": "w-full"
+               },
+               "children": [
+                {
+                 "type": "Stack",
+                 "props": {
+                  "dir": "row",
+                  "justify": "between",
+                  "align": "baseline",
+                  "className": "w-full",
+                  "scale": "md"
+                 },
+                 "children": [
+                  {
+                   "type": "Text",
+                   "props": {
+                    "as": "span",
+                    "element": "type--body-small",
+                    "children": "Tenancy agreement",
+                    "emphasis": "quiet"
+                   }
+                  },
+                  {
+                   "type": "Text",
+                   "props": {
+                    "as": "strong",
+                    "element": "type--body-small",
+                    "children": "Received 2 Mar"
+                   }
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

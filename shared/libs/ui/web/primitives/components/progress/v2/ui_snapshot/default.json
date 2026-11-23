@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-primitive-progress-default",
+ "version": 1,
+ "uiDataId": "ui-data-primitive-progress",
+ "name": "default",
+ "title": "Progress, its cases",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

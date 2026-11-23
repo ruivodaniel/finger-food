@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-component-side-navigation-2-user-menu-only",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Side navigation 2: user menu only; no colour mode; a way back and the toggle at the top; expands as an overlay"
+}

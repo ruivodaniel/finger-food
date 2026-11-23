@@ -1,0 +1,252 @@
+{
+ "id": "doc/ui-markup-rules",
+ "kind": "doc",
+ "title": "Markup rules",
+ "status": "todo",
+ "subject": "ui",
+ "owner": "libs/ui",
+ "order": 2,
+ "tags": [
+  "ui",
+  "markup"
+ ],
+ "paths": [
+  "shared/libs/ui"
+ ],
+ "summary": "The rules a seed consumer follows when writing markup: library components only, position with three components, relative sizing as position, no absolute size, props that name what and the condition, never the look.",
+ "docId": "ui-markup-rules",
+ "doc": {
+  "axioms": [
+   {
+    "text": "Markup is written only with the components of the library: the zone primitives, the parts (Header, Content, Footer, Stack), Grid and the primitives. No HTML element, no class, no style."
+   },
+   {
+    "text": "Position is written with three components only: the layout zone primitives for the page, Stack for everything inside a container, Grid where cells must align in two dimensions."
+   },
+   {
+    "text": "No absolute size is ever written in markup; relative sizing (fill, hug) is position and is written in markup."
+   },
+   {
+    "text": "A prop on a component names what the component is or the condition it is in, never how it looks."
+   }
+  ],
+  "purpose": {
+   "intro": "The rules a seed consumer follows when writing a page, a slice component or a slice layout. The library's components carry the theme's attributes and the structural CSS on their own, so markup that uses only them is themed by any theme, read by anyone and checked by a tool. Every rule here closes one way a page used to drift: a utility class that fixed a width for one theme, a raw span that no theme could address, a flex row written by hand that broke when its parent changed."
+  },
+  "reference": [
+   {
+    "topic": "Only the library",
+    "statement": "Every node of a page is a component of the library. A text is `Text`, a link is `Link`, an image is `RemoteImage`, an icon is `Icon`, a button is `Button`, a box is a `Stack`, a region is its layout component.",
+    "claims": [
+     {
+      "text": "No HTML element is written: no div, span, button, input, img, p. The library's components render the element the theme can address; a raw element is invisible to every theme."
+     },
+     {
+      "text": "No class and no style: no utility class, no inline style, no CSS variable. A look is the theme's; a position is a Stack's or a layout component's."
+     },
+     {
+      "text": "A need the library cannot say is a library change (a seed contributor's work), never a one-off in a slice. The Markup dictionary lists what exists."
+     }
+    ],
+    "examples": [
+     {
+      "snippets": [
+       {
+        "caption": "tsx",
+        "code": "<Stack dir=\"row\" align=\"center\" gap={8}>\n  <Icon name=\"user\" />\n  <Text type=\"body\">Daniel Castro Ruivo</Text>\n  <Button emphasis=\"primary\" scale=\"sm\">Invite</Button>\n</Stack>"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "topic": "What a prop may say",
+    "statement": "A prop names what the component is or the condition it is in: `emphasis`, `status`, `scale`, `position`, `dir`, a breakpoint name. It never names a look.",
+    "claims": [
+     {
+      "text": "`scale` is a structural size name (`xs`…`xl`), never a measure; the theme holds the measure."
+     },
+     {
+      "text": "`emphasis` and `status` say the role and the condition; the theme says what each looks like."
+     },
+     {
+      "text": "Transient states (hover, active, focus) are the component's; markup never sets them."
+     }
+    ]
+   },
+   {
+    "topic": "The position axis",
+    "statement": "`position` says where a child stands in its parent and how much of the parent it takes. It is markup's axis: every value is one fixed set of structural classes, and the theme never reads it. Several values are space-separated.",
+    "claims": [
+     {
+      "text": "Relative sizing is position: `fill` and `hug` say how much of the parent a child takes, never how many pixels it is."
+     },
+     {
+      "text": "A dimension (a sidebar's width, a field's width, an avatar's size, a container's measure), a padding and a gap are the theme's, per element and per breakpoint. Markup never carries a number, with one exception: `Stack`'s `gap` and `pad`, the spacing of a composition."
+     }
+    ],
+    "imagesAndDiagrams": [
+     {
+      "type": "ascii",
+      "value": "| Value | Means |\n|---|---|\n| `fill` | grows into the leftover space of the parent's main axis, may shrink |\n| `hug` | as big as its content |\n| `start` `center` `end` `stretch` | where on the cross axis |\n| `clip` | may shrink below its content and truncates |"
+     }
+    ],
+    "examples": [
+     {
+      "snippets": [
+       {
+        "caption": "tsx",
+        "code": "<Stack dir=\"row\" gap={16}>\n  <Card position=\"fill\">…</Card>\n  <Card position=\"hug\">…</Card>\n</Stack>"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "topic": "Stack",
+    "claims": [
+     {
+      "text": "It replaces hand-rolled flex: where one would write a row with centred items, a gap and a growing child, one writes a Stack and gives the child `position=\"fill\"`."
+     },
+     {
+      "text": "Sizing is Figma's vocabulary, set on the child:"
+     },
+     {
+      "text": "`Stack` is the one primitive that takes spacing from markup: `gap` and `pad`, as a number (px) or a CSS length. No other primitive or component takes a spacing or size number; their spacing and dimensions come from the theme. `className` and inline `style` are deprecated and are not used for spacing."
+     },
+     {
+      "text": "A non-Stack child (a Card, a text node) takes the same behaviour through its `position` attribute."
+     },
+     {
+      "text": "Two-dimensional alignment, where cells line up across rows and columns, is not a Stack: it is a Grid."
+     }
+    ],
+    "statement": "`Stack` is the part zone with no surface: a box that is a row or a column and owns the gap, the alignment and the padding between its children, inside a container or another part. A non-uniform composition is nested stacks; a cell is another Stack. [[component stacking|Component stacking]] is this, at every depth.",
+    "examples": [
+     {
+      "snippets": [
+       {
+        "code": "// a card body: a header row, two equal columns, a footer\n<Stack dir=\"col\" gap={16} pad={20}>\n  <Stack dir=\"row\" align=\"center\" justify=\"between\">\n    <Title />                 {/* hugs left */}\n    <Icon name=\"ellipsis\" />  {/* hugs right — the gap fills between */}\n  </Stack>\n  <Stack dir=\"row\" gap={24}>\n    <Stack dir=\"col\" size=\"fill\">…</Stack>              {/* each column grows to half */}\n    <Stack dir=\"col\" size=\"fill\" align=\"end\">…</Stack>\n  </Stack>\n  <Footer />\n</Stack>",
+        "caption": "tsx"
+       }
+      ]
+     }
+    ],
+    "imagesAndDiagrams": [
+     {
+      "type": "ascii",
+      "value": "| Prop | Values | Default | Notes |\n|------|--------|---------|-------|\n| `dir` | `\"row\"` `\"col\"` | `\"col\"` | Main axis |\n| `gap` | `number` (px) or a CSS length | — | Space between children |\n| `align` | `\"start\"` `\"center\"` `\"end\"` `\"stretch\"` `\"baseline\"` | `stretch` (browser default) | Cross-axis alignment |\n| `justify` | `\"start\"` `\"center\"` `\"end\"` `\"between\"` `\"around\"` | `start` (browser default) | Main-axis distribution |\n| `wrap` | `boolean` | `false` | Children flow onto new lines (a cluster) |\n| `size` | `\"hug\"` `\"fill\"` `\"fixed\"` | `\"hug\"` | How this Stack sizes inside its parent Stack |\n| `pad` | `number` (px) or a CSS length | — | Inner padding |"
+     },
+     {
+      "type": "ascii",
+      "value": "| Size | Behaviour | Flex |\n|------|-----------|------|\n| `hug` | As small as its content | `flex: none` |\n| `fill` | Grows into the leftover space; may shrink below content size | `flex: 1 1 0; min-width/height: 0` |\n| `fixed` | Keeps its own width/height: the theme's (a field, an avatar) | `flex: none` |"
+     }
+    ]
+   },
+   {
+    "topic": "Grid",
+    "claims": [
+     {
+      "text": "A Grid, like a Stack, owns the gap between its cells; the cells own only their content."
+     }
+    ],
+    "statement": "A Grid aligns cells in two dimensions: columns line up across rows, and a row grows with its tallest cell. It is the component for a dashboard of tiles, a gallery, a board of draggable cells. Stacks inside a stack cannot keep columns aligned across rows; a Grid can."
+   },
+   {
+    "topic": "Responsive conditions",
+    "claims": [
+     {
+      "text": "A condition is a word, never a number."
+     },
+     {
+      "text": "A region names its states the same way, on the viewport; the theme says at which width a region takes which state."
+     }
+    ],
+    "statement": "A Stack names its arrangements by condition: `dir=\"row\" narrow=\"col\"` reads \"a row; a column when the nearest container is narrow\". The name is markup's; the width behind the name is the theme's (`breakpoints`), and the browser measures the nearest container that declares one.",
+    "examples": [
+     {
+      "snippets": [
+       {
+        "caption": "tsx",
+        "code": "<Card>                                 {/* the theme declares breakpoints on the card: it is the query container */}\n  <Stack dir=\"row\" narrow=\"col\" gap={12}>\n    <Avatar scale=\"md\" />\n    <Stack position=\"fill\">…</Stack>\n    <Memberships />\n  </Stack>\n</Card>"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "topic": "Scroll",
+    "claims": [
+     {
+      "text": "A container is one `Header`, one `Content`, one `Footer`, in that order, each optional; the content is the one that scrolls, and its padding scrolls with it."
+     },
+     {
+      "text": "`overflow` is per axis: `visible`, `clip`, `scroll`; a single value sets both."
+     },
+     {
+      "text": "The theme never says scroll: it gives the container its frame and the scrollbar its look."
+     }
+    ],
+    "statement": "Scroll is behaviour, so it is the markup's. The instance caps the container (`height` or `maxHeight` on the card, the theme's size on a sheet or a dialog) and names the part that scrolls: `<Content overflow={{ y: \"scroll\" }}>`. The header and the footer stay. `ScrollArea` is to sunset.",
+    "examples": [
+     {
+      "snippets": [
+       {
+        "code": "// a capped card: the content scrolls\n<Card style={{ maxHeight: 360 }}>\n  <Header>…</Header>\n  <Content overflow={{ y: \"scroll\" }}>\n    <LongList />\n  </Content>\n  <Footer>…</Footer>\n</Card>\n\n// a sheet: the theme gives the height, the content scrolls\n<SheetContent>\n  <Header>…</Header>\n  <Content overflow={{ y: \"scroll\" }}>…</Content>\n  <Footer>…</Footer>\n</SheetContent>",
+        "caption": "tsx"
+       }
+      ]
+     }
+    ],
+    "imagesAndDiagrams": [
+     {
+      "type": "ascii",
+      "value": "| Prop | Values | Default | Notes |\n|------|--------|---------|-------|\n| `overflow` | `visible` `clip` `scroll`, or `{ x, y }` | `visible` | On `Content` only |\n| `align` | `{ horizontal, vertical }` | — | Where the content places what it holds |"
+     }
+    ]
+   },
+   {
+    "topic": "What markup does and does not do",
+    "claims": [
+     {
+      "text": "Markup places with the layout components, Stack and Grid, and with `position`."
+     },
+     {
+      "text": "Markup names the condition with the axis props and the breakpoint names."
+     },
+     {
+      "text": "Markup writes no HTML element, no class, no style."
+     },
+     {
+      "text": "Markup writes no colour, font, shadow, radius, border, opacity, by class or by value."
+     },
+     {
+      "text": "Markup writes no absolute dimension: no width, height, max-width or min-width, by class or by style."
+     },
+     {
+      "text": "Markup uses a library component for every node: a text is Text, an image is RemoteImage, an icon is Icon."
+     }
+    ]
+   },
+   {
+    "topic": "How the components comply",
+    "statement": "The components carry the contract so that the page author does not: each renders the one element the theme addresses, with the `element` or `layout` attribute and the axis attributes the theme reads; Stack carries the structural CSS of composition. The Primitive authoring document says how a component is built to comply.",
+    "claims": []
+   }
+  ],
+  "review": {
+   "axioms": {
+    "state": "unreviewed"
+   },
+   "purpose": {
+    "state": "unreviewed"
+   },
+   "reference": {
+    "state": "unreviewed"
+   }
+  }
+ },
+ "audience": [
+  "seed-consumer"
+ ]
+}

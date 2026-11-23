@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-component-container-7-card-with-tabs",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Container 7: a card with tabs: the tabs stand in a second header, the content shows what the chosen tab says"
+}

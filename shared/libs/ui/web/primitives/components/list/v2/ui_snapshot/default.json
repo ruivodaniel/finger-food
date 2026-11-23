@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-primitive-list-default",
+ "version": 1,
+ "uiDataId": "ui-data-primitive-list",
+ "name": "default",
+ "title": "List, its cases",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

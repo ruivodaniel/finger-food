@@ -1,0 +1,100 @@
+{
+ "id": "doc/payment-catalog",
+ "kind": "doc",
+ "title": "Payment catalog",
+ "status": "converted",
+ "subject": "payment",
+ "owner": "main/slices/payment",
+ "order": 2,
+ "tags": [
+  "payment",
+  "catalog"
+ ],
+ "paths": [
+  "shared/configs/payment",
+  "apps/main/slices/seed/payment/shared/catalog.ts"
+ ],
+ "summary": "What an app configures for payment: the plans, the bundles, the marketplace terms and how long vendor credit refunds last.",
+ "docId": "payment-catalog",
+ "doc": {
+  "axioms": [],
+  "purpose": {
+   "intro": "The payment slice's configuration is data: one call to `definePaymentCatalog` in `shared/configs/payment/index.ts`. It validates when imported, so a bad entry fails dev, CI and boot alike, with every problem listed. The amounts in the seed are placeholders until product sets them. Money prices are not here: Stripe holds them."
+  },
+  "reference": [
+   {
+    "topic": "The seed's catalog",
+    "statement": "The whole file, without its header comment.",
+    "claims": [],
+    "examples": [
+     {
+      "snippets": [
+       {
+        "caption": "typescript",
+        "code": "import { definePaymentCatalog } from \"@modules/payment/shared\";\n\nexport const paymentCatalog = definePaymentCatalog({\n  plans: [\n    { key: \"starter\", name: \"Starter\", credits: 2000 },\n    { key: \"pro\", name: \"Pro\", credits: 6000 },\n  ],\n  bundles: [\n    { key: \"small\", name: \"Small bundle\", credits: 1000 },\n    { key: \"large\", name: \"Large bundle\", credits: 5000 },\n  ],\n  marketplace: {\n    platformFeePercent: 10,\n    sellerOrgTypes: [\"company\"],\n    sellerCountry: \"pt\",\n    currencies: [\"eur\"],\n  },\n  vendorCredits: { refundExpiresInDays: 180 },\n});"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "topic": "The fields",
+    "statement": "Keys are lower-case identifiers, unique across plans and bundles, because each one names an environment variable.",
+    "claims": [
+     {
+      "text": "`plans`: `key`, `name`, and the `credits` granted each paid period, which expire with the period. An optional `features` list is shown on the plan's card."
+     },
+     {
+      "text": "`bundles`: `key`, `name`, and the `credits` granted when paid, which never expire. At least one bundle is required."
+     },
+     {
+      "text": "`marketplace.platformFeePercent`: the share of each card sale the platform keeps (0–100). Stripe's processing fees come out of the vendor's balance on top."
+     },
+     {
+      "text": "`marketplace.sellerOrgTypes`: the organization types that may onboard as vendors."
+     },
+     {
+      "text": "`marketplace.sellerCountry`: the country vendors' Stripe accounts are opened in, which Stripe needs up front."
+     },
+     {
+      "text": "`marketplace.currencies`: the currencies a product may be priced in."
+     },
+     {
+      "text": "`vendorCredits.refundExpiresInDays`: how long a vendor's credit refund lasts (`null` never expires). A promotion carries the date the vendor chooses."
+     }
+    ]
+   },
+   {
+    "topic": "Rules that span the catalogs",
+    "statement": "A plan or a bundle is three things that must agree: an entry here, a Stripe price, and for a plan a price list in [[credits-catalog|the credits catalog]].",
+    "claims": [
+     {
+      "text": "Every plan and bundle key needs `STRIPE_PRICE_<KEY>` in the API's environment once Stripe is on (`starter` → `STRIPE_PRICE_STARTER`); a missing one refuses the boot. What Checkout charges is that Stripe price, so it must match the plan or bundle."
+     },
+     {
+      "text": "Every plan key needs a credits price list with the same key; the API refuses to boot otherwise."
+     },
+     {
+      "text": "Adding a plan: add it here, add its price list to the credits catalog, create the Stripe product with a recurring price, set `STRIPE_PRICE_<KEY>` (in `.env.example` for the shared sandbox), and add the price to the Customer Portal's plan switching. A bundle is the same without the price list and the portal, with a one-time price."
+     }
+    ]
+   }
+  ],
+  "review": {
+   "axioms": {
+    "state": "unreviewed"
+   },
+   "purpose": {
+    "state": "unreviewed"
+   },
+   "reference": {
+    "state": "unreviewed"
+   }
+  },
+  "converted": true
+ },
+ "audience": [
+  "seed-contributor",
+  "seed-consumer"
+ ]
+}

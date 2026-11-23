@@ -1,0 +1,135 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "launch-mvp",
+ "version": 1,
+ "surface": "web",
+ "measure": "md",
+ "root": {
+  "type": "Card",
+  "props": {},
+  "children": [
+   {
+    "type": "Content",
+    "props": {},
+    "children": [
+     {
+      "type": "Stack",
+      "props": {
+       "dir": "col",
+       "gap": 16
+      },
+      "children": [
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--heading4",
+         "children": "Launch MVP by end of quarter"
+        }
+       },
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "gap": 16,
+         "align": "center"
+        },
+        "children": [
+         {
+          "type": "Progress",
+          "props": {
+           "value": 75,
+           "className": "flex-1 min-w-0"
+          }
+         },
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--numbers",
+           "emphasis": "quiet",
+           "children": "75%"
+          }
+         }
+        ]
+       },
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "gap": 16,
+         "align": "center",
+         "justify": "between"
+        },
+        "children": [
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "row",
+           "gap": 8,
+           "align": "center",
+           "wrap": true
+          },
+          "children": [
+           {
+            "type": "Badge",
+            "props": {
+             "status": "info",
+             "children": "In Progress"
+            }
+           },
+           {
+            "type": "Badge",
+            "props": {
+             "emphasis": "tertiary",
+             "showIcon": true,
+             "iconName": "success",
+             "children": "3/4 steps"
+            }
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body-small",
+             "emphasis": "quiet"
+            },
+            "children": [
+             {
+              "type": "Icon",
+              "props": {
+               "name": "calendar",
+               "size": "xs"
+              }
+             },
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "children": " Dec 8, 2025"
+              }
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "Button",
+          "props": {
+           "emphasis": "secondary",
+           "buttonType": "text-icon",
+           "endIcon": "chevronRight",
+           "children": "View Goal",
+           "data-testid": "goal-0-view-btn"
+          }
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

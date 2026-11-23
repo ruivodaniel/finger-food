@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-component-status-dots-trailing-label",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Status dots: trailing label"
+}

@@ -1,0 +1,158 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "task-card",
+ "version": 1,
+ "surface": "web",
+ "measure": "md",
+ "root": {
+  "type": "Card",
+  "props": {
+   "className": "w-full max-w-3xl"
+  },
+  "children": [
+   {
+    "type": "Content",
+    "props": {},
+    "children": [
+     {
+      "type": "Stack",
+      "props": {
+       "dir": "row",
+       "gap": 16,
+       "align": "start"
+      },
+      "children": [
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--heading4",
+         "status": "error"
+        },
+        "children": [
+         {
+          "type": "Icon",
+          "props": {
+           "name": "circle",
+           "size": "md"
+          }
+         }
+        ]
+       },
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "col",
+         "gap": 10,
+         "size": "fill"
+        },
+        "children": [
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--heading4",
+           "children": "Review pull requests"
+          }
+         },
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--body",
+           "emphasis": "quiet",
+           "children": "Check and review the pending pull requests on GitHub"
+          }
+         },
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "row",
+           "gap": 8,
+           "align": "center",
+           "wrap": true
+          },
+          "children": [
+           {
+            "type": "Chip",
+            "props": {
+             "emphasis": "secondary",
+             "status": "error",
+             "scale": "sm",
+             "closable": false,
+             "showIcon": true,
+             "iconName": "calendar",
+             "children": "58 days ago"
+            }
+           },
+           {
+            "type": "Chip",
+            "props": {
+             "emphasis": "secondary",
+             "status": "neutral",
+             "scale": "sm",
+             "closable": false,
+             "showIcon": true,
+             "iconName": "folder",
+             "children": "GAIA UI"
+            }
+           },
+           {
+            "type": "Chip",
+            "props": {
+             "emphasis": "secondary",
+             "status": "info",
+             "scale": "sm",
+             "closable": false,
+             "showIcon": true,
+             "iconName": "tag",
+             "children": "Development"
+            }
+           },
+           {
+            "type": "Chip",
+            "props": {
+             "emphasis": "secondary",
+             "status": "neutral",
+             "scale": "sm",
+             "closable": false,
+             "showIcon": true,
+             "iconName": "tag",
+             "children": "Urgent"
+            }
+           },
+           {
+            "type": "Chip",
+            "props": {
+             "emphasis": "secondary",
+             "status": "error",
+             "scale": "sm",
+             "closable": false,
+             "showIcon": true,
+             "iconName": "arrowUp",
+             "children": "High"
+            }
+           }
+          ]
+         },
+         {
+          "type": "Chip",
+          "props": {
+           "emphasis": "tertiary",
+           "scale": "sm",
+           "closable": false,
+           "showIcon": true,
+           "iconName": "check",
+           "children": "1/2 subtasks"
+          }
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

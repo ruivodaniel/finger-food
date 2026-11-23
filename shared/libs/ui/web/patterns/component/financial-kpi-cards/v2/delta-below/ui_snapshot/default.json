@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-financial-kpi-cards-delta-below-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-financial-kpi-cards-delta-below",
+ "name": "default",
+ "title": "Financial kpi cards: delta below",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

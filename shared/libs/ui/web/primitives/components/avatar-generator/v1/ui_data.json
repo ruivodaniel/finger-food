@@ -1,0 +1,960 @@
+{
+ "id": "ui-data-primitive-avatar-generator",
+ "version": 1,
+ "uiNodeId": "ui-node-primitive-avatar-generator",
+ "kind": "component",
+ "name": "primitive-avatar-generator",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "primitive-avatar-generator",
+  "version": 1,
+  "surface": "web",
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "size": "fill",
+    "scale": "sm"
+   },
+   "children": [
+    {
+     "type": "Text",
+     "props": {
+      "as": "span",
+      "element": "type--body-extra-small",
+      "children": "a picture drawn from a seed, one kind from each group; each seed draws a different picture",
+      "emphasis": "quiet"
+     }
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "row",
+      "scale": "md",
+      "align": "center",
+      "size": "fill"
+     },
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "size": "fixed",
+        "concept": "example-label"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body-small",
+          "children": "dicebear-initials"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "AvatarGenerator",
+         "props": {
+          "seed": "user-ines-carvalho",
+          "picture": "dicebear-initials"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "AvatarGenerator",
+         "props": {
+          "seed": "user-tomas-ferreira",
+          "picture": "dicebear-initials"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "AvatarGenerator",
+         "props": {
+          "seed": "user-aisha-khan",
+          "picture": "dicebear-initials"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "AvatarGenerator",
+         "props": {
+          "seed": "user-joao-pereira",
+          "picture": "dicebear-initials"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "AvatarGenerator",
+         "props": {
+          "seed": "user-lena-hoffmann",
+          "picture": "dicebear-initials"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "row",
+      "scale": "md",
+      "align": "center",
+      "size": "fill"
+     },
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "size": "fixed",
+        "concept": "example-label"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body-small",
+          "children": "characters: dicebear-lorelei"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "AvatarGenerator",
+         "props": {
+          "seed": "user-ines-carvalho",
+          "picture": "dicebear-lorelei"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "AvatarGenerator",
+         "props": {
+          "seed": "user-tomas-ferreira",
+          "picture": "dicebear-lorelei"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "AvatarGenerator",
+         "props": {
+          "seed": "user-aisha-khan",
+          "picture": "dicebear-lorelei"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "AvatarGenerator",
+         "props": {
+          "seed": "user-joao-pereira",
+          "picture": "dicebear-lorelei"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "AvatarGenerator",
+         "props": {
+          "seed": "user-lena-hoffmann",
+          "picture": "dicebear-lorelei"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "row",
+      "scale": "md",
+      "align": "center",
+      "size": "fill"
+     },
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "size": "fixed",
+        "concept": "example-label"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body-small",
+          "children": "characters: space-bored"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "AvatarGenerator",
+         "props": {
+          "seed": "user-ines-carvalho",
+          "picture": "space-bored"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "AvatarGenerator",
+         "props": {
+          "seed": "user-tomas-ferreira",
+          "picture": "space-bored"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "AvatarGenerator",
+         "props": {
+          "seed": "user-aisha-khan",
+          "picture": "space-bored"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "AvatarGenerator",
+         "props": {
+          "seed": "user-joao-pereira",
+          "picture": "space-bored"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "AvatarGenerator",
+         "props": {
+          "seed": "user-lena-hoffmann",
+          "picture": "space-bored"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "row",
+      "scale": "md",
+      "align": "center",
+      "size": "fill"
+     },
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "size": "fixed",
+        "concept": "example-label"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body-small",
+          "children": "characters: morphatar-organic"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "AvatarGenerator",
+         "props": {
+          "seed": "user-ines-carvalho",
+          "picture": "morphatar-organic"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "AvatarGenerator",
+         "props": {
+          "seed": "user-tomas-ferreira",
+          "picture": "morphatar-organic"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "AvatarGenerator",
+         "props": {
+          "seed": "user-aisha-khan",
+          "picture": "morphatar-organic"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "AvatarGenerator",
+         "props": {
+          "seed": "user-joao-pereira",
+          "picture": "morphatar-organic"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "AvatarGenerator",
+         "props": {
+          "seed": "user-lena-hoffmann",
+          "picture": "morphatar-organic"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "row",
+      "scale": "md",
+      "align": "center",
+      "size": "fill"
+     },
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "size": "fixed",
+        "concept": "example-label"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body-small",
+          "children": "geometric: dicebear-shapes"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "AvatarGenerator",
+         "props": {
+          "seed": "user-ines-carvalho",
+          "picture": "dicebear-shapes"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "AvatarGenerator",
+         "props": {
+          "seed": "user-tomas-ferreira",
+          "picture": "dicebear-shapes"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "AvatarGenerator",
+         "props": {
+          "seed": "user-aisha-khan",
+          "picture": "dicebear-shapes"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "AvatarGenerator",
+         "props": {
+          "seed": "user-joao-pereira",
+          "picture": "dicebear-shapes"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "AvatarGenerator",
+         "props": {
+          "seed": "user-lena-hoffmann",
+          "picture": "dicebear-shapes"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "row",
+      "scale": "md",
+      "align": "center",
+      "size": "fill"
+     },
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "size": "fixed",
+        "concept": "example-label"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body-small",
+          "children": "geometric: jdenticon"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "AvatarGenerator",
+         "props": {
+          "seed": "user-ines-carvalho",
+          "picture": "jdenticon"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "AvatarGenerator",
+         "props": {
+          "seed": "user-tomas-ferreira",
+          "picture": "jdenticon"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "AvatarGenerator",
+         "props": {
+          "seed": "user-aisha-khan",
+          "picture": "jdenticon"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "AvatarGenerator",
+         "props": {
+          "seed": "user-joao-pereira",
+          "picture": "jdenticon"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "AvatarGenerator",
+         "props": {
+          "seed": "user-lena-hoffmann",
+          "picture": "jdenticon"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "row",
+      "scale": "md",
+      "align": "center",
+      "size": "fill"
+     },
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "size": "fixed",
+        "concept": "example-label"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body-small",
+          "children": "geometric: morphatar-geometric"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "AvatarGenerator",
+         "props": {
+          "seed": "user-ines-carvalho",
+          "picture": "morphatar-geometric"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "AvatarGenerator",
+         "props": {
+          "seed": "user-tomas-ferreira",
+          "picture": "morphatar-geometric"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "AvatarGenerator",
+         "props": {
+          "seed": "user-aisha-khan",
+          "picture": "morphatar-geometric"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "AvatarGenerator",
+         "props": {
+          "seed": "user-joao-pereira",
+          "picture": "morphatar-geometric"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "AvatarGenerator",
+         "props": {
+          "seed": "user-lena-hoffmann",
+          "picture": "morphatar-geometric"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "row",
+      "scale": "md",
+      "align": "center",
+      "size": "fill"
+     },
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "size": "fixed",
+        "concept": "example-label"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body-small",
+          "children": "organic: marble"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "AvatarGenerator",
+         "props": {
+          "seed": "user-ines-carvalho",
+          "picture": "marble"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "AvatarGenerator",
+         "props": {
+          "seed": "user-tomas-ferreira",
+          "picture": "marble"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "AvatarGenerator",
+         "props": {
+          "seed": "user-aisha-khan",
+          "picture": "marble"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "AvatarGenerator",
+         "props": {
+          "seed": "user-joao-pereira",
+          "picture": "marble"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "AvatarGenerator",
+         "props": {
+          "seed": "user-lena-hoffmann",
+          "picture": "marble"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "row",
+      "scale": "md",
+      "align": "center",
+      "size": "fill"
+     },
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "size": "fixed",
+        "concept": "example-label"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body-small",
+          "children": "organic: space-lumina"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "AvatarGenerator",
+         "props": {
+          "seed": "user-ines-carvalho",
+          "picture": "space-lumina"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "AvatarGenerator",
+         "props": {
+          "seed": "user-tomas-ferreira",
+          "picture": "space-lumina"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "AvatarGenerator",
+         "props": {
+          "seed": "user-aisha-khan",
+          "picture": "space-lumina"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "AvatarGenerator",
+         "props": {
+          "seed": "user-joao-pereira",
+          "picture": "space-lumina"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Avatar",
+       "props": {
+        "scale": "lg"
+       },
+       "children": [
+        {
+         "type": "AvatarGenerator",
+         "props": {
+          "seed": "user-lena-hoffmann",
+          "picture": "space-lumina"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

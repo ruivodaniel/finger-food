@@ -1,0 +1,149 @@
+{
+ "id": "ui-data-primitive-textarea",
+ "version": 1,
+ "uiNodeId": "ui-node-primitive-textarea",
+ "kind": "component",
+ "name": "primitive-textarea",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "primitive-textarea",
+  "version": 1,
+  "surface": "web",
+  "state": {
+   "state_default_value": "",
+   "status_error_value": "",
+   "state_disabled_value": ""
+  },
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "align": "center",
+    "scale": "2xl"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "status + state"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Text",
+         "children": [
+          {
+           "type": "Textarea",
+           "on": {
+            "change": [
+             {
+              "set": {
+               "state": "state_default_value",
+               "to": {
+                "bind": "event"
+               }
+              }
+             }
+            ]
+           },
+           "props": {
+            "scale": "md",
+            "disabled": false,
+            "placeholder": "Default",
+            "rows": 3,
+            "value": {
+             "bind": "state.state_default_value"
+            },
+            "data-testid": "textarea-status-state-1-input"
+           }
+          },
+          {
+           "type": "Textarea",
+           "on": {
+            "change": [
+             {
+              "set": {
+               "state": "status_error_value",
+               "to": {
+                "bind": "event"
+               }
+              }
+             }
+            ]
+           },
+           "props": {
+            "scale": "md",
+            "status": "error",
+            "disabled": false,
+            "placeholder": "Error state",
+            "rows": 3,
+            "value": {
+             "bind": "state.status_error_value"
+            },
+            "data-testid": "textarea-status-state-2-input"
+           }
+          },
+          {
+           "type": "Textarea",
+           "on": {
+            "change": [
+             {
+              "set": {
+               "state": "state_disabled_value",
+               "to": {
+                "bind": "event"
+               }
+              }
+             }
+            ]
+           },
+           "props": {
+            "scale": "md",
+            "disabled": true,
+            "placeholder": "Disabled",
+            "rows": 3,
+            "value": {
+             "bind": "state.state_disabled_value"
+            },
+            "data-testid": "textarea-status-state-3-input"
+           }
+          }
+         ],
+         "props": {
+          "as": "div",
+          "className": "flex flex-col gap-2",
+          "style": {
+           "obj": {
+            "maxWidth": 320
+           }
+          }
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

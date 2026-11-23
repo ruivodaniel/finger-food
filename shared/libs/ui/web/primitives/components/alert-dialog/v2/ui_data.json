@@ -1,0 +1,396 @@
+{
+ "id": "ui-data-primitive-alert-dialog",
+ "version": 1,
+ "uiNodeId": "ui-node-primitive-alert-dialog",
+ "kind": "component",
+ "name": "primitive-alert-dialog",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "primitive-alert-dialog",
+  "version": 1,
+  "surface": "web",
+  "state": {
+   "neutral_open": false,
+   "warning_open": false,
+   "destructive_open": false
+  },
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "align": "center",
+    "scale": "2xl"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "neutral"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "AlertDialog",
+         "children": [
+          {
+           "type": "AlertDialogTrigger",
+           "children": [
+            {
+             "type": "Button",
+             "props": {
+              "emphasis": "secondary",
+              "children": "Open neutral alert",
+              "data-testid": "alert-dialog-neutral-1-btn"
+             }
+            }
+           ],
+           "props": {
+            "asChild": true
+           }
+          },
+          {
+           "type": "AlertDialogContent",
+           "children": [
+            {
+             "type": "Header",
+             "children": [
+              {
+               "type": "AlertDialogTitle",
+               "props": {
+                "children": "Are you sure?"
+               }
+              },
+              {
+               "type": "AlertDialogDescription",
+               "props": {
+                "children": "This action will proceed with the selected operation. Please confirm you want to continue."
+               }
+              }
+             ]
+            },
+            {
+             "type": "Footer",
+             "children": [
+              {
+               "type": "AlertDialogCancel",
+               "props": {
+                "children": "Cancel"
+               }
+              },
+              {
+               "type": "AlertDialogAction",
+               "on": {
+                "click": [
+                 {
+                  "set": {
+                   "state": "neutral_open",
+                   "to": false
+                  }
+                 }
+                ]
+               },
+               "props": {
+                "children": "Continue",
+                "data-testid": "alert-dialog-neutral-2-card"
+               }
+              }
+             ]
+            }
+           ],
+           "props": {
+            "status": "neutral"
+           }
+          }
+         ],
+         "on": {
+          "openChange": [
+           {
+            "set": {
+             "state": "neutral_open",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "open": {
+           "bind": "state.neutral_open"
+          },
+          "data-testid": "alert-dialog-neutral-3-dialog"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "warning"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "AlertDialog",
+         "children": [
+          {
+           "type": "AlertDialogTrigger",
+           "children": [
+            {
+             "type": "Button",
+             "props": {
+              "emphasis": "secondary",
+              "children": "Open warning alert",
+              "data-testid": "alert-dialog-warning-1-btn"
+             }
+            }
+           ],
+           "props": {
+            "asChild": true
+           }
+          },
+          {
+           "type": "AlertDialogContent",
+           "children": [
+            {
+             "type": "Header",
+             "children": [
+              {
+               "type": "AlertDialogTitle",
+               "props": {
+                "children": "Proceed with caution"
+               }
+              },
+              {
+               "type": "AlertDialogDescription",
+               "props": {
+                "children": "This action may have unintended side effects. Please review carefully before confirming."
+               }
+              }
+             ]
+            },
+            {
+             "type": "Footer",
+             "children": [
+              {
+               "type": "AlertDialogCancel",
+               "props": {
+                "children": "Cancel"
+               }
+              },
+              {
+               "type": "AlertDialogAction",
+               "on": {
+                "click": [
+                 {
+                  "set": {
+                   "state": "warning_open",
+                   "to": false
+                  }
+                 }
+                ]
+               },
+               "props": {
+                "children": "Proceed anyway",
+                "data-testid": "alert-dialog-warning-2-card"
+               }
+              }
+             ]
+            }
+           ],
+           "props": {
+            "status": "warning"
+           }
+          }
+         ],
+         "on": {
+          "openChange": [
+           {
+            "set": {
+             "state": "warning_open",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "open": {
+           "bind": "state.warning_open"
+          },
+          "data-testid": "alert-dialog-warning-3-dialog"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "destructive"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "AlertDialog",
+         "children": [
+          {
+           "type": "AlertDialogTrigger",
+           "children": [
+            {
+             "type": "Button",
+             "props": {
+              "emphasis": "primary",
+              "status": "destructive",
+              "children": "Open destructive alert",
+              "data-testid": "alert-dialog-destructive-1-btn"
+             }
+            }
+           ],
+           "props": {
+            "asChild": true
+           }
+          },
+          {
+           "type": "AlertDialogContent",
+           "children": [
+            {
+             "type": "Header",
+             "children": [
+              {
+               "type": "AlertDialogTitle",
+               "props": {
+                "children": "Delete this item?"
+               }
+              },
+              {
+               "type": "AlertDialogDescription",
+               "props": {
+                "children": "This action cannot be undone. This will permanently delete the item and remove all associated data from our servers."
+               }
+              }
+             ]
+            },
+            {
+             "type": "Footer",
+             "children": [
+              {
+               "type": "AlertDialogCancel",
+               "props": {
+                "children": "Cancel"
+               }
+              },
+              {
+               "type": "AlertDialogAction",
+               "on": {
+                "click": [
+                 {
+                  "set": {
+                   "state": "destructive_open",
+                   "to": false
+                  }
+                 }
+                ]
+               },
+               "props": {
+                "children": "Delete",
+                "data-testid": "alert-dialog-destructive-2-card"
+               }
+              }
+             ]
+            }
+           ],
+           "props": {
+            "status": "destructive"
+           }
+          }
+         ],
+         "on": {
+          "openChange": [
+           {
+            "set": {
+             "state": "destructive_open",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "open": {
+           "bind": "state.destructive_open"
+          },
+          "data-testid": "alert-dialog-destructive-3-dialog"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

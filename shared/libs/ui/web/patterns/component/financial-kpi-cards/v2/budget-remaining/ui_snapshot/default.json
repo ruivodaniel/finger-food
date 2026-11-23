@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-financial-kpi-cards-budget-remaining-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-financial-kpi-cards-budget-remaining",
+ "name": "default",
+ "title": "Financial kpi cards: budget remaining",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

@@ -1,0 +1,7 @@
+{
+ "id": "route-pattern-page-layout-header-tabs",
+ "version": 1,
+ "surface": "web",
+ "path": "/patterns/page/layout-header-tabs",
+ "uiNodeId": "ui-node-pattern-page-layout-header-tabs"
+}

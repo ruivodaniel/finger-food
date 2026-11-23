@@ -1,0 +1,24 @@
+{
+ "id": "doc/skill-add-to-the-core",
+ "kind": "doc",
+ "title": "add to the core",
+ "status": "todo",
+ "subject": "skills",
+ "owner": "skills/seed-contributor/main-core",
+ "tags": [
+  "skills",
+  "seed-contributor",
+  "main-core"
+ ],
+ "paths": [],
+ "summary": "",
+ "docId": "skill-add-to-the-core",
+ "doc": {
+  "axioms": [],
+  "purpose": {},
+  "reference": []
+ },
+ "audience": [
+  "seed-contributor"
+ ]
+}

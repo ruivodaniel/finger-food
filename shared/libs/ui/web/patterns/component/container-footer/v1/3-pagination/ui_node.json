@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-component-container-footer-3-pagination",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Container footer 3: pagination, the range at the left and the pages at the right"
+}

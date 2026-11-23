@@ -23,10 +23,12 @@ import { processEslintControls } from "./processors/eslint.processor.ts";
 import { processMarkupValidationControls } from "./processors/markup-validation.processor.ts";
 import { processJsxExternalAllowlistControls } from "./processors/jsx-external-allowlist.processor.ts";
 import { processJsxAstControls } from "./processors/jsx-ast.processor.ts";
+import { processSlotRulesControls } from "./processors/slot-rules.processor.ts";
 import { processCastBoundaryControls } from "./processors/cast-boundary.processor.ts";
 import { processDslCoherenceControls } from "./processors/dsl-coherence.processor.ts";
 import { processPatternTagsControls } from "./processors/pattern-tags.processor.ts";
 import { processLayerDisciplineControls } from "./processors/layer-discipline.processor.ts";
+import { processWebBoundariesControls } from "./processors/web-boundaries.processor.ts";
 
 // ── Constants ────────────────────────────────────────────────────
 
@@ -169,10 +171,24 @@ function aggregateViolations(violations: LintViolation[]): LintViolation[] {
 
 // ── Build report ─────────────────────────────────────────────────
 
-function buildReport(violations: LintViolation[], durationMs: number): LintReport {
+// Every processor the runner calls. The report lists each one that has controls, even with no violations.
+const PROCESSORS = [
+  "import-export", "content-patterns", "metrics", "structure", "domain-ownership", "eslint",
+  "markup-validation", "jsx-external-allowlist", "jsx-ast", "slot-rules", "cast-boundary", "dsl-coherence",
+  "pattern-tags", "layer-discipline", "web-boundaries",
+];
+
+function hasControls(controlSets: LoadedControlSet[], processor: string): boolean {
+  return controlSets.some((cs) => {
+    const c = cs.controls[processor as keyof typeof cs.controls];
+    return Array.isArray(c) ? c.length > 0 : c !== undefined;
+  });
+}
+
+function buildReport(violations: LintViolation[], durationMs: number, processors: string[]): LintReport {
   const summary = { errors: 0, warnings: 0, infos: 0, total: violations.length };
   const byOwner: LintReport["byOwner"] = {};
-  const byProcessor: LintReport["byProcessor"] = {};
+  const byProcessor: LintReport["byProcessor"] = Object.fromEntries(processors.map((p) => [p, { errors: 0, warnings: 0, infos: 0 }]));
 
   for (const v of violations) {
     if (v.severity === "error") summary.errors++;
@@ -255,6 +271,15 @@ async function main(): Promise<void> {
       console.log(`  jsx-ast: ${v.length} violation(s)`);
       return v;
     })(),
+    // Slot rules — container × slot × child rules (both .tsx and .json)
+    (async () => {
+      const globalCs = controlSets.find((cs) => cs.owner === "global");
+      const config = globalCs?.controls["slot-rules"];
+      if (!config) return [] as LintViolation[];
+      const v = await processSlotRulesControls(config, { rootDir: processorCtx.rootDir, ignorePatterns: processorCtx.ignorePatterns });
+      console.log(`  slot-rules: ${v.length} violation(s)`);
+      return v;
+    })(),
     // Cast boundary — allowlist-gated `as` cast enforcement
     processCastBoundaryControls(controlSets, processorCtx)
       .then((v) => { console.log(`  cast-boundary: ${v.length} violation(s)`); return v; }),
@@ -267,6 +292,9 @@ async function main(): Promise<void> {
     // Layer discipline — universal layer ordering invariant (model<repo<service<router, api<hooks<components<pages)
     processLayerDisciplineControls(controlSets, processorCtx)
       .then((v) => { console.log(`  layer-discipline: ${v.length} violation(s)`); return v; }),
+    // Web boundaries — the web import boundaries, resolved per import against web-layout.ts
+    processWebBoundariesControls(controlSets, processorCtx)
+      .then((v) => { console.log(`  web-boundaries: ${v.length} violation(s)`); return v; }),
   ]);
 
   // 4. Merge all violations
@@ -282,7 +310,7 @@ async function main(): Promise<void> {
   // 5. Aggregate + build report
   const aggregated = aggregateViolations(allViolations);
   const durationMs = Date.now() - startTime;
-  const report = buildReport(aggregated, durationMs);
+  const report = buildReport(aggregated, durationMs, PROCESSORS.filter((p) => hasControls(controlSets, p)));
 
   // Print summary
   console.log("\n────────────────────────────────────────────");

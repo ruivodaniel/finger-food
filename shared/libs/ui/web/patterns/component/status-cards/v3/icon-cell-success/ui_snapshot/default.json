@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-status-cards-icon-cell-success-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-status-cards-icon-cell-success",
+ "name": "default",
+ "title": "Status cards: icon cell success",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

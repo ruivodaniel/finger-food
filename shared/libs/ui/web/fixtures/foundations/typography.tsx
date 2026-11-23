@@ -1,5 +1,5 @@
-import { FixtureBody, Row, Token } from "../_chrome";
-import { matching, useThemeVars } from "../_theme-vars";
+import { FixtureBody, Row, Token } from "../../lib/_chrome";
+import { matching, useThemeVars } from "../../lib/_theme-vars";
 
 /**
  * Typography — the type scales and the font families. Scales are found in

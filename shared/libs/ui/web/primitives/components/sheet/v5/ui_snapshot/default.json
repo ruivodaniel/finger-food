@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-primitive-sheet-v3-default",
+ "version": 1,
+ "uiDataId": "ui-data-primitive-sheet-v3",
+ "name": "default",
+ "title": "Sheet, by side and by scale",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

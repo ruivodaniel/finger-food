@@ -1,0 +1,161 @@
+{
+ "id": "ui-data-pattern-component-hero-with-figures-one-big-number",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-hero-with-figures-one-big-number",
+ "kind": "component",
+ "name": "one-big-number",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "one-big-number",
+  "version": 1,
+  "surface": "web",
+  "measure": "lg",
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "concept": "hero",
+    "className": "w-full max-w-5xl"
+   },
+   "children": [
+    {
+     "type": "Card",
+     "props": {
+      "emphasis": "hero",
+      "className": "w-full"
+     },
+     "children": [
+      {
+       "type": "Content",
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "className": "w-full",
+          "scale": "2xl"
+         },
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col",
+            "size": "fixed",
+            "className": "w-1/3",
+            "align": "start",
+            "scale": "sm"
+           },
+           "children": [
+            {
+             "type": "Label",
+             "props": {
+              "children": "Net asset value"
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--numbers-extra-large",
+              "children": "€1.24M"
+             }
+            },
+            {
+             "type": "Badge",
+             "props": {
+              "scale": "xs",
+              "children": "+2.1% this quarter",
+              "status": "success"
+             }
+            }
+           ]
+          },
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col",
+            "size": "fill",
+            "scale": "sm"
+           },
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "as": "h2",
+              "element": "type--heading1",
+              "children": "One capital call is due on the 20th"
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "p",
+              "element": "type--body",
+              "children": "Two holdings published new valuations and distributions for the quarter were paid on the 3rd.",
+              "emphasis": "quiet"
+             }
+            },
+            {
+             "type": "Stack",
+             "props": {
+              "dir": "row",
+              "className": "pt-1",
+              "scale": "sm"
+             },
+             "children": [
+              {
+               "type": "Badge",
+               "props": {
+                "scale": "xs",
+                "emphasis": "quiet",
+                "children": "8 holdings"
+               }
+              },
+              {
+               "type": "Badge",
+               "props": {
+                "scale": "xs",
+                "emphasis": "quiet",
+                "children": "1 capital call"
+               }
+              }
+             ]
+            },
+            {
+             "type": "Stack",
+             "props": {
+              "dir": "row",
+              "className": "pt-3",
+              "scale": "md"
+             },
+             "children": [
+              {
+               "type": "Button",
+               "props": {
+                "emphasis": "secondary",
+                "children": "See the capital call"
+               }
+              },
+              {
+               "type": "Button",
+               "props": {
+                "emphasis": "tertiary",
+                "children": "Download statement"
+               }
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-container-1-card-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-container-1-card",
+ "name": "default",
+ "title": "Container 1: the card",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

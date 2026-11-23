@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-top-nav-platform-owner-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-top-nav-platform-owner",
+ "name": "default",
+ "title": "Top nav: platform owner",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

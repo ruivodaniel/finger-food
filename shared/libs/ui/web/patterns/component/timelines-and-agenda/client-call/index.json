@@ -1,0 +1,57 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "client-call",
+ "version": 1,
+ "surface": "web",
+ "measure": "md",
+ "root": {
+  "type": "Card",
+  "props": {
+   "status": "error"
+  },
+  "children": [
+   {
+    "type": "Content",
+    "props": {},
+    "children": [
+     {
+      "type": "Stack",
+      "props": {
+       "dir": "col",
+       "gap": 4
+      },
+      "children": [
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--heading4",
+         "children": "Client Call"
+        }
+       },
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--body",
+         "emphasis": "quiet",
+         "children": "4:00 PM - 5:00 PM"
+        }
+       },
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--body-small",
+         "emphasis": "quiet",
+         "children": "Zoom"
+        }
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

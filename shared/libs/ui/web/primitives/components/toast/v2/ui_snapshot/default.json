@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-primitive-toast-default",
+ "version": 1,
+ "uiDataId": "ui-data-primitive-toast",
+ "name": "default",
+ "title": "Toast, its cases",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

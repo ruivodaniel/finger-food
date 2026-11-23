@@ -1,0 +1,181 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "stat-tile",
+ "version": 1,
+ "surface": "web",
+ "measure": "md",
+ "root": {
+  "type": "Tile",
+  "props": {
+   "className": "w-96"
+  },
+  "children": [
+   {
+    "type": "Stack",
+    "props": {
+     "dir": "col",
+     "gap": 20
+    },
+    "children": [
+     {
+      "type": "Stack",
+      "props": {
+       "dir": "row",
+       "align": "center",
+       "gap": 12
+      },
+      "children": [
+       {
+        "type": "Tile",
+        "props": {
+         "status": "success"
+        },
+        "children": [
+         {
+          "type": "Icon",
+          "props": {
+           "name": "fileText",
+           "size": "md"
+          }
+         }
+        ]
+       },
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--heading3",
+         "className": "flex-1 min-w-0",
+         "children": "Compliance Rate"
+        }
+       },
+       {
+        "type": "Icon",
+        "props": {
+         "name": "moreVertical",
+         "size": "sm"
+        }
+       }
+      ]
+     },
+     {
+      "type": "Stack",
+      "props": {
+       "dir": "row",
+       "align": "baseline",
+       "gap": 12,
+       "wrap": true
+      },
+      "children": [
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "align": "baseline",
+         "gap": 2
+        },
+        "children": [
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--numbers-extra-large",
+           "children": "98"
+          }
+         },
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--numbers",
+           "children": "%"
+          }
+         }
+        ]
+       },
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "align": "baseline",
+         "gap": 6
+        },
+        "children": [
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--body",
+           "status": "success"
+          },
+          "children": [
+           {
+            "type": "Icon",
+            "props": {
+             "name": "arrowUp",
+             "size": "xs"
+            }
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "children": " 8.3%"
+            }
+           }
+          ]
+         },
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--body",
+           "emphasis": "quiet",
+           "children": "increased vs last month"
+          }
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "Tile",
+      "props": {
+       "emphasis": "quiet"
+      },
+      "children": [
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "align": "center",
+         "gap": 12
+        },
+        "children": [
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--body",
+           "emphasis": "quiet",
+           "className": "flex-1 min-w-0",
+           "children": "4 departments meeting the target of 95%, and 2 departments critically below 90%"
+          }
+         },
+         {
+          "type": "Icon",
+          "props": {
+           "name": "chevronRight",
+           "size": "sm"
+          }
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

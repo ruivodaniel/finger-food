@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-primitive-scroll-area",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Scroll area"
+}

@@ -1,0 +1,166 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "nav-list",
+ "version": 1,
+ "surface": "web",
+ "measure": "md",
+ "root": {
+  "type": "List",
+  "props": {
+   "className": "w-full max-w-md"
+  },
+  "children": [
+   {
+    "type": "ListItem",
+    "props": {
+     "className": "gap-3"
+    },
+    "children": [
+     {
+      "type": "Badge",
+      "props": {
+       "status": "success",
+       "scale": "3xs",
+       "aria-label": "pass"
+      }
+     },
+     {
+      "type": "ListItemContent",
+      "props": {},
+      "children": [
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--body-small",
+         "children": "Signature with an authorised role is accepted"
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "ListItem",
+    "props": {
+     "className": "gap-3"
+    },
+    "children": [
+     {
+      "type": "Badge",
+      "props": {
+       "status": "error",
+       "scale": "3xs",
+       "aria-label": "fail"
+      }
+     },
+     {
+      "type": "ListItemContent",
+      "props": {},
+      "children": [
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--body-small",
+         "children": "Signature with an unauthorised role is rejected"
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "ListItem",
+    "props": {
+     "className": "gap-3"
+    },
+    "children": [
+     {
+      "type": "Badge",
+      "props": {
+       "status": "info",
+       "scale": "3xs",
+       "aria-label": "note"
+      }
+     },
+     {
+      "type": "ListItemContent",
+      "props": {},
+      "children": [
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--body-small",
+         "children": "Batch start records signature, user and timestamp"
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "ListItem",
+    "props": {
+     "className": "gap-3"
+    },
+    "children": [
+     {
+      "type": "Badge",
+      "props": {
+       "status": "warning",
+       "scale": "3xs",
+       "aria-label": "flag"
+      }
+     },
+     {
+      "type": "ListItemContent",
+      "props": {},
+      "children": [
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--body-small",
+         "children": "Deviation raised requires review before continuing"
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "ListItem",
+    "props": {
+     "className": "gap-3"
+    },
+    "children": [
+     {
+      "type": "Badge",
+      "props": {
+       "status": "neutral",
+       "scale": "3xs",
+       "aria-label": "not-run"
+      }
+     },
+     {
+      "type": "ListItemContent",
+      "props": {},
+      "children": [
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--body-small",
+         "children": "Recipe selection loads the approved recipe"
+        }
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

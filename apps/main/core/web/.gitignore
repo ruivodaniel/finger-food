@@ -1,0 +1,2 @@
+# dictation's speech model and ONNX Runtime (~80 MB): written by `pnpm mirror:whisper`, never committed
+public/models/

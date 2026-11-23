@@ -1,0 +1,97 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "delta-below",
+ "version": 1,
+ "surface": "web",
+ "measure": "md",
+ "root": {
+  "type": "Card",
+  "props": {
+   "style": {
+    "width": 320
+   }
+  },
+  "children": [
+   {
+    "type": "Content",
+    "children": [
+     {
+      "type": "Stack",
+      "props": {
+       "dir": "col",
+       "gap": 6
+      },
+      "children": [
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--body-small",
+         "emphasis": "quiet",
+         "children": "Amount outstanding"
+        }
+       },
+       {
+        "type": "DataNumber",
+        "props": {
+         "value": 1250000000,
+         "config": {
+          "mode": {
+           "kind": "fixedScale",
+           "scale": "million",
+           "n": 2
+          },
+          "locale": "en-GB"
+         },
+         "symbol": "USD",
+         "scale": "xl"
+        }
+       },
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "gap": 6,
+         "align": "baseline"
+        },
+        "children": [
+         {
+          "type": "DataNumber",
+          "props": {
+           "value": 12,
+           "config": {
+            "mode": {
+             "kind": "fixedScale",
+             "scale": "unit",
+             "n": 1
+            },
+            "locale": "en-GB",
+            "representation": {
+             "kind": "percentage",
+             "input": "points"
+            }
+           },
+           "trend": "arrowUp",
+           "status": "success",
+           "scale": "sm"
+          }
+         },
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--body-extra-small",
+           "emphasis": "quiet",
+           "children": "vs Sep 2024"
+          }
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -9,9 +9,8 @@
  * unpublished document is waived (nothing to consent to yet).
  */
 
-import { PUBLIC, type Ac, type Private } from "@libs/gated-scoped-ac";
+import { PUBLIC, type Ac, type Private, type ScopedAcRequestContext } from "@libs/gated-scoped-ac";
 import type { LegalConsentItem, LegalConsentType } from "../../shared/auth-config/types";
-import type { ScopedAcRequestContext } from "../shared/scoped-ac";
 import type { UomConsentRecordSelect } from "../models/consent-record.model";
 import type {
   ConsentContext,
@@ -23,6 +22,16 @@ import { isMandatory, type LegalDocumentService } from "./legal-document.service
 export interface ConsentDecision {
   type: LegalConsentType;
   accepted: boolean;
+}
+
+export interface RecordConsentInput {
+  userId: string;
+  items: LegalConsentItem[];
+  decisions: ConsentDecision[];
+  orgTypeId: string | null;
+  context: ConsentContext;
+  ipAddress?: string;
+  userAgent?: string;
 }
 
 export interface ConsentRecordServiceDeps {
@@ -37,52 +46,40 @@ export interface ConsentRecordServiceDeps {
 export class ConsentRecordService {
   constructor(private readonly deps: ConsentRecordServiceDeps) {}
 
-  /** Gated create — the authenticated `POST /legal/consent` surface. Context-only
-   * verdict (AC9/AC33): consent rows are self-stamped (`userId` comes from the
-   * session, never input), so the `record_own_consent` verdict only answers "may
-   * this caller record a consent at all"; denied ⇒ forbidden. Delegates to the
-   * raw recorder. */
+  /** Gated create — every consent is recorded here, as the caller's own: the
+   * `POST /legal/consent` surface, the consent given at registration, and while
+   * founding an org or accepting an invitation. `record_own_consent`'s payload pins every row to the caller
+   * (`userId` is the session user); the early verdict refuses before any
+   * validation, the gate takes it again on each row it inserts. Denied ⇒
+   * forbidden. */
   async recordConsentScoped(
     ac: ScopedAcRequestContext,
     visibility: Private,
-    input: {
-      userId: string;
-      items: LegalConsentItem[];
-      decisions: ConsentDecision[];
-      orgTypeId: string | null;
-      context: ConsentContext;
-      ipAddress?: string;
-      userAgent?: string;
-    },
+    input: RecordConsentInput,
   ): Promise<void> {
-    void visibility; // the raw core it delegates to is token-less (rule 5)
+    void visibility; // the recorder below is token-less (rule 5)
     const verdict = this.deps.engine.allowCreate(
       ac.permissions,
       "consent_record",
-      ac.bag,
+      {
+        ...ac.bag,
+        requestBody: { userId: input.userId },
+      },
     );
     if (!verdict.allow) {
       throw this.deps.errors.forbidden(
         verdict.reason ?? "cannot record consent",
       );
     }
-    await this.recordConsent(input);
+    await this.record(ac, input);
   }
 
-  /** Validate decisions (mandatory ⇒ accepted) and record accepted items.
-   * Raw self-write core (AC33: `userId` is always the session/registering user's
-   * own id, never caller-controlled): reached from the pre-session registration
-   * seed (no bag) and from the already-authorized org-create / invitation-accept
-   * orchestration. The direct authenticated route gates via `recordConsentScoped`. */
-  async recordConsent(input: {
-    userId: string;
-    items: LegalConsentItem[];
-    decisions: ConsentDecision[];
-    orgTypeId: string | null;
-    context: ConsentContext;
-    ipAddress?: string;
-    userAgent?: string;
-  }): Promise<void> {
+  /** Validate decisions (mandatory ⇒ accepted) and record accepted items,
+   * each through the gate. */
+  private async record(
+    ac: ScopedAcRequestContext,
+    input: RecordConsentInput,
+  ): Promise<void> {
     const decided = new Map(input.decisions.map((d) => [d.type, d.accepted]));
     for (const item of input.items) {
       if (!isMandatory(item)) continue;
@@ -106,13 +103,19 @@ export class ConsentRecordService {
         input.orgTypeId,
       );
       if (!doc) continue;
-      await this.deps.consentRecordRepo.create({
-        userId: input.userId,
-        document: doc,
-        context: input.context,
-        ipAddress: input.ipAddress,
-        userAgent: input.userAgent,
-      });
+      const row = await this.deps.consentRecordRepo.create(
+        {
+          userId: input.userId,
+          document: doc,
+          context: input.context,
+          ipAddress: input.ipAddress,
+          userAgent: input.userAgent,
+        },
+        ac.permissions,
+        ac.gateDb,
+      );
+      // null ⇒ the gate refused the insert.
+      if (!row) throw this.deps.errors.forbidden("cannot record consent");
     }
   }
 

@@ -1,0 +1,572 @@
+{
+ "id": "ui-data-pattern-component-user-organization-menu-userorganizationmenu",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-user-organization-menu-userorganizationmenu",
+ "kind": "component",
+ "name": "UserOrganizationMenu",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "UserOrganizationMenu",
+  "version": 1,
+  "surface": "web",
+  "params": [
+   "user",
+   "items",
+   "modes",
+   "mode",
+   "modeLayout",
+   "modeLabel",
+   "modeIcon",
+   "compact",
+   "trigger",
+   "header",
+   "manageLabel",
+   "itemsLabel",
+   "triggerIcon",
+   "organizations",
+   "activeId",
+   "organizationsAs",
+   "picture",
+   "organizationsLabel",
+   "addLabel"
+  ],
+  "emits": [
+   "modeChange",
+   "organizationAdd",
+   "organizationChange",
+   "select",
+   "signOut"
+  ],
+  "root": {
+   "use": {
+    "component": "UserMenu",
+    "version": "latest"
+   },
+   "args": {
+    "user": {
+     "bind": "user"
+    },
+    "items": {
+     "bind": "items"
+    },
+    "modes": {
+     "bind": "modes"
+    },
+    "mode": {
+     "bind": "mode"
+    },
+    "modeLayout": {
+     "bind": "modeLayout"
+    },
+    "modeLabel": {
+     "bind": "modeLabel"
+    },
+    "modeIcon": {
+     "bind": "modeIcon"
+    },
+    "compact": {
+     "bind": "compact"
+    },
+    "trigger": {
+     "bind": "trigger"
+    },
+    "header": {
+     "bind": "header"
+    },
+    "manageLabel": {
+     "bind": "manageLabel"
+    },
+    "itemsLabel": {
+     "bind": "itemsLabel"
+    },
+    "triggerIcon": {
+     "bind": "triggerIcon"
+    },
+    "customPicture": {
+     "eq": [
+      {
+       "bind": "picture"
+      },
+      "organization"
+     ]
+    },
+    "title": {
+     "if": [
+      {
+       "eq": [
+        {
+         "bind": "picture"
+        },
+        "organization"
+       ]
+      },
+      {
+       "first": [
+        {
+         "pluck": [
+          {
+           "filter": [
+            {
+             "bind": "organizations"
+            },
+            {
+             "eq": [
+              {
+               "bind": "item.id"
+              },
+              {
+               "bind": "activeId"
+              }
+             ]
+            }
+           ]
+          },
+          "name"
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    "detail": {
+     "if": [
+      {
+       "eq": [
+        {
+         "bind": "picture"
+        },
+        "organization"
+       ]
+      },
+      {
+       "bind": "user.name"
+      },
+      {
+       "first": [
+        {
+         "pluck": [
+          {
+           "filter": [
+            {
+             "bind": "organizations"
+            },
+            {
+             "eq": [
+              {
+               "bind": "item.id"
+              },
+              {
+               "bind": "activeId"
+              }
+             ]
+            }
+           ]
+          },
+          "name"
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   "on": {
+    "select": [
+     {
+      "emit": {
+       "event": "select",
+       "payload": {
+        "id": {
+         "bind": "event.id"
+        }
+       }
+      }
+     }
+    ],
+    "modeChange": [
+     {
+      "emit": {
+       "event": "modeChange",
+       "payload": {
+        "id": {
+         "bind": "event.id"
+        }
+       }
+      }
+     }
+    ],
+    "signOut": [
+     {
+      "emit": {
+       "event": "signOut",
+       "payload": {}
+      }
+     }
+    ]
+   },
+   "slots": {
+    "picture": [
+     {
+      "use": {
+       "component": "OrganizationAvatar",
+       "version": "latest"
+      },
+      "args": {
+       "id": {
+        "bind": "activeId"
+       },
+       "name": {
+        "first": [
+         {
+          "pluck": [
+           {
+            "filter": [
+             {
+              "bind": "organizations"
+             },
+             {
+              "eq": [
+               {
+                "bind": "item.id"
+               },
+               {
+                "bind": "activeId"
+               }
+              ]
+             }
+            ]
+           },
+           "name"
+          ]
+         }
+        ]
+       },
+       "image": {
+        "first": [
+         {
+          "pluck": [
+           {
+            "filter": [
+             {
+              "bind": "organizations"
+             },
+             {
+              "eq": [
+               {
+                "bind": "item.id"
+               },
+               {
+                "bind": "activeId"
+               }
+              ]
+             }
+            ]
+           },
+           "image"
+          ]
+         }
+        ]
+       },
+       "scale": "sm",
+       "layout": "image",
+       "width": "hug"
+      },
+      "when": {
+       "eq": [
+        {
+         "bind": "picture"
+        },
+        "organization"
+       ]
+      }
+     }
+    ],
+    "top": [
+     {
+      "type": "DropdownMenuLabel",
+      "when": {
+       "exists": [
+        {
+         "bind": "organizationsLabel"
+        }
+       ]
+      },
+      "props": {
+       "children": {
+        "bind": "organizationsLabel"
+       }
+      }
+     },
+     {
+      "use": {
+       "component": "OrganizationItems",
+       "version": "latest"
+      },
+      "args": {
+       "organizations": {
+        "bind": "organizations"
+       },
+       "activeId": {
+        "bind": "activeId"
+       }
+      },
+      "when": {
+       "not": [
+        {
+         "eq": [
+          {
+           "bind": "organizationsAs"
+          },
+          "menu"
+         ]
+        }
+       ]
+      },
+      "on": {
+       "change": [
+        {
+         "emit": {
+          "event": "organizationChange",
+          "payload": {
+           "id": {
+            "bind": "event.id"
+           }
+          }
+         }
+        }
+       ]
+      }
+     },
+     {
+      "type": "DropdownMenuSub",
+      "children": [
+       {
+        "type": "DropdownMenuSubTrigger",
+        "props": {
+         "data-testid": "user-organization-menu-organizations"
+        },
+        "children": [
+         {
+          "use": {
+           "component": "OrganizationAvatar",
+           "version": "latest"
+          },
+          "args": {
+           "id": {
+            "bind": "activeId"
+           },
+           "name": {
+            "first": [
+             {
+              "pluck": [
+               {
+                "filter": [
+                 {
+                  "bind": "organizations"
+                 },
+                 {
+                  "eq": [
+                   {
+                    "bind": "item.id"
+                   },
+                   {
+                    "bind": "activeId"
+                   }
+                  ]
+                 }
+                ]
+               },
+               "name"
+              ]
+             }
+            ]
+           },
+           "image": {
+            "first": [
+             {
+              "pluck": [
+               {
+                "filter": [
+                 {
+                  "bind": "organizations"
+                 },
+                 {
+                  "eq": [
+                   {
+                    "bind": "item.id"
+                   },
+                   {
+                    "bind": "activeId"
+                   }
+                  ]
+                 }
+                ]
+               },
+               "image"
+              ]
+             }
+            ]
+           },
+           "scale": "xs",
+           "layout": "image",
+           "width": "hug"
+          }
+         },
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "col",
+           "size": "fill"
+          },
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body",
+             "children": {
+              "first": [
+               {
+                "pluck": [
+                 {
+                  "filter": [
+                   {
+                    "bind": "organizations"
+                   },
+                   {
+                    "eq": [
+                     {
+                      "bind": "item.id"
+                     },
+                     {
+                      "bind": "activeId"
+                     }
+                    ]
+                   }
+                  ]
+                 },
+                 "name"
+                ]
+               }
+              ]
+             },
+             "position": "clip"
+            }
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body-extra-small",
+             "children": {
+              "concat": [
+               {
+                "count": [
+                 {
+                  "bind": "organizations"
+                 }
+                ]
+               },
+               " organizations"
+              ]
+             },
+             "emphasis": "quiet"
+            }
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "DropdownMenuSubContent",
+        "children": [
+         {
+          "use": {
+           "component": "OrganizationItems",
+           "version": "latest"
+          },
+          "args": {
+           "organizations": {
+            "bind": "organizations"
+           },
+           "activeId": {
+            "bind": "activeId"
+           }
+          },
+          "on": {
+           "change": [
+            {
+             "emit": {
+              "event": "organizationChange",
+              "payload": {
+               "id": {
+                "bind": "event.id"
+               }
+              }
+             }
+            }
+           ]
+          }
+         }
+        ]
+       }
+      ],
+      "when": {
+       "eq": [
+        {
+         "bind": "organizationsAs"
+        },
+        "menu"
+       ]
+      }
+     },
+     {
+      "type": "DropdownMenuItem",
+      "props": {
+       "data-testid": "user-organization-menu-add-btn"
+      },
+      "children": [
+       {
+        "type": "Icon",
+        "props": {
+         "name": "add"
+        }
+       },
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--body",
+         "children": {
+          "bind": "addLabel"
+         }
+        }
+       }
+      ],
+      "when": {
+       "exists": [
+        {
+         "bind": "addLabel"
+        }
+       ]
+      },
+      "on": {
+       "select": [
+        {
+         "emit": {
+          "event": "organizationAdd",
+          "payload": {}
+         }
+        }
+       ]
+      }
+     },
+     {
+      "type": "Separator"
+     }
+    ]
+   }
+  }
+ }
+}

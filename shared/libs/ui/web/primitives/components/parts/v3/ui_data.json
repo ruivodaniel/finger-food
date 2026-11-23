@@ -1,0 +1,279 @@
+{
+ "id": "ui-data-primitive-parts",
+ "version": 1,
+ "uiNodeId": "ui-node-primitive-parts",
+ "kind": "component",
+ "name": "primitive-parts",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "primitive-parts",
+  "version": 1,
+  "surface": "web",
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "align": "center",
+    "scale": "2xl"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "a container with the three parts: the card owns the height, the content fills what is left and scrolls on y"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Card",
+         "children": [
+          {
+           "type": "Header",
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "element": "type--heading4",
+              "children": "Header"
+             }
+            }
+           ]
+          },
+          {
+           "type": "Content",
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "as": "p",
+              "element": "type--body-small",
+              "children": "Line 1 of a content that is taller than its container."
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "p",
+              "element": "type--body-small",
+              "children": "Line 2 of a content that is taller than its container."
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "p",
+              "element": "type--body-small",
+              "children": "Line 3 of a content that is taller than its container."
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "p",
+              "element": "type--body-small",
+              "children": "Line 4 of a content that is taller than its container."
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "p",
+              "element": "type--body-small",
+              "children": "Line 5 of a content that is taller than its container."
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "p",
+              "element": "type--body-small",
+              "children": "Line 6 of a content that is taller than its container."
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "p",
+              "element": "type--body-small",
+              "children": "Line 7 of a content that is taller than its container."
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "p",
+              "element": "type--body-small",
+              "children": "Line 8 of a content that is taller than its container."
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "p",
+              "element": "type--body-small",
+              "children": "Line 9 of a content that is taller than its container."
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "p",
+              "element": "type--body-small",
+              "children": "Line 10 of a content that is taller than its container."
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "p",
+              "element": "type--body-small",
+              "children": "Line 11 of a content that is taller than its container."
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "p",
+              "element": "type--body-small",
+              "children": "Line 12 of a content that is taller than its container."
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "p",
+              "element": "type--body-small",
+              "children": "Line 13 of a content that is taller than its container."
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "p",
+              "element": "type--body-small",
+              "children": "Line 14 of a content that is taller than its container."
+             }
+            }
+           ],
+           "props": {
+            "overflow": {
+             "obj": {
+              "y": "scroll"
+             }
+            }
+           }
+          },
+          {
+           "type": "Footer",
+           "children": [
+            {
+             "type": "Button",
+             "props": {
+              "emphasis": "primary",
+              "children": "Save",
+              "data-testid": "parts-a-container-with-the-three-parts-the-car-1-btn"
+             }
+            }
+           ]
+          }
+         ],
+         "props": {
+          "style": {
+           "obj": {
+            "height": 260,
+            "width": 420
+           }
+          }
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "align: the content places what it holds"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Card",
+         "children": [
+          {
+           "type": "Content",
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "element": "type--body",
+              "children": "centred"
+             }
+            }
+           ],
+           "props": {
+            "align": {
+             "obj": {
+              "horizontal": "center",
+              "vertical": "center"
+             }
+            }
+           }
+          }
+         ],
+         "props": {
+          "style": {
+           "obj": {
+            "height": 180,
+            "width": 300
+           }
+          }
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-side-navigation-2-user-menu-only-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-side-navigation-2-user-menu-only",
+ "name": "default",
+ "title": "Side navigation 2: user menu only; no colour mode; a way back and the toggle at the top; expands as an overlay",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

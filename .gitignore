@@ -52,8 +52,8 @@ override.tf.json
 # Sandbox snapshot output + Playwright session state.
 # Note: cast.local.ts IS committed — these are local fixture demo users,
 # not real credentials.
-apps/main/shared/web/src/routes/sandbox/_snapshots/snapshots/*.html
-apps/main/shared/web/src/routes/sandbox/_snapshots/.auth/
+apps/main/core/web/src/routes/sandbox/_snapshots/snapshots/*.html
+apps/main/core/web/src/routes/sandbox/_snapshots/.auth/
 
 # Team-cockpit E2E run artifacts (per-run, local machine state).
 #   - runs/<runId>/{run.json, screenshots/} are generated each test run
@@ -63,3 +63,13 @@ team-cockpit/cockpit/history/runs/
 team-cockpit/cockpit/history/index.json
 team-cockpit/cockpit/history/sequences-stats.json
 team-cockpit/.tmp/
+
+# The pictures the cockpit's picture service keeps: taken again when missing
+_meta/cockpit/v2/screen-images/
+_meta/cockpit/v3/screen-images/
+
+# the run history of the check system
+shared/libs/check/runs/
+
+# local environment files of the first version, kept for reference, never committed
+.local-env-1st-version/

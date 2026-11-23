@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-component-organization-switcher-organizationitems",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "OrganizationItems"
+}

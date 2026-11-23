@@ -1,0 +1,148 @@
+{
+ "id": "doc/gated-scoped-ac-security",
+ "kind": "doc",
+ "title": "Security",
+ "status": "todo",
+ "subject": "gated-scoped-ac",
+ "owner": "libs/gated-scoped-ac",
+ "order": 7,
+ "tags": [
+  "gated-scoped-ac",
+  "consumer"
+ ],
+ "paths": [
+  "shared/libs/gated-scoped-ac"
+ ],
+ "summary": "What the library guarantees, what it trusts the app to get right, and what a rule does when a value it reads is absent.",
+ "docId": "gated-scoped-ac-security",
+ "doc": {
+  "axioms": [
+   {
+    "text": "The library trusts every value in the bag and every permission it is handed. Building them from server-side sources is the app's job."
+   },
+   {
+    "text": "Default deny: a [[scope]] no rule contributed to matches no rows, and a create no rule allows is refused."
+   },
+   {
+    "text": "A query that skips access control does not compile: the gate requires a scope, and only the engine mints one."
+   }
+  ],
+  "purpose": {
+   "intro": "Where the library's responsibility starts and stops, what it guarantees inside that line, and what a rule does when a value it reads is absent."
+  },
+  "reference": [
+   {
+    "topic": "The trust boundary",
+    "statement": "The library starts when the [[access context]] is in hand and ends when the gate's query returns. Everything before that is the app's.",
+    "claims": [
+     {
+      "text": "The library authenticates no one and verifies no session (AC39 in [[access-control|Access Control]])."
+     },
+     {
+      "text": "The active organization and the membership roles must come from the server's own resolution of the caller's memberships, never from a header or a body taken as is."
+     },
+     {
+      "text": "A create is judged on the row that lands: the gate sets `$requestBody` to the values it inserts, replacing anything a caller put there."
+     }
+    ],
+    "imagesAndDiagrams": [
+     {
+      "type": "ascii",
+      "value": "┌────────────────────────────────────────────┬──────────────────────────────────┐\n│  THE APP                                   │  THE LIBRARY                     │\n├────────────────────────────────────────────┼──────────────────────────────────┤\n│  verify the session                        │                                  │\n│  resolve memberships on the server         │                                  │\n│  build the bag                             │                                  │\n│  roles → permissions, once ────────────────┼─►  context gate (in memory)      │\n│                                            │    compile the target            │\n│                                            │    run it at the gate ─► rows    │\n└────────────────────────────────────────────┴──────────────────────────────────┘"
+     }
+    ]
+   },
+   {
+    "topic": "What the library guarantees",
+    "statement": "Inside the boundary, these hold whatever the config says.",
+    "claims": [
+     {
+      "text": "**Default deny.** No applicable rule compiles to `false`; a create with no applicable rule is refused. A permission with no rules applies to nothing."
+     },
+     {
+      "text": "**The brand.** `read`, `update` and `delete` require a `Scope` of the same entity and action. Any other scope, or none, is a compile error, checked by `test/types.test-d.ts`."
+     },
+     {
+      "text": "**Narrow only.** The read builder ANDs every `where` onto the scope, and nothing on it can OR."
+     },
+     {
+      "text": "**No silent grants in config.** A traversal beside other conditions, a payload the engine would ignore, and `is` against a collection column are refused at boot rather than compiled into something broader than they read."
+     },
+     {
+      "text": "**Absent values never grant.** A path that is unset or null fails every condition that reads it, under every operator and in every slot (below). A payload traversal whose value is missing refuses the create; it never becomes a check every parent row would pass."
+     },
+     {
+      "text": "**Values are parameters.** Operands are bound by drizzle. Column names come only from config, and the engine accepts only columns of the tables it was given."
+     }
+    ]
+   },
+   {
+    "topic": "Absent values",
+    "statement": "The engine keeps no list of valid paths. A path that is not set, or set to null, such as `$session.organization.type` when no organization is active, is absent, and a condition reading an absent value fails, whatever its operator.",
+    "claims": [
+     {
+      "text": "In a context or a direct payload condition both sides come from the bag, so either side absent fails: two missing paths are not equal, and a negation never passes on a value that is not there."
+     },
+     {
+      "text": "In a target, an absent operand drops the whole rule: it adds no rows, and lends no columns to the field-list union."
+     },
+     {
+      "text": "A NULL column is row data, not an absent path. With a present operand, `isNot` and `hasNot` still match rows whose column is NULL."
+     },
+     {
+      "text": "So \"the org type is not X\" fails for a caller with no organization at all. A rule that must also admit that caller cannot be written as a negation."
+     },
+     {
+      "text": "A rule naming a path hydration never writes loads without complaint and then never matches. The bag's paths are listed in [[gated-scoped-ac-bag|Access context]]."
+     }
+    ],
+    "imagesAndDiagrams": [
+     {
+      "title": "When the path is absent",
+      "type": "ascii",
+      "value": "| Slot | `is`, `has` | `isNot` | `hasNot` |\n|---|---|---|---|\n| context (either side) | the rule is dropped | the rule is dropped | the rule is dropped |\n| target (the operand) | the rule matches no row and lends no columns | the same | the same |\n| payload, a direct condition (either side) | denies | denies | denies |\n| payload, a traversal (its subject, or an operand in its `where`) | denies | denies | denies |"
+     }
+    ]
+   },
+   {
+    "topic": "What the library cannot catch",
+    "statement": "Each of these reaches the library as a valid request, so it has to be stopped before it or around it.",
+    "claims": [],
+    "imagesAndDiagrams": [
+     {
+      "type": "ascii",
+      "value": "| Risk | Where it is stopped |\n|---|---|\n| a bag built from client-supplied values | hydration builds it from the verified session and server-side memberships |\n| a caller holding a role they should not | the writes that assign roles are themselves gated |\n| `ungated()` used on a path a route reaches | review: every use is a named exception in its repository |\n| a public route returning private data | the `Public` and `Private` tokens, checked by the compiler |\n| sight of a row through a share or a link | a rule or a visibility channel (`visibilityJoins`) that grants it, never an ad hoc query |"
+     }
+    ]
+   },
+   {
+    "topic": "Errors",
+    "statement": "Denials are values; only mistakes throw.",
+    "claims": [
+     {
+      "text": "A denial is never an exception: the gate returns `null` or no rows, and the verdicts return `{ allow: false, reason }`."
+     },
+     {
+      "text": "The engine throws only on programming errors (an unknown entity or column, a condition with no operator), which surface as a 500 rather than as access."
+     }
+    ]
+   }
+  ],
+  "review": {
+   "axioms": {
+    "state": "unreviewed"
+   },
+   "purpose": {
+    "state": "unreviewed"
+   },
+   "reference": {
+    "state": "unreviewed"
+   }
+  },
+  "converted": true
+ },
+ "audience": [
+  "seed-contributor",
+  "seed-consumer"
+ ]
+}

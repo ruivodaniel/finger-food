@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-layout-full-anatomy-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-layout-full-anatomy",
+ "name": "default",
+ "title": "Full anatomy",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

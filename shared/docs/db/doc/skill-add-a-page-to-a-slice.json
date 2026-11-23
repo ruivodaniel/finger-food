@@ -1,0 +1,24 @@
+{
+ "id": "doc/skill-add-a-page-to-a-slice",
+ "kind": "doc",
+ "title": "add a page to a slice",
+ "status": "todo",
+ "subject": "skills",
+ "owner": "skills/seed-consumer/all-slices",
+ "tags": [
+  "skills",
+  "seed-consumer",
+  "all-slices"
+ ],
+ "paths": [],
+ "summary": "",
+ "docId": "skill-add-a-page-to-a-slice",
+ "doc": {
+  "axioms": [],
+  "purpose": {},
+  "reference": []
+ },
+ "audience": [
+  "seed-consumer"
+ ]
+}

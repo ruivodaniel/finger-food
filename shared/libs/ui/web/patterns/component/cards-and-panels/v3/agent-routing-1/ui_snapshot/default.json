@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-cards-and-panels-agent-routing-1-default-v3",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-cards-and-panels-agent-routing-1-v3",
+ "name": "default",
+ "title": "Cards and panels: agent routing 1",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

@@ -1,0 +1,1 @@
+linked-zoom — Alix's dashboard trio: exposure, net margin and non-performing over ten years in weeks; one window (the last 5 % at first), zoom and axis pointer shared; the slider under the last chart, with the years beneath it, drives the three.

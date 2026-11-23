@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-list-rows-agent-status-1-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-list-rows-agent-status-1",
+ "name": "default",
+ "title": "List rows: agent status 1",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

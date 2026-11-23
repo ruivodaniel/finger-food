@@ -1,0 +1,205 @@
+{
+ "id": "doc/scaffolding-and-import-boundaries",
+ "kind": "doc",
+ "title": "Scaffolding & Import Boundaries",
+ "status": "approved",
+ "subject": "main",
+ "owner": "main/core",
+ "order": 1,
+ "tags": [
+  "core",
+  "injection",
+  "leaf adapter",
+  "library",
+  "lifecycle hook",
+  "main",
+  "mount",
+  "package",
+  "page",
+  "product slice",
+  "public surface",
+  "seed slice",
+  "shell",
+  "slice",
+  "slice app",
+  "tier"
+ ],
+ "paths": [
+  "apps/main"
+ ],
+ "summary": "This architecture tries to achieve: consistency and decoupability.",
+ "docId": "scaffolding-and-import-boundaries",
+ "doc": {
+  "axioms": [
+   {
+    "text": "Apps mount, wire, and inject. Product logic lives in [[slice|slices]], never in the app shell. [[slice|Slices]] are **[[seed slice|seed slices]]** `apps/main/slices/seed/<m>/`,  or **[[product slice|product slices]]** `apps/main/slices/product/<f>/`"
+   },
+   {
+    "text": "Every [[slice]] is built the same way.",
+    "sub": [
+     "**Structure:** [[seed slice|seed slices]] and [[product slice|product slices]] are built identically: same API, web and mobile layers and patterns."
+    ]
+   },
+   {
+    "text": "Every [[slice]] relates to the app the same way.",
+    "sub": [
+     "**Imports:** a slice imports libs, packages and another slice's [[public surface]]: on the API, its services, through that slice's `api/index.ts`; on the web, its components, through its `web/index.ts`. Configs, slice infra (db), [[leaf adapter|leaf adapters]] (toast, i18n), other assets and another slice's service instances are [[injection|injected]] by the app, only at the [[mount]] point.",
+     "**Exports:** the app imports only what a slice exposes through its [[public surface]].",
+     "**Orchestration:** the app mounts slices and owns all wiring between them. Slices emit [[lifecycle hook|lifecycle hooks]] with facts and intentions; the app decides what to do with them, potentially calling another slice's [[public surface]]."
+    ]
+   },
+   {
+    "text": "Slices differ in one thing only: which way their imports may point.",
+    "sub": [
+     "A **[[seed slice]]** may reach another seed slice through its [[public surface]] (`api/index.ts`, `web/index.ts`), its services included, never past it. A seed slice never reaches a [[product slice]]: a new project starts by deleting the product slices and keeping the seed, so nothing in the seed may depend on them.",
+     "**[[product slice|Product slices]]** may reach seed slices through their [[public surface]], and each other directly. A product slice exists only for this product, so between product slices it is a code-organization convention, not an import boundary."
+    ]
+   }
+  ],
+  "purpose": {
+   "intro": "This architecture tries to achieve: consistency and decoupability.",
+   "points": [
+    "**Consistency:** a developer working in any [[slice]] reads the same structure and the same patterns, no per-slice dialects, no relearning.",
+    "**Decoupability:** removing a seed slice should be simple: remove the seed slice, its [[mount]] and its wiring, and anything that still breaks is a declared need, breaking where it was declared."
+   ],
+   "note": "Both properties come from the same boundaries: self-contained seed slices, injected dependencies, app-owned orchestration."
+  },
+  "reference": [
+   {
+    "topic": "The app–slice contract",
+    "claims": [
+     {
+      "id": "MOD2",
+      "text": "The app reaches a [[slice]] only through its barrels: `api/index.ts` · `web/index.ts` · `shared/index.ts` (the wire contract) · `api/models/index.ts` (db-client aggregation only). Everything behind a barrel is internal — a deep import is a violation."
+     },
+     {
+      "text": "At [[mount]], the app [[injection|injects]] what the slice declared it needs: configs, db, adapters, other slices' capabilities."
+     },
+     {
+      "text": "The mount returns the slice's capabilities — services, hooks, components, routes. Only the app holds them; another slice can declare a need, and the app decides whether to inject."
+     },
+     {
+      "ids": [
+       "MOD1",
+       "MOD3"
+      ],
+      "text": "Wiring and plumbing live in the app: a slice emits [[lifecycle hook|lifecycle hooks]], the app listens and decides, potentially calling another slice's capability. A slice never listens to another slice directly."
+     },
+     {
+      "id": "CFG2",
+      "text": "Env vars drive what mounts: which slices mount and which configs inject come from env vars, never hardcode. The pointer to which config is consumed lives outside the config object.",
+      "source": "configs.md"
+     },
+     {
+      "id": "MOD7",
+      "text": "A [[library]] imports node modules and other libraries — never a [[slice]], the [[core]] or an app."
+     }
+    ],
+    "imagesAndDiagrams": [
+     {
+      "title": "Crossing the boundary — only an index crosses",
+      "type": "html",
+      "src": "../assets/scaffolding-and-import-boundaries/crossing-the-boundary.html"
+     }
+    ],
+    "examples": []
+   },
+   {
+    "topic": "Where code lives",
+    "claims": [
+     {
+      "text": "Imports are scoped by [[tier]]: `@configs/…` · `@libs/…` · `@modules/…` ([[seed slice|seed slices]]) · `@product/…` ([[product slice|product slices]]) · `@apps/…`."
+     },
+     {
+      "text": "Nothing imports `@apps/*`."
+     },
+     {
+      "text": "Platform belongs in the [[package]] name, never in the scope: `@libs/web-components`, `@libs/mobile-components`."
+     },
+     {
+      "ids": [
+       "SCF8",
+       "SCF11"
+      ],
+      "text": "Every level has a `shared/` folder holding what its children consume: repo `shared/` ([[library|libs]] + [[seed slice|seed slices]], consumed by all apps) · `apps/main/slices/product/shared/` (shared by all product slices) · `<seed slice>/shared/` and `<product slice>/shared/` (across that [[slice]]'s [[slice app|slice apps]]). Shared code sits at the nearest level above all its consumers — never in `lib` folders. Placement ladder (first fit wins): pure data → `configs/` · generic engine → `shared/libs/` · reusable [[slice]] slice → `apps/main/slices/seed/` · this-product [[slice]] slice → `apps/main/slices/product/` · wiring → app shell."
+     }
+    ],
+    "imagesAndDiagrams": [
+     {
+      "title": "The repo tree — a shared/ at every scope, holding what its children consume",
+      "type": "ascii",
+      "value": "repo/\n├── configs/          pure data · injected at mount\n│\n├── apps/\n│   └── main/                     the product · own db\n│       ├── core/                 ◀ the core: the app itself\n│       │   ├── api/          mounts + wires\n│       │   ├── web/          mounts + wires\n│       │   └── mobile/       mounts + wires\n│       └── slices/\n│           ├── seed/                     ◀ product-agnostic · ships with the seed\n│           │   └── <seed slice>/\n│           │       ├── api/          ◀ slice app\n│           │       ├── web/          ◀ slice app\n│           │       ├── mobile/       ◀ slice app\n│           │       └── shared/       ◀ shared across slice apps\n│           └── product/                  ◀ product-specific\n│               └── <product slice>/\n│                   ├── api/          ◀ slice app\n│                   ├── web/          ◀ slice app\n│                   └── shared/       ◀ shared across slice apps\n│\n└── shared/           ◀ shared by the whole repo\n    └── libs/          generic engines"
+     }
+    ],
+    "examples": [
+     {
+      "title": "A UI capability — the member picker",
+      "text": "Type-ahead over the users the current user may share with, resolving to a user id, or to an email address when that person has no account yet. It lives in `user-organization-mgmt` because UOM is the only slice that knows users, memberships and org visibility — one declarer, and no product slice reimplements it. It reaches other slices by export: UOM puts it on its web [[public surface]], and the app [[injection|injects]] it into the product slice that declared the need.",
+      "snippets": [
+       {
+        "caption": "Where it lives — inside the slice that owns the knowledge",
+        "code": "apps/main/slices/seed/user-organization-mgmt/web/\n├── components/members/MemberPicker.tsx    the capability\n└── index.ts                               the public surface"
+       },
+       {
+        "caption": "How UOM exports it — the barrel is the whole surface; nothing else is reachable",
+        "code": "// apps/main/slices/seed/user-organization-mgmt/web/index.ts\n// Public web surface — what a consuming app imports.\n\nexport { OrgSwitcher } from \"./components/orgs/OrgSwitcher\";\nexport { MemberPicker } from \"./components/members/MemberPicker\";\nexport type { MemberPickerProps } from \"./components/members/MemberPicker\";"
+       },
+       {
+        "caption": "How the app injects it — the app names UOM, the product slice never does",
+        "code": "// apps/main/slices/product/song/web/mount-types.ts\n// Song declares the shape it needs, in its own words — no UOM types.\nexport interface MountSongWebOptions {\n  memberPicker: ComponentType<{ onSelect(userId: string): void }>;\n}\n\n// apps/main/core/web/src/mounts.tsx — the app satisfies it with UOM's component.\nimport { MemberPicker } from \"@modules/user-organization-mgmt/web\";\nimport { mountSongWeb } from \"@product/song/web\";\n\nexport const song = mountSongWeb({ memberPicker: MemberPicker });"
+       }
+      ]
+     },
+     {
+      "title": "A service capability — resolving user ids",
+      "text": "Slices store ids, not people: a credit lot carries an owner id, a purchase a buyer id. To show who that is, the slice asks UOM for the names. UOM stays the only reader of its own tables — the caller holds UOM's service, never its repository, and never learns where the data sits. The slice imports UOM's service types through `@modules/user-organization-mgmt/api`; the instances come from UOM's mount, so the app hands them over at the slice's mount.",
+      "snippets": [
+       {
+        "caption": "The capability — UOM's service, on its mount result",
+        "code": "// apps/main/slices/seed/user-organization-mgmt/api/services/user-profile.service.ts\n/** Names of the given users, keyed by user id — what another slice shows for\n *  a person it holds only the id of (credits, payment). */\nasync namesByIds(visibility: Public, userIds: string[]): Promise<Map<string, string>>\n\n// apps/main/slices/seed/user-organization-mgmt/api/mount-types.ts\nservices: {\n  auth; session; gate; user; legalDocument; consentRecord;\n  organization; userProfile; membership; invitation;\n};"
+       },
+       {
+        "caption": "What credits declares it needs — UOM's own service types",
+        "code": "// apps/main/slices/seed/credits/api/shared/owner-names.ts\nimport type { OrganizationService, UserProfileService } from \"@modules/user-organization-mgmt/api\";\n\nexport interface People {\n  organization: Pick<OrganizationService, \"namesByIds\" | \"searchByName\">;\n  userProfile: Pick<UserProfileService, \"namesByIds\" | \"searchByName\">;\n}"
+       },
+       {
+        "caption": "How the app hands it over — UOM mounted first",
+        "code": "// apps/main/core/api/src/mounts.ts\nexport const userOrg = mountUserOrgApi({ /* … */ });\n\nconst people = {\n  organization: userOrg.services.organization,\n  userProfile: userOrg.services.userProfile,\n};\n\nexport const credits = mountCreditsApi({ db, /* … */ people });\nexport const payment = mountPaymentApi({ db, /* … */ people });"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "topic": "API: every slice has the same folders",
+    "claims": [
+     {
+      "id": "SCF1",
+      "text": "API folders are the same in every slice: `middlewares/ routes/ services/ repositories/ models/` — identical at every level (seed slice, product slice, app). Always folders, even for one file; scaffolding never changes shape. What lives inside each folder is [[backend-composition|Backend Composition]]'s subject."
+     }
+    ],
+    "imagesAndDiagrams": [],
+    "examples": []
+   },
+   {
+    "topic": "Web",
+    "statement": "The web side — the folders of the core and of every slice, routing and layouting, the import boundaries — is [[main-web-scaffolding-and-import-boundaries|Web scaffolding & import boundaries]].",
+    "claims": []
+   }
+  ],
+  "review": {
+   "axioms": {
+    "state": "unreviewed"
+   },
+   "purpose": {
+    "state": "closed"
+   },
+   "reference": {
+    "state": "unreviewed"
+   }
+  }
+ },
+ "audience": [
+  "seed-contributor"
+ ]
+}

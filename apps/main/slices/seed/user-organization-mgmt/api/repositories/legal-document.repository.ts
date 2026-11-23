@@ -6,9 +6,10 @@
  * queries must filter on published-ness, never just take the top version.
  *
  * `legal_document.read` splits into two branches (spec §"Known edges"): the
- * PUBLIC published lookup (`findByIds` / `findLatestVersion` — served before any
- * session exists, AC22) stays raw; the PRIVATE authoring reads (`findByIdsScoped`
- * / `findAllByScope`) run through the engine's read Scope
+ * PUBLIC published lookup (`findByIds` / `findLatestVersion` /
+ * `findPublishedByScope` — served before any session exists, AC22) stays raw;
+ * the PRIVATE authoring reads (`findByIdsScoped`
+ * / `findDraftScoped`) run through the engine's read Scope
  * (`manage_legal_document_platform`).
  */
 
@@ -66,32 +67,39 @@ export interface LegalDocumentRepository {
     type: LegalConsentType,
     orgTypeId: string | null,
   ): Promise<UomLegalDocumentSelect | null>;
-  /** The scope's draft (publishedAt null), if any — at most one by construction.
-   * Ungated authoring-internal probe: feeds `saveDraft`'s edit-vs-create branch;
-   * the WRITE it decides is gated. AC42: private-only surface (`saveDraft`). */
-  findDraft(
-    visibility: Private,
+  /** Every PUBLISHED version for (type, orgTypeId), newest first; drafts
+   * skipped. Ungated — the same world-readable data as `findLatestVersion`
+   * (AC22), the whole history instead of the head. AC42: Public — reached by
+   * `getVersions`, which adds the caller's engine-admitted rows (drafts). */
+  findPublishedByScope(
+    visibility: Public,
     type: LegalConsentType,
     orgTypeId: string | null,
-  ): Promise<UomLegalDocumentSelect | null>;
-  /** Every version for the scope, drafts included, newest first — the gated
-   * authoring list. The engine's read Scope admits the rows; the display query
-   * composes the (type, scope) filter + version ordering over the admitted ids.
-   * AC42: private-only surface (`getVersions`). */
-  findAllByScope(
+  ): Promise<UomLegalDocumentSelect[]>;
+  /** The scope's draft (publishedAt null, at most one by construction), if
+   * the caller's grants admit it — the gated half of the authoring list
+   * (`findPublishedByScope` is the public half), and `saveDraft`'s
+   * edit-vs-create probe. The engine's read Scope is the access boundary,
+   * narrowed to the scope's unpublished row. AC42: private-only surface
+   * (`getVersions`, `saveDraft`). */
+  findDraftScoped(
     visibility: Private,
     type: LegalConsentType,
     orgTypeId: string | null,
     scope: Scope<"legal_document", "read">,
     gateDb: GatedDb<SchemaTables>,
-  ): Promise<UomLegalDocumentSelect[]>;
-  /** Inserts the scope's next version (max over ALL rows + 1) as a draft. Plain
-   * insert — the create verdict (`allowCreate`) is the service's gate (AC33).
-   * AC42: private-only surface (`saveDraft`'s new-version branch). */
+  ): Promise<UomLegalDocumentSelect | null>;
+  /** Inserts the scope's next version (max over ALL rows + 1, read under the
+   * caller's read Scope) as a draft, through the gate — it takes the create
+   * verdict (AC33); null when denied. AC42: private-only surface
+   * (`saveDraft`'s new-version branch). */
   create(
     visibility: Private,
     input: SaveDraftRecord,
-  ): Promise<UomLegalDocumentSelect>;
+    permissions: Iterable<string>,
+    readScope: Scope<"legal_document", "read">,
+    gateDb: GatedDb<SchemaTables>,
+  ): Promise<UomLegalDocumentSelect | null>;
   /** Scoped write-by-id — the gated handle fuses the update Scope into the
    * statement (this is where publish stamps publishedAt); returns the row, or
    * null when the Scope admits no such row. AC42: private-only surface
@@ -184,69 +192,69 @@ export class DrizzleLegalDocumentRepository
     return doc ?? null;
   }
 
-  async findDraft(
-    visibility: Private,
+  // Raw PUBLIC branch (AC22), like `findLatestVersion`: the published history
+  // of a scope is world-readable, so it never touches the engine.
+  async findPublishedByScope(
+    visibility: Public,
     type: LegalConsentType,
     orgTypeId: string | null,
-  ): Promise<UomLegalDocumentSelect | null> {
-    void visibility; // leaf
-    const [doc] = await this.deps.db
-      .select()
-      .from(uomLegalDocument)
-      .where(
-        and(
-          eq(uomLegalDocument.type, type),
-          scopeWhere(orgTypeId),
-          isNull(uomLegalDocument.publishedAt),
-        ),
-      )
-      .limit(1);
-    return doc ?? null;
-  }
-
-  async findAllByScope(
-    visibility: Private,
-    type: LegalConsentType,
-    orgTypeId: string | null,
-    scope: Scope<"legal_document", "read">,
-    gateDb: GatedDb<SchemaTables>,
   ): Promise<UomLegalDocumentSelect[]> {
     void visibility; // leaf
-    // The engine's read Scope decides which documents are visible; the display
-    // query composes the (type, scope) filter + version ordering over the
-    // admitted ids (AC7). A denied caller admits no ids ⇒ empty list (never a
-    // fall-back to the published versions).
-    const admitted = (await gateDb.read("legal_document", scope).rows()) as {
-      id: string;
-    }[];
-    const admittedIds = admitted.map((r) => r.id);
-    if (admittedIds.length === 0) return [];
     return this.deps.db
       .select()
       .from(uomLegalDocument)
       .where(
         and(
-          inArray(uomLegalDocument.id, admittedIds),
           eq(uomLegalDocument.type, type),
           scopeWhere(orgTypeId),
+          isNotNull(uomLegalDocument.publishedAt),
         ),
       )
       .orderBy(desc(uomLegalDocument.version));
   }
 
+  async findDraftScoped(
+    visibility: Private,
+    type: LegalConsentType,
+    orgTypeId: string | null,
+    scope: Scope<"legal_document", "read">,
+    gateDb: GatedDb<SchemaTables>,
+  ): Promise<UomLegalDocumentSelect | null> {
+    void visibility; // leaf
+    // The read Scope is the access boundary; narrow it (AND) to the scope's
+    // unpublished row (AC12 — narrow-only). A denied caller's Scope admits no
+    // row ⇒ null; the published versions come from `findPublishedByScope`.
+    const [doc] = (await gateDb
+      .read("legal_document", scope)
+      .where(
+        and(
+          eq(uomLegalDocument.type, type),
+          scopeWhere(orgTypeId),
+          isNull(uomLegalDocument.publishedAt),
+        )!,
+      )
+      .rows()) as UomLegalDocumentSelect[];
+    return doc ?? null;
+  }
+
   async create(
     visibility: Private,
     input: SaveDraftRecord,
-  ): Promise<UomLegalDocumentSelect> {
+    permissions: Iterable<string>,
+    readScope: Scope<"legal_document", "read">,
+    gateDb: GatedDb<SchemaTables>,
+  ): Promise<UomLegalDocumentSelect | null> {
     void visibility; // leaf
-    const [latest] = await this.deps.db
-      .select()
-      .from(uomLegalDocument)
+    // The version counter reads the scope's highest version (drafts included)
+    // under the caller's read Scope: the authoring permission that lets them
+    // create also lets them read every version.
+    const latest = (await gateDb
+      .read("legal_document", readScope)
       .where(
-        and(eq(uomLegalDocument.type, input.type), scopeWhere(input.orgTypeId)),
+        and(eq(uomLegalDocument.type, input.type), scopeWhere(input.orgTypeId))!,
       )
       .orderBy(desc(uomLegalDocument.version))
-      .limit(1);
+      .first()) as UomLegalDocumentSelect | null;
 
     const row = {
       id: this.deps.createId(),
@@ -258,8 +266,10 @@ export class DrizzleLegalDocumentRepository
       publishedAt: null,
       createdAt: new Date(),
     };
-    await this.deps.db.insert(uomLegalDocument).values(row);
-    return row as UomLegalDocumentSelect;
+    // The gate runs the verdict and inserts; null ⇒ refused, and the service
+    // decides what that means.
+    const inserted = await gateDb.create("legal_document", permissions, row);
+    return (inserted as UomLegalDocumentSelect | null) ?? null;
   }
 
   async update(

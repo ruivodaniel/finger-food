@@ -1,0 +1,158 @@
+{
+ "id": "ui-data-pattern-component-alerts-and-logs-event-failed",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-alerts-and-logs-event-failed",
+ "kind": "component",
+ "name": "event-failed",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "event-failed",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Card",
+   "props": {},
+   "children": [
+    {
+     "type": "Content",
+     "props": {},
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "justify": "between",
+          "align": "center",
+          "scale": "md"
+         },
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "row",
+            "align": "center",
+            "scale": "md"
+           },
+           "children": [
+            {
+             "type": "Badge",
+             "props": {
+              "status": "error",
+              "emphasis": "secondary",
+              "scale": "lg",
+              "aria-label": "Failed",
+              "showIcon": true,
+              "iconName": "close"
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--heading4",
+              "status": "error",
+              "children": "Failed"
+             }
+            }
+           ]
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--code",
+            "emphasis": "quiet",
+            "children": "msg_fail..."
+           }
+          }
+         ]
+        },
+        {
+         "type": "Text",
+         "props": {
+          "as": "code",
+          "element": "type--code",
+          "children": "{\"webhook\": \"https://api.example.com\"}"
+         }
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "wrap": true,
+          "scale": "md"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "emphasis": "quiet"
+           },
+           "children": [
+            {
+             "type": "Icon",
+             "props": {
+              "name": "refresh",
+              "size": "xs"
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "children": " 3/3 retries"
+             }
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "Card",
+         "props": {
+          "status": "error",
+          "concept": "alert"
+         },
+         "children": [
+          {
+           "type": "Header",
+           "props": {},
+           "children": []
+          },
+          {
+           "type": "Content",
+           "props": {},
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "as": "p",
+              "element": "type--body-small",
+              "emphasis": "quiet",
+              "children": "Connection timeout after 30s"
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

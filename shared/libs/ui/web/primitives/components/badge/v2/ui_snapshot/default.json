@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-primitive-badge-default",
+ "version": 1,
+ "uiDataId": "ui-data-primitive-badge",
+ "name": "default",
+ "title": "Badge, its cases",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

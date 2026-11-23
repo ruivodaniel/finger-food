@@ -1,0 +1,7 @@
+{
+ "id": "route-pattern-page-layout-header-main",
+ "version": 1,
+ "surface": "web",
+ "path": "/patterns/page/layout-header-main",
+ "uiNodeId": "ui-node-pattern-page-layout-header-main"
+}

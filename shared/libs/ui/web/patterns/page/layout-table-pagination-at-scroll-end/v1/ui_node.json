@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-page-layout-table-pagination-at-scroll-end",
+ "version": 1,
+ "type": "screen",
+ "surface": "web",
+ "title": "Table: pagination at the bottom of the scroll (default)"
+}

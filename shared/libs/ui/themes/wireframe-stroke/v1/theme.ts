@@ -31,11 +31,34 @@ export const daintaTheme: WebTheme = {
     main: { white: "#ffffff", black: "#1a1823" },
     brand: { "1": "#4a2d8f", "2": "#241a3d", "3": "#a495c7", "4": "#6b6779" },
     status: { success: "#2f6d4f", info: "#4a2d8f", warning: "#c99b2a", error: "#a83232" },
-    flat: {
-      red: "#a83232", orange: "#c99b2a", yellow: "#f0c877", lime: "#93b8a3", green: "#2f6d4f", mint: "#cbdcd2",
-      turquoise: "#93b8a3", blue: "#4a2d8f", violet: "#4a2d8f", purple: "#241a3d", pink: "#c3aef0",
+    content: {
+      tomato: { standard: "#B05A48", soft: "#F1CEC6" },
+      red: { standard: "#B05855", soft: "#F1CDCA" },
+      ruby: { standard: "#B05763", soft: "#F1CDCF" },
+      crimson: { standard: "#B45474", soft: "#F2CCD6" },
+      pink: { standard: "#A65283", soft: "#EDCBDC" },
+      plum: { standard: "#86518F", soft: "#DFCBE2" },
+      purple: { standard: "#715093", soft: "#D7CBE5" },
+      violet: { standard: "#5C5297", soft: "#CDCCE7" },
+      iris: { standard: "#50559B", soft: "#C9CDE9" },
+      indigo: { standard: "#415A9F", soft: "#C4CFEB" },
+      blue: { standard: "#4580C0", soft: "#C6DCF4" },
+      sky: { standard: "#91C8D9", soft: "#DDF1F6" },
+      cyan: { standard: "#4A8A9F", soft: "#C9DEE6" },
+      teal: { standard: "#4B8A80", soft: "#C9DFDA" },
+      jade: { standard: "#4E8875", soft: "#CADED6" },
+      green: { standard: "#4F8968", soft: "#CADED1" },
+      grass: { standard: "#588C5F", soft: "#CDDFCE" },
+      mint: { standard: "#97CEC1", soft: "#DFF2ED" },
+      lime: { standard: "#B5D388", soft: "#E9F4DA" },
+      yellow: { standard: "#E0D37B", soft: "#F7F3D6" },
+      amber: { standard: "#D8B773", soft: "#F6EBD4" },
+      orange: { standard: "#C2714C", soft: "#F5D5C8" },
+      brown: { standard: "#8D725C", soft: "#E0D5CD" },
+      bronze: { standard: "#85726A", soft: "#DDD5D2" },
+      gold: { standard: "#7E7362", soft: "#DAD6CF" },
     },
-    semanticTokens: { primary: "brand-1", secondary: "brand-2", accent: "brand-3", muted: "brand-4" },
+    semanticTokens: { primary: "#4a2d8f", secondary: "#241a3d", accent: "#a495c7", muted: "#6b6779" },
   },
 
   typography: {
@@ -72,7 +95,7 @@ export const daintaTheme: WebTheme = {
   },
 
   spacing: { unit: 0.875 },
-  radius: { none: "0px", "3xs": "0px", "2xs": "0px", xs: "0px", sm: "0px", md: "0px", lg: "0px", xl: "0px", "2xl": "0px", "3xl": "0px", full: "9999px" },
+  radius: { none: "0px", "3xs": "0px", "2xs": "0px", xs: "0px", sm: "0px", md: "0px", lg: "0px", xl: "16px", "2xl": "0px", "3xl": "0px", full: "9999px" },
   effects: {
     card: [{ type: "drop-shadow", x: 0, y: 1, blur: 2, color: "main-black", opacity: 0.05 }],
     sheet: [
@@ -86,7 +109,7 @@ export const daintaTheme: WebTheme = {
     duration: { extraFast: "50ms", fast: "100ms", average: "160ms", slow: "300ms", extraSlow: "500ms" },
     timing: { ease: "ease", easeIn: "ease-in", easeOut: "ease-out", easeInOut: "ease-in-out", linear: "linear" },
   },
-  borderWidths: { none: "0px", extraThin: "0.5px", thin: "1px", default: "1px", thick: "3px", extraThick: "4px" },
+  borderWidths: { none: "0px", extraThin: "0.3px", thin: "1px", default: "1px", thick: "3px", extraThick: "4px" },
 
   modes: {
     colorScheme: {
@@ -94,12 +117,27 @@ export const daintaTheme: WebTheme = {
         background: "#faf9fc",
         foreground: "#1a1823",
         // brand-1-light ≈ #f5f2fb (chip fill) · brand-1-dark ≈ #3c2a6b · status-x-light ≈ the pale status fills
-        derivation: { brandLightAmount: 6, brandDarkAmount: 75, statusLightAmount: 6, statusDarkAmount: 75, grayColorMixPercentage: "6%", flatSaturationAdjust: 0 },
+        derivation: { grayColorMixPercentage: "6%" },
       },
       dark: {
         background: "#1a1823",
         foreground: "#faf9fc",
-        derivation: { brandLightAmount: 18, brandDarkAmount: 70, statusLightAmount: 18, statusDarkAmount: 70, grayColorMixPercentage: "6%", flatSaturationAdjust: 0 },
+        chroma: { saturationFactor: 0.8, gamma: 1.1 },
+        derivation: { grayColorMixPercentage: "6%" },
+      },
+      // dark, low contrast
+      "dark-low-contrast": {
+        background: "#676371",
+        foreground: "#D2CFD9",
+        chroma: { saturationFactor: 0.7, gamma: 1.1 },
+        derivation: { grayColorMixPercentage: "6%" },
+      },
+      // light, warm, low contrast
+      "light-warm-low-contrast": {
+        background: "#CDC7BE",
+        foreground: "#7D7670",
+        chroma: { saturationFactor: 0.9, gamma: 1.1 },
+        derivation: { grayColorMixPercentage: "6%" },
       },
     },
   },
@@ -113,31 +151,31 @@ export const daintaTheme: WebTheme = {
     // the dark band: page header on brand-2, light text
     pageHeader: {
       height: "56px", sm: { height: "48px" }, md: { height: "56px" }, lg: { height: "72px" },
-      surface: { interior: { background: "brand-2", foreground: "smart-bw", padding: { x: "xl" } } },
+      surface: { interior: { background: "secondary", foreground: "smart-fb", padding: { x: "xl" } } },
     },
     secondPageHeader: {
       height: "56px", sm: { height: "48px" }, md: { height: "56px" }, lg: { height: "72px" },
-      surface: { interior: { background: "brand-2", foreground: "smart-bw", padding: { x: "xl" } } },
+      surface: { interior: { background: "secondary", foreground: "smart-fb", padding: { x: "xl" } } },
     },
     // a light toolbar strip under the page band — canvas, a thin rule below.
     // (Not a second dark band; a page that wants one sets emphasis="primary".)
     mainHeader: {
       height: "48px", sm: { height: "40px" }, md: { height: "48px" }, lg: { height: "64px" },
-      surface: { boundary: { border: { bottom: { width: "thin", style: "solid", color: "gray-200" } } }, interior: { padding: { x: "lg" }, background: "background", foreground: "foreground" } },
+      surface: { boundary: { border: { bottom: { width: "thin", style: "solid", color: "gray-200" } } }, interior: { padding: { x: "lg" }, background: "background", foreground: "smart-fb" } },
     },
     secondMainHeader: {
       height: "48px", sm: { height: "40px" }, md: { height: "48px" }, lg: { height: "64px" },
-      surface: { boundary: { border: { bottom: { width: "thin", style: "solid", color: "gray-200" } } }, interior: { padding: { x: "lg" }, background: "background", foreground: "foreground" } },
+      surface: { boundary: { border: { bottom: { width: "thin", style: "solid", color: "gray-200" } } }, interior: { padding: { x: "lg" }, background: "background", foreground: "smart-fb" } },
     },
-    leftSidebar: {
+    pageLeftSidebar: {
       width: "240px", sm: { width: "200px" }, md: { width: "240px" }, lg: { width: "300px" },
       surface: { boundary: { border: { right: { width: "thin", style: "solid", color: "gray-200" } } } },
     },
-    rightSidebar: {
+    pageRightSidebar: {
       width: "320px", sm: { width: "280px" }, md: { width: "320px" }, lg: { width: "420px" },
       surface: { boundary: { border: { left: { width: "thin", style: "solid", color: "gray-200" } } } },
     },
-    contextPanel: {
+    mainRightSidebar: {
       width: "320px", sm: { width: "260px" }, md: { width: "320px" }, lg: { width: "420px" },
       surface: { interior: { background: "background" }, boundary: { border: { left: { width: "thin", style: "solid", color: "gray-200" } } } },
     },
@@ -146,10 +184,11 @@ export const daintaTheme: WebTheme = {
     // brand band with light text; secondary = a soft branded-gray panel. The
     // base rule still owns which edge the region's border sits on.
     emphasis: {
-      primary: { surface: { interior: { background: "brand-2", foreground: "smart-bw" } } },
-      secondary: { surface: { interior: { background: "gray-100", foreground: "foreground" } } },
+      primary: { surface: { interior: { background: "secondary", foreground: "smart-fb" } } },
+      secondary: { surface: { interior: { background: "gray-100", foreground: "smart-fb" } } },
     },
-    container: { sm: { maxWidth: "640px" }, md: { maxWidth: "940px" }, lg: { maxWidth: "1340px" } },
+    // xs is the auth container: the sign-in, registration and recovery card spans it
+    mainContainer: { xs: { maxWidth: "448px" }, sm: { maxWidth: "640px" }, md: { maxWidth: "940px" }, lg: { maxWidth: "1340px" } },
     dialog: { sm: { maxWidth: "480px" }, md: { maxWidth: "640px" }, lg: { maxWidth: "940px" } },
     sheet: { sm: { size: "320px" }, md: { size: "420px" }, lg: { size: "640px" } },
     section: { surface: { interior: { gap: { all: "lg" } } } },
@@ -162,19 +201,19 @@ export const daintaTheme: WebTheme = {
   families: {
     // THE surface: a white box, a hairline, no radius, a whisper of shadow
     surfaceContainer: {
-      interior: { background: "background", foreground: "foreground", gap: { all: "md" }, padding: {} },
+      interior: { background: "background", foreground: "smart-fb", gap: { all: "md" }, padding: {} },
       boundary: { border: { width: "thin", style: "solid", color: "gray-200" }, radius: { all: "none" } },
       defaultTypography: { typographyType: "body" },
       transition: { duration: "fast", timing: "easeOut" },
       combined: [
         { where: { state: "disabled" }, partialSurface: { interior: { opacity: 0.45 }, cursor: "not-allowed" } },
         // status on a surface: a pale fill of its color, text in the color
-        { where: { status: "error" }, partialSurface: { tint: "status-error", interior: { background: "status-error-light", foreground: "status-error" }, boundary: { border: { color: "status-error-light" } } } },
-        { where: { status: "success" }, partialSurface: { tint: "status-success", interior: { background: "status-success-light", foreground: "status-success" }, boundary: { border: { color: "status-success-light" } } } },
-        { where: { status: "warning" }, partialSurface: { tint: "status-warning", interior: { background: "status-warning-light", foreground: "status-warning-dark" }, boundary: { border: { color: "status-warning-light" } } } },
-        { where: { status: "info" }, partialSurface: { tint: "brand-1", interior: { background: "brand-3", foreground: "brand-1-dark" }, boundary: { border: { color: "brand-1-light" } } } },
+        { where: { status: "error" }, partialSurface: { tint: "status-error", interior: { background: "background", foreground: "status-error" }, boundary: { border: { color: "transparent" } } } },
+        { where: { status: "success" }, partialSurface: { tint: "status-success", interior: { background: "background", foreground: "status-success" }, boundary: { border: { color: "transparent" } } } },
+        { where: { status: "warning" }, partialSurface: { tint: "status-warning", interior: { background: "background", foreground: "status-warning" }, boundary: { border: { color: "transparent" } } } },
+        { where: { status: "info" }, partialSurface: { tint: "primary", interior: { background: "accent", foreground: "smart-fb" }, boundary: { border: { color: "transparent" } } } },
         // hero: the dark band
-        { where: { emphasis: "hero" }, partialSurface: { interior: { background: "brand-2", foreground: "smart-bw" }, boundary: { border: { color: "brand-2" } } } },
+        { where: { emphasis: "hero" }, partialSurface: { interior: { background: "secondary", foreground: "smart-fb" }, boundary: { border: { color: "secondary" } } } },
         { where: { emphasis: "quiet" }, partialSurface: { interior: { background: "transparent", foreground: "gray-600" }, boundary: { border: { color: "transparent" } } } },
       ],
     },
@@ -192,12 +231,12 @@ export const daintaTheme: WebTheme = {
         "3xl": { partialSurface: { interior: { padding: { x: "lg", y: "md" } }, defaultTypography: { typographyType: "bodyExtraLarge" } } },
       },
       surface: {
-        interior: { background: "background", foreground: "foreground", padding: { x: "sm", y: "sm" }, gap: { all: "sm" } },
+        interior: { background: "background", foreground: "smart-fb", padding: { x: "sm", y: "sm" }, gap: { all: "sm" } },
         boundary: { border: { width: "thin", style: "solid", color: "gray-300" } },
         cursor: "text",
         combined: [
           { where: { state: "hover" }, partialSurface: { boundary: { border: { color: "gray-500" } } } },
-          { where: { state: "focus" }, partialSurface: { boundary: { border: { color: "brand-1" }, outline: { width: "thin", style: "solid", color: "brand-1", offset: "0px" } } } },
+          { where: { state: "focus" }, partialSurface: { boundary: { border: { color: "primary" }, outline: { width: "thin", style: "solid", color: "primary", offset: "0px" } } } },
           { where: { status: "error" }, partialSurface: { tint: "status-error", boundary: { border: { color: "status-error" } } } },
           { where: { status: "success" }, partialSurface: { tint: "status-success", boundary: { border: { color: "status-success" } } } },
           { where: { status: "warning" }, partialSurface: { tint: "status-warning", boundary: { border: { color: "status-warning" } } } },
@@ -206,28 +245,23 @@ export const daintaTheme: WebTheme = {
       },
       placeholderColor: "gray-500",
       placeholderOpacity: 1,
-      caretColor: "brand-1",
+      caretColor: "primary",
     },
 
     elevatedOverlay: {
       surface: { interior: { background: "background" }, boundary: { effect: "sheet", border: { width: "thin", style: "solid", color: "gray-200" } } },
-      overlay: { scrimColor: "brand-2", scrimOpacity: 0.45, scrimBlur: "none" },
+      overlay: { scrimColor: "secondary", scrimOpacity: 0.45, scrimBlur: "xs" },
     },
 
     listContainer: {
       surface: { interior: { gap: { all: "none" }, padding: {} } },
       row: {
         interior: { padding: { y: "sm" } },
-        boundary: { border: { bottom: { width: "thin", style: "solid", color: "gray-100" } } },
         combined: [
           { where: { state: "hover" }, partialSurface: { interior: { background: "background" } } },
-          { where: { state: "selected" }, partialSurface: { interior: { background: "brand-1-light" } } },
+          { where: { state: "selected" }, partialSurface: { tint: "primary", interior: { background: "background" } } },
         ],
       },
-      // no `cell`: it compiles to `[list] > * > *` — every grandchild of a list — and in a
-      // menu (list--menu > menu-item > icon · label · badge) it padded the icon to zero
-      // width and pushed the label. Row padding is the item's; part spacing is its gap.
-      separator: { height: "1px", surface: { interior: { background: "gray-100" } } },
     },
 
     interactiveControlGroup: {
@@ -248,43 +282,43 @@ export const daintaTheme: WebTheme = {
       },
       surface: {
         // the plain control: white, hairline — the target's default button
-        interior: { background: "background", foreground: "foreground", padding: { x: "md", y: "sm" }, gap: { all: "sm" } },
+        interior: { background: "background", foreground: "smart-fb", padding: { x: "md", y: "sm" }, gap: { all: "sm" } },
         boundary: { border: { width: "thin", style: "solid", color: "gray-300" }, radius: { all: "none" } },
         defaultTypography: { typographyType: "body" },
         cursor: "pointer",
         combined: [
           // emphasis = the pattern; tint = the color (status re-tints below)
-          { where: { emphasis: "hero" }, partialSurface: { tint: "brand-2", interior: { background: "tint", foreground: "smart-bw" }, boundary: { border: { color: "transparent" } } } },
-          { where: { emphasis: "primary" }, partialSurface: { tint: "primary", interior: { background: "tint", foreground: "smart-bw" }, boundary: { border: { color: "transparent" } } } },
-          { where: { emphasis: "secondary" }, partialSurface: { interior: { background: "background", foreground: "foreground" }, boundary: { border: { color: "gray-300" } } } },
-          { where: { emphasis: "tertiary" }, partialSurface: { interior: { background: "transparent", foreground: "brand-1" }, boundary: { border: { color: "transparent" } } } },
+          { where: { emphasis: "hero" }, partialSurface: { tint: "secondary", interior: { background: "tint", foreground: "smart-fb" }, boundary: { border: { color: "transparent" } } } },
+          { where: { emphasis: "primary" }, partialSurface: { tint: "primary", interior: { background: "tint", foreground: "smart-fb" }, boundary: { border: { color: "transparent" } } } },
+          { where: { emphasis: "secondary" }, partialSurface: { interior: { background: "background", foreground: "smart-fb" }, boundary: { border: { color: "gray-300" } } } },
+          { where: { emphasis: "tertiary" }, partialSurface: { interior: { background: "transparent", foreground: "smart-fb" }, boundary: { border: { color: "transparent" } } } },
           { where: { emphasis: "quiet" }, partialSurface: { interior: { background: "transparent", foreground: "gray-600" }, boundary: { border: { color: "transparent" } } } },
           { where: { status: "error" }, partialSurface: { tint: "status-error", interior: { foreground: "status-error" }, boundary: { border: { color: "status-error" } } } },
           { where: { status: "destructive" }, partialSurface: { tint: "status-error", interior: { foreground: "status-error" }, boundary: { border: { color: "status-error" } } } },
           { where: { status: "success" }, partialSurface: { tint: "status-success", interior: { foreground: "status-success" }, boundary: { border: { color: "status-success" } } } },
-          { where: { status: "warning" }, partialSurface: { tint: "status-warning", interior: { foreground: "status-warning-dark" }, boundary: { border: { color: "status-warning" } } } },
-          { where: { status: "info" }, partialSurface: { tint: "brand-1", interior: { foreground: "brand-1-dark" }, boundary: { border: { color: "brand-1" } } } },
+          { where: { status: "warning" }, partialSurface: { tint: "status-warning", interior: { foreground: "status-warning" }, boundary: { border: { color: "status-warning" } } } },
+          { where: { status: "info" }, partialSurface: { tint: "primary", interior: { foreground: "primary" }, boundary: { border: { color: "primary" } } } },
           // filled + status: the fill takes the status color
-          { where: { emphasis: "primary", status: "error" }, partialSurface: { interior: { background: "tint", foreground: "smart-bw" }, boundary: { border: { color: "transparent" } } } },
-          { where: { emphasis: "primary", status: "destructive" }, partialSurface: { interior: { background: "tint", foreground: "smart-bw" }, boundary: { border: { color: "transparent" } } } },
-          { where: { emphasis: "primary", status: "success" }, partialSurface: { interior: { background: "tint", foreground: "smart-bw" }, boundary: { border: { color: "transparent" } } } },
-          { where: { emphasis: "primary", status: "warning" }, partialSurface: { interior: { background: "tint", foreground: "smart-bw" }, boundary: { border: { color: "transparent" } } } },
-          { where: { emphasis: "primary", status: "info" }, partialSurface: { interior: { background: "tint", foreground: "smart-bw" }, boundary: { border: { color: "transparent" } } } },
+          { where: { emphasis: "primary", status: "error" }, partialSurface: { interior: { background: "tint", foreground: "smart-fb" }, boundary: { border: { color: "transparent" } } } },
+          { where: { emphasis: "primary", status: "destructive" }, partialSurface: { interior: { background: "tint", foreground: "smart-fb" }, boundary: { border: { color: "transparent" } } } },
+          { where: { emphasis: "primary", status: "success" }, partialSurface: { interior: { background: "tint", foreground: "smart-fb" }, boundary: { border: { color: "transparent" } } } },
+          { where: { emphasis: "primary", status: "warning" }, partialSurface: { interior: { background: "tint", foreground: "smart-fb" }, boundary: { border: { color: "transparent" } } } },
+          { where: { emphasis: "primary", status: "info" }, partialSurface: { interior: { background: "tint", foreground: "smart-fb" }, boundary: { border: { color: "transparent" } } } },
           // states
           { where: { state: "hover" }, partialSurface: { interior: { background: "background" }, boundary: { border: { color: "gray-500" } } } },
-          { where: { emphasis: "primary", state: "hover" }, partialSurface: { interior: { background: "brand-1-dark", foreground: "smart-bw" }, boundary: { border: { color: "transparent" } } } },
-          { where: { emphasis: "hero", state: "hover" }, partialSurface: { interior: { background: "brand-1", foreground: "smart-bw" }, boundary: { border: { color: "transparent" } } } },
-          { where: { emphasis: "tertiary", state: "hover" }, partialSurface: { interior: { background: "brand-3", foreground: "brand-1-dark" }, boundary: { border: { color: "transparent" } } } },
-          { where: { emphasis: "quiet", state: "hover" }, partialSurface: { interior: { background: "gray-100", foreground: "foreground" }, boundary: { border: { color: "transparent" } } } },
+          { where: { emphasis: "primary", state: "hover" }, partialSurface: { interior: { background: "primary", foreground: "smart-fb" }, boundary: { border: { color: "transparent" } } } },
+          { where: { emphasis: "hero", state: "hover" }, partialSurface: { interior: { background: "primary", foreground: "smart-fb" }, boundary: { border: { color: "transparent" } } } },
+          { where: { emphasis: "tertiary", state: "hover" }, partialSurface: { interior: { background: "accent", foreground: "smart-fb" }, boundary: { border: { color: "transparent" } } } },
+          { where: { emphasis: "quiet", state: "hover" }, partialSurface: { interior: { background: "gray-100", foreground: "smart-fb" }, boundary: { border: { color: "transparent" } } } },
           { where: { state: "active" }, partialSurface: { interior: { background: "gray-100" } } },
-          { where: { state: "selected" }, partialSurface: { interior: { background: "brand-3", foreground: "brand-1-dark" }, boundary: { border: { color: "brand-1" } } } },
+          { where: { state: "selected" }, partialSurface: { interior: { background: "accent", foreground: "smart-fb" }, boundary: { border: { color: "primary" } } } },
           // selected + status: keep the status colour, don't fall back to the generic brand selection tint
-          { where: { state: "selected", status: "error" }, partialSurface: { interior: { background: "status-error", foreground: "smart-bw" }, boundary: { border: { color: "status-error" } } } },
-          { where: { state: "selected", status: "destructive" }, partialSurface: { interior: { background: "status-error", foreground: "smart-bw" }, boundary: { border: { color: "status-error" } } } },
-          { where: { state: "selected", status: "success" }, partialSurface: { interior: { background: "status-success", foreground: "smart-bw" }, boundary: { border: { color: "status-success" } } } },
-          { where: { state: "selected", status: "warning" }, partialSurface: { interior: { background: "status-warning", foreground: "smart-bw" }, boundary: { border: { color: "status-warning" } } } },
-          { where: { state: "selected", status: "info" }, partialSurface: { interior: { background: "brand-1", foreground: "smart-bw" }, boundary: { border: { color: "brand-1" } } } },
-          { where: { state: "focus" }, partialSurface: { boundary: { outline: { width: "thin", style: "solid", color: "brand-1", offset: "1px" } } } },
+          { where: { state: "selected", status: "error" }, partialSurface: { interior: { background: "status-error", foreground: "smart-fb" }, boundary: { border: { color: "status-error" } } } },
+          { where: { state: "selected", status: "destructive" }, partialSurface: { interior: { background: "status-error", foreground: "smart-fb" }, boundary: { border: { color: "status-error" } } } },
+          { where: { state: "selected", status: "success" }, partialSurface: { interior: { background: "status-success", foreground: "smart-fb" }, boundary: { border: { color: "status-success" } } } },
+          { where: { state: "selected", status: "warning" }, partialSurface: { interior: { background: "status-warning", foreground: "smart-fb" }, boundary: { border: { color: "status-warning" } } } },
+          { where: { state: "selected", status: "info" }, partialSurface: { interior: { background: "primary", foreground: "smart-fb" }, boundary: { border: { color: "primary" } } } },
+          { where: { state: "focus" }, partialSurface: { boundary: { outline: { width: "thin", style: "solid", color: "primary", offset: "1px" } } } },
           { where: { state: "disabled" }, partialSurface: { interior: { opacity: 0.45 }, cursor: "not-allowed" } },
           { where: { state: "loading" }, partialSurface: { cursor: "progress", interior: { opacity: 0.7 } } },
         ],
@@ -292,7 +326,7 @@ export const daintaTheme: WebTheme = {
     },
 
     shape: { surface: { interior: { foreground: "currentColor", background: "transparent", padding: {} }, boundary: { border: { width: "none" } } } },
-    media: { surface: { interior: { background: "gray-100", padding: {} }, boundary: { border: { width: "thin", style: "solid", color: "gray-200" } } }, objectFit: "cover" },
+    media: { surface: { interior: { background: "gray-100", padding: {} }}, objectFit: "cover" },
   },
 
   elements: {
@@ -317,72 +351,57 @@ export const daintaTheme: WebTheme = {
       interior: { background: "transparent" },
       combined: [
         { where: { state: "hover" }, partialSurface: { interior: { background: "background" } } },
-        { where: { state: "selected" }, partialSurface: { interior: { background: "brand-1-light" } } },
+        { where: { state: "selected" }, partialSurface: { tint: "primary", interior: { background: "background" } } },
       ],
     },
     tableCell: { interior: { padding: { x: "lg", y: "sm" } }, boundary: { border: { width: "none" } }, defaultTypography: { typographyType: "body" } },
 
-    // ── plain containers: the card is THE surface; content regions are transparent inside it ──
-    card: { interior: { padding: { x: "lg", y: "md" }, gap: { all: "md" } }, boundary: { effect: "card" } },
+    // ── containers: the padding is written here, once, and the parts bleed to the edges (childrenSmartBleed); the parts carry none ──
+    card: { interior: { padding: { x: "lg", y: "md", childrenSmartBleed: true }, gap: { all: "none" } }, boundary: { effect: "card" } },
+    panel: { interior: { padding: { all: "lg", childrenSmartBleed: true }, gap: { all: "none" } } },
+    // ── parts: the vertical padding of each band, written once; the sides are the container's, taken on the bled edges
     header: {
-      interior: { background: "transparent", padding: { x: "lg", y: "md" }, gap: { all: "sm" } },
+      interior: { foreground: "currentColor", padding: { y: "md" }, gap: { all: "sm" } },
       boundary: { border: { width: "none", bottom: { width: "thin", style: "solid", color: "gray-100" } } },
       defaultTypography: { typographyType: "heading4" },
     },
-    content: { interior: { background: "transparent", padding: { x: "lg", y: "md" } }, boundary: { border: { width: "none" } } },
+    content: { interior: { background: "transparent", foreground: "currentColor", padding: { y: "md" } }, boundary: { border: { width: "none" } } },
     footer: {
-      interior: { background: "background", padding: { x: "lg", y: "sm" }, gap: { all: "sm" } },
+      interior: { foreground: "currentColor", padding: { y: "sm" }, gap: { all: "sm" } },
       boundary: { border: { width: "none", top: { width: "thin", style: "solid", color: "gray-100" } } },
     },
-    panel: { interior: { padding: { all: "lg" } } },
-    // ═══════════════════════════════════════════════════════════════════════
-    // TILE — the cell of a Stack of tiles (pattern: card-with-tiles)
-    // The markup only says surface--tile (+ emphasis / status). Everything
-    // visual about a tile is decided HERE: its fill, its seam, its padding.
-    // dainta: a white cell, a hairline all round, no radius — the seam between
-    // two tiles is their hairlines, with the Stack's gap between them.
-    // hero = the dark band · quiet = sinks into the page ground, no line.
-    // A gap-reveal seam (the stack's ground showing through a 1px gap) needs
-    // layouts.stack in the engine — the next step, not here.
-    // ═══════════════════════════════════════════════════════════════════════
+    // ── tile: a white cell, hairline all round, no radius; hero = dark band, quiet = sinks into the ground ──
     tile: {
-      interior: { background: "background", foreground: "foreground", padding: { all: "md" }, gap: { all: "xs" } },
+      interior: { background: "background", foreground: "smart-fb", padding: { all: "md" }, gap: { all: "xs" } },
       boundary: { border: { width: "thin", style: "solid", color: "gray-200" }, radius: { all: "none" } },
       combined: [
-        { where: { emphasis: "hero" }, partialSurface: { interior: { background: "brand-2", foreground: "smart-bw" }, boundary: { border: { color: "brand-2" } } } },
+        { where: { emphasis: "hero" }, partialSurface: { interior: { background: "secondary", foreground: "smart-fb" }, boundary: { border: { color: "secondary" } } } },
         { where: { emphasis: "quiet" }, partialSurface: { interior: { background: "background" }, boundary: { border: { color: "transparent" } } } },
       ],
     },
     separator: { surface: { interior: { background: "gray-100", padding: {} }, boundary: { border: { width: "none" } } }, height: "1px" },
-    emptyState: {
-      surface: {
-        interior: { background: "transparent", foreground: "gray-600", padding: { all: "xl" }, childAlign: { horizontal: "center", vertical: "center" } },
-        boundary: { border: { width: "thin", style: "dashed", color: "gray-300" } },
-      },
-    },
-    alert: { surface: { interior: { padding: { x: "md", y: "sm" }, gap: { all: "sm" } }, boundary: { border: { width: "thin", style: "solid", color: "gray-200" } } } },
 
     // ── badge: the mono data label; quiet by default, filled by status ──
     badge: {
       surface: {
-        interior: { background: "background", foreground: "foreground", padding: { x: "xs", y: "3xs" }, gap: { all: "2xs" } },
+        interior: { background: "background", foreground: "smart-fb", padding: { x: "xs", y: "3xs" }, gap: { all: "2xs" } },
         boundary: { border: { width: "thin", style: "solid", color: "gray-300" } },
         defaultTypography: { typographyType: "numbersSmall" },
         combined: [
-          { where: { status: "error" }, partialSurface: { interior: { background: "status-error", foreground: "smart-bw" }, boundary: { border: { color: "status-error" } } } },
-          { where: { status: "destructive" }, partialSurface: { interior: { background: "status-error", foreground: "smart-bw" }, boundary: { border: { color: "status-error" } } } },
-          { where: { status: "success" }, partialSurface: { interior: { background: "status-success-light", foreground: "status-success" }, boundary: { border: { color: "status-success-light" } } } },
-          { where: { status: "warning" }, partialSurface: { interior: { background: "status-warning-light", foreground: "status-warning-dark" }, boundary: { border: { color: "status-warning-light" } } } },
-          { where: { status: "info" }, partialSurface: { interior: { background: "brand-3", foreground: "brand-1-dark" }, boundary: { border: { color: "brand-1-light" } } } },
-          { where: { emphasis: "primary" }, partialSurface: { interior: { background: "brand-1", foreground: "smart-bw" }, boundary: { border: { color: "brand-1" } } } },
+          { where: { status: "error" }, partialSurface: { interior: { background: "status-error", foreground: "smart-fb" }, boundary: { border: { color: "status-error" } } } },
+          { where: { status: "destructive" }, partialSurface: { interior: { background: "status-error", foreground: "smart-fb" }, boundary: { border: { color: "status-error" } } } },
+          { where: { status: "success" }, partialSurface: { tint: "status-success", interior: { background: "background", foreground: "status-success" }, boundary: { border: { color: "transparent" } } } },
+          { where: { status: "warning" }, partialSurface: { tint: "status-warning", interior: { background: "background", foreground: "status-warning" }, boundary: { border: { color: "transparent" } } } },
+          { where: { status: "info" }, partialSurface: { tint: "primary", interior: { background: "accent", foreground: "smart-fb" }, boundary: { border: { color: "transparent" } } } },
+          { where: { emphasis: "primary" }, partialSurface: { interior: { background: "primary", foreground: "smart-fb" }, boundary: { border: { color: "primary" } } } },
           // emphasis="primary" is the component default — without these, the
           // plain-emphasis rule above (unconditional) clobbers every status
           // colour on a badge that never opted into a different emphasis.
-          { where: { emphasis: "primary", status: "error" }, partialSurface: { interior: { background: "status-error", foreground: "smart-bw" }, boundary: { border: { color: "status-error" } } } },
-          { where: { emphasis: "primary", status: "destructive" }, partialSurface: { interior: { background: "status-error", foreground: "smart-bw" }, boundary: { border: { color: "status-error" } } } },
-          { where: { emphasis: "primary", status: "success" }, partialSurface: { interior: { background: "status-success-light", foreground: "status-success" }, boundary: { border: { color: "status-success-light" } } } },
-          { where: { emphasis: "primary", status: "warning" }, partialSurface: { interior: { background: "status-warning-light", foreground: "status-warning-dark" }, boundary: { border: { color: "status-warning-light" } } } },
-          { where: { emphasis: "primary", status: "info" }, partialSurface: { interior: { background: "brand-3", foreground: "brand-1-dark" }, boundary: { border: { color: "brand-1-light" } } } },
+          { where: { emphasis: "primary", status: "error" }, partialSurface: { interior: { background: "status-error", foreground: "smart-fb" }, boundary: { border: { color: "status-error" } } } },
+          { where: { emphasis: "primary", status: "destructive" }, partialSurface: { interior: { background: "status-error", foreground: "smart-fb" }, boundary: { border: { color: "status-error" } } } },
+          { where: { emphasis: "primary", status: "success" }, partialSurface: { tint: "status-success", interior: { background: "background", foreground: "status-success" }, boundary: { border: { color: "transparent" } } } },
+          { where: { emphasis: "primary", status: "warning" }, partialSurface: { tint: "status-warning", interior: { background: "background", foreground: "status-warning" }, boundary: { border: { color: "transparent" } } } },
+          { where: { emphasis: "primary", status: "info" }, partialSurface: { tint: "primary", interior: { background: "accent", foreground: "smart-fb" }, boundary: { border: { color: "transparent" } } } },
           { where: { emphasis: "quiet" }, partialSurface: { interior: { background: "transparent", foreground: "gray-500" }, boundary: { border: { color: "transparent" } } } },
         ],
       },
@@ -399,12 +418,12 @@ export const daintaTheme: WebTheme = {
     // ── chip: the tinted tag ──
     chip: {
       surface: {
-        interior: { background: "brand-3", foreground: "brand-1-dark", padding: { x: "xs", y: "3xs" }, gap: { all: "2xs" } },
+        interior: { background: "accent", foreground: "smart-fb", padding: { x: "xs", y: "3xs" }, gap: { all: "2xs" } },
         boundary: { border: { width: "thin", style: "solid", color: "gray-300" } },
         defaultTypography: { typographyType: "numbersExtraSmall", textTransform: "uppercase" },
         combined: [
-          { where: { state: "hover" }, partialSurface: { boundary: { border: { color: "brand-1" } } } },
-          { where: { state: "selected" }, partialSurface: { interior: { background: "brand-1", foreground: "smart-bw" }, boundary: { border: { color: "brand-1" } } } },
+          { where: { state: "hover" }, partialSurface: { boundary: { border: { color: "primary" } } } },
+          { where: { state: "selected" }, partialSurface: { interior: { background: "primary", foreground: "smart-fb" }, boundary: { border: { color: "primary" } } } },
         ],
       },
       sizes: {
@@ -416,9 +435,24 @@ export const daintaTheme: WebTheme = {
       },
     },
     // ── avatar: the one round thing ──
+    // IMAGE — the media family's picture in a box: the frame and the fill are the family's; the box's size per scale, square; a loading one waits quietly
+    image: {
+      sizes: {
+        "3xs": { partialSurface: { dimensionPosition: { width: "16px", height: "16px" } } },
+        "2xs": { partialSurface: { dimensionPosition: { width: "24px", height: "24px" } } },
+        xs: { partialSurface: { dimensionPosition: { width: "32px", height: "32px" } } },
+        sm: { partialSurface: { dimensionPosition: { width: "48px", height: "48px" } } },
+        md: { partialSurface: { dimensionPosition: { width: "64px", height: "64px" } } },
+        lg: { partialSurface: { dimensionPosition: { width: "96px", height: "96px" } } },
+        xl: { partialSurface: { dimensionPosition: { width: "160px", height: "160px" } } },
+        "2xl": { partialSurface: { dimensionPosition: { width: "240px", height: "240px" } } },
+        "3xl": { partialSurface: { dimensionPosition: { width: "320px", height: "320px" } } },
+      },
+      surface: { combined: [{ where: { state: "loading" }, partialSurface: { interior: { background: "gray-50" } } }] },
+    },
     avatar: {
       surface: {
-        interior: { background: "brand-1", foreground: "smart-bw", padding: { all: "none" }, childAlign: { horizontal: "center", vertical: "center" } },
+        interior: { background: "primary", foreground: "smart-fb", padding: { all: "none" }, childAlign: { horizontal: "center", vertical: "center" } },
         boundary: { radius: { all: "full" }, border: { width: "none" } },
         defaultTypography: { typographyType: "numbersSmall" },
       },
@@ -435,9 +469,9 @@ export const daintaTheme: WebTheme = {
     icon: {},
     // ── progress: thin track, brand fill ──
     progress: { surface: { interior: { background: "gray-100", padding: {} }, boundary: { border: { width: "none" } }, dimensionPosition: { height: "4px" } } },
-    progressInner: { interior: { background: "brand-1" } },
+    progressInner: { interior: { background: "primary" } },
     skeleton: { surface: { interior: { background: "gray-100" }, boundary: { border: { width: "none" } } } },
-    spinner: { surface: { interior: { foreground: "brand-1", background: "transparent" }, boundary: { border: { width: "none" } } } },
+    spinner: { surface: { interior: { foreground: "primary", background: "transparent" }, boundary: { border: { width: "none" } } } },
 
     // ── controls ──
     button: { surface: { interior: { gap: { all: "sm" } }, defaultTypography: { typographyType: "body" } } },
@@ -446,7 +480,7 @@ export const daintaTheme: WebTheme = {
         dimensionPosition: { width: "30px", height: "17px" },
         interior: { background: "gray-300", padding: { all: "none" } },
         boundary: { radius: { all: "none" }, border: { width: "none" } },
-        combined: [{ where: { state: "selected" }, partialSurface: { interior: { background: "brand-1" } } }],
+        combined: [{ where: { state: "selected" }, partialSurface: { interior: { background: "primary" } } }],
       },
       thumb: {
         dimensionPosition: { width: "13px", height: "13px", translateX: "2px", translateY: "2px" },
@@ -460,7 +494,7 @@ export const daintaTheme: WebTheme = {
         interior: { background: "background", padding: { all: "none" } },
         boundary: { border: { width: "thin", style: "solid", color: "gray-500" }, radius: { all: "none" } },
         dimensionPosition: { width: "15px", height: "15px" },
-        combined: [{ where: { state: "selected" }, partialSurface: { interior: { background: "brand-1", foreground: "smart-bw" }, boundary: { border: { color: "brand-1" } } } }],
+        combined: [{ where: { state: "selected" }, partialSurface: { interior: { background: "primary", foreground: "smart-fb" }, boundary: { border: { color: "primary" } } } }],
       },
     },
     radio: {
@@ -468,7 +502,7 @@ export const daintaTheme: WebTheme = {
         interior: { background: "background", padding: { all: "none" } },
         boundary: { border: { width: "thin", style: "solid", color: "gray-500" }, radius: { all: "full" } },
         dimensionPosition: { width: "15px", height: "15px" },
-        combined: [{ where: { state: "selected" }, partialSurface: { boundary: { border: { width: "extraThick", color: "brand-1" } } } }],
+        combined: [{ where: { state: "selected" }, partialSurface: { boundary: { border: { width: "extraThick", color: "primary" } } } }],
       },
     },
     // ── tabs: text, a 3px brand bar when selected ──
@@ -478,20 +512,12 @@ export const daintaTheme: WebTheme = {
         interior: { background: "transparent", foreground: "gray-600", padding: { x: "none", y: "sm" } },
         boundary: { border: { width: "none", bottom: { width: "thick", style: "solid", color: "transparent" } } },
         combined: [
-          { where: { state: "hover" }, partialSurface: { interior: { background: "transparent", foreground: "foreground" }, boundary: { border: { color: "transparent" } } } },
-          { where: { state: "selected" }, partialSurface: { interior: { background: "transparent", foreground: "foreground" }, boundary: { border: { bottom: { color: "brand-1" } } } } },
+          { where: { state: "hover" }, partialSurface: { interior: { background: "transparent", foreground: "smart-fb" }, boundary: { border: { color: "transparent" } } } },
+          { where: { state: "selected" }, partialSurface: { interior: { background: "transparent", foreground: "smart-fb" }, boundary: { border: { bottom: { color: "primary" } } } } },
         ],
       },
     },
-    // ── sidebar: a light column; the current item is white with a brand bar on its left ──
-    // ═══════════════════════════════════════════════════════════════════════
-    // SIDEBAR — the rail (control-group--sidebar) and its items (control--sidebar-item)
-    // The markup says only: a sidebar, an item, emphasis="primary" for the main
-    // nav (tertiary for a section nav), state="selected" for the current one.
-    // Here is what that looks like: a white rail; calm ink rows; the current
-    // main-nav row is the ONE filled brand-2 band. Without the primary entries
-    // below, the control family's primary fill paints every main-nav row a slab.
-    // ═══════════════════════════════════════════════════════════════════════
+    // ── sidebar: a white rail; the current item has a brand bar on its left ──
     sidebar: { widthExpanded: "240px", widthCollapsed: "56px", surface: {
        interior: { background: "background", padding: { y: "sm" }, gap: { all: "2xs" } }, 
       boundary: { border: { right: { width: "thin", style: "solid", color: "gray-200" } } }  
@@ -501,29 +527,32 @@ export const daintaTheme: WebTheme = {
         interior: { background: "transparent", foreground: "gray-600", padding: { x: "lg", y: "sm" }, gap: { all: "sm" }, childAlign: { horizontal: "start", vertical: "center" } },
         boundary: { border: { width: "none", left: { width: "thick", style: "solid", color: "transparent" } }, radius: { all: "none" } },
         combined: [
-          { where: { state: "hover" }, partialSurface: { interior: { background: "background", foreground: "foreground" }, boundary: { border: { color: "transparent" } } } },
-          { where: { state: "selected" }, partialSurface: { interior: { background: "background", foreground: "foreground" }, boundary: { border: { left: { color: "brand-1" } } } } },
+          { where: { state: "hover" }, partialSurface: { interior: { background: "background", foreground: "smart-fb" }, boundary: { border: { color: "transparent" } } } },
+          { where: { state: "selected" }, partialSurface: { interior: { background: "background", foreground: "smart-fb" }, boundary: { border: { left: { color: "primary" } } } } },
           // main nav (emphasis="primary") looks exactly like the section nav: the same quiet rows,
           // the same selected row — light ground and the brand bar. The entries exist only to
           // cancel the control family's primary fill (tint and alpha reset: the fill formula mixes --tint in).
           { where: { emphasis: "primary" }, partialSurface: { tint: "transparent", interior: { background: "transparent", backgroundAlpha: 1, foreground: "gray-600" }, boundary: { border: { color: "transparent" } } } },
-          { where: { emphasis: "primary", state: "hover" }, partialSurface: { tint: "transparent", interior: { background: "background", backgroundAlpha: 1, foreground: "foreground" }, boundary: { border: { color: "transparent" } } } },
-          { where: { emphasis: "primary", state: "selected" }, partialSurface: { tint: "transparent", interior: { background: "background", backgroundAlpha: 1, foreground: "foreground" }, boundary: { border: { color: "transparent", left: { color: "brand-1" } } } } },
+          { where: { emphasis: "primary", state: "hover" }, partialSurface: { tint: "transparent", interior: { background: "background", backgroundAlpha: 1, foreground: "smart-fb" }, boundary: { border: { color: "transparent" } } } },
+          { where: { emphasis: "primary", state: "selected" }, partialSurface: { tint: "transparent", interior: { background: "background", backgroundAlpha: 1, foreground: "smart-fb" }, boundary: { border: { color: "transparent", left: { color: "primary" } } } } },
         ],
       },
     },
     // ── lists and menus ──
-    list: { surface: { interior: { gap: { all: "none" } } } },
+    // the list: a gap between the rows, and a thin separator drawn in the gap (the list family's separator; the row keeps no border of its own)
+    list: {
+      surface: { interior: { padding: { x: "lg", childrenSmartBleed: true }, gap: { all: "md" } } },   // the list owns the x padding; the rows bleed to its edges
+    },
     // ── list draggable: a to-do row is a hairline box; the drag shows a dashed ghost, a brand line, a brand outline ──
     listDraggable: { surface: { interior: { gap: { all: "xs" } } } },
     listDraggableGroup: { interior: { background: "transparent", padding: { left: "xl" }, gap: { all: "xs" } }, boundary: { border: { width: "none" } } },
     listDraggableRow: {
       surface: {
-        interior: { background: "background", foreground: "foreground", padding: { x: "md", y: "sm" } },
+        interior: { background: "background", foreground: "smart-fb", padding: { x: "md", y: "sm" } },
         boundary: { border: { width: "thin", style: "solid", color: "gray-200" }, radius: { all: "none" } },
         combined: [
           { where: { state: "hover" }, partialSurface: { boundary: { border: { color: "gray-300" } } } },
-          { where: { state: "selected" }, partialSurface: { interior: { background: "brand-1-light" }, boundary: { border: { color: "brand-1" } } } },
+          { where: { state: "selected" }, partialSurface: { tint: "primary", interior: { background: "background" }, boundary: { border: { color: "primary" } } } },
         ],
       },
     },
@@ -534,24 +563,24 @@ export const daintaTheme: WebTheme = {
         cursor: "grab",
         combined: [
           { where: { state: "hover" }, partialSurface: { interior: { foreground: "gray-700" } } },
-          { where: { state: "active" }, partialSurface: { interior: { foreground: "brand-1" }, cursor: "grabbing" } },
-          { where: { state: "focus" }, partialSurface: { interior: { foreground: "brand-1" } } },
+          { where: { state: "active" }, partialSurface: { interior: { foreground: "primary" }, cursor: "grabbing" } },
+          { where: { state: "focus" }, partialSurface: { interior: { foreground: "primary" } } },
         ],
       },
     },
     listDraggableGhost: { interior: { background: "gray-100", padding: {} }, boundary: { border: { width: "thin", style: "dashed", color: "gray-300" }, radius: { all: "none" } } },
-    listDraggableOverlay: { surface: { interior: { background: "background" }, boundary: { effect: "sheet", border: { width: "thin", style: "solid", color: "brand-1" } } } },
-    listDraggableDropLine: { surface: { interior: { background: "brand-1", padding: {} }, boundary: { border: { width: "none" } }, dimensionPosition: { height: "3px" } } },
-    listDraggableDropInto: { surface: { interior: { background: "transparent", padding: {} }, boundary: { border: { width: "thin", style: "solid", color: "brand-1" }, radius: { all: "none" } } } },
+    listDraggableOverlay: { surface: { interior: { background: "background" }, boundary: { effect: "sheet", border: { width: "thin", style: "solid", color: "primary" } } } },
+    listDraggableDropLine: { surface: { interior: { background: "primary", padding: {} }, boundary: { border: { width: "none" } }, dimensionPosition: { height: "3px" } } },
+    listDraggableDropInto: { surface: { interior: { background: "transparent", padding: {} }, boundary: { border: { width: "thin", style: "solid", color: "primary" }, radius: { all: "none" } } } },
     // ── list tree: ONE tree list — a row is plain until hovered or chosen; the connector lines are hairlines; the drag shows a dashed ghost, a brand line, a brand outline ──
     listTree: { surface: { interior: { gap: { all: "none" } } } },
     listTreeRow: {
       surface: {
-        interior: { background: "transparent", foreground: "foreground", padding: { x: "xs", y: "2xs" } },
+        interior: { background: "transparent", foreground: "smart-fb", padding: { x: "xs", y: "2xs" } },
         boundary: { border: { width: "none" }, radius: { all: "none" } },
         combined: [
           { where: { state: "hover" }, partialSurface: { interior: { background: "gray-100" } } },
-          { where: { state: "selected" }, partialSurface: { interior: { background: "brand-1-light" } } },
+          { where: { state: "selected" }, partialSurface: { tint: "primary", interior: { background: "background" } } },
         ],
       },
     },
@@ -562,7 +591,7 @@ export const daintaTheme: WebTheme = {
         cursor: "pointer",
         combined: [
           { where: { state: "hover" }, partialSurface: { interior: { foreground: "gray-700" } } },
-          { where: { state: "focus" }, partialSurface: { interior: { foreground: "brand-1" } } },
+          { where: { state: "focus" }, partialSurface: { interior: { foreground: "primary" } } },
         ],
       },
     },
@@ -574,22 +603,22 @@ export const daintaTheme: WebTheme = {
         cursor: "grab",
         combined: [
           { where: { state: "hover" }, partialSurface: { interior: { foreground: "gray-700" } } },
-          { where: { state: "active" }, partialSurface: { interior: { foreground: "brand-1" }, cursor: "grabbing" } },
-          { where: { state: "focus" }, partialSurface: { interior: { foreground: "brand-1" } } },
+          { where: { state: "active" }, partialSurface: { interior: { foreground: "primary" }, cursor: "grabbing" } },
+          { where: { state: "focus" }, partialSurface: { interior: { foreground: "primary" } } },
         ],
       },
     },
     listTreeGhost: { interior: { background: "gray-100", padding: {} }, boundary: { border: { width: "thin", style: "dashed", color: "gray-300" }, radius: { all: "none" } } },
-    listTreeOverlay: { surface: { interior: { background: "background" }, boundary: { effect: "sheet", border: { width: "thin", style: "solid", color: "brand-1" } } } },
-    listTreeDropLine: { surface: { interior: { background: "brand-1", padding: {} }, boundary: { border: { width: "none" } }, dimensionPosition: { height: "3px" } } },
-    listTreeDropInto: { surface: { interior: { background: "transparent", padding: {} }, boundary: { border: { width: "thin", style: "solid", color: "brand-1" }, radius: { all: "none" } } } },
+    listTreeOverlay: { surface: { interior: { background: "background" }, boundary: { effect: "sheet", border: { width: "thin", style: "solid", color: "primary" } } } },
+    listTreeDropLine: { surface: { interior: { background: "primary", padding: {} }, boundary: { border: { width: "none" } }, dimensionPosition: { height: "3px" } } },
+    listTreeDropInto: { surface: { interior: { background: "transparent", padding: {} }, boundary: { border: { width: "thin", style: "solid", color: "primary" }, radius: { all: "none" } } } },
     listItem: {
       surface: {
-        interior: { background: "transparent", padding: { x: "lg", y: "sm" }, gap: { all: "sm" } },
-        boundary: { border: { width: "none", bottom: { width: "thin", style: "solid", color: "gray-100" } }, radius: { all: "none" } },
+        interior: { background: "transparent", padding: { y: "sm" }, gap: { all: "sm" } },   // y is the row's own height; x is the list's
+        boundary: { border: { width: "thin", style: "solid", color: "gray-200" }, radius: { all: "none" } },
         combined: [
           { where: { state: "hover" }, partialSurface: { interior: { background: "background" }, boundary: { border: { color: "gray-100" } } } },
-          { where: { state: "selected" }, partialSurface: { interior: { background: "brand-3", foreground: "brand-1-dark" }, boundary: { border: { color: "gray-100" } } } },
+          { where: { state: "selected" }, partialSurface: { interior: { background: "accent", foreground: "smart-fb" }, boundary: { border: { color: "gray-100" } } } },
         ],
       },
     },
@@ -598,15 +627,15 @@ export const daintaTheme: WebTheme = {
         interior: { background: "transparent", padding: { x: "md", y: "xs" } },
         boundary: { border: { width: "none" }, radius: { all: "none" } },
         combined: [
-          { where: { state: "hover" }, partialSurface: { interior: { background: "background", foreground: "foreground" } } },
-          { where: { state: "selected" }, partialSurface: { interior: { background: "brand-3", foreground: "brand-1-dark" } } },
+          { where: { state: "hover" }, partialSurface: { interior: { background: "background", foreground: "smart-fb" } } },
+          { where: { state: "selected" }, partialSurface: { interior: { background: "accent", foreground: "smart-fb" } } },
           { where: { status: "destructive" }, partialSurface: { interior: { foreground: "status-error" } } },
         ],
       },
     },
     accordionTrigger: {
       surface: {
-        interior: { background: "transparent", padding: { x: "none", y: "sm" } },
+        interior: { background: "gray-50", padding: { x: "md", y: "sm" } },
         boundary: { border: { width: "none" } },
         defaultTypography: { typographyType: "heading4" },
       },
@@ -617,17 +646,17 @@ export const daintaTheme: WebTheme = {
         interior: { background: "background", foreground: "gray-600", padding: { all: "xl" }, childAlign: { horizontal: "center", vertical: "center" } },
         boundary: { border: { width: "default", style: "dashed", color: "gray-300" } },
         cursor: "pointer",
-        combined: [{ where: { state: "selected" }, partialSurface: { boundary: { border: { color: "brand-1" } }, interior: { background: "brand-1-light" } } }],
+        combined: [{ where: { state: "selected" }, partialSurface: { tint: "primary", boundary: { border: { color: "primary" } }, interior: { background: "background" } } }],
       },
     },
     select: { surface: { cursor: "pointer" } },
     // ── overlays ──
-    dialog: { surface: { interior: { padding: { all: "none" }, gap: { all: "none" } } } },
-    sheet: { surface: { boundary: { effect: "drawer", border: { width: "none" } }, interior: { padding: { all: "none" } } } },
-    popover: { surface: { boundary: { effect: "popover" }, interior: { padding: { all: "sm" } } } },
+    dialog: { surface: { interior: { padding: { x: "lg", y: "md", childrenSmartBleed: true }, gap: { all: "none" } } } },
+    sheet: { surface: { boundary: { effect: "drawer", border: { width: "none" } }, interior: { padding: { x: "lg", y: "md", childrenSmartBleed: true }, gap: { all: "none" } } } },
+    popover: { surface: { boundary: { effect: "popover" }, interior: { padding: { all: "sm", childrenSmartBleed: true }, gap: { all: "none" } } } },
     tooltip: {
       surface: {
-        interior: { background: "brand-2", foreground: "smart-bw", padding: { x: "sm", y: "xs" } },
+        interior: { background: "secondary", foreground: "smart-fb", padding: { x: "sm", y: "xs" } },
         boundary: { border: { width: "none" }, effect: "card" },
         defaultTypography: { typographyType: "bodySmall" },
       },
@@ -635,14 +664,12 @@ export const daintaTheme: WebTheme = {
     toast: { surface: { interior: { padding: { x: "md", y: "sm" } }, boundary: { effect: "sheet" } } },
   },
 
-  // ═══════════════════════════════════════════════════════════════════════════
-  // CONTEXTUAL — parent → child (L5), as LLC's theme did it. Inside the sidebar
-  // the header, content and footer regions and the items wear sidebar paddings,
-  // not a card's: the generic content padding (x: lg) inside a 56px rail left
-  // no room for an icon. This — with widthExpanded/widthCollapsed on `sidebar`
-  // above — is the whole collapse: the component only flips [collapsed].
-  // ═══════════════════════════════════════════════════════════════════════════
+  // ── contextual: parent → child overrides ──
   contextual: {
+    // an accordion is no padded container: its content wears the trigger's side padding itself (an explicit padding on a part, which wins)
+    accordionItem: {
+      content: { interior: { padding: { x: "md", y: "sm" } } },
+    },
     sidebar: {
       header: { interior: { padding: { x: "md", y: "md" } } },
       content: { interior: { padding: { x: "sm", y: "sm" } } },
@@ -655,8 +682,12 @@ export const daintaTheme: WebTheme = {
 
   // The persona previewer (concept on its wrapper): its card and its tiles have no padding and no gap, its card has a thick left border (the persona's colour is set on it by the previewer), and its tiles no border, so the band, the portrait and the content run to the edge.
   concepts: {
+    // A document read in place (the docs viewer): its content reads at the largest body scale with room between lines; the text inside inherits it, no paragraph names its own scale
+    document: {
+      content: { interior: { padding: { x: "none", y: "md" }, gap: { all: "md" } }, defaultTypography: { typographyType: "bodyExtraLarge" } },
+    },
     "persona-previewer": {
-      card: { interior: { padding: { all: "none" }, gap: { all: "none" } }, boundary: { border: { left: { width: "extraThick", style: "solid", color: "gray-200" } } } },
+      card: { interior: { padding: { all: "none" }, gap: { all: "none" } }, boundary: { border: { left: { width: "extraThick", style: "solid", color: "gray-200" } } }, breakpoints: { narrow: "520px" } },
       tile: { interior: { padding: { all: "none" }, gap: { all: "none" } }, boundary: { border: { width: "none" } } },
     },
     "persona-previewer-stacked": {
@@ -673,15 +704,22 @@ export const daintaTheme: WebTheme = {
     },
     "goal-previewer": {
       card: { interior: { padding: { all: "none" }, gap: { all: "none" } }, boundary: { border: { left: { width: "none" } } } },
-      tile: { interior: { padding: { all: "none" }, gap: { all: "none" }, background: "brand-3", foreground: "smart-bw" }, boundary: { border: { width: "none" } } },
+      tile: { interior: { padding: { all: "none" }, gap: { all: "none" }, background: "accent", foreground: "smart-fb" }, boundary: { border: { width: "none" } } },
     },
     "goal-group-previewer": {
       card: { interior: { padding: { all: "none" }, gap: { all: "none" } }, boundary: { border: { left: { width: "none" } } } },
-      tile: { interior: { padding: { all: "none" }, gap: { all: "none" }, background: "brand-1", foreground: "smart-bw" }, boundary: { border: { width: "none" } } },
+      tile: { interior: { padding: { all: "none" }, gap: { all: "none" }, background: "primary", foreground: "smart-fb" }, boundary: { border: { width: "none" } } },
     },
     "exploration-previewer": {
       card: { interior: { padding: { all: "none" }, gap: { all: "none" } }, boundary: { border: { left: { width: "none" } } } },
-      tile: { interior: { padding: { all: "none" }, gap: { all: "none" }, background: "status-success", foreground: "smart-bw" }, boundary: { border: { width: "none" } } },
+      tile: { interior: { padding: { all: "none" }, gap: { all: "none" }, background: "status-success", foreground: "smart-fb" }, boundary: { border: { width: "none" } } },
+    },
+    "live-play-player": {
+      button: { boundary: { radius: { all: "full" } } },
+    },
+    // The role picker trigger: a filled button whose label reads from the start, not centred
+    "role-select": {
+      button: { interior: { childAlign: { horizontal: "start" } } },
     },
     "erd-node-previewer": {
       card: { interior: { padding: { all: "none" }, gap: { all: "none" } } },
@@ -689,22 +727,15 @@ export const daintaTheme: WebTheme = {
     },
     "use-case-previewer": {
       card: { interior: { padding: { all: "none" }, gap: { all: "none" } }, boundary: { border: { left: { width: "none" } } } },
-      tile: { interior: { padding: { all: "none" }, gap: { all: "none" }, background: "brand-1-light", foreground: "smart-bw" }, boundary: { border: { width: "none" } } },
+      tile: { tint: "primary", interior: { padding: { all: "none" }, gap: { all: "none" }, background: "background", foreground: "smart-fb" }, boundary: { border: { width: "none" } } },
     },
   },
 
-  // ═══════════════════════════════════════════════════════════════════════════
-  // RULES — the collapsed rail. Nav icons already sit centred in 56px; the
-  // header's and footer's items lead with a 32px avatar, which the expanded
-  // insets (region md + item md) push half out of the rail — tighten them.
-  // ═══════════════════════════════════════════════════════════════════════════
+  // ── rules: tighten header/footer insets when the sidebar is collapsed ──
   rules: [
-    // TEMPORARY (UI as data migration): a card wearing concept="red-border" is a 4px red frame with no padding, wrapped around the shells that are
-    // UI as data so they can be told from the hosted ones. Remove with the RedBorder component once the shells' sidebar is UI as data too.
-    { chain: [{ key: "card", concept: "red-border" }], tokens: { boundary: { border: { width: "extraThick", style: "solid", color: "status-error" } }, interior: { padding: { all: "none" }, background: "transparent" } } },
-    { chain: [{ key: "sidebar", concept: "collapsed" }, { key: "header" }], tokens: { interior: { padding: { x: "sm" } } } },
-    { chain: [{ key: "sidebar", concept: "collapsed" }, { key: "footer" }], tokens: { interior: { padding: { x: "sm" } } } },
-    { chain: [{ key: "sidebar", concept: "collapsed" }, { key: "header" }, { key: "sidebarItem" }], tokens: { interior: { padding: { x: "xs" } } } },
-    { chain: [{ key: "sidebar", concept: "collapsed" }, { key: "footer" }, { key: "sidebarItem" }], tokens: { interior: { padding: { x: "xs" } } } },
+    { chain: [{ key: "sidebar", where: { flag: "collapsed" } }, { key: "header" }], tokens: { interior: { padding: { x: "sm" } } } },
+    { chain: [{ key: "sidebar", where: { flag: "collapsed" } }, { key: "footer" }], tokens: { interior: { padding: { x: "sm" } } } },
+    { chain: [{ key: "sidebar", where: { flag: "collapsed" } }, { key: "header" }, { key: "sidebarItem" }], tokens: { interior: { padding: { x: "xs" } } } },
+    { chain: [{ key: "sidebar", where: { flag: "collapsed" } }, { key: "footer" }, { key: "sidebarItem" }], tokens: { interior: { padding: { x: "xs" } } } },
   ],
 };

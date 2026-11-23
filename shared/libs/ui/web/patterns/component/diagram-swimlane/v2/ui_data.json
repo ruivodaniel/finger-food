@@ -1,0 +1,832 @@
+{
+ "id": "ui-data-pattern-component-diagram-swimlane",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-diagram-swimlane",
+ "kind": "component",
+ "name": "diagram-swimlane",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "diagram-swimlane",
+  "version": 1,
+  "surface": "web",
+  "state": {
+   "submit_form_edit": {
+    "id": "submit-form",
+    "name": "Submit a form",
+    "lanes": [
+     {
+      "id": "user",
+      "name": "USER"
+     },
+     {
+      "id": "system",
+      "name": "SYSTEM"
+     },
+     {
+      "id": "admin",
+      "name": "ADMIN"
+     }
+    ],
+    "nodes": [
+     {
+      "id": "start",
+      "kind": "start",
+      "lane": "user",
+      "order": 0
+     },
+     {
+      "id": "page",
+      "kind": "action",
+      "lane": "user",
+      "order": 1,
+      "text": "On public page"
+     },
+     {
+      "id": "fills",
+      "kind": "action",
+      "lane": "user",
+      "order": 2,
+      "text": "Fills form"
+     },
+     {
+      "id": "valid",
+      "kind": "only-one",
+      "lane": "system",
+      "order": 3
+     },
+     {
+      "id": "errors",
+      "kind": "action",
+      "lane": "user",
+      "order": 4,
+      "text": "Sees errors"
+     },
+     {
+      "id": "saves",
+      "kind": "action",
+      "lane": "system",
+      "order": 4,
+      "text": "Saves"
+     },
+     {
+      "id": "all",
+      "kind": "all",
+      "lane": "system",
+      "order": 5
+     },
+     {
+      "id": "conf",
+      "kind": "action",
+      "lane": "user",
+      "order": 6,
+      "text": "Sees confirmation"
+     },
+     {
+      "id": "notif",
+      "kind": "action",
+      "lane": "admin",
+      "order": 6,
+      "text": "Notified"
+     },
+     {
+      "id": "end",
+      "kind": "end",
+      "lane": "user",
+      "order": 7
+     },
+     {
+      "id": "note1",
+      "kind": "note",
+      "lane": "system",
+      "order": 3,
+      "attachedTo": "valid",
+      "note": {
+       "id": "note1",
+       "title": "Validation",
+       "text": "Every required field, and the email's format."
+      }
+     }
+    ],
+    "edges": [
+     {
+      "id": "start-page",
+      "from": "start",
+      "to": "page"
+     },
+     {
+      "id": "page-fills",
+      "from": "page",
+      "to": "fills"
+     },
+     {
+      "id": "fills-valid",
+      "from": "fills",
+      "to": "valid"
+     },
+     {
+      "id": "valid-errors",
+      "from": "valid",
+      "to": "errors",
+      "label": "no"
+     },
+     {
+      "id": "valid-saves",
+      "from": "valid",
+      "to": "saves",
+      "label": "yes"
+     },
+     {
+      "id": "errors-fills",
+      "from": "errors",
+      "to": "fills"
+     },
+     {
+      "id": "saves-all",
+      "from": "saves",
+      "to": "all"
+     },
+     {
+      "id": "all-conf",
+      "from": "all",
+      "to": "conf"
+     },
+     {
+      "id": "all-notif",
+      "from": "all",
+      "to": "notif"
+     },
+     {
+      "id": "conf-end",
+      "from": "conf",
+      "to": "end"
+     }
+    ]
+   },
+   "submit_form_view": {
+    "id": "submit-form",
+    "name": "Submit a form",
+    "lanes": [
+     {
+      "id": "user",
+      "name": "USER"
+     },
+     {
+      "id": "system",
+      "name": "SYSTEM"
+     },
+     {
+      "id": "admin",
+      "name": "ADMIN"
+     }
+    ],
+    "nodes": [
+     {
+      "id": "start",
+      "kind": "start",
+      "lane": "user",
+      "order": 0
+     },
+     {
+      "id": "page",
+      "kind": "action",
+      "lane": "user",
+      "order": 1,
+      "text": "On public page"
+     },
+     {
+      "id": "fills",
+      "kind": "action",
+      "lane": "user",
+      "order": 2,
+      "text": "Fills form"
+     },
+     {
+      "id": "valid",
+      "kind": "only-one",
+      "lane": "system",
+      "order": 3
+     },
+     {
+      "id": "errors",
+      "kind": "action",
+      "lane": "user",
+      "order": 4,
+      "text": "Sees errors"
+     },
+     {
+      "id": "saves",
+      "kind": "action",
+      "lane": "system",
+      "order": 4,
+      "text": "Saves"
+     },
+     {
+      "id": "all",
+      "kind": "all",
+      "lane": "system",
+      "order": 5
+     },
+     {
+      "id": "conf",
+      "kind": "action",
+      "lane": "user",
+      "order": 6,
+      "text": "Sees confirmation"
+     },
+     {
+      "id": "notif",
+      "kind": "action",
+      "lane": "admin",
+      "order": 6,
+      "text": "Notified"
+     },
+     {
+      "id": "end",
+      "kind": "end",
+      "lane": "user",
+      "order": 7
+     },
+     {
+      "id": "note1",
+      "kind": "note",
+      "lane": "system",
+      "order": 3,
+      "attachedTo": "valid",
+      "note": {
+       "id": "note1",
+       "title": "Validation",
+       "text": "Every required field, and the email's format."
+      }
+     }
+    ],
+    "edges": [
+     {
+      "id": "start-page",
+      "from": "start",
+      "to": "page"
+     },
+     {
+      "id": "page-fills",
+      "from": "page",
+      "to": "fills"
+     },
+     {
+      "id": "fills-valid",
+      "from": "fills",
+      "to": "valid"
+     },
+     {
+      "id": "valid-errors",
+      "from": "valid",
+      "to": "errors",
+      "label": "no"
+     },
+     {
+      "id": "valid-saves",
+      "from": "valid",
+      "to": "saves",
+      "label": "yes"
+     },
+     {
+      "id": "errors-fills",
+      "from": "errors",
+      "to": "fills"
+     },
+     {
+      "id": "saves-all",
+      "from": "saves",
+      "to": "all"
+     },
+     {
+      "id": "all-conf",
+      "from": "all",
+      "to": "conf"
+     },
+     {
+      "id": "all-notif",
+      "from": "all",
+      "to": "notif"
+     },
+     {
+      "id": "conf-end",
+      "from": "conf",
+      "to": "end"
+     }
+    ]
+   },
+   "submit_form_horizontal": {
+    "id": "submit-form",
+    "name": "Submit a form",
+    "lanes": [
+     {
+      "id": "user",
+      "name": "USER"
+     },
+     {
+      "id": "system",
+      "name": "SYSTEM"
+     },
+     {
+      "id": "admin",
+      "name": "ADMIN"
+     }
+    ],
+    "nodes": [
+     {
+      "id": "start",
+      "kind": "start",
+      "lane": "user",
+      "order": 0
+     },
+     {
+      "id": "page",
+      "kind": "action",
+      "lane": "user",
+      "order": 1,
+      "text": "On public page"
+     },
+     {
+      "id": "fills",
+      "kind": "action",
+      "lane": "user",
+      "order": 2,
+      "text": "Fills form"
+     },
+     {
+      "id": "valid",
+      "kind": "only-one",
+      "lane": "system",
+      "order": 3
+     },
+     {
+      "id": "errors",
+      "kind": "action",
+      "lane": "user",
+      "order": 4,
+      "text": "Sees errors"
+     },
+     {
+      "id": "saves",
+      "kind": "action",
+      "lane": "system",
+      "order": 4,
+      "text": "Saves"
+     },
+     {
+      "id": "all",
+      "kind": "all",
+      "lane": "system",
+      "order": 5
+     },
+     {
+      "id": "conf",
+      "kind": "action",
+      "lane": "user",
+      "order": 6,
+      "text": "Sees confirmation"
+     },
+     {
+      "id": "notif",
+      "kind": "action",
+      "lane": "admin",
+      "order": 6,
+      "text": "Notified"
+     },
+     {
+      "id": "end",
+      "kind": "end",
+      "lane": "user",
+      "order": 7
+     },
+     {
+      "id": "note1",
+      "kind": "note",
+      "lane": "system",
+      "order": 3,
+      "attachedTo": "valid",
+      "note": {
+       "id": "note1",
+       "title": "Validation",
+       "text": "Every required field, and the email's format."
+      }
+     }
+    ],
+    "edges": [
+     {
+      "id": "start-page",
+      "from": "start",
+      "to": "page"
+     },
+     {
+      "id": "page-fills",
+      "from": "page",
+      "to": "fills"
+     },
+     {
+      "id": "fills-valid",
+      "from": "fills",
+      "to": "valid"
+     },
+     {
+      "id": "valid-errors",
+      "from": "valid",
+      "to": "errors",
+      "label": "no"
+     },
+     {
+      "id": "valid-saves",
+      "from": "valid",
+      "to": "saves",
+      "label": "yes"
+     },
+     {
+      "id": "errors-fills",
+      "from": "errors",
+      "to": "fills"
+     },
+     {
+      "id": "saves-all",
+      "from": "saves",
+      "to": "all"
+     },
+     {
+      "id": "all-conf",
+      "from": "all",
+      "to": "conf"
+     },
+     {
+      "id": "all-notif",
+      "from": "all",
+      "to": "notif"
+     },
+     {
+      "id": "conf-end",
+      "from": "conf",
+      "to": "end"
+     }
+    ]
+   },
+   "small_colours": {
+    "id": "small",
+    "name": "Two lanes",
+    "lanes": [
+     {
+      "id": "a",
+      "name": "CUSTOMER"
+     },
+     {
+      "id": "b",
+      "name": "SHOP"
+     }
+    ],
+    "nodes": [
+     {
+      "id": "s",
+      "kind": "start",
+      "lane": "a",
+      "order": 0
+     },
+     {
+      "id": "o",
+      "kind": "action",
+      "lane": "a",
+      "order": 1,
+      "text": "Orders"
+     },
+     {
+      "id": "p",
+      "kind": "action",
+      "lane": "b",
+      "order": 2,
+      "text": "Packs"
+     },
+     {
+      "id": "e",
+      "kind": "end",
+      "lane": "b",
+      "order": 3
+     }
+    ],
+    "edges": [
+     {
+      "id": "s-o",
+      "from": "s",
+      "to": "o"
+     },
+     {
+      "id": "o-p",
+      "from": "o",
+      "to": "p"
+     },
+     {
+      "id": "p-e",
+      "from": "p",
+      "to": "e"
+     }
+    ]
+   },
+   "empty_empty": {
+    "id": "empty",
+    "name": "Empty",
+    "lanes": [
+     {
+      "id": "a",
+      "name": "USER"
+     },
+     {
+      "id": "b",
+      "name": "SYSTEM"
+     }
+    ],
+    "nodes": [],
+    "edges": []
+   }
+  },
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "style": {
+     "obj": {
+      "width": 1200
+     }
+    },
+    "scale": "xl"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-small",
+        "emphasis": "quiet",
+        "children": "editable, vertical: drag a shape from the toolbox into a lane; drag a shape to move it; select a shape and drag its dot to another to connect; double click types a text, a connector's label or a lane's name; Delete removes the selection. A refused drop or connector says why. Scroll down: the lanes' headers stay"
+       }
+      },
+      {
+       "type": "Text",
+       "props": {
+        "as": "div",
+        "style": {
+         "obj": {
+          "height": 560
+         }
+        }
+       },
+       "children": [
+        {
+         "type": "Swimlane",
+         "props": {
+          "data": {
+           "bind": "state.submit_form_edit"
+          },
+          "direction": "vertical",
+          "editable": true,
+          "data-testid": "diagram-swimlane-submit-form-edit-editor"
+         },
+         "on": {
+          "change": [
+           {
+            "set": {
+             "state": "submit_form_edit",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-small",
+        "emphasis": "quiet",
+        "children": "not editable (the view mode): the same diagram, no toolbox"
+       }
+      },
+      {
+       "type": "Text",
+       "props": {
+        "as": "div",
+        "style": {
+         "obj": {
+          "height": 420
+         }
+        }
+       },
+       "children": [
+        {
+         "type": "Swimlane",
+         "props": {
+          "data": {
+           "bind": "state.submit_form_view"
+          },
+          "direction": "vertical",
+          "editable": false,
+          "data-testid": "diagram-swimlane-submit-form-view-editor"
+         },
+         "on": {
+          "change": [
+           {
+            "set": {
+             "state": "submit_form_view",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-small",
+        "emphasis": "quiet",
+        "children": "horizontal: the lanes are rows, the flow runs to the right; the headers stay at the left"
+       }
+      },
+      {
+       "type": "Text",
+       "props": {
+        "as": "div",
+        "style": {
+         "obj": {
+          "height": 470
+         }
+        }
+       },
+       "children": [
+        {
+         "type": "Swimlane",
+         "props": {
+          "data": {
+           "bind": "state.submit_form_horizontal"
+          },
+          "direction": "horizontal",
+          "editable": true,
+          "data-testid": "diagram-swimlane-submit-form-horizontal-editor"
+         },
+         "on": {
+          "change": [
+           {
+            "set": {
+             "state": "submit_form_horizontal",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-small",
+        "emphasis": "quiet",
+        "children": "the instance's own lane colours over the template's"
+       }
+      },
+      {
+       "type": "Text",
+       "props": {
+        "as": "div",
+        "style": {
+         "obj": {
+          "height": 380
+         }
+        }
+       },
+       "children": [
+        {
+         "type": "Swimlane",
+         "props": {
+          "data": {
+           "bind": "state.small_colours"
+          },
+          "direction": "vertical",
+          "editable": false,
+          "data-testid": "diagram-swimlane-small-colours-editor",
+          "laneColors": {
+           "obj": {
+            "a": "#e0dcfa",
+            "b": "#fdf3c4"
+           }
+          }
+         },
+         "on": {
+          "change": [
+           {
+            "set": {
+             "state": "small_colours",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-small",
+        "emphasis": "quiet",
+        "children": "an empty diagram: start by dragging a start into a lane"
+       }
+      },
+      {
+       "type": "Text",
+       "props": {
+        "as": "div",
+        "style": {
+         "obj": {
+          "height": 300
+         }
+        }
+       },
+       "children": [
+        {
+         "type": "Swimlane",
+         "props": {
+          "data": {
+           "bind": "state.empty_empty"
+          },
+          "direction": "vertical",
+          "editable": true,
+          "data-testid": "diagram-swimlane-empty-empty-editor"
+         },
+         "on": {
+          "change": [
+           {
+            "set": {
+             "state": "empty_empty",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

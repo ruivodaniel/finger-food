@@ -1,0 +1,135 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "budget-remaining",
+ "version": 1,
+ "surface": "web",
+ "measure": "md",
+ "root": {
+  "type": "Card",
+  "props": {
+   "style": {
+    "width": 360
+   }
+  },
+  "children": [
+   {
+    "type": "Content",
+    "children": [
+     {
+      "type": "Stack",
+      "props": {
+       "dir": "col",
+       "gap": 10
+      },
+      "children": [
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--body-small",
+         "emphasis": "quiet",
+         "children": "Marketing budget \u00b7 Q4"
+        }
+       },
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "gap": 6,
+         "align": "baseline"
+        },
+        "children": [
+         {
+          "type": "DataNumber",
+          "props": {
+           "value": 1840000,
+           "config": {
+            "mode": {
+             "kind": "fixedScale",
+             "scale": "million",
+             "n": 2
+            },
+            "locale": "en-GB"
+           },
+           "symbol": "EUR",
+           "scale": "lg"
+          }
+         },
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--body-extra-small",
+           "emphasis": "quiet",
+           "children": "of"
+          }
+         },
+         {
+          "type": "DataNumber",
+          "props": {
+           "value": 2500000,
+           "config": {
+            "mode": {
+             "kind": "fixedScale",
+             "scale": "million",
+             "n": 2
+            },
+            "locale": "en-GB"
+           },
+           "symbol": "EUR",
+           "scale": "sm",
+           "emphasis": "quiet"
+          }
+         }
+        ]
+       },
+       {
+        "type": "Progress",
+        "props": {
+         "value": 74,
+         "status": "warning"
+        }
+       },
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "justify": "between"
+        },
+        "children": [
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--body-extra-small",
+           "emphasis": "quiet",
+           "children": "Remaining"
+          }
+         },
+         {
+          "type": "DataNumber",
+          "props": {
+           "value": 660000,
+           "config": {
+            "mode": {
+             "kind": "fixedScale",
+             "scale": "million",
+             "n": 2
+            },
+            "locale": "en-GB"
+           },
+           "symbol": "EUR",
+           "scale": "sm",
+           "status": "warning"
+          }
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

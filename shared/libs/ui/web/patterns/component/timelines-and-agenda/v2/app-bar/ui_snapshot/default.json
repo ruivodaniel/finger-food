@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-timelines-and-agenda-app-bar-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-timelines-and-agenda-app-bar",
+ "name": "default",
+ "title": "Timelines and agenda: app bar",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

@@ -1,0 +1,226 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "activity",
+ "version": 1,
+ "surface": "web",
+ "measure": "md",
+ "root": {
+  "type": "List",
+  "props": {
+   "className": "w-full max-w-2xl"
+  },
+  "children": [
+   {
+    "use": {
+     "component": "ActivityRow",
+     "version": "latest"
+    },
+    "args": {
+     "actor": "Daniel Ruivo",
+     "action": "merged",
+     "object": "stack: the auto-layout primitive as a library component",
+     "time": "2 min ago",
+     "tone": 1
+    },
+    "slots": {
+     "icon": [
+      {
+       "type": "Icon",
+       "props": {
+        "name": "gitMerge",
+        "size": "sm"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "use": {
+     "component": "ActivityRow",
+     "version": "latest"
+    },
+    "args": {
+     "actor": "CI",
+     "action": "failed",
+     "object": "theme:build · wireframe-stroke v1",
+     "time": "9 min ago",
+     "tone": 4
+    },
+    "slots": {
+     "action": [
+      {
+       "type": "ListItemAction",
+       "props": {},
+       "children": [
+        {
+         "type": "Chip",
+         "props": {
+          "emphasis": "tertiary",
+          "scale": "sm",
+          "closable": false,
+          "children": "Retry",
+          "data-testid": "activity-1-retry-btn"
+         }
+        }
+       ]
+      }
+     ],
+     "icon": [
+      {
+       "type": "Icon",
+       "props": {
+        "name": "error",
+        "size": "sm"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "use": {
+     "component": "ActivityRow",
+     "version": "latest"
+    },
+    "args": {
+     "actor": "Inês Carvalho",
+     "action": "commented on",
+     "object": "card-with-tiles — the seam belongs to the theme",
+     "time": "24 min ago",
+     "tone": 0
+    },
+    "slots": {
+     "icon": [
+      {
+       "type": "Icon",
+       "props": {
+        "name": "message",
+        "size": "sm"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "use": {
+     "component": "ActivityRow",
+     "version": "latest"
+    },
+    "args": {
+     "actor": "Tomás Ferreira",
+     "action": "uploaded",
+     "object": "32 images to Component-examples",
+     "time": "1 h ago",
+     "tone": 0
+    },
+    "slots": {
+     "icon": [
+      {
+       "type": "Icon",
+       "props": {
+        "name": "upload",
+        "size": "sm"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "use": {
+     "component": "ActivityRow",
+     "version": "latest"
+    },
+    "args": {
+     "actor": "Marta Silva",
+     "action": "opened",
+     "object": "PR #418 · Tile emits surface--tile",
+     "time": "2 h ago",
+     "tone": 3
+    },
+    "slots": {
+     "icon": [
+      {
+       "type": "Icon",
+       "props": {
+        "name": "gitBranch",
+        "size": "sm"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "use": {
+     "component": "ActivityRow",
+     "version": "latest"
+    },
+    "args": {
+     "actor": "Rui Almeida",
+     "action": "was invited to",
+     "object": "Altar Design Systems",
+     "time": "3 h ago",
+     "tone": 0
+    },
+    "slots": {
+     "icon": [
+      {
+       "type": "Icon",
+       "props": {
+        "name": "userPlus",
+        "size": "sm"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "use": {
+     "component": "ActivityRow",
+     "version": "latest"
+    },
+    "args": {
+     "actor": "Deploy",
+     "action": "promoted",
+     "object": "catalog → staging",
+     "time": "5 h ago",
+     "tone": 1
+    },
+    "slots": {
+     "icon": [
+      {
+       "type": "Icon",
+       "props": {
+        "name": "package",
+        "size": "sm"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "use": {
+     "component": "ActivityRow",
+     "version": "latest"
+    },
+    "args": {
+     "actor": "Sofia Mendes",
+     "action": "archived",
+     "object": "explorations/OLD (9 items)",
+     "time": "Yesterday",
+     "tone": 2
+    },
+    "slots": {
+     "icon": [
+      {
+       "type": "Icon",
+       "props": {
+        "name": "archive",
+        "size": "sm"
+       }
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

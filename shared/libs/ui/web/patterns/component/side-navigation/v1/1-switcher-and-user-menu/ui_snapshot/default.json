@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-side-navigation-1-switcher-and-user-menu-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-side-navigation-1-switcher-and-user-menu",
+ "name": "default",
+ "title": "Side navigation 1: organization switcher and user menu; colour mode; expands inline",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

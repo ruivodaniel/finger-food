@@ -1,0 +1,348 @@
+{
+ "id": "ui-data-primitive-remote-image",
+ "version": 1,
+ "uiNodeId": "ui-node-primitive-remote-image",
+ "kind": "component",
+ "name": "primitive-remote-image",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "primitive-remote-image",
+  "version": 1,
+  "surface": "web",
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "align": "center",
+    "scale": "sm"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "scales: the theme's box per scale, cover by default"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "RemoteImage",
+         "props": {
+          "src": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22320%22%20height%3D%22200%22%3E%3Crect%20width%3D%22320%22%20height%3D%22200%22%20fill%3D%22%235C5FEB%22%2F%3E%3Ccircle%20cx%3D%22240%22%20cy%3D%2260%22%20r%3D%2236%22%20fill%3D%22%23fff%22%20opacity%3D%22.8%22%2F%3E%3Cpath%20d%3D%22M0%20200%20L120%2080%20L200%20150%20L260%20110%20L320%20200Z%22%20fill%3D%22%230A0A18%22%20opacity%3D%22.6%22%2F%3E%3C%2Fsvg%3E",
+          "alt": "sample",
+          "scale": "xs"
+         }
+        },
+        {
+         "type": "RemoteImage",
+         "props": {
+          "src": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22320%22%20height%3D%22200%22%3E%3Crect%20width%3D%22320%22%20height%3D%22200%22%20fill%3D%22%235C5FEB%22%2F%3E%3Ccircle%20cx%3D%22240%22%20cy%3D%2260%22%20r%3D%2236%22%20fill%3D%22%23fff%22%20opacity%3D%22.8%22%2F%3E%3Cpath%20d%3D%22M0%20200%20L120%2080%20L200%20150%20L260%20110%20L320%20200Z%22%20fill%3D%22%230A0A18%22%20opacity%3D%22.6%22%2F%3E%3C%2Fsvg%3E",
+          "alt": "sample",
+          "scale": "sm"
+         }
+        },
+        {
+         "type": "RemoteImage",
+         "props": {
+          "src": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22320%22%20height%3D%22200%22%3E%3Crect%20width%3D%22320%22%20height%3D%22200%22%20fill%3D%22%235C5FEB%22%2F%3E%3Ccircle%20cx%3D%22240%22%20cy%3D%2260%22%20r%3D%2236%22%20fill%3D%22%23fff%22%20opacity%3D%22.8%22%2F%3E%3Cpath%20d%3D%22M0%20200%20L120%2080%20L200%20150%20L260%20110%20L320%20200Z%22%20fill%3D%22%230A0A18%22%20opacity%3D%22.6%22%2F%3E%3C%2Fsvg%3E",
+          "alt": "sample",
+          "scale": "md"
+         }
+        },
+        {
+         "type": "RemoteImage",
+         "props": {
+          "src": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22320%22%20height%3D%22200%22%3E%3Crect%20width%3D%22320%22%20height%3D%22200%22%20fill%3D%22%235C5FEB%22%2F%3E%3Ccircle%20cx%3D%22240%22%20cy%3D%2260%22%20r%3D%2236%22%20fill%3D%22%23fff%22%20opacity%3D%22.8%22%2F%3E%3Cpath%20d%3D%22M0%20200%20L120%2080%20L200%20150%20L260%20110%20L320%20200Z%22%20fill%3D%22%230A0A18%22%20opacity%3D%22.6%22%2F%3E%3C%2Fsvg%3E",
+          "alt": "sample",
+          "scale": "lg"
+         }
+        },
+        {
+         "type": "RemoteImage",
+         "props": {
+          "src": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22320%22%20height%3D%22200%22%3E%3Crect%20width%3D%22320%22%20height%3D%22200%22%20fill%3D%22%235C5FEB%22%2F%3E%3Ccircle%20cx%3D%22240%22%20cy%3D%2260%22%20r%3D%2236%22%20fill%3D%22%23fff%22%20opacity%3D%22.8%22%2F%3E%3Cpath%20d%3D%22M0%20200%20L120%2080%20L200%20150%20L260%20110%20L320%20200Z%22%20fill%3D%22%230A0A18%22%20opacity%3D%22.6%22%2F%3E%3C%2Fsvg%3E",
+          "alt": "sample",
+          "scale": "xl"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "fit: cover (crop) · contain (whole, inside the box) · none (the image's own size)"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "RemoteImage",
+         "props": {
+          "src": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22320%22%20height%3D%22200%22%3E%3Crect%20width%3D%22320%22%20height%3D%22200%22%20fill%3D%22%235C5FEB%22%2F%3E%3Ccircle%20cx%3D%22240%22%20cy%3D%2260%22%20r%3D%2236%22%20fill%3D%22%23fff%22%20opacity%3D%22.8%22%2F%3E%3Cpath%20d%3D%22M0%20200%20L120%2080%20L200%20150%20L260%20110%20L320%20200Z%22%20fill%3D%22%230A0A18%22%20opacity%3D%22.6%22%2F%3E%3C%2Fsvg%3E",
+          "alt": "cover",
+          "scale": "xl",
+          "fit": "cover"
+         }
+        },
+        {
+         "type": "RemoteImage",
+         "props": {
+          "src": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22320%22%20height%3D%22200%22%3E%3Crect%20width%3D%22320%22%20height%3D%22200%22%20fill%3D%22%235C5FEB%22%2F%3E%3Ccircle%20cx%3D%22240%22%20cy%3D%2260%22%20r%3D%2236%22%20fill%3D%22%23fff%22%20opacity%3D%22.8%22%2F%3E%3Cpath%20d%3D%22M0%20200%20L120%2080%20L200%20150%20L260%20110%20L320%20200Z%22%20fill%3D%22%230A0A18%22%20opacity%3D%22.6%22%2F%3E%3C%2Fsvg%3E",
+          "alt": "contain",
+          "scale": "xl",
+          "fit": "contain"
+         }
+        },
+        {
+         "type": "RemoteImage",
+         "props": {
+          "src": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22320%22%20height%3D%22200%22%3E%3Crect%20width%3D%22320%22%20height%3D%22200%22%20fill%3D%22%235C5FEB%22%2F%3E%3Ccircle%20cx%3D%22240%22%20cy%3D%2260%22%20r%3D%2236%22%20fill%3D%22%23fff%22%20opacity%3D%22.8%22%2F%3E%3Cpath%20d%3D%22M0%20200%20L120%2080%20L200%20150%20L260%20110%20L320%20200Z%22%20fill%3D%22%230A0A18%22%20opacity%3D%22.6%22%2F%3E%3C%2Fsvg%3E",
+          "alt": "none",
+          "fit": "none"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "focus: where a crop keeps the image"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "RemoteImage",
+         "props": {
+          "src": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22320%22%20height%3D%22200%22%3E%3Crect%20width%3D%22320%22%20height%3D%22200%22%20fill%3D%22%235C5FEB%22%2F%3E%3Ccircle%20cx%3D%22240%22%20cy%3D%2260%22%20r%3D%2236%22%20fill%3D%22%23fff%22%20opacity%3D%22.8%22%2F%3E%3Cpath%20d%3D%22M0%20200%20L120%2080%20L200%20150%20L260%20110%20L320%20200Z%22%20fill%3D%22%230A0A18%22%20opacity%3D%22.6%22%2F%3E%3C%2Fsvg%3E",
+          "alt": "left",
+          "scale": "lg",
+          "focus": "left"
+         }
+        },
+        {
+         "type": "RemoteImage",
+         "props": {
+          "src": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22320%22%20height%3D%22200%22%3E%3Crect%20width%3D%22320%22%20height%3D%22200%22%20fill%3D%22%235C5FEB%22%2F%3E%3Ccircle%20cx%3D%22240%22%20cy%3D%2260%22%20r%3D%2236%22%20fill%3D%22%23fff%22%20opacity%3D%22.8%22%2F%3E%3Cpath%20d%3D%22M0%20200%20L120%2080%20L200%20150%20L260%20110%20L320%20200Z%22%20fill%3D%22%230A0A18%22%20opacity%3D%22.6%22%2F%3E%3C%2Fsvg%3E",
+          "alt": "center",
+          "scale": "lg",
+          "focus": "center"
+         }
+        },
+        {
+         "type": "RemoteImage",
+         "props": {
+          "src": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22320%22%20height%3D%22200%22%3E%3Crect%20width%3D%22320%22%20height%3D%22200%22%20fill%3D%22%235C5FEB%22%2F%3E%3Ccircle%20cx%3D%22240%22%20cy%3D%2260%22%20r%3D%2236%22%20fill%3D%22%23fff%22%20opacity%3D%22.8%22%2F%3E%3Cpath%20d%3D%22M0%20200%20L120%2080%20L200%20150%20L260%20110%20L320%20200Z%22%20fill%3D%22%230A0A18%22%20opacity%3D%22.6%22%2F%3E%3C%2Fsvg%3E",
+          "alt": "right",
+          "scale": "lg",
+          "focus": "right"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "a precise box · a width with a ratio"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "RemoteImage",
+         "props": {
+          "src": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22320%22%20height%3D%22200%22%3E%3Crect%20width%3D%22320%22%20height%3D%22200%22%20fill%3D%22%235C5FEB%22%2F%3E%3Ccircle%20cx%3D%22240%22%20cy%3D%2260%22%20r%3D%2236%22%20fill%3D%22%23fff%22%20opacity%3D%22.8%22%2F%3E%3Cpath%20d%3D%22M0%20200%20L120%2080%20L200%20150%20L260%20110%20L320%20200Z%22%20fill%3D%22%230A0A18%22%20opacity%3D%22.6%22%2F%3E%3C%2Fsvg%3E",
+          "alt": "precise"
+         }
+        },
+        {
+         "type": "RemoteImage",
+         "props": {
+          "src": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22320%22%20height%3D%22200%22%3E%3Crect%20width%3D%22320%22%20height%3D%22200%22%20fill%3D%22%235C5FEB%22%2F%3E%3Ccircle%20cx%3D%22240%22%20cy%3D%2260%22%20r%3D%2236%22%20fill%3D%22%23fff%22%20opacity%3D%22.8%22%2F%3E%3Cpath%20d%3D%22M0%20200%20L120%2080%20L200%20150%20L260%20110%20L320%20200Z%22%20fill%3D%22%230A0A18%22%20opacity%3D%22.6%22%2F%3E%3C%2Fsvg%3E",
+          "alt": "ratio",
+          "ratio": "16/9"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "emphasis and states, the theme's look"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "RemoteImage",
+         "props": {
+          "src": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22320%22%20height%3D%22200%22%3E%3Crect%20width%3D%22320%22%20height%3D%22200%22%20fill%3D%22%235C5FEB%22%2F%3E%3Ccircle%20cx%3D%22240%22%20cy%3D%2260%22%20r%3D%2236%22%20fill%3D%22%23fff%22%20opacity%3D%22.8%22%2F%3E%3Cpath%20d%3D%22M0%20200%20L120%2080%20L200%20150%20L260%20110%20L320%20200Z%22%20fill%3D%22%230A0A18%22%20opacity%3D%22.6%22%2F%3E%3C%2Fsvg%3E",
+          "alt": "hero",
+          "scale": "md",
+          "emphasis": "hero"
+         }
+        },
+        {
+         "type": "RemoteImage",
+         "props": {
+          "src": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22320%22%20height%3D%22200%22%3E%3Crect%20width%3D%22320%22%20height%3D%22200%22%20fill%3D%22%235C5FEB%22%2F%3E%3Ccircle%20cx%3D%22240%22%20cy%3D%2260%22%20r%3D%2236%22%20fill%3D%22%23fff%22%20opacity%3D%22.8%22%2F%3E%3Cpath%20d%3D%22M0%20200%20L120%2080%20L200%20150%20L260%20110%20L320%20200Z%22%20fill%3D%22%230A0A18%22%20opacity%3D%22.6%22%2F%3E%3C%2Fsvg%3E",
+          "alt": "selected",
+          "scale": "md",
+          "state": "selected"
+         }
+        },
+        {
+         "type": "RemoteImage",
+         "props": {
+          "src": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22320%22%20height%3D%22200%22%3E%3Crect%20width%3D%22320%22%20height%3D%22200%22%20fill%3D%22%235C5FEB%22%2F%3E%3Ccircle%20cx%3D%22240%22%20cy%3D%2260%22%20r%3D%2236%22%20fill%3D%22%23fff%22%20opacity%3D%22.8%22%2F%3E%3Cpath%20d%3D%22M0%20200%20L120%2080%20L200%20150%20L260%20110%20L320%20200Z%22%20fill%3D%22%230A0A18%22%20opacity%3D%22.6%22%2F%3E%3C%2Fsvg%3E",
+          "alt": "disabled",
+          "scale": "md",
+          "state": "disabled"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "fallback (no source)"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "RemoteImage",
+         "props": {
+          "alt": "none",
+          "scale": "md",
+          "fallback": {
+           "type": "Text",
+           "props": {
+            "element": "type--body-small",
+            "emphasis": "quiet",
+            "children": "no image"
+           }
+          }
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

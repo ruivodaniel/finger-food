@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-layout-triple-sidebar-tabs-layout-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-layout-triple-sidebar-tabs-layout",
+ "name": "default",
+ "title": "Triple sidebar layout with tabs",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

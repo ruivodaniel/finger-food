@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-primitive-tree-view",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Tree view"
+}

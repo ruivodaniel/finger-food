@@ -1,0 +1,74 @@
+{
+ "id": "ui-data-pattern-component-top-navigation-1-menus-and-user-menu",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-top-navigation-1-menus-and-user-menu",
+ "kind": "component",
+ "name": "top-navigation-1-menus-and-user-menu",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "top-navigation-1-menus-and-user-menu",
+  "version": 1,
+  "surface": "web",
+  "state": {
+   "current": "dashboard",
+   "org": "org-acme-corp",
+   "mode": "light"
+  },
+  "root": {
+   "use": {
+    "component": "TopNavigationScreen",
+    "version": "latest"
+   },
+   "args": {
+    "current": {
+     "bind": "state.current"
+    },
+    "org": {
+     "bind": "state.org"
+    },
+    "mode": {
+     "bind": "state.mode"
+    },
+    "text": "The entries with no group stand in the bar; each group is a drop-down. The organization switcher and the user menu are at the right.",
+    "groupsAs": "menus",
+    "account": "separate",
+    "withOrganizations": true,
+    "withModes": true,
+    "unread": 3
+   },
+   "on": {
+    "navigate": [
+     {
+      "set": {
+       "state": "current",
+       "to": {
+        "bind": "event.id"
+       }
+      }
+     }
+    ],
+    "organizationChange": [
+     {
+      "set": {
+       "state": "org",
+       "to": {
+        "bind": "event.id"
+       }
+      }
+     }
+    ],
+    "modeChange": [
+     {
+      "set": {
+       "state": "mode",
+       "to": {
+        "bind": "event.id"
+       }
+      }
+     }
+    ]
+   }
+  }
+ }
+}

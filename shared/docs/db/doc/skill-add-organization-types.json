@@ -1,0 +1,24 @@
+{
+ "id": "doc/skill-add-organization-types",
+ "kind": "doc",
+ "title": "add organization types",
+ "status": "todo",
+ "subject": "skills",
+ "owner": "skills/seed-consumer/user-organization-mgmt",
+ "tags": [
+  "skills",
+  "seed-consumer",
+  "user-organization-mgmt"
+ ],
+ "paths": [],
+ "summary": "",
+ "docId": "skill-add-organization-types",
+ "doc": {
+  "axioms": [],
+  "purpose": {},
+  "reference": []
+ },
+ "audience": [
+  "seed-consumer"
+ ]
+}

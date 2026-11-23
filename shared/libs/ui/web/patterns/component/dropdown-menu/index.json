@@ -1,0 +1,146 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "dropdown-menu",
+ "version": 1,
+ "surface": "web",
+ "measure": "md",
+ "state": {
+  "open": false
+ },
+ "root": {
+  "type": "DropdownMenu",
+  "props": {
+   "open": {
+    "bind": "state.open"
+   }
+  },
+  "children": [
+   {
+    "type": "DropdownMenuTrigger",
+    "props": {
+     "asChild": true
+    },
+    "children": [
+     {
+      "type": "Button",
+      "props": {
+       "emphasis": "secondary"
+      },
+      "children": [
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "children": "Open menu"
+        }
+       },
+       {
+        "type": "Icon",
+        "props": {
+         "name": "chevronDown",
+         "size": "sm"
+        }
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "DropdownMenuContent",
+    "props": {},
+    "children": [
+     {
+      "type": "Text",
+      "props": {
+       "as": "span",
+       "element": "type--body-extra-small",
+       "emphasis": "quiet",
+       "children": "Actions"
+      }
+     },
+     {
+      "type": "Separator",
+      "props": {}
+     },
+     {
+      "type": "DropdownMenuItem",
+      "props": {},
+      "children": [
+       {
+        "type": "Icon",
+        "props": {
+         "name": "file",
+         "size": "sm"
+        }
+       },
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "children": "New file"
+        }
+       }
+      ]
+     },
+     {
+      "type": "DropdownMenuItem",
+      "props": {},
+      "children": [
+       {
+        "type": "Icon",
+        "props": {
+         "name": "folder",
+         "size": "sm"
+        }
+       },
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "children": "New folder"
+        }
+       }
+      ]
+     },
+     {
+      "type": "Separator",
+      "props": {}
+     },
+     {
+      "type": "DropdownMenuItem",
+      "props": {},
+      "children": [
+       {
+        "type": "Icon",
+        "props": {
+         "name": "settings",
+         "size": "sm"
+        }
+       },
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "children": "Settings"
+        }
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "on": {
+   "openChange": [
+    {
+     "set": {
+      "state": "open",
+      "to": {
+       "bind": "event"
+      }
+     }
+    }
+   ]
+  }
+ }
+}

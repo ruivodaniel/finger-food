@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-avatar-list-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-avatar-list",
+ "name": "default",
+ "title": "Avatar list",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

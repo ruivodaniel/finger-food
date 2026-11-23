@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-container-header-1-title-and-actions-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-container-header-1-title-and-actions",
+ "name": "default",
+ "title": "Container header 1: a title at the left, the actions at the right (default)",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

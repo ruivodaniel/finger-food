@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-table-stacked-cells-team-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-table-stacked-cells-team",
+ "name": "default",
+ "title": "Table stacked cells: team",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

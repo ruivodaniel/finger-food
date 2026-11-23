@@ -1,0 +1,178 @@
+{
+ "id": "ui-data-primitive-skeleton",
+ "version": 1,
+ "uiNodeId": "ui-node-primitive-skeleton",
+ "kind": "component",
+ "name": "primitive-skeleton",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "primitive-skeleton",
+  "version": 1,
+  "surface": "web",
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "align": "center",
+    "scale": "2xl"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "text lines"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Text",
+         "children": [
+          {
+           "type": "Skeleton",
+           "props": {
+            "className": "h-4 rounded",
+            "style": {
+             "obj": {
+              "width": 200
+             }
+            }
+           }
+          },
+          {
+           "type": "Skeleton",
+           "props": {
+            "className": "h-4 rounded",
+            "style": {
+             "obj": {
+              "width": 300
+             }
+            }
+           }
+          },
+          {
+           "type": "Skeleton",
+           "props": {
+            "className": "h-4 rounded",
+            "style": {
+             "obj": {
+              "width": 150
+             }
+            }
+           }
+          }
+         ],
+         "props": {
+          "as": "div",
+          "className": "flex flex-col gap-2 w-full"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "avatar + text combo"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Text",
+         "children": [
+          {
+           "type": "Skeleton",
+           "props": {
+            "className": "rounded-full shrink-0",
+            "style": {
+             "obj": {
+              "width": 40,
+              "height": 40
+             }
+            }
+           }
+          },
+          {
+           "type": "Text",
+           "children": [
+            {
+             "type": "Skeleton",
+             "props": {
+              "className": "h-4 rounded",
+              "style": {
+               "obj": {
+                "width": 160
+               }
+              }
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "className": "h-4 rounded",
+              "style": {
+               "obj": {
+                "width": 100
+               }
+              }
+             }
+            }
+           ],
+           "props": {
+            "as": "div",
+            "className": "flex flex-col gap-2"
+           }
+          }
+         ],
+         "props": {
+          "as": "div",
+          "className": "flex gap-3 items-center w-full"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

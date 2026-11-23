@@ -1,0 +1,267 @@
+{
+ "id": "ui-data-primitive-scroll-area",
+ "version": 1,
+ "uiNodeId": "ui-node-primitive-scroll-area",
+ "kind": "component",
+ "name": "primitive-scroll-area",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "primitive-scroll-area",
+  "version": 1,
+  "surface": "web",
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "align": "center",
+    "scale": "2xl"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "vertical"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "ScrollArea",
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "p",
+            "children": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "p",
+            "children": "Sed do eiusmod tempor incididunt ut labore et dolore magna."
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "p",
+            "children": "Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "p",
+            "children": "Duis aute irure dolor in reprehenderit in voluptate velit."
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "p",
+            "children": "Excepteur sint occaecat cupidatat non proident, sunt in culpa."
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "p",
+            "children": "Nulla pariatur. Curabitur pretium tincidunt lacus."
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "p",
+            "children": "Nulla gravida orci a odio, et tempus feugiat."
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "p",
+            "children": "Nullam varius, turpis molestie pretium placerat."
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "p",
+            "children": "Aliquam erat volutpat. Nam dui mi, tincidunt quis."
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "p",
+            "children": "Phasellus ultrices nulla quis nibh. Quisque a lectus."
+           }
+          },
+          {
+           "type": "ScrollBar",
+           "props": {
+            "orientation": "vertical"
+           }
+          }
+         ],
+         "props": {
+          "style": {
+           "obj": {
+            "height": 120,
+            "width": 240
+           }
+          }
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "horizontal"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "ScrollArea",
+         "children": [
+          {
+           "type": "Text",
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "children": "Item one"
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "children": "Item two"
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "children": "Item three"
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "children": "Item four"
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "children": "Item five"
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "children": "Item six"
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "children": "Item seven"
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "children": "Item eight"
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "children": "Item nine"
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "children": "Item ten"
+             }
+            }
+           ],
+           "props": {
+            "as": "div",
+            "style": {
+             "obj": {
+              "display": "inline-flex",
+              "gap": 16,
+              "padding": "8px 0"
+             }
+            }
+           }
+          },
+          {
+           "type": "ScrollBar",
+           "props": {
+            "orientation": "horizontal"
+           }
+          }
+         ],
+         "props": {
+          "style": {
+           "obj": {
+            "width": 240,
+            "whiteSpace": "nowrap"
+           }
+          }
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

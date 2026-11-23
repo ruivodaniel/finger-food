@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-financial-tables-targets-table-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-financial-tables-targets-table",
+ "name": "default",
+ "title": "Targets table",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

@@ -1,0 +1,127 @@
+{
+ "id": "ui-data-pattern-component-container-header-4-title-and-description",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-container-header-4-title-and-description",
+ "kind": "component",
+ "name": "container-header-4-title-and-description",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "container-header-4-title-and-description",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Card",
+   "children": [
+    {
+     "type": "Header",
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "between"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "col",
+          "scale": "2xs"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--heading3",
+            "children": "Title"
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "A line that says what this is",
+            "emphasis": "quiet"
+           }
+          }
+         ]
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "scale": "sm"
+         },
+         "children": [
+          {
+           "type": "Button",
+           "props": {
+            "scale": "sm",
+            "emphasis": "secondary",
+            "children": "Action",
+            "data-testid": "ch-desc-first-action-btn"
+           }
+          },
+          {
+           "type": "Button",
+           "props": {
+            "scale": "sm",
+            "emphasis": "primary",
+            "children": "Action",
+            "data-testid": "ch-desc-second-action-btn"
+           }
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Content",
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "scale": "sm"
+       },
+       "children": [
+        {
+         "type": "Skeleton",
+         "props": {
+          "scale": "sm"
+         }
+        },
+        {
+         "type": "Skeleton",
+         "props": {
+          "scale": "sm"
+         }
+        },
+        {
+         "type": "Skeleton",
+         "props": {
+          "scale": "sm"
+         }
+        },
+        {
+         "type": "Skeleton",
+         "props": {
+          "scale": "sm"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,251 @@
+{
+ "id": "ui-data-pattern-component-container-7-card-with-tabs",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-container-7-card-with-tabs",
+ "kind": "component",
+ "name": "container-7-card-with-tabs",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "container-7-card-with-tabs",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "state": {
+   "tab": "one"
+  },
+  "root": {
+   "type": "Card",
+   "children": [
+    {
+     "type": "Header",
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "between"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--heading3",
+          "children": "Title"
+         }
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "scale": "sm"
+         },
+         "children": [
+          {
+           "type": "Button",
+           "props": {
+            "scale": "sm",
+            "emphasis": "secondary",
+            "children": "Action",
+            "data-testid": "c-tabs-first-action-btn"
+           }
+          },
+          {
+           "type": "Button",
+           "props": {
+            "scale": "sm",
+            "emphasis": "primary",
+            "children": "Action",
+            "data-testid": "c-tabs-second-action-btn"
+           }
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Tabs",
+     "props": {
+      "value": {
+       "bind": "state.tab"
+      }
+     },
+     "children": [
+      {
+       "type": "TabsList",
+       "children": [
+        {
+         "type": "TabsTrigger",
+         "props": {
+          "value": "one",
+          "children": "Tab one",
+          "data-testid": "c-tabs-one-tab"
+         }
+        },
+        {
+         "type": "TabsTrigger",
+         "props": {
+          "value": "two",
+          "children": "Tab two",
+          "data-testid": "c-tabs-two-tab"
+         }
+        },
+        {
+         "type": "TabsTrigger",
+         "props": {
+          "value": "three",
+          "children": "Tab three",
+          "data-testid": "c-tabs-three-tab"
+         }
+        }
+       ]
+      },
+      {
+       "type": "TabsContent",
+       "props": {
+        "value": "one"
+       },
+       "children": [
+        {
+         "type": "Content",
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col",
+            "scale": "sm"
+           },
+           "children": [
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "sm"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "sm"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "sm"
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "TabsContent",
+       "props": {
+        "value": "two"
+       },
+       "children": [
+        {
+         "type": "Content",
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col",
+            "scale": "sm"
+           },
+           "children": [
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "sm"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "sm"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "sm"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "sm"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "sm"
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "TabsContent",
+       "props": {
+        "value": "three"
+       },
+       "children": [
+        {
+         "type": "Content",
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col",
+            "scale": "sm"
+           },
+           "children": [
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "sm"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "sm"
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "on": {
+      "valueChange": [
+       {
+        "set": {
+         "state": "tab",
+         "to": {
+          "bind": "event"
+         }
+        }
+       }
+      ]
+     }
+    }
+   ]
+  }
+ }
+}

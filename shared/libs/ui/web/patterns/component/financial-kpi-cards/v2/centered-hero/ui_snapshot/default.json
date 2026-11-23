@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-financial-kpi-cards-centered-hero-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-financial-kpi-cards-centered-hero",
+ "name": "default",
+ "title": "Financial kpi cards: centered hero",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

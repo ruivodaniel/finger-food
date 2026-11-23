@@ -1,0 +1,230 @@
+{
+ "id": "ui-data-pattern-component-financial-kpi-cards-parenthetical-negatives",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-financial-kpi-cards-parenthetical-negatives",
+ "kind": "component",
+ "name": "parenthetical-negatives",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "parenthetical-negatives",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Card",
+   "props": {
+    "style": {
+     "obj": {
+      "width": 360
+     }
+    }
+   },
+   "children": [
+    {
+     "type": "Content",
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "scale": "sm"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "justify": "between",
+          "align": "baseline"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body",
+            "children": "Revenue"
+           }
+          },
+          {
+           "type": "DataNumber",
+           "props": {
+            "value": 274000000000,
+            "config": {
+             "mode": {
+              "kind": "fixedScale",
+              "scale": "million",
+              "n": 0
+             },
+             "locale": "en-GB",
+             "negative": "parentheses"
+            },
+            "scale": "sm",
+            "monospace": true
+           }
+          }
+         ]
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "justify": "between",
+          "align": "baseline"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body",
+            "children": "Cost of sales"
+           }
+          },
+          {
+           "type": "DataNumber",
+           "props": {
+            "value": -169560000000,
+            "config": {
+             "mode": {
+              "kind": "fixedScale",
+              "scale": "million",
+              "n": 0
+             },
+             "locale": "en-GB",
+             "negative": "parentheses"
+            },
+            "scale": "sm",
+            "monospace": true
+           }
+          }
+         ]
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "justify": "between",
+          "align": "baseline"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body",
+            "children": "Gross profit"
+           }
+          },
+          {
+           "type": "DataNumber",
+           "props": {
+            "value": 104440000000,
+            "config": {
+             "mode": {
+              "kind": "fixedScale",
+              "scale": "million",
+              "n": 0
+             },
+             "locale": "en-GB",
+             "negative": "parentheses"
+            },
+            "scale": "sm",
+            "monospace": true
+           }
+          }
+         ]
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "justify": "between",
+          "align": "baseline"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body",
+            "children": "Operating expenses"
+           }
+          },
+          {
+           "type": "DataNumber",
+           "props": {
+            "value": -43890000000,
+            "config": {
+             "mode": {
+              "kind": "fixedScale",
+              "scale": "million",
+              "n": 0
+             },
+             "locale": "en-GB",
+             "negative": "parentheses"
+            },
+            "scale": "sm",
+            "monospace": true
+           }
+          }
+         ]
+        },
+        {
+         "type": "Separator"
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "justify": "between",
+          "align": "baseline"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body",
+            "emphasis": "primary",
+            "children": "Operating income"
+           }
+          },
+          {
+           "type": "DataNumber",
+           "props": {
+            "value": 60550000000,
+            "config": {
+             "mode": {
+              "kind": "fixedScale",
+              "scale": "million",
+              "n": 0
+             },
+             "locale": "en-GB",
+             "negative": "parentheses"
+            },
+            "scale": "sm",
+            "monospace": true,
+            "emphasis": "secondary"
+           }
+          }
+         ]
+        },
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body-extra-small",
+          "emphasis": "quiet",
+          "children": "USD millions"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

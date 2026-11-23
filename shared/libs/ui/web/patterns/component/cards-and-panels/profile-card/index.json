@@ -1,0 +1,296 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "profile-card",
+ "version": 1,
+ "surface": "web",
+ "measure": "md",
+ "root": {
+  "type": "Card",
+  "props": {
+   "className": "w-full max-w-xl"
+  },
+  "children": [
+   {
+    "type": "Content",
+    "props": {},
+    "children": [
+     {
+      "type": "Stack",
+      "props": {
+       "dir": "col",
+       "gap": 20
+      },
+      "children": [
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "gap": 20,
+         "align": "center"
+        },
+        "children": [
+         {
+          "type": "Avatar",
+          "props": {
+           "scale": "xl"
+          },
+          "children": [
+           {
+            "type": "AvatarFallback",
+            "props": {
+             "children": "SC"
+            }
+           }
+          ]
+         },
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "col",
+           "gap": 4
+          },
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--heading3",
+             "children": "shadcn"
+            }
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body",
+             "emphasis": "quiet",
+             "children": "@shadcn"
+            }
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--body",
+         "emphasis": "quiet",
+         "children": "Building @vercel. Creator of shadcn/ui."
+        }
+       },
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "gap": 20,
+         "align": "center",
+         "wrap": true
+        },
+        "children": [
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--body",
+           "emphasis": "quiet",
+           "className": "inline-flex items-center gap-2"
+          },
+          "children": [
+           {
+            "type": "Icon",
+            "props": {
+             "name": "building",
+             "size": "sm"
+            }
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "children": "@vercel"
+            }
+           }
+          ]
+         },
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--body",
+           "emphasis": "quiet",
+           "className": "inline-flex items-center gap-2"
+          },
+          "children": [
+           {
+            "type": "Icon",
+            "props": {
+             "name": "mapPin",
+             "size": "sm"
+            }
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "children": "New York"
+            }
+           }
+          ]
+         },
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--body",
+           "emphasis": "quiet",
+           "className": "inline-flex items-center gap-2"
+          },
+          "children": [
+           {
+            "type": "Icon",
+            "props": {
+             "name": "link",
+             "size": "sm"
+            }
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "children": "shadcn.com"
+            }
+           }
+          ]
+         },
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--body",
+           "emphasis": "quiet",
+           "className": "inline-flex items-center gap-2"
+          },
+          "children": [
+           {
+            "type": "Icon",
+            "props": {
+             "name": "share",
+             "size": "sm"
+            }
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "children": "@shadcn"
+            }
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "Separator",
+        "props": {}
+       },
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "gap": 24,
+         "align": "baseline"
+        },
+        "children": [
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "row",
+           "gap": 6,
+           "align": "baseline"
+          },
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--numbers",
+             "children": "45"
+            }
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body",
+             "emphasis": "quiet",
+             "children": "repos"
+            }
+           }
+          ]
+         },
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "row",
+           "gap": 6,
+           "align": "baseline"
+          },
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--numbers",
+             "children": "12.5K"
+            }
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body",
+             "emphasis": "quiet",
+             "children": "followers"
+            }
+           }
+          ]
+         },
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "row",
+           "gap": 6,
+           "align": "baseline"
+          },
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--numbers",
+             "children": "89"
+            }
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body",
+             "emphasis": "quiet",
+             "children": "following"
+            }
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

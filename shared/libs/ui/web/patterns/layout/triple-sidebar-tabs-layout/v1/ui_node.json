@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-layout-triple-sidebar-tabs-layout",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Triple sidebar layout with tabs"
+}

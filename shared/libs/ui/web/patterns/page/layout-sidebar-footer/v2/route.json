@@ -1,0 +1,7 @@
+{
+ "id": "route-pattern-page-layout-sidebar-footer",
+ "version": 1,
+ "surface": "web",
+ "path": "/patterns/page/layout-sidebar-footer",
+ "uiNodeId": "ui-node-pattern-page-layout-sidebar-footer"
+}

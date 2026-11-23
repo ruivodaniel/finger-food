@@ -1,0 +1,264 @@
+{
+ "id": "ui-data-primitive-phone-input",
+ "version": 1,
+ "uiNodeId": "ui-node-primitive-phone-input",
+ "kind": "component",
+ "name": "primitive-phone-input",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "primitive-phone-input",
+  "version": 1,
+  "surface": "web",
+  "state": {
+   "default_value": "",
+   "with_value_value": "+15550100",
+   "disabled_value": ""
+  },
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "align": "center",
+    "scale": "2xl"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "default"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "PhoneInput",
+         "on": {
+          "change": [
+           {
+            "set": {
+             "state": "default_value",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "countryOptions": [
+           {
+            "obj": {
+             "code": "PT",
+             "dialingCode": "351",
+             "flag": "\ud83c\uddf5\ud83c\uddf9",
+             "name": "Portugal"
+            }
+           },
+           {
+            "obj": {
+             "code": "US",
+             "dialingCode": "1",
+             "flag": "\ud83c\uddfa\ud83c\uddf8",
+             "name": "United States"
+            }
+           },
+           {
+            "obj": {
+             "code": "GB",
+             "dialingCode": "44",
+             "flag": "\ud83c\uddec\ud83c\udde7",
+             "name": "United Kingdom"
+            }
+           }
+          ],
+          "defaultCountryCode": "PT",
+          "disabled": false,
+          "value": {
+           "bind": "state.default_value"
+          },
+          "data-testid": "phone-input-default-1-input"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "with value"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "PhoneInput",
+         "on": {
+          "change": [
+           {
+            "set": {
+             "state": "with_value_value",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "countryOptions": [
+           {
+            "obj": {
+             "code": "PT",
+             "dialingCode": "351",
+             "flag": "\ud83c\uddf5\ud83c\uddf9",
+             "name": "Portugal"
+            }
+           },
+           {
+            "obj": {
+             "code": "US",
+             "dialingCode": "1",
+             "flag": "\ud83c\uddfa\ud83c\uddf8",
+             "name": "United States"
+            }
+           },
+           {
+            "obj": {
+             "code": "GB",
+             "dialingCode": "44",
+             "flag": "\ud83c\uddec\ud83c\udde7",
+             "name": "United Kingdom"
+            }
+           }
+          ],
+          "disabled": false,
+          "value": {
+           "bind": "state.with_value_value"
+          },
+          "data-testid": "phone-input-with-value-1-input"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "disabled"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "PhoneInput",
+         "on": {
+          "change": [
+           {
+            "set": {
+             "state": "disabled_value",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "countryOptions": [
+           {
+            "obj": {
+             "code": "PT",
+             "dialingCode": "351",
+             "flag": "\ud83c\uddf5\ud83c\uddf9",
+             "name": "Portugal"
+            }
+           },
+           {
+            "obj": {
+             "code": "US",
+             "dialingCode": "1",
+             "flag": "\ud83c\uddfa\ud83c\uddf8",
+             "name": "United States"
+            }
+           },
+           {
+            "obj": {
+             "code": "GB",
+             "dialingCode": "44",
+             "flag": "\ud83c\uddec\ud83c\udde7",
+             "name": "United Kingdom"
+            }
+           }
+          ],
+          "disabled": true,
+          "value": {
+           "bind": "state.disabled_value"
+          },
+          "data-testid": "phone-input-disabled-1-input"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

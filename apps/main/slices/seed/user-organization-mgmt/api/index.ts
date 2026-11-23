@@ -15,17 +15,13 @@ export type {
   ScopedAcEnv,
 } from "./types";
 export type {
-  ScopedAcRequestContext,
-  ScopedAcBag,
-} from "./shared/scoped-ac";
-export type {
   IdentityProviderPort,
   IdentitySnapshot,
   SessionSnapshot,
 } from "./identity/identity-provider.port";
 export { IdentityProviderError } from "./identity/identity-provider.port";
-export { LocalIdentityProvider } from "./identity/local/local-identity-provider";
-export type { CodePurpose, LocalIdentityProviderOptions } from "./identity/local/local-identity-provider";
 export type { MembershipFacts } from "./services/gate.service";
+export type { OrganizationService } from "./services/organization.service";
+export type { UserProfileService } from "./services/user-profile.service";
 export type { ModuleErrors, ModuleLogger } from "./shared/module-errors";
 export type { StoragePort } from "./shared/storage-port";

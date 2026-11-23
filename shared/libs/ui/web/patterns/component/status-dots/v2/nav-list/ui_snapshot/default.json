@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-status-dots-nav-list-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-status-dots-nav-list",
+ "name": "default",
+ "title": "Status dots: nav list",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

@@ -1,0 +1,156 @@
+{
+ "id": "ui-data-pattern-component-container-footer-2-with-a-summary",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-container-footer-2-with-a-summary",
+ "kind": "component",
+ "name": "container-footer-2-with-a-summary",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "container-footer-2-with-a-summary",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Card",
+   "children": [
+    {
+     "type": "Header",
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "between"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "scale": "sm"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--heading3",
+            "children": "Title"
+           }
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Content",
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "scale": "sm"
+       },
+       "children": [
+        {
+         "type": "Skeleton",
+         "props": {
+          "scale": "sm"
+         }
+        },
+        {
+         "type": "Skeleton",
+         "props": {
+          "scale": "sm"
+         }
+        },
+        {
+         "type": "Skeleton",
+         "props": {
+          "scale": "sm"
+         }
+        },
+        {
+         "type": "Skeleton",
+         "props": {
+          "scale": "sm"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Footer",
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "between"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "scale": "sm"
+         },
+         "children": [
+          {
+           "type": "Button",
+           "props": {
+            "scale": "sm",
+            "emphasis": "tertiary",
+            "children": "Cancel",
+            "data-testid": "cf-sum-cancel-btn"
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body-small",
+            "children": "3 selected",
+            "emphasis": "quiet"
+           }
+          }
+         ]
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "scale": "sm"
+         },
+         "children": [
+          {
+           "type": "Button",
+           "props": {
+            "scale": "sm",
+            "emphasis": "primary",
+            "children": "Save",
+            "data-testid": "cf-sum-save-btn"
+           }
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "props": {
+    "concept": "container-example"
+   }
+  }
+ }
+}

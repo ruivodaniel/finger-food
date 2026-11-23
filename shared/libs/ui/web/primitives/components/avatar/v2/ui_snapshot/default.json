@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-primitive-avatar-default",
+ "version": 1,
+ "uiDataId": "ui-data-primitive-avatar",
+ "name": "default",
+ "title": "Avatar, its cases",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

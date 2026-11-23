@@ -1,0 +1,342 @@
+{
+ "id": "ui-data-pattern-component-table-stacked-cells-regions",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-table-stacked-cells-regions",
+ "kind": "component",
+ "name": "regions",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "regions",
+  "version": 1,
+  "surface": "web",
+  "measure": "lg",
+  "root": {
+   "type": "Table",
+   "props": {
+    "className": "w-full max-w-2xl"
+   },
+   "children": [
+    {
+     "type": "TableHeader",
+     "props": {},
+     "children": [
+      {
+       "type": "TableRow",
+       "props": {},
+       "children": [
+        {
+         "type": "TableHead",
+         "props": {
+          "children": "Region"
+         }
+        },
+        {
+         "use": {
+          "component": "StackedHead",
+          "version": "latest"
+         },
+         "args": {
+          "label": "Revenue",
+          "unit": "EUR · month"
+         }
+        },
+        {
+         "use": {
+          "component": "StackedHead",
+          "version": "latest"
+         },
+         "args": {
+          "label": "Orders",
+          "unit": "count · month"
+         }
+        },
+        {
+         "use": {
+          "component": "StackedHead",
+          "version": "latest"
+         },
+         "args": {
+          "label": "Avg. order",
+          "unit": "EUR"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "TableBody",
+     "props": {},
+     "children": [
+      {
+       "type": "TableRow",
+       "props": {},
+       "children": [
+        {
+         "type": "TableCell",
+         "props": {},
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body",
+            "children": "Portugal"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "DeltaCell",
+          "version": "latest"
+         },
+         "args": {
+          "value": "48.2k",
+          "delta": " +12%",
+          "dir": "up"
+         }
+        },
+        {
+         "use": {
+          "component": "DeltaCell",
+          "version": "latest"
+         },
+         "args": {
+          "value": "1,092",
+          "delta": " +4%",
+          "dir": "up"
+         }
+        },
+        {
+         "use": {
+          "component": "DeltaCell",
+          "version": "latest"
+         },
+         "args": {
+          "value": "44.10",
+          "delta": " +7%",
+          "dir": "up"
+         }
+        }
+       ]
+      },
+      {
+       "type": "TableRow",
+       "props": {},
+       "children": [
+        {
+         "type": "TableCell",
+         "props": {},
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body",
+            "children": "Spain"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "DeltaCell",
+          "version": "latest"
+         },
+         "args": {
+          "value": "31.7k",
+          "delta": " +3%",
+          "dir": "up"
+         }
+        },
+        {
+         "use": {
+          "component": "DeltaCell",
+          "version": "latest"
+         },
+         "args": {
+          "value": "804",
+          "delta": " −2%",
+          "dir": "dn"
+         }
+        },
+        {
+         "use": {
+          "component": "DeltaCell",
+          "version": "latest"
+         },
+         "args": {
+          "value": "39.40",
+          "delta": " +5%",
+          "dir": "up"
+         }
+        }
+       ]
+      },
+      {
+       "type": "TableRow",
+       "props": {},
+       "children": [
+        {
+         "type": "TableCell",
+         "props": {},
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body",
+            "children": "Nordics"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "DeltaCell",
+          "version": "latest"
+         },
+         "args": {
+          "value": "27.9k",
+          "delta": " +18%",
+          "dir": "up"
+         }
+        },
+        {
+         "use": {
+          "component": "DeltaCell",
+          "version": "latest"
+         },
+         "args": {
+          "value": "512",
+          "delta": " +11%",
+          "dir": "up"
+         }
+        },
+        {
+         "use": {
+          "component": "DeltaCell",
+          "version": "latest"
+         },
+         "args": {
+          "value": "54.50",
+          "delta": " +6%",
+          "dir": "up"
+         }
+        }
+       ]
+      },
+      {
+       "type": "TableRow",
+       "props": {},
+       "children": [
+        {
+         "type": "TableCell",
+         "props": {},
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body",
+            "children": "UK"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "DeltaCell",
+          "version": "latest"
+         },
+         "args": {
+          "value": "22.4k",
+          "delta": " −6%",
+          "dir": "dn"
+         }
+        },
+        {
+         "use": {
+          "component": "DeltaCell",
+          "version": "latest"
+         },
+         "args": {
+          "value": "633",
+          "delta": " −9%",
+          "dir": "dn"
+         }
+        },
+        {
+         "use": {
+          "component": "DeltaCell",
+          "version": "latest"
+         },
+         "args": {
+          "value": "35.40",
+          "delta": " +3%",
+          "dir": "up"
+         }
+        }
+       ]
+      },
+      {
+       "type": "TableRow",
+       "props": {},
+       "children": [
+        {
+         "type": "TableCell",
+         "props": {},
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body",
+            "children": "Germany"
+           }
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "DeltaCell",
+          "version": "latest"
+         },
+         "args": {
+          "value": "19.1k",
+          "delta": " +1%",
+          "dir": "up"
+         }
+        },
+        {
+         "use": {
+          "component": "DeltaCell",
+          "version": "latest"
+         },
+         "args": {
+          "value": "440",
+          "delta": " +2%",
+          "dir": "up"
+         }
+        },
+        {
+         "use": {
+          "component": "DeltaCell",
+          "version": "latest"
+         },
+         "args": {
+          "value": "43.40",
+          "delta": " −1%",
+          "dir": "dn"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

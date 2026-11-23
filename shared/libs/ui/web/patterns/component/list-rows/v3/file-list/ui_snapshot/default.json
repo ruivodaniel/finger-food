@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-list-rows-file-list-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-list-rows-file-list",
+ "name": "default",
+ "title": "List rows: file list",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

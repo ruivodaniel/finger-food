@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-component-mode-control",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Mode control"
+}

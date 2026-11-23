@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-primitive-scroll-area-default",
+ "version": 1,
+ "uiDataId": "ui-data-primitive-scroll-area",
+ "name": "default",
+ "title": "Scroll area, its cases",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

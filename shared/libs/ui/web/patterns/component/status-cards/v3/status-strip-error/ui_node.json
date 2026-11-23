@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-component-status-cards-status-strip-error",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Status cards: status strip error"
+}

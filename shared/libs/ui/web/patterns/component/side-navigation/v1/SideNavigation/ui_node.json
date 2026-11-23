@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-component-side-navigation-sidenavigation",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "SideNavigation"
+}

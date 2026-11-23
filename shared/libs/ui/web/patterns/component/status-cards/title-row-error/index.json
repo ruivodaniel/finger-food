@@ -1,0 +1,92 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "title-row-error",
+ "version": 1,
+ "surface": "web",
+ "measure": "md",
+ "root": {
+  "type": "Card",
+  "props": {
+   "className": "flex-1 min-w-56"
+  },
+  "children": [
+   {
+    "type": "Content",
+    "props": {},
+    "children": [
+     {
+      "type": "Stack",
+      "props": {
+       "dir": "col",
+       "gap": 6
+      },
+      "children": [
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "gap": 8,
+         "align": "center",
+         "justify": "between"
+        },
+        "children": [
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--heading4",
+           "status": "error"
+          },
+          "children": [
+           {
+            "type": "Icon",
+            "props": {
+             "name": "error",
+             "size": "sm"
+            }
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "children": " Sync failed"
+            }
+           }
+          ]
+         },
+         {
+          "type": "Badge",
+          "props": {
+           "emphasis": "quiet",
+           "status": "error",
+           "scale": "xs",
+           "children": "Error"
+          }
+         }
+        ]
+       },
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--body-small",
+         "children": "Connection timed out after 30 s; 3 changes were not saved."
+        }
+       },
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--body-extra-small",
+         "emphasis": "quiet",
+         "children": "2 h ago"
+        }
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,162 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "data-agent",
+ "version": 1,
+ "surface": "web",
+ "measure": "md",
+ "root": {
+  "type": "Card",
+  "props": {
+   "state": "disabled"
+  },
+  "children": [
+   {
+    "type": "Content",
+    "props": {},
+    "children": [
+     {
+      "type": "Stack",
+      "props": {
+       "dir": "col",
+       "gap": 14
+      },
+      "children": [
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "align": "start",
+         "justify": "between",
+         "gap": 12
+        },
+        "children": [
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "row",
+           "align": "center",
+           "gap": 14
+          },
+          "children": [
+           {
+            "type": "Avatar",
+            "props": {
+             "scale": "md"
+            },
+            "children": [
+             {
+              "type": "AvatarFallback",
+              "props": {},
+              "children": [
+               {
+                "type": "Icon",
+                "props": {
+                 "name": "bot",
+                 "size": "sm"
+                }
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "type": "Stack",
+            "props": {
+             "dir": "col",
+             "gap": 2
+            },
+            "children": [
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--heading4",
+               "children": "Data Agent"
+              }
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "Badge",
+          "props": {
+           "emphasis": "quiet",
+           "status": "neutral"
+          },
+          "children": [
+           {
+            "type": "Badge",
+            "props": {
+             "scale": "3xs",
+             "concept": "dot",
+             "status": "neutral"
+            }
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body-extra-small",
+             "children": "Offline"
+            }
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--body",
+         "emphasis": "quiet",
+         "children": "Analyzes data, generates insights, and creates visualizations"
+        }
+       },
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "align": "center",
+         "gap": 8,
+         "wrap": true
+        },
+        "children": [
+         {
+          "type": "Chip",
+          "props": {
+           "emphasis": "tertiary",
+           "scale": "sm",
+           "closable": false,
+           "children": "Data Analysis"
+          }
+         },
+         {
+          "type": "Chip",
+          "props": {
+           "emphasis": "tertiary",
+           "scale": "sm",
+           "closable": false,
+           "children": "Visualization"
+          }
+         },
+         {
+          "type": "Chip",
+          "props": {
+           "emphasis": "tertiary",
+           "scale": "sm",
+           "closable": false,
+           "children": "Reporting"
+          }
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

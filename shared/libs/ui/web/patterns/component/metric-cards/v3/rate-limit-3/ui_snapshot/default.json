@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-metric-cards-rate-limit-3-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-metric-cards-rate-limit-3",
+ "name": "default",
+ "title": "Metric cards: rate limit 3",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

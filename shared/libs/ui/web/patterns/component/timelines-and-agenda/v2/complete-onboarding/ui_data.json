@@ -1,0 +1,142 @@
+{
+ "id": "ui-data-pattern-component-timelines-and-agenda-complete-onboarding",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-timelines-and-agenda-complete-onboarding",
+ "kind": "component",
+ "name": "complete-onboarding",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "complete-onboarding",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Card",
+   "props": {},
+   "children": [
+    {
+     "type": "Content",
+     "props": {},
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--heading4",
+          "children": "Complete user onboarding flow"
+         }
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "scale": "md"
+         },
+         "children": [
+          {
+           "type": "Progress",
+           "props": {
+            "value": 100,
+            "className": "flex-1 min-w-0"
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--numbers",
+            "emphasis": "quiet",
+            "children": "100%"
+           }
+          }
+         ]
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "justify": "between",
+          "scale": "md"
+         },
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "row",
+            "align": "center",
+            "wrap": true,
+            "scale": "sm"
+           },
+           "children": [
+            {
+             "type": "Badge",
+             "props": {
+              "status": "success",
+              "children": "Completed"
+             }
+            },
+            {
+             "type": "Badge",
+             "props": {
+              "emphasis": "tertiary",
+              "showIcon": true,
+              "iconName": "success",
+              "children": "3/3 steps"
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--body-small",
+              "emphasis": "quiet"
+             },
+             "children": [
+              {
+               "type": "Icon",
+               "props": {
+                "name": "calendar",
+                "size": "xs"
+               }
+              },
+              {
+               "type": "Text",
+               "props": {
+                "as": "span",
+                "children": " Dec 1, 2025"
+               }
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "Button",
+           "props": {
+            "emphasis": "secondary",
+            "buttonType": "text-icon",
+            "endIcon": "chevronRight",
+            "children": "View Goal",
+            "data-testid": "goal-1-view-btn"
+           }
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

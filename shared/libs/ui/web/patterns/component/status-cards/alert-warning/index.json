@@ -1,0 +1,79 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "alert-warning",
+ "version": 1,
+ "surface": "web",
+ "measure": "md",
+ "root": {
+  "type": "Card",
+  "props": {
+   "status": "warning",
+   "className": "flex-1 min-w-56",
+   "concept": "alert"
+  },
+  "children": [
+   {
+    "type": "Header",
+    "props": {},
+    "children": [
+     {
+      "type": "Icon",
+      "props": {
+       "name": "warning"
+      }
+     },
+     {
+      "type": "Text",
+      "props": {
+       "as": "p",
+       "element": "type--heading4",
+       "children": "Storage almost full"
+      }
+     }
+    ]
+   },
+   {
+    "type": "Content",
+    "props": {},
+    "children": [
+     {
+      "type": "Text",
+      "props": {
+       "as": "p",
+       "element": "type--body-small",
+       "emphasis": "quiet",
+       "children": "92% of 50 GB used \u2014 uploads pause at 100%."
+      }
+     },
+     {
+      "type": "Stack",
+      "props": {
+       "dir": "row",
+       "gap": 8
+      },
+      "children": [
+       {
+        "type": "Button",
+        "props": {
+         "emphasis": "secondary",
+         "status": "warning",
+         "scale": "sm",
+         "children": "Manage storage"
+        }
+       },
+       {
+        "type": "Button",
+        "props": {
+         "emphasis": "quiet",
+         "scale": "sm",
+         "children": "Dismiss"
+        }
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

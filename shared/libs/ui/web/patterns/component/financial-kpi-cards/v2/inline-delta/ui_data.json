@@ -1,0 +1,94 @@
+{
+ "id": "ui-data-pattern-component-financial-kpi-cards-inline-delta",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-financial-kpi-cards-inline-delta",
+ "kind": "component",
+ "name": "inline-delta",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "inline-delta",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Card",
+   "props": {
+    "style": {
+     "obj": {
+      "width": 360
+     }
+    }
+   },
+   "children": [
+    {
+     "type": "Content",
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "scale": "sm"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body-small",
+          "emphasis": "quiet",
+          "children": "Price"
+         }
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "baseline",
+          "scale": "md"
+         },
+         "children": [
+          {
+           "type": "DataNumber",
+           "props": {
+            "value": 100.08,
+            "config": {
+             "mode": {
+              "kind": "full"
+             },
+             "locale": "en-GB"
+            },
+            "scale": "xl"
+           }
+          },
+          {
+           "type": "DataNumber",
+           "props": {
+            "value": -0.032,
+            "config": {
+             "mode": {
+              "kind": "fixedScale",
+              "scale": "unit",
+              "n": 2
+             },
+             "locale": "en-GB",
+             "representation": {
+              "kind": "percentage",
+              "input": "points"
+             }
+            },
+            "trend": "arrowDown",
+            "status": "error",
+            "scale": "sm"
+           }
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

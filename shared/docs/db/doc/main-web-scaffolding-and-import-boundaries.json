@@ -1,0 +1,259 @@
+{
+ "id": "doc/main-web-scaffolding-and-import-boundaries",
+ "kind": "doc",
+ "title": "Web scaffolding & import boundaries",
+ "status": "todo",
+ "subject": "main",
+ "owner": "main/core",
+ "order": 2,
+ "tags": [
+  "core",
+  "main",
+  "page",
+  "shell",
+  "slice",
+  "layout",
+  "routes"
+ ],
+ "paths": [
+  "apps/main/core/web",
+  "apps/main/slices/*/*/web"
+ ],
+ "summary": "The web side of the app: the fixed folders of the core and of every slice, how a slice declares its routes and layouts and the core mounts them, and the import boundaries that keep a slice removable.",
+ "docId": "main-web-scaffolding-and-import-boundaries",
+ "doc": {
+  "axioms": [
+   {
+    "text": "The [[core]] mounts, owns the [[shell]] and the overlay host, and holds no page, no layout and no application logic."
+   },
+   {
+    "text": "A [[slice]] declares its pages and how they are mounted, as data; the core mounts what it reads and decides nothing."
+   },
+   {
+    "text": "A slice can be removed from a product by deleting its folder and fixing the errors."
+   }
+  ],
+  "purpose": {
+   "intro": "The web rules that follow from [[scaffolding-and-import-boundaries|Scaffolding & Import Boundaries]]: where web code lives, how routes and layouts are declared and mounted, and what may import what."
+  },
+  "reference": [
+   {
+    "topic": "Web: the core and every slice have fixed folders",
+    "claims": [
+     {
+      "text": "The [[core]] is `apps/main/core/web/src/`: `shells` · `components/sidebar` · `services/api` · `store` · `config` · `routes` · `assets` · `main.tsx` · `env.ts`. It mounts the slices, owns the shells and the routes, and holds no application logic. It has no `shared/`: nothing in the core is shared with a slice, since a slice never imports the core."
+     },
+     {
+      "text": "`apps/main/slices/shared/web/` holds what the slices share and no slice owns: the screens of the application's edges (`NotFound`, `AccessDenied`, `AppSplashScreen`) and `TitleHeader`, the title band every slice layout puts in `pageHeaderContent`. It is the package `@modules/shared`; the [[core]] and every [[slice]] may import it through `@modules/shared/web`. It imports the repo root's `shared/` only, never the core and never a slice."
+     },
+     {
+      "text": "A slice's web is `shared/{layouts, components, hooks, helpers}` · `pages/<page>/{<Page>.tsx, components, hooks, helpers}` · `services/{application, api}` · `store` · `routes` · `index.ts`."
+     },
+     {
+      "text": "Every folder of the shape exists, even when empty: an empty folder holds a `.gitkeep`, and a check script fails when a folder is missing."
+     },
+     {
+      "text": "`services/api` holds one file per API area, with one client method per endpoint. `services/application` holds the slice's services, one per capability (registration, profile, invitations…), which call `services/api`. Services are singletons."
+     },
+     {
+      "text": "`store` holds the slice's client state, as a store module; the core's `store` only mounts the store module of every slice."
+     },
+     {
+      "text": "Generic UI (alert, dialog, empty state, avatar) lives in the repo root's `shared/libs/ui`, not in a slice and not in the core. What a slice owns stays in that slice's `shared/components`, exported by its `web/index.ts` when another slice or the core renders it (user-organization-mgmt's `UserAvatar`, `OrganizationAvatar`, `OrgSwitcher`). Nothing is [[injection|injected]] into a slice to render it: no `useComponents`, no `Default*` fallbacks."
+     }
+    ],
+    "imagesAndDiagrams": [
+     {
+      "title": "The two web shapes — every folder always present",
+      "type": "ascii",
+      "value": "apps/main/core/web/src/               the core\n├── shells/             the frames around the pages: SidebarShell, NoNavShell\n├── components/sidebar/ the shell's sidebar: AccountSidebar, color-mode\n├── services/api/       the generic client only (401 · 403)\n├── store/              mounts the store module of every slice\n├── config/\n├── routes/             mounts the routes every slice contributes\n├── assets/\n├── main.tsx\n└── env.ts\n\napps/main/slices/shared/web/            what the slices share and no slice owns\n├── components/         NotFound · AccessDenied · AppSplashScreen · TitleHeader\n└── index.ts            @modules/shared/web\n\napps/main/slices/<kind>/<slice>/web/    a slice\n├── shared/             used by two or more pages of the slice\n│   ├── layouts/\n│   ├── components/     the only thing another slice may render\n│   ├── hooks/\n│   └── helpers/\n├── pages/\n│   └── <page>/         private to that page\n│       ├── <Page>.tsx\n│       ├── components/\n│       ├── hooks/\n│       └── helpers/\n├── services/\n│   ├── application/    the slice's logic, one service per capability\n│   └── api/            one client method per endpoint\n├── store/              the slice's client state\n├── routes/             the routes the slice contributes, as data\n└── index.ts            the public surface"
+     }
+    ],
+    "examples": [],
+    "statement": "The web side of the app is the [[core]] plus one `web/` per [[slice]]. Each has one shape, and every folder of that shape exists, even when it is empty: a reader never wonders where something would go."
+   },
+   {
+    "topic": "Web: routing and layouting",
+    "statement": "A [[slice]] declares its routes as a tree, as data, and says how each page is mounted: the [[shell]] by name, the slice layout a section's pages share, the pages as its children. The [[core]] iterates the mounted slices and mounts what each declares, under the shell it owns. The core knows no page and no layout of a slice.",
+    "claims": [
+     {
+      "text": "The route declaration is the one list. A child carries `nav` (its title) when a navigation shows it; the navigation is a projection of that declaration (title, path), never the router's tree. Icons are the navigation's own, a dictionary by path: routing carries no presentation."
+     },
+     {
+      "text": "Every route node declares `access`: `public`, `signed-in`, or `gated`. After sign-in every page is gated (blocked until the [[unmet-requirements|unmet requirements]] are resolved) unless the node says `signed-in`: accepting an invitation, resolving the requirements themselves. The core maps `access` to the [[shell]] and its guard; a slice never names a shell."
+     },
+     {
+      "text": "An application layout is structure only, a layout pattern of the library (`@libs/web-layouts`, its compositions), since a slice layout composes it and a slice never imports the core: a composition of the layout primitives with outlets named by the region each one fills (`pageHeaderContent`, `pageLeftSidebarContent`, `mainContainerContent`). It is named by what it is, never by who uses it: `DoubleSidebarLayout` (shell nav, page header, page left sidebar, main), `SingleSidebarLayout` (shell nav, page header, main), `BareLayout` (main only)."
+     },
+     {
+      "text": "A slice layout, in the slice's `shared/layouts`, uses an application layout, fills its outlets with the slice's own components, and gives the main container to its pages through the router outlet. It is the consistency of a section's pages."
+     },
+     {
+      "text": "The slice layout is a parent route and its pages are its children: a section's chrome stays mounted while its pages change. A page knows no layout; it composes its content with primitives and patterns."
+     },
+     {
+      "text": "Navigation follows the shared rule: it is owned at the most specific level that covers all its targets. A menu over pages of one [[slice]] belongs to that slice. A menu whose targets span slices belongs to the core — the slices declare their pages, the core assembles."
+     },
+     {
+      "text": "A section may hold a page of another [[slice]]: the slice that owns the section imports the page through the other slice's `web/index.ts` and places it in its tree. The user settings are user-organization-mgmt's; the notification preferences page is notifications', placed there."
+     },
+     {
+      "text": "The [[core]] has no page. The destination after sign-in is a core config value, a path, so a product points it where it wants. Tooling pages (the sandbox, the theme editor) are not the core's routes."
+     }
+    ],
+    "examples": [
+     {
+      "snippets": [
+       {
+        "caption": "the slice declares — apps/main/slices/seed/user-organization-mgmt/web/routes/get-routes.ts",
+        "code": "{ access: \"gated\", layout: SettingsLayout, path: \"/my/settings\", children: [\n    { path: \"profile\",       page: ProfilePage,                 nav: { title: \"Profile\" } },\n    { path: \"security\",      page: SecurityPage,                nav: { title: \"Security\" } },\n    { path: \"account\",       page: AccountSettingsPage,         nav: { title: \"Account\" } },\n    { path: \"notifications\", page: NotificationPreferencesPage, nav: { title: \"Notifications\" } },   // notifications' page, through its index.ts\n]}\n{ access: \"signed-in\", path: \"/my/invitations/accept\", page: InvitationAcceptPage }\n{ access: \"public\",    path: \"/login\",                 page: LoginPage }"
+       }
+      ]
+     },
+     {
+      "snippets": [
+       {
+        "caption": "the core mounts — apps/main/core/web/src/routes/route-tree.ts",
+        "code": "const shellOf = { public: NoNavShell, \"signed-in\": SignedInShell, gated: SidebarShell }   // the core's shells, each with its guard\n\nfor (const slice of mountedSlices)\n  for (const node of slice.routes) mountTree(node, shellOf[node.access])"
+       }
+      ]
+     },
+     {
+      "snippets": [
+       {
+        "caption": "an application layout — shared/libs/ui/web/layouts/src/compositions/ApplicationLayouts.tsx (@libs/web-layouts)",
+        "code": "export function DoubleSidebarLayout({ pageHeaderContent, pageLeftSidebarContent, mainContainerContent }) {\n  return (\n    <Page>\n      <PageHeader>{pageHeaderContent}</PageHeader>\n      <PageBody>\n        <PageLeftSidebar>{pageLeftSidebarContent}</PageLeftSidebar>\n        <Main><MainContent><MainBody><MainContainer>{mainContainerContent}</MainContainer></MainBody></MainContent></Main>\n      </PageBody>\n    </Page>\n  )\n}"
+       }
+      ]
+     },
+     {
+      "snippets": [
+       {
+        "caption": "a slice layout — apps/main/slices/seed/user-organization-mgmt/web/shared/layouts/SettingsLayout.tsx",
+        "code": "export function SettingsLayout() {\n  const entries = navOf(settingsRoutes)          // the projection: title, path, to\n  const current = useCurrentPath()               // the router's current route\n  return (\n    <DoubleSidebarLayout\n      pageHeaderContent={<TitleHeader icon=\"settings\" title=\"Settings\" />}\n      pageLeftSidebarContent={<SettingsNav entries={entries} current={current} />}\n      mainContainerContent={<Outlet />}\n    />\n  )\n}"
+       }
+      ]
+     },
+     {
+      "snippets": [
+       {
+        "caption": "the navigation — apps/main/slices/seed/user-organization-mgmt/web/shared/components/SettingsNav.tsx",
+        "code": "const ICONS = { profile: \"user\", security: \"lock\", account: \"mail\" }\n\nexport function SettingsNav({ entries, current }: { entries: NavEntry[]; current: string }) {\n  return (\n    <nav element=\"control-group--sidebar\">\n      {entries.map((e) => (\n        <SidebarItem key={e.path} to={e.to} icon={ICONS[e.path]} selected={e.to === current}>{e.title}</SidebarItem>\n      ))}\n    </nav>\n  )\n}"
+       }
+      ]
+     }
+    ],
+    "imagesAndDiagrams": [
+     {
+      "type": "ascii",
+      "value": "/my/settings                    nav: the slice (UOM)    all targets are UOM's\n├── /my/settings/profile\n├── /my/settings/security\n└── /my/settings/account\n\n/my/settings/notifications      nav: the core           a target of another slice:\n                                                        the core assembles the menu"
+     }
+    ]
+   },
+   {
+    "topic": "Web: import boundaries",
+    "statement": "The boundaries keep one property: a slice can be removed from a product by deleting its folder and fixing the errors. The errors appear only where the slice was declared to meet the rest: in the [[core]], and in a slice that renders one of its components.",
+    "claims": [
+     {
+      "text": "The repo root's `shared/` imports nothing from `apps/`, except a config (`shared/configs/`), which may import a [[slice]]'s `shared/index.ts`: the DSL the config is written in (`defineCreditsCatalog`, `defineMessageTypes`). The [[core]], `slices/shared` and every [[slice]] may import from it."
+     },
+     {
+      "text": "The [[core]] imports a [[slice]] only through its `web/index.ts`."
+     },
+     {
+      "text": "The [[core]] and every [[slice]] may import `slices/shared` through `@modules/shared/web`. `slices/shared` imports no slice and never the core."
+     },
+     {
+      "text": "A [[slice]] never imports the [[core]]."
+     },
+     {
+      "text": "A [[slice]] may import another slice's components through that slice's `web/index.ts`: only the ones in its `shared/components`. Never its pages, services, hooks, store, helpers or internal files."
+     },
+     {
+      "text": "Otherwise slices meet in the [[core]], which places them side by side: the core's `AccountSidebar` renders user-organization-mgmt's `OrgSwitcher` and `UserAvatar` next to notifications' `NotificationBell`, each through its slice's `web/index.ts`."
+     },
+     {
+      "text": "`pages/<page>/` is private to that page. What two pages need goes in the slice's `shared/`."
+     },
+     {
+      "text": "Only `services/application` imports `services/api`."
+     },
+     {
+      "text": "Pages, components and hooks reach logic through `services/application`, never `services/api`."
+     },
+     {
+      "text": "A component may subscribe to a store directly, through the store's selector hook. It changes state only through the named mutations of the store module that owns the state (`setActiveOrg`), never through raw `getState()` or `setState()`."
+     },
+     {
+      "text": "A service may read and update state, through the owner's named mutations only."
+     },
+     {
+      "text": "Helpers import only helpers and `node_modules` packages, never another repo file (components, hooks, pages, services, store, routes)."
+     },
+     {
+      "text": "The core's `services/api` is only the generic client: the 401 and 403 handling. The core holds no application logic."
+     },
+     {
+      "text": "The boundaries are enforced by `pnpm lint:arch`: the web-boundaries processor, the store control and the folder-shape check. Those between packages (a slice, the core, a library, the repo's `shared/`) are enforced by `pnpm lint:boundaries`."
+     }
+    ],
+    "imagesAndDiagrams": [
+     {
+      "title": "Who may import whom, on the web",
+      "type": "ascii",
+      "value": "repo shared/ (libs, ui)  ◀── core, slices/shared, every slice · imports nothing from apps/\nslices/shared ◀── core, every slice     @modules/shared/web · imports no slice, never the core\n\ncore ──web/index.ts──▶ slice A          the core places slices side by side\ncore ──web/index.ts──▶ slice B\nslice B ──web/index.ts──▶ slice A's shared/components   components only\nslice ──✕──▶ core                        never\n\ninside a slice:\npages · components · hooks ──▶ services/application ──▶ services/api\npages · components · hooks ──✕──▶ services/api\ncomponents ──selector hook──▶ store      writes: the owner's named mutations\nservices/application ──named mutations──▶ store\npages/<page>/ ──✕──▶ pages/<other page>/   share through shared/\nhelpers ──▶ helpers, libraries only"
+     }
+    ],
+    "examples": [
+     {
+      "title": "Where slices meet — the account sidebar",
+      "text": "The sidebar spans slices, so it is the core's. It imports each slice's public surface; neither slice knows the other is there. Removing notifications breaks this file and nothing else.",
+      "snippets": [
+       {
+        "caption": "apps/main/core/web/src/shared/components/AccountSidebar.tsx",
+        "code": "import { OrgSwitcher } from \"@modules/user-organization-mgmt/web\";\nimport { NotificationBell } from \"@modules/notifications/web\";"
+       }
+      ]
+     },
+     {
+      "title": "A slice renders another slice's component",
+      "text": "A slice may render a component from another slice's `shared/components`, through its `web/index.ts`. Deleting the owning slice breaks exactly these imports.",
+      "snippets": [
+       {
+        "caption": "allowed",
+        "code": "import { OrgSwitcher } from \"@modules/user-organization-mgmt/web\";   // shared/components, exported by index.ts"
+       },
+       {
+        "caption": "violations",
+        "code": "import { MembershipsPage } from \"@modules/user-organization-mgmt/web\";              // a page\nimport { profileService } from \"@modules/user-organization-mgmt/web\";               // a service\nimport { OrgSwitcher } from \"@modules/user-organization-mgmt/web/shared/components/OrgSwitcher\"; // an internal file"
+       }
+      ]
+     },
+     {
+      "title": "Inside a slice — a page reaches logic through the application service",
+      "snippets": [
+       {
+        "caption": "pages/org-members/OrgMembersPage.tsx",
+        "code": "import { membershipsService } from \"../../services/application/memberships.service\";   // allowed\nimport { organizationApi } from \"../../services/api/organization.api\";                 // violation: only services/application imports services/api"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "review": {
+   "axioms": {
+    "state": "unreviewed"
+   },
+   "purpose": {
+    "state": "unreviewed"
+   },
+   "reference": {
+    "state": "unreviewed"
+   }
+  }
+ },
+ "audience": [
+  "seed-contributor"
+ ]
+}

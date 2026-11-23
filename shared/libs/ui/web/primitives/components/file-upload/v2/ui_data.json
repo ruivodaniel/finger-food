@@ -1,0 +1,343 @@
+{
+ "id": "ui-data-primitive-file-upload",
+ "version": 1,
+ "uiNodeId": "ui-node-primitive-file-upload",
+ "kind": "component",
+ "name": "primitive-file-upload",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "primitive-file-upload",
+  "version": 1,
+  "surface": "web",
+  "state": {
+   "scale_sm_value": null,
+   "scale_md_value": null,
+   "scale_lg_value": null,
+   "status_error_value": null,
+   "status_warning_value": null,
+   "status_success_value": null,
+   "state_disabled_value": null,
+   "images_only_value": null
+  },
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "align": "center",
+    "scale": "2xl"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "scale"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "FileUpload",
+         "on": {
+          "change": [
+           {
+            "set": {
+             "state": "scale_sm_value",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "scale": "sm",
+          "disabled": false,
+          "value": {
+           "bind": "state.scale_sm_value"
+          },
+          "data-testid": "file-upload-scale-1-input"
+         }
+        },
+        {
+         "type": "FileUpload",
+         "on": {
+          "change": [
+           {
+            "set": {
+             "state": "scale_md_value",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "scale": "md",
+          "disabled": false,
+          "value": {
+           "bind": "state.scale_md_value"
+          },
+          "data-testid": "file-upload-scale-2-input"
+         }
+        },
+        {
+         "type": "FileUpload",
+         "on": {
+          "change": [
+           {
+            "set": {
+             "state": "scale_lg_value",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "scale": "lg",
+          "disabled": false,
+          "value": {
+           "bind": "state.scale_lg_value"
+          },
+          "data-testid": "file-upload-scale-3-input"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "status"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "FileUpload",
+         "on": {
+          "change": [
+           {
+            "set": {
+             "state": "status_error_value",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "scale": "md",
+          "status": "error",
+          "disabled": false,
+          "value": {
+           "bind": "state.status_error_value"
+          },
+          "data-testid": "file-upload-status-1-input"
+         }
+        },
+        {
+         "type": "FileUpload",
+         "on": {
+          "change": [
+           {
+            "set": {
+             "state": "status_warning_value",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "scale": "md",
+          "status": "warning",
+          "disabled": false,
+          "value": {
+           "bind": "state.status_warning_value"
+          },
+          "data-testid": "file-upload-status-2-input"
+         }
+        },
+        {
+         "type": "FileUpload",
+         "on": {
+          "change": [
+           {
+            "set": {
+             "state": "status_success_value",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "scale": "md",
+          "status": "success",
+          "disabled": false,
+          "value": {
+           "bind": "state.status_success_value"
+          },
+          "data-testid": "file-upload-status-3-input"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "disabled"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "FileUpload",
+         "on": {
+          "change": [
+           {
+            "set": {
+             "state": "state_disabled_value",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "scale": "md",
+          "disabled": true,
+          "value": {
+           "bind": "state.state_disabled_value"
+          },
+          "data-testid": "file-upload-disabled-1-input"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "images only"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "FileUpload",
+         "on": {
+          "change": [
+           {
+            "set": {
+             "state": "images_only_value",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "scale": "md",
+          "disabled": false,
+          "multiple": true,
+          "accept": "image/*",
+          "value": {
+           "bind": "state.images_only_value"
+          },
+          "data-testid": "file-upload-images-only-1-input"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

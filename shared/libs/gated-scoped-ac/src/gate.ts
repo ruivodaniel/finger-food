@@ -16,7 +16,7 @@
 // `engine` (for the create verdict, where there is no Scope to require). Both
 // are app-owned and injected here.
 
-import { and, eq, inArray, or, sql, type SQL } from "drizzle-orm";
+import { and, count, eq, inArray, or, sql, type SQL } from "drizzle-orm";
 
 import type {
   Ac,
@@ -39,10 +39,11 @@ export type GateDeps<S extends SchemaTables> = {
   idColumns?: Partial<Record<keyof S & string, string>>;
 };
 
-export function createGatedDb<S extends SchemaTables>(
-  db: any,
+export function createGatedDb<S extends SchemaTables, D = any>(
+  rawDb: D,
   deps: GateDeps<S>,
 ) {
+  const db: any = rawDb;
   type EntityName = keyof S & string;
   const { tables, engine, idColumns } = deps;
   const tableOf = (entity: string): AnyTable => tables[entity];
@@ -113,16 +114,50 @@ export function createGatedDb<S extends SchemaTables>(
         const cols = scope.fields
           ? Object.fromEntries(scope.fields.map((f) => [f, table[f]]))
           : undefined;
-        const run = () =>
-          (cols ? db.select(cols) : db.select()).from(table).where(where);
+        let order: SQL[] = [];
+        let limit: number | undefined;
+        let offset: number | undefined;
+        const run = (cap?: number) => {
+          let q = (cols ? db.select(cols) : db.select())
+            .from(table)
+            .where(where)
+            .$dynamic();
+          if (order.length) q = q.orderBy(...order);
+          const n = cap ?? limit;
+          if (n !== undefined) q = q.limit(n);
+          if (offset !== undefined) q = q.offset(offset);
+          return q;
+        };
         const builder = {
           // AND only (compress-never-expand): callers may narrow, never widen.
           where(extra: SQL) {
             where = and(where, extra)!;
             return builder;
           },
+          // Ordering and paging shape what comes back; they never widen it.
+          orderBy(...by: SQL[]) {
+            order = by;
+            return builder;
+          },
+          limit(n: number) {
+            limit = n;
+            return builder;
+          },
+          offset(n: number) {
+            offset = n;
+            return builder;
+          },
           rows: () => run(),
-          first: async () => (await run().limit(1))[0] ?? null,
+          first: async () => (await run(1))[0] ?? null,
+          // How many admitted rows match the WHERE, paging ignored — the total
+          // beside a page, counted under the same Scope.
+          count: async (): Promise<number> => {
+            const [counted] = await db
+              .select({ value: count() })
+              .from(table)
+              .where(where);
+            return counted?.value ?? 0;
+          },
         };
         return builder;
       },
@@ -159,12 +194,19 @@ export function createGatedDb<S extends SchemaTables>(
       // check-then-write window is the same one requireX-then-insert has always
       // had, and closing it would mean hand-built casts for every jsonb and
       // array column.
+      //
+      // Payload rules read `$requestBody.*`. For a create the request body IS
+      // the row about to be inserted, so the gate puts `values` there itself:
+      // the per-request bag (built before any body is parsed) carries none, and
+      // a `requestBody` a caller put on the bag is replaced, never trusted —
+      // the verdict is taken on exactly the row that lands.
       async create<E extends EntityName>(
         entity: E,
         permissions: Iterable<string>,
         values: Record<string, unknown>,
       ): Promise<Record<string, unknown> | null> {
-        const verdict = engine.allowCreate(permissions, entity, bag, values);
+        const subjects = { ...(bag as Record<string, unknown>), requestBody: values };
+        const verdict = engine.allowCreate(permissions, entity, subjects);
         if (!verdict.allow) return null;
         if (verdict.requires?.length && !(await anyProbePasses(verdict.requires))) {
           return null;
@@ -209,16 +251,22 @@ export function createGatedDb<S extends SchemaTables>(
   };
 
   // ── THE ONE SANCTIONED UNGATED PATH ───────────────────────────────────────
-  // Hydration has to read the database BEFORE access control exists — it is
-  // what produces the bag that AC needs — so it cannot go through AC. Since AC
-  // is the only thing allowed to touch the db, that exception has to come from
-  // here, named and obvious rather than smuggled in as a second db handle.
-  //
-  // ONLY for hydration. Anything reachable from a route goes through gateDb.
-  gateDb.unscopedForHydration = (): any => db;
+  // Since AC is the only thing allowed to touch the db, every exception has to
+  // come from here, named and obvious rather than smuggled in as a second db
+  // handle: hydration reads before AC exists, and a module's repositories use
+  // it for the reads and writes no AC rule covers (pre-session writes, lookups,
+  // side-effect writes such as member seats). Anything reachable from a route
+  // by itself goes through gateDb.
+  gateDb.ungated = (): D => rawDb;
 
   return gateDb;
 }
+
+/** The factory `createGatedDb` returns: `bag → GatedDb`, plus the one
+ * ungated path, `ungated()`. */
+export type GatedDbFactory<S extends SchemaTables, D = any> = ReturnType<
+  typeof createGatedDb<S, D>
+>;
 
 export type GatedDb<S extends SchemaTables> = ReturnType<
   ReturnType<typeof createGatedDb<S>>

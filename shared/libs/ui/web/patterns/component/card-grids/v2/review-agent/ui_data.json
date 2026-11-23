@@ -1,0 +1,167 @@
+{
+ "id": "ui-data-pattern-component-card-grids-review-agent",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-card-grids-review-agent",
+ "kind": "component",
+ "name": "review-agent",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "review-agent",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Card",
+   "props": {},
+   "children": [
+    {
+     "type": "Content",
+     "props": {},
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "start",
+          "justify": "between",
+          "scale": "md"
+         },
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "row",
+            "align": "center",
+            "scale": "md"
+           },
+           "children": [
+            {
+             "type": "Avatar",
+             "props": {
+              "scale": "md"
+             },
+             "children": [
+              {
+               "type": "AvatarFallback",
+               "props": {},
+               "children": [
+                {
+                 "type": "Icon",
+                 "props": {
+                  "name": "bot",
+                  "size": "sm"
+                 }
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "Stack",
+             "props": {
+              "dir": "col",
+              "scale": "2xs"
+             },
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "as": "span",
+                "element": "type--heading4",
+                "children": "Review Agent"
+               }
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "Badge",
+           "props": {
+            "emphasis": "quiet",
+            "status": "neutral"
+           },
+           "children": [
+            {
+             "type": "Badge",
+             "props": {
+              "scale": "3xs",
+              "concept": "dot",
+              "status": "neutral"
+             }
+            },
+            {
+             "type": "Text",
+             "props": {
+              "as": "span",
+              "element": "type--body-extra-small",
+              "children": "Idle"
+             }
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--body",
+          "emphasis": "quiet",
+          "children": "Reviews code, content, and plans for quality assurance"
+         }
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "wrap": true,
+          "scale": "sm"
+         },
+         "children": [
+          {
+           "type": "Chip",
+           "props": {
+            "emphasis": "tertiary",
+            "scale": "sm",
+            "closable": false,
+            "children": "Code Review"
+           }
+          },
+          {
+           "type": "Chip",
+           "props": {
+            "emphasis": "tertiary",
+            "scale": "sm",
+            "closable": false,
+            "children": "Content Review"
+           }
+          },
+          {
+           "type": "Chip",
+           "props": {
+            "emphasis": "tertiary",
+            "scale": "sm",
+            "closable": false,
+            "children": "Security Audit"
+           }
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

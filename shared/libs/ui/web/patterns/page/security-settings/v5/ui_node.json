@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-page-security-settings",
+ "version": 1,
+ "type": "screen",
+ "surface": "web",
+ "title": "Security settings"
+}

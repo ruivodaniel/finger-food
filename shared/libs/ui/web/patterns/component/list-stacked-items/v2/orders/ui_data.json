@@ -1,0 +1,151 @@
+{
+ "id": "ui-data-pattern-component-list-stacked-items-orders",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-list-stacked-items-orders",
+ "kind": "component",
+ "name": "orders",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "orders",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "List",
+   "props": {
+    "className": "w-full max-w-3xl"
+   },
+   "children": [
+    {
+     "use": {
+      "component": "OrderRow",
+      "version": "latest"
+     },
+     "args": {
+      "id": "ORD-10482",
+      "date": "13 Sep, 09:41",
+      "customer": "Helm Works",
+      "email": "ops@helm.works",
+      "items": "3 items",
+      "channel": "Web",
+      "amount": "€1,240.00",
+      "statusText": "Paid"
+     }
+    },
+    {
+     "use": {
+      "component": "OrderRow",
+      "version": "latest"
+     },
+     "args": {
+      "id": "ORD-10481",
+      "date": "13 Sep, 08:15",
+      "customer": "Blueway Logistics",
+      "email": "billing@blueway.io",
+      "items": "12 items",
+      "channel": "API",
+      "amount": "€6,380.00",
+      "statusText": "Shipped"
+     }
+    },
+    {
+     "use": {
+      "component": "OrderRow",
+      "version": "latest"
+     },
+     "args": {
+      "id": "ORD-10480",
+      "date": "12 Sep, 22:03",
+      "customer": "Ana Ribeiro",
+      "email": "ana.r@gmail.com",
+      "items": "1 item",
+      "channel": "Web",
+      "amount": "€89.00",
+      "statusText": "Pending"
+     }
+    },
+    {
+     "use": {
+      "component": "OrderRow",
+      "version": "latest"
+     },
+     "args": {
+      "id": "ORD-10479",
+      "date": "12 Sep, 18:47",
+      "customer": "Nordic Compliance AB",
+      "email": "finance@nordic.se",
+      "items": "6 items",
+      "channel": "Sales",
+      "amount": "€3,150.00",
+      "statusText": "Paid"
+     }
+    },
+    {
+     "use": {
+      "component": "OrderRow",
+      "version": "latest"
+     },
+     "args": {
+      "id": "ORD-10478",
+      "date": "12 Sep, 16:20",
+      "customer": "Pedro Nunes",
+      "email": "pedro.n@proton.me",
+      "items": "2 items",
+      "channel": "Web",
+      "amount": "€178.00",
+      "statusText": "Refunded"
+     }
+    },
+    {
+     "use": {
+      "component": "OrderRow",
+      "version": "latest"
+     },
+     "args": {
+      "id": "ORD-10477",
+      "date": "12 Sep, 11:02",
+      "customer": "Clerk Studio",
+      "email": "hello@clerk.studio",
+      "items": "4 items",
+      "channel": "API",
+      "amount": "€920.00",
+      "statusText": "Shipped"
+     }
+    },
+    {
+     "use": {
+      "component": "OrderRow",
+      "version": "latest"
+     },
+     "args": {
+      "id": "ORD-10476",
+      "date": "11 Sep, 19:35",
+      "customer": "Loan Plans Ltd",
+      "email": "ap@loanplans.co",
+      "items": "8 items",
+      "channel": "Sales",
+      "amount": "€4,410.00",
+      "statusText": "Paid"
+     }
+    },
+    {
+     "use": {
+      "component": "OrderRow",
+      "version": "latest"
+     },
+     "args": {
+      "id": "ORD-10475",
+      "date": "11 Sep, 14:12",
+      "customer": "Rita Gomes",
+      "email": "rita.g@outlook.com",
+      "items": "1 item",
+      "channel": "Web",
+      "amount": "€45.00",
+      "statusText": "Pending"
+     }
+    }
+   ]
+  }
+ }
+}

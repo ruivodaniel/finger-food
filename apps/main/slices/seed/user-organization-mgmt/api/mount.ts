@@ -1,7 +1,7 @@
 /**
  * mountUserOrgApi — the module's single assembly point.
  *
- * Takes the identity provider, builds the repositories, services, middlewares, and
+ * Constructs the Kratos adapter, repositories, services, middlewares, and
  * routers from the app's inputs (db, config, transports, error constructors)
  * and returns the full surface. The app mounts what it receives; nothing in
  * here reaches for app internals.
@@ -9,6 +9,7 @@
 
 import { Hono } from "hono";
 
+import { KratosIdentityProvider } from "./identity/kratos/kratos-identity-provider";
 import { DrizzleUserRepository } from "./repositories/user.repository";
 import { DrizzleUserProfileRepository } from "./repositories/user-profile.repository";
 import { DrizzleUserPreferencesRepository } from "./repositories/user-preferences.repository";
@@ -31,7 +32,10 @@ import { UserProfileService } from "./services/user-profile.service";
 import { UserPreferencesService } from "./services/user-preferences.service";
 import { UserContactService } from "./services/user-contact.service";
 import { createSessionMiddleware } from "./middlewares/create-session-middleware";
-import { createScopedAcMiddleware } from "./middlewares/create-scoped-ac-middleware";
+import {
+  buildScopedAc,
+  createScopedAcMiddleware,
+} from "./middlewares/create-scoped-ac-middleware";
 import { createGateMiddleware } from "./middlewares/create-gate-middleware";
 import { createAuthRouter } from "./routes/create-auth-router";
 import { createMeRouter } from "./routes/create-me-router";
@@ -41,6 +45,7 @@ import { createLegalRouter } from "./routes/create-legal-router";
 import { createGateRouter } from "./routes/create-gate-router";
 import { createOrgRouter } from "./routes/create-org-router";
 import { createMyOrgsRouter } from "./routes/create-my-orgs-router";
+import { createKratosSmsWebhook } from "./routes/create-kratos-sms-webhook";
 import {
   DEFAULT_SESSION_COOKIE,
   type SessionCookieConfig,
@@ -69,35 +74,40 @@ export function mountUserOrgApi(
       : {}),
   };
 
-  const identityProvider = options.identityProvider;
+  const identityProvider = new KratosIdentityProvider(options.kratos);
+
+  // The module is never handed the raw db: repositories get the gate's one
+  // ungated path for their ungated methods; gated methods take the request's
+  // gateDb.
+  const ungatedDb = options.gatedDb.ungated();
 
   const userRepo = new DrizzleUserRepository({
-    db: options.db,
+    db: ungatedDb,
     createId: options.createId,
   });
-  const userProfileRepo = new DrizzleUserProfileRepository({ db: options.db });
+  const userProfileRepo = new DrizzleUserProfileRepository({ db: ungatedDb });
   const userContactRepo = new DrizzleUserContactRepository({
-    db: options.db,
+    db: ungatedDb,
     createId: options.createId,
   });
   const legalDocumentRepo = new DrizzleLegalDocumentRepository({
-    db: options.db,
+    db: ungatedDb,
     createId: options.createId,
   });
   const consentRecordRepo = new DrizzleConsentRecordRepository({
-    db: options.db,
+    db: ungatedDb,
     createId: options.createId,
   });
   const organizationRepo = new DrizzleOrganizationRepository({
-    db: options.db,
+    db: ungatedDb,
     createId: options.createId,
   });
   const membershipRepo = new DrizzleMembershipRepository({
-    db: options.db,
+    db: ungatedDb,
     createId: options.createId,
   });
   const invitationRepo = new DrizzleInvitationRepository({
-    db: options.db,
+    db: ungatedDb,
     createId: options.createId,
   });
 
@@ -160,6 +170,7 @@ export function mountUserOrgApi(
     authConfig: options.authConfig,
     errors: options.errors,
     logger: options.logger,
+    hooks,
   });
   const sessionService = new SessionService({
     port: identityProvider,
@@ -196,11 +207,23 @@ export function mountUserOrgApi(
     errors: options.errors,
     logger: options.logger,
   });
+  const scopedAcOptions = {
+    engine: options.engine,
+    gatedDb: options.gatedDb,
+    baselineRoles: options.baselineRoles,
+  };
+  // A signed-in user's AC context with no active org, built as the hydration
+  // middleware builds it: registration's writes go through the gate as the new
+  // user's own. Internal on purpose — it trusts the id it is given, so it is
+  // handed to AuthService only, never exposed on the mount result.
+  const scopedAcFor = (userId: string) =>
+    buildScopedAc(scopedAcOptions, userId, null);
   const authService = new AuthService({
     authConfig: options.authConfig,
     port: identityProvider,
     userService,
     consentRecordService,
+    scopedAcFor,
     hooks,
     errors: options.errors,
     logger: options.logger,
@@ -214,11 +237,7 @@ export function mountUserOrgApi(
   // Scoped-AC hydration (UOM13): the app injects the engine + gated-db factory +
   // baseline roles; this middleware fills the reserved slot between session and
   // gate. No repo/service consumes the engine yet (this commit only wires boot).
-  const scopedAcMiddleware = createScopedAcMiddleware({
-    engine: options.engine,
-    gatedDb: options.gatedDb,
-    baselineRoles: options.baselineRoles,
-  });
+  const scopedAcMiddleware = createScopedAcMiddleware(scopedAcOptions);
   const gateMiddleware = createGateMiddleware({
     gateService,
     excludePaths: ["/gate/check", "/legal/", "/me", "/invitations/"],
@@ -233,6 +252,15 @@ export function mountUserOrgApi(
   });
   // the auth surface resolves sessions itself (GET /session, POST /logout)
   const authMountRouter = new Hono<UserOrgMgmtEnv>();
+  if (options.courierSms) {
+    authMountRouter.route(
+      "/courier/sms",
+      createKratosSmsWebhook({
+        secret: options.courierSms.secret,
+        sms: { send: options.courierSms.send },
+      }),
+    );
+  }
   authMountRouter.use("*", sessionMiddleware).route("/", authRouter);
 
   const router = new Hono<UserOrgMgmtEnv>()
@@ -300,6 +328,7 @@ export function mountUserOrgApi(
       legalDocument: legalDocumentService,
       consentRecord: consentRecordService,
       organization: organizationService,
+      userProfile: userProfileService,
       membership: membershipService,
       invitation: invitationService,
     },

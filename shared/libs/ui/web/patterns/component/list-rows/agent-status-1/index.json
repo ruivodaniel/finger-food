@@ -1,0 +1,100 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "agent-status-1",
+ "version": 1,
+ "surface": "web",
+ "measure": "md",
+ "root": {
+  "type": "Card",
+  "props": {
+   "concept": "thinking"
+  },
+  "children": [
+   {
+    "type": "Content",
+    "props": {},
+    "children": [
+     {
+      "type": "Stack",
+      "props": {
+       "dir": "row",
+       "gap": 16,
+       "align": "center"
+      },
+      "children": [
+       {
+        "type": "Avatar",
+        "props": {
+         "scale": "lg",
+         "status": "success"
+        },
+        "children": [
+         {
+          "type": "AvatarFallback",
+          "props": {},
+          "children": [
+           {
+            "type": "Icon",
+            "props": {
+             "name": "bot"
+            }
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "col",
+         "gap": 4,
+         "size": "fill"
+        },
+        "children": [
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "row",
+           "gap": 12,
+           "align": "center"
+          },
+          "children": [
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--heading4",
+             "children": "Research Agent"
+            }
+           },
+           {
+            "type": "Badge",
+            "props": {
+             "children": "Thinking",
+             "status": "info",
+             "concept": "thinking",
+             "showIcon": true,
+             "iconName": "activity"
+            }
+           }
+          ]
+         },
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--body-small",
+           "emphasis": "quiet",
+           "children": "Analyzing search results and extracting relevant information\u2026"
+          }
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

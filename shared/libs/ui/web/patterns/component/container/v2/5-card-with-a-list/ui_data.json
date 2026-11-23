@@ -1,0 +1,236 @@
+{
+ "id": "ui-data-pattern-component-container-5-card-with-a-list",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-container-5-card-with-a-list",
+ "kind": "component",
+ "name": "container-5-card-with-a-list",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "container-5-card-with-a-list",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "root": {
+   "type": "Card",
+   "children": [
+    {
+     "type": "Header",
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "between"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "as": "span",
+          "element": "type--heading3",
+          "children": "Title"
+         }
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "scale": "sm"
+         },
+         "children": [
+          {
+           "type": "Button",
+           "props": {
+            "scale": "sm",
+            "emphasis": "secondary",
+            "children": "Action",
+            "data-testid": "c-list-first-action-btn"
+           }
+          },
+          {
+           "type": "Button",
+           "props": {
+            "scale": "sm",
+            "emphasis": "primary",
+            "children": "Action",
+            "data-testid": "c-list-second-action-btn"
+           }
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "List",
+     "children": [
+      {
+       "type": "ListItem",
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "justify": "between",
+          "size": "fill"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body",
+            "children": "Item"
+           }
+          },
+          {
+           "type": "Badge",
+           "props": {
+            "status": "neutral",
+            "scale": "sm",
+            "children": "state"
+           }
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "ListItem",
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "justify": "between",
+          "size": "fill"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body",
+            "children": "Item"
+           }
+          },
+          {
+           "type": "Badge",
+           "props": {
+            "status": "neutral",
+            "scale": "sm",
+            "children": "state"
+           }
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "ListItem",
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "justify": "between",
+          "size": "fill"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body",
+            "children": "Item"
+           }
+          },
+          {
+           "type": "Badge",
+           "props": {
+            "status": "neutral",
+            "scale": "sm",
+            "children": "state"
+           }
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "ListItem",
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "justify": "between",
+          "size": "fill"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body",
+            "children": "Item"
+           }
+          },
+          {
+           "type": "Badge",
+           "props": {
+            "status": "neutral",
+            "scale": "sm",
+            "children": "state"
+           }
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "ListItem",
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "justify": "between",
+          "size": "fill"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body",
+            "children": "Item"
+           }
+          },
+          {
+           "type": "Badge",
+           "props": {
+            "status": "neutral",
+            "scale": "sm",
+            "children": "state"
+           }
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

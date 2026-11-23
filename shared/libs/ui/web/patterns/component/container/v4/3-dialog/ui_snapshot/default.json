@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-container-3-dialog-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-container-3-dialog",
+ "name": "default",
+ "title": "Container 3: the dialog",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

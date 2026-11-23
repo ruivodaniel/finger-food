@@ -1,0 +1,192 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "settings-secondary-sidebar",
+ "version": 1,
+ "surface": "web",
+ "measure": "xs",
+ "root": {
+  "type": "SidebarProvider",
+  "props": {
+   "open": true,
+   "className": "h-96"
+  },
+  "children": [
+   {
+    "type": "LeftSidebar",
+    "props": {
+     "className": "h-96 flex flex-col"
+    },
+    "children": [
+     {
+      "type": "SidebarGroup",
+      "props": {},
+      "children": [
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--body-extra-small",
+         "emphasis": "quiet",
+         "children": "Settings"
+        }
+       },
+       {
+        "type": "SidebarMenu",
+        "props": {},
+        "children": [
+         {
+          "type": "SidebarMenuItem",
+          "props": {},
+          "children": [
+           {
+            "type": "SidebarMenuButton",
+            "props": {
+             "isActive": true,
+             "tooltip": "Account"
+            },
+            "children": [
+             {
+              "type": "Icon",
+              "props": {
+               "name": "mail",
+               "size": "sm"
+              }
+             },
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "className": "flex-1 truncate",
+               "children": "Account"
+              }
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "SidebarMenuItem",
+          "props": {},
+          "children": [
+           {
+            "type": "SidebarMenuButton",
+            "props": {
+             "tooltip": "Profile"
+            },
+            "children": [
+             {
+              "type": "Icon",
+              "props": {
+               "name": "user",
+               "size": "sm"
+              }
+             },
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "className": "flex-1 truncate",
+               "children": "Profile"
+              }
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "SidebarMenuItem",
+          "props": {},
+          "children": [
+           {
+            "type": "SidebarMenuButton",
+            "props": {
+             "tooltip": "Security"
+            },
+            "children": [
+             {
+              "type": "Icon",
+              "props": {
+               "name": "lock",
+               "size": "sm"
+              }
+             },
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "className": "flex-1 truncate",
+               "children": "Security"
+              }
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "SidebarMenuItem",
+          "props": {},
+          "children": [
+           {
+            "type": "SidebarMenuButton",
+            "props": {
+             "tooltip": "Legal agreements"
+            },
+            "children": [
+             {
+              "type": "Icon",
+              "props": {
+               "name": "bookOpen",
+               "size": "sm"
+              }
+             },
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "className": "flex-1 truncate",
+               "children": "Legal agreements"
+              }
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "SidebarMenuItem",
+          "props": {},
+          "children": [
+           {
+            "type": "SidebarMenuButton",
+            "props": {
+             "tooltip": "Preferences"
+            },
+            "children": [
+             {
+              "type": "Icon",
+              "props": {
+               "name": "settings",
+               "size": "sm"
+              }
+             },
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "className": "flex-1 truncate",
+               "children": "Preferences"
+              }
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

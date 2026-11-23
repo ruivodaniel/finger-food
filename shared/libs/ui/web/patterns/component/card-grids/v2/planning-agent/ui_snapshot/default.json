@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-card-grids-planning-agent-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-card-grids-planning-agent",
+ "name": "default",
+ "title": "Card grids: planning agent",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

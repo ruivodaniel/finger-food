@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-page-report-default-v3",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-page-report-v3",
+ "name": "default",
+ "title": "Report",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

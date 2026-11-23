@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-financial-tables-actual-budget-variance-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-financial-tables-actual-budget-variance",
+ "name": "default",
+ "title": "Actual against budget: the rich table by its name, so the latest version",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

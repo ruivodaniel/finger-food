@@ -1,0 +1,40 @@
+{
+  "name": "@modules/shared",
+  "version": "0.1.0",
+  "description": "What the slices share and no slice owns: the screens of the application's edges (not found, access denied, the splash screen)",
+  "type": "module",
+  "exports": {
+    "./web": {
+      "types": "./web/index.ts",
+      "import": "./web/index.ts"
+    }
+  },
+  "files": [
+    "web"
+  ],
+  "peerDependencies": {
+    "@configs/brand": "workspace:*",
+    "@libs/web-components": "workspace:*",
+    "react": "^18.0.0 || ^19.0.0",
+    "react-i18next": "*",
+    "@libs/web-layouts": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0 || ^19.0.0",
+    "typescript": "^5.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@libs/web-components": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    },
+    "react-i18next": {
+      "optional": true
+    },
+    "@libs/web-layouts": {
+      "optional": true
+    }
+  }
+}

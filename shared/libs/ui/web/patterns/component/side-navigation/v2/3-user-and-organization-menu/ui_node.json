@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-component-side-navigation-3-user-and-organization-menu",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Side navigation 3: one menu for the user and the organization; colour mode; expands inline"
+}

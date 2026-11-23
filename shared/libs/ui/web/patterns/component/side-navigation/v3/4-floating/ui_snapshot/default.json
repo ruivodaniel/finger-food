@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-side-navigation-4-floating-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-side-navigation-4-floating",
+ "name": "default",
+ "title": "Side navigation 4: floating; the zone has horizontal padding and the sidebar floats on it",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

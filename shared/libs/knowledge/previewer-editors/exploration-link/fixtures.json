@@ -1,0 +1,102 @@
+[
+  {
+    "id": "global-previewers",
+    "name": "Global previewers",
+    "data": {
+      "id": "0bb3171a-91c1-589a-b368-e0fc0024ba77",
+      "name": "global-previewers",
+      "title": "Global previewers",
+      "version": "v35",
+      "spike": false,
+      "skin": "tool",
+      "tags": [
+        "prowd",
+        "previewers",
+        "components"
+      ],
+      "createdAt": "2026-10-16T20:00:00.000Z",
+      "updatedAt": "2026-10-16T23:40:11.000Z",
+      "slice": "tool",
+      "href": "/slice-design/projects/PROWD/explorations/tool/global-previewers/v35"
+    }
+  },
+  {
+    "id": "previewer-cockpit",
+    "name": "Previewer cockpit",
+    "data": {
+      "id": "19d1d485-955c-506a-ac21-28f12d829db0",
+      "name": "previewer-cockpit",
+      "title": "Previewer cockpit",
+      "version": "v27",
+      "spike": false,
+      "skin": "own",
+      "tags": [
+        "prowd",
+        "previewers",
+        "cockpit"
+      ],
+      "createdAt": "2026-10-16T23:30:00.000Z",
+      "updatedAt": "2026-10-16T23:40:11.000Z",
+      "slice": "tool",
+      "href": "/slice-design/projects/PROWD/explorations/tool/previewer-cockpit/v27"
+    }
+  },
+  {
+    "id": "spike",
+    "name": "Kernel Explorer",
+    "data": {
+      "id": "3058a26b-9ee2-4e7f-a08e-48c72fb45b77",
+      "name": "kernel-explorer",
+      "title": "Kernel Explorer",
+      "version": "v4",
+      "spike": true,
+      "skin": "tool",
+      "tags": [
+        "kernel",
+        "spike"
+      ],
+      "createdAt": "2026-09-14T13:03:33Z",
+      "updatedAt": "2026-09-14T13:39:23Z",
+      "slice": "tool",
+      "href": "/slice-design/projects/PROWD/explorations/tool/kernel-explorer/v4"
+    }
+  },
+  {
+    "id": "new",
+    "name": "New exploration (title only)",
+    "data": {
+      "id": "00000000-0000-4000-8000-000000000041",
+      "name": "new-exploration",
+      "title": "New exploration",
+      "version": "v1",
+      "spike": false,
+      "skin": "tool"
+    }
+  },
+  {
+    "id": "long",
+    "name": "Long title",
+    "data": {
+      "id": "00000000-0000-4000-8000-000000000042",
+      "name": "a-very-long-exploration-name",
+      "title": "Screens, components and explorations: how a flexible exploration becomes the canon of the product screens, with versions, tags and every tab of the cockpit",
+      "version": "v128",
+      "spike": false,
+      "skin": "own",
+      "tags": [
+        "prowd",
+        "previewers",
+        "components",
+        "canon",
+        "screens",
+        "explorations",
+        "versions",
+        "cockpit"
+      ],
+      "createdAt": "2026-08-01T09:00:00.000Z",
+      "updatedAt": "2026-10-16T23:40:11.000Z",
+      "slice": "tool",
+      "href": "/slice-design/projects/PROWD/explorations/tool/a-very-long-exploration-name/v128"
+    }
+  }
+]

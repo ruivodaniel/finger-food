@@ -1,0 +1,81 @@
+{
+  "name": "@modules/collaboration",
+  "version": "0.1.0",
+  "description": "Collaboration \u2014 presence, leases, the order of changes and the checkpoints, for any kind of document a slice plugs in",
+  "type": "module",
+  "exports": {
+    "./shared": {
+      "types": "./shared/index.ts",
+      "import": "./shared/index.ts"
+    },
+    "./api": {
+      "types": "./api/index.ts",
+      "import": "./api/index.ts"
+    },
+    "./models": {
+      "types": "./api/models/index.ts",
+      "import": "./api/models/index.ts",
+      "default": "./api/models/index.ts"
+    },
+    "./web": {
+      "types": "./web/index.ts",
+      "import": "./web/index.ts"
+    }
+  },
+  "files": [
+    "shared",
+    "api",
+    "web"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test:unit": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@libs/gated-scoped-ac": "workspace:*",
+    "@libs/knowledge": "workspace:*",
+    "@libs/list-query": "workspace:*",
+    "@libs/web-layouts": "workspace:*",
+    "@libs/web-routing": "workspace:*",
+    "@modules/shared": "workspace:*",
+    "@modules/user-organization-mgmt": "workspace:*"
+  },
+  "peerDependencies": {
+    "@hono/zod-validator": ">=0.4.0",
+    "@libs/realtime": "workspace:*",
+    "@libs/web-components": "workspace:*",
+    "@tanstack/react-query": "^5.77.0",
+    "@tanstack/react-router": "^1.120.0",
+    "drizzle-orm": ">=0.30.0",
+    "drizzle-zod": ">=0.8.0",
+    "hono": "^4.12.17",
+    "react": "^18.0.0 || ^19.0.0",
+    "zod": "^4.4.3",
+    "zustand": "^5.0.5"
+  },
+  "peerDependenciesMeta": {
+    "@libs/web-components": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    },
+    "@tanstack/react-query": {
+      "optional": true
+    },
+    "@tanstack/react-router": {
+      "optional": true
+    },
+    "zustand": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0 || ^19.0.0",
+    "drizzle-orm": "0.43.1",
+    "drizzle-zod": "0.8.2",
+    "typescript": "^5.0.0",
+    "vitest": "^3.1.4"
+  }
+}

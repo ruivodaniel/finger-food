@@ -1,0 +1,472 @@
+{
+ "id": "ui-data-primitive-list-draggable",
+ "version": 1,
+ "uiNodeId": "ui-node-primitive-list-draggable",
+ "kind": "component",
+ "name": "primitive-list-draggable",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "primitive-list-draggable",
+  "version": 1,
+  "surface": "web",
+  "state": {
+   "default_items": [
+    {
+     "id": "1",
+     "title": "Foundations",
+     "children": [
+      {
+       "id": "1-1",
+       "title": "Slice separation",
+       "children": []
+      },
+      {
+       "id": "1-2",
+       "title": "Owner of every page",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "2",
+     "title": "Versioning",
+     "children": [
+      {
+       "id": "2-1",
+       "title": "What is versioned",
+       "children": []
+      },
+      {
+       "id": "2-2",
+       "title": "History and restore",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "3",
+     "title": "Storage",
+     "children": []
+    }
+   ],
+   "no_preview_items": [
+    {
+     "id": "1",
+     "title": "Foundations",
+     "children": [
+      {
+       "id": "1-1",
+       "title": "Slice separation",
+       "children": []
+      },
+      {
+       "id": "1-2",
+       "title": "Owner of every page",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "2",
+     "title": "Versioning",
+     "children": [
+      {
+       "id": "2-1",
+       "title": "What is versioned",
+       "children": []
+      },
+      {
+       "id": "2-2",
+       "title": "History and restore",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "3",
+     "title": "Storage",
+     "children": []
+    }
+   ],
+   "no_nesting_items": [
+    {
+     "id": "1",
+     "title": "Foundations",
+     "children": [
+      {
+       "id": "1-1",
+       "title": "Slice separation",
+       "children": []
+      },
+      {
+       "id": "1-2",
+       "title": "Owner of every page",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "2",
+     "title": "Versioning",
+     "children": [
+      {
+       "id": "2-1",
+       "title": "What is versioned",
+       "children": []
+      },
+      {
+       "id": "2-2",
+       "title": "History and restore",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "3",
+     "title": "Storage",
+     "children": []
+    }
+   ],
+   "disabled_items": [
+    {
+     "id": "1",
+     "title": "Foundations",
+     "children": [
+      {
+       "id": "1-1",
+       "title": "Slice separation",
+       "children": []
+      },
+      {
+       "id": "1-2",
+       "title": "Owner of every page",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "2",
+     "title": "Versioning",
+     "children": [
+      {
+       "id": "2-1",
+       "title": "What is versioned",
+       "children": []
+      },
+      {
+       "id": "2-2",
+       "title": "History and restore",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "3",
+     "title": "Storage",
+     "children": []
+    }
+   ]
+  },
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "scale": "2xl"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "default: preview, nesting"
+       }
+      },
+      {
+       "type": "ListDraggable",
+       "on": {
+        "itemsChange": [
+         {
+          "set": {
+           "state": "default_items",
+           "to": {
+            "bind": "event"
+           }
+          }
+         }
+        ]
+       },
+       "props": {
+        "items": {
+         "bind": "state.default_items"
+        },
+        "renderRow": {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "scale": "sm",
+          "align": "center"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "children": {
+             "bind": "ctx.handle"
+            }
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "children": {
+             "bind": "ctx.path"
+            }
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "children": {
+             "bind": "item.title"
+            }
+           }
+          }
+         ]
+        },
+        "data-testid": "list-draggable-default-menu"
+       }
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "no preview"
+       }
+      },
+      {
+       "type": "ListDraggable",
+       "on": {
+        "itemsChange": [
+         {
+          "set": {
+           "state": "no_preview_items",
+           "to": {
+            "bind": "event"
+           }
+          }
+         }
+        ]
+       },
+       "props": {
+        "items": {
+         "bind": "state.no_preview_items"
+        },
+        "dragPreview": false,
+        "renderRow": {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "scale": "sm",
+          "align": "center"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "children": {
+             "bind": "ctx.handle"
+            }
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "children": {
+             "bind": "ctx.path"
+            }
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "children": {
+             "bind": "item.title"
+            }
+           }
+          }
+         ]
+        },
+        "data-testid": "list-draggable-no-preview-menu"
+       }
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "no nesting"
+       }
+      },
+      {
+       "type": "ListDraggable",
+       "on": {
+        "itemsChange": [
+         {
+          "set": {
+           "state": "no_nesting_items",
+           "to": {
+            "bind": "event"
+           }
+          }
+         }
+        ]
+       },
+       "props": {
+        "items": {
+         "bind": "state.no_nesting_items"
+        },
+        "nesting": false,
+        "renderRow": {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "scale": "sm",
+          "align": "center"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "children": {
+             "bind": "ctx.handle"
+            }
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "children": {
+             "bind": "ctx.path"
+            }
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "children": {
+             "bind": "item.title"
+            }
+           }
+          }
+         ]
+        },
+        "data-testid": "list-draggable-no-nesting-menu"
+       }
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "disabled"
+       }
+      },
+      {
+       "type": "ListDraggable",
+       "on": {
+        "itemsChange": [
+         {
+          "set": {
+           "state": "disabled_items",
+           "to": {
+            "bind": "event"
+           }
+          }
+         }
+        ]
+       },
+       "props": {
+        "items": {
+         "bind": "state.disabled_items"
+        },
+        "disabled": true,
+        "renderRow": {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "scale": "sm",
+          "align": "center"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "children": {
+             "bind": "ctx.handle"
+            }
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "children": {
+             "bind": "ctx.path"
+            }
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "children": {
+             "bind": "item.title"
+            }
+           }
+          }
+         ]
+        },
+        "data-testid": "list-draggable-disabled-menu"
+       }
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

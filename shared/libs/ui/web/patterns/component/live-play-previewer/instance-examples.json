@@ -1,0 +1,27 @@
+{
+ "measure": "xl",
+ "examples": [
+  {
+   "name": "full",
+   "config": {
+    "layout": "full"
+   }
+  },
+  {
+   "name": "the screen alone: commands on hover, the steps in a drawer, expand",
+   "config": {
+    "mode": "play",
+    "play": "play-browse",
+    "layout": "full",
+    "size": "extra-large",
+    "commands": true,
+    "commandsOnHover": true,
+    "stepCount": true,
+    "steps": true,
+    "expand": true,
+    "header": false,
+    "cast": false
+   }
+  }
+ ]
+}

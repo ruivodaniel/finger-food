@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-component-chat-thread-and-composer",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Chat: thread and composer"
+}

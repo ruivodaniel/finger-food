@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-primitive-button",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Button"
+}

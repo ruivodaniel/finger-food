@@ -1,0 +1,308 @@
+{
+ "id": "doc/ui-rules-check",
+ "kind": "doc",
+ "title": "The UI rules check",
+ "status": "todo",
+ "subject": "ui",
+ "owner": "libs/ui",
+ "order": 1,
+ "tags": [
+  "ui",
+  "rules",
+  "check"
+ ],
+ "paths": [
+  "shared/libs/check",
+  "shared/libs/ui/rules",
+  "shared/libs/ui/types/schema",
+  "scripts/ui-check.mjs"
+ ],
+ "summary": "The entry point to the UI rules: the check system that applies them to code, UI documents and themes, its parts, the call and its arguments, the UI rule set, how exceptions, the backlog and the rules version work, how to run it, and what is not built.",
+ "docId": "ui-rules-check",
+ "doc": {
+  "axioms": [
+   {
+    "text": "One check system checks code and data: `shared/libs/check`. The UI is checked through it with `pnpm ui:check`."
+   },
+   {
+    "text": "A run takes its parts in this order: source, expander, parser, resolver, processor, exceptions, report."
+   },
+   {
+    "text": "The source is the only part that knows the storage. A processor reads no file and no database."
+   },
+   {
+    "text": "A rule is data in one shape. The rule schema is the contract between a processor and its rules: a rule set that does not follow it does not run."
+   },
+   {
+    "text": "The caller sets the whole scope through the arguments: the entry points, crawl and follow. The check has no stop of its own."
+   },
+   {
+    "text": "A rule set has one version number. It goes up when any of its rules changes, and a report records the number it was made with."
+   },
+   {
+    "text": "An exception is written on the rule it is an exception to, names the things it holds for, and is authored by Daniel. A pattern has no exceptions."
+   },
+   {
+    "text": "A rule and an exception name a thing by what it is (a primitive, a pattern, a slice), never by where it is stored. The source says what each item is."
+   }
+  ],
+  "purpose": {
+   "intro": "The UI library is written three ways: as code (`.tsx`), as data (a UI document, `ui_data.json`) and as a theme. Each has rules, and the rules are data. This document says how one system checks all three against those rules, what its parts are, where each rule is written, and how to run it. It is the first document to read before changing a pattern, a primitive, a theme or a rule."
+  },
+  "reference": [
+   {
+    "topic": "The call",
+    "statement": "`check(entry points, crawl, follow, kinds, rule sets) → report`. The arguments decide what is checked and against which rules.",
+    "claims": [
+     {
+      "text": "An entry point is a container (a folder) or one thing. One thing may name its version: `…/avatar/v3`."
+     },
+     {
+      "text": "`crawl` says what a container gives: `latest`, the latest version of each thing inside, or `all`, every version. An entry point that names a version is taken at that version."
+     },
+     {
+      "text": "`follow` takes, from each item, everything it uses, whatever its kind, down to the library's primitives: the version the item names, else the latest. It has no version of its own to choose."
+     },
+     {
+      "text": "A kind says which things are items. The UI has three: `code` is a `.tsx` file, `data` is a `ui_data.json`, `theme` is a theme file (`themes/<name>/v<N>/theme.ts`)."
+     },
+     {
+      "text": "The rules that run are chosen by the owner of a rule set, by group or by id."
+     },
+     {
+      "text": "An item reached twice is checked once and reported with what led to it."
+     }
+    ],
+    "imagesAndDiagrams": [
+     {
+      "title": "The check system",
+      "type": "mermaid",
+      "value": "flowchart LR\n  caller[\"CALLED BY<br/>a person · a commit, CI · the API on a write\"]\n  subgraph CALL[\"CALL · the arguments\"]\n    entry[\"entry points<br/>a container, or one thing\"]\n    crawl[\"crawl<br/>latest · all\"]\n    follow[\"follow<br/>off · on\"]\n    kinds[\"kinds<br/>which things are items\"]\n    sets[\"rule sets<br/>which rules run\"]\n  end\n  subgraph RUN[\"THE RUN · its parts, in order\"]\n    direction TB\n    source[\"SOURCE<br/>entry point → item<br/>the only part that knows the storage\"]\n    expander[\"EXPANDER<br/>item → more items\"]\n    parser[\"PARSER<br/>item → what a processor reads\"]\n    resolver[\"RESOLVER<br/>what the item names → its contract\"]\n    processor[\"PROCESSOR<br/>items and rules in, findings out\"]\n    exceptions[\"EXCEPTIONS<br/>a finding a rule's exception allows is dropped\"]\n    report[\"REPORT<br/>one finding shape · the rules version · the gate\"]\n    source --> expander --> parser --> resolver --> processor --> exceptions --> report\n  end\n  subgraph RULES[\"RULES · data, one shape, owned by location\"]\n    ruleset[\"RULE SET<br/>the rules of one owner, one version\"]\n    rule[\"RULE<br/>id · processor · severity · description<br/>scope · parameters · enabled\"]\n    ruleExceptions[\"EXCEPTIONS<br/>on the rule: where, reason\"]\n    ruleset --> rule\n  end\n  ruleSchema[\"RULE SCHEMA<br/>the contract between a processor and its rules\"]\n  dataSchema[\"DATA SCHEMA<br/>the shape of what is stored as a row\"]\n  caller --> CALL\n  entry --> source\n  crawl --> expander\n  follow --> expander\n  kinds --> expander\n  sets --> processor\n  rule --> processor\n  ruleExceptions --> exceptions\n  ruleSchema --> rule\n  ruleSchema --> ruleExceptions\n  ruleSchema --> processor\n  dataSchema --> rule"
+     },
+     {
+      "title": "The arguments",
+      "type": "ascii",
+      "value": "| Argument | Values | When absent |\n|---|---|---|\n| entry points | folders, or single things | required |\n| `--crawl` | `latest`, `all` | `latest` |\n| `--follow` | on when written | off |\n| `--kinds` | `code`, `data`, `theme` | all |\n| `--rules` | the groups of rules: `markup`, `composition`, `language`, `theme` | all |\n| `--list` | the list of items only; nothing is checked | off |\n| `--all` | every finding on its own line | findings counted by rule, the first of each shown |"
+     }
+    ],
+    "examples": [
+     {
+      "snippets": [
+       {
+        "caption": "bash",
+        "code": "# a folder: the latest version of everything inside\npnpm ui:check shared/libs/ui/web/patterns/component/user-avatar\n\n# a folder: every version\npnpm ui:check shared/libs/ui/themes --kinds=theme --crawl=all\n\n# one version, named in the entry point\npnpm ui:check shared/libs/ui/themes/wireframe-stroke/v2\n\n# one thing and everything it uses, down to the primitives\npnpm ui:check shared/libs/ui/web/patterns/component/side-navigation/v1/SideNavigation/ui_data.json --follow\n\n# the list of items, nothing checked\npnpm ui:check shared/libs/ui/web/patterns --follow --list"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "topic": "The parts",
+    "statement": "Each part does one thing and is replaced on its own: another storage is another source, another kind of check is another processor.",
+    "claims": [
+     {
+      "text": "The expander judges nothing. It asks the source for every thing it lists: a kind says what a thing names, the source says where the named thing is."
+     },
+     {
+      "text": "A processor is agnostic: it knows a kind of check, and a rule gives it the names and the words. `tree`: what stands under what, and a node by itself. `schema`: a value against a data schema. `contract`: what an item passes to a thing it names is what that thing declares. `reference`: a name an item uses is one it may use there. `limit`: a size of an item does not pass a number."
+     },
+     {
+      "text": "A parser hands the processors facts that mean the same for code and for data, and judges nothing. A UI document's reference stands in the tree as what it is at its root, and what is put in one of its slots stands under the element that slot is in."
+     },
+     {
+      "text": "An item is checked for what it writes. What it uses is another item."
+     },
+     {
+      "text": "Every run that checks is kept in the run history, `shared/libs/check/runs`: the report as it was, and one line in the index."
+     },
+     {
+      "text": "The system runs on Node and in a bundler: `shared/libs/check` depends on nothing but the schema library."
+     },
+     {
+      "text": "A value in hand, with no entry point to reach it from (what is about to be written, a value made in a test), is judged like any other item: `checkValues`."
+     }
+    ],
+    "imagesAndDiagrams": [
+     {
+      "type": "ascii",
+      "value": "| Part | What it does | Where it is |\n|---|---|---|\n| source | reads one thing from where it is stored, says what is under a thing, and where a thing an item names is; the only part that knows the storage | `shared/libs/check/source.ts`, `file-source.ts`; where the UI's things are in files: `shared/libs/ui/rules/finders.ts` |\n| expander | from the entry points, the items: what a container gives (crawl), what an item uses (follow) | `shared/libs/check/expander.ts` |\n| parser | an item as stored → its value, and the facts the processors read: its tree, what it names and passes, the names it uses, its sizes | a kind's `parse` and `facts` (`shared/libs/ui/rules/kinds.ts`, `document-facts.ts`) |\n| resolver | what an item names → what that thing declares, at the version the item names, else the latest; it asks the source | `shared/libs/ui/rules/system.ts`, `declarations.ts` |\n| processor | items and rules in, findings out; reads no file and no database; knows nothing of what a name means | `shared/libs/check/`: `tree-processor.ts`, `schema-processor.ts`, `contract-processor.ts`, `reference-processor.ts`, `limit-processor.ts` |\n| exceptions | drops a finding a rule's exception allows and reports it with its reason | `shared/libs/check/run.ts` |\n| report | one finding shape, the version of every rule set that ran, the gate, the run history | `shared/libs/check/schema.ts`, `gate.ts`, `history.ts` |\n| rule schema | the contract between a processor and its rules | `shared/libs/check/rule-schema.ts` |\n| rule sets | found by where they are | `shared/libs/check/discover.ts` |"
+     }
+    ]
+   },
+   {
+    "topic": "A rule, a rule set and the rule schema",
+    "statement": "A rule has an id, the processor that runs it, a severity, a description, the things it applies to (`on`, `notOn`, `kinds`), `enabled`, a `group`, its `exceptions`, and the parameters its processor declares (`params`).",
+    "claims": [
+     {
+      "text": "A rule set is the rules of one owner, written beside what they rule in a file named `rules/rule-set.ts`, with one version. It is found by where it is: nobody lists the rule sets, and its place gives its owner."
+     },
+     {
+      "text": "The rule schema has a common part, the same for every rule, and a part each processor declares: the parameters it understands."
+     },
+     {
+      "text": "Every rule set is checked against the rule schema before a run. A rule that names no processor, or carries a key or a parameter its processor does not declare, stops the run with what is wrong."
+     },
+     {
+      "text": "A data schema is the shape of what is stored as a row: a theme, a UI document. A rule of the `schema` processor names the data schema it checks against."
+     }
+    ]
+   },
+   {
+    "topic": "The UI rule set",
+    "statement": "The rules of the UI library are one rule set, `shared/libs/ui/rules/rule-set.ts`, owner `lib/ui`. Every rule is data: the names it speaks of are the lists beside it (`composition.ts`, `markup.ts`, `code.ts`) and the dictionary of a UI document (`shared/libs/ui/ui-data/v2/dictionary`).",
+    "claims": [
+     {
+      "text": "Everything is forbidden first, and what is allowed is an exception: nobody writes an HTML element or a component from outside the library, and each primitive, by its name, lists the elements it writes and the outside components it wraps (`shared/libs/ui/rules/primitives.ts`)."
+     },
+     {
+      "text": "A rule is written once and holds for code and for a UI document wherever both can break it: composition, no class, no inline style."
+     },
+     {
+      "text": "What a component declares is read from its own types (`shared/libs/ui/rules/declarations.ts`): every property it takes with the kind of its value, its axes among them, and the events it hands up. Nobody writes or keeps a list. A pattern as data declares its parameters, events and slots in its document."
+     },
+     {
+      "text": "In code, a name is the library's component only when the file imports it from the library. A component a file defines itself is not judged as the library's."
+     },
+     {
+      "text": "A file may define components of its own. It never defines one with the name of a component of the library: there is one Button, one Header. The file where the library's component is written is the one place that defines it."
+     },
+     {
+      "text": "The grammar of a UI document is a schema, `shared/libs/ui/ui-data/v2/schema/document.ts`: what a document, a node, a read and an action are made of."
+     },
+     {
+      "text": "A node given as the value of a property is a node of the document: every rule holds for it."
+     },
+     {
+      "text": "A name a UI document resolves is at the version the node names, else the latest."
+     },
+     {
+      "text": "The theme rule checks against the theme schema, `shared/libs/ui/types/schema`. Its per-element part is built from the elements table (`shared/libs/ui/types/elements.ts`), and the theme types are inferred from it."
+     },
+     {
+      "text": "The names of concepts, and the element, layout and family names in `contextual`, `concepts` and rule chains of a theme, are free text and are not checked."
+     },
+     {
+      "text": "The project's catalog of reads and actions is not part of a check of the library: a read or an action that is not a request is reported as unknown."
+     }
+    ],
+    "imagesAndDiagrams": [
+     {
+      "type": "ascii",
+      "value": "| Group | Rule | Processor | Applies to |\n|---|---|---|---|\n| markup | `no-html-element` | tree | code. Nobody writes an HTML element; a primitive writes its own |\n| markup | `no-outside-component` | tree | code. Nobody writes a component from outside the library; a primitive wraps its own |\n| markup | `no-second-component` | contract | code. A file may define components of its own, never one with the name of a component of the library |\n| markup | `no-inline-style` | tree | code and UI documents. In the library's code it stands under a listed exception |\n| markup | `no-class` | tree | code and UI documents, except the library's own code |\n| markup | `undeclared-property`, `property-value`, `undeclared-event` | contract | code and UI documents: a component is given only what it declares |\n| composition | the `slot-…` rules | tree | code and UI documents |\n| composition | `no-anchor-button-nesting`, `no-shell-bare-div` | tree | code |\n| language | `language` | schema, data schema `ui-document` | the grammar of a UI document |\n| language | `limit-nodes`, `limit-depth`, `limit-expression` | limit | a UI document |\n| language | `operation`, `action`, `scope`, `read`, `state`, `emit`, `slot`, `position`, `data-contract`, `catalog-action` | reference | a UI document |\n| language | `unknown-component`, `unknown-document`, `no-children`, `document-argument`, `document-event`, `document-slot` | contract | a UI document |\n| language | `test-id`, `test-id-unique`, `event-as-property`, `stack-position` | tree | a UI document |\n| theme | `theme` | schema, data schema `theme` | a theme |"
+     }
+    ]
+   },
+   {
+    "topic": "Exceptions",
+    "statement": "An exception is written on the rule it is an exception to: the things it holds for (`on`), what it allows there (`allows`) and the reason.",
+    "claims": [
+     {
+      "text": "`on` names what a thing is: `{ primitive: \"Button\" }`, or any primitive, or any knowledge component. It is never a path."
+     },
+     {
+      "text": "`allows` lists what may be found, by name: an element, a package. Absent: anything the rule finds."
+     },
+     {
+      "text": "An exception with an id holds only where the item names that id. Code names it in a comment where it is used, for example `/* E1 */`."
+     },
+     {
+      "text": "A finding an exception allows is dropped from the findings and reported under the exceptions used, with the reason."
+     },
+     {
+      "text": "Each primitive has one entry in `shared/libs/ui/rules/primitives.ts`: the HTML elements it writes and the outside components it wraps. Two primitives may list the same element."
+     },
+     {
+      "text": "E1 to E7 (`shared/libs/ui/rules/exceptions.ts`) are on the rules `no-inline-style` and `no-html-element`, in the code of primitives and knowledge components. A UI document cannot name one, so none is lifted in a document."
+     },
+     {
+      "text": "A pattern has no exceptions."
+     }
+    ]
+   },
+   {
+    "topic": "The gate and the backlog",
+    "statement": "`pnpm test:ui-rules` runs the check on the latest version of every UI document and every theme of the library and fails when an item has more findings than the backlog says.",
+    "claims": [
+     {
+      "text": "The backlog (`shared/libs/ui/rules/backlog.json`) holds what was found when the check was built: a count for each item, by its path. It only gets shorter."
+     },
+     {
+      "text": "An item that is not in the backlog passes with nothing found."
+     },
+     {
+      "text": "An item in the backlog never has more findings than its count."
+     },
+     {
+      "text": "The backlog records the version of the rule set it was made with, and the gate fails when it differs."
+     },
+     {
+      "text": "Code has no gate: it is checked when `pnpm ui:check` is run on it."
+     }
+    ],
+    "examples": [
+     {
+      "snippets": [
+       {
+        "caption": "bash",
+        "code": "pnpm test:ui-rules\n\n# every item with something found, and its count\nUI_RULES_REPORT=all pnpm test:ui-rules\n\n# every version, not only the latest\nUI_RULES_SCAN=all pnpm test:ui-rules"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "topic": "The linter",
+    "statement": "The linter (`pnpm lint:arch`, `scripts/lint`) checks the architecture of the codebase: imports, layers, structure, ownership. It is a separate runner today.",
+    "claims": [
+     {
+      "text": "The check system takes the linter's design: a rule as data in one shape, owned by where it is written, run by a generic processor, with its exceptions on the rule."
+     },
+     {
+      "text": "The linter's slot rules processor and its JSX processors read their lists from `shared/libs/ui/rules` (`composition.ts`, `code.ts`)."
+     }
+    ]
+   },
+   {
+    "topic": "What is not built",
+    "statement": "The parts of the design that do not exist yet. The ones parked are listed in `shared/libs/check/README.md`.",
+    "claims": [
+     {
+      "text": "The linter does not run on the check system. Its processors read files themselves; none of them is a processor of the system yet."
+     },
+     {
+      "text": "The only source is files."
+     },
+     {
+      "text": "The `relation`, `import-export`, `structure` and `metrics` processors of the design do not exist in the system."
+     },
+     {
+      "text": "Nothing runs the check on a commit or in CI."
+     },
+     {
+      "text": "The packages a page may take a JSX component from, and the valid `element` and `layout` values in code, are checked by the linter only."
+     },
+     {
+      "text": "Stack takes `pad` and a numeric `gap` from markup. The Stack that takes its spacing from the theme does not exist."
+     },
+     {
+      "text": "Grid does not exist."
+     },
+     {
+      "text": "A document cannot hold a canvas. It holds an ascii drawing, an image, html, a Mermaid diagram, a PlantUML diagram and a swimlane."
+     }
+    ]
+   }
+  ],
+  "review": {
+   "axioms": {
+    "state": "unreviewed"
+   },
+   "purpose": {
+    "state": "unreviewed"
+   },
+   "reference": {
+    "state": "unreviewed"
+   }
+  }
+ }
+}

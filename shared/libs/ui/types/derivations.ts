@@ -1,18 +1,10 @@
 // ============================================================
 // DERIVED COLOR REFERENCES
 // Colors derived from primitives: gray scales, brand light/dark,
-// status light/dark variants.
+// status light/dark variants. Inferred from the theme schema.
 // ============================================================
+import type { z } from 'zod';
+import type * as S from './schema/primitives';
 
-import type { BrandSlot, StatusColor } from './primitives';
-
-export type GrayStep = '50' | '100' | '150' | '200' | '250' | '300' | '400' | '500' | '600' | '700' | '800' | '900' | '950';
-
-export type DerivedColorRef =
-  | 'smart-bw'
-  | 'tint'
-  | `brand-${BrandSlot}-${'light' | 'dark'}`
-  | `brand-${BrandSlot}-gray-${GrayStep}`
-  | `gray-${GrayStep}`
-  | `gray-pure-${GrayStep}`
-  | `status-${StatusColor}-${'light' | 'dark'}`;
+export type GrayStep = z.infer<typeof S.GrayStep>;
+export type DerivedColorRef = z.infer<typeof S.DerivedColorRef>;

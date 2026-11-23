@@ -1,0 +1,12 @@
+{
+  // The browser's view of the client worker versions: the DOM's types and no
+  // node's. A `node:*` import, a `Buffer` or a `process` reached from
+  // client-workers.ts fails to compile here.
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    "types": []
+  },
+  "include": [],
+  "files": ["client-workers.ts"]
+}

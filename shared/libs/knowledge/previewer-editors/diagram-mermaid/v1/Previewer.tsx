@@ -1,0 +1,65 @@
+// The Mermaid diagram: ONE component that shows a diagram and edits its text. The engine is Mermaid itself (the `mermaid` package), loaded when the first diagram draws; its whole syntax works.
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import type { Values } from "../../types";
+import type { Edit } from "../../editing/types";
+import { Previewer as CodeBlock } from "../../code-block/Previewer";
+import type { MermaidDiagram } from "./types";
+import { spec } from "./spec";
+
+const defaults = (): Values => Object.fromEntries(spec.layouts[0].props.map((p) => [p.name, p.default]));
+let engine: Promise<typeof import("mermaid").default> | null = null;
+const load = () => (engine ??= import("mermaid").then((m) => { m.default.initialize({ startOnLoad: false, securityLevel: "strict", theme: "neutral", sequence: { height: 34, width: 120, diagramMarginY: 6 } }); return m.default; }));
+/** Mermaid draws to the width of its container (width 100%, a max-width): here the drawing keeps its own size, the one its viewBox says, and the box scrolls */
+const natural = (svg: string): string => {
+  const el = new DOMParser().parseFromString(svg, "image/svg+xml").documentElement;
+  const box = el.getAttribute("viewBox")?.split(/[\s,]+/).map(Number);
+  if (el.nodeName !== "svg" || !box || box.length !== 4 || box.some(Number.isNaN)) return svg;
+  el.setAttribute("width", String(box[2])); el.setAttribute("height", String(box[3])); el.style.maxWidth = "none";
+  return new XMLSerializer().serializeToString(el);
+};
+/** a sequence diagram's participants, drawn at the top: the band that stays */
+const HEAD = ".actor-top", TEST_ID = "diagram-mermaid";
+let n = 0;
+const draw = async (text: string) => { const m = await load(); await m.parse(text); return natural((await m.render("mmd" + ++n, text)).svg); };
+
+/** the drawing in its scroll box. THE STICKY HEADER: the top band (a sequence diagram's participants) is the same SVG drawn a second time, cut at the band's height and stuck to the top; no participants, no band */
+function Drawing({ svg, sticky }: { svg: string; sticky: boolean }) {
+  const body = useRef<HTMLDivElement>(null);
+  const [head, setHead] = useState(0);
+  useLayoutEffect(() => {
+    const el = body.current?.querySelector("svg"); if (!el || !sticky) return setHead(0);
+    // measured on screen, so divided by the scale the host draws at (a canvas zooms)
+    const box = body.current!.getBoundingClientRect(), scale = box.height / body.current!.offsetHeight || 1, all = [...el.querySelectorAll(HEAD)];
+    setHead(all.length ? Math.ceil(Math.max(...all.map((x) => x.getBoundingClientRect().bottom - box.top)) / scale + 6) : 0);
+  }, [svg, sticky]);
+  return (
+    <div data-testid={TEST_ID} style={{ flex: 1, minWidth: 0, minHeight: 0, overflow: "auto", position: "relative", background: "#ffffff" }}>
+      {head > 0 ? <div data-part="sticky-header" aria-hidden style={{ position: "sticky", top: 0, zIndex: 1, height: head, width: "max-content", minWidth: "100%", overflow: "hidden", background: "#ffffff", boxShadow: "0 1px 0 #e5e5e5" }} dangerouslySetInnerHTML={{ __html: svg }} /> : null}
+      <div ref={body} data-part="drawing" style={{ width: "max-content", marginTop: head > 0 ? -head : 0, lineHeight: 0 }} dangerouslySetInnerHTML={{ __html: svg }} />
+    </div>
+  );
+}
+
+export function Previewer({ v: given, data, edit }: { layout?: string; v?: Values; data: MermaidDiagram; edit?: Edit<MermaidDiagram> }) {
+  const v = { ...defaults(), ...given };
+  const [svg, setSvg] = useState("");
+  const [error, setError] = useState<string | null>(null);
+  // a wrong text keeps the last good drawing and says what is wrong
+  useEffect(() => { let on = true; if (!data.text.trim()) { setSvg(""); setError(null); return; } draw(data.text).then((s) => { if (on) { setSvg(s); setError(null); } }).catch((e: unknown) => { if (on) setError(e instanceof Error ? e.message : String(e)); }); return () => { on = false; }; }, [data.text]);
+  const [open, setOpen] = useState(true);
+  const drawing = <Drawing svg={svg} sticky={v.stickyHeader !== false} />;
+  if (!edit) return <div style={{ display: "flex", width: "100%", height: "100%", minHeight: 0 }}>{drawing}</div>;
+  // editable: the text is a code block (a double click types in it; leaving it hands the text back and the drawing follows)
+  return (
+    <div style={{ display: "flex", width: "100%", height: "100%", minHeight: 0, gap: 12 }}>
+      <div data-part="editor" style={open ? { flex: "0 0 auto", width: 320, minHeight: 0, overflow: "auto" } : { flex: "0 0 auto", width: 34 }}>
+        <button type="button" title={open ? "collapse the text" : "expand the text"} onClick={() => setOpen(!open)} style={{ display: "flex", alignItems: "center", justifyContent: open ? "space-between" : "center", width: "100%", padding: "8px 10px", border: 0, background: "none", cursor: "pointer", font: "600 10px/1 var(--font-sans, system-ui)", letterSpacing: 1, color: "#666" }}>
+          {open ? <span>TEXT</span> : null}<span aria-hidden>{open ? "‹" : "›"}</span>
+        </button>
+        {open ? <><CodeBlock layout="block" v={{ language: "plain", fontSize: "12", showLineNumbers: true }} data={{ id: data.id, code: data.text }} edit={{ source: edit.source, kind: edit.kind, onSubmit: (c) => edit.onSubmit({ ...data, text: c.code }) }} />
+        {error ? <div data-part="error" style={{ padding: "8px 2px", font: "11px/1.4 'Roboto Mono', 'SF Mono', Menlo, monospace", color: "#c0392b", whiteSpace: "pre-wrap" }}>{error}</div> : null}</> : null}
+      </div>
+      {drawing}
+    </div>
+  );
+}

@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-financial-kpi-cards-executive-strip-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-financial-kpi-cards-executive-strip",
+ "name": "default",
+ "title": "Financial kpi cards: executive strip",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

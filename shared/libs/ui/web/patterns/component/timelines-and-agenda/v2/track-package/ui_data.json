@@ -1,0 +1,115 @@
+{
+ "id": "ui-data-pattern-component-timelines-and-agenda-track-package",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-timelines-and-agenda-track-package",
+ "kind": "component",
+ "name": "track-package",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "track-package",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "state": {
+   "shipment": ""
+  },
+  "root": {
+   "type": "Card",
+   "props": {
+    "emphasis": "hero"
+   },
+   "children": [
+    {
+     "type": "Content",
+     "props": {},
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "scale": "md"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "col",
+          "scale": "xs"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--heading4",
+            "children": "Track your package"
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--body",
+            "children": "Please enter your tracking number"
+           }
+          }
+         ]
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "scale": "sm"
+         },
+         "children": [
+          {
+           "type": "Input",
+           "props": {
+            "placeholder": "Shipment Number",
+            "startIcon": {
+             "type": "Icon",
+             "props": {
+              "name": "package",
+              "size": "sm"
+             }
+            },
+            "className": "flex-1 min-w-0",
+            "data-testid": "track-shipment-input",
+            "value": {
+             "bind": "state.shipment"
+            }
+           },
+           "on": {
+            "change": [
+             {
+              "set": {
+               "state": "shipment",
+               "to": {
+                "bind": "event"
+               }
+              }
+             }
+            ]
+           }
+          },
+          {
+           "type": "Button",
+           "props": {
+            "buttonType": "icon",
+            "startIcon": "search",
+            "aria-label": "Track",
+            "data-testid": "track-search-btn"
+           }
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

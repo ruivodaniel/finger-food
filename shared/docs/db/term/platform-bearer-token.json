@@ -1,0 +1,21 @@
+{
+  "id": "term/platform-bearer-token",
+  "kind": "term",
+  "title": "platform bearer token",
+  "status": "converted",
+  "subjects": [
+    "open-api"
+  ],
+  "owner": "orchestrator",
+  "tags": [
+    "open-api"
+  ],
+  "paths": [
+    "apps/main/core/api/open-api"
+  ],
+  "term": {
+    "def": "How a worker authenticates to the open API, since the user's JWT is not available to it.",
+    "aliases": [],
+    "proposed": true
+  }
+}

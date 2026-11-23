@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-page-layout-header-tabs",
+ "version": 1,
+ "type": "screen",
+ "surface": "web",
+ "title": "Header, tabs and main"
+}

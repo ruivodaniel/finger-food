@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-primitive-alert-dialog",
+ "version": 1,
+ "type": "screen",
+ "surface": "web",
+ "title": "Alert dialog"
+}

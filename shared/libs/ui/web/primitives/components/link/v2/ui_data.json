@@ -1,0 +1,199 @@
+{
+ "id": "ui-data-primitive-link",
+ "version": 1,
+ "uiNodeId": "ui-node-primitive-link",
+ "kind": "component",
+ "name": "primitive-link",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "primitive-link",
+  "version": 1,
+  "surface": "web",
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "align": "center",
+    "scale": "2xl"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "type \u2014 default \"link\", then body sizes"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Link",
+         "props": {
+          "href": "#",
+          "children": "A link"
+         }
+        },
+        {
+         "type": "Link",
+         "props": {
+          "href": "#",
+          "type": "body-small",
+          "children": "A small link"
+         }
+        },
+        {
+         "type": "Link",
+         "props": {
+          "href": "#",
+          "type": "heading3",
+          "children": "A heading link"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "emphasis and status"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Link",
+         "props": {
+          "href": "#",
+          "emphasis": "primary",
+          "children": "Primary"
+         }
+        },
+        {
+         "type": "Link",
+         "props": {
+          "href": "#",
+          "emphasis": "secondary",
+          "children": "Secondary"
+         }
+        },
+        {
+         "type": "Link",
+         "props": {
+          "href": "#",
+          "emphasis": "quiet",
+          "children": "Quiet"
+         }
+        },
+        {
+         "type": "Link",
+         "props": {
+          "href": "#",
+          "status": "error",
+          "children": "Error"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "inline in text, external target"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Text",
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "children": "Read the"
+           }
+          },
+          {
+           "type": "Link",
+           "props": {
+            "href": "https://example.com",
+            "target": "_blank",
+            "rel": "noreferrer",
+            "children": "documentation"
+           }
+          },
+          {
+           "type": "Text",
+           "props": {
+            "children": "before you start."
+           }
+          }
+         ],
+         "props": {
+          "as": "p",
+          "element": "type--body"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-metric-cards-big-stat-over-chart-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-metric-cards-big-stat-over-chart",
+ "name": "default",
+ "title": "Metric cards: big stat over chart",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

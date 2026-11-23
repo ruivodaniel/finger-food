@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-primitive-hover-card-default",
+ "version": 1,
+ "uiDataId": "ui-data-primitive-hover-card",
+ "name": "default",
+ "title": "Hover card, its cases",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

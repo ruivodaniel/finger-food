@@ -1,0 +1,604 @@
+{
+ "id": "ui-data-pattern-page-layout-toc-filters-2-page-header-main-header",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-page-layout-toc-filters-2-page-header-main-header",
+ "kind": "page",
+ "name": "layout-toc-filters-2-page-header-main-header",
+ "document": {
+  "kind": "page",
+  "schemaVersion": 1,
+  "name": "layout-toc-filters-2-page-header-main-header",
+  "version": 1,
+  "surface": "web",
+  "state": {
+   "open": false,
+   "current": "dashboard",
+   "org": "org-acme-corp",
+   "mode": "light",
+   "selected": "team",
+   "query": "",
+   "tab": "preview"
+  },
+  "root": {
+   "use": {
+    "component": "SideNavigationScreen",
+    "version": "latest"
+   },
+   "args": {
+    "open": {
+     "bind": "state.open"
+    },
+    "current": {
+     "bind": "state.current"
+    },
+    "org": {
+     "bind": "state.org"
+    },
+    "mode": {
+     "bind": "state.mode"
+    },
+    "expand": "overlay",
+    "account": "separate",
+    "withOrganizations": false,
+    "withModes": false,
+    "toggleAt": "top",
+    "backLabel": "PROWD"
+   },
+   "on": {
+    "openChange": [
+     {
+      "set": {
+       "state": "open",
+       "to": {
+        "bind": "event.open"
+       }
+      }
+     }
+    ],
+    "navigate": [
+     {
+      "set": {
+       "state": "current",
+       "to": {
+        "bind": "event.id"
+       }
+      }
+     }
+    ],
+    "organizationChange": [
+     {
+      "set": {
+       "state": "org",
+       "to": {
+        "bind": "event.id"
+       }
+      }
+     }
+    ],
+    "modeChange": [
+     {
+      "set": {
+       "state": "mode",
+       "to": {
+        "bind": "event.id"
+       }
+      }
+     }
+    ],
+    "back": [
+     {
+      "set": {
+       "state": "current",
+       "to": "back"
+      }
+     }
+    ]
+   },
+   "slots": {
+    "children": [
+     {
+      "use": {
+       "component": "DoubleSidebarPageMainHeaderLayout",
+       "version": "latest"
+      },
+      "slots": {
+       "pageHeader": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "justify": "between",
+          "size": "fill"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--heading3",
+            "children": "Library"
+           }
+          },
+          {
+           "type": "Button",
+           "props": {
+            "scale": "sm",
+            "children": "New pattern",
+            "emphasis": "primary",
+            "data-testid": "layout-toc-filters-2-page-header-main-header-new-pattern-btn"
+           }
+          }
+         ]
+        }
+       ],
+       "pageLeftSidebar": [
+        {
+         "type": "SidebarProvider",
+         "props": {
+          "open": true
+         },
+         "children": [
+          {
+           "type": "Sidebar",
+           "props": {
+            "collapsible": "none"
+           },
+           "children": [
+            {
+             "type": "SidebarHeader",
+             "children": [
+              {
+               "type": "Stack",
+               "props": {
+                "dir": "col",
+                "scale": "sm"
+               },
+               "children": [
+                {
+                 "type": "Input",
+                 "props": {
+                  "type": "search",
+                  "value": {
+                   "bind": "state.query"
+                  },
+                  "placeholder": "Search patterns\u2026",
+                  "startIcon": {
+                   "type": "Icon",
+                   "props": {
+                    "name": "search"
+                   }
+                  },
+                  "data-testid": "layout-toc-filters-2-page-header-main-header-search-patterns-input"
+                 },
+                 "on": {
+                  "change": [
+                   {
+                    "set": {
+                     "state": "query",
+                     "to": {
+                      "bind": "event"
+                     }
+                    }
+                   }
+                  ]
+                 }
+                },
+                {
+                 "type": "Stack",
+                 "props": {
+                  "dir": "row",
+                  "align": "center",
+                  "scale": "xs"
+                 },
+                 "children": [
+                  {
+                   "type": "Button",
+                   "props": {
+                    "scale": "sm",
+                    "children": "All",
+                    "emphasis": "secondary",
+                    "data-testid": "layout-toc-filters-2-page-header-main-header-all-btn"
+                   }
+                  },
+                  {
+                   "type": "Button",
+                   "props": {
+                    "scale": "sm",
+                    "children": "Mine",
+                    "emphasis": "tertiary",
+                    "data-testid": "layout-toc-filters-2-page-header-main-header-mine-btn"
+                   }
+                  },
+                  {
+                   "type": "Button",
+                   "props": {
+                    "scale": "sm",
+                    "children": "Recent",
+                    "emphasis": "tertiary",
+                    "data-testid": "layout-toc-filters-2-page-header-main-header-recent-btn"
+                   }
+                  }
+                 ]
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "type": "SidebarContent",
+             "children": [
+              {
+               "type": "SidebarGroup",
+               "children": [
+                {
+                 "type": "ListTree",
+                 "props": {
+                  "items": [
+                   {
+                    "id": "cards",
+                    "label": "Cards",
+                    "children": [
+                     {
+                      "id": "profile-card",
+                      "label": "Profile card"
+                     },
+                     {
+                      "id": "task-card",
+                      "label": "Task card"
+                     },
+                     {
+                      "id": "repo-card",
+                      "label": "Repo card"
+                     }
+                    ]
+                   },
+                   {
+                    "id": "lists",
+                    "label": "Lists",
+                    "children": [
+                     {
+                      "id": "contacts",
+                      "label": "Contacts"
+                     },
+                     {
+                      "id": "inbox",
+                      "label": "Inbox"
+                     },
+                     {
+                      "id": "orders",
+                      "label": "Orders"
+                     }
+                    ]
+                   },
+                   {
+                    "id": "tables",
+                    "label": "Tables",
+                    "children": [
+                     {
+                      "id": "invoices",
+                      "label": "Invoices"
+                     },
+                     {
+                      "id": "team",
+                      "label": "Team"
+                     },
+                     {
+                      "id": "regions",
+                      "label": "Regions"
+                     }
+                    ]
+                   }
+                  ],
+                  "selectedId": {
+                   "bind": "state.selected"
+                  },
+                  "data-testid": "contents-tree-menu",
+                  "indent": 16,
+                  "renderNode": {
+                   "type": "Text",
+                   "props": {
+                    "as": "span",
+                    "element": "type--body-small",
+                    "children": {
+                     "bind": "item.label"
+                    }
+                   }
+                  }
+                 },
+                 "on": {
+                  "select": [
+                   {
+                    "set": {
+                     "state": "selected",
+                     "to": {
+                      "bind": "event.id"
+                     }
+                    }
+                   }
+                  ]
+                 }
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ],
+       "mainHeader": [
+        {
+         "type": "Tabs",
+         "props": {
+          "value": {
+           "bind": "state.tab"
+          },
+          "data-testid": "layout-toc-filters-2-page-header-main-header-tabs-tabs"
+         },
+         "children": [
+          {
+           "type": "TabsList",
+           "props": {},
+           "children": [
+            {
+             "type": "TabsTrigger",
+             "props": {
+              "value": "preview",
+              "children": "Preview",
+              "data-testid": "layout-toc-filters-2-page-header-main-header-preview-tab"
+             }
+            },
+            {
+             "type": "TabsTrigger",
+             "props": {
+              "value": "usage",
+              "children": "Usage",
+              "data-testid": "layout-toc-filters-2-page-header-main-header-usage-tab"
+             }
+            },
+            {
+             "type": "TabsTrigger",
+             "props": {
+              "value": "history",
+              "children": "History",
+              "data-testid": "layout-toc-filters-2-page-header-main-header-history-tab"
+             }
+            }
+           ]
+          }
+         ],
+         "on": {
+          "valueChange": [
+           {
+            "set": {
+             "state": "tab",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         }
+        }
+       ],
+       "mainBody": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "col",
+          "scale": "xl"
+         },
+         "children": [
+          {
+           "type": "Card",
+           "children": [
+            {
+             "type": "Content",
+             "children": [
+              {
+               "type": "Stack",
+               "props": {
+                "dir": "col",
+                "scale": "md"
+               },
+               "children": [
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "sm"
+                 }
+                },
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "md"
+                 }
+                },
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "md"
+                 }
+                },
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "md"
+                 }
+                },
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "md"
+                 }
+                },
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "md"
+                 }
+                },
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "md"
+                 }
+                }
+               ]
+              }
+             ]
+            }
+           ],
+           "when": {
+            "eq": [
+             {
+              "bind": "state.tab"
+             },
+             "preview"
+            ]
+           }
+          },
+          {
+           "type": "Card",
+           "children": [
+            {
+             "type": "Content",
+             "children": [
+              {
+               "type": "Stack",
+               "props": {
+                "dir": "col",
+                "scale": "md"
+               },
+               "children": [
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "sm"
+                 }
+                },
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "sm"
+                 }
+                },
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "sm"
+                 }
+                },
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "sm"
+                 }
+                },
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "sm"
+                 }
+                },
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "sm"
+                 }
+                }
+               ]
+              }
+             ]
+            }
+           ],
+           "when": {
+            "eq": [
+             {
+              "bind": "state.tab"
+             },
+             "usage"
+            ]
+           }
+          },
+          {
+           "type": "Card",
+           "children": [
+            {
+             "type": "Content",
+             "children": [
+              {
+               "type": "Stack",
+               "props": {
+                "dir": "col",
+                "scale": "md"
+               },
+               "children": [
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "sm"
+                 }
+                },
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "md"
+                 }
+                },
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "md"
+                 }
+                },
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "md"
+                 }
+                },
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "md"
+                 }
+                },
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "md"
+                 }
+                },
+                {
+                 "type": "Skeleton",
+                 "props": {
+                  "scale": "md"
+                 }
+                }
+               ]
+              }
+             ]
+            }
+           ],
+           "when": {
+            "eq": [
+             {
+              "bind": "state.tab"
+             },
+             "history"
+            ]
+           }
+          }
+         ]
+        }
+       ]
+      }
+     }
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-page-layout-table-fills-page",
+ "version": 1,
+ "type": "screen",
+ "surface": "web",
+ "title": "Table: the table fills the page, the rows scroll inside"
+}

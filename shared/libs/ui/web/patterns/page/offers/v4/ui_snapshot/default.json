@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-page-offers-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-page-offers",
+ "name": "default",
+ "title": "Offers",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

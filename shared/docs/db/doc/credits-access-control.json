@@ -1,0 +1,106 @@
+{
+ "id": "doc/credits-access-control",
+ "kind": "doc",
+ "title": "Credits access control",
+ "status": "converted",
+ "subject": "credits",
+ "owner": "main/slices/credits",
+ "order": 3,
+ "tags": [
+  "credits",
+  "access control"
+ ],
+ "paths": [
+  "shared/configs/access-control/index.ts",
+  "apps/main/slices/seed/credits"
+ ],
+ "summary": "Who can see, manage, create and grant credits: the credits rules in the access-control DSL and the roles that hold them.",
+ "docId": "credits-access-control",
+ "doc": {
+  "axioms": [],
+  "purpose": {
+   "intro": "Who can see, manage, create and grant credits is decided in the access-control DSL, `shared/configs/access-control/index.ts`, never by checks in the slice. The slice asks the engine for a verdict on its three entities: `credit_account`, `member_allowance` and `credit_lot`. Lots and the ledger belong to an account, so a read or a write on them is proven on the account first."
+  },
+  "reference": [
+   {
+    "topic": "The rules",
+    "statement": "As written in the config.",
+    "claims": [],
+    "examples": [
+     {
+      "snippets": [
+       {
+        "caption": "typescript",
+        "code": "const creditsPermissions = definePermissions([\n  {\n    // A person sees and manages their own credits.\n    name: \"manage_own_credits\",\n    entity: \"credit_account\",\n    actions: [\"read\", \"update\"],\n    rules: [\n      {\n        context: [],\n        target: [{ field: \"credit_account.userId\", has: { bag: \"$session.user.id\" } }],\n      },\n    ],\n  },\n  {\n    // A member sees their own cap in the active organization — the only piece\n    // of the organization's credits a member ever sees.\n    name: \"read_own_allowance\",\n    entity: \"member_allowance\",\n    actions: [\"read\"],\n    rules: [\n      {\n        context: [],\n        target: [\n          { field: \"member_allowance.userId\", has: { bag: \"$session.user.id\" } },\n          { field: \"member_allowance.organizationId\", has: { bag: \"$session.organization.id\" } },\n        ],\n      },\n    ],\n  },\n  {\n    // The company's credits: the balance, the lots, the ledger, the members' caps.\n    name: \"manage_credits_company\",\n    entity: \"credit_account\",\n    actions: [\"read\", \"update\"],\n    rules: [\n      {\n        context: [IN_COMPANY],\n        target: [{ field: \"credit_account.organizationId\", has: { bag: \"$session.organization.id\" } }],\n      },\n    ],\n  },\n  {\n    // A musical project's credits and its members' allocations.\n    name: \"manage_credits_musical_project\",\n    entity: \"credit_account\",\n    actions: [\"read\", \"update\"],\n    rules: [\n      {\n        context: [IN_MUSICAL_PROJECT],\n        target: [{ field: \"credit_account.organizationId\", has: { bag: \"$session.organization.id\" } }],\n      },\n    ],\n  },\n  {\n    // A member's allocation may create its credits on the active organization\n    // rather than draw on what it holds. Without this the organization's\n    // credits are bought. Musical projects create theirs; companies buy.\n    name: \"create_credits_musical_project\",\n    entity: \"member_allowance\",\n    actions: [\"create\"],\n    rules: [{ context: [IN_MUSICAL_PROJECT], target: [] }],\n  },\n  {\n    // A platform owner gives anyone platform credits without payment (an\n    // admin grant); holding it also reads the grants made so far.\n    name: \"grant_credits_platform\",\n    entity: \"credit_lot\",\n    actions: [\"create\"],\n    rules: [{ context: [IN_PLATFORM_ADMIN], target: [] }],\n  },\n]);"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "topic": "Who holds them",
+    "statement": "The roles that carry a credits permission, from the role forests in the same file; `// …` stands for permissions of other slices. An owner role holds everything its children hold.",
+    "claims": [],
+    "examples": [
+     {
+      "snippets": [
+       {
+        "caption": "typescript",
+        "code": "// everyone signed in\n{ role: \"authenticated\", permissions: [/* … */ \"manage_own_credits\", \"read_own_allowance\"] }\n\n// company: Owner › Manage Billing\n{\n  role: \"company_billing\",\n  permissions: [/* … */ \"manage_credits_company\" /* … */],\n}\n\n// musical project\n{\n  role: \"musical_project_owner\",\n  permissions: [\"manage_credits_musical_project\", \"create_credits_musical_project\" /* … */],\n}\n\n// platform admin\n{\n  role: \"platform_owner\",\n  // admin grants are the owner's own, not a delegated role's (credits slice)\n  permissions: [\"update_organization_platform\", \"grant_credits_platform\" /* … */],\n}"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "topic": "Who can do what",
+    "statement": "The same rules, read as people and pages.",
+    "claims": [
+     {
+      "text": "**Everyone signed in** manages their own credits, in Settings (`manage_own_credits`), and sees their own allocation in the active organization (`read_own_allowance`). For a plain member, that allocation is all they ever see of the organization's credits."
+     },
+     {
+      "text": "**In a company**, the Owner and Manage Billing see the balance, the lots and the ledger, and set members' allocations (`manage_credits_company`). No company role may create credits, so a company's allocations spend what it bought. Managers and Standard members see only their own allocation."
+     },
+     {
+      "text": "**In a musical project**, the Owner manages the credits and the allocations, and an allocation there may create its credits (`manage_credits_musical_project`, `create_credits_musical_project`). Members see only their own allocation."
+     },
+     {
+      "text": "**In the platform admin organization**, only the Platform Owner grants credits and sees the grants made so far (`grant_credits_platform`). It is the owner's own permission, not one a delegated role carries. Who they can pick is who they may read: the user-organization slice's name search is row-scoped, and the Platform Owner reads every profile and organization (`read_all_profiles_platform`, `read_all_organizations_platform`)."
+     },
+     {
+      "text": "**How the slice asks:** reading credits resolves a read scope on `credit_account`; changing an allocation needs an update verdict on `credit_account`; whether an allocation may create credits is the create verdict on `member_allowance`; a grant is the create verdict on `credit_lot`."
+     }
+    ]
+   },
+   {
+    "topic": "Changing who can do what",
+    "statement": "Edit the DSL, never the slice's services.",
+    "claims": [
+     {
+      "text": "**Let companies create credits:** add `create_credits_company` (entity `member_allowance`, action `create`, context `IN_COMPANY`) and give it to `company_billing`."
+     },
+     {
+      "text": "**A new organization type with credits:** add `manage_credits_<type>` and, if its allocations should create credits, `create_credits_<type>`, then give them to the type's roles."
+     }
+    ]
+   }
+  ],
+  "review": {
+   "axioms": {
+    "state": "unreviewed"
+   },
+   "purpose": {
+    "state": "unreviewed"
+   },
+   "reference": {
+    "state": "unreviewed"
+   }
+  },
+  "converted": true
+ },
+ "audience": [
+  "seed-contributor",
+  "seed-consumer"
+ ]
+}

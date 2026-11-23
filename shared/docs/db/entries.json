@@ -1,0 +1,3094 @@
+{
+ "entries": [
+  {
+   "id": "doc/access-control",
+   "kind": "doc",
+   "title": "Access Control",
+   "status": "approved",
+   "subject": "main",
+   "tags": [
+    "main",
+    "access context",
+    "gated db",
+    "library",
+    "scope"
+   ],
+   "paths": [
+    "apps/main"
+   ],
+   "summary": "Role checks alone can't express the access this platform needs — visibility that depends on org type, role hierarchy, and cross-entity conditions, evaluated …",
+   "docId": "access-control",
+   "owner": "main/core",
+   "order": 5,
+   "audience": [
+    "seed-contributor"
+   ]
+  },
+  {
+   "id": "doc/backend-composition",
+   "kind": "doc",
+   "title": "Backend Composition",
+   "status": "approved",
+   "subject": "main",
+   "tags": [
+    "main",
+    "lifecycle hook"
+   ],
+   "paths": [
+    "apps/main"
+   ],
+   "summary": "Many callers reach the same slice operations — client requests, M2M calls, crons, agents. Layering puts the logic below the transport, in one substrate every…",
+   "docId": "backend-composition",
+   "owner": "main/core",
+   "order": 3,
+   "audience": [
+    "seed-contributor"
+   ]
+  },
+  {
+   "id": "doc/credits-access-control",
+   "kind": "doc",
+   "title": "Credits access control",
+   "status": "converted",
+   "subject": "credits",
+   "tags": [
+    "credits",
+    "access control"
+   ],
+   "paths": [
+    "shared/configs/access-control/index.ts",
+    "apps/main/slices/seed/credits"
+   ],
+   "summary": "Who can see, manage, create and grant credits: the credits rules in the access-control DSL and the roles that hold them.",
+   "docId": "credits-access-control",
+   "owner": "main/slices/credits",
+   "order": 3,
+   "audience": [
+    "seed-contributor",
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/credits-catalog",
+   "kind": "doc",
+   "title": "Credits catalog",
+   "status": "converted",
+   "subject": "credits",
+   "tags": [
+    "credits",
+    "catalog"
+   ],
+   "paths": [
+    "shared/configs/credits",
+    "apps/main/slices/seed/credits/shared/catalog.ts"
+   ],
+   "summary": "What an app configures for credits: the currency, the services that cost credits, the price lists and the welcome credits.",
+   "docId": "credits-catalog",
+   "owner": "main/slices/credits",
+   "order": 2,
+   "audience": [
+    "seed-contributor",
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/credits-overview",
+   "kind": "doc",
+   "title": "Credits",
+   "status": "converted",
+   "subject": "credits",
+   "tags": [
+    "credits"
+   ],
+   "paths": [
+    "apps/main/slices/seed/credits"
+   ],
+   "summary": "A unit for controlling what people spend on the platform, with no payment needed: credits are created or bought, they are spent, and spending stops at the balance or at what a member was allocated.",
+   "docId": "credits-overview",
+   "owner": "main/slices/credits",
+   "order": 1,
+   "audience": [
+    "seed-contributor",
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/frontend-composition",
+   "kind": "doc",
+   "title": "Frontend Composition",
+   "status": "approved",
+   "subject": "main",
+   "tags": [
+    "main",
+    "composition",
+    "library",
+    "page",
+    "section",
+    "shell",
+    "slice",
+    "sub-page"
+   ],
+   "paths": [
+    "apps/main"
+   ],
+   "summary": "Composition rules exist so that every page in the product reads the same way and no page can invent its own authorization. A developer opening any page finds…",
+   "docId": "frontend-composition",
+   "owner": "main/core",
+   "order": 4,
+   "audience": [
+    "seed-contributor"
+   ]
+  },
+  {
+   "id": "doc/gated-scoped-ac-ac-patterns",
+   "kind": "doc",
+   "title": "AC Patterns",
+   "status": "todo",
+   "subject": "gated-scoped-ac",
+   "tags": [
+    "gated-scoped-ac",
+    "consumer"
+   ],
+   "paths": [
+    "shared/libs/gated-scoped-ac"
+   ],
+   "summary": "What a service and a repository call for each of create, read, update and delete, what comes back when access is denied, and who turns that into an error.",
+   "docId": "gated-scoped-ac-ac-patterns",
+   "owner": "libs/gated-scoped-ac",
+   "order": 6,
+   "audience": [
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/gated-scoped-ac-architecture",
+   "kind": "doc",
+   "title": "Architecture",
+   "status": "todo",
+   "subject": "gated-scoped-ac",
+   "tags": [
+    "gated-scoped-ac",
+    "contributor"
+   ],
+   "paths": [
+    "shared/libs/gated-scoped-ac"
+   ],
+   "summary": "Which file of the library owns which concern, how long each piece lives, and how one request passes from the access context to a query.",
+   "docId": "gated-scoped-ac-architecture",
+   "owner": "libs/gated-scoped-ac",
+   "order": 2,
+   "audience": [
+    "seed-contributor"
+   ]
+  },
+  {
+   "id": "doc/gated-scoped-ac-bag",
+   "kind": "doc",
+   "title": "Access Context",
+   "status": "todo",
+   "subject": "gated-scoped-ac",
+   "tags": [
+    "gated-scoped-ac",
+    "consumer"
+   ],
+   "paths": [
+    "shared/libs/gated-scoped-ac"
+   ],
+   "summary": "The per-request access context: the bag a rule's `$` paths read, the caller's roles and permissions, and the gated handle bound to that bag.",
+   "docId": "gated-scoped-ac-bag",
+   "owner": "libs/gated-scoped-ac",
+   "order": 4,
+   "audience": [
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/gated-scoped-ac-dsl-rules",
+   "kind": "doc",
+   "title": "DSL Rules",
+   "status": "todo",
+   "subject": "gated-scoped-ac",
+   "tags": [
+    "gated-scoped-ac",
+    "consumer"
+   ],
+   "paths": [
+    "shared/libs/gated-scoped-ac"
+   ],
+   "summary": "How to write what the engine reads: permissions, the three rule slots, the four operators, traversals and role forests, and what the loaders refuse.",
+   "docId": "gated-scoped-ac-dsl-rules",
+   "owner": "libs/gated-scoped-ac",
+   "order": 3,
+   "audience": [
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/gated-scoped-ac-internals",
+   "kind": "doc",
+   "title": "Internals",
+   "status": "todo",
+   "subject": "gated-scoped-ac",
+   "tags": [
+    "gated-scoped-ac",
+    "contributor"
+   ],
+   "paths": [
+    "shared/libs/gated-scoped-ac"
+   ],
+   "summary": "How the engine turns permissions and a bag into a scope or a verdict, and how the gate turns those into SQL.",
+   "docId": "gated-scoped-ac-internals",
+   "owner": "libs/gated-scoped-ac",
+   "order": 8,
+   "audience": [
+    "seed-contributor"
+   ]
+  },
+  {
+   "id": "doc/gated-scoped-ac-mount",
+   "kind": "doc",
+   "title": "Mount",
+   "status": "todo",
+   "subject": "gated-scoped-ac",
+   "tags": [
+    "gated-scoped-ac",
+    "consumer"
+   ],
+   "paths": [
+    "shared/libs/gated-scoped-ac"
+   ],
+   "summary": "How an app builds the engine and the gate once, from its config and its tables, and puts the hydration middleware in front of its routes.",
+   "docId": "gated-scoped-ac-mount",
+   "owner": "libs/gated-scoped-ac",
+   "order": 5,
+   "audience": [
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/gated-scoped-ac-readme",
+   "kind": "doc",
+   "title": "@libs/gated-scoped-ac",
+   "status": "todo",
+   "subject": "gated-scoped-ac",
+   "tags": [
+    "gated-scoped-ac"
+   ],
+   "paths": [
+    "shared/libs/gated-scoped-ac"
+   ],
+   "summary": "Scoped access control as a library: an engine that turns a caller's permissions into scopes and verdicts, and a gated db that reaches the database only through them.",
+   "docId": "gated-scoped-ac-readme",
+   "owner": "libs/gated-scoped-ac",
+   "order": 1,
+   "audience": [
+    "seed-contributor",
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/gated-scoped-ac-security",
+   "kind": "doc",
+   "title": "Security",
+   "status": "todo",
+   "subject": "gated-scoped-ac",
+   "tags": [
+    "gated-scoped-ac",
+    "consumer"
+   ],
+   "paths": [
+    "shared/libs/gated-scoped-ac"
+   ],
+   "summary": "What the library guarantees, what it trusts the app to get right, and what a rule does when a value it reads is absent.",
+   "docId": "gated-scoped-ac-security",
+   "owner": "libs/gated-scoped-ac",
+   "order": 7,
+   "audience": [
+    "seed-contributor",
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/gated-scoped-ac-troubleshooting",
+   "kind": "doc",
+   "title": "Troubleshooting",
+   "status": "todo",
+   "subject": "gated-scoped-ac",
+   "tags": [
+    "gated-scoped-ac",
+    "consumer"
+   ],
+   "paths": [
+    "shared/libs/gated-scoped-ac"
+   ],
+   "summary": "The errors the library throws and what each means, why a read or a write comes back empty, and how to see what a scope compiled to.",
+   "docId": "gated-scoped-ac-troubleshooting",
+   "owner": "libs/gated-scoped-ac",
+   "order": 9,
+   "audience": [
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/infra-configs",
+   "kind": "doc",
+   "title": "What's configurable in this product",
+   "status": "converted",
+   "subject": "infra",
+   "tags": [
+    "infra"
+   ],
+   "paths": [
+    "configs"
+   ],
+   "summary": "Every `*.config.ts` and `*.ac.ts` file under `configs/` is an authoritative source of truth for a specific configurable concern. Runtime code, type definitio…",
+   "docId": "infra-configs",
+   "owner": "infra",
+   "order": 1,
+   "audience": [
+    "seed-contributor"
+   ]
+  },
+  {
+   "id": "doc/infra-helm",
+   "kind": "doc",
+   "title": "⎈ Helm Charts",
+   "status": "converted",
+   "subject": "infra",
+   "tags": [
+    "infra"
+   ],
+   "paths": [
+    "helm"
+   ],
+   "summary": "Kubernetes deployment configurations for all applications, organized as separate Helm charts for modular deployment and management.",
+   "docId": "infra-helm",
+   "owner": "infra",
+   "order": 3,
+   "audience": [
+    "seed-contributor"
+   ]
+  },
+  {
+   "id": "doc/infra-k6",
+   "kind": "doc",
+   "title": "Performance Tests (k6)",
+   "status": "converted",
+   "subject": "infra",
+   "tags": [
+    "infra"
+   ],
+   "paths": [
+    "tests/k6"
+   ],
+   "summary": "k6 test scripts for load and performance testing of Seed-derived services.",
+   "docId": "infra-k6",
+   "owner": "infra",
+   "order": 5,
+   "audience": [
+    "seed-contributor"
+   ]
+  },
+  {
+   "id": "doc/infra-scripts-lint",
+   "kind": "doc",
+   "title": "Prowd Lint System",
+   "status": "converted",
+   "subject": "infra",
+   "tags": [
+    "infra"
+   ],
+   "paths": [
+    "scripts/lint"
+   ],
+   "summary": "Deterministic architectural enforcement. One config, one pipeline, one output. Run: `pnpm lint:arch`",
+   "docId": "infra-scripts-lint",
+   "owner": "infra",
+   "order": 4,
+   "audience": [
+    "seed-contributor"
+   ]
+  },
+  {
+   "id": "doc/infra-terraform",
+   "kind": "doc",
+   "title": "🏗️ Terraform Infrastructure",
+   "status": "converted",
+   "subject": "infra",
+   "tags": [
+    "infra"
+   ],
+   "paths": [
+    "terraform"
+   ],
+   "summary": "Infrastructure as Code (IaC) configurations for provisioning and managing cloud resources using Terraform modules and deployments.",
+   "docId": "infra-terraform",
+   "owner": "infra",
+   "order": 2,
+   "audience": [
+    "seed-contributor"
+   ]
+  },
+  {
+   "id": "doc/list-query-api-reference",
+   "kind": "doc",
+   "title": "API Reference",
+   "status": "approved",
+   "subject": "list-query",
+   "tags": [
+    "list-query",
+    "consumer"
+   ],
+   "paths": [
+    "shared/libs/list-query"
+   ],
+   "summary": "All exported symbols from `@prowd/list-query`, `@prowd/list-query/server`, and `@prowd/list-query/client`.",
+   "docId": "list-query-api-reference",
+   "owner": "libs/list-query",
+   "order": 8,
+   "audience": [
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/list-query-architecture",
+   "kind": "doc",
+   "title": "Architecture",
+   "status": "approved",
+   "subject": "list-query",
+   "tags": [
+    "list-query",
+    "contributor"
+   ],
+   "paths": [
+    "shared/libs/list-query"
+   ],
+   "summary": "Design decisions for `@prowd/list-query`. Read this before changing the public surface.",
+   "docId": "list-query-architecture",
+   "owner": "libs/list-query",
+   "order": 4,
+   "audience": [
+    "seed-contributor"
+   ]
+  },
+  {
+   "id": "doc/list-query-backend-usage",
+   "kind": "doc",
+   "title": "Backend Usage",
+   "status": "approved",
+   "subject": "list-query",
+   "tags": [
+    "list-query",
+    "consumer"
+   ],
+   "paths": [
+    "shared/libs/list-query"
+   ],
+   "summary": "Everything in this doc lives under `@prowd/list-query/server`. The root entry (`@prowd/list-query`) exposes only isomorphic types and the sort parser.",
+   "docId": "list-query-backend-usage",
+   "owner": "libs/list-query",
+   "order": 5,
+   "audience": [
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/list-query-examples",
+   "kind": "doc",
+   "title": "Examples",
+   "status": "approved",
+   "subject": "list-query",
+   "tags": [
+    "list-query",
+    "consumer"
+   ],
+   "paths": [
+    "shared/libs/list-query"
+   ],
+   "summary": "Full walkthrough of wiring a list endpoint end-to-end. This mirrors the structure used by `user-organization-mgmt`.",
+   "docId": "list-query-examples",
+   "owner": "libs/list-query",
+   "order": 9,
+   "audience": [
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/list-query-frontend-usage",
+   "kind": "doc",
+   "title": "Frontend Usage",
+   "status": "approved",
+   "subject": "list-query",
+   "tags": [
+    "list-query",
+    "consumer"
+   ],
+   "paths": [
+    "shared/libs/list-query"
+   ],
+   "summary": "Everything in this doc lives under `@prowd/list-query/client`. The root entry (`@prowd/list-query`) exposes types the FE also uses (`SortSpec`, `ListResponse…",
+   "docId": "list-query-frontend-usage",
+   "owner": "libs/list-query",
+   "order": 6,
+   "audience": [
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/list-query-getting-started",
+   "kind": "doc",
+   "title": "Getting Started",
+   "status": "approved",
+   "subject": "list-query",
+   "tags": [
+    "list-query",
+    "consumer"
+   ],
+   "paths": [
+    "shared/libs/list-query"
+   ],
+   "summary": "`@prowd/list-query` is the single source of truth for the pagination + sort + search contract used by every list endpoint in Prowd. This doc gives you everyt…",
+   "docId": "list-query-getting-started",
+   "owner": "libs/list-query",
+   "order": 3,
+   "audience": [
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/list-query-overview",
+   "kind": "doc",
+   "title": "list-query",
+   "status": "approved",
+   "subject": "list-query",
+   "tags": [
+    "list-query"
+   ],
+   "paths": [
+    "shared/libs/list-query"
+   ],
+   "summary": "**What.** Standardised list endpoint contract — pagination, sort, multi-field ordering, search flag, scoped count, plus the React hook that drives URL-backed…",
+   "docId": "list-query-overview",
+   "owner": "libs/list-query",
+   "order": 2,
+   "audience": [
+    "seed-contributor",
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/list-query-readme",
+   "kind": "doc",
+   "title": "@libs/list-query",
+   "status": "approved",
+   "subject": "list-query",
+   "tags": [
+    "list-query"
+   ],
+   "paths": [
+    "shared/libs/list-query"
+   ],
+   "summary": "Reusable list-query contract for Prowd: pagination + sort + search, uniform across every list endpoint (backend and frontend).",
+   "docId": "list-query-readme",
+   "owner": "libs/list-query",
+   "order": 1,
+   "audience": [
+    "seed-contributor",
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/list-query-sort-syntax",
+   "kind": "doc",
+   "title": "Sort Syntax",
+   "status": "approved",
+   "subject": "list-query",
+   "tags": [
+    "list-query",
+    "contributor"
+   ],
+   "paths": [
+    "shared/libs/list-query"
+   ],
+   "summary": "Canonical grammar for the `sort` query param.",
+   "docId": "list-query-sort-syntax",
+   "owner": "libs/list-query",
+   "order": 7,
+   "audience": [
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/list-query-testing",
+   "kind": "doc",
+   "title": "Testing",
+   "status": "approved",
+   "subject": "list-query",
+   "tags": [
+    "list-query",
+    "contributor"
+   ],
+   "paths": [
+    "shared/libs/list-query"
+   ],
+   "summary": "How to add and test helpers in `@prowd/list-query`.",
+   "docId": "list-query-testing",
+   "owner": "libs/list-query",
+   "order": 10,
+   "audience": [
+    "seed-contributor"
+   ]
+  },
+  {
+   "id": "doc/main-web-scaffolding-and-import-boundaries",
+   "kind": "doc",
+   "title": "Web scaffolding & import boundaries",
+   "status": "todo",
+   "subject": "main",
+   "tags": [
+    "core",
+    "main",
+    "page",
+    "shell",
+    "slice",
+    "layout",
+    "routes"
+   ],
+   "paths": [
+    "apps/main/core/web",
+    "apps/main/slices/*/*/web"
+   ],
+   "summary": "The web side of the app: the fixed folders of the core and of every slice, how a slice declares its routes and layouts and the core mounts them, and the import boundaries that keep a slice removable.",
+   "docId": "main-web-scaffolding-and-import-boundaries",
+   "owner": "main/core",
+   "order": 2,
+   "audience": [
+    "seed-contributor"
+   ]
+  },
+  {
+   "id": "doc/mapper",
+   "kind": "doc",
+   "title": "MAPR: the documentation standard",
+   "status": "converted",
+   "subject": "docs",
+   "tags": [
+    "docs"
+   ],
+   "paths": [],
+   "summary": "Map → Axioms → Purpose → Reference: the shape of every doc, map and ADR, and the rules of the registry.",
+   "docId": "mapper",
+   "owner": "documentation",
+   "audience": [
+    "seed-contributor",
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/orchestrator-readme",
+   "kind": "doc",
+   "title": "@apps/orchestrator",
+   "status": "converted",
+   "subject": "orchestrator",
+   "tags": [
+    "orchestrator"
+   ],
+   "paths": [
+    "apps/orchestrator"
+   ],
+   "summary": "The seed orchestrator: versioned workers and pipelines run on Trigger.dev, every artifact in object storage, one gated API in front. Design and glossary: `sl…",
+   "docId": "orchestrator-readme",
+   "owner": "orchestrator",
+   "audience": [
+    "seed-contributor"
+   ]
+  },
+  {
+   "id": "doc/payment-access-control",
+   "kind": "doc",
+   "title": "Payment access control",
+   "status": "converted",
+   "subject": "payment",
+   "tags": [
+    "payment",
+    "access control"
+   ],
+   "paths": [
+    "shared/configs/access-control/index.ts",
+    "apps/main/slices/seed/payment"
+   ],
+   "summary": "Who can pay, buy and sell: the payment rules in the access-control DSL, the Manage Billing role, and who holds what.",
+   "docId": "payment-access-control",
+   "owner": "main/slices/payment",
+   "order": 3,
+   "audience": [
+    "seed-contributor",
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/payment-catalog",
+   "kind": "doc",
+   "title": "Payment catalog",
+   "status": "converted",
+   "subject": "payment",
+   "tags": [
+    "payment",
+    "catalog"
+   ],
+   "paths": [
+    "shared/configs/payment",
+    "apps/main/slices/seed/payment/shared/catalog.ts"
+   ],
+   "summary": "What an app configures for payment: the plans, the bundles, the marketplace terms and how long vendor credit refunds last.",
+   "docId": "payment-catalog",
+   "owner": "main/slices/payment",
+   "order": 2,
+   "audience": [
+    "seed-contributor",
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/payment-overview",
+   "kind": "doc",
+   "title": "Payment",
+   "status": "converted",
+   "subject": "payment",
+   "tags": [
+    "payment",
+    "stripe"
+   ],
+   "paths": [
+    "apps/main/slices/seed/payment"
+   ],
+   "summary": "One seed slice, three products (a plan, bundles of credits, a marketplace), with Stripe as the system of record for money.",
+   "docId": "payment-overview",
+   "owner": "main/slices/payment",
+   "order": 1,
+   "audience": [
+    "seed-contributor",
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/realtime-brief",
+   "kind": "doc",
+   "title": "@libs/realtime — Developer Implementation Brief",
+   "status": "approved",
+   "subject": "realtime",
+   "tags": [
+    "realtime"
+   ],
+   "paths": [
+    "shared/libs/realtime"
+   ],
+   "summary": "**Shared real-time transport engine for server→client push.**",
+   "docId": "realtime-brief",
+   "owner": "libs/realtime",
+   "order": 2,
+   "audience": [
+    "seed-contributor"
+   ]
+  },
+  {
+   "id": "doc/realtime-overview",
+   "kind": "doc",
+   "title": "realtime",
+   "status": "approved",
+   "subject": "realtime",
+   "tags": [
+    "realtime"
+   ],
+   "paths": [
+    "shared/libs/realtime"
+   ],
+   "summary": "**What.** A transport-agnostic push engine for server-to-client events over SSE. **How.** Exposes a connection manager + push primitive on the backend and a …",
+   "docId": "realtime-overview",
+   "owner": "libs/realtime",
+   "order": 1,
+   "audience": [
+    "seed-contributor",
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/scaffolding-and-import-boundaries",
+   "kind": "doc",
+   "title": "Scaffolding & Import Boundaries",
+   "status": "approved",
+   "subject": "main",
+   "tags": [
+    "core",
+    "injection",
+    "leaf adapter",
+    "library",
+    "lifecycle hook",
+    "main",
+    "mount",
+    "package",
+    "page",
+    "product slice",
+    "public surface",
+    "seed slice",
+    "shell",
+    "slice",
+    "slice app",
+    "tier"
+   ],
+   "paths": [
+    "apps/main"
+   ],
+   "summary": "This architecture tries to achieve: consistency and decoupability.",
+   "docId": "scaffolding-and-import-boundaries",
+   "owner": "main/core",
+   "order": 1,
+   "audience": [
+    "seed-contributor"
+   ]
+  },
+  {
+   "id": "doc/sitemap-url-paths",
+   "kind": "doc",
+   "title": "Sitemap · URL Paths",
+   "status": "approved",
+   "subject": "main",
+   "tags": [
+    "main"
+   ],
+   "paths": [
+    "apps/main"
+   ],
+   "summary": "One place that shows every URL of the seed baseline as a tree, with what each path shows — so a product slice adds its own paths beside these instead of gues…",
+   "docId": "sitemap-url-paths",
+   "owner": "main/core",
+   "order": 6,
+   "audience": [
+    "seed-contributor",
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/skill-add-a-page-to-a-slice",
+   "kind": "doc",
+   "title": "add a page to a slice",
+   "status": "todo",
+   "subject": "skills",
+   "tags": [
+    "skills",
+    "seed-consumer",
+    "all-slices"
+   ],
+   "paths": [],
+   "summary": "",
+   "docId": "skill-add-a-page-to-a-slice",
+   "owner": "skills/seed-consumer/all-slices",
+   "audience": [
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/skill-add-access-control",
+   "kind": "doc",
+   "title": "add access control",
+   "status": "todo",
+   "subject": "skills",
+   "tags": [
+    "skills",
+    "seed-consumer",
+    "all-slices"
+   ],
+   "paths": [],
+   "summary": "",
+   "docId": "skill-add-access-control",
+   "owner": "skills/seed-consumer/all-slices",
+   "audience": [
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/skill-add-organization-types",
+   "kind": "doc",
+   "title": "add organization types",
+   "status": "todo",
+   "subject": "skills",
+   "tags": [
+    "skills",
+    "seed-consumer",
+    "user-organization-mgmt"
+   ],
+   "paths": [],
+   "summary": "",
+   "docId": "skill-add-organization-types",
+   "owner": "skills/seed-consumer/user-organization-mgmt",
+   "audience": [
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/skill-add-roles",
+   "kind": "doc",
+   "title": "add roles",
+   "status": "todo",
+   "subject": "skills",
+   "tags": [
+    "skills",
+    "seed-consumer",
+    "user-organization-mgmt"
+   ],
+   "paths": [],
+   "summary": "",
+   "docId": "skill-add-roles",
+   "owner": "skills/seed-consumer/user-organization-mgmt",
+   "audience": [
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/skill-add-to-the-core",
+   "kind": "doc",
+   "title": "add to the core",
+   "status": "todo",
+   "subject": "skills",
+   "tags": [
+    "skills",
+    "seed-contributor",
+    "main-core"
+   ],
+   "paths": [],
+   "summary": "",
+   "docId": "skill-add-to-the-core",
+   "owner": "skills/seed-contributor/main-core",
+   "audience": [
+    "seed-contributor"
+   ]
+  },
+  {
+   "id": "doc/skill-author-a-sitemap",
+   "kind": "doc",
+   "title": "author a sitemap",
+   "status": "todo",
+   "subject": "skills",
+   "tags": [
+    "skills",
+    "product-contributor",
+    "product-design"
+   ],
+   "paths": [],
+   "summary": "",
+   "docId": "skill-author-a-sitemap",
+   "owner": "skills/product-contributor/product-design",
+   "audience": [
+    "product-contributor"
+   ]
+  },
+  {
+   "id": "doc/skill-author-an-erd",
+   "kind": "doc",
+   "title": "author an ERD",
+   "status": "todo",
+   "subject": "skills",
+   "tags": [
+    "skills",
+    "product-contributor",
+    "product-design"
+   ],
+   "paths": [],
+   "summary": "",
+   "docId": "skill-author-an-erd",
+   "owner": "skills/product-contributor/product-design",
+   "audience": [
+    "product-contributor"
+   ]
+  },
+  {
+   "id": "doc/skill-author-personas",
+   "kind": "doc",
+   "title": "author personas",
+   "status": "todo",
+   "subject": "skills",
+   "tags": [
+    "skills",
+    "product-contributor",
+    "product-design"
+   ],
+   "paths": [],
+   "summary": "",
+   "docId": "skill-author-personas",
+   "owner": "skills/product-contributor/product-design",
+   "audience": [
+    "product-contributor"
+   ]
+  },
+  {
+   "id": "doc/skill-author-use-cases",
+   "kind": "doc",
+   "title": "author use cases",
+   "status": "todo",
+   "subject": "skills",
+   "tags": [
+    "skills",
+    "product-contributor",
+    "product-design"
+   ],
+   "paths": [],
+   "summary": "",
+   "docId": "skill-author-use-cases",
+   "owner": "skills/product-contributor/product-design",
+   "audience": [
+    "product-contributor"
+   ]
+  },
+  {
+   "id": "doc/skill-build-a-host",
+   "kind": "doc",
+   "title": "build a host",
+   "status": "todo",
+   "subject": "skills",
+   "tags": [
+    "skills",
+    "seed-contributor",
+    "libs-knowledge"
+   ],
+   "paths": [],
+   "summary": "",
+   "docId": "skill-build-a-host",
+   "owner": "skills/seed-contributor/libs-knowledge",
+   "audience": [
+    "seed-contributor"
+   ]
+  },
+  {
+   "id": "doc/skill-build-a-page-component",
+   "kind": "doc",
+   "title": "build a page component",
+   "status": "todo",
+   "subject": "skills",
+   "tags": [
+    "skills",
+    "seed-consumer",
+    "all-slices"
+   ],
+   "paths": [],
+   "summary": "",
+   "docId": "skill-build-a-page-component",
+   "owner": "skills/seed-consumer/all-slices",
+   "audience": [
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/skill-build-a-previewer-editor",
+   "kind": "doc",
+   "title": "build a previewer-editor",
+   "status": "todo",
+   "subject": "skills",
+   "tags": [
+    "skills",
+    "seed-contributor",
+    "libs-knowledge"
+   ],
+   "paths": [],
+   "summary": "",
+   "docId": "skill-build-a-previewer-editor",
+   "owner": "skills/seed-contributor/libs-knowledge",
+   "audience": [
+    "seed-contributor"
+   ]
+  },
+  {
+   "id": "doc/skill-build-a-primitive",
+   "kind": "doc",
+   "title": "build a primitive",
+   "status": "todo",
+   "subject": "skills",
+   "tags": [
+    "skills",
+    "seed-contributor",
+    "libs-ui"
+   ],
+   "paths": [],
+   "summary": "",
+   "docId": "skill-build-a-primitive",
+   "owner": "skills/seed-contributor/libs-ui",
+   "audience": [
+    "seed-contributor"
+   ]
+  },
+  {
+   "id": "doc/skill-build-a-seed-slice",
+   "kind": "doc",
+   "title": "build a seed slice",
+   "status": "todo",
+   "subject": "skills",
+   "tags": [
+    "skills",
+    "seed-contributor",
+    "seed-slices"
+   ],
+   "paths": [],
+   "summary": "",
+   "docId": "skill-build-a-seed-slice",
+   "owner": "skills/seed-contributor/seed-slices",
+   "audience": [
+    "seed-contributor"
+   ]
+  },
+  {
+   "id": "doc/skill-build-a-slice-component",
+   "kind": "doc",
+   "title": "build a slice component",
+   "status": "todo",
+   "subject": "skills",
+   "tags": [
+    "skills",
+    "seed-consumer",
+    "all-slices"
+   ],
+   "paths": [],
+   "summary": "",
+   "docId": "skill-build-a-slice-component",
+   "owner": "skills/seed-consumer/all-slices",
+   "audience": [
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/skill-build-a-slice-layout",
+   "kind": "doc",
+   "title": "build a slice layout",
+   "status": "todo",
+   "subject": "skills",
+   "tags": [
+    "skills",
+    "seed-consumer",
+    "all-slices"
+   ],
+   "paths": [],
+   "summary": "",
+   "docId": "skill-build-a-slice-layout",
+   "owner": "skills/seed-consumer/all-slices",
+   "audience": [
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/skill-write-a-pattern",
+   "kind": "doc",
+   "title": "write a pattern",
+   "status": "todo",
+   "subject": "skills",
+   "tags": [
+    "skills",
+    "seed-contributor",
+    "libs-ui"
+   ],
+   "paths": [],
+   "summary": "",
+   "docId": "skill-write-a-pattern",
+   "owner": "skills/seed-contributor/libs-ui",
+   "audience": [
+    "seed-contributor"
+   ]
+  },
+  {
+   "id": "doc/todo-rich-text-editor",
+   "kind": "doc",
+   "title": "lib: rich-text-editor (not migrated)",
+   "status": "todo",
+   "subject": "rich-text-editor",
+   "tags": [
+    "rich-text-editor"
+   ],
+   "paths": [
+    "shared/libs/rich-text-editor"
+   ],
+   "summary": "Not migrated yet. Starting point: shared/libs/rich-text-editor/docs/README.md",
+   "owner": "libs/rich-text-editor",
+   "audience": [
+    "seed-contributor"
+   ]
+  },
+  {
+   "id": "doc/ui-architecture-v2",
+   "kind": "doc",
+   "title": "UI architecture",
+   "status": "todo",
+   "subject": "ui",
+   "tags": [
+    "ui",
+    "contributor",
+    "library"
+   ],
+   "paths": [
+    "shared/libs/ui"
+   ],
+   "summary": "The principles of the UI: three concerns with one owner each (markup, library, theme), what markup may and may never say, the library as the finite vocabulary, the theme as the one place of look, seed slices wearing any project, who follows what, and where to read next.",
+   "docId": "ui-architecture-v2",
+   "owner": "libs/ui",
+   "order": 1,
+   "audience": [
+    "seed-contributor",
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/ui-architecture",
+   "kind": "doc",
+   "title": "Architecture",
+   "status": "deprecated",
+   "subject": "ui",
+   "tags": [
+    "ui",
+    "contributor"
+   ],
+   "paths": [
+    "shared/libs/ui"
+   ],
+   "summary": "Only the architect may modify this document.",
+   "docId": "ui-architecture",
+   "owner": "libs/ui",
+   "order": 8,
+   "audience": [
+    "seed-contributor",
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/ui-cascade-spec",
+   "kind": "doc",
+   "title": "Cascade Specification",
+   "status": "deprecated",
+   "subject": "ui",
+   "tags": [
+    "ui",
+    "contributor"
+   ],
+   "paths": [
+    "shared/libs/ui"
+   ],
+   "summary": "Technical details of how the theme cascade translates to CSS. For the conceptual model, see Architecture (`architecture.md`).",
+   "docId": "ui-cascade-spec",
+   "owner": "libs/ui",
+   "order": 9,
+   "audience": [
+    "seed-contributor"
+   ]
+  },
+  {
+   "id": "doc/ui-engine",
+   "kind": "doc",
+   "title": "Theme Engine",
+   "status": "deprecated",
+   "subject": "ui",
+   "tags": [
+    "ui",
+    "contributor"
+   ],
+   "paths": [
+    "shared/libs/ui"
+   ],
+   "summary": "How the CSS engine works. The engine compiles a Theme object into a single CSS file that owns all visual styling for the application.",
+   "docId": "ui-engine",
+   "owner": "libs/ui",
+   "order": 10,
+   "audience": [
+    "seed-contributor"
+   ]
+  },
+  {
+   "id": "doc/ui-layouts-v2",
+   "kind": "doc",
+   "title": "Layouts",
+   "status": "todo",
+   "subject": "ui",
+   "tags": [
+    "ui",
+    "consumer",
+    "layout",
+    "shell",
+    "page"
+   ],
+   "paths": [
+    "shared/libs/ui"
+   ],
+   "summary": "The page: shells and regions, their anatomy, the primitives that emit them, the container, the breakpoints, who owns the shell.",
+   "docId": "ui-layouts-v2",
+   "owner": "libs/ui",
+   "order": 3,
+   "audience": [
+    "seed-contributor",
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/ui-layouts",
+   "kind": "doc",
+   "title": "Layouts",
+   "status": "deprecated",
+   "subject": "ui",
+   "tags": [
+    "ui",
+    "consumer"
+   ],
+   "paths": [
+    "shared/libs/ui"
+   ],
+   "summary": "How to compose page structure using shared layout components and compositions.",
+   "docId": "ui-layouts",
+   "owner": "libs/ui",
+   "order": 12,
+   "audience": [
+    "seed-contributor",
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/ui-markup-dictionary-v2",
+   "kind": "doc",
+   "title": "Markup dictionary",
+   "status": "todo",
+   "subject": "ui",
+   "tags": [
+    "ui",
+    "consumer",
+    "markup"
+   ],
+   "paths": [
+    "shared/libs/ui"
+   ],
+   "summary": "Every value a node may carry: the elements per family with their axes, the typography identities, the layout regions, the axis values. Generated.",
+   "docId": "ui-markup-dictionary-v2",
+   "owner": "libs/ui",
+   "order": 6,
+   "audience": [
+    "seed-contributor",
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/ui-markup-dictionary",
+   "kind": "doc",
+   "title": "Markup Dictionary",
+   "status": "deprecated",
+   "subject": "ui",
+   "tags": [
+    "ui",
+    "consumer"
+   ],
+   "paths": [
+    "shared/libs/ui"
+   ],
+   "summary": "Generated from docs/consumer/developer/markup-dictionary.md by scripts/markup-dictionary-elements.ts; the markdown stays until that script is ported.",
+   "docId": "ui-markup-dictionary",
+   "owner": "libs/ui",
+   "order": 15,
+   "audience": [
+    "seed-contributor",
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/ui-markup-rules",
+   "kind": "doc",
+   "title": "Markup rules",
+   "status": "todo",
+   "subject": "ui",
+   "tags": [
+    "ui",
+    "markup"
+   ],
+   "paths": [
+    "shared/libs/ui"
+   ],
+   "summary": "The rules a seed consumer follows when writing markup: library components only, position with three components, relative sizing as position, no absolute size, props that name what and the condition, never the look.",
+   "docId": "ui-markup-rules",
+   "owner": "libs/ui",
+   "order": 2,
+   "audience": [
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/ui-mobile-components-design",
+   "kind": "doc",
+   "title": "Mobile design: why the library is shaped this way",
+   "status": "deprecated",
+   "subject": "ui",
+   "tags": [
+    "ui"
+   ],
+   "paths": [
+    "shared/libs/ui"
+   ],
+   "summary": "The first version of this library, taken from the LLC project, chose React Native's usual vocabulary (`variant`, `tone`, `size`), a hand-written theme of its…",
+   "docId": "ui-mobile-components-design",
+   "owner": "libs/ui",
+   "order": 18,
+   "audience": [
+    "seed-contributor"
+   ]
+  },
+  {
+   "id": "doc/ui-mobile-components",
+   "kind": "doc",
+   "title": "`@libs/mobile-components`",
+   "status": "deprecated",
+   "subject": "ui",
+   "tags": [
+    "ui"
+   ],
+   "paths": [
+    "shared/libs/ui"
+   ],
+   "summary": "The mobile UI library: React Native components on the same contract as `@libs/web-components`. The rationale is in `DESIGN.md` (`./DESIGN.md`).",
+   "docId": "ui-mobile-components",
+   "owner": "libs/ui",
+   "order": 17,
+   "audience": [
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/ui-mobile",
+   "kind": "doc",
+   "title": "Mobile library",
+   "status": "todo",
+   "subject": "ui",
+   "tags": [
+    "ui",
+    "consumer",
+    "contributor",
+    "mobile"
+   ],
+   "paths": [
+    "shared/libs/ui"
+   ],
+   "summary": "The mobile UI library: React Native components on the same contract as the web library; how a theme reaches a component without a cascade; what a component owns; what the platform cannot do.",
+   "docId": "ui-mobile",
+   "owner": "libs/ui",
+   "order": 8,
+   "audience": [
+    "seed-contributor",
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/ui-naming-v2",
+   "kind": "doc",
+   "title": "Naming",
+   "status": "todo",
+   "subject": "ui",
+   "tags": [
+    "ui",
+    "consumer",
+    "naming"
+   ],
+   "paths": [
+    "shared/libs/ui"
+   ],
+   "summary": "How application components and their files are named: Subject + Role, the table of roles, where a component lives.",
+   "docId": "ui-naming-v2",
+   "owner": "libs/ui",
+   "order": 7,
+   "audience": [
+    "seed-contributor",
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/ui-naming",
+   "kind": "doc",
+   "title": "Naming",
+   "status": "deprecated",
+   "subject": "ui",
+   "tags": [
+    "ui",
+    "consumer"
+   ],
+   "paths": [
+    "shared/libs/ui"
+   ],
+   "summary": "How application components, and their files, are named. This covers the components an app or a slice writes. The library's own elements (`alert-dialog`, `dat…",
+   "docId": "ui-naming",
+   "owner": "libs/ui",
+   "order": 16,
+   "audience": [
+    "seed-contributor",
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/ui-primitive-authoring",
+   "kind": "doc",
+   "title": "Primitive authoring",
+   "status": "todo",
+   "subject": "ui",
+   "tags": [
+    "ui",
+    "primitives"
+   ],
+   "paths": [
+    "shared/libs/ui/web/components",
+    "shared/libs/ui/web/layouts"
+   ],
+   "summary": "How a primitive of the library is built so that markup written with it complies: the attributes its root carries, element or layout never both, the root of a simple and of a compound component, what Stack emits, where spacing is applied.",
+   "docId": "ui-primitive-authoring",
+   "owner": "libs/ui",
+   "order": 9,
+   "audience": [
+    "seed-contributor"
+   ]
+  },
+  {
+   "id": "doc/ui-rules-check",
+   "kind": "doc",
+   "title": "The UI rules check",
+   "status": "todo",
+   "subject": "ui",
+   "tags": [
+    "ui",
+    "rules",
+    "check"
+   ],
+   "paths": [
+    "shared/libs/check",
+    "shared/libs/ui/rules",
+    "shared/libs/ui/types/schema",
+    "scripts/ui-check.mjs"
+   ],
+   "summary": "The entry point to the UI rules: the check system that applies them to code, UI documents and themes, its parts, the call and its arguments, the UI rule set, how exceptions, the backlog and the rules version work, how to run it, and what is not built.",
+   "docId": "ui-rules-check",
+   "owner": "libs/ui",
+   "order": 1
+  },
+  {
+   "id": "doc/ui-theme-authoring",
+   "kind": "doc",
+   "title": "Theme Authoring",
+   "status": "deprecated",
+   "subject": "ui",
+   "tags": [
+    "ui",
+    "consumer"
+   ],
+   "paths": [
+    "shared/libs/ui"
+   ],
+   "summary": "How to write a theme object. A theme is a TypeScript object conforming to the `Theme` type (`shared/libs/ui/types/theme.ts`).",
+   "docId": "ui-theme-authoring",
+   "owner": "libs/ui",
+   "order": 11,
+   "audience": [
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/ui-theme-engine",
+   "kind": "doc",
+   "title": "Theme engine",
+   "status": "todo",
+   "subject": "ui",
+   "tags": [
+    "ui",
+    "theme",
+    "engine"
+   ],
+   "paths": [
+    "shared/libs/ui/web/theme-engine"
+   ],
+   "summary": "How the engine compiles a theme: the selector model, specificity, the composition variables, output principles and structure, smart bleed, the build pipeline, what the engine does not do.",
+   "docId": "ui-theme-engine",
+   "owner": "libs/ui",
+   "order": 5,
+   "audience": [
+    "seed-contributor"
+   ]
+  },
+  {
+   "id": "doc/ui-theme",
+   "kind": "doc",
+   "title": "Theme",
+   "status": "todo",
+   "subject": "ui",
+   "tags": [
+    "ui",
+    "theme"
+   ],
+   "paths": [
+    "shared/libs/ui"
+   ],
+   "summary": "What a theme may author: the object, the levels, the surface, the axes, families, layouts, colours, modes, concepts, overrides, sizes, breakpoints, tint, mobile, build and activate.",
+   "docId": "ui-theme",
+   "owner": "libs/ui",
+   "order": 4,
+   "audience": [
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/ui-web-components",
+   "kind": "doc",
+   "title": "@libs/web-components",
+   "status": "deprecated",
+   "subject": "ui",
+   "tags": [
+    "ui"
+   ],
+   "paths": [
+    "shared/libs/ui"
+   ],
+   "summary": "Shared UI components following the Content Modularity architecture.",
+   "docId": "ui-web-components",
+   "owner": "libs/ui",
+   "order": 14,
+   "audience": [
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/ui-web-layouts",
+   "kind": "doc",
+   "title": "Layout components",
+   "status": "deprecated",
+   "subject": "ui",
+   "tags": [
+    "ui"
+   ],
+   "paths": [
+    "shared/libs/ui"
+   ],
+   "summary": "Structural scaffolding for page composition. Every component here renders one `layout=\"...\"` attribute and handles exactly one structural concern (scroll, ov…",
+   "docId": "ui-web-layouts",
+   "owner": "libs/ui",
+   "order": 13,
+   "audience": [
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/unmet-requirements",
+   "kind": "doc",
+   "title": "Unmet Requirements",
+   "status": "approved",
+   "subject": "main",
+   "tags": [
+    "main"
+   ],
+   "paths": [
+    "apps/main"
+   ],
+   "summary": "Some things a caller must have settled before authorization is even worth evaluating — a verified identifier, a required session factor, mandatory profile da…",
+   "docId": "unmet-requirements",
+   "owner": "main/core",
+   "order": 7,
+   "audience": [
+    "seed-contributor"
+   ]
+  },
+  {
+   "id": "doc/user-org-mgmt-architecture",
+   "kind": "doc",
+   "title": "Architecture",
+   "status": "converted",
+   "subject": "user-organization-mgmt",
+   "tags": [
+    "user-organization-mgmt"
+   ],
+   "paths": [
+    "apps/main/slices/seed/user-organization-mgmt"
+   ],
+   "summary": "`api/identity/identity-provider.port.ts` is the module's ONLY seam to the identity system. The provider owns identities, credentials, verification codes (gen…",
+   "docId": "user-org-mgmt-architecture",
+   "owner": "main/slices/user-organization-mgmt",
+   "order": 2,
+   "audience": [
+    "seed-contributor"
+   ]
+  },
+  {
+   "id": "doc/user-org-mgmt-auth-config-dsl",
+   "kind": "doc",
+   "title": "The auth-config DSL",
+   "status": "converted",
+   "subject": "user-organization-mgmt",
+   "tags": [
+    "user-organization-mgmt"
+   ],
+   "paths": [
+    "apps/main/slices/seed/user-organization-mgmt"
+   ],
+   "summary": "The module ships the engine (`shared/auth-config/`: types, resolver, validation); the product ships the config instance (`configs/user-organization-mgmt/auth…",
+   "docId": "user-org-mgmt-auth-config-dsl",
+   "owner": "main/slices/user-organization-mgmt",
+   "order": 5,
+   "audience": [
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/user-org-mgmt-flows-and-gate",
+   "kind": "doc",
+   "title": "Auth and the gate",
+   "status": "converted",
+   "subject": "user-organization-mgmt",
+   "tags": [
+    "user-organization-mgmt"
+   ],
+   "paths": [
+    "apps/main/slices/seed/user-organization-mgmt"
+   ],
+   "summary": "The module keeps **no flow records**. A credential conversation is the provider's own flow, and the client holds its id. `AuthService` adds only what the pro…",
+   "docId": "user-org-mgmt-flows-and-gate",
+   "owner": "main/slices/user-organization-mgmt",
+   "order": 4,
+   "audience": [
+    "seed-contributor",
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/user-org-mgmt-identifiers",
+   "kind": "doc",
+   "title": "Identifiers",
+   "status": "converted",
+   "subject": "user-organization-mgmt",
+   "tags": [
+    "user-organization-mgmt"
+   ],
+   "paths": [
+    "apps/main/slices/seed/user-organization-mgmt"
+   ],
+   "summary": "Two different things, deliberately kept apart:",
+   "docId": "user-org-mgmt-identifiers",
+   "owner": "main/slices/user-organization-mgmt",
+   "order": 3,
+   "audience": [
+    "seed-contributor",
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/user-org-mgmt-legal",
+   "kind": "doc",
+   "title": "Legal documents and consent",
+   "status": "converted",
+   "subject": "user-organization-mgmt",
+   "tags": [
+    "user-organization-mgmt"
+   ],
+   "paths": [
+    "apps/main/slices/seed/user-organization-mgmt"
+   ],
+   "summary": "Consent has two halves: the CONFIGS say what must be consented to (the auth config's `legalConsent` rules, the org-lifecycle's `creation.ownership.legalConse…",
+   "docId": "user-org-mgmt-legal",
+   "owner": "main/slices/user-organization-mgmt",
+   "order": 7,
+   "audience": [
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/user-org-mgmt-organizations",
+   "kind": "doc",
+   "title": "Organizations, memberships, invitations",
+   "status": "converted",
+   "subject": "user-organization-mgmt",
+   "tags": [
+    "user-organization-mgmt"
+   ],
+   "paths": [
+    "apps/main/slices/seed/user-organization-mgmt"
+   ],
+   "summary": "Organizations are the module's own tables and services — the identity provider knows nothing about them. Two configs drive every decision: the auth config (m…",
+   "docId": "user-org-mgmt-organizations",
+   "owner": "main/slices/user-organization-mgmt",
+   "order": 6,
+   "audience": [
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/user-org-mgmt-overview",
+   "kind": "doc",
+   "title": "user-organization-mgmt — docs",
+   "status": "converted",
+   "subject": "user-organization-mgmt",
+   "tags": [
+    "user-organization-mgmt"
+   ],
+   "paths": [
+    "apps/main/slices/seed/user-organization-mgmt"
+   ],
+   "summary": "Config-driven identity module: registration, authentication, and account recovery described by a declarative auth DSL, executed over Ory Kratos. The module h…",
+   "docId": "user-org-mgmt-overview",
+   "owner": "main/slices/user-organization-mgmt",
+   "order": 1,
+   "audience": [
+    "seed-contributor",
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/user-org-mgmt-web-surface",
+   "kind": "doc",
+   "title": "Web surface",
+   "status": "converted",
+   "subject": "user-organization-mgmt",
+   "tags": [
+    "user-organization-mgmt"
+   ],
+   "paths": [
+    "apps/main/slices/seed/user-organization-mgmt"
+   ],
+   "summary": "The module's frontend lives in `web/` and follows the contribution pattern: the app mounts what the module exports; pages travel inside route definitions and…",
+   "docId": "user-org-mgmt-web-surface",
+   "owner": "main/slices/user-organization-mgmt",
+   "order": 8,
+   "audience": [
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/value-types-overview",
+   "kind": "doc",
+   "title": "value-types",
+   "status": "converted",
+   "subject": "value-types",
+   "tags": [
+    "value-types"
+   ],
+   "paths": [
+    "shared/libs/value-types"
+   ],
+   "summary": "**What.** The universe of standardised value types: BCP 47 locales, IANA timezones, E.164 phone numbers, ISO 3166-1 countries, ISO 4217 currencies. Tuples + …",
+   "docId": "value-types-overview",
+   "owner": "libs/value-types",
+   "order": 2,
+   "audience": [
+    "seed-contributor",
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "doc/value-types-readme",
+   "kind": "doc",
+   "title": "@libs/value-types",
+   "status": "converted",
+   "subject": "value-types",
+   "tags": [
+    "value-types"
+   ],
+   "paths": [
+    "shared/libs/value-types"
+   ],
+   "summary": "Universe of valid values for shared vocabulary backed by ISO/IANA/BCP 47/E.164 standards. Pure data + thin validators. **Zero product knowledge.**",
+   "docId": "value-types-readme",
+   "owner": "libs/value-types",
+   "order": 1,
+   "audience": [
+    "seed-contributor",
+    "seed-consumer"
+   ]
+  },
+  {
+   "id": "term/access-context",
+   "kind": "term",
+   "title": "access context",
+   "status": "approved",
+   "subjects": [
+    "main",
+    "gated-scoped-ac"
+   ],
+   "tags": [
+    "access-control"
+   ],
+   "paths": [],
+   "owner": "main/core",
+   "owners": [
+    "main/core",
+    "libs/gated-scoped-ac"
+   ]
+  },
+  {
+   "id": "term/adr",
+   "kind": "term",
+   "title": "ADR",
+   "status": "converted",
+   "subjects": [
+    "docs"
+   ],
+   "tags": [
+    "docs"
+   ],
+   "paths": [],
+   "owner": "documentation",
+   "owners": [
+    "documentation"
+   ]
+  },
+  {
+   "id": "term/axiom",
+   "kind": "term",
+   "title": "axiom",
+   "status": "converted",
+   "subjects": [
+    "docs"
+   ],
+   "tags": [
+    "docs"
+   ],
+   "paths": [],
+   "owner": "documentation",
+   "owners": [
+    "documentation"
+   ]
+  },
+  {
+   "id": "term/capability",
+   "kind": "term",
+   "title": "capability",
+   "status": "converted",
+   "subjects": [
+    "orchestrator"
+   ],
+   "tags": [
+    "orchestrator"
+   ],
+   "paths": [
+    "apps/orchestrator"
+   ],
+   "owner": "orchestrator",
+   "owners": [
+    "orchestrator"
+   ]
+  },
+  {
+   "id": "term/charge-credits",
+   "kind": "term",
+   "title": "charge credits",
+   "status": "converted",
+   "subjects": [
+    "orchestrator"
+   ],
+   "tags": [
+    "orchestrator"
+   ],
+   "paths": [
+    "apps/orchestrator"
+   ],
+   "owner": "orchestrator",
+   "owners": [
+    "orchestrator"
+   ]
+  },
+  {
+   "id": "term/check-crons",
+   "kind": "term",
+   "title": "check crons",
+   "status": "converted",
+   "subjects": [
+    "orchestrator"
+   ],
+   "tags": [
+    "orchestrator"
+   ],
+   "paths": [
+    "apps/orchestrator"
+   ],
+   "owner": "orchestrator",
+   "owners": [
+    "orchestrator"
+   ]
+  },
+  {
+   "id": "term/component-stacking",
+   "kind": "term",
+   "title": "component stacking",
+   "status": "approved",
+   "subjects": [
+    "ui"
+   ],
+   "tags": [
+    "ui"
+   ],
+   "paths": [
+    "shared/libs/ui/web/layouts"
+   ],
+   "owner": "libs/ui",
+   "owners": [
+    "libs/ui"
+   ]
+  },
+  {
+   "id": "term/composition",
+   "kind": "term",
+   "title": "UI composition",
+   "status": "approved",
+   "subjects": [
+    "ui"
+   ],
+   "tags": [
+    "ui"
+   ],
+   "paths": [
+    "shared/libs/ui/web/layouts"
+   ],
+   "owner": "libs/ui",
+   "owners": [
+    "libs/ui"
+   ]
+  },
+  {
+   "id": "term/container-zone",
+   "kind": "term",
+   "title": "container zone",
+   "status": "approved",
+   "subjects": [
+    "ui"
+   ],
+   "tags": [
+    "ui"
+   ],
+   "paths": [
+    "shared/libs/ui/web/primitives/components"
+   ],
+   "owner": "libs/ui",
+   "owners": [
+    "libs/ui"
+   ]
+  },
+  {
+   "id": "term/converted",
+   "kind": "term",
+   "title": "converted",
+   "status": "converted",
+   "subjects": [
+    "docs"
+   ],
+   "tags": [
+    "docs"
+   ],
+   "paths": [],
+   "owner": "documentation",
+   "owners": [
+    "documentation"
+   ]
+  },
+  {
+   "id": "term/core",
+   "kind": "term",
+   "title": "core",
+   "status": "converted",
+   "subjects": [
+    "main"
+   ],
+   "tags": [
+    "architecture"
+   ],
+   "paths": [
+    "apps/main"
+   ],
+   "owner": "main/core",
+   "owners": [
+    "main/core"
+   ]
+  },
+  {
+   "id": "term/credit-check",
+   "kind": "term",
+   "title": "credit check",
+   "status": "converted",
+   "subjects": [
+    "orchestrator"
+   ],
+   "tags": [
+    "orchestrator"
+   ],
+   "paths": [
+    "apps/orchestrator"
+   ],
+   "owner": "orchestrator",
+   "owners": [
+    "orchestrator"
+   ]
+  },
+  {
+   "id": "term/credits",
+   "kind": "term",
+   "title": "credits",
+   "status": "converted",
+   "subjects": [
+    "open-api",
+    "orchestrator"
+   ],
+   "tags": [
+    "credits"
+   ],
+   "paths": [],
+   "owner": "orchestrator",
+   "owners": [
+    "orchestrator"
+   ]
+  },
+  {
+   "id": "term/doc",
+   "kind": "term",
+   "title": "doc",
+   "status": "converted",
+   "subjects": [
+    "docs"
+   ],
+   "tags": [
+    "docs"
+   ],
+   "paths": [],
+   "owner": "documentation",
+   "owners": [
+    "documentation"
+   ]
+  },
+  {
+   "id": "term/gated-db",
+   "kind": "term",
+   "title": "gated db",
+   "status": "approved",
+   "subjects": [
+    "gated-scoped-ac"
+   ],
+   "tags": [
+    "access-control"
+   ],
+   "paths": [
+    "shared/libs/gated-scoped-ac"
+   ],
+   "owner": "libs/gated-scoped-ac",
+   "owners": [
+    "libs/gated-scoped-ac"
+   ]
+  },
+  {
+   "id": "term/glossary",
+   "kind": "term",
+   "title": "glossary",
+   "status": "converted",
+   "subjects": [
+    "docs"
+   ],
+   "tags": [
+    "docs"
+   ],
+   "paths": [],
+   "owner": "documentation",
+   "owners": [
+    "documentation"
+   ]
+  },
+  {
+   "id": "term/injection",
+   "kind": "term",
+   "title": "injection",
+   "status": "approved",
+   "subjects": [
+    "main"
+   ],
+   "tags": [
+    "architecture"
+   ],
+   "paths": [],
+   "owner": "main/core",
+   "owners": [
+    "main/core"
+   ]
+  },
+  {
+   "id": "term/intent",
+   "kind": "term",
+   "title": "intent",
+   "status": "converted",
+   "subjects": [
+    "orchestrator"
+   ],
+   "tags": [
+    "orchestrator"
+   ],
+   "paths": [
+    "apps/orchestrator"
+   ],
+   "owner": "orchestrator",
+   "owners": [
+    "orchestrator"
+   ]
+  },
+  {
+   "id": "term/ip-allow-list",
+   "kind": "term",
+   "title": "IP allow-list",
+   "status": "converted",
+   "subjects": [
+    "open-api"
+   ],
+   "tags": [
+    "open-api"
+   ],
+   "paths": [
+    "apps/main/core/api/open-api"
+   ],
+   "owner": "orchestrator",
+   "owners": [
+    "orchestrator"
+   ]
+  },
+  {
+   "id": "term/layout-primitive",
+   "kind": "term",
+   "title": "layout primitive",
+   "status": "deprecated",
+   "subjects": [
+    "ui"
+   ],
+   "tags": [
+    "ui"
+   ],
+   "paths": [
+    "shared/libs/ui/web/layouts"
+   ],
+   "owner": "libs/ui",
+   "owners": [
+    "libs/ui"
+   ]
+  },
+  {
+   "id": "term/layout-zone-primitive",
+   "kind": "term",
+   "title": "layout zone primitive",
+   "status": "approved",
+   "subjects": [
+    "ui"
+   ],
+   "tags": [
+    "ui"
+   ],
+   "paths": [
+    "shared/libs/ui/web/primitives/layouts"
+   ],
+   "owner": "libs/ui",
+   "owners": [
+    "libs/ui"
+   ]
+  },
+  {
+   "id": "term/leaf-adapter",
+   "kind": "term",
+   "title": "leaf adapter",
+   "status": "approved",
+   "subjects": [
+    "main"
+   ],
+   "tags": [
+    "architecture"
+   ],
+   "paths": [],
+   "owner": "main/core",
+   "owners": [
+    "main/core"
+   ]
+  },
+  {
+   "id": "term/library",
+   "kind": "term",
+   "title": "library",
+   "status": "approved",
+   "subjects": [
+    "main"
+   ],
+   "tags": [
+    "architecture"
+   ],
+   "paths": [],
+   "owner": "main/core",
+   "owners": [
+    "main/core"
+   ]
+  },
+  {
+   "id": "term/lifecycle-hook",
+   "kind": "term",
+   "title": "lifecycle hook",
+   "status": "approved",
+   "subjects": [
+    "main"
+   ],
+   "tags": [
+    "architecture"
+   ],
+   "paths": [],
+   "owner": "main/core",
+   "owners": [
+    "main/core"
+   ]
+  },
+  {
+   "id": "term/location",
+   "kind": "term",
+   "title": "location",
+   "status": "converted",
+   "subjects": [
+    "docs"
+   ],
+   "tags": [
+    "docs"
+   ],
+   "paths": [],
+   "owner": "documentation",
+   "owners": [
+    "documentation"
+   ]
+  },
+  {
+   "id": "term/map",
+   "kind": "term",
+   "title": "map",
+   "status": "converted",
+   "subjects": [
+    "docs"
+   ],
+   "tags": [
+    "docs"
+   ],
+   "paths": [],
+   "owner": "documentation",
+   "owners": [
+    "documentation"
+   ]
+  },
+  {
+   "id": "term/mapper-compliant",
+   "kind": "term",
+   "title": "mapper compliant",
+   "status": "converted",
+   "subjects": [
+    "docs"
+   ],
+   "tags": [
+    "docs"
+   ],
+   "paths": [],
+   "owner": "documentation",
+   "owners": [
+    "documentation"
+   ]
+  },
+  {
+   "id": "term/mapr",
+   "kind": "term",
+   "title": "MAPR",
+   "status": "converted",
+   "subjects": [
+    "docs"
+   ],
+   "tags": [
+    "docs"
+   ],
+   "paths": [],
+   "owner": "documentation",
+   "owners": [
+    "documentation"
+   ]
+  },
+  {
+   "id": "term/mount",
+   "kind": "term",
+   "title": "mount",
+   "status": "approved",
+   "subjects": [
+    "main"
+   ],
+   "tags": [
+    "architecture"
+   ],
+   "paths": [],
+   "owner": "main/core",
+   "owners": [
+    "main/core"
+   ]
+  },
+  {
+   "id": "term/ontology",
+   "kind": "term",
+   "title": "ontology",
+   "status": "converted",
+   "subjects": [
+    "orchestrator"
+   ],
+   "tags": [
+    "orchestrator"
+   ],
+   "paths": [
+    "apps/orchestrator"
+   ],
+   "owner": "orchestrator",
+   "owners": [
+    "orchestrator"
+   ]
+  },
+  {
+   "id": "term/open-api",
+   "kind": "term",
+   "title": "open API",
+   "status": "converted",
+   "subjects": [
+    "open-api"
+   ],
+   "tags": [
+    "open-api"
+   ],
+   "paths": [],
+   "owner": "orchestrator",
+   "owners": [
+    "orchestrator"
+   ]
+  },
+  {
+   "id": "term/package",
+   "kind": "term",
+   "title": "package",
+   "status": "approved",
+   "subjects": [
+    "main"
+   ],
+   "tags": [
+    "architecture"
+   ],
+   "paths": [],
+   "owner": "main/core",
+   "owners": [
+    "main/core"
+   ]
+  },
+  {
+   "id": "term/page",
+   "kind": "term",
+   "title": "page",
+   "status": "approved",
+   "subjects": [
+    "main",
+    "ui"
+   ],
+   "tags": [
+    "ui"
+   ],
+   "paths": [],
+   "owner": "main/core",
+   "owners": [
+    "main/core",
+    "libs/ui"
+   ]
+  },
+  {
+   "id": "term/part-zone",
+   "kind": "term",
+   "title": "part zone",
+   "status": "approved",
+   "subjects": [
+    "ui"
+   ],
+   "tags": [
+    "ui"
+   ],
+   "paths": [
+    "shared/libs/ui/web/primitives/components/parts",
+    "shared/libs/ui/web/primitives/components/stack"
+   ],
+   "owner": "libs/ui",
+   "owners": [
+    "libs/ui"
+   ]
+  },
+  {
+   "id": "term/permission",
+   "kind": "term",
+   "title": "permission",
+   "status": "approved",
+   "subjects": [
+    "main",
+    "gated-scoped-ac"
+   ],
+   "tags": [
+    "access-control"
+   ],
+   "paths": [],
+   "owner": "main/core",
+   "owners": [
+    "main/core",
+    "libs/gated-scoped-ac"
+   ]
+  },
+  {
+   "id": "term/pipeline",
+   "kind": "term",
+   "title": "pipeline",
+   "status": "converted",
+   "subjects": [
+    "orchestrator"
+   ],
+   "tags": [
+    "orchestrator"
+   ],
+   "paths": [
+    "apps/orchestrator"
+   ],
+   "owner": "orchestrator",
+   "owners": [
+    "orchestrator"
+   ]
+  },
+  {
+   "id": "term/platform-bearer-token",
+   "kind": "term",
+   "title": "platform bearer token",
+   "status": "converted",
+   "subjects": [
+    "open-api"
+   ],
+   "tags": [
+    "open-api"
+   ],
+   "paths": [
+    "apps/main/core/api/open-api"
+   ],
+   "owner": "orchestrator",
+   "owners": [
+    "orchestrator"
+   ]
+  },
+  {
+   "id": "term/product-contributor",
+   "kind": "term",
+   "title": "product contributor",
+   "status": "approved",
+   "subjects": [
+    "docs"
+   ],
+   "tags": [
+    "docs",
+    "audience"
+   ],
+   "paths": [],
+   "owner": "documentation",
+   "owners": [
+    "documentation"
+   ]
+  },
+  {
+   "id": "term/product-slice",
+   "kind": "term",
+   "title": "product slice",
+   "status": "approved",
+   "subjects": [
+    "main"
+   ],
+   "tags": [
+    "architecture"
+   ],
+   "paths": [],
+   "owner": "main/core",
+   "owners": [
+    "main/core"
+   ]
+  },
+  {
+   "id": "term/public-surface",
+   "kind": "term",
+   "title": "public surface",
+   "status": "approved",
+   "subjects": [
+    "main"
+   ],
+   "tags": [
+    "architecture"
+   ],
+   "paths": [],
+   "owner": "main/core",
+   "owners": [
+    "main/core"
+   ]
+  },
+  {
+   "id": "term/purpose",
+   "kind": "term",
+   "title": "purpose",
+   "status": "converted",
+   "subjects": [
+    "docs"
+   ],
+   "tags": [
+    "docs"
+   ],
+   "paths": [],
+   "owner": "documentation",
+   "owners": [
+    "documentation"
+   ]
+  },
+  {
+   "id": "term/recipe",
+   "kind": "term",
+   "title": "recipe",
+   "status": "converted",
+   "subjects": [
+    "orchestrator"
+   ],
+   "tags": [
+    "orchestrator"
+   ],
+   "paths": [
+    "apps/orchestrator"
+   ],
+   "owner": "orchestrator",
+   "owners": [
+    "orchestrator"
+   ]
+  },
+  {
+   "id": "term/reference",
+   "kind": "term",
+   "title": "reference",
+   "status": "converted",
+   "subjects": [
+    "docs"
+   ],
+   "tags": [
+    "docs"
+   ],
+   "paths": [],
+   "owner": "documentation",
+   "owners": [
+    "documentation"
+   ]
+  },
+  {
+   "id": "term/registry-of-methods",
+   "kind": "term",
+   "title": "registry of methods",
+   "status": "converted",
+   "subjects": [
+    "open-api"
+   ],
+   "tags": [
+    "open-api"
+   ],
+   "paths": [
+    "apps/main/core/api/open-api"
+   ],
+   "owner": "orchestrator",
+   "owners": [
+    "orchestrator"
+   ]
+  },
+  {
+   "id": "term/registry",
+   "kind": "term",
+   "title": "registry",
+   "status": "converted",
+   "subjects": [
+    "docs"
+   ],
+   "tags": [
+    "docs"
+   ],
+   "paths": [],
+   "owner": "documentation",
+   "owners": [
+    "documentation"
+   ]
+  },
+  {
+   "id": "term/reusable-domain",
+   "kind": "term",
+   "title": "reusable domain",
+   "status": "converted",
+   "subjects": [
+    "docs"
+   ],
+   "tags": [
+    "docs"
+   ],
+   "paths": [],
+   "owner": "documentation",
+   "owners": [
+    "documentation"
+   ]
+  },
+  {
+   "id": "term/role-forest",
+   "kind": "term",
+   "title": "role forest",
+   "status": "approved",
+   "subjects": [
+    "gated-scoped-ac"
+   ],
+   "tags": [
+    "access-control"
+   ],
+   "paths": [
+    "shared/libs/gated-scoped-ac"
+   ],
+   "owner": "libs/gated-scoped-ac",
+   "owners": [
+    "libs/gated-scoped-ac"
+   ]
+  },
+  {
+   "id": "term/run",
+   "kind": "term",
+   "title": "run",
+   "status": "converted",
+   "subjects": [
+    "orchestrator"
+   ],
+   "tags": [
+    "orchestrator"
+   ],
+   "paths": [
+    "apps/orchestrator"
+   ],
+   "owner": "orchestrator",
+   "owners": [
+    "orchestrator"
+   ]
+  },
+  {
+   "id": "term/scope",
+   "kind": "term",
+   "title": "scope",
+   "status": "approved",
+   "subjects": [
+    "gated-scoped-ac"
+   ],
+   "tags": [
+    "access-control"
+   ],
+   "paths": [
+    "shared/libs/gated-scoped-ac"
+   ],
+   "owner": "libs/gated-scoped-ac",
+   "owners": [
+    "libs/gated-scoped-ac"
+   ]
+  },
+  {
+   "id": "term/section",
+   "kind": "term",
+   "title": "section",
+   "status": "approved",
+   "subjects": [
+    "main",
+    "ui"
+   ],
+   "tags": [
+    "ui"
+   ],
+   "paths": [],
+   "owner": "main/core",
+   "owners": [
+    "main/core",
+    "libs/ui"
+   ]
+  },
+  {
+   "id": "term/seed-consumer",
+   "kind": "term",
+   "title": "seed consumer",
+   "status": "approved",
+   "subjects": [
+    "docs"
+   ],
+   "tags": [
+    "docs",
+    "audience"
+   ],
+   "paths": [],
+   "owner": "documentation",
+   "owners": [
+    "documentation"
+   ]
+  },
+  {
+   "id": "term/seed-contributor",
+   "kind": "term",
+   "title": "seed contributor",
+   "status": "approved",
+   "subjects": [
+    "docs"
+   ],
+   "tags": [
+    "docs",
+    "audience"
+   ],
+   "paths": [],
+   "owner": "documentation",
+   "owners": [
+    "documentation"
+   ]
+  },
+  {
+   "id": "term/seed-slice",
+   "kind": "term",
+   "title": "seed slice",
+   "status": "approved",
+   "subjects": [
+    "main"
+   ],
+   "tags": [
+    "architecture"
+   ],
+   "paths": [],
+   "owner": "main/core",
+   "owners": [
+    "main/core"
+   ]
+  },
+  {
+   "id": "term/shell-zone-primitive",
+   "kind": "term",
+   "title": "shell zone primitive",
+   "status": "approved",
+   "subjects": [
+    "ui"
+   ],
+   "tags": [
+    "ui"
+   ],
+   "paths": [
+    "shared/libs/ui/web/primitives/layouts/shell"
+   ],
+   "owner": "libs/ui",
+   "owners": [
+    "libs/ui"
+   ]
+  },
+  {
+   "id": "term/shell",
+   "kind": "term",
+   "title": "shell",
+   "status": "approved",
+   "subjects": [
+    "main",
+    "ui"
+   ],
+   "tags": [
+    "ui"
+   ],
+   "paths": [],
+   "owner": "main/core",
+   "owners": [
+    "main/core",
+    "libs/ui"
+   ]
+  },
+  {
+   "id": "term/slice-app",
+   "kind": "term",
+   "title": "slice app",
+   "status": "approved",
+   "subjects": [
+    "main"
+   ],
+   "tags": [
+    "architecture"
+   ],
+   "paths": [],
+   "owner": "main/core",
+   "owners": [
+    "main/core"
+   ]
+  },
+  {
+   "id": "term/slice",
+   "kind": "term",
+   "title": "slice",
+   "status": "approved",
+   "subjects": [
+    "main"
+   ],
+   "tags": [
+    "architecture"
+   ],
+   "paths": [],
+   "owner": "main/core",
+   "owners": [
+    "main/core"
+   ]
+  },
+  {
+   "id": "term/stateless",
+   "kind": "term",
+   "title": "stateless",
+   "status": "converted",
+   "subjects": [
+    "orchestrator"
+   ],
+   "tags": [
+    "orchestrator"
+   ],
+   "paths": [
+    "apps/orchestrator"
+   ],
+   "owner": "orchestrator",
+   "owners": [
+    "orchestrator"
+   ]
+  },
+  {
+   "id": "term/stream",
+   "kind": "term",
+   "title": "stream",
+   "status": "converted",
+   "subjects": [
+    "main",
+    "orchestrator"
+   ],
+   "tags": [
+    "realtime"
+   ],
+   "paths": [],
+   "owner": "main/core",
+   "owners": [
+    "main/core",
+    "orchestrator"
+   ]
+  },
+  {
+   "id": "term/sub-page",
+   "kind": "term",
+   "title": "sub-page",
+   "status": "approved",
+   "subjects": [
+    "main",
+    "ui"
+   ],
+   "tags": [
+    "ui"
+   ],
+   "paths": [],
+   "owner": "main/core",
+   "owners": [
+    "main/core",
+    "libs/ui"
+   ]
+  },
+  {
+   "id": "term/substrate",
+   "kind": "term",
+   "title": "substrate",
+   "status": "converted",
+   "subjects": [
+    "main",
+    "open-api"
+   ],
+   "tags": [
+    "api"
+   ],
+   "paths": [],
+   "owner": "main/core",
+   "owners": [
+    "main/core",
+    "orchestrator"
+   ]
+  },
+  {
+   "id": "term/tier",
+   "kind": "term",
+   "title": "tier",
+   "status": "approved",
+   "subjects": [
+    "main"
+   ],
+   "tags": [
+    "architecture"
+   ],
+   "paths": [],
+   "owner": "main/core",
+   "owners": [
+    "main/core"
+   ]
+  },
+  {
+   "id": "term/transit",
+   "kind": "term",
+   "title": "transit",
+   "status": "converted",
+   "subjects": [
+    "main",
+    "open-api"
+   ],
+   "tags": [
+    "api"
+   ],
+   "paths": [],
+   "owner": "main/core",
+   "owners": [
+    "main/core",
+    "orchestrator"
+   ]
+  },
+  {
+   "id": "term/trigger",
+   "kind": "term",
+   "title": "trigger",
+   "status": "converted",
+   "subjects": [
+    "orchestrator"
+   ],
+   "tags": [
+    "orchestrator"
+   ],
+   "paths": [
+    "apps/orchestrator"
+   ],
+   "owner": "orchestrator",
+   "owners": [
+    "orchestrator"
+   ]
+  },
+  {
+   "id": "term/worker",
+   "kind": "term",
+   "title": "worker",
+   "status": "converted",
+   "subjects": [
+    "orchestrator"
+   ],
+   "tags": [
+    "orchestrator"
+   ],
+   "paths": [
+    "apps/orchestrator"
+   ],
+   "owner": "orchestrator",
+   "owners": [
+    "orchestrator"
+   ]
+  },
+  {
+   "id": "term/zone",
+   "kind": "term",
+   "title": "zone",
+   "status": "approved",
+   "subjects": [
+    "ui"
+   ],
+   "tags": [
+    "ui"
+   ],
+   "paths": [
+    "shared/libs/ui/web/primitives"
+   ],
+   "owner": "libs/ui",
+   "owners": [
+    "libs/ui"
+   ]
+  }
+ ]
+}

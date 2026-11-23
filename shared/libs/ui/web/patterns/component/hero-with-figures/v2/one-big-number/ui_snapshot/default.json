@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-hero-with-figures-one-big-number-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-hero-with-figures-one-big-number",
+ "name": "default",
+ "title": "Hero with figures: one big number",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

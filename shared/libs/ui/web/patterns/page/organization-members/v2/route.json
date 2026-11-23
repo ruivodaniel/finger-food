@@ -1,0 +1,7 @@
+{
+ "id": "route-pattern-page-organization-members",
+ "version": 1,
+ "surface": "web",
+ "path": "/patterns/page/organization-members",
+ "uiNodeId": "ui-node-pattern-page-organization-members"
+}

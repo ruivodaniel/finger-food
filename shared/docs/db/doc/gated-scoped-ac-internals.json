@@ -1,0 +1,165 @@
+{
+ "id": "doc/gated-scoped-ac-internals",
+ "kind": "doc",
+ "title": "Internals",
+ "status": "todo",
+ "subject": "gated-scoped-ac",
+ "owner": "libs/gated-scoped-ac",
+ "order": 8,
+ "tags": [
+  "gated-scoped-ac",
+  "contributor"
+ ],
+ "paths": [
+  "shared/libs/gated-scoped-ac"
+ ],
+ "summary": "How the engine turns permissions and a bag into a scope or a verdict, and how the gate turns those into SQL.",
+ "docId": "gated-scoped-ac-internals",
+ "doc": {
+  "axioms": [
+   {
+    "text": "Every resolver and verdict runs the context gate first, in memory. A context never costs a query."
+   },
+   {
+    "text": "A rule's target compiles to a WHERE (direct conditions) or to one id sub-query (a traversal), never both."
+   },
+   {
+    "text": "Rules are OR-ed, conditions within a slot AND-ed, and nothing contributing compiles to `false`."
+   },
+   {
+    "text": "The engine describes sub-queries and probes. The gate builds and runs them."
+   }
+  ],
+  "purpose": {
+   "intro": "What happens inside `createAc` and `createGatedDb`, for whoever changes them. The code is `src/engine.ts` and `src/gate.ts`; the comments there carry the reasons."
+  },
+  "reference": [
+   {
+    "topic": "Roles become permissions",
+    "statement": "`resolveEffectivePermissions(roles, bag)` runs once per request, in hydration.",
+    "claims": [
+     {
+      "text": "The forest searched is `accountBaseline` plus `forests[orgType]`, the org type read from the bag at `orgTypePath`. No org type, no membership forest."
+     },
+     {
+      "text": "For each role held, the engine finds its node anywhere in that forest and collects its permissions and those of every node beneath it. A role not in the forest adds nothing."
+     }
+    ]
+   },
+   {
+    "topic": "Stage 1: the context gate",
+    "statement": "`contextGate(permissions, entity, action, bag)` keeps, from the permissions the caller holds, those on this entity and action, and from each, the rules whose context passes.",
+    "claims": [
+     {
+      "text": "A context condition compares a bag value to its operand in memory. One without a `bag:` subject fails, and so does one where either side is unset or null, whatever the operator."
+     },
+     {
+      "text": "A permission with no surviving rule contributes nothing, which is why a permission declared with `rules: []` grants nothing."
+     },
+     {
+      "text": "Both resolvers and both verdicts start here, so a cheap refusal never reaches SQL."
+     }
+    ]
+   },
+   {
+    "topic": "Stage 2: the target",
+    "statement": "`entityScope` compiles each surviving rule's target and combines them.",
+    "claims": [
+     {
+      "text": "An empty target is `true`: every row. Direct conditions are compiled by operator and column shape (drizzle's `dataType`: array, json or a single value) and AND-ed."
+     },
+     {
+      "text": "An operand that is unset or null compiles to the shared `false` under every operator, and the rule it sits in is dropped: it adds no rows, and no columns to the field-list union. Left to SQL, a negation against NULL would match every row or fail to parse."
+     },
+     {
+      "text": "A traversal becomes an `IdSubquery`: select `id` from the entity, inner-joined to the far entity on the condition's column and `on`, filtered by its `where`."
+     },
+     {
+      "text": "The WHEREs are OR-ed into `base`; any rule that is `true` makes `base` `true`; none makes it `false`. Sub-queries are kept in a list beside it."
+     },
+     {
+      "text": "Field lists union across contributing permissions; any one without a list means every column (`fields: undefined`)."
+     }
+    ]
+   },
+   {
+    "topic": "Visibility channels",
+    "statement": "On a read only, each `visibilityJoins[entity]` entry `{ via, fk }` adds a sub-query: the `fk` column of the `via` rows the caller may read.",
+    "claims": [
+     {
+      "text": "The channel is built from the `via` entity's `base` alone. A traversal in a rule on the `via` entity does not carry into the channel."
+     }
+    ]
+   },
+   {
+    "topic": "The scope",
+    "statement": "A scope is `{ base, idSubqueries, fields }` cast to `Scope<entity, action>`.",
+    "claims": [
+     {
+      "text": "The brand is a type-only `unique symbol`: no key is ever written at runtime. The cast in `scopeFor` is the only mint."
+     }
+    ]
+   },
+   {
+    "topic": "The verdicts",
+    "statement": "Create and update also answer with a `Verdict`, `{ allow, reason?, requires? }`, taken before anything is written.",
+    "claims": [
+     {
+      "text": "`allowUpdate(permissions, entity, body, bag)`: no permission passing context denies. One passing permission without a field list allows every column. Otherwise every key of `body` must be in the union of their lists, and the reason names the ones that are not."
+     },
+     {
+      "text": "`allowCreate(permissions, entity, bag)`: a rule with no payload allows outright. A payload's direct conditions are settled in memory; a payload traversal becomes an `ExistsProbe` on the joined entity, keyed by the bag value, with its `where` AND-ed in. An absent value anywhere the rule reads (either side of a direct condition, the traversal's subject, an operand in its `where`) makes the rule deny without a query."
+     },
+     {
+      "text": "Any rule allowing outright wins. Otherwise the probes come back as `requires`, OR-ed: the create proceeds if any one finds a row. With neither, the create is denied."
+     }
+    ]
+   },
+   {
+    "topic": "The gate",
+    "statement": "`createGatedDb` turns a scope into SQL on the raw handle and runs it. No other module touches the handle.",
+    "claims": [
+     {
+      "text": "`scopeWhere` assembles `base OR <pk> IN (sub-query) OR …`, one `IN` per described sub-query, building each as a drizzle select on the raw handle."
+     },
+     {
+      "text": "`read` selects the scope's `fields` (or every column) under that WHERE, AND-ed with the caller's narrowing; `count` reuses the WHERE without paging."
+     },
+     {
+      "text": "`update` and `delete` fuse `<pk> = id AND scopeWhere` into the statement and return what `RETURNING` gives, or `null`. The write probes run the same WHERE as a select."
+     },
+     {
+      "text": "`create` takes the verdict with `requestBody` set to the values, runs the probes one at a time until one finds a row, then inserts. The check and the insert are not one statement, a window the code accepts and states."
+     },
+     {
+      "text": "`idColumns` sets the primary key for the outer `<pk> = id` and `<pk> IN (…)`. A traversal's sub-query always selects the entity's `id`."
+     }
+    ]
+   },
+   {
+    "topic": "The boot check",
+    "statement": "`createAc` walks every permission's target conditions, the ones inside a traversal's `where` included, and throws when `is` or `isNot` points at an array or json column.",
+    "claims": [
+     {
+      "text": "It runs in the engine because `config.ts` has no tables. An entity missing from `tables` is skipped and stays a request-time error."
+     }
+    ]
+   }
+  ],
+  "review": {
+   "axioms": {
+    "state": "unreviewed"
+   },
+   "purpose": {
+    "state": "unreviewed"
+   },
+   "reference": {
+    "state": "unreviewed"
+   }
+  },
+  "converted": true
+ },
+ "audience": [
+  "seed-contributor"
+ ]
+}

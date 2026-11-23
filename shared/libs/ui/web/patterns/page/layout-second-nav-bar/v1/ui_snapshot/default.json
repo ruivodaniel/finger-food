@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-page-layout-second-nav-bar-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-page-layout-second-nav-bar",
+ "name": "default",
+ "title": "Second navigation bar",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

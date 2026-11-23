@@ -1,0 +1,121 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "progress-to-goal",
+ "version": 1,
+ "surface": "web",
+ "measure": "md",
+ "root": {
+  "type": "Card",
+  "props": {
+   "style": {
+    "width": 360
+   }
+  },
+  "children": [
+   {
+    "type": "Content",
+    "children": [
+     {
+      "type": "Stack",
+      "props": {
+       "dir": "col",
+       "gap": 10
+      },
+      "children": [
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "justify": "between",
+         "align": "baseline"
+        },
+        "children": [
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--body-small",
+           "emphasis": "quiet",
+           "children": "Revenue to target"
+          }
+         },
+         {
+          "type": "DataNumber",
+          "props": {
+           "value": 78,
+           "config": {
+            "mode": {
+             "kind": "fixedScale",
+             "scale": "unit",
+             "n": 1
+            },
+            "locale": "en-GB",
+            "representation": {
+             "kind": "percentage",
+             "input": "points"
+            }
+           },
+           "scale": "sm",
+           "emphasis": "quiet"
+          }
+         }
+        ]
+       },
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "justify": "between",
+         "align": "baseline"
+        },
+        "children": [
+         {
+          "type": "DataNumber",
+          "props": {
+           "value": 312000000,
+           "config": {
+            "mode": {
+             "kind": "fixedScale",
+             "scale": "million",
+             "n": 2
+            },
+            "locale": "en-GB"
+           },
+           "symbol": "USD",
+           "scale": "lg"
+          }
+         },
+         {
+          "type": "DataNumber",
+          "props": {
+           "value": 400000000,
+           "config": {
+            "mode": {
+             "kind": "fixedScale",
+             "scale": "million",
+             "n": 2
+            },
+            "locale": "en-GB"
+           },
+           "symbol": "USD",
+           "scale": "sm",
+           "emphasis": "quiet"
+          }
+         }
+        ]
+       },
+       {
+        "type": "Progress",
+        "props": {
+         "value": 78,
+         "status": "success"
+        }
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

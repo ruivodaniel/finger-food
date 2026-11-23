@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-page-layout-toc-filters-1-page-header-second-page-header",
+ "version": 1,
+ "type": "screen",
+ "surface": "web",
+ "title": "Page header, second page header, then page left sidebar and main"
+}

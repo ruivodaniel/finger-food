@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-component-top-navigation-3-user-and-organization-menu",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Top navigation 3: the groups as drop-downs; one menu for the user and the organizations"
+}

@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-page-layout-under-header",
+ "version": 1,
+ "type": "screen",
+ "surface": "web",
+ "title": "Content passes under the page header"
+}

@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-primitive-chart-legend-default",
+ "version": 1,
+ "uiDataId": "ui-data-primitive-chart-legend",
+ "name": "default",
+ "title": "Chart legend, its cases",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

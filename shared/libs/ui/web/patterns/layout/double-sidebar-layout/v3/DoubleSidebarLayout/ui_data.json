@@ -1,0 +1,113 @@
+{
+ "id": "ui-data-pattern-layout-double-sidebar-layout-doublesidebarlayout",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-layout-double-sidebar-layout-doublesidebarlayout",
+ "kind": "component",
+ "name": "DoubleSidebarLayout",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "DoubleSidebarLayout",
+  "version": 1,
+  "surface": "web",
+  "params": [
+   "scale",
+   "away"
+  ],
+  "emits": [
+   "scrollDirection"
+  ],
+  "slots": [
+   "pageHeader",
+   "pageLeftSidebar",
+   "mainContainer"
+  ],
+  "root": {
+   "type": "Page",
+   "children": [
+    {
+     "type": "PageHeader",
+     "props": {
+      "away": {
+       "bind": "away.pageHeader"
+      }
+     },
+     "children": [
+      {
+       "type": "Slot",
+       "props": {
+        "name": "pageHeader"
+       }
+      }
+     ]
+    },
+    {
+     "type": "PageBody",
+     "children": [
+      {
+       "type": "PageLeftSidebar",
+       "props": {
+        "away": {
+         "bind": "away.pageLeftSidebar"
+        }
+       },
+       "children": [
+        {
+         "type": "Slot",
+         "props": {
+          "name": "pageLeftSidebar"
+         }
+        }
+       ]
+      },
+      {
+       "type": "Main",
+       "children": [
+        {
+         "type": "MainContent",
+         "children": [
+          {
+           "type": "MainBody",
+           "on": {
+            "scrollDirection": [
+             {
+              "emit": {
+               "event": "scrollDirection",
+               "payload": {
+                "direction": {
+                 "bind": "event"
+                }
+               }
+              }
+             }
+            ]
+           },
+           "children": [
+            {
+             "type": "MainContainer",
+             "props": {
+              "scale": {
+               "bind": "scale"
+              }
+             },
+             "children": [
+              {
+               "type": "Slot",
+               "props": {
+                "name": "mainContainer"
+               }
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

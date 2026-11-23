@@ -1,0 +1,20 @@
+{
+  "id": "term/ip-allow-list",
+  "kind": "term",
+  "title": "IP allow-list",
+  "status": "converted",
+  "subjects": [
+    "open-api"
+  ],
+  "owner": "orchestrator",
+  "tags": [
+    "open-api"
+  ],
+  "paths": [
+    "apps/main/core/api/open-api"
+  ],
+  "term": {
+    "def": "The open API accepts only the orchestrator's IPs; the main API accepts only clients'.",
+    "aliases": []
+  }
+}

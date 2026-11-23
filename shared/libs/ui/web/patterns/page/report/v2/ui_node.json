@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-page-report",
+ "version": 1,
+ "type": "screen",
+ "surface": "web",
+ "title": "Report"
+}

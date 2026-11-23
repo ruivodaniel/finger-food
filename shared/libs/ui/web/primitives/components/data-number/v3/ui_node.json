@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-primitive-data-number-v2",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Data number"
+}

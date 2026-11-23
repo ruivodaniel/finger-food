@@ -21,9 +21,9 @@ import type { WebTheme } from "../../../types";
 //   ground  = brand-3-gray-50     the warm paper: a gray with the amber mixed in (#F8F2EA for the prototype's #F6F2EA)
 //   line    = brand-3-gray-150    line2 = brand-3-gray-100
 //   soft    = brand-3-gray-600    faint = brand-3-gray-400
-//   brand deep = brand-1-dark     brand soft = brand-1-light (12% on the surface: the prototype's #E5F3EA)
-//   the status softs = status-x-light (15% on the surface)
-//   text on a coloured fill = smart-bw: white or black, read from the fill
+//   brand soft = a tint of the role (primary)
+//   the status softs = a tint of the status colour
+//   text on a coloured fill = smart-fb: the mode's foreground or background, read from the fill
 //   a fixed white or black is named only where it must not swap: the anchors, the shadows
 //
 // Open: the prototype draws no dark mode, no focus ring, no disabled state, and no violet, purple or pink.
@@ -38,13 +38,36 @@ export const bounxTheme: WebTheme = {
 
   colors: {
     main: { white: "#FFFFFF", black: "#1A1813" },
-    brand: { "1": "#1F9D5C", "2": "#1A1813", "3": "#E2902B", "4": "#7C7666" },
+    brand: { "1": "#ff0000", "2": "#1A1813", "3": "#E2902B", "4": "#7C7666" },
     status: { success: "#1F9D5C", info: "#1F9D5C", warning: "#E2902B", error: "#D6453B" },
-    flat: {
-      red: "#D6453B", orange: "#E2902B", yellow: "#D8A53B", lime: "#3FBE7C", green: "#1F9D5C", mint: "#E5F3EA",
-      turquoise: "#1FA463", blue: "#3E8FD0", violet: "#7C7666", purple: "#1A1813", pink: "#FBE3E1",
+    content: {
+      tomato: { standard: "#C04C34", soft: "#F0B7A9" },
+      red: { standard: "#C04849", soft: "#F0B5B1" },
+      ruby: { standard: "#C0475C", soft: "#F0B4B9" },
+      crimson: { standard: "#C44272", soft: "#F2B3C4" },
+      pink: { standard: "#B44288", soft: "#EAB2CF" },
+      plum: { standard: "#8F459B", soft: "#D5B2DA" },
+      purple: { standard: "#7747A3", soft: "#C7B3DF" },
+      violet: { standard: "#5D4CA9", soft: "#B9B5E3" },
+      iris: { standard: "#4E50AE", soft: "#B1B8E6" },
+      indigo: { standard: "#3856B4", soft: "#A8BBE9" },
+      blue: { standard: "#267FD5", soft: "#A9CDF6" },
+      sky: { standard: "#7ECBE1", soft: "#CAEBF5" },
+      cyan: { standard: "#2B8DAA", soft: "#ACD2DF" },
+      teal: { standard: "#2E8E81", soft: "#ADD2CB" },
+      jade: { standard: "#368C73", soft: "#AED1C4" },
+      green: { standard: "#398D61", soft: "#AFD2BC" },
+      grass: { standard: "#489053", soft: "#B3D3B6" },
+      mint: { standard: "#86D2C1", soft: "#CEEEE6" },
+      lime: { standard: "#B0D76E", soft: "#DEF0C3" },
+      yellow: { standard: "#E5D352", soft: "#F5EEBB" },
+      amber: { standard: "#E2B553", soft: "#F6E1BA" },
+      orange: { standard: "#D2662E", soft: "#F6C1AA" },
+      brown: { standard: "#947052", soft: "#D5C3B5" },
+      bronze: { standard: "#8A7065", soft: "#D0C3BE" },
+      gold: { standard: "#82725B", soft: "#CCC4B9" },
     },
-    semanticTokens: { primary: "brand-1", secondary: "brand-2", accent: "brand-3", muted: "brand-4" },
+    semanticTokens: { primary: "#ff0000", secondary: "#1A1813", accent: "#E2902B", muted: "#7C7666" },
   },
 
   typography: {
@@ -88,7 +111,7 @@ export const bounxTheme: WebTheme = {
   radius: { none: "0px", "3xs": "4px", "2xs": "6px", xs: "9px", sm: "12px", md: "16px", lg: "18px", xl: "22px", "2xl": "24px", "3xl": "28px", full: "9999px" },
   effects: {
     card: [{ type: "drop-shadow", x: 0, y: 2, blur: 10, color: "#3C321E", opacity: 0.03 }],
-    button: [{ type: "drop-shadow", x: 0, y: 8, blur: 20, color: "brand-1", opacity: 0.25 }],
+    button: [{ type: "drop-shadow", x: 0, y: 8, blur: 20, color: "primary", opacity: 0.25 }],
     buttonDark: [{ type: "drop-shadow", x: 0, y: 8, blur: 20, color: "main-black", opacity: 0.22 }],
     sheet: [{ type: "drop-shadow", x: 0, y: 14, blur: 40, color: "#3C321E", opacity: 0.08 }],
     drawer: [{ type: "drop-shadow", x: -20, y: 0, blur: 44, color: "#3C321E", opacity: 0.16 }],
@@ -107,13 +130,14 @@ export const bounxTheme: WebTheme = {
         // a gray with the amber mixed in (brand-3-gray-*, at grayColorMixPercentage), so it follows the mode too.
         background: "main-white",
         foreground: "main-black",
-        derivation: { brandLightAmount: 12, brandDarkAmount: 66, statusLightAmount: 15, statusDarkAmount: 66, grayColorMixPercentage: "8%", flatSaturationAdjust: 0 },
+        derivation: { grayColorMixPercentage: "8%" },
       },
       // not drawn in the prototype
       dark: {
         background: "#15140F",
         foreground: "#F6F2EA",
-        derivation: { brandLightAmount: 18, brandDarkAmount: 70, statusLightAmount: 18, statusDarkAmount: 70, grayColorMixPercentage: "8%", flatSaturationAdjust: 0 },
+        chroma: { saturationFactor: 0.9, gamma: 1 },
+        derivation: { grayColorMixPercentage: "8%" },
       },
     },
   },
@@ -127,31 +151,31 @@ export const bounxTheme: WebTheme = {
     // the page header: a white strip with a line under it, the brand in the title's face
     pageHeader: {
       height: "56px", sm: { height: "48px" }, md: { height: "56px" }, lg: { height: "72px" },
-      surface: { interior: { background: "background", foreground: "foreground", padding: { x: "xl" } }, boundary: { border: { bottom: { width: "thin", style: "solid", color: "brand-3-gray-150" } } } },
+      surface: { interior: { background: "background", foreground: "smart-fb", padding: { x: "xl" } }, boundary: { border: { bottom: { width: "thin", style: "solid", color: "brand-3-gray-150" } } } },
     },
     secondPageHeader: {
       height: "56px", sm: { height: "48px" }, md: { height: "56px" }, lg: { height: "72px" },
-      surface: { interior: { background: "background", foreground: "foreground", padding: { x: "xl" } }, boundary: { border: { bottom: { width: "thin", style: "solid", color: "brand-3-gray-150" } } } },
+      surface: { interior: { background: "background", foreground: "smart-fb", padding: { x: "xl" } }, boundary: { border: { bottom: { width: "thin", style: "solid", color: "brand-3-gray-150" } } } },
     },
     // a light toolbar strip under the page band — canvas, a thin rule below.
     // (Not a second dark band; a page that wants one sets emphasis="primary".)
     mainHeader: {
       height: "48px", sm: { height: "40px" }, md: { height: "48px" }, lg: { height: "64px" },
-      surface: { boundary: { border: { bottom: { width: "thin", style: "solid", color: "brand-3-gray-150" } } }, interior: { padding: { x: "lg" }, background: "brand-3-gray-50", foreground: "foreground" } },
+      surface: { boundary: { border: { bottom: { width: "thin", style: "solid", color: "brand-3-gray-150" } } }, interior: { padding: { x: "lg" }, background: "brand-3-gray-50", foreground: "smart-fb" } },
     },
     secondMainHeader: {
       height: "48px", sm: { height: "40px" }, md: { height: "48px" }, lg: { height: "64px" },
-      surface: { boundary: { border: { bottom: { width: "thin", style: "solid", color: "brand-3-gray-150" } } }, interior: { padding: { x: "lg" }, background: "brand-3-gray-50", foreground: "foreground" } },
+      surface: { boundary: { border: { bottom: { width: "thin", style: "solid", color: "brand-3-gray-150" } } }, interior: { padding: { x: "lg" }, background: "brand-3-gray-50", foreground: "smart-fb" } },
     },
-    leftSidebar: {
+    pageLeftSidebar: {
       width: "240px", sm: { width: "200px" }, md: { width: "240px" }, lg: { width: "300px" },
       surface: { boundary: { border: { right: { width: "thin", style: "solid", color: "brand-3-gray-150" } } } },
     },
-    rightSidebar: {
+    pageRightSidebar: {
       width: "320px", sm: { width: "280px" }, md: { width: "320px" }, lg: { width: "420px" },
       surface: { boundary: { border: { left: { width: "thin", style: "solid", color: "brand-3-gray-150" } } } },
     },
-    contextPanel: {
+    mainRightSidebar: {
       width: "320px", sm: { width: "260px" }, md: { width: "320px" }, lg: { width: "420px" },
       surface: { interior: { background: "brand-3-gray-50" }, boundary: { border: { left: { width: "thin", style: "solid", color: "brand-3-gray-150" } } } },
     },
@@ -160,10 +184,10 @@ export const bounxTheme: WebTheme = {
     // brand band with light text; secondary = a soft branded-gray panel. The
     // base rule still owns which edge the region's border sits on.
     emphasis: {
-      primary: { surface: { interior: { background: "brand-2", foreground: "smart-bw" } } },
-      secondary: { surface: { interior: { background: "brand-3-gray-100", foreground: "foreground" } } },
+      primary: { surface: { interior: { background: "secondary", foreground: "smart-fb" } } },
+      secondary: { surface: { interior: { background: "brand-3-gray-100", foreground: "smart-fb" } } },
     },
-    container: { sm: { maxWidth: "640px" }, md: { maxWidth: "940px" }, lg: { maxWidth: "1340px" } },
+    mainContainer: { sm: { maxWidth: "640px" }, md: { maxWidth: "940px" }, lg: { maxWidth: "1340px" } },
     dialog: { sm: { maxWidth: "480px" }, md: { maxWidth: "640px" }, lg: { maxWidth: "940px" } },
     sheet: { sm: { size: "320px" }, md: { size: "420px" }, lg: { size: "640px" } },
     section: { surface: { interior: { gap: { all: "lg" } } } },
@@ -176,19 +200,19 @@ export const bounxTheme: WebTheme = {
   families: {
     // THE surface: a white box, a hairline, no radius, a whisper of shadow
     surfaceContainer: {
-      interior: { background: "background", foreground: "foreground", gap: { all: "md" }, padding: {} },
+      interior: { background: "background", foreground: "smart-fb", gap: { all: "md" }, padding: {} },
       boundary: { border: { width: "thin", style: "solid", color: "brand-3-gray-150" }, radius: { all: "xl" } },
       defaultTypography: { typographyType: "body" },
       transition: { duration: "fast", timing: "easeOut" },
       combined: [
         { where: { state: "disabled" }, partialSurface: { interior: { opacity: 0.45 }, cursor: "not-allowed" } },
         // status on a surface: a pale fill of its color, text in the color
-        { where: { status: "error" }, partialSurface: { tint: "status-error", interior: { background: "status-error-light", foreground: "status-error" }, boundary: { border: { color: "status-error-light" } } } },
-        { where: { status: "success" }, partialSurface: { tint: "status-success", interior: { background: "status-success-light", foreground: "status-success" }, boundary: { border: { color: "status-success-light" } } } },
-        { where: { status: "warning" }, partialSurface: { tint: "status-warning", interior: { background: "status-warning-light", foreground: "status-warning-dark" }, boundary: { border: { color: "status-warning-light" } } } },
-        { where: { status: "info" }, partialSurface: { tint: "brand-1", interior: { background: "brand-1-light", foreground: "brand-1-dark" }, boundary: { border: { color: "brand-1-light" } } } },
+        { where: { status: "error" }, partialSurface: { tint: "status-error", interior: { background: "background", foreground: "status-error" }, boundary: { border: { color: "transparent" } } } },
+        { where: { status: "success" }, partialSurface: { tint: "status-success", interior: { background: "background", foreground: "status-success" }, boundary: { border: { color: "transparent" } } } },
+        { where: { status: "warning" }, partialSurface: { tint: "status-warning", interior: { background: "background", foreground: "status-warning" }, boundary: { border: { color: "transparent" } } } },
+        { where: { status: "info" }, partialSurface: { tint: "primary", interior: { background: "background", foreground: "primary" }, boundary: { border: { color: "transparent" } } } },
         // hero: the dark band
-        { where: { emphasis: "hero" }, partialSurface: { interior: { background: "brand-2", foreground: "smart-bw" }, boundary: { border: { color: "brand-2" } } } },
+        { where: { emphasis: "hero" }, partialSurface: { interior: { background: "secondary", foreground: "smart-fb" }, boundary: { border: { color: "secondary" } } } },
         { where: { emphasis: "quiet" }, partialSurface: { interior: { background: "transparent", foreground: "brand-3-gray-700" }, boundary: { border: { color: "transparent" } } } },
       ],
     },
@@ -206,12 +230,12 @@ export const bounxTheme: WebTheme = {
         "3xl": { partialSurface: { interior: { padding: { x: "lg", y: "md" } }, defaultTypography: { typographyType: "bodyExtraLarge" } } },
       },
       surface: {
-        interior: { background: "background", foreground: "foreground", padding: { x: "sm", y: "sm" }, gap: { all: "sm" } },
+        interior: { background: "background", foreground: "smart-fb", padding: { x: "sm", y: "sm" }, gap: { all: "sm" } },
         boundary: { border: { width: "thin", style: "solid", color: "brand-3-gray-150" }, radius: { all: "md" } },
         cursor: "text",
         combined: [
           { where: { state: "hover" }, partialSurface: { boundary: { border: { color: "brand-3-gray-600" } } } },
-          { where: { state: "focus" }, partialSurface: { boundary: { border: { color: "brand-1" }, outline: { width: "thin", style: "solid", color: "brand-1", offset: "0px" } } } },
+          { where: { state: "focus" }, partialSurface: { boundary: { border: { color: "primary" }, outline: { width: "thin", style: "solid", color: "primary", offset: "0px" } } } },
           { where: { status: "error" }, partialSurface: { tint: "status-error", boundary: { border: { color: "status-error" } } } },
           { where: { status: "success" }, partialSurface: { tint: "status-success", boundary: { border: { color: "status-success" } } } },
           { where: { status: "warning" }, partialSurface: { tint: "status-warning", boundary: { border: { color: "status-warning" } } } },
@@ -220,12 +244,12 @@ export const bounxTheme: WebTheme = {
       },
       placeholderColor: "brand-3-gray-600",
       placeholderOpacity: 1,
-      caretColor: "brand-1",
+      caretColor: "primary",
     },
 
     elevatedOverlay: {
       surface: { interior: { background: "background" }, boundary: { effect: "sheet", border: { width: "thin", style: "solid", color: "brand-3-gray-150" } } },
-      overlay: { scrimColor: "brand-2", scrimOpacity: 0.45, scrimBlur: "none" },
+      overlay: { scrimColor: "secondary", scrimOpacity: 0.45, scrimBlur: "none" },
     },
 
     listContainer: {
@@ -235,7 +259,7 @@ export const bounxTheme: WebTheme = {
         boundary: { border: { bottom: { width: "thin", style: "solid", color: "brand-3-gray-100" } } },
         combined: [
           { where: { state: "hover" }, partialSurface: { interior: { background: "background" } } },
-          { where: { state: "selected" }, partialSurface: { interior: { background: "brand-1-light" } } },
+          { where: { state: "selected" }, partialSurface: { tint: "primary", interior: { background: "background" } } },
         ],
       },
       // no `cell`: it compiles to `[list] > * > *` — every grandchild of a list — and in a
@@ -262,45 +286,45 @@ export const bounxTheme: WebTheme = {
       },
       surface: {
         // the plain control: white, hairline — the target's default button
-        interior: { background: "background", foreground: "foreground", padding: { x: "md", y: "sm" }, gap: { all: "sm" } },
+        interior: { background: "background", foreground: "smart-fb", padding: { x: "md", y: "sm" }, gap: { all: "sm" } },
         boundary: { border: { width: "thin", style: "solid", color: "brand-3-gray-150" }, radius: { all: "md" } },
         defaultTypography: { typographyType: "link" },
         cursor: "pointer",
         combined: [
           // emphasis = the pattern; tint = the color (status re-tints below)
           // hero: the screen's main action — the brand fill with its glow. primary: the same fill, flat.
-          { where: { emphasis: "hero" }, partialSurface: { tint: "primary", interior: { background: "tint", foreground: "smart-bw" }, boundary: { border: { color: "transparent" }, effect: "button" } } },
-          { where: { emphasis: "primary" }, partialSurface: { tint: "primary", interior: { background: "tint", foreground: "smart-bw" }, boundary: { border: { color: "transparent" } } } },
-          { where: { emphasis: "secondary" }, partialSurface: { interior: { background: "background", foreground: "foreground" }, boundary: { border: { color: "brand-3-gray-200" } } } },
-          { where: { emphasis: "tertiary" }, partialSurface: { interior: { background: "transparent", foreground: "brand-1" }, boundary: { border: { color: "transparent" } } } },
+          { where: { emphasis: "hero" }, partialSurface: { tint: "primary", interior: { background: "tint", foreground: "smart-fb" }, boundary: { border: { color: "transparent" }, effect: "button" } } },
+          { where: { emphasis: "primary" }, partialSurface: { tint: "primary", interior: { background: "tint", foreground: "smart-fb" }, boundary: { border: { color: "transparent" } } } },
+          { where: { emphasis: "secondary" }, partialSurface: { interior: { background: "background", foreground: "smart-fb" }, boundary: { border: { color: "brand-3-gray-200" } } } },
+          { where: { emphasis: "tertiary" }, partialSurface: { interior: { background: "transparent", foreground: "primary" }, boundary: { border: { color: "transparent" } } } },
           { where: { emphasis: "quiet" }, partialSurface: { interior: { background: "transparent", foreground: "brand-3-gray-700" }, boundary: { border: { color: "transparent" } } } },
           { where: { status: "error" }, partialSurface: { tint: "status-error", interior: { foreground: "status-error" }, boundary: { border: { color: "status-error" } } } },
           { where: { status: "destructive" }, partialSurface: { tint: "status-error", interior: { foreground: "status-error" }, boundary: { border: { color: "status-error" } } } },
           { where: { status: "success" }, partialSurface: { tint: "status-success", interior: { foreground: "status-success" }, boundary: { border: { color: "status-success" } } } },
-          { where: { status: "warning" }, partialSurface: { tint: "status-warning", interior: { foreground: "status-warning-dark" }, boundary: { border: { color: "status-warning" } } } },
-          { where: { status: "info" }, partialSurface: { tint: "brand-1", interior: { foreground: "brand-1-dark" }, boundary: { border: { color: "brand-1" } } } },
+          { where: { status: "warning" }, partialSurface: { tint: "status-warning", interior: { foreground: "status-warning" }, boundary: { border: { color: "status-warning" } } } },
+          { where: { status: "info" }, partialSurface: { tint: "primary", interior: { foreground: "primary" }, boundary: { border: { color: "primary" } } } },
           // filled + status: the fill takes the status color
-          { where: { emphasis: "primary", status: "error" }, partialSurface: { interior: { background: "tint", foreground: "smart-bw" }, boundary: { border: { color: "transparent" } } } },
-          { where: { emphasis: "primary", status: "destructive" }, partialSurface: { interior: { background: "tint", foreground: "smart-bw" }, boundary: { border: { color: "transparent" } } } },
-          { where: { emphasis: "primary", status: "success" }, partialSurface: { interior: { background: "tint", foreground: "smart-bw" }, boundary: { border: { color: "transparent" } } } },
-          { where: { emphasis: "primary", status: "warning" }, partialSurface: { interior: { background: "tint", foreground: "smart-bw" }, boundary: { border: { color: "transparent" } } } },
-          { where: { emphasis: "primary", status: "info" }, partialSurface: { interior: { background: "tint", foreground: "smart-bw" }, boundary: { border: { color: "transparent" } } } },
+          { where: { emphasis: "primary", status: "error" }, partialSurface: { interior: { background: "tint", foreground: "smart-fb" }, boundary: { border: { color: "transparent" } } } },
+          { where: { emphasis: "primary", status: "destructive" }, partialSurface: { interior: { background: "tint", foreground: "smart-fb" }, boundary: { border: { color: "transparent" } } } },
+          { where: { emphasis: "primary", status: "success" }, partialSurface: { interior: { background: "tint", foreground: "smart-fb" }, boundary: { border: { color: "transparent" } } } },
+          { where: { emphasis: "primary", status: "warning" }, partialSurface: { interior: { background: "tint", foreground: "smart-fb" }, boundary: { border: { color: "transparent" } } } },
+          { where: { emphasis: "primary", status: "info" }, partialSurface: { interior: { background: "tint", foreground: "smart-fb" }, boundary: { border: { color: "transparent" } } } },
           // states
           { where: { state: "hover" }, partialSurface: { interior: { background: "background" }, boundary: { border: { color: "brand-3-gray-600" } } } },
-          { where: { emphasis: "primary", state: "hover" }, partialSurface: { interior: { background: "brand-1-dark", foreground: "smart-bw" }, boundary: { border: { color: "transparent" } } } },
-          { where: { emphasis: "hero", state: "hover" }, partialSurface: { interior: { background: "brand-1-dark", foreground: "smart-bw" }, boundary: { border: { color: "transparent" } } } },
-          { where: { emphasis: "tertiary", state: "hover" }, partialSurface: { interior: { background: "brand-1-light", foreground: "brand-1-dark" }, boundary: { border: { color: "transparent" } } } },
-          { where: { emphasis: "quiet", state: "hover" }, partialSurface: { interior: { background: "brand-3-gray-100", foreground: "foreground" }, boundary: { border: { color: "transparent" } } } },
+          { where: { emphasis: "primary", state: "hover" }, partialSurface: { interior: { background: "primary", foreground: "smart-fb" }, boundary: { border: { color: "transparent" } } } },
+          { where: { emphasis: "hero", state: "hover" }, partialSurface: { interior: { background: "primary", foreground: "smart-fb" }, boundary: { border: { color: "transparent" } } } },
+          { where: { emphasis: "tertiary", state: "hover" }, partialSurface: { tint: "primary", interior: { background: "background", foreground: "primary" }, boundary: { border: { color: "transparent" } } } },
+          { where: { emphasis: "quiet", state: "hover" }, partialSurface: { interior: { background: "brand-3-gray-100", foreground: "smart-fb" }, boundary: { border: { color: "transparent" } } } },
           { where: { state: "active" }, partialSurface: { interior: { background: "brand-3-gray-100" } } },
           // selected: the ink fill, as the prototype's chosen tab
-          { where: { state: "selected" }, partialSurface: { tint: "brand-2", interior: { background: "brand-2", foreground: "smart-bw" }, boundary: { border: { color: "brand-2" } } } },
+          { where: { state: "selected" }, partialSurface: { tint: "secondary", interior: { background: "secondary", foreground: "smart-fb" }, boundary: { border: { color: "secondary" } } } },
           // selected + status: keep the status colour, don't fall back to the generic brand selection tint
-          { where: { state: "selected", status: "error" }, partialSurface: { interior: { background: "status-error", foreground: "smart-bw" }, boundary: { border: { color: "status-error" } } } },
-          { where: { state: "selected", status: "destructive" }, partialSurface: { interior: { background: "status-error", foreground: "smart-bw" }, boundary: { border: { color: "status-error" } } } },
-          { where: { state: "selected", status: "success" }, partialSurface: { interior: { background: "status-success", foreground: "smart-bw" }, boundary: { border: { color: "status-success" } } } },
-          { where: { state: "selected", status: "warning" }, partialSurface: { interior: { background: "status-warning", foreground: "smart-bw" }, boundary: { border: { color: "status-warning" } } } },
-          { where: { state: "selected", status: "info" }, partialSurface: { interior: { background: "brand-1", foreground: "smart-bw" }, boundary: { border: { color: "brand-1" } } } },
-          { where: { state: "focus" }, partialSurface: { boundary: { outline: { width: "thin", style: "solid", color: "brand-1", offset: "1px" } } } },
+          { where: { state: "selected", status: "error" }, partialSurface: { interior: { background: "status-error", foreground: "smart-fb" }, boundary: { border: { color: "status-error" } } } },
+          { where: { state: "selected", status: "destructive" }, partialSurface: { interior: { background: "status-error", foreground: "smart-fb" }, boundary: { border: { color: "status-error" } } } },
+          { where: { state: "selected", status: "success" }, partialSurface: { interior: { background: "status-success", foreground: "smart-fb" }, boundary: { border: { color: "status-success" } } } },
+          { where: { state: "selected", status: "warning" }, partialSurface: { interior: { background: "status-warning", foreground: "smart-fb" }, boundary: { border: { color: "status-warning" } } } },
+          { where: { state: "selected", status: "info" }, partialSurface: { interior: { background: "primary", foreground: "smart-fb" }, boundary: { border: { color: "primary" } } } },
+          { where: { state: "focus" }, partialSurface: { boundary: { outline: { width: "thin", style: "solid", color: "primary", offset: "1px" } } } },
           { where: { state: "disabled" }, partialSurface: { interior: { opacity: 0.45 }, cursor: "not-allowed" } },
           { where: { state: "loading" }, partialSurface: { cursor: "progress", interior: { opacity: 0.7 } } },
         ],
@@ -333,7 +357,7 @@ export const bounxTheme: WebTheme = {
       interior: { background: "transparent" },
       combined: [
         { where: { state: "hover" }, partialSurface: { interior: { background: "background" } } },
-        { where: { state: "selected" }, partialSurface: { interior: { background: "brand-1-light" } } },
+        { where: { state: "selected" }, partialSurface: { tint: "primary", interior: { background: "background" } } },
       ],
     },
     tableCell: { interior: { padding: { x: "lg", y: "sm" } }, boundary: { border: { width: "none" } }, defaultTypography: { typographyType: "body" } },
@@ -362,10 +386,10 @@ export const bounxTheme: WebTheme = {
     // layouts.stack in the engine — the next step, not here.
     // ═══════════════════════════════════════════════════════════════════════
     tile: {
-      interior: { background: "background", foreground: "foreground", padding: { all: "md" }, gap: { all: "xs" } },
+      interior: { background: "background", foreground: "smart-fb", padding: { all: "md" }, gap: { all: "xs" } },
       boundary: { border: { width: "thin", style: "solid", color: "brand-3-gray-150" }, radius: { all: "md" } },
       combined: [
-        { where: { emphasis: "hero" }, partialSurface: { interior: { background: "brand-2", foreground: "smart-bw" }, boundary: { border: { color: "brand-2" } } } },
+        { where: { emphasis: "hero" }, partialSurface: { interior: { background: "secondary", foreground: "smart-fb" }, boundary: { border: { color: "secondary" } } } },
         { where: { emphasis: "quiet" }, partialSurface: { interior: { background: "brand-3-gray-50" }, boundary: { border: { color: "transparent" } } } },
       ],
     },
@@ -380,23 +404,23 @@ export const bounxTheme: WebTheme = {
 
     // ── badge: the pill — soft green with deep green text; gray when quiet; a status takes its soft fill ──
     badge: {
-      surface: {
-        interior: { background: "brand-1-light", foreground: "brand-1-dark", padding: { x: "sm", y: "xs" }, gap: { all: "2xs" } },
+      surface: { tint: "primary",
+        interior: { background: "background", foreground: "primary", padding: { x: "sm", y: "xs" }, gap: { all: "2xs" } },
         boundary: { border: { width: "none" }, radius: { all: "full" } },
         defaultTypography: { typographyType: "numbersSmall" },
         combined: [
-          { where: { emphasis: "primary" }, partialSurface: { interior: { background: "brand-1-light", foreground: "brand-1-dark" } } },
-          { where: { emphasis: "hero" }, partialSurface: { interior: { background: "brand-1", foreground: "smart-bw" } } },
-          { where: { emphasis: "quiet" }, partialSurface: { interior: { background: "brand-3-gray-150", foreground: "brand-3-gray-600" } } },
-          { where: { status: "error" }, partialSurface: { interior: { background: "status-error-light", foreground: "status-error" } } },
-          { where: { status: "destructive" }, partialSurface: { interior: { background: "status-error-light", foreground: "status-error" } } },
-          { where: { status: "success" }, partialSurface: { interior: { background: "brand-1-light", foreground: "brand-1-dark" } } },
-          { where: { status: "warning" }, partialSurface: { interior: { background: "status-warning-light", foreground: "status-warning-dark" } } },
-          { where: { status: "info" }, partialSurface: { interior: { background: "brand-1-light", foreground: "brand-1-dark" } } },
+          { where: { emphasis: "primary" }, partialSurface: { tint: "primary", interior: { background: "background", foreground: "primary" } } },
+          { where: { emphasis: "hero" }, partialSurface: { interior: { background: "primary", foreground: "smart-fb" } } },
+          { where: { emphasis: "quiet" }, partialSurface: { interior: { background: "brand-3-gray-150", foreground: "smart-fb" } } },
+          { where: { status: "error" }, partialSurface: { tint: "status-error", interior: { background: "background", foreground: "status-error" } } },
+          { where: { status: "destructive" }, partialSurface: { tint: "status-error", interior: { background: "background", foreground: "status-error" } } },
+          { where: { status: "success" }, partialSurface: { tint: "status-success", interior: { background: "background", foreground: "status-success" } } },
+          { where: { status: "warning" }, partialSurface: { tint: "status-warning", interior: { background: "background", foreground: "status-warning" } } },
+          { where: { status: "info" }, partialSurface: { tint: "status-info", interior: { background: "background", foreground: "status-info" } } },
           // emphasis="primary" is the component default: a status on it still shows its colour
-          { where: { emphasis: "primary", status: "error" }, partialSurface: { interior: { background: "status-error-light", foreground: "status-error" } } },
-          { where: { emphasis: "primary", status: "destructive" }, partialSurface: { interior: { background: "status-error-light", foreground: "status-error" } } },
-          { where: { emphasis: "primary", status: "warning" }, partialSurface: { interior: { background: "status-warning-light", foreground: "status-warning-dark" } } },
+          { where: { emphasis: "primary", status: "error" }, partialSurface: { tint: "status-error", interior: { background: "background", foreground: "status-error" } } },
+          { where: { emphasis: "primary", status: "destructive" }, partialSurface: { tint: "status-error", interior: { background: "background", foreground: "status-error" } } },
+          { where: { emphasis: "primary", status: "warning" }, partialSurface: { tint: "status-warning", interior: { background: "background", foreground: "status-warning" } } },
         ],
       },
       sizes: {
@@ -411,13 +435,13 @@ export const bounxTheme: WebTheme = {
     },
     // ── chip: the tinted tag ──
     chip: {
-      surface: {
-        interior: { background: "brand-1-light", foreground: "brand-1-dark", padding: { x: "xs", y: "3xs" }, gap: { all: "2xs" } },
+      surface: { tint: "primary",
+        interior: { background: "background", foreground: "primary", padding: { x: "xs", y: "3xs" }, gap: { all: "2xs" } },
         boundary: { border: { width: "thin", style: "solid", color: "brand-3-gray-200" } },
         defaultTypography: { typographyType: "numbersExtraSmall", textTransform: "uppercase" },
         combined: [
-          { where: { state: "hover" }, partialSurface: { boundary: { border: { color: "brand-1" } } } },
-          { where: { state: "selected" }, partialSurface: { interior: { background: "brand-1", foreground: "smart-bw" }, boundary: { border: { color: "brand-1" } } } },
+          { where: { state: "hover" }, partialSurface: { boundary: { border: { color: "primary" } } } },
+          { where: { state: "selected" }, partialSurface: { interior: { background: "primary", foreground: "smart-fb" }, boundary: { border: { color: "primary" } } } },
         ],
       },
       sizes: {
@@ -431,7 +455,7 @@ export const bounxTheme: WebTheme = {
     // ── avatar: the one round thing ──
     avatar: {
       surface: {
-        interior: { background: "brand-1", foreground: "smart-bw", padding: { all: "none" }, childAlign: { horizontal: "center", vertical: "center" } },
+        interior: { background: "primary", foreground: "smart-fb", padding: { all: "none" }, childAlign: { horizontal: "center", vertical: "center" } },
         boundary: { radius: { all: "full" }, border: { width: "none" } },
         defaultTypography: { typographyType: "numbersSmall" },
       },
@@ -448,9 +472,9 @@ export const bounxTheme: WebTheme = {
     icon: {},
     // ── progress: thin track, brand fill ──
     progress: { surface: { interior: { background: "brand-3-gray-100", padding: {} }, boundary: { border: { width: "none" } }, dimensionPosition: { height: "4px" } } },
-    progressInner: { interior: { background: "brand-1" } },
+    progressInner: { interior: { background: "primary" } },
     skeleton: { surface: { interior: { background: "brand-3-gray-100" }, boundary: { border: { width: "none" } } } },
-    spinner: { surface: { interior: { foreground: "brand-1", background: "transparent" }, boundary: { border: { width: "none" } } } },
+    spinner: { surface: { interior: { foreground: "primary", background: "transparent" }, boundary: { border: { width: "none" } } } },
 
     // ── controls ──
     button: { surface: { interior: { gap: { all: "sm" } } } },
@@ -459,7 +483,7 @@ export const bounxTheme: WebTheme = {
         dimensionPosition: { width: "30px", height: "17px" },
         interior: { background: "brand-3-gray-200", padding: { all: "none" } },
         boundary: { radius: { all: "none" }, border: { width: "none" } },
-        combined: [{ where: { state: "selected" }, partialSurface: { interior: { background: "brand-1" } } }],
+        combined: [{ where: { state: "selected" }, partialSurface: { interior: { background: "primary" } } }],
       },
       thumb: {
         dimensionPosition: { width: "13px", height: "13px", translateX: "2px", translateY: "2px" },
@@ -473,7 +497,7 @@ export const bounxTheme: WebTheme = {
         interior: { background: "background", padding: { all: "none" } },
         boundary: { border: { width: "thin", style: "solid", color: "brand-3-gray-600" }, radius: { all: "none" } },
         dimensionPosition: { width: "15px", height: "15px" },
-        combined: [{ where: { state: "selected" }, partialSurface: { interior: { background: "brand-1", foreground: "smart-bw" }, boundary: { border: { color: "brand-1" } } } }],
+        combined: [{ where: { state: "selected" }, partialSurface: { interior: { background: "primary", foreground: "smart-fb" }, boundary: { border: { color: "primary" } } } }],
       },
     },
     radio: {
@@ -481,7 +505,7 @@ export const bounxTheme: WebTheme = {
         interior: { background: "background", padding: { all: "none" } },
         boundary: { border: { width: "thin", style: "solid", color: "brand-3-gray-600" }, radius: { all: "full" } },
         dimensionPosition: { width: "15px", height: "15px" },
-        combined: [{ where: { state: "selected" }, partialSurface: { boundary: { border: { width: "extraThick", color: "brand-1" } } } }],
+        combined: [{ where: { state: "selected" }, partialSurface: { boundary: { border: { width: "extraThick", color: "primary" } } } }],
       },
     },
     // ── tabs: text, a 3px brand bar when selected ──
@@ -491,8 +515,8 @@ export const bounxTheme: WebTheme = {
         interior: { background: "transparent", foreground: "brand-3-gray-700", padding: { x: "none", y: "sm" } },
         boundary: { border: { width: "none", bottom: { width: "thick", style: "solid", color: "transparent" } } },
         combined: [
-          { where: { state: "hover" }, partialSurface: { interior: { background: "transparent", foreground: "foreground" }, boundary: { border: { color: "transparent" } } } },
-          { where: { state: "selected" }, partialSurface: { interior: { background: "transparent", foreground: "foreground" }, boundary: { border: { bottom: { color: "brand-1" } } } } },
+          { where: { state: "hover" }, partialSurface: { interior: { background: "transparent", foreground: "smart-fb" }, boundary: { border: { color: "transparent" } } } },
+          { where: { state: "selected" }, partialSurface: { interior: { background: "transparent", foreground: "smart-fb" }, boundary: { border: { bottom: { color: "primary" } } } } },
         ],
       },
     },
@@ -514,14 +538,14 @@ export const bounxTheme: WebTheme = {
         interior: { background: "transparent", foreground: "brand-3-gray-700", padding: { x: "lg", y: "sm" }, gap: { all: "sm" }, childAlign: { horizontal: "start", vertical: "center" } },
         boundary: { border: { width: "none", left: { width: "thick", style: "solid", color: "transparent" } }, radius: { all: "none" } },
         combined: [
-          { where: { state: "hover" }, partialSurface: { interior: { background: "background", foreground: "foreground" }, boundary: { border: { color: "transparent" } } } },
-          { where: { state: "selected" }, partialSurface: { interior: { background: "background", foreground: "foreground" }, boundary: { border: { left: { color: "brand-1" } } } } },
+          { where: { state: "hover" }, partialSurface: { interior: { background: "background", foreground: "smart-fb" }, boundary: { border: { color: "transparent" } } } },
+          { where: { state: "selected" }, partialSurface: { interior: { background: "background", foreground: "smart-fb" }, boundary: { border: { left: { color: "primary" } } } } },
           // main nav (emphasis="primary") looks exactly like the section nav: the same quiet rows,
           // the same selected row — light ground and the brand bar. The entries exist only to
           // cancel the control family's primary fill (tint and alpha reset: the fill formula mixes --tint in).
           { where: { emphasis: "primary" }, partialSurface: { tint: "transparent", interior: { background: "transparent", backgroundAlpha: 1, foreground: "brand-3-gray-700" }, boundary: { border: { color: "transparent" } } } },
-          { where: { emphasis: "primary", state: "hover" }, partialSurface: { tint: "transparent", interior: { background: "background", backgroundAlpha: 1, foreground: "foreground" }, boundary: { border: { color: "transparent" } } } },
-          { where: { emphasis: "primary", state: "selected" }, partialSurface: { tint: "transparent", interior: { background: "background", backgroundAlpha: 1, foreground: "foreground" }, boundary: { border: { color: "transparent", left: { color: "brand-1" } } } } },
+          { where: { emphasis: "primary", state: "hover" }, partialSurface: { tint: "transparent", interior: { background: "background", backgroundAlpha: 1, foreground: "smart-fb" }, boundary: { border: { color: "transparent" } } } },
+          { where: { emphasis: "primary", state: "selected" }, partialSurface: { tint: "transparent", interior: { background: "background", backgroundAlpha: 1, foreground: "smart-fb" }, boundary: { border: { color: "transparent", left: { color: "primary" } } } } },
         ],
       },
     },
@@ -533,7 +557,7 @@ export const bounxTheme: WebTheme = {
         boundary: { border: { width: "none", bottom: { width: "thin", style: "solid", color: "brand-3-gray-100" } }, radius: { all: "none" } },
         combined: [
           { where: { state: "hover" }, partialSurface: { interior: { background: "background" }, boundary: { border: { color: "brand-3-gray-100" } } } },
-          { where: { state: "selected" }, partialSurface: { interior: { background: "brand-1-light", foreground: "brand-1-dark" }, boundary: { border: { color: "brand-3-gray-100" } } } },
+          { where: { state: "selected" }, partialSurface: { tint: "primary", interior: { background: "background", foreground: "primary" }, boundary: { border: { color: "brand-3-gray-100" } } } },
         ],
       },
     },
@@ -542,8 +566,8 @@ export const bounxTheme: WebTheme = {
         interior: { background: "transparent", padding: { x: "md", y: "xs" } },
         boundary: { border: { width: "none" }, radius: { all: "none" } },
         combined: [
-          { where: { state: "hover" }, partialSurface: { interior: { background: "background", foreground: "foreground" } } },
-          { where: { state: "selected" }, partialSurface: { interior: { background: "brand-1-light", foreground: "brand-1-dark" } } },
+          { where: { state: "hover" }, partialSurface: { interior: { background: "background", foreground: "smart-fb" } } },
+          { where: { state: "selected" }, partialSurface: { tint: "primary", interior: { background: "background", foreground: "primary" } } },
           { where: { status: "destructive" }, partialSurface: { interior: { foreground: "status-error" } } },
         ],
       },
@@ -561,7 +585,7 @@ export const bounxTheme: WebTheme = {
         interior: { background: "background", foreground: "brand-3-gray-700", padding: { all: "xl" }, childAlign: { horizontal: "center", vertical: "center" } },
         boundary: { border: { width: "default", style: "dashed", color: "brand-3-gray-200" } },
         cursor: "pointer",
-        combined: [{ where: { state: "selected" }, partialSurface: { boundary: { border: { color: "brand-1" } }, interior: { background: "brand-1-light" } } }],
+        combined: [{ where: { state: "selected" }, partialSurface: { tint: "primary", boundary: { border: { color: "primary" } }, interior: { background: "background" } } }],
       },
     },
     select: { surface: { cursor: "pointer" } },
@@ -571,7 +595,7 @@ export const bounxTheme: WebTheme = {
     popover: { surface: { boundary: { effect: "popover" }, interior: { padding: { all: "sm" } } } },
     tooltip: {
       surface: {
-        interior: { background: "brand-2", foreground: "smart-bw", padding: { x: "sm", y: "xs" } },
+        interior: { background: "secondary", foreground: "smart-fb", padding: { x: "sm", y: "xs" } },
         boundary: { border: { width: "none" }, effect: "card" },
         defaultTypography: { typographyType: "bodySmall" },
       },
@@ -603,9 +627,9 @@ export const bounxTheme: WebTheme = {
   // insets (region md + item md) push half out of the rail — tighten them.
   // ═══════════════════════════════════════════════════════════════════════════
   rules: [
-    { chain: [{ key: "sidebar", concept: "collapsed" }, { key: "header" }], tokens: { interior: { padding: { x: "sm" } } } },
-    { chain: [{ key: "sidebar", concept: "collapsed" }, { key: "footer" }], tokens: { interior: { padding: { x: "sm" } } } },
-    { chain: [{ key: "sidebar", concept: "collapsed" }, { key: "header" }, { key: "sidebarItem" }], tokens: { interior: { padding: { x: "xs" } } } },
-    { chain: [{ key: "sidebar", concept: "collapsed" }, { key: "footer" }, { key: "sidebarItem" }], tokens: { interior: { padding: { x: "xs" } } } },
+    { chain: [{ key: "sidebar", where: { flag: "collapsed" } }, { key: "header" }], tokens: { interior: { padding: { x: "sm" } } } },
+    { chain: [{ key: "sidebar", where: { flag: "collapsed" } }, { key: "footer" }], tokens: { interior: { padding: { x: "sm" } } } },
+    { chain: [{ key: "sidebar", where: { flag: "collapsed" } }, { key: "header" }, { key: "sidebarItem" }], tokens: { interior: { padding: { x: "xs" } } } },
+    { chain: [{ key: "sidebar", where: { flag: "collapsed" } }, { key: "footer" }, { key: "sidebarItem" }], tokens: { interior: { padding: { x: "xs" } } } },
   ],
 };

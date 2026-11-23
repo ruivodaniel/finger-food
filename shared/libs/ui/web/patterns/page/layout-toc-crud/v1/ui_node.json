@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-page-layout-toc-crud",
+ "version": 1,
+ "type": "screen",
+ "surface": "web",
+ "title": "Table of contents with create, rename, delete"
+}

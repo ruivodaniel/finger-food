@@ -8,7 +8,7 @@
  * there is no rollback, so nothing is ever "current" in a mutable sense).
  */
 
-import type { Ac, Private, Public } from "@libs/gated-scoped-ac";
+import type { Ac, Private, Public, ScopedAcRequestContext } from "@libs/gated-scoped-ac";
 import type {
   AuthAndRegistrationConfig,
   LegalConsentItem,
@@ -16,7 +16,6 @@ import type {
   OrgLifecycleEntry,
 } from "../../shared/auth-config/types";
 import { matches } from "../../shared/auth-config/resolver";
-import type { ScopedAcRequestContext } from "../shared/scoped-ac";
 import type {
   ConsentItemDocumentView,
   LegalDocumentView,
@@ -99,7 +98,7 @@ export class LegalDocumentService {
   /** The scope's latest published row, or null — the consent service's source
    * of truth for "which version must be consented to". AC42: Public — reached
    * directly by the public `getLatestVersion` route and by the token-less
-   * consent internals (`recordConsent`/`consentSatisfied`, which pass `PUBLIC`
+   * consent internals (`recordConsentScoped`/`consentSatisfied`, which pass `PUBLIC`
    * literally per rule 5 — this data is world-readable regardless of caller). */
   async latestPublished(
     visibility: Public,
@@ -132,12 +131,14 @@ export class LegalDocumentService {
     input: SaveDraftInput,
   ): Promise<LegalDocumentView> {
     const contentHtml = sanitizeLegalHtml(input.contentHtml);
-    // Authoring-internal probe (ungated): decides edit-vs-create; the WRITE it
-    // selects is gated, so a denied caller is forbidden at the write below.
-    const existing = await this.deps.legalDocumentRepo.findDraft(
+    // Decides edit-vs-create through the caller's read Scope: a denied caller
+    // sees no draft, falls to the create branch, and is forbidden there.
+    const existing = await this.deps.legalDocumentRepo.findDraftScoped(
       visibility,
       input.type,
       input.orgTypeId,
+      this.deps.engine.resolveRead(ac.permissions, "legal_document", ac.bag),
+      ac.gateDb,
     );
     if (existing) {
       const patch = { title: input.title, contentHtml };
@@ -170,7 +171,8 @@ export class LegalDocumentService {
       }
       return toView(updated);
     }
-    // New version: context-only create verdict (AC9/AC33), then the plain insert.
+    // New version: context-only create verdict (AC9/AC33) as the cheap early
+    // refusal, then the insert through the gate, which takes it again.
     const verdict = this.deps.engine.allowCreate(
       ac.permissions,
       "legal_document",
@@ -181,12 +183,22 @@ export class LegalDocumentService {
         verdict.reason ?? "cannot create legal document",
       );
     }
-    const created = await this.deps.legalDocumentRepo.create(visibility, {
-      type: input.type,
-      orgTypeId: input.orgTypeId,
-      title: input.title,
-      contentHtml,
-    });
+    const created = await this.deps.legalDocumentRepo.create(
+      visibility,
+      {
+        type: input.type,
+        orgTypeId: input.orgTypeId,
+        title: input.title,
+        contentHtml,
+      },
+      ac.permissions,
+      this.deps.engine.resolveRead(ac.permissions, "legal_document", ac.bag),
+      ac.gateDb,
+    );
+    // null ⇒ the gate refused the insert.
+    if (!created) {
+      throw this.deps.errors.forbidden("cannot create legal document");
+    }
     return toView(created);
   }
 
@@ -238,10 +250,11 @@ export class LegalDocumentService {
     return toView(updated);
   }
 
-  /** Every version in the scope, draft included, newest first — the gated
-   * authoring list. Read pass-through (AC5): the engine resolves the read Scope,
-   * the repo executes it. A denied caller admits no rows ⇒ empty list (never the
-   * published fallback — the private branch does not leak into the public one). */
+  /** The scope's versions, newest first: the published ones for every caller
+   * (world-readable, AC22 — the same data the consent screens serve), plus the
+   * draft when the caller's grants admit it (an author). The published history
+   * is the raw PUBLIC read; the draft is the read pass-through (AC5): the
+   * engine resolves the read Scope, the repo executes it. */
   async getVersions(
     ac: ScopedAcRequestContext,
     visibility: Private,
@@ -253,14 +266,19 @@ export class LegalDocumentService {
       "legal_document",
       ac.bag,
     );
-    const docs = await this.deps.legalDocumentRepo.findAllByScope(
-      visibility,
-      type,
-      orgTypeId,
-      scope,
-      ac.gateDb,
-    );
-    return docs.map(toView);
+    const [published, draft] = await Promise.all([
+      this.deps.legalDocumentRepo.findPublishedByScope(visibility, type, orgTypeId),
+      this.deps.legalDocumentRepo.findDraftScoped(
+        visibility,
+        type,
+        orgTypeId,
+        scope,
+        ac.gateDb,
+      ),
+    ]);
+    // The draft is the scope's highest version by construction, so it heads
+    // the list.
+    return [...(draft ? [draft] : []), ...published].map(toView);
   }
 
   /** One PUBLISHED version by id — the PUBLIC `/legal/documents/:id` branch
@@ -309,28 +327,13 @@ export class LegalDocumentService {
    * The (scope, type) pairs the configs reference — what the authoring UI
    * offers. Platform = registration rules; per org type = membership rules
    * ∪ creation/join consent blocks.
+   *
+   * Ungated: it reads config, not rows, so every signed-in caller gets the
+   * same menu. What a caller sees or changes inside it is the engine's call
+   * on the rows — the versions read and the draft/publish writes.
    */
-  authoringCatalog(
-    ac: ScopedAcRequestContext,
-    visibility: Private,
-  ): AuthoringScope[] {
+  authoringCatalog(visibility: Private): AuthoringScope[] {
     void visibility; // no downstream repo/service call to thread into
-    // A row-less config projection (the authoring UI's scope/type menu): there
-    // are no rows to scope, so the gate is the authoring verdict — may this
-    // caller author legal documents at all (`manage_legal_document_platform`)?
-    // Modelled as the create verdict (authoring = opening/editing versions);
-    // denied ⇒ forbidden (AC9). [judgment call: verdict, not resolveRead, since
-    // the projection reads config not rows.]
-    const verdict = this.deps.engine.allowCreate(
-      ac.permissions,
-      "legal_document",
-      ac.bag,
-    );
-    if (!verdict.allow) {
-      throw this.deps.errors.forbidden(
-        verdict.reason ?? "cannot author legal documents",
-      );
-    }
     const out: AuthoringScope[] = [];
 
     const platformTypes = this.consentTypesFor({ intent: "registration" });

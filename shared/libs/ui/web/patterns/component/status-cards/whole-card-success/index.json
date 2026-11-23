@@ -1,0 +1,74 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "whole-card-success",
+ "version": 1,
+ "surface": "web",
+ "measure": "md",
+ "root": {
+  "type": "Card",
+  "props": {
+   "status": "success",
+   "className": "flex-1 min-w-56"
+  },
+  "children": [
+   {
+    "type": "Content",
+    "props": {},
+    "children": [
+     {
+      "type": "Stack",
+      "props": {
+       "dir": "col",
+       "gap": 6
+      },
+      "children": [
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "gap": 8,
+         "align": "center"
+        },
+        "children": [
+         {
+          "type": "Icon",
+          "props": {
+           "name": "success",
+           "size": "sm"
+          }
+         },
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--heading4",
+           "children": "Payment received"
+          }
+         }
+        ]
+       },
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--body-small",
+         "children": "\u20ac4,800.00 from Altar Design Systems for INV-2026-0142."
+        }
+       },
+       {
+        "type": "Text",
+        "props": {
+         "as": "span",
+         "element": "type--body-extra-small",
+         "emphasis": "quiet",
+         "children": "12 min ago"
+        }
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

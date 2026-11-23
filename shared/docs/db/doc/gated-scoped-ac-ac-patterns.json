@@ -1,0 +1,189 @@
+{
+ "id": "doc/gated-scoped-ac-ac-patterns",
+ "kind": "doc",
+ "title": "AC Patterns",
+ "status": "todo",
+ "subject": "gated-scoped-ac",
+ "owner": "libs/gated-scoped-ac",
+ "order": 6,
+ "tags": [
+  "gated-scoped-ac",
+  "consumer"
+ ],
+ "paths": [
+  "shared/libs/gated-scoped-ac"
+ ],
+ "summary": "What a service and a repository call for each of create, read, update and delete, what comes back when access is denied, and who turns that into an error.",
+ "docId": "gated-scoped-ac-ac-patterns",
+ "doc": {
+  "axioms": [
+   {
+    "text": "The service asks the engine; the repository spends what it got at the [[gated db]]."
+   },
+   {
+    "text": "The gate never throws. A denied write returns `null`, an unadmitted read returns no rows, and the service decides what that means."
+   },
+   {
+    "text": "A caller may narrow a [[scope]] and has no way to widen it."
+   },
+   {
+    "text": "Every method on the private path carries the `Private` token, from the route down to the repository."
+   }
+  ],
+  "purpose": {
+   "intro": "One pattern per operation, taken from the slices that use the library (the meteors slice has all four). Every pattern takes the [[access context]] `ac` the route handed down: `ac.permissions` and `ac.bag` go to the engine, `ac.gateDb` to the repository.",
+   "note": "The rules behind these patterns (AC5, AC6, AC9, AC10, AC12) are in [[access-control|Access Control]]."
+  },
+  "reference": [
+   {
+    "topic": "Read",
+    "statement": "The service resolves a read scope and passes it down; the repository runs it. No row admitted is a miss, so the service answers 404: existence and access are one question.",
+    "claims": [
+     {
+      "text": "The read builder only narrows: `where` ANDs onto the scope, and `orderBy`, `limit` and `offset` shape the page."
+     },
+     {
+      "text": "It ends in `rows()`, `first()` (or `null`), or `count()`: the admitted rows matching the `where`, paging ignored, for the total beside a page."
+     },
+     {
+      "text": "A permission's field list narrows the columns `rows()` returns, never the rows."
+     }
+    ],
+    "examples": [
+     {
+      "snippets": [
+       {
+        "caption": "service",
+        "code": "const scope = this.deps.engine.resolveRead(ac.permissions, \"meteor\", ac.bag);\nconst [row] = await this.deps.meteorRepo.findByIdsScoped(visibility, [meteorId], scope, ac.gateDb);\nif (!row) throw this.deps.errors.notFound(\"meteor not found\");"
+       },
+       {
+        "caption": "repository",
+        "code": "findByIdsScoped(visibility: Private, ids: string[], scope: Scope<\"meteor\", \"read\">, gateDb: GatedDb<SchemaTables>) {\n  return gateDb.read(\"meteor\", scope).where(inArray(meteor.id, ids)).rows();\n}"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "topic": "Create",
+    "statement": "Create has no row to scope, so it is judged on the row being written. The gate takes the caller's permissions and the values, takes the verdict itself and returns `null` when it is refused.",
+    "claims": [
+     {
+      "text": "`gateDb.create(entity, permissions, values)` puts `values` on the bag as `$requestBody`, asks `allowCreate`, runs any payload probe, then inserts."
+     },
+     {
+      "text": "An early `allowCreate` in the service is optional, to refuse before work that would have to be undone (a credits charge). It needs the fields its payload rules read on a copy of the bag."
+     },
+     {
+      "text": "`null` from the gate is a 403. Undo anything done before it."
+     }
+    ],
+    "examples": [
+     {
+      "snippets": [
+       {
+        "caption": "service",
+        "code": "const bag = { ...ac.bag, requestBody: { organizationId: organization.id } };\nconst verdict = this.deps.engine.allowCreate(ac.permissions, \"meteor\", bag);\nif (!verdict.allow) throw this.deps.errors.forbidden(verdict.reason ?? \"cannot create meteor\");\n\nconst row = await this.deps.meteorRepo.create(visibility, record, ac.permissions, this.deps.gatedDb(bag));\nif (!row) throw this.deps.errors.forbidden(\"cannot create meteor\");"
+       },
+       {
+        "caption": "repository",
+        "code": "return gateDb.create(\"meteor\", permissions, { id, organizationId, createdBy, name, status: \"draft\" });"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "topic": "Update",
+    "statement": "Two gates, cheapest first: the columns, in memory, then the row, fused into the statement.",
+    "claims": [
+     {
+      "text": "`allowUpdate(permissions, entity, patch, bag)` checks the patch's keys against the field lists of the permissions whose context passes. It costs no query. Pass the caller's patch, not columns the service sets itself."
+     },
+     {
+      "text": "`gateDb.update(entity, scope, id, patch)` writes only when the update scope admits that id, and returns the row or `null`."
+     }
+    ],
+    "examples": [
+     {
+      "snippets": [
+       {
+        "caption": "service",
+        "code": "const verdict = this.deps.engine.allowUpdate(ac.permissions, \"meteor\", patch, ac.bag);\nif (!verdict.allow) throw this.deps.errors.forbidden(verdict.reason ?? \"cannot update meteor\");\nconst scope = this.deps.engine.resolveUpdate(ac.permissions, \"meteor\", ac.bag);\nconst updated = await this.deps.meteorRepo.update(visibility, meteorId, patch, scope, ac.gateDb);\nif (!updated) throw this.deps.errors.forbidden(\"cannot update meteor\");"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "topic": "Delete",
+    "statement": "`resolveDelete`, then `gateDb.delete(entity, scope, id)`, which deletes only when the delete scope admits that id and returns `{ id }` or `null`.",
+    "claims": [
+     {
+      "text": "The gate returns the id alone. Anything the service needs from the row afterwards is read before the delete, and used only when the delete was admitted."
+     }
+    ]
+   },
+   {
+    "topic": "Asking without writing",
+    "statement": "`findRowsByIdWhereCanUpdate(entity, scope, id)` and `findRowsByIdWhereCanDelete(entity, scope, id)` return the rows with that id the scope admits, and change nothing.",
+    "claims": [
+     {
+      "text": "Use them when the write happens where the gate cannot see it, such as an external provider, and as the question \"may this caller change this row?\" another slice asks before acting on it."
+     },
+     {
+      "text": "They return rows, never a boolean: the service decides what an empty list means."
+     }
+    ]
+   },
+   {
+    "topic": "Public and private",
+    "statement": "Whether a call is public or private is a token in every signature, not a flag on the context.",
+    "claims": [
+     {
+      "text": "A route passes `PRIVATE` or `PUBLIC`, and every service and repository method declares which token it takes. `Private` extends `Public`, so a private caller may use a public method and the reverse does not compile."
+     },
+     {
+      "text": "A public read takes no access context. It reads through the plain handle with its own explicit filter (the published meteors), never through a scope."
+     },
+     {
+      "text": "`isPrivate(visibility)` is the runtime check, for the rare branch the types cannot settle."
+     }
+    ]
+   },
+   {
+    "topic": "What not to do",
+    "statement": "Each of these reaches data around the engine, or decides what only the engine or the service should.",
+    "claims": [
+     {
+      "text": "Check a role in code. Ask the engine for a verdict or a scope; a role list in the client is for showing affordances, never for deciding."
+     },
+     {
+      "text": "Reach a gated entity's private rows through the plain handle or `ungated()` on a path a route reaches by itself."
+     },
+     {
+      "text": "Trust a `requestBody` you put on the bag for the write itself: the gate replaces it with the values it inserts, so the verdict is always on the row that lands."
+     },
+     {
+      "text": "Throw from a repository on `null`. The repository returns what the gate returned; the service owns the 403 and the 404."
+     }
+    ]
+   }
+  ],
+  "review": {
+   "axioms": {
+    "state": "unreviewed"
+   },
+   "purpose": {
+    "state": "unreviewed"
+   },
+   "reference": {
+    "state": "unreviewed"
+   }
+  },
+  "converted": true
+ },
+ "audience": [
+  "seed-consumer"
+ ]
+}

@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-list-rows-content-safety-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-list-rows-content-safety",
+ "name": "default",
+ "title": "List rows: content safety",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

@@ -1,0 +1,153 @@
+{
+ "id": "ui-data-pattern-component-organization-switcher-organizationitems",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-organization-switcher-organizationitems",
+ "kind": "component",
+ "name": "OrganizationItems",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "OrganizationItems",
+  "version": 1,
+  "surface": "web",
+  "params": [
+   "organizations",
+   "activeId",
+   "showType"
+  ],
+  "emits": [
+   "change"
+  ],
+  "root": {
+   "type": "DropdownMenuItem",
+   "props": {
+    "state": {
+     "if": [
+      {
+       "eq": [
+        {
+         "bind": "org.id"
+        },
+        {
+         "bind": "activeId"
+        }
+       ]
+      },
+      "selected"
+     ]
+    },
+    "data-testid": {
+     "concat": [
+      "organization-switcher-item-",
+      {
+       "bind": "org.id"
+      },
+      "-row"
+     ]
+    }
+   },
+   "children": [
+    {
+     "use": {
+      "component": "OrganizationAvatar",
+      "version": "latest"
+     },
+     "args": {
+      "id": {
+       "bind": "org.id"
+      },
+      "name": {
+       "bind": "org.name"
+      },
+      "image": {
+       "bind": "org.image"
+      },
+      "scale": "xs",
+      "layout": "image",
+      "width": "hug"
+     }
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "size": "fill"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body",
+        "children": {
+         "bind": "org.name"
+        },
+        "position": "clip"
+       }
+      },
+      {
+       "type": "Text",
+       "props": {
+        "as": "span",
+        "element": "type--body-extra-small",
+        "children": {
+         "bind": "org.type"
+        },
+        "emphasis": "quiet"
+       },
+       "when": {
+        "and": [
+         {
+          "bind": "showType"
+         },
+         {
+          "exists": [
+           {
+            "bind": "org.type"
+           }
+          ]
+         }
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "type": "Icon",
+     "props": {
+      "name": "check",
+      "scale": "sm"
+     },
+     "when": {
+      "eq": [
+       {
+        "bind": "org.id"
+       },
+       {
+        "bind": "activeId"
+       }
+      ]
+     }
+    }
+   ],
+   "on": {
+    "select": [
+     {
+      "emit": {
+       "event": "change",
+       "payload": {
+        "id": {
+         "bind": "org.id"
+        }
+       }
+      }
+     }
+    ]
+   },
+   "repeat": {
+    "each": "organizations",
+    "as": "org"
+   }
+  }
+ }
+}

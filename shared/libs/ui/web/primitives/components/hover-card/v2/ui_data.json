@@ -1,0 +1,256 @@
+{
+ "id": "ui-data-primitive-hover-card",
+ "version": 1,
+ "uiNodeId": "ui-node-primitive-hover-card",
+ "kind": "component",
+ "name": "primitive-hover-card",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "primitive-hover-card",
+  "version": 1,
+  "surface": "web",
+  "state": {
+   "alice_open": false,
+   "bob_open": false
+  },
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "align": "center",
+    "scale": "2xl"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "user card"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "HoverCard",
+         "children": [
+          {
+           "type": "HoverCardTrigger",
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "className": "underline cursor-pointer",
+              "children": "@alice"
+             }
+            }
+           ],
+           "props": {
+            "asChild": true
+           }
+          },
+          {
+           "type": "HoverCardContent",
+           "children": [
+            {
+             "type": "Text",
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "as": "div",
+                "className": "h-10 w-10 rounded-full bg-muted flex items-center justify-center text-sm font-medium",
+                "children": "AL"
+               }
+              },
+              {
+               "type": "Text",
+               "children": [
+                {
+                 "type": "Text",
+                 "props": {
+                  "className": "font-semibold text-sm",
+                  "children": "Alice Lambert"
+                 }
+                },
+                {
+                 "type": "Text",
+                 "props": {
+                  "element": "type--body-small",
+                  "className": "text-muted-foreground",
+                  "children": "Test User. Passionate about connecting families with the right support."
+                 }
+                }
+               ],
+               "props": {
+                "as": "div",
+                "className": "flex flex-col gap-1"
+               }
+              }
+             ],
+             "props": {
+              "as": "div",
+              "className": "flex gap-3"
+             }
+            }
+           ]
+          }
+         ],
+         "on": {
+          "openChange": [
+           {
+            "set": {
+             "state": "alice_open",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "open": {
+           "bind": "state.alice_open"
+          },
+          "data-testid": "hover-card-user-card-1-card"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "link preview"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "HoverCard",
+         "children": [
+          {
+           "type": "HoverCardTrigger",
+           "children": [
+            {
+             "type": "Text",
+             "props": {
+              "className": "underline cursor-pointer",
+              "children": "@bob"
+             }
+            }
+           ],
+           "props": {
+            "asChild": true
+           }
+          },
+          {
+           "type": "HoverCardContent",
+           "children": [
+            {
+             "type": "Text",
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "as": "div",
+                "className": "h-10 w-10 rounded-full bg-muted flex items-center justify-center text-sm font-medium",
+                "children": "BM"
+               }
+              },
+              {
+               "type": "Text",
+               "children": [
+                {
+                 "type": "Text",
+                 "props": {
+                  "className": "font-semibold text-sm",
+                  "children": "Bob Martinez"
+                 }
+                },
+                {
+                 "type": "Text",
+                 "props": {
+                  "element": "type--body-small",
+                  "className": "text-muted-foreground",
+                  "children": "Home health aide with 10+ years of experience in customer support and rehabilitation support."
+                 }
+                }
+               ],
+               "props": {
+                "as": "div",
+                "className": "flex flex-col gap-1"
+               }
+              }
+             ],
+             "props": {
+              "as": "div",
+              "className": "flex gap-3"
+             }
+            }
+           ]
+          }
+         ],
+         "on": {
+          "openChange": [
+           {
+            "set": {
+             "state": "bob_open",
+             "to": {
+              "bind": "event"
+             }
+            }
+           }
+          ]
+         },
+         "props": {
+          "open": {
+           "bind": "state.bob_open"
+          },
+          "data-testid": "hover-card-link-preview-1-card"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

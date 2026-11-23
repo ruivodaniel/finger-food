@@ -59,7 +59,6 @@ export const POSITION = [
   "fill", "hug",                                            // how much of the parent's main axis
   "start", "center", "end", "stretch",                      // where on the cross axis
   "clip",                                                   // may shrink below content and truncate
-  "w-xs", "w-sm", "w-md", "w-lg", "w-xl",                   // one of five widths: a field, a column; which one is the page's choice, how wide each is is the library's
   "cols-2", "cols-3", "cols-4", "cols-6", "cols-12",        // this surface is N equal tracks
   "span-2", "span-3", "span-4", "span-5", "span-6", "span-7", "span-8", "span-9", "span-10", "span-11", "span-12",
 ] as const;

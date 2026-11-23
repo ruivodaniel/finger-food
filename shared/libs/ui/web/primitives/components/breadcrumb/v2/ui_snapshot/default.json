@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-primitive-breadcrumb-default",
+ "version": 1,
+ "uiDataId": "ui-data-primitive-breadcrumb",
+ "name": "default",
+ "title": "Breadcrumb, its cases",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

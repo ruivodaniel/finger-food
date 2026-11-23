@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-component-list-stacked-items-contacts-contactrow",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "ContactRow"
+}

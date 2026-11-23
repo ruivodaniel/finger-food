@@ -1,0 +1,20 @@
+{
+  "id": "term/trigger",
+  "kind": "term",
+  "title": "trigger",
+  "status": "converted",
+  "subjects": [
+    "orchestrator"
+  ],
+  "owner": "orchestrator",
+  "tags": [
+    "orchestrator"
+  ],
+  "paths": [
+    "apps/orchestrator"
+  ],
+  "term": {
+    "def": "What starts a [[run]]: a user or a cron. An agent never starts anything: it acts inside a pipeline, on behalf of the user's request.",
+    "aliases": []
+  }
+}

@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-primitive-badge",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "Badge"
+}

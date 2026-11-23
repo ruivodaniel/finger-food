@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-page-layout-under-header-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-page-layout-under-header",
+ "name": "default",
+ "title": "Content passes under the page header",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-container-7-card-with-tabs-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-container-7-card-with-tabs",
+ "name": "default",
+ "title": "Container 7: a card with tabs: the tabs are a band of the card, each tab has its content",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

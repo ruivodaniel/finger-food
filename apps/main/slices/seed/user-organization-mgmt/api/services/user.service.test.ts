@@ -11,6 +11,7 @@ import { UserService } from "./user.service";
 import {
   InMemoryUserRepository,
   makeUserStack,
+  testAc,
   testErrors,
 } from "../testing/in-memory-repos";
 
@@ -81,9 +82,9 @@ describe("profile updates", () => {
     t = build();
   });
 
-  it("updateProfile persists the image URL", async () => {
+  it("updateOwnProfile persists the image URL", async () => {
     const user = await makeUser(t, "pictured@test.dev");
-    await t.service.updateProfile(user.id, {
+    await t.service.updateOwnProfile(testAc(user.id), PRIVATE, user.id, {
       image: "https://cdn.test.dev/users/u1/avatar/me.png",
     });
     const me = await t.service.getMe(PRIVATE, user.id);

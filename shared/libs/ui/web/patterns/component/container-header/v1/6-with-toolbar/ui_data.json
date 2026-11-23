@@ -1,0 +1,204 @@
+{
+ "id": "ui-data-pattern-component-container-header-6-with-toolbar",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-container-header-6-with-toolbar",
+ "kind": "component",
+ "name": "container-header-6-with-toolbar",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "container-header-6-with-toolbar",
+  "version": 1,
+  "surface": "web",
+  "measure": "md",
+  "state": {
+   "query": ""
+  },
+  "root": {
+   "type": "Card",
+   "children": [
+    {
+     "type": "Header",
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "between"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "scale": "sm"
+         },
+         "children": [
+          {
+           "type": "Text",
+           "props": {
+            "as": "span",
+            "element": "type--heading3",
+            "children": "Title"
+           }
+          }
+         ]
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "scale": "sm"
+         },
+         "children": [
+          {
+           "type": "Button",
+           "props": {
+            "scale": "sm",
+            "emphasis": "secondary",
+            "children": "Action",
+            "data-testid": "ch-tool-first-action-btn"
+           }
+          },
+          {
+           "type": "Button",
+           "props": {
+            "scale": "sm",
+            "emphasis": "primary",
+            "children": "Action",
+            "data-testid": "ch-tool-second-action-btn"
+           }
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Header",
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "between"
+       },
+       "children": [
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "scale": "sm"
+         },
+         "children": [
+          {
+           "type": "Input",
+           "props": {
+            "type": "search",
+            "value": {
+             "bind": "state.query"
+            },
+            "placeholder": "Search…",
+            "startIcon": {
+             "type": "Icon",
+             "props": {
+              "name": "search"
+             }
+            },
+            "data-testid": "ch-tool-search-input"
+           },
+           "on": {
+            "change": [
+             {
+              "set": {
+               "state": "query",
+               "to": {
+                "bind": "event"
+               }
+              }
+             }
+            ]
+           }
+          },
+          {
+           "type": "Button",
+           "props": {
+            "scale": "sm",
+            "emphasis": "secondary",
+            "children": "Filter",
+            "data-testid": "ch-tool-filter-btn"
+           }
+          }
+         ]
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "scale": "sm"
+         },
+         "children": [
+          {
+           "type": "Button",
+           "props": {
+            "scale": "sm",
+            "emphasis": "tertiary",
+            "children": "View",
+            "data-testid": "ch-tool-view-btn"
+           }
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Content",
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "scale": "sm"
+       },
+       "children": [
+        {
+         "type": "Skeleton",
+         "props": {
+          "scale": "sm"
+         }
+        },
+        {
+         "type": "Skeleton",
+         "props": {
+          "scale": "sm"
+         }
+        },
+        {
+         "type": "Skeleton",
+         "props": {
+          "scale": "sm"
+         }
+        },
+        {
+         "type": "Skeleton",
+         "props": {
+          "scale": "sm"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

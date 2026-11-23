@@ -1,0 +1,1643 @@
+{
+ "id": "ui-data-primitive-data-number-v2",
+ "version": 1,
+ "uiNodeId": "ui-node-primitive-data-number-v2",
+ "kind": "component",
+ "name": "primitive-data-number-v2",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "primitive-data-number-v2",
+  "version": 1,
+  "surface": "web",
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "align": "center",
+    "scale": "2xl"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "value and unit \u2014 the unit comes from the processor, always on the right"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "DataNumber",
+         "props": {
+          "value": 34765432,
+          "config": {
+           "obj": {
+            "mode": {
+             "obj": {
+              "kind": "full"
+             }
+            },
+            "locale": "en-GB"
+           }
+          }
+         }
+        },
+        {
+         "type": "DataNumber",
+         "props": {
+          "value": 34765432,
+          "config": {
+           "obj": {
+            "mode": {
+             "obj": {
+              "kind": "compactMax",
+              "n": 3
+             }
+            },
+            "locale": "en-GB"
+           }
+          }
+         }
+        },
+        {
+         "type": "DataNumber",
+         "props": {
+          "value": 3476543210,
+          "config": {
+           "obj": {
+            "mode": {
+             "obj": {
+              "kind": "fixedScale",
+              "scale": "million",
+              "n": 2
+             }
+            },
+            "locale": "en-GB"
+           }
+          }
+         }
+        },
+        {
+         "type": "DataNumber",
+         "props": {
+          "value": "0.000002",
+          "config": {
+           "obj": {
+            "mode": {
+             "obj": {
+              "kind": "scientific",
+              "n": 3
+             }
+            },
+            "locale": "en-GB"
+           }
+          }
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "percentage \u2014 a fraction, and points"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "DataNumber",
+         "props": {
+          "value": 0.1534,
+          "config": {
+           "obj": {
+            "mode": {
+             "obj": {
+              "kind": "fixedScale",
+              "scale": "unit",
+              "n": 1
+             }
+            },
+            "locale": "en-GB",
+            "representation": {
+             "obj": {
+              "kind": "percentage",
+              "input": "fraction"
+             }
+            }
+           }
+          }
+         }
+        },
+        {
+         "type": "DataNumber",
+         "props": {
+          "value": 42,
+          "config": {
+           "obj": {
+            "mode": {
+             "obj": {
+              "kind": "fixedScale",
+              "scale": "unit",
+              "n": 0
+             }
+            },
+            "locale": "en-GB",
+            "representation": {
+             "obj": {
+              "kind": "percentage",
+              "input": "points"
+             }
+            }
+           }
+          }
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "negative \u2014 a minus (default) and accounting parentheses"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "DataNumber",
+         "props": {
+          "value": -1234.5,
+          "config": {
+           "obj": {
+            "mode": {
+             "obj": {
+              "kind": "full"
+             }
+            },
+            "locale": "en-GB"
+           }
+          },
+          "symbol": "USD"
+         }
+        },
+        {
+         "type": "DataNumber",
+         "props": {
+          "value": -1234.5,
+          "config": {
+           "obj": {
+            "mode": {
+             "obj": {
+              "kind": "full"
+             }
+            },
+            "locale": "en-GB",
+            "negative": "parentheses"
+           }
+          },
+          "symbol": "USD"
+         }
+        },
+        {
+         "type": "DataNumber",
+         "props": {
+          "value": -34000,
+          "config": {
+           "obj": {
+            "mode": {
+             "obj": {
+              "kind": "compactMax",
+              "n": 2
+             }
+            },
+            "locale": "en-GB",
+            "negative": "parentheses"
+           }
+          },
+          "symbol": "USD"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "symbol \u2014 right (default) and left"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "DataNumber",
+         "props": {
+          "value": 1250000,
+          "config": {
+           "obj": {
+            "mode": {
+             "obj": {
+              "kind": "compactMax",
+              "n": 3
+             }
+            },
+            "locale": "en-GB"
+           }
+          },
+          "symbol": "USD"
+         }
+        },
+        {
+         "type": "DataNumber",
+         "props": {
+          "value": 1250000,
+          "config": {
+           "obj": {
+            "mode": {
+             "obj": {
+              "kind": "compactMax",
+              "n": 3
+             }
+            },
+            "locale": "en-GB"
+           }
+          },
+          "symbol": "EUR",
+          "symbolPosition": "left"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "trend \u2014 always on the left, any library icon; status on the root, the theme chooses what it colours"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "DataNumber",
+         "props": {
+          "value": 1250000,
+          "config": {
+           "obj": {
+            "mode": {
+             "obj": {
+              "kind": "compactMax",
+              "n": 3
+             }
+            },
+            "locale": "en-GB"
+           }
+          },
+          "symbol": "USD",
+          "trend": "arrowUp",
+          "status": "success"
+         }
+        },
+        {
+         "type": "DataNumber",
+         "props": {
+          "value": -34000,
+          "config": {
+           "obj": {
+            "mode": {
+             "obj": {
+              "kind": "compactMax",
+              "n": 3
+             }
+            },
+            "locale": "en-GB"
+           }
+          },
+          "symbol": "USD",
+          "trend": "arrowDown",
+          "status": "error"
+         }
+        },
+        {
+         "type": "DataNumber",
+         "props": {
+          "value": 1250000,
+          "config": {
+           "obj": {
+            "mode": {
+             "obj": {
+              "kind": "compactMax",
+              "n": 3
+             }
+            },
+            "locale": "en-GB"
+           }
+          },
+          "symbol": "EUR",
+          "symbolPosition": "left",
+          "trend": "arrowUp",
+          "status": "success"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "concept \u2014 the same instance, a product concept the theme may key on"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "DataNumber",
+         "props": {
+          "value": -34000,
+          "config": {
+           "obj": {
+            "mode": {
+             "obj": {
+              "kind": "compactMax",
+              "n": 3
+             }
+            },
+            "locale": "en-GB"
+           }
+          },
+          "trend": "arrowDown",
+          "status": "error",
+          "concept": "alert"
+         }
+        },
+        {
+         "type": "DataNumber",
+         "props": {
+          "value": -34000,
+          "config": {
+           "obj": {
+            "mode": {
+             "obj": {
+              "kind": "compactMax",
+              "n": 3
+             }
+            },
+            "locale": "en-GB"
+           }
+          },
+          "trend": "arrowDown",
+          "status": "error",
+          "concept": "default"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "tooltip \u2014 true (the full value in a data-tooltip), a delay of 0, a click, content given, false"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "DataNumber",
+         "props": {
+          "value": 34765432,
+          "config": {
+           "obj": {
+            "mode": {
+             "obj": {
+              "kind": "compactMax",
+              "n": 3
+             }
+            },
+            "locale": "en-GB"
+           }
+          },
+          "symbol": "USD",
+          "tooltip": true
+         }
+        },
+        {
+         "type": "DataNumber",
+         "props": {
+          "value": 34765432,
+          "config": {
+           "obj": {
+            "mode": {
+             "obj": {
+              "kind": "compactMax",
+              "n": 3
+             }
+            },
+            "locale": "en-GB"
+           }
+          },
+          "symbol": "USD",
+          "tooltip": true,
+          "tooltipDelay": 0
+         }
+        },
+        {
+         "type": "DataNumber",
+         "props": {
+          "value": 34765432,
+          "config": {
+           "obj": {
+            "mode": {
+             "obj": {
+              "kind": "compactMax",
+              "n": 3
+             }
+            },
+            "locale": "en-GB"
+           }
+          },
+          "symbol": "USD",
+          "tooltip": true,
+          "tooltipTrigger": "click"
+         }
+        },
+        {
+         "type": "DataNumber",
+         "props": {
+          "value": 34765432,
+          "config": {
+           "obj": {
+            "mode": {
+             "obj": {
+              "kind": "compactMax",
+              "n": 3
+             }
+            },
+            "locale": "en-GB"
+           }
+          },
+          "symbol": "USD",
+          "tooltip": {
+           "type": "Text",
+           "props": {
+            "element": "type--body-small",
+            "children": "Any content, drawn inside the data-tooltip"
+           }
+          }
+         }
+        },
+        {
+         "type": "DataNumber",
+         "props": {
+          "value": 34765432,
+          "config": {
+           "obj": {
+            "mode": {
+             "obj": {
+              "kind": "compactMax",
+              "n": 3
+             }
+            },
+            "locale": "en-GB"
+           }
+          },
+          "symbol": "USD",
+          "tooltip": false
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "status \u2014 the semantic state"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "DataNumber",
+         "props": {
+          "value": 1234.5,
+          "config": {
+           "obj": {
+            "mode": {
+             "obj": {
+              "kind": "full"
+             }
+            },
+            "locale": "en-GB"
+           }
+          },
+          "status": "neutral"
+         }
+        },
+        {
+         "type": "DataNumber",
+         "props": {
+          "value": 1234.5,
+          "config": {
+           "obj": {
+            "mode": {
+             "obj": {
+              "kind": "full"
+             }
+            },
+            "locale": "en-GB"
+           }
+          },
+          "status": "info"
+         }
+        },
+        {
+         "type": "DataNumber",
+         "props": {
+          "value": 1234.5,
+          "config": {
+           "obj": {
+            "mode": {
+             "obj": {
+              "kind": "full"
+             }
+            },
+            "locale": "en-GB"
+           }
+          },
+          "status": "success"
+         }
+        },
+        {
+         "type": "DataNumber",
+         "props": {
+          "value": 1234.5,
+          "config": {
+           "obj": {
+            "mode": {
+             "obj": {
+              "kind": "full"
+             }
+            },
+            "locale": "en-GB"
+           }
+          },
+          "status": "warning"
+         }
+        },
+        {
+         "type": "DataNumber",
+         "props": {
+          "value": 1234.5,
+          "config": {
+           "obj": {
+            "mode": {
+             "obj": {
+              "kind": "full"
+             }
+            },
+            "locale": "en-GB"
+           }
+          },
+          "status": "error"
+         }
+        },
+        {
+         "type": "DataNumber",
+         "props": {
+          "value": 1234.5,
+          "config": {
+           "obj": {
+            "mode": {
+             "obj": {
+              "kind": "full"
+             }
+            },
+            "locale": "en-GB"
+           }
+          },
+          "status": "destructive"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "emphasis \u2014 the axis, on the root"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "DataNumber",
+         "props": {
+          "value": 1234.5,
+          "config": {
+           "obj": {
+            "mode": {
+             "obj": {
+              "kind": "full"
+             }
+            },
+            "locale": "en-GB"
+           }
+          },
+          "emphasis": "hero"
+         }
+        },
+        {
+         "type": "DataNumber",
+         "props": {
+          "value": 1234.5,
+          "config": {
+           "obj": {
+            "mode": {
+             "obj": {
+              "kind": "full"
+             }
+            },
+            "locale": "en-GB"
+           }
+          },
+          "emphasis": "primary"
+         }
+        },
+        {
+         "type": "DataNumber",
+         "props": {
+          "value": 1234.5,
+          "config": {
+           "obj": {
+            "mode": {
+             "obj": {
+              "kind": "full"
+             }
+            },
+            "locale": "en-GB"
+           }
+          },
+          "emphasis": "secondary"
+         }
+        },
+        {
+         "type": "DataNumber",
+         "props": {
+          "value": 1234.5,
+          "config": {
+           "obj": {
+            "mode": {
+             "obj": {
+              "kind": "full"
+             }
+            },
+            "locale": "en-GB"
+           }
+          },
+          "emphasis": "tertiary"
+         }
+        },
+        {
+         "type": "DataNumber",
+         "props": {
+          "value": 1234.5,
+          "config": {
+           "obj": {
+            "mode": {
+             "obj": {
+              "kind": "full"
+             }
+            },
+            "locale": "en-GB"
+           }
+          },
+          "emphasis": "quiet"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "status \u00d7 emphasis \u2014 the status is the colour, the emphasis the form; one row per emphasis, one column per status"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Text",
+         "children": [
+          {
+           "type": "DataNumber",
+           "props": {
+            "value": -34000,
+            "config": {
+             "obj": {
+              "mode": {
+               "obj": {
+                "kind": "compactMax",
+                "n": 3
+               }
+              },
+              "locale": "en-GB"
+             }
+            },
+            "trend": "arrowDown",
+            "symbol": "USD",
+            "emphasis": "hero",
+            "status": "neutral"
+           }
+          },
+          {
+           "type": "DataNumber",
+           "props": {
+            "value": -34000,
+            "config": {
+             "obj": {
+              "mode": {
+               "obj": {
+                "kind": "compactMax",
+                "n": 3
+               }
+              },
+              "locale": "en-GB"
+             }
+            },
+            "trend": "arrowDown",
+            "symbol": "USD",
+            "emphasis": "hero",
+            "status": "info"
+           }
+          },
+          {
+           "type": "DataNumber",
+           "props": {
+            "value": -34000,
+            "config": {
+             "obj": {
+              "mode": {
+               "obj": {
+                "kind": "compactMax",
+                "n": 3
+               }
+              },
+              "locale": "en-GB"
+             }
+            },
+            "trend": "arrowDown",
+            "symbol": "USD",
+            "emphasis": "hero",
+            "status": "success"
+           }
+          },
+          {
+           "type": "DataNumber",
+           "props": {
+            "value": -34000,
+            "config": {
+             "obj": {
+              "mode": {
+               "obj": {
+                "kind": "compactMax",
+                "n": 3
+               }
+              },
+              "locale": "en-GB"
+             }
+            },
+            "trend": "arrowDown",
+            "symbol": "USD",
+            "emphasis": "hero",
+            "status": "warning"
+           }
+          },
+          {
+           "type": "DataNumber",
+           "props": {
+            "value": 34000,
+            "config": {
+             "obj": {
+              "mode": {
+               "obj": {
+                "kind": "compactMax",
+                "n": 3
+               }
+              },
+              "locale": "en-GB"
+             }
+            },
+            "trend": "arrowUp",
+            "symbol": "USD",
+            "emphasis": "hero",
+            "status": "error"
+           }
+          },
+          {
+           "type": "DataNumber",
+           "props": {
+            "value": -34000,
+            "config": {
+             "obj": {
+              "mode": {
+               "obj": {
+                "kind": "compactMax",
+                "n": 3
+               }
+              },
+              "locale": "en-GB"
+             }
+            },
+            "trend": "arrowDown",
+            "symbol": "USD",
+            "emphasis": "primary",
+            "status": "neutral"
+           }
+          },
+          {
+           "type": "DataNumber",
+           "props": {
+            "value": -34000,
+            "config": {
+             "obj": {
+              "mode": {
+               "obj": {
+                "kind": "compactMax",
+                "n": 3
+               }
+              },
+              "locale": "en-GB"
+             }
+            },
+            "trend": "arrowDown",
+            "symbol": "USD",
+            "emphasis": "primary",
+            "status": "info"
+           }
+          },
+          {
+           "type": "DataNumber",
+           "props": {
+            "value": -34000,
+            "config": {
+             "obj": {
+              "mode": {
+               "obj": {
+                "kind": "compactMax",
+                "n": 3
+               }
+              },
+              "locale": "en-GB"
+             }
+            },
+            "trend": "arrowDown",
+            "symbol": "USD",
+            "emphasis": "primary",
+            "status": "success"
+           }
+          },
+          {
+           "type": "DataNumber",
+           "props": {
+            "value": -34000,
+            "config": {
+             "obj": {
+              "mode": {
+               "obj": {
+                "kind": "compactMax",
+                "n": 3
+               }
+              },
+              "locale": "en-GB"
+             }
+            },
+            "trend": "arrowDown",
+            "symbol": "USD",
+            "emphasis": "primary",
+            "status": "warning"
+           }
+          },
+          {
+           "type": "DataNumber",
+           "props": {
+            "value": 34000,
+            "config": {
+             "obj": {
+              "mode": {
+               "obj": {
+                "kind": "compactMax",
+                "n": 3
+               }
+              },
+              "locale": "en-GB"
+             }
+            },
+            "trend": "arrowUp",
+            "symbol": "USD",
+            "emphasis": "primary",
+            "status": "error"
+           }
+          },
+          {
+           "type": "DataNumber",
+           "props": {
+            "value": -34000,
+            "config": {
+             "obj": {
+              "mode": {
+               "obj": {
+                "kind": "compactMax",
+                "n": 3
+               }
+              },
+              "locale": "en-GB"
+             }
+            },
+            "trend": "arrowDown",
+            "symbol": "USD",
+            "emphasis": "secondary",
+            "status": "neutral"
+           }
+          },
+          {
+           "type": "DataNumber",
+           "props": {
+            "value": -34000,
+            "config": {
+             "obj": {
+              "mode": {
+               "obj": {
+                "kind": "compactMax",
+                "n": 3
+               }
+              },
+              "locale": "en-GB"
+             }
+            },
+            "trend": "arrowDown",
+            "symbol": "USD",
+            "emphasis": "secondary",
+            "status": "info"
+           }
+          },
+          {
+           "type": "DataNumber",
+           "props": {
+            "value": -34000,
+            "config": {
+             "obj": {
+              "mode": {
+               "obj": {
+                "kind": "compactMax",
+                "n": 3
+               }
+              },
+              "locale": "en-GB"
+             }
+            },
+            "trend": "arrowDown",
+            "symbol": "USD",
+            "emphasis": "secondary",
+            "status": "success"
+           }
+          },
+          {
+           "type": "DataNumber",
+           "props": {
+            "value": -34000,
+            "config": {
+             "obj": {
+              "mode": {
+               "obj": {
+                "kind": "compactMax",
+                "n": 3
+               }
+              },
+              "locale": "en-GB"
+             }
+            },
+            "trend": "arrowDown",
+            "symbol": "USD",
+            "emphasis": "secondary",
+            "status": "warning"
+           }
+          },
+          {
+           "type": "DataNumber",
+           "props": {
+            "value": 34000,
+            "config": {
+             "obj": {
+              "mode": {
+               "obj": {
+                "kind": "compactMax",
+                "n": 3
+               }
+              },
+              "locale": "en-GB"
+             }
+            },
+            "trend": "arrowUp",
+            "symbol": "USD",
+            "emphasis": "secondary",
+            "status": "error"
+           }
+          },
+          {
+           "type": "DataNumber",
+           "props": {
+            "value": -34000,
+            "config": {
+             "obj": {
+              "mode": {
+               "obj": {
+                "kind": "compactMax",
+                "n": 3
+               }
+              },
+              "locale": "en-GB"
+             }
+            },
+            "trend": "arrowDown",
+            "symbol": "USD",
+            "emphasis": "tertiary",
+            "status": "neutral"
+           }
+          },
+          {
+           "type": "DataNumber",
+           "props": {
+            "value": -34000,
+            "config": {
+             "obj": {
+              "mode": {
+               "obj": {
+                "kind": "compactMax",
+                "n": 3
+               }
+              },
+              "locale": "en-GB"
+             }
+            },
+            "trend": "arrowDown",
+            "symbol": "USD",
+            "emphasis": "tertiary",
+            "status": "info"
+           }
+          },
+          {
+           "type": "DataNumber",
+           "props": {
+            "value": -34000,
+            "config": {
+             "obj": {
+              "mode": {
+               "obj": {
+                "kind": "compactMax",
+                "n": 3
+               }
+              },
+              "locale": "en-GB"
+             }
+            },
+            "trend": "arrowDown",
+            "symbol": "USD",
+            "emphasis": "tertiary",
+            "status": "success"
+           }
+          },
+          {
+           "type": "DataNumber",
+           "props": {
+            "value": -34000,
+            "config": {
+             "obj": {
+              "mode": {
+               "obj": {
+                "kind": "compactMax",
+                "n": 3
+               }
+              },
+              "locale": "en-GB"
+             }
+            },
+            "trend": "arrowDown",
+            "symbol": "USD",
+            "emphasis": "tertiary",
+            "status": "warning"
+           }
+          },
+          {
+           "type": "DataNumber",
+           "props": {
+            "value": 34000,
+            "config": {
+             "obj": {
+              "mode": {
+               "obj": {
+                "kind": "compactMax",
+                "n": 3
+               }
+              },
+              "locale": "en-GB"
+             }
+            },
+            "trend": "arrowUp",
+            "symbol": "USD",
+            "emphasis": "tertiary",
+            "status": "error"
+           }
+          },
+          {
+           "type": "DataNumber",
+           "props": {
+            "value": -34000,
+            "config": {
+             "obj": {
+              "mode": {
+               "obj": {
+                "kind": "compactMax",
+                "n": 3
+               }
+              },
+              "locale": "en-GB"
+             }
+            },
+            "trend": "arrowDown",
+            "symbol": "USD",
+            "emphasis": "quiet",
+            "status": "neutral"
+           }
+          },
+          {
+           "type": "DataNumber",
+           "props": {
+            "value": -34000,
+            "config": {
+             "obj": {
+              "mode": {
+               "obj": {
+                "kind": "compactMax",
+                "n": 3
+               }
+              },
+              "locale": "en-GB"
+             }
+            },
+            "trend": "arrowDown",
+            "symbol": "USD",
+            "emphasis": "quiet",
+            "status": "info"
+           }
+          },
+          {
+           "type": "DataNumber",
+           "props": {
+            "value": -34000,
+            "config": {
+             "obj": {
+              "mode": {
+               "obj": {
+                "kind": "compactMax",
+                "n": 3
+               }
+              },
+              "locale": "en-GB"
+             }
+            },
+            "trend": "arrowDown",
+            "symbol": "USD",
+            "emphasis": "quiet",
+            "status": "success"
+           }
+          },
+          {
+           "type": "DataNumber",
+           "props": {
+            "value": -34000,
+            "config": {
+             "obj": {
+              "mode": {
+               "obj": {
+                "kind": "compactMax",
+                "n": 3
+               }
+              },
+              "locale": "en-GB"
+             }
+            },
+            "trend": "arrowDown",
+            "symbol": "USD",
+            "emphasis": "quiet",
+            "status": "warning"
+           }
+          },
+          {
+           "type": "DataNumber",
+           "props": {
+            "value": 34000,
+            "config": {
+             "obj": {
+              "mode": {
+               "obj": {
+                "kind": "compactMax",
+                "n": 3
+               }
+              },
+              "locale": "en-GB"
+             }
+            },
+            "trend": "arrowUp",
+            "symbol": "USD",
+            "emphasis": "quiet",
+            "status": "error"
+           }
+          }
+         ],
+         "props": {
+          "as": "div",
+          "style": {
+           "obj": {
+            "display": "grid",
+            "gridTemplateColumns": "repeat(5, auto)",
+            "gap": "12px 20px",
+            "alignItems": "center"
+           }
+          }
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "scale \u2014 xs sm md lg xl"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "DataNumber",
+         "props": {
+          "value": 34765432,
+          "config": {
+           "obj": {
+            "mode": {
+             "obj": {
+              "kind": "compactMax",
+              "n": 3
+             }
+            },
+            "locale": "en-GB"
+           }
+          },
+          "symbol": "USD",
+          "scale": "xs"
+         }
+        },
+        {
+         "type": "DataNumber",
+         "props": {
+          "value": 34765432,
+          "config": {
+           "obj": {
+            "mode": {
+             "obj": {
+              "kind": "compactMax",
+              "n": 3
+             }
+            },
+            "locale": "en-GB"
+           }
+          },
+          "symbol": "USD",
+          "scale": "sm"
+         }
+        },
+        {
+         "type": "DataNumber",
+         "props": {
+          "value": 34765432,
+          "config": {
+           "obj": {
+            "mode": {
+             "obj": {
+              "kind": "compactMax",
+              "n": 3
+             }
+            },
+            "locale": "en-GB"
+           }
+          },
+          "symbol": "USD",
+          "scale": "md"
+         }
+        },
+        {
+         "type": "DataNumber",
+         "props": {
+          "value": 34765432,
+          "config": {
+           "obj": {
+            "mode": {
+             "obj": {
+              "kind": "compactMax",
+              "n": 3
+             }
+            },
+            "locale": "en-GB"
+           }
+          },
+          "symbol": "USD",
+          "scale": "lg"
+         }
+        },
+        {
+         "type": "DataNumber",
+         "props": {
+          "value": 34765432,
+          "config": {
+           "obj": {
+            "mode": {
+             "obj": {
+              "kind": "compactMax",
+              "n": 3
+             }
+            },
+            "locale": "en-GB"
+           }
+          },
+          "symbol": "USD",
+          "scale": "xl"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "empty and invalid \u2014 the placeholder, and a custom one"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "DataNumber"
+        },
+        {
+         "type": "DataNumber",
+         "props": {
+          "value": "abc",
+          "config": {
+           "obj": {
+            "mode": {
+             "obj": {
+              "kind": "full"
+             }
+            },
+            "locale": "en-GB"
+           }
+          }
+         }
+        },
+        {
+         "type": "DataNumber",
+         "props": {
+          "placeholder": "n/a"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-primitive-separator-default",
+ "version": 1,
+ "uiDataId": "ui-data-primitive-separator",
+ "name": "default",
+ "title": "Separator, its cases",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

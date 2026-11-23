@@ -1,0 +1,24 @@
+{
+ "id": "doc/skill-build-a-previewer-editor",
+ "kind": "doc",
+ "title": "build a previewer-editor",
+ "status": "todo",
+ "subject": "skills",
+ "owner": "skills/seed-contributor/libs-knowledge",
+ "tags": [
+  "skills",
+  "seed-contributor",
+  "libs-knowledge"
+ ],
+ "paths": [],
+ "summary": "",
+ "docId": "skill-build-a-previewer-editor",
+ "doc": {
+  "axioms": [],
+  "purpose": {},
+  "reference": []
+ },
+ "audience": [
+  "seed-contributor"
+ ]
+}

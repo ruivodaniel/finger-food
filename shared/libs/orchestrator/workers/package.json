@@ -1,0 +1,43 @@
+{
+  "name": "@libs/orchestrator-workers",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "description": "Every worker version, each at its own path (@libs/orchestrator-workers/<id>/<version>). A contract declares the runtimes it runs in; the frontend may import only versions that declare \"client\". The orchestrator's registry lists them all.",
+  "exports": {
+    "./audio-to-text-whisper/v1": "./audio-to-text-whisper/v1/index.ts",
+    "./data-access-open-api/v1": "./data-access-open-api/v1/index.ts",
+    "./document-format-conversion-libreoffice/v1": "./document-format-conversion-libreoffice/v1/index.ts",
+    "./document-format-conversion-markdown-it/v1": "./document-format-conversion-markdown-it/v1/index.ts",
+    "./extract-mupdf/v1": "./extract-mupdf/v1/index.ts",
+    "./image-to-text-qwen25-vl/v1": "./image-to-text-qwen25-vl/v1/index.ts",
+    "./merge-native/v1": "./merge-native/v1/index.ts",
+    "./output-image-mupdf/v1": "./output-image-mupdf/v1/index.ts",
+    "./part-text-qwen3/v1": "./part-text-qwen3/v1/index.ts",
+    "./lib/open-api": "./lib/open-api.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit && tsc --noEmit -p tsconfig.test.json && tsc --noEmit -p tsconfig.client.json",
+    "test:unit": "vitest run",
+    "test:watch": "vitest",
+    "typecheck:client": "tsc --noEmit -p tsconfig.client.json",
+    "mirror:whisper": "tsx scripts/mirror-whisper.ts"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "4.3.2",
+    "@libs/orchestrator-lib-schema": "workspace:*",
+    "execa": "^9.6.0",
+    "hono": "4.12.17",
+    "markdown-it": "14.1.1",
+    "mupdf": "1.28.1",
+    "openai": "^6.0.0",
+    "p-limit": "^7.3.2",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/markdown-it": "14.1.2",
+    "tsx": "4.21.0",
+    "typescript": "^5.0.0",
+    "vitest": "^3.1.4"
+  }
+}

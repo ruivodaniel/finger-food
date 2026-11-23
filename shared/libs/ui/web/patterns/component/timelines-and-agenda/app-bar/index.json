@@ -1,0 +1,32 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "app-bar",
+ "version": 1,
+ "surface": "web",
+ "measure": "md",
+ "root": {
+  "type": "Stack",
+  "props": {
+   "dir": "row",
+   "gap": 12,
+   "align": "center"
+  },
+  "children": [
+   {
+    "type": "Icon",
+    "props": {
+     "name": "menu"
+    }
+   },
+   {
+    "type": "Text",
+    "props": {
+     "as": "span",
+     "element": "type--heading3",
+     "children": "Blueway"
+    }
+   }
+  ]
+ }
+}

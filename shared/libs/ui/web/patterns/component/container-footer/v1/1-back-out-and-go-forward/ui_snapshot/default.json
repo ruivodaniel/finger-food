@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-container-footer-1-back-out-and-go-forward-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-container-footer-1-back-out-and-go-forward",
+ "name": "default",
+ "title": "Container footer 1: back out at the left, go forward at the right (default)",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

@@ -1,0 +1,7 @@
+{
+ "id": "route-pattern-page-sign-in",
+ "version": 1,
+ "surface": "web",
+ "path": "/patterns/page/sign-in",
+ "uiNodeId": "ui-node-pattern-page-sign-in"
+}

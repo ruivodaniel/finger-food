@@ -1,0 +1,173 @@
+{
+ "id": "ui-data-primitive-alert",
+ "version": 1,
+ "uiNodeId": "ui-node-primitive-alert",
+ "kind": "component",
+ "name": "primitive-alert",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "primitive-alert",
+  "version": 1,
+  "surface": "web",
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "align": "center",
+    "scale": "2xl"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "status"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Text",
+         "children": [
+          {
+           "type": "Alert",
+           "children": [
+            {
+             "type": "AlertTitle",
+             "props": {
+              "children": "Heads up"
+             }
+            },
+            {
+             "type": "AlertDescription",
+             "props": {
+              "children": "An informational message."
+             }
+            }
+           ],
+           "props": {
+            "status": "info",
+            "icon": {
+             "type": "Icon",
+             "props": {
+              "name": "info"
+             }
+            }
+           }
+          },
+          {
+           "type": "Alert",
+           "children": [
+            {
+             "type": "AlertTitle",
+             "props": {
+              "children": "Done"
+             }
+            },
+            {
+             "type": "AlertDescription",
+             "props": {
+              "children": "Action completed successfully."
+             }
+            }
+           ],
+           "props": {
+            "status": "success",
+            "icon": {
+             "type": "Icon",
+             "props": {
+              "name": "check"
+             }
+            }
+           }
+          },
+          {
+           "type": "Alert",
+           "children": [
+            {
+             "type": "AlertTitle",
+             "props": {
+              "children": "Watch out"
+             }
+            },
+            {
+             "type": "AlertDescription",
+             "props": {
+              "children": "Something needs your attention."
+             }
+            }
+           ],
+           "props": {
+            "status": "warning",
+            "icon": {
+             "type": "Icon",
+             "props": {
+              "name": "warning"
+             }
+            }
+           }
+          },
+          {
+           "type": "Alert",
+           "children": [
+            {
+             "type": "AlertTitle",
+             "props": {
+              "children": "Error"
+             }
+            },
+            {
+             "type": "AlertDescription",
+             "props": {
+              "children": "Something went wrong."
+             }
+            }
+           ],
+           "props": {
+            "status": "error",
+            "icon": {
+             "type": "Icon",
+             "props": {
+              "name": "error"
+             }
+            }
+           }
+          }
+         ],
+         "props": {
+          "as": "div",
+          "className": "flex flex-col gap-3",
+          "style": {
+           "obj": {
+            "maxWidth": 480,
+            "width": "100%"
+           }
+          }
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,110 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "rate-limit-2",
+ "version": 1,
+ "surface": "web",
+ "measure": "md",
+ "root": {
+  "type": "Card",
+  "props": {},
+  "children": [
+   {
+    "type": "Content",
+    "props": {},
+    "children": [
+     {
+      "type": "Stack",
+      "props": {
+       "dir": "col",
+       "gap": 12
+      },
+      "children": [
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "align": "center",
+         "gap": 8
+        },
+        "children": [
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--body",
+           "status": "warning"
+          },
+          "children": [
+           {
+            "type": "Icon",
+            "props": {
+             "name": "lock",
+             "size": "sm"
+            }
+           }
+          ]
+         },
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--heading4",
+           "className": "flex-1 min-w-0",
+           "children": "Rate Limit"
+          }
+         },
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--numbers-small",
+           "status": "warning",
+           "children": "15 / 100"
+          }
+         }
+        ]
+       },
+       {
+        "type": "Progress",
+        "props": {
+         "value": 15,
+         "status": "warning"
+        }
+       },
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "justify": "between",
+         "align": "center",
+         "gap": 12
+        },
+        "children": [
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--body-small",
+           "emphasis": "quiet",
+           "children": "Requests available"
+          }
+         },
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--body-small",
+           "emphasis": "quiet",
+           "children": "Resets in 42s"
+          }
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

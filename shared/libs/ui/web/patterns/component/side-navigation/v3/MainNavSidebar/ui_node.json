@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-component-side-navigation-mainnavsidebar",
+ "version": 1,
+ "type": "navigation",
+ "surface": "web",
+ "title": "MainNavSidebar"
+}

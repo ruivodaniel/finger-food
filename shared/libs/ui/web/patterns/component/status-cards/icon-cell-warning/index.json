@@ -1,0 +1,83 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "icon-cell-warning",
+ "version": 1,
+ "surface": "web",
+ "measure": "md",
+ "root": {
+  "type": "Card",
+  "props": {
+   "className": "flex-1 min-w-56"
+  },
+  "children": [
+   {
+    "type": "Content",
+    "props": {},
+    "children": [
+     {
+      "type": "Stack",
+      "props": {
+       "dir": "row",
+       "gap": 12,
+       "align": "start"
+      },
+      "children": [
+       {
+        "type": "Tile",
+        "props": {
+         "status": "warning",
+         "className": "flex-none p-2"
+        },
+        "children": [
+         {
+          "type": "Icon",
+          "props": {
+           "name": "warning",
+           "size": "sm"
+          }
+         }
+        ]
+       },
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "col",
+         "gap": 4,
+         "size": "fill"
+        },
+        "children": [
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--heading4",
+           "children": "Storage almost full"
+          }
+         },
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--body-small",
+           "children": "92% of 50 GB used \u2014 uploads pause at 100%."
+          }
+         },
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--body-extra-small",
+           "emphasis": "quiet",
+           "children": "1 h ago"
+          }
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

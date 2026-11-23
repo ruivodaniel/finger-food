@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-status-cards-header-band-error-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-status-cards-header-band-error",
+ "name": "default",
+ "title": "Status cards: header band error",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

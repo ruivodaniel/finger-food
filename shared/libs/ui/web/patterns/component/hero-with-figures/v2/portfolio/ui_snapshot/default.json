@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-hero-with-figures-portfolio-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-hero-with-figures-portfolio",
+ "name": "default",
+ "title": "Hero with figures: portfolio",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

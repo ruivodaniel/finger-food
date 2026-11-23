@@ -1,0 +1,1108 @@
+{
+ "id": "ui-data-pattern-page-layout-table-pagination-at-scroll-end",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-page-layout-table-pagination-at-scroll-end",
+ "kind": "page",
+ "name": "layout-table-pagination-at-scroll-end",
+ "document": {
+  "kind": "page",
+  "schemaVersion": 1,
+  "name": "layout-table-pagination-at-scroll-end",
+  "version": 1,
+  "surface": "web",
+  "state": {
+   "open": false,
+   "current": "dashboard",
+   "org": "org-acme-corp",
+   "mode": "light",
+   "page": 2
+  },
+  "root": {
+   "use": {
+    "component": "SideNavigationScreen",
+    "version": "latest"
+   },
+   "args": {
+    "open": {
+     "bind": "state.open"
+    },
+    "current": {
+     "bind": "state.current"
+    },
+    "org": {
+     "bind": "state.org"
+    },
+    "mode": {
+     "bind": "state.mode"
+    },
+    "expand": "overlay",
+    "account": "separate",
+    "withOrganizations": false,
+    "withModes": false,
+    "toggleAt": "top",
+    "backLabel": "PROWD"
+   },
+   "on": {
+    "openChange": [
+     {
+      "set": {
+       "state": "open",
+       "to": {
+        "bind": "event.open"
+       }
+      }
+     }
+    ],
+    "navigate": [
+     {
+      "set": {
+       "state": "current",
+       "to": {
+        "bind": "event.id"
+       }
+      }
+     }
+    ],
+    "organizationChange": [
+     {
+      "set": {
+       "state": "org",
+       "to": {
+        "bind": "event.id"
+       }
+      }
+     }
+    ],
+    "modeChange": [
+     {
+      "set": {
+       "state": "mode",
+       "to": {
+        "bind": "event.id"
+       }
+      }
+     }
+    ],
+    "back": [
+     {
+      "set": {
+       "state": "current",
+       "to": "back"
+      }
+     }
+    ]
+   },
+   "slots": {
+    "children": [
+     {
+      "type": "SingleSidebarLayout",
+      "props": {
+       "pageHeaderContent": {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "align": "center",
+         "justify": "between",
+         "size": "fill"
+        },
+        "children": [
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--heading3",
+           "children": "Members"
+          }
+         },
+         {
+          "type": "Button",
+          "props": {
+           "scale": "sm",
+           "emphasis": "primary",
+           "children": "Invite",
+           "data-testid": "table-pagination-a-invite-btn"
+          }
+         }
+        ]
+       },
+       "mainContainerContent": {
+        "type": "Stack",
+        "props": {
+         "dir": "col",
+         "scale": "xl"
+        },
+        "children": [
+         {
+          "type": "Card",
+          "children": [
+           {
+            "type": "Content",
+            "children": [
+             {
+              "type": "Stack",
+              "props": {
+               "dir": "col",
+               "scale": "sm"
+              },
+              "children": [
+               {
+                "type": "Skeleton",
+                "props": {
+                 "scale": "sm"
+                }
+               },
+               {
+                "type": "Skeleton",
+                "props": {
+                 "scale": "sm"
+                }
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "Card",
+          "children": [
+           {
+            "type": "Header",
+            "children": [
+             {
+              "type": "Stack",
+              "props": {
+               "dir": "row",
+               "align": "center",
+               "justify": "between"
+              },
+              "children": [
+               {
+                "type": "Stack",
+                "props": {
+                 "dir": "row",
+                 "align": "center",
+                 "scale": "sm"
+                },
+                "children": [
+                 {
+                  "type": "Text",
+                  "props": {
+                   "as": "span",
+                   "element": "type--heading3",
+                   "children": "Title"
+                  }
+                 }
+                ]
+               },
+               {
+                "type": "Stack",
+                "props": {
+                 "dir": "row",
+                 "align": "center",
+                 "scale": "sm"
+                },
+                "children": [
+                 {
+                  "type": "Button",
+                  "props": {
+                   "scale": "sm",
+                   "emphasis": "secondary",
+                   "children": "Action",
+                   "data-testid": "tp-end-first-action-btn"
+                  }
+                 },
+                 {
+                  "type": "Button",
+                  "props": {
+                   "scale": "sm",
+                   "emphasis": "primary",
+                   "children": "Action",
+                   "data-testid": "tp-end-second-action-btn"
+                  }
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "type": "Table",
+            "children": [
+             {
+              "type": "TableHeader",
+              "children": [
+               {
+                "type": "TableRow",
+                "children": [
+                 {
+                  "type": "TableHead",
+                  "props": {
+                   "children": "Name"
+                  }
+                 },
+                 {
+                  "type": "TableHead",
+                  "props": {
+                   "children": "Role"
+                  }
+                 },
+                 {
+                  "type": "TableHead",
+                  "props": {
+                   "children": "Status"
+                  }
+                 }
+                ]
+               }
+              ]
+             },
+             {
+              "type": "TableBody",
+              "children": [
+               {
+                "type": "TableRow",
+                "children": [
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 }
+                ]
+               },
+               {
+                "type": "TableRow",
+                "children": [
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 }
+                ]
+               },
+               {
+                "type": "TableRow",
+                "children": [
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 }
+                ]
+               },
+               {
+                "type": "TableRow",
+                "children": [
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 }
+                ]
+               },
+               {
+                "type": "TableRow",
+                "children": [
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 }
+                ]
+               },
+               {
+                "type": "TableRow",
+                "children": [
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 }
+                ]
+               },
+               {
+                "type": "TableRow",
+                "children": [
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 }
+                ]
+               },
+               {
+                "type": "TableRow",
+                "children": [
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 }
+                ]
+               },
+               {
+                "type": "TableRow",
+                "children": [
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 }
+                ]
+               },
+               {
+                "type": "TableRow",
+                "children": [
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 }
+                ]
+               },
+               {
+                "type": "TableRow",
+                "children": [
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 }
+                ]
+               },
+               {
+                "type": "TableRow",
+                "children": [
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 }
+                ]
+               },
+               {
+                "type": "TableRow",
+                "children": [
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 }
+                ]
+               },
+               {
+                "type": "TableRow",
+                "children": [
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 }
+                ]
+               },
+               {
+                "type": "TableRow",
+                "children": [
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 }
+                ]
+               },
+               {
+                "type": "TableRow",
+                "children": [
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 }
+                ]
+               },
+               {
+                "type": "TableRow",
+                "children": [
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 }
+                ]
+               },
+               {
+                "type": "TableRow",
+                "children": [
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 }
+                ]
+               },
+               {
+                "type": "TableRow",
+                "children": [
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 }
+                ]
+               },
+               {
+                "type": "TableRow",
+                "children": [
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 }
+                ]
+               },
+               {
+                "type": "TableRow",
+                "children": [
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 }
+                ]
+               },
+               {
+                "type": "TableRow",
+                "children": [
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 }
+                ]
+               },
+               {
+                "type": "TableRow",
+                "children": [
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 }
+                ]
+               },
+               {
+                "type": "TableRow",
+                "children": [
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 }
+                ]
+               },
+               {
+                "type": "TableRow",
+                "children": [
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 },
+                 {
+                  "type": "TableCell",
+                  "props": {
+                   "children": "—"
+                  }
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "type": "Footer",
+            "children": [
+             {
+              "type": "Stack",
+              "props": {
+               "dir": "row",
+               "align": "center",
+               "justify": "between"
+              },
+              "children": [
+               {
+                "type": "Stack",
+                "props": {
+                 "dir": "row",
+                 "align": "center",
+                 "scale": "sm"
+                },
+                "children": [
+                 {
+                  "type": "Text",
+                  "props": {
+                   "as": "span",
+                   "element": "type--body-small",
+                   "children": "1–25 of 312",
+                   "emphasis": "quiet"
+                  }
+                 }
+                ]
+               },
+               {
+                "type": "Pagination",
+                "children": [
+                 {
+                  "type": "PaginationContent",
+                  "children": [
+                   {
+                    "type": "PaginationItem",
+                    "children": [
+                     {
+                      "type": "PaginationPrevious",
+                      "on": {
+                       "click": [
+                        {
+                         "set": {
+                          "state": "page",
+                          "to": {
+                           "if": [
+                            {
+                             "gt": [
+                              {
+                               "bind": "state.page"
+                              },
+                              1
+                             ]
+                            },
+                            {
+                             "sub": [
+                              {
+                               "bind": "state.page"
+                              },
+                              1
+                             ]
+                            },
+                            1
+                           ]
+                          }
+                         }
+                        }
+                       ]
+                      },
+                      "props": {
+                       "data-testid": "pagination-page-previous-btn"
+                      }
+                     }
+                    ]
+                   },
+                   {
+                    "type": "PaginationItem",
+                    "children": [
+                     {
+                      "type": "PaginationLink",
+                      "on": {
+                       "click": [
+                        {
+                         "set": {
+                          "state": "page",
+                          "to": 1
+                         }
+                        }
+                       ]
+                      },
+                      "props": {
+                       "isActive": {
+                        "eq": [
+                         {
+                          "bind": "state.page"
+                         },
+                         1
+                        ]
+                       },
+                       "children": "1",
+                       "data-testid": "pagination-page-1-btn"
+                      }
+                     }
+                    ]
+                   },
+                   {
+                    "type": "PaginationItem",
+                    "children": [
+                     {
+                      "type": "PaginationLink",
+                      "on": {
+                       "click": [
+                        {
+                         "set": {
+                          "state": "page",
+                          "to": 2
+                         }
+                        }
+                       ]
+                      },
+                      "props": {
+                       "isActive": {
+                        "eq": [
+                         {
+                          "bind": "state.page"
+                         },
+                         2
+                        ]
+                       },
+                       "children": "2",
+                       "data-testid": "pagination-page-2-btn"
+                      }
+                     }
+                    ]
+                   },
+                   {
+                    "type": "PaginationItem",
+                    "children": [
+                     {
+                      "type": "PaginationLink",
+                      "on": {
+                       "click": [
+                        {
+                         "set": {
+                          "state": "page",
+                          "to": 3
+                         }
+                        }
+                       ]
+                      },
+                      "props": {
+                       "isActive": {
+                        "eq": [
+                         {
+                          "bind": "state.page"
+                         },
+                         3
+                        ]
+                       },
+                       "children": "3",
+                       "data-testid": "pagination-page-3-btn"
+                      }
+                     }
+                    ]
+                   },
+                   {
+                    "type": "PaginationItem",
+                    "children": [
+                     {
+                      "type": "PaginationEllipsis"
+                     }
+                    ]
+                   },
+                   {
+                    "type": "PaginationItem",
+                    "children": [
+                     {
+                      "type": "PaginationLink",
+                      "on": {
+                       "click": [
+                        {
+                         "set": {
+                          "state": "page",
+                          "to": 12
+                         }
+                        }
+                       ]
+                      },
+                      "props": {
+                       "isActive": {
+                        "eq": [
+                         {
+                          "bind": "state.page"
+                         },
+                         12
+                        ]
+                       },
+                       "children": "12",
+                       "data-testid": "pagination-page-12-btn"
+                      }
+                     }
+                    ]
+                   },
+                   {
+                    "type": "PaginationItem",
+                    "children": [
+                     {
+                      "type": "PaginationNext",
+                      "on": {
+                       "click": [
+                        {
+                         "set": {
+                          "state": "page",
+                          "to": {
+                           "if": [
+                            {
+                             "lt": [
+                              {
+                               "bind": "state.page"
+                              },
+                              12
+                             ]
+                            },
+                            {
+                             "add": [
+                              {
+                               "bind": "state.page"
+                              },
+                              1
+                             ]
+                            },
+                            12
+                           ]
+                          }
+                         }
+                        }
+                       ]
+                      },
+                      "props": {
+                       "data-testid": "pagination-page-next-btn"
+                      }
+                     }
+                    ]
+                   }
+                  ]
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       "scale": "md"
+      }
+     }
+    ]
+   }
+  }
+ }
+}

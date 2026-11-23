@@ -1,0 +1,389 @@
+{
+ "id": "ui-data-primitive-tooltip",
+ "version": 1,
+ "uiNodeId": "ui-node-primitive-tooltip",
+ "kind": "component",
+ "name": "primitive-tooltip",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "primitive-tooltip",
+  "version": 1,
+  "surface": "web",
+  "state": {
+   "side_top_open": false,
+   "side_right_open": false,
+   "side_bottom_open": false,
+   "side_left_open": false,
+   "with_button_open": false
+  },
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "align": "center",
+    "scale": "2xl"
+   },
+   "children": [
+    {
+     "type": "TooltipProvider",
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "align": "center",
+        "scale": "sm"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "element": "type--body-extra-small",
+          "emphasis": "quiet",
+          "children": "sides"
+         }
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "justify": "center",
+          "scale": "md",
+          "wrap": true
+         },
+         "children": [
+          {
+           "type": "Text",
+           "children": [
+            {
+             "type": "Tooltip",
+             "children": [
+              {
+               "type": "TooltipTrigger",
+               "children": [
+                {
+                 "type": "Button",
+                 "props": {
+                  "emphasis": "secondary",
+                  "scale": "sm",
+                  "children": "Top",
+                  "data-testid": "tooltip-sides-1-btn"
+                 }
+                }
+               ],
+               "props": {
+                "asChild": true
+               }
+              },
+              {
+               "type": "TooltipContent",
+               "children": [
+                {
+                 "type": "Text",
+                 "props": {
+                  "children": "Tooltip on"
+                 }
+                },
+                {
+                 "type": "Text",
+                 "props": {
+                  "children": "top"
+                 }
+                }
+               ],
+               "props": {
+                "side": "top"
+               }
+              }
+             ],
+             "on": {
+              "openChange": [
+               {
+                "set": {
+                 "state": "side_top_open",
+                 "to": {
+                  "bind": "event"
+                 }
+                }
+               }
+              ]
+             },
+             "props": {
+              "open": {
+               "bind": "state.side_top_open"
+              },
+              "data-testid": "tooltip-sides-2-card"
+             }
+            },
+            {
+             "type": "Tooltip",
+             "children": [
+              {
+               "type": "TooltipTrigger",
+               "children": [
+                {
+                 "type": "Button",
+                 "props": {
+                  "emphasis": "secondary",
+                  "scale": "sm",
+                  "children": "Right",
+                  "data-testid": "tooltip-sides-3-btn"
+                 }
+                }
+               ],
+               "props": {
+                "asChild": true
+               }
+              },
+              {
+               "type": "TooltipContent",
+               "children": [
+                {
+                 "type": "Text",
+                 "props": {
+                  "children": "Tooltip on"
+                 }
+                },
+                {
+                 "type": "Text",
+                 "props": {
+                  "children": "right"
+                 }
+                }
+               ],
+               "props": {
+                "side": "right"
+               }
+              }
+             ],
+             "on": {
+              "openChange": [
+               {
+                "set": {
+                 "state": "side_right_open",
+                 "to": {
+                  "bind": "event"
+                 }
+                }
+               }
+              ]
+             },
+             "props": {
+              "open": {
+               "bind": "state.side_right_open"
+              },
+              "data-testid": "tooltip-sides-4-card"
+             }
+            },
+            {
+             "type": "Tooltip",
+             "children": [
+              {
+               "type": "TooltipTrigger",
+               "children": [
+                {
+                 "type": "Button",
+                 "props": {
+                  "emphasis": "secondary",
+                  "scale": "sm",
+                  "children": "Bottom",
+                  "data-testid": "tooltip-sides-5-btn"
+                 }
+                }
+               ],
+               "props": {
+                "asChild": true
+               }
+              },
+              {
+               "type": "TooltipContent",
+               "children": [
+                {
+                 "type": "Text",
+                 "props": {
+                  "children": "Tooltip on"
+                 }
+                },
+                {
+                 "type": "Text",
+                 "props": {
+                  "children": "bottom"
+                 }
+                }
+               ],
+               "props": {
+                "side": "bottom"
+               }
+              }
+             ],
+             "on": {
+              "openChange": [
+               {
+                "set": {
+                 "state": "side_bottom_open",
+                 "to": {
+                  "bind": "event"
+                 }
+                }
+               }
+              ]
+             },
+             "props": {
+              "open": {
+               "bind": "state.side_bottom_open"
+              },
+              "data-testid": "tooltip-sides-6-card"
+             }
+            },
+            {
+             "type": "Tooltip",
+             "children": [
+              {
+               "type": "TooltipTrigger",
+               "children": [
+                {
+                 "type": "Button",
+                 "props": {
+                  "emphasis": "secondary",
+                  "scale": "sm",
+                  "children": "Left",
+                  "data-testid": "tooltip-sides-7-btn"
+                 }
+                }
+               ],
+               "props": {
+                "asChild": true
+               }
+              },
+              {
+               "type": "TooltipContent",
+               "children": [
+                {
+                 "type": "Text",
+                 "props": {
+                  "children": "Tooltip on"
+                 }
+                },
+                {
+                 "type": "Text",
+                 "props": {
+                  "children": "left"
+                 }
+                }
+               ],
+               "props": {
+                "side": "left"
+               }
+              }
+             ],
+             "on": {
+              "openChange": [
+               {
+                "set": {
+                 "state": "side_left_open",
+                 "to": {
+                  "bind": "event"
+                 }
+                }
+               }
+              ]
+             },
+             "props": {
+              "open": {
+               "bind": "state.side_left_open"
+              },
+              "data-testid": "tooltip-sides-8-card"
+             }
+            }
+           ],
+           "props": {
+            "as": "div",
+            "className": "flex items-center gap-6"
+           }
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "col",
+        "align": "center",
+        "scale": "sm"
+       },
+       "children": [
+        {
+         "type": "Text",
+         "props": {
+          "element": "type--body-extra-small",
+          "emphasis": "quiet",
+          "children": "with button"
+         }
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "justify": "center",
+          "scale": "md",
+          "wrap": true
+         },
+         "children": [
+          {
+           "type": "Tooltip",
+           "children": [
+            {
+             "type": "TooltipTrigger",
+             "children": [
+              {
+               "type": "Button",
+               "props": {
+                "children": "Hover me",
+                "data-testid": "tooltip-with-button-1-btn"
+               }
+              }
+             ],
+             "props": {
+              "asChild": true
+             }
+            },
+            {
+             "type": "TooltipContent",
+             "props": {
+              "children": "This tooltip appears above the button"
+             }
+            }
+           ],
+           "on": {
+            "openChange": [
+             {
+              "set": {
+               "state": "with_button_open",
+               "to": {
+                "bind": "event"
+               }
+              }
+             }
+            ]
+           },
+           "props": {
+            "open": {
+             "bind": "state.with_button_open"
+            },
+            "data-testid": "tooltip-with-button-2-card"
+           }
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

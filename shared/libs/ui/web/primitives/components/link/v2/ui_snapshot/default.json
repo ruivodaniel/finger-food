@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-primitive-link-default",
+ "version": 1,
+ "uiDataId": "ui-data-primitive-link",
+ "name": "default",
+ "title": "Link, its cases",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

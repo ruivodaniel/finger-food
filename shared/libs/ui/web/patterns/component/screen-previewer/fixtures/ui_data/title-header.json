@@ -1,0 +1,50 @@
+{
+  "id": "ui-data-title-header",
+  "version": 1,
+  "uiNodeId": "node-title-header",
+  "kind": "component",
+  "name": "title-header",
+  "document": {
+    "kind": "component",
+    "schemaVersion": 1,
+    "name": "title-header",
+    "version": 1,
+    "params": [
+      "icon",
+      "title",
+      "titleTestId"
+    ],
+    "root": {
+      "type": "Stack",
+      "props": {
+        "dir": "row",
+        "align": "center",
+        "gap": 8,
+        "className": "h-full px-6"
+      },
+      "children": [
+        {
+          "type": "Icon",
+          "props": {
+            "name": {
+              "bind": "icon"
+            }
+          }
+        },
+        {
+          "type": "Text",
+          "props": {
+            "element": "type--heading2",
+            "children": {
+              "bind": "title"
+            },
+            "as": "h1",
+            "data-testid": {
+              "bind": "titleTestId"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

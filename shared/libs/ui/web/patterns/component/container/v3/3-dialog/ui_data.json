@@ -1,0 +1,191 @@
+{
+ "id": "ui-data-pattern-component-container-3-dialog",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-container-3-dialog",
+ "kind": "component",
+ "name": "container-3-dialog",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "container-3-dialog",
+  "version": 1,
+  "surface": "web",
+  "state": {
+   "open": false
+  },
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "align": "center",
+    "justify": "center",
+    "size": "fill"
+   },
+   "children": [
+    {
+     "type": "Dialog",
+     "children": [
+      {
+       "type": "DialogTrigger",
+       "children": [
+        {
+         "type": "Button",
+         "props": {
+          "emphasis": "secondary",
+          "children": "Open",
+          "data-testid": "c-dialog-open-btn"
+         }
+        }
+       ],
+       "props": {
+        "asChild": true
+       }
+      },
+      {
+       "type": "DialogContent",
+       "children": [
+        {
+         "type": "Header",
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "row",
+            "align": "center",
+            "justify": "between"
+           },
+           "children": [
+            {
+             "type": "Stack",
+             "props": {
+              "dir": "row",
+              "align": "center",
+              "scale": "sm"
+             },
+             "children": [
+              {
+               "type": "DialogTitle",
+               "props": {
+                "children": "Title"
+               }
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "Content",
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "col",
+            "scale": "sm"
+           },
+           "children": [
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "sm"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "sm"
+             }
+            },
+            {
+             "type": "Skeleton",
+             "props": {
+              "scale": "sm"
+             }
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "Footer",
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "row",
+            "align": "center",
+            "justify": "between"
+           },
+           "children": [
+            {
+             "type": "Stack",
+             "props": {
+              "dir": "row",
+              "align": "center",
+              "scale": "sm"
+             },
+             "children": [
+              {
+               "type": "Button",
+               "props": {
+                "scale": "sm",
+                "emphasis": "tertiary",
+                "children": "Cancel",
+                "data-testid": "c-dialog-cancel-btn"
+               }
+              }
+             ]
+            },
+            {
+             "type": "Stack",
+             "props": {
+              "dir": "row",
+              "align": "center",
+              "scale": "sm"
+             },
+             "children": [
+              {
+               "type": "Button",
+               "props": {
+                "scale": "sm",
+                "emphasis": "primary",
+                "children": "Save",
+                "data-testid": "c-dialog-save-btn"
+               }
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ],
+       "props": {
+        "scale": "sm"
+       }
+      }
+     ],
+     "on": {
+      "openChange": [
+       {
+        "set": {
+         "state": "open",
+         "to": {
+          "bind": "event"
+         }
+        }
+       }
+      ]
+     },
+     "props": {
+      "open": {
+       "bind": "state.open"
+      },
+      "data-testid": "container-example-dialog"
+     }
+    }
+   ]
+  }
+ }
+}

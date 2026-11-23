@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-page-layout-main-only-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-page-layout-main-only",
+ "name": "default",
+ "title": "Main only, title block in the content",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

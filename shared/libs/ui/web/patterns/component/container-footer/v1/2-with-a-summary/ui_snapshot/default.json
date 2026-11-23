@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-container-footer-2-with-a-summary-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-container-footer-2-with-a-summary",
+ "name": "default",
+ "title": "Container footer 2: a summary stands at the left, after the action that backs out",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

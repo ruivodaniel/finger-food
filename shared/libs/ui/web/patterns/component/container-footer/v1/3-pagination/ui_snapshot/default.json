@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-container-footer-3-pagination-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-container-footer-3-pagination",
+ "name": "default",
+ "title": "Container footer 3: pagination, the range at the left and the pages at the right",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

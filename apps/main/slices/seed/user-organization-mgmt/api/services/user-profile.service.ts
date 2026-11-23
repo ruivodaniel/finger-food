@@ -4,12 +4,11 @@
  *
  * Owns `user_profile`. WHO may read/update a profile is the AC engine
  * (`allowUpdate` verdict + resolved read/update Scopes, AC5/AC6/AC10); the
- * pre-session registration seams (create, first name-seed) run before any bag
- * exists and stay raw infrastructure.
+ * pre-session registration seam (create) runs before any bag exists and stays
+ * raw infrastructure.
  */
 
-import type { Ac, Private, Public } from "@libs/gated-scoped-ac";
-import type { ScopedAcRequestContext } from "../shared/scoped-ac";
+import type { Ac, Private, Public, ScopedAcRequestContext } from "@libs/gated-scoped-ac";
 import type {
   ProfilePatch,
   UserProfileRepository,
@@ -72,14 +71,48 @@ export class UserProfileService {
     return row ?? null;
   }
 
-  /** Raw write — the pre-session registration name-seed (no bag yet). The gated
-   * authenticated update is `updateScoped`. AC42: token-less (rule 5). */
-  async update(userId: string, patch: ProfilePatch): Promise<void> {
-    await this.deps.userProfileRepo.update(userId, patch);
+  /** Names of the given users, keyed by user id — what another slice shows for
+   * a person it holds only the id of (credits, payment). A profile without a
+   * name is named by its user id; an unknown id is left out. AC42: Public — a
+   * profile leaks by design (UOM4). */
+  async namesByIds(
+    visibility: Public,
+    userIds: string[],
+  ): Promise<Map<string, string>> {
+    const rows = await this.deps.userProfileRepo.findAllByUserIds(
+      visibility,
+      userIds,
+    );
+    return new Map(rows.map((row) => [row.userId, row.name ?? row.userId]));
   }
 
-  /** Gated write — the authenticated `/me/profile` path. Cheap in-memory column
-   * verdict first (AC10), then the scoped row write; denied ⇒ forbidden. */
+  /** People whose profile name contains `search`, name-ordered — only the
+   * profiles the caller's read rules admit. AC42: Private. */
+  async searchByName(
+    ac: ScopedAcRequestContext,
+    visibility: Private,
+    search: string,
+    limit: number,
+  ): Promise<Array<{ userId: string; name: string }>> {
+    // Read pass-through (AC5): the engine resolves the read Scope, the repo
+    // executes it.
+    const scope = this.deps.engine.resolveRead(
+      ac.permissions,
+      "user_profile",
+      ac.bag,
+    );
+    return this.deps.userProfileRepo.searchByName(
+      visibility,
+      search,
+      limit,
+      scope,
+      ac.gateDb,
+    );
+  }
+
+  /** Gated write — the authenticated `/me/profile` path and the name given at
+   * registration. Cheap in-memory column verdict first (AC10), then the scoped
+   * row write; denied ⇒ forbidden. */
   async updateScoped(
     ac: ScopedAcRequestContext,
     visibility: Private,

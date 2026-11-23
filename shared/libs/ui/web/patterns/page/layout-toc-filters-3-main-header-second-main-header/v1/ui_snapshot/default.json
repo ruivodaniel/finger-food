@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-page-layout-toc-filters-3-main-header-second-main-header-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-page-layout-toc-filters-3-main-header-second-main-header",
+ "name": "default",
+ "title": "Page left sidebar at full height, main header, second main header",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

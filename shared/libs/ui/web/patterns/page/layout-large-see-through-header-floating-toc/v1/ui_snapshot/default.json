@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-page-layout-large-see-through-header-floating-toc-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-page-layout-large-see-through-header-floating-toc",
+ "name": "default",
+ "title": "Large see-through header, floating table of contents",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

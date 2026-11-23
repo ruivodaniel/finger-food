@@ -1,0 +1,7 @@
+{
+ "id": "ui-node-pattern-layout-auth-page-authpage",
+ "version": 1,
+ "type": "component",
+ "surface": "web",
+ "title": "AuthPage"
+}

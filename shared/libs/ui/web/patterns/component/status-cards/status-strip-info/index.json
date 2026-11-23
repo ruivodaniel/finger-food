@@ -1,0 +1,74 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "status-strip-info",
+ "version": 1,
+ "surface": "web",
+ "measure": "md",
+ "root": {
+  "type": "Card",
+  "props": {
+   "className": "flex-1 min-w-56"
+  },
+  "children": [
+   {
+    "type": "Content",
+    "props": {},
+    "children": [
+     {
+      "type": "Stack",
+      "props": {
+       "dir": "row",
+       "gap": 12,
+       "align": "stretch"
+      },
+      "children": [
+       {
+        "type": "Tile",
+        "props": {
+         "status": "info",
+         "className": "flex-none"
+        }
+       },
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "col",
+         "gap": 4,
+         "size": "fill"
+        },
+        "children": [
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--heading4",
+           "children": "New version available"
+          }
+         },
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--body-small",
+           "children": "v2.4 adds the Stack primitive and the tile theme block."
+          }
+         },
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--body-extra-small",
+           "emphasis": "quiet",
+           "children": "Just now"
+          }
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

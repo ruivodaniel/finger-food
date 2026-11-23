@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-container-header-6-with-toolbar-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-container-header-6-with-toolbar",
+ "name": "default",
+ "title": "Container header 6: a toolbar is a second band with its own two zones",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

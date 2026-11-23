@@ -1,0 +1,129 @@
+{
+ "id": "doc/gated-scoped-ac-mount",
+ "kind": "doc",
+ "title": "Mount",
+ "status": "todo",
+ "subject": "gated-scoped-ac",
+ "owner": "libs/gated-scoped-ac",
+ "order": 5,
+ "tags": [
+  "gated-scoped-ac",
+  "consumer"
+ ],
+ "paths": [
+  "shared/libs/gated-scoped-ac"
+ ],
+ "summary": "How an app builds the engine and the gate once, from its config and its tables, and puts the hydration middleware in front of its routes.",
+ "docId": "gated-scoped-ac-mount",
+ "doc": {
+  "axioms": [
+   {
+    "text": "The engine and the gate are built once, at boot, in the app shell. Nothing builds them per request."
+   },
+   {
+    "text": "The app owns the map from the config's entity names to its drizzle tables. It is the one place both vocabularies meet."
+   },
+   {
+    "text": "Slices receive the engine and the gate factory at mount; they never build or configure them."
+   },
+   {
+    "text": "Hydration runs after the session middleware and before every route that reads the [[access context]]."
+   }
+  ],
+  "purpose": {
+   "intro": "Three steps make the library live in an app: build the engine, build the gate over the database handle, and mount the middleware that builds each request's context. In this repo the first two are `apps/main/core/api/src/access-control.ts`.",
+   "note": "Writing the config itself is [[gated-scoped-ac-dsl-rules|DSL rules]]; what the context holds is [[gated-scoped-ac-bag|Access context]]."
+  },
+  "reference": [
+   {
+    "topic": "The engine",
+    "statement": "`createAc(config)` takes the loaded config and the tables, and returns the engine.",
+    "claims": [],
+    "imagesAndDiagrams": [
+     {
+      "type": "ascii",
+      "value": "| Field | What it is |\n|---|---|\n| `tables` | entity name → drizzle table (or view); every entity a permission names |\n| `permissions` | the map `registerPermissions` returned |\n| `accountBaseline` | the forest of user roles |\n| `forests` | org type → its forest |\n| `visibilityJoins` | optional: per entity, other entities whose readable rows also make a row readable, as `{ via, fk }` |\n| `orgTypePath` | optional: where the org type sits in the bag; default `$session.organization.type` |"
+     }
+    ]
+   },
+   {
+    "topic": "The gate",
+    "statement": "`createGatedDb(rawDb, deps)` takes the database handle and returns the gate factory: `gatedDb(bag)` gives a request's [[gated db]], `gatedDb.ungated()` the raw handle.",
+    "claims": [
+     {
+      "text": "`deps.tables`: the same map the engine has. `deps.engine`: the engine, used for the create verdict."
+     },
+     {
+      "text": "`deps.idColumns`: per entity, the primary-key column when it is not `id`. The gate keys every write and every visibility channel by it, so a table keyed by `userId` must name it or its writes match nothing."
+     },
+     {
+      "text": "One factory per handle. A second handle over the same database, such as one that versions a table, gets its own `createGatedDb` with the same deps."
+     },
+     {
+      "text": "`ungated()` is the one named path past access control: hydration's own reads, and the reads and writes no rule covers (writes before a session exists, lookups, side-effect writes). Nothing reachable from a route by itself may use it."
+     }
+    ]
+   },
+   {
+    "topic": "In this repo",
+    "statement": "The main API builds both in `access-control.ts`, hands them to the slices in `mounts.ts`, and mounts hydration in `routes/client.ts`.",
+    "claims": [],
+    "examples": [
+     {
+      "title": "`apps/main/core/api/src/access-control.ts`",
+      "snippets": [
+       {
+        "code": "import { createAc, createGatedDb, type SchemaTables } from \"@libs/gated-scoped-ac\";\nimport { accessControlConfig } from \"@configs/access-control\";\n\nconst tables: SchemaTables = {\n  organization: uomOrganization,\n  membership: uomMembership,\n  user_profile: uomUserProfile,\n  credit_account: creditAccount,\n  meteor,\n  document_lock: documentLock,\n  // …one entry per entity the config names\n};\n\nexport const acEngine = createAc({ ...accessControlConfig, tables });\nconst gateDeps = { tables, engine: acEngine, idColumns: { user_profile: \"userId\", user_preferences: \"userId\" } };\nexport const gatedDb = createGatedDb(db, gateDeps);\nexport const createGatedDbOver = (overDb: typeof db) => createGatedDb(overDb, gateDeps);\n\n// the roots of the account baseline: roles every signed-in caller holds\nexport const baselineRoles = accessControlConfig.accountBaseline.map((node) => node.role);"
+       }
+      ]
+     },
+     {
+      "title": "Handing them to the slices, and mounting hydration",
+      "snippets": [
+       {
+        "caption": "`apps/main/core/api/src/mounts.ts`",
+        "code": "export const userOrg = mountUserOrgApi({ engine: acEngine, gatedDb, baselineRoles, /* … */ });\nexport const credits = mountCreditsApi({ engine: acEngine, /* … */ });"
+       },
+       {
+        "caption": "`apps/main/core/api/src/routes/client.ts`: session, then hydration, then the routes",
+        "code": "export const clientRouter = new Hono<HonoContext>()\n  .use(\"*\", userOrg.sessionMiddleware)\n  .use(\"*\", userOrg.scopedAcMiddleware)\n  .use(\"*\", userOrg.gateMiddleware)\n  .route(\"/\", credits.router)\n  .route(\"/\", meteors.router);"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "topic": "Another app over the same database",
+    "statement": "An app that serves the same data builds its own engine and gate from the same config and the tables it serves, and the same context per request. open-api does: `apps/open-api/src/access-control.ts` builds them, and its acting-session middleware builds the context of the user a delegated request acts for.",
+    "claims": []
+   },
+   {
+    "topic": "What a slice asks for",
+    "statement": "A slice declares the narrowest engine and gate it needs, and the app satisfies them at mount.",
+    "claims": [
+     {
+      "text": "A slice declares the engine as `Pick<Ac, …>` of exactly the calls it makes, and the gate as `(bag: unknown) => GatedDb<SchemaTables>`, so a test can hand it a stub."
+     },
+     {
+      "text": "A slice that needs the ungated handle for its named exceptions declares `ungated()` on that factory type, and says in its repository why each use is one."
+     }
+    ]
+   }
+  ],
+  "review": {
+   "axioms": {
+    "state": "unreviewed"
+   },
+   "purpose": {
+    "state": "unreviewed"
+   },
+   "reference": {
+    "state": "unreviewed"
+   }
+  },
+  "converted": true
+ },
+ "audience": [
+  "seed-consumer"
+ ]
+}

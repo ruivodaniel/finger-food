@@ -1,0 +1,19 @@
+{
+ "id": "term/seed-consumer",
+ "kind": "term",
+ "title": "seed consumer",
+ "status": "approved",
+ "subjects": [
+  "docs"
+ ],
+ "owner": "documentation",
+ "tags": [
+  "docs",
+  "audience"
+ ],
+ "paths": [],
+ "term": {
+  "def": "Whoever authors a product's code with the seed: the product's slices, its theme, its configuration, the seed slices it mounts. The audience of the documents that say what the seed offers and how to use it, never how it is built. One of the three audiences: [[seed contributor]], [[seed consumer]], [[product contributor]]; every document and every skill group names its audience.",
+  "aliases": []
+ }
+}

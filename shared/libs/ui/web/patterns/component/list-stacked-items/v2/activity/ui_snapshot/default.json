@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-list-stacked-items-activity-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-list-stacked-items-activity",
+ "name": "default",
+ "title": "List stacked items: activity",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

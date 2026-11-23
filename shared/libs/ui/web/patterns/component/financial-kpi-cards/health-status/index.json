@@ -1,0 +1,72 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "health-status",
+ "version": 1,
+ "surface": "web",
+ "measure": "md",
+ "root": {
+  "type": "Card",
+  "props": {
+   "style": {
+    "width": 360
+   }
+  },
+  "children": [
+   {
+    "type": "Content",
+    "children": [
+     {
+      "type": "Stack",
+      "props": {
+       "dir": "row",
+       "justify": "between",
+       "align": "center"
+      },
+      "children": [
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "col",
+         "gap": 4
+        },
+        "children": [
+         {
+          "type": "Text",
+          "props": {
+           "as": "span",
+           "element": "type--body-small",
+           "emphasis": "quiet",
+           "children": "Debt / equity"
+          }
+         },
+         {
+          "type": "DataNumber",
+          "props": {
+           "value": 1.16,
+           "config": {
+            "mode": {
+             "kind": "full"
+            },
+            "locale": "en-GB"
+           },
+           "scale": "lg"
+          }
+         }
+        ]
+       },
+       {
+        "type": "Badge",
+        "props": {
+         "status": "warning",
+         "emphasis": "quiet",
+         "children": "Watch"
+        }
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

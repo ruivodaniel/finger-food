@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-dropdown-menu-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-dropdown-menu",
+ "name": "default",
+ "title": "Dropdown menu",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

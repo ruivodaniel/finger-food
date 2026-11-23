@@ -1,0 +1,105 @@
+{
+ "id": "ui-data-primitive-breadcrumb",
+ "version": 1,
+ "uiNodeId": "ui-node-primitive-breadcrumb",
+ "kind": "component",
+ "name": "primitive-breadcrumb",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "primitive-breadcrumb",
+  "version": 1,
+  "surface": "web",
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "align": "center",
+    "scale": "2xl"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "Home / Organizations / Platform Admin"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Breadcrumb",
+         "children": [
+          {
+           "type": "BreadcrumbList",
+           "children": [
+            {
+             "type": "BreadcrumbItem",
+             "children": [
+              {
+               "type": "BreadcrumbLink",
+               "props": {
+                "href": "#",
+                "children": "Home"
+               }
+              }
+             ]
+            },
+            {
+             "type": "BreadcrumbSeparator"
+            },
+            {
+             "type": "BreadcrumbItem",
+             "children": [
+              {
+               "type": "BreadcrumbLink",
+               "props": {
+                "href": "#",
+                "children": "Organizations"
+               }
+              }
+             ]
+            },
+            {
+             "type": "BreadcrumbSeparator"
+            },
+            {
+             "type": "BreadcrumbItem",
+             "children": [
+              {
+               "type": "BreadcrumbPage",
+               "props": {
+                "children": "Platform Admin"
+               }
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,1328 @@
+{
+ "id": "ui-data-pattern-component-side-navigation-sidenavigation",
+ "version": 1,
+ "uiNodeId": "ui-node-pattern-component-side-navigation-sidenavigation",
+ "kind": "component",
+ "name": "SideNavigation",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "SideNavigation",
+  "version": 1,
+  "surface": "web",
+  "params": [
+   "logoWide",
+   "logoSquare",
+   "productName",
+   "groups",
+   "currentId",
+   "open",
+   "expand",
+   "organizations",
+   "activeId",
+   "user",
+   "userItems",
+   "modes",
+   "mode",
+   "modeLabel",
+   "manageLabel",
+   "account",
+   "toggleAt",
+   "backLabel",
+   "concept",
+   "dots",
+   "unread",
+   "notificationsLabel",
+   "notificationsAt",
+   "menuLabel"
+  ],
+  "emits": [
+   "back",
+   "modeChange",
+   "navigate",
+   "notifications",
+   "openChange",
+   "organizationChange",
+   "signOut",
+   "userSelect"
+  ],
+  "root": {
+   "type": "SidebarProvider",
+   "props": {
+    "open": {
+     "bind": "open"
+    },
+    "concept": "sidebar-provider"
+   },
+   "children": [
+    {
+     "type": "Sidebar",
+     "props": {
+      "collapsible": "icon",
+      "peek": {
+       "eq": [
+        {
+         "bind": "expand"
+        },
+        "overlay"
+       ]
+      },
+      "data-testid": "side-navigation",
+      "concept": {
+       "bind": "concept"
+      }
+     },
+     "children": [
+      {
+       "type": "SidebarHeader",
+       "children": [
+        {
+         "type": "SidebarWhen",
+         "props": {
+          "state": "expanded"
+         },
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "row",
+            "align": "center",
+            "concept": "sidebar-row",
+            "justify": "between"
+           },
+           "children": [
+            {
+             "type": "RemoteImage",
+             "props": {
+              "src": {
+               "bind": "logoWide"
+              },
+              "alt": {
+               "bind": "productName"
+              },
+              "concept": "logo-wide",
+              "fit": "height"
+             }
+            },
+            {
+             "type": "SidebarTrigger",
+             "props": {
+              "data-testid": "sidebar-top-toggle"
+             },
+             "when": {
+              "eq": [
+               {
+                "bind": "toggleAt"
+               },
+               "top"
+              ]
+             }
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "SidebarWhen",
+         "props": {
+          "state": "collapsed"
+         },
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "row",
+            "align": "center",
+            "concept": "sidebar-row",
+            "justify": "center"
+           },
+           "children": [
+            {
+             "type": "RemoteImage",
+             "props": {
+              "src": {
+               "bind": "logoSquare"
+              },
+              "alt": {
+               "bind": "productName"
+              },
+              "concept": "logo-square",
+              "fit": "height"
+             }
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "SidebarWhen",
+         "props": {
+          "state": "expanded"
+         },
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "row",
+            "align": "center",
+            "concept": "sidebar-row"
+           },
+           "children": [
+            {
+             "type": "Button",
+             "props": {
+              "emphasis": "tertiary",
+              "scale": "sm",
+              "buttonType": "icon-text",
+              "startIcon": "arrowLeft",
+              "data-testid": "sidebar-back-btn",
+              "children": {
+               "bind": "backLabel"
+              }
+             },
+             "on": {
+              "click": [
+               {
+                "emit": {
+                 "event": "back",
+                 "payload": {}
+                }
+               }
+              ]
+             }
+            }
+           ]
+          }
+         ],
+         "when": {
+          "exists": [
+           {
+            "bind": "backLabel"
+           }
+          ]
+         }
+        },
+        {
+         "type": "SidebarWhen",
+         "props": {
+          "state": "collapsed"
+         },
+         "children": [
+          {
+           "type": "Stack",
+           "props": {
+            "dir": "row",
+            "align": "center",
+            "concept": "sidebar-row",
+            "justify": "center"
+           },
+           "children": [
+            {
+             "type": "Button",
+             "props": {
+              "emphasis": "tertiary",
+              "scale": "sm",
+              "buttonType": "icon",
+              "startIcon": "arrowLeft",
+              "aria-label": {
+               "bind": "backLabel"
+              },
+              "data-testid": "sidebar-collapsed-back-btn"
+             },
+             "on": {
+              "click": [
+               {
+                "emit": {
+                 "event": "back",
+                 "payload": {}
+                }
+               }
+              ]
+             }
+            }
+           ]
+          }
+         ],
+         "when": {
+          "exists": [
+           {
+            "bind": "backLabel"
+           }
+          ]
+         }
+        },
+        {
+         "type": "Stack",
+         "props": {
+          "dir": "row",
+          "align": "center",
+          "concept": "sidebar-row",
+          "justify": "center"
+         },
+         "children": [
+          {
+           "type": "SidebarWhen",
+           "props": {
+            "state": "collapsed"
+           },
+           "children": [
+            {
+             "type": "SidebarTrigger",
+             "props": {
+              "data-testid": "sidebar-top-toggle"
+             }
+            }
+           ]
+          }
+         ],
+         "when": {
+          "eq": [
+           {
+            "bind": "toggleAt"
+           },
+           "top"
+          ]
+         }
+        },
+        {
+         "use": {
+          "component": "OrganizationSwitcher",
+          "version": "latest"
+         },
+         "args": {
+          "organizations": {
+           "bind": "organizations"
+          },
+          "activeId": {
+           "bind": "activeId"
+          },
+          "trigger": "sidebar"
+         },
+         "when": {
+          "and": [
+           {
+            "gt": [
+             {
+              "count": [
+               {
+                "bind": "organizations"
+               }
+              ]
+             },
+             0
+            ]
+           },
+           {
+            "not": [
+             {
+              "eq": [
+               {
+                "bind": "account"
+               },
+               "combined"
+              ]
+             }
+            ]
+           }
+          ]
+         },
+         "on": {
+          "change": [
+           {
+            "emit": {
+             "event": "organizationChange",
+             "payload": {
+              "id": {
+               "bind": "event.id"
+              }
+             }
+            }
+           }
+          ]
+         }
+        },
+        {
+         "type": "SidebarMenu",
+         "when": {
+          "and": [
+           {
+            "gt": [
+             {
+              "bind": "unread"
+             },
+             -1
+            ]
+           },
+           {
+            "eq": [
+             {
+              "bind": "notificationsAt"
+             },
+             "header"
+            ]
+           }
+          ]
+         },
+         "children": [
+          {
+           "type": "SidebarMenuItem",
+           "children": [
+            {
+             "type": "SidebarMenuButton",
+             "props": {
+              "emphasis": "primary",
+              "concept": "main-nav-item",
+              "tooltip": {
+               "bind": "notificationsLabel"
+              },
+              "data-testid": "nav-notifications-header-link"
+             },
+             "children": [
+              {
+               "type": "Stack",
+               "props": {
+                "dir": "row",
+                "align": "center",
+                "size": "fill",
+                "scale": "sm",
+                "justify": "center"
+               },
+               "children": [
+                {
+                 "type": "SidebarWhen",
+                 "props": {
+                  "state": "collapsed"
+                 },
+                 "children": [
+                  {
+                   "type": "Stack",
+                   "props": {
+                    "size": "fill"
+                   }
+                  }
+                 ]
+                },
+                {
+                 "type": "Icon",
+                 "props": {
+                  "name": "bell",
+                  "scale": "sm"
+                 }
+                },
+                {
+                 "type": "SidebarWhen",
+                 "props": {
+                  "state": "collapsed"
+                 },
+                 "children": [
+                  {
+                   "type": "Stack",
+                   "props": {
+                    "size": "fill",
+                    "align": "start"
+                   },
+                   "children": [
+                    {
+                     "type": "Badge",
+                     "props": {
+                      "concept": "dot",
+                      "scale": "3xs",
+                      "status": "info",
+                      "aria-label": {
+                       "bind": "notificationsLabel"
+                      }
+                     },
+                     "when": {
+                      "gt": [
+                       {
+                        "bind": "unread"
+                       },
+                       0
+                      ]
+                     }
+                    }
+                   ]
+                  }
+                 ]
+                },
+                {
+                 "type": "SidebarWhen",
+                 "props": {
+                  "state": "expanded"
+                 },
+                 "children": [
+                  {
+                   "type": "Stack",
+                   "props": {
+                    "size": "fill",
+                    "clip": true
+                   },
+                   "children": [
+                    {
+                     "type": "Text",
+                     "props": {
+                      "as": "span",
+                      "element": "type--body",
+                      "children": {
+                       "bind": "notificationsLabel"
+                      }
+                     }
+                    }
+                   ]
+                  },
+                  {
+                   "type": "Stack",
+                   "props": {
+                    "justify": "center"
+                   },
+                   "when": {
+                    "gt": [
+                     {
+                      "bind": "unread"
+                     },
+                     0
+                    ]
+                   },
+                   "children": [
+                    {
+                     "type": "Text",
+                     "props": {
+                      "as": "span",
+                      "element": "type--body-extra-small",
+                      "children": {
+                       "bind": "unread"
+                      },
+                      "emphasis": "quiet"
+                     }
+                    }
+                   ]
+                  }
+                 ]
+                }
+               ]
+              }
+             ],
+             "on": {
+              "click": [
+               {
+                "emit": {
+                 "event": "notifications",
+                 "payload": {}
+                }
+               }
+              ]
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "SidebarContent",
+       "children": [
+        {
+         "type": "SidebarGroup",
+         "children": [
+          {
+           "type": "SidebarMenu",
+           "children": [
+            {
+             "type": "SidebarMenuItem",
+             "children": [
+              {
+               "type": "SidebarToggle",
+               "props": {
+                "data-testid": "sidebar-toggle-btn"
+               }
+              }
+             ]
+            }
+           ]
+          }
+         ],
+         "when": {
+          "and": [
+           {
+            "not": [
+             {
+              "eq": [
+               {
+                "bind": "toggleAt"
+               },
+               "top"
+              ]
+             }
+            ]
+           },
+           {
+            "not": [
+             {
+              "eq": [
+               {
+                "bind": "toggleAt"
+               },
+               "none"
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        },
+        {
+         "type": "SidebarGroup",
+         "children": [
+          {
+           "type": "SidebarWhen",
+           "props": {
+            "state": "expanded"
+           },
+           "children": [
+            {
+             "type": "Stack",
+             "props": {
+              "concept": "sidebar-group-heading",
+              "justify": "center"
+             },
+             "children": [
+              {
+               "type": "Text",
+               "props": {
+                "as": "span",
+                "element": "type--body-extra-small",
+                "children": {
+                 "bind": "group.label"
+                },
+                "emphasis": "quiet"
+               }
+              }
+             ]
+            }
+           ],
+           "when": {
+            "exists": [
+             {
+              "bind": "group.label"
+             }
+            ]
+           }
+          },
+          {
+           "type": "SidebarWhen",
+           "props": {
+            "state": "collapsed"
+           },
+           "children": [
+            {
+             "type": "Stack",
+             "props": {
+              "dir": "row",
+              "align": "center",
+              "concept": "sidebar-group-divider"
+             },
+             "children": [
+              {
+               "type": "Stack",
+               "props": {
+                "dir": "col",
+                "size": "fill"
+               },
+               "children": [
+                {
+                 "type": "Separator"
+                }
+               ]
+              }
+             ]
+            }
+           ],
+           "when": {
+            "exists": [
+             {
+              "bind": "group.label"
+             }
+            ]
+           }
+          },
+          {
+           "type": "SidebarMenu",
+           "children": [
+            {
+             "type": "SidebarMenuItem",
+             "children": [
+              {
+               "type": "SidebarMenuButton",
+               "props": {
+                "emphasis": "primary",
+                "concept": "main-nav-item",
+                "tooltip": {
+                 "bind": "entry.label"
+                },
+                "state": {
+                 "if": [
+                  {
+                   "eq": [
+                    {
+                     "bind": "entry.id"
+                    },
+                    {
+                     "bind": "currentId"
+                    }
+                   ]
+                  },
+                  "selected"
+                 ]
+                },
+                "aria-current": {
+                 "if": [
+                  {
+                   "eq": [
+                    {
+                     "bind": "entry.id"
+                    },
+                    {
+                     "bind": "currentId"
+                    }
+                   ]
+                  },
+                  "page"
+                 ]
+                },
+                "data-testid": {
+                 "concat": [
+                  "nav-",
+                  {
+                   "bind": "entry.id"
+                  },
+                  "-link"
+                 ]
+                }
+               },
+               "children": [
+                {
+                 "type": "Stack",
+                 "props": {
+                  "dir": "row",
+                  "align": "center",
+                  "size": "fill",
+                  "scale": "sm",
+                  "justify": "center"
+                 },
+                 "children": [
+                  {
+                   "type": "SidebarWhen",
+                   "props": {
+                    "state": "collapsed"
+                   },
+                   "children": [
+                    {
+                     "type": "Stack",
+                     "props": {
+                      "size": "fill"
+                     }
+                    }
+                   ]
+                  },
+                  {
+                   "type": "Icon",
+                   "props": {
+                    "name": {
+                     "bind": "entry.icon"
+                    },
+                    "scale": "sm"
+                   }
+                  },
+                  {
+                   "type": "SidebarWhen",
+                   "props": {
+                    "state": "collapsed"
+                   },
+                   "children": [
+                    {
+                     "type": "Stack",
+                     "props": {
+                      "size": "fill",
+                      "align": "start"
+                     },
+                     "children": [
+                      {
+                       "type": "Badge",
+                       "props": {
+                        "concept": "dot",
+                        "scale": "3xs",
+                        "status": "info",
+                        "aria-label": {
+                         "bind": "entry.label"
+                        }
+                       },
+                       "when": {
+                        "or": [
+                         {
+                          "bind": "entry.indicator"
+                         },
+                         {
+                          "and": [
+                           {
+                            "eq": [
+                             {
+                              "bind": "dots"
+                             },
+                             "all"
+                            ]
+                           },
+                           {
+                            "gt": [
+                             {
+                              "bind": "entry.count"
+                             },
+                             0
+                            ]
+                           }
+                          ]
+                         }
+                        ]
+                       }
+                      }
+                     ]
+                    }
+                   ]
+                  },
+                  {
+                   "type": "SidebarWhen",
+                   "props": {
+                    "state": "expanded"
+                   },
+                   "children": [
+                    {
+                     "type": "Stack",
+                     "props": {
+                      "size": "fill",
+                      "clip": true
+                     },
+                     "children": [
+                      {
+                       "type": "Text",
+                       "props": {
+                        "as": "span",
+                        "element": "type--body",
+                        "children": {
+                         "bind": "entry.label"
+                        }
+                       }
+                      }
+                     ]
+                    },
+                    {
+                     "type": "Stack",
+                     "props": {
+                      "dir": "row",
+                      "align": "baseline"
+                     },
+                     "when": {
+                      "gt": [
+                       {
+                        "bind": "entry.count"
+                       },
+                       0
+                      ]
+                     },
+                     "children": [
+                      {
+                       "type": "Text",
+                       "props": {
+                        "as": "span",
+                        "element": "type--body-extra-small",
+                        "children": {
+                         "bind": "entry.count"
+                        }
+                       }
+                      },
+                      {
+                       "type": "Text",
+                       "props": {
+                        "as": "span",
+                        "element": "type--body-extra-small",
+                        "children": {
+                         "concat": [
+                          "/",
+                          {
+                           "bind": "entry.of"
+                          }
+                         ]
+                        },
+                        "concept": "count-of"
+                       },
+                       "when": {
+                        "gt": [
+                         {
+                          "bind": "entry.of"
+                         },
+                         0
+                        ]
+                       }
+                      }
+                     ]
+                    }
+                   ]
+                  }
+                 ]
+                }
+               ],
+               "on": {
+                "click": [
+                 {
+                  "emit": {
+                   "event": "navigate",
+                   "payload": {
+                    "id": {
+                     "bind": "entry.id"
+                    }
+                   }
+                  }
+                 }
+                ]
+               }
+              }
+             ],
+             "repeat": {
+              "each": "group.items",
+              "as": "entry"
+             }
+            }
+           ]
+          }
+         ],
+         "repeat": {
+          "each": "groups",
+          "as": "group"
+         }
+        }
+       ]
+      },
+      {
+       "type": "SidebarFooter",
+       "children": [
+        {
+         "type": "SidebarMenu",
+         "when": {
+          "and": [
+           {
+            "gt": [
+             {
+              "bind": "unread"
+             },
+             -1
+            ]
+           },
+           {
+            "eq": [
+             {
+              "bind": "notificationsAt"
+             },
+             "footer"
+            ]
+           }
+          ]
+         },
+         "children": [
+          {
+           "type": "SidebarMenuItem",
+           "children": [
+            {
+             "type": "SidebarMenuButton",
+             "props": {
+              "emphasis": "primary",
+              "concept": "main-nav-item",
+              "tooltip": {
+               "bind": "notificationsLabel"
+              },
+              "data-testid": "nav-notifications-footer-link"
+             },
+             "children": [
+              {
+               "type": "Stack",
+               "props": {
+                "dir": "row",
+                "align": "center",
+                "size": "fill",
+                "scale": "sm",
+                "justify": "center"
+               },
+               "children": [
+                {
+                 "type": "SidebarWhen",
+                 "props": {
+                  "state": "collapsed"
+                 },
+                 "children": [
+                  {
+                   "type": "Stack",
+                   "props": {
+                    "size": "fill"
+                   }
+                  }
+                 ]
+                },
+                {
+                 "type": "Icon",
+                 "props": {
+                  "name": "bell",
+                  "scale": "sm"
+                 }
+                },
+                {
+                 "type": "SidebarWhen",
+                 "props": {
+                  "state": "collapsed"
+                 },
+                 "children": [
+                  {
+                   "type": "Stack",
+                   "props": {
+                    "size": "fill",
+                    "align": "start"
+                   },
+                   "children": [
+                    {
+                     "type": "Badge",
+                     "props": {
+                      "concept": "dot",
+                      "scale": "3xs",
+                      "status": "info",
+                      "aria-label": {
+                       "bind": "notificationsLabel"
+                      }
+                     },
+                     "when": {
+                      "gt": [
+                       {
+                        "bind": "unread"
+                       },
+                       0
+                      ]
+                     }
+                    }
+                   ]
+                  }
+                 ]
+                },
+                {
+                 "type": "SidebarWhen",
+                 "props": {
+                  "state": "expanded"
+                 },
+                 "children": [
+                  {
+                   "type": "Stack",
+                   "props": {
+                    "size": "fill",
+                    "clip": true
+                   },
+                   "children": [
+                    {
+                     "type": "Text",
+                     "props": {
+                      "as": "span",
+                      "element": "type--body",
+                      "children": {
+                       "bind": "notificationsLabel"
+                      }
+                     }
+                    }
+                   ]
+                  },
+                  {
+                   "type": "Stack",
+                   "props": {
+                    "justify": "center"
+                   },
+                   "when": {
+                    "gt": [
+                     {
+                      "bind": "unread"
+                     },
+                     0
+                    ]
+                   },
+                   "children": [
+                    {
+                     "type": "Text",
+                     "props": {
+                      "as": "span",
+                      "element": "type--body-extra-small",
+                      "children": {
+                       "bind": "unread"
+                      },
+                      "emphasis": "quiet"
+                     }
+                    }
+                   ]
+                  }
+                 ]
+                }
+               ]
+              }
+             ],
+             "on": {
+              "click": [
+               {
+                "emit": {
+                 "event": "notifications",
+                 "payload": {}
+                }
+               }
+              ]
+             }
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "use": {
+          "component": "UserMenu",
+          "version": "latest"
+         },
+         "args": {
+          "user": {
+           "bind": "user"
+          },
+          "items": {
+           "bind": "userItems"
+          },
+          "modes": {
+           "bind": "modes"
+          },
+          "mode": {
+           "bind": "mode"
+          },
+          "modeLayout": "switch",
+          "modeLabel": {
+           "bind": "modeLabel"
+          },
+          "modeIcon": "palette",
+          "header": "large",
+          "manageLabel": {
+           "bind": "manageLabel"
+          },
+          "trigger": "sidebar"
+         },
+         "when": {
+          "not": [
+           {
+            "eq": [
+             {
+              "bind": "account"
+             },
+             "combined"
+            ]
+           }
+          ]
+         },
+         "on": {
+          "select": [
+           {
+            "emit": {
+             "event": "userSelect",
+             "payload": {
+              "id": {
+               "bind": "event.id"
+              }
+             }
+            }
+           }
+          ],
+          "modeChange": [
+           {
+            "emit": {
+             "event": "modeChange",
+             "payload": {
+              "id": {
+               "bind": "event.id"
+              }
+             }
+            }
+           }
+          ],
+          "signOut": [
+           {
+            "emit": {
+             "event": "signOut",
+             "payload": {}
+            }
+           }
+          ]
+         }
+        },
+        {
+         "use": {
+          "component": "UserOrganizationMenu",
+          "version": "latest"
+         },
+         "args": {
+          "user": {
+           "bind": "user"
+          },
+          "items": {
+           "bind": "userItems"
+          },
+          "modes": {
+           "bind": "modes"
+          },
+          "mode": {
+           "bind": "mode"
+          },
+          "modeLayout": "switch",
+          "modeLabel": {
+           "bind": "modeLabel"
+          },
+          "modeIcon": "palette",
+          "header": "large",
+          "manageLabel": {
+           "bind": "manageLabel"
+          },
+          "trigger": "sidebar",
+          "organizations": {
+           "bind": "organizations"
+          },
+          "activeId": {
+           "bind": "activeId"
+          }
+         },
+         "when": {
+          "eq": [
+           {
+            "bind": "account"
+           },
+           "combined"
+          ]
+         },
+         "on": {
+          "select": [
+           {
+            "emit": {
+             "event": "userSelect",
+             "payload": {
+              "id": {
+               "bind": "event.id"
+              }
+             }
+            }
+           }
+          ],
+          "modeChange": [
+           {
+            "emit": {
+             "event": "modeChange",
+             "payload": {
+              "id": {
+               "bind": "event.id"
+              }
+             }
+            }
+           }
+          ],
+          "signOut": [
+           {
+            "emit": {
+             "event": "signOut",
+             "payload": {}
+            }
+           }
+          ],
+          "organizationChange": [
+           {
+            "emit": {
+             "event": "organizationChange",
+             "payload": {
+              "id": {
+               "bind": "event.id"
+              }
+             }
+            }
+           }
+          ]
+         }
+        }
+       ],
+       "props": {
+        "concept": {
+         "if": [
+          {
+           "eq": [
+            {
+             "bind": "notificationsAt"
+            },
+            "footer"
+           ]
+          },
+          "sidebar-footer-two-rows"
+         ]
+        }
+       }
+      }
+     ]
+    },
+    {
+     "type": "SidebarWhen",
+     "props": {
+      "state": "mobile"
+     },
+     "children": [
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "between",
+        "concept": "sidebar-topbar",
+        "size": "fill"
+       },
+       "children": [
+        {
+         "type": "RemoteImage",
+         "props": {
+          "src": {
+           "bind": "logoWide"
+          },
+          "alt": {
+           "bind": "productName"
+          },
+          "concept": "logo-wide",
+          "fit": "height"
+         }
+        },
+        {
+         "type": "SidebarTrigger",
+         "props": {
+          "startIcon": "menu",
+          "aria-label": {
+           "bind": "menuLabel"
+          },
+          "data-testid": "sidebar-menu-btn"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "on": {
+    "openChange": [
+     {
+      "emit": {
+       "event": "openChange",
+       "payload": {
+        "open": {
+         "bind": "event"
+        }
+       }
+      }
+     }
+    ]
+   }
+  }
+ }
+}

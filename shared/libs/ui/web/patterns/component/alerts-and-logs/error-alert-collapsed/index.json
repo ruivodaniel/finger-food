@@ -1,0 +1,130 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "error-alert-collapsed",
+ "version": 1,
+ "surface": "web",
+ "measure": "md",
+ "state": {
+  "open": false
+ },
+ "root": {
+  "type": "Card",
+  "props": {
+   "status": "error",
+   "className": "w-full max-w-3xl",
+   "concept": "alert"
+  },
+  "children": [
+   {
+    "type": "Header",
+    "props": {},
+    "children": [
+     {
+      "type": "Icon",
+      "props": {
+       "name": "warning"
+      }
+     },
+     {
+      "type": "Text",
+      "props": {
+       "as": "p",
+       "element": "type--heading4",
+       "children": "Error"
+      }
+     }
+    ]
+   },
+   {
+    "type": "Content",
+    "props": {},
+    "children": [
+     {
+      "type": "Text",
+      "props": {
+       "as": "p",
+       "element": "type--body-small",
+       "emphasis": "quiet",
+       "children": "Cannot read properties of undefined (reading 'map')"
+      }
+     },
+     {
+      "type": "Stack",
+      "props": {
+       "dir": "row",
+       "gap": 8,
+       "wrap": true
+      },
+      "children": [
+       {
+        "type": "Button",
+        "props": {
+         "emphasis": "secondary",
+         "status": "error",
+         "scale": "sm",
+         "buttonType": "icon-text",
+         "startIcon": "refresh",
+         "children": "Try again"
+        }
+       },
+       {
+        "type": "Button",
+        "props": {
+         "emphasis": "secondary",
+         "status": "error",
+         "scale": "sm",
+         "buttonType": "icon-text",
+         "startIcon": "copy",
+         "children": "Copy error"
+        }
+       }
+      ]
+     },
+     {
+      "type": "Collapsible",
+      "props": {
+       "open": {
+        "bind": "state.open"
+       }
+      },
+      "children": [
+       {
+        "type": "Button",
+        "props": {
+         "emphasis": "quiet",
+         "status": "error",
+         "fill": true,
+         "buttonType": "text-icon",
+         "endIcon": {
+          "if": [
+           {
+            "bind": "state.open"
+           },
+           "chevronUp",
+           "chevronDown"
+          ]
+         },
+         "className": "justify-between",
+         "children": "Stack Trace"
+        }
+       }
+      ],
+      "on": {
+       "openChange": [
+        {
+         "set": {
+          "state": "open",
+          "to": {
+           "bind": "event"
+          }
+         }
+        }
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,189 @@
+{
+ "id": "ui-data-primitive-icons",
+ "version": 1,
+ "uiNodeId": "ui-node-primitive-icons",
+ "kind": "component",
+ "name": "primitive-icons",
+ "document": {
+  "kind": "component",
+  "schemaVersion": 1,
+  "name": "primitive-icons",
+  "version": 1,
+  "surface": "web",
+  "root": {
+   "type": "Stack",
+   "props": {
+    "dir": "col",
+    "align": "center",
+    "scale": "2xl"
+   },
+   "children": [
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "scale"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Icon",
+         "props": {
+          "name": "settings",
+          "scale": "xs"
+         }
+        },
+        {
+         "type": "Icon",
+         "props": {
+          "name": "settings",
+          "scale": "sm"
+         }
+        },
+        {
+         "type": "Icon",
+         "props": {
+          "name": "settings",
+          "scale": "md"
+         }
+        },
+        {
+         "type": "Icon",
+         "props": {
+          "name": "settings",
+          "scale": "lg"
+         }
+        },
+        {
+         "type": "Icon",
+         "props": {
+          "name": "settings",
+          "scale": "xl"
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "Stack",
+     "props": {
+      "dir": "col",
+      "align": "center",
+      "scale": "sm"
+     },
+     "children": [
+      {
+       "type": "Text",
+       "props": {
+        "element": "type--body-extra-small",
+        "emphasis": "quiet",
+        "children": "a few names"
+       }
+      },
+      {
+       "type": "Stack",
+       "props": {
+        "dir": "row",
+        "align": "center",
+        "justify": "center",
+        "scale": "md",
+        "wrap": true
+       },
+       "children": [
+        {
+         "type": "Icon",
+         "props": {
+          "name": "home",
+          "scale": "md"
+         }
+        },
+        {
+         "type": "Icon",
+         "props": {
+          "name": "search",
+          "scale": "md"
+         }
+        },
+        {
+         "type": "Icon",
+         "props": {
+          "name": "user",
+          "scale": "md"
+         }
+        },
+        {
+         "type": "Icon",
+         "props": {
+          "name": "bell",
+          "scale": "md"
+         }
+        },
+        {
+         "type": "Icon",
+         "props": {
+          "name": "check",
+          "scale": "md"
+         }
+        },
+        {
+         "type": "Icon",
+         "props": {
+          "name": "warning",
+          "scale": "md"
+         }
+        },
+        {
+         "type": "Icon",
+         "props": {
+          "name": "error",
+          "scale": "md"
+         }
+        },
+        {
+         "type": "Icon",
+         "props": {
+          "name": "info",
+          "scale": "md"
+         }
+        },
+        {
+         "type": "Icon",
+         "props": {
+          "name": "trash",
+          "scale": "md"
+         }
+        },
+        {
+         "type": "Icon",
+         "props": {
+          "name": "edit",
+          "scale": "md"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

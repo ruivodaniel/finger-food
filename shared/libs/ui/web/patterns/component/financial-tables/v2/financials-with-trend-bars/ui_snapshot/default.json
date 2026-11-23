@@ -1,0 +1,10 @@
+{
+ "id": "ui-snapshot-pattern-component-financial-tables-financials-with-trend-bars-default",
+ "version": 1,
+ "uiDataId": "ui-data-pattern-component-financial-tables-financials-with-trend-bars",
+ "name": "default",
+ "title": "Financials with trend bars",
+ "worldId": "world-acme",
+ "t": 0,
+ "recordedRequests": []
+}

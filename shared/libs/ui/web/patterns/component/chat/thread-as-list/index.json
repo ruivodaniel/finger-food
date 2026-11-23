@@ -1,0 +1,272 @@
+{
+ "kind": "component",
+ "schemaVersion": 1,
+ "name": "thread-as-list",
+ "version": 1,
+ "surface": "web",
+ "measure": "md",
+ "root": {
+  "type": "List",
+  "props": {
+   "className": "w-full max-w-md"
+  },
+  "children": [
+   {
+    "type": "ListItem",
+    "props": {
+     "className": "gap-3"
+    },
+    "children": [
+     {
+      "type": "ListItemContent",
+      "props": {},
+      "children": [
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "gap": 8,
+         "align": "start"
+        },
+        "children": [
+         {
+          "type": "Avatar",
+          "props": {
+           "scale": "xs"
+          },
+          "children": [
+           {
+            "type": "AvatarFallback",
+            "props": {},
+            "children": [
+             {
+              "type": "Icon",
+              "props": {
+               "name": "bot",
+               "size": "xs"
+              }
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "col",
+           "gap": 2,
+           "size": "fill"
+          },
+          "children": [
+           {
+            "type": "Stack",
+            "props": {
+             "dir": "row",
+             "gap": 8,
+             "align": "baseline"
+            },
+            "children": [
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--body-small",
+               "emphasis": "secondary",
+               "children": "dAInta"
+              }
+             },
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--body-extra-small",
+               "emphasis": "quiet",
+               "children": "09:14"
+              }
+             }
+            ]
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body-small",
+             "emphasis": "quiet",
+             "children": "I drafted the FAT protocol outline from the run — 6 sections. Reorder or drop them, then tell me when you're ready."
+            }
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "ListItem",
+    "props": {
+     "className": "gap-3"
+    },
+    "children": [
+     {
+      "type": "ListItemContent",
+      "props": {},
+      "children": [
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "gap": 8,
+         "align": "start"
+        },
+        "children": [
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "col",
+           "gap": 2,
+           "size": "fill"
+          },
+          "children": [
+           {
+            "type": "Stack",
+            "props": {
+             "dir": "row",
+             "gap": 8,
+             "align": "baseline"
+            },
+            "children": [
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--body-small",
+               "emphasis": "primary",
+               "children": "You"
+              }
+             },
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--body-extra-small",
+               "emphasis": "quiet",
+               "children": "09:15"
+              }
+             }
+            ]
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body-small",
+             "emphasis": "quiet",
+             "children": "Move Deviations above Test cases."
+            }
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "type": "ListItem",
+    "props": {
+     "state": "selected",
+     "className": "gap-3"
+    },
+    "children": [
+     {
+      "type": "ListItemContent",
+      "props": {},
+      "children": [
+       {
+        "type": "Stack",
+        "props": {
+         "dir": "row",
+         "gap": 8,
+         "align": "start"
+        },
+        "children": [
+         {
+          "type": "Avatar",
+          "props": {
+           "scale": "xs"
+          },
+          "children": [
+           {
+            "type": "AvatarFallback",
+            "props": {},
+            "children": [
+             {
+              "type": "Icon",
+              "props": {
+               "name": "bot",
+               "size": "xs"
+              }
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "Stack",
+          "props": {
+           "dir": "col",
+           "gap": 2,
+           "size": "fill"
+          },
+          "children": [
+           {
+            "type": "Stack",
+            "props": {
+             "dir": "row",
+             "gap": 8,
+             "align": "baseline"
+            },
+            "children": [
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--body-small",
+               "emphasis": "secondary",
+               "children": "dAInta"
+              }
+             },
+             {
+              "type": "Text",
+              "props": {
+               "as": "span",
+               "element": "type--body-extra-small",
+               "emphasis": "quiet",
+               "children": "09:15"
+              }
+             }
+            ]
+           },
+           {
+            "type": "Text",
+            "props": {
+             "as": "span",
+             "element": "type--body-small",
+             "emphasis": "quiet",
+             "children": "Done. Deviations now precedes the test cases. Ready to preview when you are."
+            }
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

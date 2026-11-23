@@ -1,0 +1,29 @@
+[
+  {
+    "id": "play-browse",
+    "version": 1,
+    "title": "Samantha browses the organizations",
+    "description": "She looks at the second page, goes back, opens Borealis Ltd and its members. Then the world moves to the moment the organization was renamed.",
+    "uiPrototypeId": "b1c97273",
+    "stepOrder": [
+      "step-samantha",
+      "step-page-2",
+      "step-note-borealis",
+      "step-open-borealis",
+      "step-note-renamed",
+      "step-moment-1"
+    ]
+  },
+  {
+    "id": "play-info",
+    "version": 1,
+    "title": "Samantha renames Borealis Ltd",
+    "description": "On the organization's info page, which does not scroll: she types a new name, looks at the save button, opens the members and comes back. No separator.",
+    "uiPrototypeId": "b1c97273",
+    "stepOrder": [
+      "info-step-open",
+      "info-step-name",
+      "info-step-tabs"
+    ]
+  }
+]

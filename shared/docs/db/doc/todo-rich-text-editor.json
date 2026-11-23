@@ -1,0 +1,20 @@
+{
+ "id": "doc/todo-rich-text-editor",
+ "kind": "doc",
+ "title": "lib: rich-text-editor (not migrated)",
+ "status": "todo",
+ "subject": "rich-text-editor",
+ "owner": "libs/rich-text-editor",
+ "tags": [
+  "rich-text-editor"
+ ],
+ "paths": [
+  "shared/libs/rich-text-editor"
+ ],
+ "summary": "Not migrated yet. Starting point: shared/libs/rich-text-editor/docs/README.md",
+ "entry": "shared/libs/rich-text-editor/docs/README.md",
+ "doc": null,
+ "audience": [
+  "seed-contributor"
+ ]
+}
