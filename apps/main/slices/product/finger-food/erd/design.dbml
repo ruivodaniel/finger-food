@@ -1,0 +1,513 @@
+// FINGER FOOD: the catalog of everything an event needs, the stock, the menu lines, and the event with its proposals and its invoice.
+// A menu line holds components: what is served and what it takes to serve it (a skewer, a croquete, an azeitona, a plate). A component is an atom: it is bought as it is.
+// One ontology: trees of terms whose first level is the kind of tree: ingredients, materials, segments, event type. What a component is made of is its composition (ingredients or materials). Segments and event types are mapped through one polymorphic mapping table. Food types and allergens are not terms: they are computed by the food rules. Tags are free text on the menu line template.
+
+enum washing_place {
+  client_kitchen
+  warehouse
+}
+
+enum unit {
+  piece
+  mg
+  g
+  kg
+  ml
+  l
+}
+
+enum client_kind {
+  company
+  individual
+}
+
+enum event_stage {
+  lead
+  awarded
+  closed
+  invoiced
+  paid
+}
+
+enum operation_role {
+  operation_manager
+  operational
+}
+
+enum composition_presence {
+  contains
+  may_contain
+}
+
+enum stock_movement_reason {
+  received
+  transferred
+  sent
+  returned
+  damaged
+  discarded
+  counted
+}
+
+enum identifier_kind {
+  gtin
+  sku
+  vendor_code
+  barcode
+}
+
+enum proposal_state {
+  draft
+  sent
+  accepted
+  rejected
+}
+
+table catering_company {
+  id uuid [pk, not null, note: 'a catering business. It owns its clients, vendors, ontology, proposal templates, team and distribution rules']
+  organization_id text [not null, unique, note: 'the organization of type company that is this catering company. The organization is the seed\'s and is not changed']
+}
+
+table distribution_rule_set {
+  id uuid [pk, not null, note: 'the rules of the catering company for one type of moment: what a guest gets at a coffee break, at a cocktail, at a catering. One set per type']
+  catering_company_id uuid [not null, note: 'only the owner, or the role that manages templates, changes the rules']
+  event_type_term_id uuid [not null, note: 'the term under "tipo de evento" this set is for']
+  rules jsonb [not null, note: 'the rules, as one typed document: a list of { selector: term ids, quantity, unit, for_every guests, splits }, where splits is a tree of { selector: term ids, percent, splits }. miniaturas 4 per guest, split salgadas 66 % / doces 34 %, under salgadas fritos 30 % / outras 70 %. A menu line matches a selector when it maps to all its terms. Siblings add to 100. At runtime only the branches that have menu lines in the moment count and their percents are renormalized; within a branch with no further split the lines share equally. The user can move any number or percent on the moment and the rest rebalances; only the numbers on the menu lines are saved. The API checks the term ids against the ontology on save']
+
+  indexes {
+    (catering_company_id, event_type_term_id) [unique]
+  }
+}
+
+table ontology_term {
+  id uuid [pk, not null, note: 'one term of the ontology of the catering company: a node of one tree']
+  catering_company_id uuid [not null, note: 'the catering company this belongs to']
+  name text [not null]
+  aliases text[] [note: 'other names the term is found by: aubergine and eggplant. For search. Not translations']
+  parent_id uuid [note: 'the term it is under. Empty for the root. The first level under the root is the kind of tree: ingredients (cod, carrot and under it baby carrot, E220), materials (wood, glass, plastic, paper), segments (miniatures and under it savoury, fried, croquettes), event type (coffee break, cocktail, catering). Food types and allergens are not terms: the food rules compute them. A screen shows one tree or several']
+
+  indexes {
+    (catering_company_id, parent_id, name) [unique]
+  }
+}
+
+table ontology_mapping {
+  id uuid [pk, not null]
+  ontology_term_id uuid [not null]
+  entity_type text [not null, note: 'the table of what is mapped: component and menu_line_template for a segment, moment and proposal_template_moment for an event type. Always this way round: a thing has terms, never a term column on the thing. What a component is made of is not here: it is its composition']
+  entity_id uuid [not null, note: 'the row of that table']
+
+  indexes {
+    (ontology_term_id, entity_type, entity_id) [unique]
+    (entity_type, entity_id)
+  }
+}
+
+table vendor {
+  id uuid [pk, not null]
+  catering_company_id uuid [not null, note: 'the catering company this belongs to']
+  name text [not null, unique]
+}
+
+table article {
+  id uuid [pk, not null, note: 'one article that fulfils a component, as it exists on the market, in one pack: Coca-Cola Zero, can of 33 cl. It belongs to no vendor: the same article is sold by many, and their prices for it compare directly. A component has many. Its codes are its identifiers']
+  component_id uuid [not null]
+  name text [not null]
+  quantity decimal [not null, note: 'what one article holds, in the unit below: 33 cl, 5 kg, 50 pieces. A pack is a quantity']
+  unit unit [not null, note: 'pieces, g, kg, ml or l. It can differ from the unit of the component, within the same dimension']
+  holds_article_id uuid [note: 'a pack of another article: the case of 24 cans holds the can. A pack has its own identifiers. Empty for an article that is not a pack of another']
+  holds_quantity decimal [note: 'how many of that article it holds: 24. With it, the price of one can compares across a vendor selling cans and a vendor selling cases']
+}
+
+table article_identifier {
+  id uuid [pk, not null, note: 'one code of an article. Every code is here, so a scan or a typed reference is one lookup and gives one article']
+  article_id uuid [not null]
+  kind identifier_kind [not null, note: 'gtin: the universal identifier (GS1), the same at every vendor, what a barcode scan usually gives; text brought to 14 digits with leading zeros. sku: our own code for the article, what it is, never where it is stored; every article has one, and it is the only code of an article with no GTIN. vendor_code: the reference of the article in one vendor\'s catalogue, what is typed to order it. barcode: a barcode that is not a GTIN, such as the one a supermarket prints on a weighed bag']
+  value text [not null]
+  vendor_id uuid [note: 'the vendor whose code this is: filled for a vendor_code and for a vendor\'s own barcode, empty for a gtin and for our sku. A vendor\'s code is unique within that vendor; a gtin and a sku are unique overall. Two articles with different GTINs are never merged because their names look alike']
+
+  indexes {
+    (kind, value, vendor_id) [unique]
+    (article_id)
+  }
+}
+
+table article_vendor_price {
+  id uuid [pk, not null, note: 'a vendor sells an article at a price. The vendor\'s code for it is an identifier of the article']
+  article_id uuid [not null]
+  vendor_id uuid [not null]
+  url text [note: 'the article\'s page at the vendor']
+  price decimal [not null, note: 'for one article. The price of one unit is price divided by the article\'s quantity, not stored']
+}
+
+table component {
+  id uuid [pk, not null, note: 'one atom of the catalog: anything an event needs, as it is bought. Its segment is a term mapped through ontology_mapping. What it is made of is its composition: ingredients for food, materials for material. Whether it is vegetarian or has gluten is computed by the food rules, never set by hand']
+  name text [not null, unique]
+  unit unit [not null, note: 'the unit this component is counted in. What each unit measures (count, mass, volume) and how they convert is config, not data The component has no quantity: quantities are on the menu line component and on the vendor price.']
+  reusable boolean [note: 'true: used many times, it comes back to the warehouse after the event (a plate, a table). false: consumed or thrown away (a skewer, a napkin, the food itself)']
+  composition_complete boolean [not null, default: false, note: 'true: its composition is the whole list, as on its label, and every food rule answers for it. false with composition lines: partial, the rules warn on what is listed (it has fish, it has milk) and answer unknown for the rest (no gluten, vegan). No composition lines: unknown, every rule answers unknown. Never safe by omission']
+}
+
+table stock {
+  id uuid [pk, not null, note: 'how much of a component an operating centre holds']
+  operating_centre_id uuid [not null]
+  component_id uuid [not null]
+  quantity decimal [not null, note: 'in the component\'s unit']
+  counted_at timestamp [not null]
+
+  indexes {
+    (operating_centre_id, component_id) [unique]
+  }
+}
+
+table menu_line {
+  id uuid [pk, not null]
+  moment_id uuid [not null, note: 'the moment of a proposal it is in']
+  menu_line_template_id uuid [note: 'the menu line template it was copied from. Empty for a line made by hand. The line keeps its own price, quantity and components, so a later change of the template does not change it. The link says where it came from and reaches the template\'s tags and segments']
+  quantity decimal [not null, note: 'per guest, in the unit below: pieces of miniatures, grams of a main dish, litres of a drink. Filled by the distribution rules of the moment\'s type when a menu line template is added to a moment, and it can be changed for this moment. The menu line template has no quantity. At runtime: guests of the moment x this quantity = what is served. The purchase list and the logistics are computed from it, not stored']
+  unit unit [not null, note: 'piece, g, ml or l, as in the distribution rule that filled it']
+  price decimal [note: 'what the client pays for one of the line. Copied from the menu line template when added, can be changed for this proposal. Fixed once the proposal is sent. The component has no price: selling is by the line']
+  vat_rate decimal [note: 'copied with the price, can be changed for this proposal']
+  note text [note: 'what the author adds for this line of this proposal, in their words: the client wants Coca-Cola and Fanta. Shown on the proposal']
+  position integer [not null]
+}
+
+table menu_line_component {
+  id uuid [pk, not null]
+  menu_line_id uuid [not null]
+  component_id uuid [not null, note: 'a component: what is served, or what it takes to serve it']
+  quantity decimal [not null, note: 'how many of the component go in one of the menu line, in the component\'s unit. It is a share, not a total: the total is computed at runtime as guests of the moment x the quantity of the menu line x this quantity, and it feeds the purchase list. The component itself only has its unit']
+  for_every decimal [not null, default: 1, note: 'of how many of the line: quantity 1 for_every 40 is one plate for every 40 croquetes']
+}
+
+table client {
+  id uuid [pk, not null]
+  catering_company_id uuid [not null, note: 'the catering company this belongs to']
+  name text [not null]
+  kind client_kind [not null, note: 'company | individual']
+  tax_id text [note: 'the tax number (NIF) as written on the invoices. Empty when the client has none']
+}
+
+table event {
+  id uuid [pk, not null]
+  client_id uuid [not null, note: 'the client the event is for']
+  starts_at timestamp [not null, note: 'when the event starts. The moments of its proposals happen between starts_at and ends_at']
+  ends_at timestamp [not null, note: 'when the event ends. The API refuses a moment that falls outside the event\'s starts_at and ends_at']
+  place text [note: 'where the event is, as written: a town or a venue']
+  washing washing_place [note: 'where the used material is washed after the event: in the kitchen of the client, or back at the warehouse']
+  budget decimal [note: 'what the client says they want to spend']
+  operating_centre_id uuid [note: 'the operating centre that prepares and dispatches this event. Empty while there is only one']
+  stage event_stage [not null, note: 'lead | awarded | closed | invoiced | paid. A lead has proposals; awarded when one is accepted; closed when the service was delivered; invoiced when its invoice was issued; paid when it was paid']
+}
+
+table proposal_template {
+  id uuid [pk, not null, note: 'a template belongs to the system: nothing of a proposal points to it. A proposal made from it gets a copy of its moments and their menu lines']
+  catering_company_id uuid [not null, note: 'the catering company this belongs to']
+  name text [not null]
+  upload_id uuid [note: 'the picture of the template, a file of the project\'s Files, for the visual menu shown to the client']
+}
+
+table menu_line_template {
+  id uuid [pk, not null, note: 'a menu line kept by the system: a thing that is sold, such as a set of savory miniatures or a main dish. Adding it to a moment copies it as a menu line']
+  name text [not null, unique]
+  price decimal [note: 'what the client pays for one of the line, in the unit of the line. Empty when not priced yet. Copied to the menu line when the template is added to a moment']
+  vat_rate decimal [note: 'the VAT of the line as a percentage: 13 for food, 23 for drinks with alcohol. Copied with the price']
+  tags text [note: 'free words the author puts on it, separated by commas: Christmas, hipster, summer. Outside the ontology: nothing computes with them, they serve search and filtering. Only the menu line template has tags']
+}
+
+table menu_line_template_component {
+  id uuid [pk, not null]
+  menu_line_template_id uuid [not null]
+  component_id uuid [not null, note: 'a component: what is served, or what it takes to serve it']
+  quantity decimal [not null, note: 'how many of the component, in the component\'s unit']
+  for_every decimal [not null, default: 1, note: 'of how many of the line: quantity 1 for_every 40 is one plate for every 40 croquetes The same pair is copied with the line.']
+}
+
+table proposal_template_moment {
+  id uuid [pk, not null, note: 'one moment of a proposal template. Its type is a term under "tipo de evento", through ontology_mapping']
+  proposal_template_id uuid [not null]
+  position integer [not null]
+}
+
+table proposal_template_moment_line {
+  id uuid [pk, not null]
+  proposal_template_moment_id uuid [not null]
+  menu_line_template_id uuid [not null]
+  position integer [not null]
+}
+
+table proposal {
+  id uuid [pk, not null]
+  event_id uuid [not null]
+  number integer [not null, note: 'proposal 1, 2, 3 of the event']
+  sent_at timestamp [note: 'when the proposal was sent to the client. Empty while it is a draft. From then on the proposal, its moments, menu lines and operation cannot change']
+  state proposal_state [not null, note: 'draft | sent | accepted | rejected']
+}
+
+table moment {
+  id uuid [pk, not null, note: 'one moment of a proposal: a coffee break, a cocktail, a catering. Its type is a term under "tipo de evento", through ontology_mapping like everything else; it picks the distribution rule set that fills the quantities of its menu lines. Its menu lines are what is served at it']
+  proposal_id uuid [not null]
+  starts_at timestamp [not null, note: 'the day and the time the moment begins. It must fall inside the event\'s starts_at and ends_at: the API refuses a moment outside them']
+  ends_at timestamp [not null, note: 'the day and the time the moment ends: a moment can be on any day of the event']
+  guests integer [not null, note: 'the people to feed at this moment. It can be different from one moment to the next']
+  position integer [not null]
+}
+
+table team_member {
+  id uuid [pk, not null]
+  catering_company_id uuid [not null, note: 'the catering company this belongs to']
+  name text [not null]
+  user_id text [not null, unique, note: 'the user this person signs in as. The user is the seed\'s, and it is not changed: the team member points to it']
+}
+
+table event_member {
+  id uuid [pk, not null]
+  event_id uuid [not null]
+  team_member_id uuid [not null, note: 'the event manager: manages everything of the event']
+}
+
+table operation {
+  id uuid [pk, not null]
+  proposal_id uuid [not null, unique, note: 'every proposal has an operation: what it takes to do it. The accepted proposal\'s operation is the one carried out']
+}
+
+table stock_allocation {
+  id uuid [pk, not null]
+  operation_id uuid [not null]
+  stock_id uuid [not null, note: 'the stock it is reserved from: a component at an operating centre']
+  quantity decimal [not null, note: 'how much of that stock is reserved for this operation, in the component\'s unit. Made when the event is awarded, so two events one after the other do not count the same stock']
+}
+
+table purchase {
+  id uuid [pk, not null, note: 'an article bought from a vendor for an operating centre: 5 cases of 24 cans from Makro. What has to be bought is not stored: the shopping list is computed, in components, from what the awarded events need minus what the centre holds minus what is already reserved. A purchase is in articles and can cover several events, so it points to no operation. Nothing is marked as bought: when the goods arrive, that is a stock movement with reason received, pointing to this purchase']
+  article_id uuid [not null]
+  vendor_id uuid [not null]
+  operating_centre_id uuid [note: 'the centre it is bought for, where the delivery arrives. Empty while there is only one']
+  quantity decimal [not null, note: 'how many of the article: 5 cases']
+  price decimal [not null, note: 'what one article cost in this purchase']
+  ordered_at timestamp [not null]
+}
+
+table logistics_component {
+  id uuid [pk, not null]
+  operation_id uuid [not null]
+  component_id uuid [not null, note: 'the material: a table, a plate, a cup']
+  quantity decimal [not null, note: 'how many of it the operation needs, in the component\'s unit. Whether they are free on the dates of the event, or already in another event, is worked out at runtime']
+}
+
+table expense {
+  id uuid [pk, not null, note: 'money the catering company spends: a purchase, the staff of a day, fuel and tolls, or a cost of the business with no event. What it is for is the links: a purchase ties it to what was bought; an operation ties it to an event (staff, travel); neither is a cost of the business']
+  catering_company_id uuid [not null]
+  operation_id uuid [note: 'the operation this expense belongs to, when it belongs to one. Empty for a cost of the business']
+  purchase_id uuid [note: 'the purchase this expense pays, when it pays one']
+  description text [not null, note: 'what was paid, in the author\'s words: 2 kg camarão, staff 20 Oct, portagens Lisboa']
+  amount decimal [not null, note: 'what was paid, VAT included']
+  vat decimal [note: 'the VAT part of the amount, when known']
+  paid_at timestamp [not null]
+}
+
+table operation_member {
+  id uuid [pk, not null]
+  operation_id uuid [not null]
+  team_member_id uuid [note: 'empty while the proposal is being costed. Filled once the event is awarded']
+  role operation_role [not null, note: 'operation_manager sees everyone and everything of the operation. operational sees what is ruled later']
+  hours decimal [not null]
+  hourly_rate decimal [not null, note: 'the price of this person\'s time, part of the proposal\'s cost']
+}
+
+table proposal_ad_hoc_line {
+  id uuid [pk, not null, note: 'something charged in the proposal that is not a moment or the operation: transport, rental, an extra']
+  proposal_id uuid [not null]
+  description text [not null, note: 'what is charged, in the author\'s words']
+  quantity decimal [not null]
+  price decimal [not null, note: 'for one of the quantity. Typed for this proposal, fixed once the proposal is sent']
+  vat_rate decimal [not null, note: 'the VAT of this line as a percentage']
+  position integer [not null]
+}
+
+table invoice {
+  id uuid [pk, not null]
+  event_id uuid [not null, note: 'the event it is for. What the invoice charges is the accepted proposal of the event, not stored again. An event can have several invoices, for example one on award and one on the day']
+  number text [not null, unique, note: 'the number of the invoice, as issued: FA2025/17']
+  issued_at timestamp [not null]
+  due_at timestamp [note: 'the due date, from the payment terms']
+  payment_terms text [note: 'as written on the invoice: 30 days, 50% on award and 50% on the day']
+  net decimal [not null, note: 'the amount before VAT, as issued']
+  vat decimal [not null, note: 'the VAT, as issued']
+  total decimal [not null, note: 'what the client pays: net plus VAT, as issued. The invoice is a fiscal document: these amounts do not follow later changes']
+  cancelled_at timestamp [note: 'when the invoice was cancelled, for example issued by mistake. Empty while it stands. A cancelled invoice keeps its number and is not charged']
+}
+
+table credit_note {
+  id uuid [pk, not null]
+  invoice_id uuid [not null, note: 'the invoice it credits']
+  number text [not null, unique, note: 'the number of the credit note, as issued: NC2025/2']
+  issued_at timestamp [not null]
+  net decimal [not null, note: 'the amount credited before VAT, as issued']
+  vat decimal [not null]
+  total decimal [not null, note: 'what is credited to the client, as issued']
+  reason text [note: 'why it was issued, in the author\'s words']
+}
+
+table payment {
+  id uuid [pk, not null]
+  invoice_id uuid [not null]
+  received_at timestamp [not null, note: 'the day the money arrived']
+  amount decimal [not null, note: 'what arrived. An invoice can be paid in several payments']
+}
+
+table component_composition {
+  id uuid [pk, not null, note: 'one line of what a component is made of: an ingredient for food (cod, E220), a material for material (wood, glass). The composition belongs to the component, whoever sells it and in whatever pack. A raw component has one line (the component baby carrot has the ingredient baby carrot); a bought dish has many. Names only, never an amount. Nothing is stored on menu lines: what a menu line has is computed from its components']
+  component_id uuid [not null]
+  ontology_term_id uuid [not null, note: 'a term of the ingredients tree or of the materials tree, at any depth: carrot, or baby carrot. A term is everything above it, so baby carrot is a carrot and a vegetable without saying so']
+  presence composition_presence [not null, note: 'contains: it is in the composition. may_contain: the label warns of traces']
+  source text [note: 'where the line came from: the label, the technical sheet of the product, the vendor']
+
+  indexes {
+    (component_id, ontology_term_id) [unique]
+  }
+}
+
+table substance {
+  id uuid [pk, not null, note: 'something a component has a measured amount of: a nutrient (carbs, sugar, fat, protein, salt) or a chemical (alcohol, caffeine, sulphites). One list for all. A new one is a new row']
+  name text [not null, unique]
+}
+
+table component_value {
+  id uuid [pk, not null, note: 'how much of a substance a component has, as its label states: 0 g of sugar for every 100 ml of Coca-Cola Zero, 21 g of carbs for every 100 g of croquete. Can stay empty: the rules that set a limit answer unknown without it']
+  component_id uuid [not null]
+  substance_id uuid [not null, note: 'which substance this row states']
+  quantity decimal [not null]
+  unit unit [not null]
+  for_every_quantity decimal [not null, note: 'of how much of the component: 100']
+  for_every_unit unit [not null, note: 'g for a solid, ml for a drink, piece for an egg']
+
+  indexes {
+    (component_id, substance_id) [unique]
+  }
+}
+
+table food_rule_set {
+  id uuid [pk, not null, note: 'the food rules of the catering company: what makes something vegan, vegetarian, keto, free of seafood, and which allergens it has']
+  catering_company_id uuid [not null, unique]
+  rules jsonb [not null, note: 'one typed document keyed by the name of what the rule defines, a food type or an allergen (vegan, keto, gluten). These are not terms of the ontology: { excludes: [ { node, except: [nodes] } ], includes: [ { node, except: [nodes] } ], limits: [ { substance, max or min: { quantity, unit }, for_every: { quantity, unit } } ] }. A node is a term of the ingredients tree, leaf or branch, and stands for everything under it; an except only names nodes inside its own node. excludes: the term holds when no ingredient is under those nodes. includes: the term is present when an ingredient is under those nodes. limits: a value summed over what is served, for every guest or for every amount of food. A component with unknown composition makes the answer unknown']
+}
+
+table guideline {
+  id uuid [pk, not null, note: 'a procedure, written to be followed: how to receive a delivery, assemble an espetada de croquete, pack a tray, load the van, handle what returns. Receiving, preparation, packing, loading, service and returns are guidelines, not tables of tasks. The phase it belongs to is its term in the ontology']
+  catering_company_id uuid [not null]
+  title text [not null]
+  body text [not null, note: 'the steps, in order, with their pictures']
+  entity_type text [note: 'the table of the thing the guideline is about, when it is about one: component, menu_line_template, operating_centre. Empty for a general procedure']
+  entity_id uuid [note: 'the row of that table']
+}
+
+table operating_centre {
+  id uuid [pk, not null, note: 'a place that receives deliveries, stores, prepares and dispatches']
+  catering_company_id uuid [not null]
+  name text [not null]
+  address text
+}
+
+table stock_movement {
+  id uuid [pk, not null, note: 'something moved: from one operating centre to another, from a centre to an event, or from an event back to a centre. What goes out to a party and what comes back from it (drinks not opened, plates, what was not served) are two movements. What broke or was lost is the difference, or a movement with that reason']
+  entity_type text [not null, note: 'the table of what moved: component (a crate of water, 40 plates) or menu_line (20 trays of an assembled menu line going to the party)']
+  entity_id uuid [not null, note: 'the row of that table']
+  quantity decimal [not null, note: 'how much moved, in the unit of the component or of the menu line']
+  from_operating_centre_id uuid [note: 'the centre it left. Empty when it comes from a vendor or back from an event']
+  to_operating_centre_id uuid [note: 'the centre it arrived at. Empty when it goes to an event or is discarded']
+  operation_id uuid [note: 'the operation it went to or came back from. Empty for a movement between centres or a delivery from a vendor']
+  purchase_id uuid [note: 'the purchase that arrived, for a movement with reason received']
+  reason stock_movement_reason [not null]
+  note text [note: 'the explanation, when the reason asks for one: damaged, discarded']
+  user_id text [not null, note: 'who recorded it']
+  moved_at timestamp [not null]
+
+  indexes {
+    (entity_type, entity_id)
+  }
+}
+
+table operation_member_invitation {
+  id uuid [pk, not null, note: 'a person asked to take a slot of an operation']
+  operation_member_id uuid [not null, note: 'the slot: a role, its hours and its rate']
+  team_member_id uuid [not null, note: 'the person asked']
+  sent_at timestamp [not null]
+  answered_at timestamp
+  accepted boolean [note: 'empty until answered']
+  reconfirmed_at timestamp [note: 'the last time the person confirmed again before the event']
+}
+
+table commission_agreement {
+  id uuid [pk, not null, note: 'a share of the sale of an event owed to who brought it. What is paid is an expense']
+  event_id uuid [not null]
+  beneficiary text [not null]
+  percent decimal [not null]
+}
+
+ref: ontology_term.parent_id > ontology_term.id
+ref: ontology_mapping.ontology_term_id > ontology_term.id
+ref: article.component_id > component.id
+ref: article.holds_article_id > article.id
+ref: article_identifier.article_id > article.id
+ref: article_identifier.vendor_id > vendor.id
+ref: article_vendor_price.article_id > article.id
+ref: article_vendor_price.vendor_id > vendor.id
+ref: stock.component_id > component.id
+ref: stock.operating_centre_id > operating_centre.id
+ref: menu_line.moment_id > moment.id
+ref: menu_line_template_component.menu_line_template_id > menu_line_template.id
+ref: menu_line_template_component.component_id > component.id
+ref: proposal_template_moment_line.proposal_template_moment_id > proposal_template_moment.id
+ref: proposal_template_moment_line.menu_line_template_id > menu_line_template.id
+ref: menu_line_component.menu_line_id > menu_line.id
+ref: menu_line_component.component_id > component.id
+ref: event.client_id > client.id
+ref: proposal_template_moment.proposal_template_id > proposal_template.id
+ref: proposal.event_id > event.id
+ref: moment.proposal_id > proposal.id
+ref: event_member.event_id > event.id
+ref: team_member.user_id - user.id
+ref: event_member.team_member_id > team_member.id
+ref: operation.proposal_id - proposal.id
+ref: operation_member.operation_id > operation.id
+ref: operation_member.team_member_id > team_member.id
+ref: invoice.event_id > event.id
+ref: payment.invoice_id > invoice.id
+ref: credit_note.invoice_id > invoice.id
+ref: proposal_ad_hoc_line.proposal_id > proposal.id
+ref: ontology_term.catering_company_id > catering_company.id
+ref: vendor.catering_company_id > catering_company.id
+ref: client.catering_company_id > catering_company.id
+ref: proposal_template.catering_company_id > catering_company.id
+ref: team_member.catering_company_id > catering_company.id
+ref: catering_company.organization_id - organization.id
+ref: distribution_rule_set.catering_company_id > catering_company.id
+ref: distribution_rule_set.event_type_term_id > ontology_term.id
+ref: logistics_component.operation_id > operation.id
+ref: logistics_component.component_id > component.id
+ref: stock_allocation.operation_id > operation.id
+ref: stock_allocation.stock_id > stock.id
+ref: purchase.article_id > article.id
+ref: purchase.vendor_id > vendor.id
+ref: purchase.operating_centre_id > operating_centre.id
+ref: stock_movement.purchase_id > purchase.id
+ref: menu_line.menu_line_template_id > menu_line_template.id
+ref: expense.catering_company_id > catering_company.id
+ref: expense.operation_id > operation.id
+ref: expense.purchase_id > purchase.id
+ref: component_composition.component_id > component.id
+ref: component_composition.ontology_term_id > ontology_term.id
+ref: component_value.component_id > component.id
+ref: component_value.substance_id > substance.id
+ref: food_rule_set.catering_company_id - catering_company.id
+ref: guideline.catering_company_id > catering_company.id
+ref: operating_centre.catering_company_id > catering_company.id
+ref: event.operating_centre_id > operating_centre.id
+ref: stock_movement.from_operating_centre_id > operating_centre.id
+ref: stock_movement.to_operating_centre_id > operating_centre.id
+ref: stock_movement.operation_id > operation.id
+ref: stock_movement.user_id > user.id
+ref: operation_member_invitation.operation_member_id > operation_member.id
+ref: operation_member_invitation.team_member_id > team_member.id
+ref: commission_agreement.event_id > event.id

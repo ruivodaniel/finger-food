@@ -40,6 +40,7 @@
     "@modules/user-organization-mgmt": "workspace:*",
     "@modules/versioning": "workspace:*",
     "@paralleldrive/cuid2": "^3.0.0",
+    "@product/finger-food": "workspace:*",
     "@product/implementation-patterns": "workspace:*",
     "dotenv": "16.5.0",
     "drizzle-kit": "0.31.1",

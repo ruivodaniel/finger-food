@@ -1,0 +1,26 @@
+{
+  "name": "@product/finger-food",
+  "version": "0.1.0",
+  "description": "Finger Food: the catalogue and its composition, the ontology and the rules, the proposals with their moments, the events, the stock and the invoices. The models are generated from erd/design.dbml",
+  "type": "module",
+  "exports": {
+    "./models": {
+      "types": "./api/models/index.ts",
+      "import": "./api/models/index.ts",
+      "default": "./api/models/index.ts"
+    }
+  },
+  "files": ["api", "erd"],
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modules/user-organization-mgmt": "workspace:*"
+  },
+  "peerDependencies": {
+    "drizzle-orm": ">=0.40.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

@@ -8,6 +8,7 @@ export * from "@modules/credits/models";
 export * from "@modules/payment/models";
 export * from "@modules/chatbot/models";
 export * from "@product/implementation-patterns/models";
+export * from "@product/finger-food/models";
 export * from "@modules/versioning/models";
 export * from "@modules/collaboration/models";
 // Relative, not `@/…`: this barrel is read from outside the app too (drizzle-kit,
