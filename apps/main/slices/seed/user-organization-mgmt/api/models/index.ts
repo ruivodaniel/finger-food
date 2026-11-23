@@ -13,3 +13,4 @@ export * from "./organization.schemas";
 export * from "./membership.model";
 export * from "./invitation.model";
 export * from "./invitation.schemas";
+export * from "./identity.model";

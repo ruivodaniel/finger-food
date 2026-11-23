@@ -7,10 +7,8 @@
  * Uses the app's own mount (services + identity port) — the same assembly the
  * server runs, zero deep module imports (MOD2).
  *
- * NOTE (gate): the DSL gives system_admin members standing obligations —
- * verified email + password session + TOTP. TOTP cannot be seeded, so on first
- * login the admin is 428-gated until they enroll at /account/security. That is
- * correct behavior, not a seed bug.
+ * NOTE: sign-in is by a code sent by email (the local identity provider). The
+ * authentication config asks for no password and no TOTP.
  */
 
 import "dotenv/config";
@@ -49,12 +47,10 @@ function makeSeedAc(): ScopedAcRequestContext {
   };
 }
 
-// Kratos runs leaked-password (haveibeenpwned) and identifier-similarity
-// checks — common patterns like "Qwerty@123456" are rejected.
+// The local identity provider has no passwords: the admin signs in with a code sent to this email.
 const ADMIN_EMAIL = "danielcastroruivo@gmail.com";
 const ADMIN_NAME = "Daniel de Castro Ruivo";
-const ADMIN_PASSWORD = "Altario2026!";
-const ORG_NAME = "PROWD System Admin";
+const ORG_NAME = "Finger Food System Admin";
 const OWNER_ROLE = "system_admin_owner";
 
 const PLATFORM_LEGAL_DOCS = [
@@ -148,14 +144,13 @@ async function seedSystemAdmin() {
     return;
   }
 
-  // Identity: pre-verified email (a gate obligation) + password.
+  // Identity: pre-verified email (a gate obligation). No password: sign-in is by email code.
   const existing = await userOrg.identityProvider.findByIdentifier(ADMIN_EMAIL);
   const identityId =
     existing?.id ??
     (
       await userOrg.identityProvider.createIdentity({
         traits: { email: ADMIN_EMAIL, name: ADMIN_NAME },
-        password: ADMIN_PASSWORD,
         verifiedEmails: [ADMIN_EMAIL],
       })
     ).identityId;
@@ -189,9 +184,6 @@ async function seedSystemAdmin() {
 
   logger.info(`system_admin org "${ORG_NAME}" (${orgId})`);
   logger.info(`owner ${ADMIN_EMAIL} — role ${OWNER_ROLE}`);
-  logger.info(
-    "note: this admin is gated (428) until TOTP is enrolled in the /resolve",
-  );
 }
 
 async function main() {

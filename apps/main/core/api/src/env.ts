@@ -65,6 +65,9 @@ const EnvSchema = z.object({
   // over SMTP directly)
   SMTP_HOST: z.string().optional(),
   SMTP_PORT: z.coerce.number().int().default(1025),
+  // set both for an SMTP service that asks for a login (anything but local maildev)
+  SMTP_USER: z.string().optional(),
+  SMTP_PASS: z.string().optional(),
   EMAIL_FROM: z.string().default("noreply@localhost"),
 
   // sms delivery (kratos courier webhook + invitation sms + queued deliveries)

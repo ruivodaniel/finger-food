@@ -74,7 +74,12 @@ export function mountUserOrgApi(
       : {}),
   };
 
-  const identityProvider = new KratosIdentityProvider(options.kratos);
+  const identityProvider =
+    options.identityProvider ??
+    (() => {
+      if (!options.kratos) throw new Error("mountUserOrgApi: give an identityProvider or a kratos connection");
+      return new KratosIdentityProvider(options.kratos);
+    })();
 
   // The module is never handed the raw db: repositories get the gate's one
   // ungated path for their ungated methods; gated methods take the request's

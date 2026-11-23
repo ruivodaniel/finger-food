@@ -12,7 +12,8 @@ import { mountCollaborationApi } from "@modules/collaboration/api";
 import { mountCreditsApi } from "@modules/credits/api";
 import { mountNotificationsApi } from "@modules/notifications/api";
 import { createStripeProvider, mountPaymentApi } from "@modules/payment/api";
-import { mountUserOrgApi } from "@modules/user-organization-mgmt/api";
+import { LocalIdentityProvider, mountUserOrgApi } from "@modules/user-organization-mgmt/api";
+import { sendLoginCode } from "@/wiring/identity/send-code";
 import { mountVersioningApi } from "@modules/versioning/api";
 import { creditsCatalog } from "@configs/credits";
 import { paymentCatalog } from "@configs/payment";
@@ -100,16 +101,11 @@ export const userOrg = mountUserOrgApi({
   authConfig: authenticationAndRegistration,
   orgConfig: organizationCreationAndJoining,
   preferences: PREFERENCES,
-  kratos: { publicUrl: Env.KRATOS_PUBLIC_URL, adminUrl: Env.KRATOS_ADMIN_URL },
+  // No external identity service: the local provider, on the app's own Postgres, signs in by a code sent by email.
+  identityProvider: new LocalIdentityProvider({ db, createId, sendCode: sendLoginCode }),
   storage,
   cookie: {
     secure: Env.NODE_ENV === "production" || Env.NODE_ENV === "staging",
-  },
-  courierSms: {
-    secret: Env.KRATOS_COURIER_SMS_SECRET,
-    // Auth codes go to an identifier, not to an account — off the queue, on the
-    // same transport instance.
-    send: (to, text) => sendTransactionalSms({ to, body: text, label: "auth" }),
   },
   socialProviders: {
     google: !!(Env.GOOGLE_CLIENT_ID && Env.GOOGLE_CLIENT_SECRET),

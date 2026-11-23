@@ -1,43 +1,37 @@
-name: Prowd
+name: finger-food-main
 
-# Ory Kratos rides along with the uom-v2 module — the module ships its own
-# identity-provider runtime (services, config, schema, templates). Removing
-# the module removes Kratos; this include is the only Kratos line here.
-# The fragment expects the `postgres` service below on the project network.
-include:
-  - ../../slices/seed/user-organization-mgmt/api/identity/kratos/infra/docker-compose.kratos.yml
-  # the payment slice's Stripe listener; an app without payments drops this line
-  - ../../slices/seed/payment/api/stripe/infra/docker-compose.stripe.yml
+# No Kratos: sign-in is the local identity provider, on the Postgres below.
+# No Stripe listener: payments are not in use.
 
 services:
   postgres:
     image: postgres:17.5
-    container_name: postgres-Prowd
+    container_name: postgres-finger-food-main
     restart: unless-stopped
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: Prowd
+      POSTGRES_DB: finger_food
     ports:
-      # host 5433 -> container 5432. Matches DATABASE_URL (…@localhost:5433) and
+      # host 5437 -> container 5432. Matches DATABASE_URL (…@localhost:5437) and
       # keeps clear of a stock postgres occupying the host's 5432. In-cluster
       # consumers (kratos, migrations) still reach postgres:5432 over the network.
-      - "5433:5432"
+      - "5437:5432"
     volumes:
       - pg-data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres -d Prowd"]
+      test: ["CMD-SHELL", "pg_isready -U postgres -d finger_food"]
       interval: 3s
       timeout: 3s
       retries: 10
 
   maildev:
     image: maildev/maildev:2.2.1
-    container_name: maildev-Prowd
+    container_name: maildev-finger-food-main
     restart: unless-stopped
     ports:
-      - "1080:1080"
-      - "1025:1025"
+      - "1082:1080"
+      - "1027:1025"
 
 
   # SMS-Dev: run separately via `npx @relay-works/sms-dev start`
@@ -48,7 +42,7 @@ services:
     env_file: .env
     # image: localstack/localstack-pro:4.6.0 # (PRO IMAGE)
     image: localstack/localstack:4.6.0
-    container_name: localstack-Prowd
+    container_name: localstack-finger-food-main
     restart: unless-stopped
     environment:
       - LOCALSTACK_AUTH_TOKEN="{{YOUR_TOKEN}}" # (PRO IMAGE)
@@ -58,16 +52,14 @@ services:
       - DEBUG=${DEBUG:-0}
       - SERVICES=s3
     ports:
-      - "127.0.0.1:4566:4566"
-      - "127.0.0.1:4510-4559:4510-4559"
-      - "127.0.0.1:443:443" # HTTPS Gateway (PRO IMAGE)
+      - "127.0.0.1:4569:4566"
     volumes:
-      - "localstack-data:/tmp/Prowd-localstack/data"
+      - "localstack-data:/tmp/finger-food-main-localstack/data"
       - "/var/run/docker.sock:/var/run/docker.sock"
       - "./scripts/init-awslocal.sh:/etc/localstack/init/ready.d/init-awslocal.sh"
 
 volumes:
   pg-data:
-    name: Prowd-postgres-data
+    name: finger-food-main-postgres-data
   localstack-data:
-    name: Prowd-localstack-data
+    name: finger-food-main-localstack-data

@@ -66,8 +66,15 @@ export interface MountUserOrgApiOptions {
    */
   preferences: PreferencesPolicy;
 
-  /** Identity provider connection. */
-  kratos: {
+  /**
+   * The identity provider, when the app builds its own (the local provider, with
+   * no external identity service). When absent, the module builds the Kratos
+   * adapter from `kratos` below.
+   */
+  identityProvider?: IdentityProviderPort;
+
+  /** Kratos connection. Needed only when no `identityProvider` is given. */
+  kratos?: {
     publicUrl: string;
     adminUrl: string;
     schemaId?: string;

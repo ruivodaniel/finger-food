@@ -54,22 +54,11 @@ export const authenticationAndRegistration: AuthAndRegistrationConfig = {
       },
     },
     {
-      // email password — register + login, NOT recovery
+      // email code — the one factor of this product: register + login.
       condition: {
         when: [
           { intent: ["registration", "authentication"], identifier: "email" },
         ],
-      },
-      outcome: {
-        require: "factor_session_verified",
-        factor: { method: "password", config: defaultPasswordPolicy },
-      },
-    },
-    {
-      // email otp — login only: a code alternative to the password.
-      // Registration stays password-first so every email account has one.
-      condition: {
-        when: [{ intent: "authentication", identifier: "email" }],
       },
       outcome: {
         require: "factor_session_verified",
@@ -91,38 +80,12 @@ export const authenticationAndRegistration: AuthAndRegistrationConfig = {
 
     // ── Membership rules: standing obligations the gate enforces ──
     {
-      // step-up factor obligation for system_admin members and (future)
-      // admin-management roles.
-      condition: {
-        when: [
-          { membershipOrgType: "system_admin" },
-          {
-            membershipRole: ["manage_system_admin"],
-          },
-        ],
-      },
-      outcome: {
-        require: "factor_session_verified",
-        factor: { method: "totp" },
-      },
-    },
-    {
       // system_admin members must have a VERIFIED email (proven by an emailed
       // code — the runtime's verification mechanism)
       condition: { when: [{ membershipOrgType: "system_admin" }] },
       outcome: {
         require: "identifier_verified",
         factor: { method: "otp", deliveredVia: "email" },
-      },
-    },
-    {
-      // system_admin members must hold a password-verified session. The
-      // email-password flow rule above is intent-scoped, so it can't stand
-      // for members — standing obligations need a membership-keyed clause.
-      condition: { when: [{ membershipOrgType: "system_admin" }] },
-      outcome: {
-        require: "factor_session_verified",
-        factor: { method: "password", config: defaultPasswordPolicy },
       },
     },
 

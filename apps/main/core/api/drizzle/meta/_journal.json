@@ -71,6 +71,13 @@
       "when": 1794757767062,
       "tag": "0009_payment",
       "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "7",
+      "when": 1795476718646,
+      "tag": "0010_identity_local",
+      "breakpoints": true
     }
   ]
 }
